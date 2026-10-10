@@ -12,11 +12,11 @@ Three layers, three repositories, one contract of fidelity:
 * **corpus (this repository)** — the citable base: UN Model 2017 and 2021 plus
   the OECD MLI framework (mapping, signatories and parties, country positions).
   Closed scope, byte-reproducible, every unit traceable to its page.
-* **library (next)** — the bilateral treaties people work on, contributed as
+* **library** ([international-tax-law-library](https://github.com/avvohacker/international-tax-law-library)) — the bilateral treaties people work on, contributed as
   they go: each treaty enters with the same fidelity contract (source hash,
   page-anchored units, declared gaps, no invention). Invitation: as you work a
   treaty, put it here.
-* **mcp (after library)** — the query mind over corpus plus library: treaty
+* **mcp** ([international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp)) — the query mind over corpus plus library: treaty
   questions answered from the data (as-modified verdicts), never from guesses.
 
 Later corpus extension, after library and mcp are walking: the OECD Model,
