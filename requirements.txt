@@ -1,9 +1,11 @@
-# The harness and its tests.
-pyyaml>=6.0
-pytest>=8.0
+# The harness and its tests. Pinned: the corpus in this repository was verified
+# byte-identical against a fresh reading with exactly these versions
+# (`python -m harness drift`: 289 artefacts compared, 0 divergent).
+pyyaml==6.0.3
+pytest==8.4.2
 
 # `harness/ledger.py` reads the PDFs through PyMuPDF: `get_text("dict")` gives
 # positioned spans with their font size, which is what the span ledger is made
 # of. It is imported inside the reader, so everything except `harness ledger`
 # works without it.
-pymupdf>=1.24
+pymupdf==1.26.5

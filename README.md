@@ -126,6 +126,9 @@ What is here:
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 
+.venv/bin/python scripts/fetch-sources.py  # download + hash-verify the input PDFs
+                                            # (URLs and SHA-256 in provenance/sources.yaml)
+
 .venv/bin/python -m pytest -q          # the invariants and the probes
 .venv/bin/python -m harness status     # one line: is there a corpus, and what does the harness see
 .venv/bin/python -m harness probes     # every probe, with its verdict

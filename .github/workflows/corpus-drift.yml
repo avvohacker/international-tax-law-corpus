@@ -58,6 +58,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Fetch the sources
+        # The PDFs are never committed (see provenance/sources.yaml and
+        # LICENSE); without them every artefact is "published but unbuilt"
+        # and the control below is red by construction. This step downloads
+        # exactly the registered bytes and hash-verifies each one, so the
+        # runner reads what the corpus was built from. The UN Model 2021 PDF
+        # cannot be fetched by automated clients and travels sealed instead:
+        # scripts/fetch-sources.py decrypts sealed/un-model-2021.pdf.enc with
+        # this passphrase, which lives only in the repo secret (never in git).
+        env:
+          UN_MODEL_2021_KEY: ${{ secrets.UN_MODEL_2021_KEY }}
+        run: python scripts/fetch-sources.py
+
       - name: Is the corpus in step with the reader?
         id: drift
         run: |
