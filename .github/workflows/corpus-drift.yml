@@ -1,0 +1,166 @@
+name: corpus-drift
+
+# The anti-drift control. `python -m harness drift` rebuilds every artefact the
+# register declares - the published editions, the MLI positions, the derived
+# markdown views and reports, and the register's own hashes - with the corpus'
+# own writers and compares each with what is committed, so a reader repair that
+# nobody rebuilt the corpus for fails here with the row and the field that
+# moved.
+#
+# When the control fails, this workflow does not leave the repair to a human who
+# has to notice: it republishes only the divergent artefacts, commits them on a
+# branch, and opens a pull request whose body is the drift control's own
+# row-by-row difference. The request therefore carries the regenerated artefacts
+# and the evidence for them, and nothing else.
+#
+# A rebuild cannot see the other half of the same failure: a corpus rebuilt from
+# a repair that reclassified a layout is wrong in the same way the build is, so
+# it agrees with itself. The block-reader gate (`pytest -k p05`) re-reads every
+# promoted layout from its own pages and checks the rows, the pinned
+# counterparty and title of each reviewed row, the exception list and the habit
+# vote that decides whether a table prints its number inside its heading, and it
+# fails whether or not an artefact moved. The cheap invariants run beside it:
+# the working language and the environment traces of every artefact, and the
+# meta-tests that hold the invariant catalogue and SPEC.md together. All of them
+# run in this job, and the run goes red while the corpus is out of step - after
+# the repair request has been opened, so the failure and its repair are reported
+# together.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: corpus-drift-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install the harness
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Is the corpus in step with the reader?
+        id: drift
+        run: |
+          set +e
+          python -m harness drift
+          status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Does every difference name a line or a field, never a size?
+        # The repair pull request carries the drift control's own title and
+        # body, and those quote the differences. A difference that names a byte
+        # count (`12 bytes` for an artefact, a digest length for a provenance
+        # record) is not legible evidence - it cannot say which line or which
+        # field moved - so the request is refused here, before it opens,
+        # rather than left for a reviewer to reject. `--check-schema` reads the
+        # same live build the drift control does and names every unit that
+        # fails, so the failure output is the reason. It exits 0 when the
+        # corpus is in step, so it never blocks a clean run.
+        run: python -m harness drift --check-schema
+
+      - name: Open the repair pull request
+        # A pull request from a fork has no write token, so the request is only
+        # opened where the control runs with the repository's own credentials.
+        if: steps.drift.outputs.status != '0' && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          # The title and the body are the drift control's own output, read
+          # before anything is rewritten, so the request quotes the divergence
+          # it repairs rather than a summary of it.
+          python -m harness drift --title > /tmp/drift-title.txt
+          python -m harness drift --body  > /tmp/drift-body.md
+
+          # Republish only the artefacts that diverged. A provenance difference
+          # is not republished (it is the register's claim about the bytes and
+          # needs a deliberate edit), so its non-zero status is reported rather
+          # than allowed to hide the artefact repairs.
+          set +e
+          python -m harness drift --write
+          write_status=$?
+          set -e
+          if [ "$write_status" != "0" ]; then
+            echo "::warning::the drift includes a provenance difference or a \
+          published-but-unbuilt artefact; only the artefact repairs are in this \
+          pull request."
+          fi
+
+          # Only the artefacts the drift republished, never `git add -A`: the
+          # request must contain the regeneration and nothing else. The derived
+          # views and reports are regenerated alongside the corpus artefacts.
+          git add -A corpora derived provenance
+
+          if git diff --cached --quiet; then
+            echo "the control reported drift but nothing was republished"
+            exit 1
+          fi
+
+          branch="drift/corpus-$(date -u +%Y%m%dT%H%M%SZ)"
+          title="$(cat /tmp/drift-title.txt)"
+          git config user.name  "corpus-drift[bot]"
+          git config user.email "corpus-drift@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -m "$title"
+          git push -u origin "$branch"
+          gh pr create \
+            --title "$title" \
+            --body-file /tmp/drift-body.md \
+            --base "${GITHUB_BASE_REF:-main}" \
+            --head "$branch"
+
+      - name: Are the documented invariants still green?
+        # The cheap half of the same question: the working language of every
+        # artefact (F13), the absence of local paths and machine names (F14) and
+        # the meta-tests that keep `fixtures/invariants.yaml` and SPEC.md
+        # honest. They read the artefacts the rebuild above has just compared,
+        # they take under a second, and they catch the class of regression no
+        # corpus rebuild can see: a row repair that carried a path or a
+        # non-English phrase into a published file.
+        run: python -m pytest -q -k "f13 or f14 or spec"
+
+      - name: Does the block reader still read every promoted layout?
+        # The drift control above rebuilds the corpus and compares it with what
+        # is committed, which catches a reader repair nobody rebuilt for. It
+        # cannot catch a repair that reclassified a layout, because the rebuilt
+        # corpus is then wrong in the same way the build is. This gate re-reads
+        # every promoted layout from its own pages - the rows the reader opens,
+        # the counterparty and title pinned for each reviewed row, the exception
+        # list, and the habit vote that decides whether a table prints its number
+        # inside its heading - so a layout that changed sides, or a position
+        # whose pinned rows no longer match the page, fails here naming itself.
+        # It reads the same sources the drift control reads.
+        run: python -m pytest -q -k "p05"
+
+      - name: The run is red while the corpus is out of step
+        # The control above records the difference and opens the repair request,
+        # but it must not leave a green tick behind: a base whose artefacts no
+        # longer match the reader is not one to build on. The request is opened
+        # before this step, so the run reports the failure and its repair
+        # together rather than one instead of the other.
+        if: always() && steps.drift.outputs.status != '0'
+        run: |
+          echo "::error::python -m harness drift reports the corpus out of step with the reader; the rebuild and its request are above"
+          exit 1

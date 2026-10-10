@@ -1,0 +1,139 @@
+# The corpus' canonical name and slug for a jurisdiction, and the other names the
+# sources publish it under.
+#
+# This file exists because one jurisdiction can arrive under two names and the
+# corpus may publish it under one. Measured on the MLI material: the OECD's
+# signatories table prints "Czechia", the position document prints "Czech
+# Republic", and the additional notifications arrived in a file named
+# "mli-position-czechia-additional-notifications.pdf" - the publisher's own file
+# name, which no reader of the document would guess. The previous corpus
+# reproduced that faithfully: it produced `czech-republic.json` and
+# `czechia-additional-notifications.json` as two unrelated files, the second with
+# an empty country field, so a lookup by jurisdiction silently lost a document
+# (defect d20, invariant P4).
+#
+# The rule is one line per jurisdiction and it is data, not code: the projection
+# asks here, once, which name and slug to publish, instead of every reader
+# deciding for itself. A jurisdiction with one name needs no entry.
+#
+# `slug`     the one slug the corpus publishes this jurisdiction under.
+# `name`     the name the corpus prints for it - the one the signatories table
+#            uses, because that table is the corpus' own list of jurisdictions.
+# `aliases`  other names or slugs the sources publish it under, as they print
+#            them. Matched case-insensitively and, for slugs, after folding.
+# `basis`    why these names are one thing. Required: an alias nobody can check
+#            against a source is a guess with a citation.
+
+- slug: algeria
+  name: Algeria
+  aliases:
+    - République Algérienne Démocratique et Populaire
+  basis: >-
+    Algeria's position is published in French and names the jurisdiction in its own
+    words only: "REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE" on the cover, and
+    "de la République Algérienne démocratique et populaire" in the sentence under
+    it. The publisher's file name prints "algeria", which is the name the
+    signatories table uses.
+
+- slug: cameroon
+  name: Cameroon
+  aliases:
+    - Cameroun
+  basis: >-
+    Cameroon's position is published in French: its cover prints "CAMEROUN" and
+    its first sentence "du Cameroun". The signatories table prints "Cameroon".
+
+- slug: china-people-s-republic-of
+  name: China (People’s Republic of)
+  aliases:
+    - People’s Republic of China
+  basis: >-
+    The signatories table prints the jurisdiction with the formal name in brackets
+    ("China (People's Republic of)"), which is the name this corpus publishes it
+    under; the position document's own cover prints "People's Republic of China".
+    Same jurisdiction, two orders of the same words.
+
+- slug: czechia
+  name: Czechia
+  aliases:
+    - Czech Republic
+  basis: >-
+    Czechia is the short form of the Czech Republic (United Nations, since 2016).
+    The position document's own title prints "Czech Republic"; the OECD's file
+    name for its additional notifications prints "czechia"; the signatories table
+    prints "Czechia".
+
+- slug: germany
+  name: Germany
+  aliases:
+    - Federal Republic of Germany
+  basis: >-
+    The position document's own title prints the full name; the signatories table
+    and every other source in this corpus print "Germany".
+
+- slug: turkiye
+  name: Türkiye
+  aliases:
+    - Turkey
+    - Türkiye Cumhuriyeti
+  basis: >-
+    The signatories table this corpus holds prints "Türkiye" (row 102, status as
+    of 15 September 2026), and the position document prints "Türkiye Cumhuriyeti",
+    so the corpus publishes the name its own sources use. "Turkey" is the name
+    this country was published under until 2022 and is kept as an alias, because a
+    source that still prints it is naming the same jurisdiction.
+
+- slug: hong-kong-china
+  name: Hong Kong (China)
+  aliases:
+    - Hong Kong Special Administrative Region
+  basis: >-
+    The signatories table prints "Hong Kong (China)". The position document is
+    submitted by the People's Republic of China and says so in its own words - it
+    prints "Hong Kong Special Administrative Region" as its title and then defines
+    the short form in brackets, "(hereinafter referred to as 'Hong Kong (China)')" -
+    so the two names are one jurisdiction, and the document's own title is the long
+    one.
+
+- slug: greece
+  name: Greece
+  aliases:
+    - Hellenic Republic
+  basis: >-
+    Greece's position prints "HELLENIC REPUBLIC" as its title and in its
+    letterhead; the signatories table prints "Greece".
+
+- slug: morocco
+  name: Morocco
+  aliases:
+    - Royaume du Maroc
+    - Maroc
+  basis: >-
+    Morocco's position is published in French, and its cover sets the name in two
+    interleaved columns - one line prints "LE ROYAUME", another "MAROC" - so the
+    short French form is the one that stands alone on a printed line.
+
+- slug: portugal
+  name: Portugal
+  aliases:
+    - Portuguese Republic
+  basis: >-
+    Portugal's position prints "The Portuguese Republic" on its cover and in its
+    first sentence; the signatories table prints "Portugal".
+
+- slug: switzerland
+  name: Switzerland
+  aliases:
+    - Confédération suisse
+  basis: >-
+    Switzerland's position is published in French: its cover prints "Confédération
+    suisse". The signatories table prints "Switzerland".
+
+- slug: tunisia
+  name: Tunisia
+  aliases:
+    - République Tunisienne
+  basis: >-
+    Tunisia's position is published in French: its cover prints "La République
+    Tunisienne" and its first sentence "de la République Tunisienne". The
+    signatories table prints "Tunisia".

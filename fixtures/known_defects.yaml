@@ -1,0 +1,426 @@
+# Known defects — the audit of 2026-09-27, machine-readable.
+#
+# This is the red half of the harness. Each entry states a defect found by the
+# 2026-09-27 audit that the pipeline must make impossible. Every entry is a
+# test: it asserts that the defect is ABSENT.
+#
+# Why it exists: shape-only gates (ids, headings, XSD) passed while the corpus
+# contained a footnote inside the sentence "at least 50 per cent". This file
+# is the list of things shape gates could not see.
+#
+# `check` kinds implemented in harness/checks.py:
+#   forbidden_text        probe must NOT appear in the target files
+#   count_equals          a counted quantity of a JSON file must equal `expected`
+#   field_rule            a named predicate over a JSON file must hold
+#   no_local_paths        no absolute environment path may appear in the targets
+#   absent_tracked_path   no path matching the glob may be tracked by git
+#
+# `status` is one of:
+#   defect      found in the audit, must be absent here
+#   regression  already fixed, must not come back here
+#   target      a property the pipeline must reach
+
+- id: d01-header-inside-sentence-art24-2017
+  invariant: F2
+  status: defect
+  title: A page running header glued inside a sentence
+  source: UN Model 2017
+  location: article-24, paragraph 4
+  evidence: "…be deductible Articles 24 and 25 under the same conditions…"
+  check: forbidden_text
+  probe: "be deductible Articles 24 and 25"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2017/article-24.md"]
+  why: >
+    The apparatus line "Articles 24 and 25" sits at the top of the page and is
+    not recognised as a running header, so the body text swallows it. G4
+    (boilerplate) only inspected the first line of each paragraph.
+
+- id: d02-chapter-footer-art5-tail-2017
+  invariant: F5
+  status: defect
+  title: Chapter footer and next chapter title appended to a paragraph
+  source: UN Model 2017
+  location: article-5, paragraph 9 (tail)
+  evidence: "…Articles 6 and 7 Chapter III TAXATION OF INCOME"
+  check: forbidden_text
+  probe: "Articles 6 and 7 Chapter III TAXATION OF INCOME"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2017/article-5.md"]
+  why: Chapter footer + following chapter heading, read as paragraph continuation.
+
+- id: d03-chapter-footer-art5-tail-2021
+  invariant: F5
+  status: defect
+  title: Chapter footer and next chapter title appended to a paragraph
+  source: UN Model 2021
+  location: article-5, paragraph 9 (tail)
+  evidence: "…Articles 6 and 7 Chapter III TAXATION OF INCOME"
+  check: forbidden_text
+  probe: "Articles 6 and 7 Chapter III TAXATION OF INCOME"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2021/article-5.md"]
+  why: Same mechanism as d02, second edition.
+
+- id: d04-chapter-title-art21-tail-2017
+  invariant: F5
+  status: defect
+  title: Chapter title appended at the end of an article
+  source: UN Model 2017
+  location: article-21, paragraph 3 (tail)
+  evidence: "…may also be taxed in that other State. Chapter IV TAXATION OF CAPITAL"
+  check: forbidden_text
+  probe: "Chapter IV TAXATION OF CAPITAL"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2017/article-21.md"]
+  why: One-page article ending on a chapter turn.
+
+- id: d05-chapter-title-art21-tail-2021
+  invariant: F5
+  status: defect
+  title: Chapter title appended at the end of an article
+  source: UN Model 2021
+  location: article-21, paragraph 3 (tail)
+  evidence: "…may also be taxed in that other State. Chapter IV TAXATION OF CAPITAL"
+  check: forbidden_text
+  probe: "Chapter IV TAXATION OF CAPITAL"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2021/article-21.md"]
+  why: Same mechanism as d04, second edition.
+
+- id: d06-chapter-footer-art29-tail-2017
+  invariant: F5
+  status: defect
+  title: Chapter footer appended at the end of an article
+  source: UN Model 2017
+  location: article-29, paragraph 9 (tail)
+  evidence: "…Articles 30 and 31 Chapter VII FINAL PROVISIONS"
+  check: forbidden_text
+  probe: "Articles 30 and 31 Chapter VII FINAL PROVISIONS"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2017/article-29.md"]
+  why: Chapter footer on the next spread.
+
+- id: d07-chapter-footer-art29-tail-2021
+  invariant: F5
+  status: defect
+  title: Chapter footer appended at the end of an article
+  source: UN Model 2021
+  location: article-29, paragraph 9 (tail)
+  evidence: "…Articles 30 and 31 Chapter VII FINAL PROVISIONS"
+  check: forbidden_text
+  probe: "Articles 30 and 31 Chapter VII FINAL PROVISIONS"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2021/article-29.md"]
+  why: Same mechanism as d06, second edition.
+
+- id: d08-running-header-art12B-2021
+  invariant: F5
+  status: defect
+  title: Page running header merged into a paragraph
+  source: UN Model 2021
+  location: article-12B, paragraph 10
+  evidence: '…situated Articles 12B and 13 in that other State… inside the paragraph body'
+  check: forbidden_text
+  probe: "situated Articles 12B and 13 in that other State"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2021/article-12B.md"]
+  why: Running header at the top of page 47, joined across the page break.
+
+- id: d09-footnote-inside-sentence-art29-2017
+  invariant: F5
+  status: defect
+  title: Footnote text wedged inside a sentence
+  source: UN Model 2017
+  location: article-29, paragraph 2(f)(i)
+  evidence: >
+    "at least 50 per 12 As to incorporation of such a definition, see paragraph
+    14 of the Commentary on Article 29. cent of the aggregate vote…"
+  check: forbidden_text
+  probe: "at least 50 per 12 As to incorporation"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2017/article-29.md"]
+  why: >
+    A 10pt footnote span passes the boilerplate filter and lands in the middle
+    of the sentence, splitting "50 per cent".
+
+- id: d10-footnote-inside-sentence-art29-2021
+  invariant: F5
+  status: defect
+  title: Footnote text wedged inside a sentence
+  source: UN Model 2021
+  location: article-29, paragraph 3(a)
+  evidence: >
+    "…that business. For purposes of this Article, the 14 Subparagraph (g)
+    should only be inserted… term 'active conduct of a business'…"
+  check: forbidden_text
+  probe: "the 14 Subparagraph (g) should only be inserted"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2021/article-29.md"]
+  why: Same mechanism as d09, second edition, different article.
+
+- id: d11-lost-paragraph-art1-2021
+  invariant: F3
+  status: defect
+  title: A paragraph replaced by twice-repeated footnote text
+  source: UN Model 2021
+  location: article-1, paragraphs 3-4
+  evidence: >
+    Paragraph 3 ends with "…to col-" and paragraph 4 begins "lective investment
+    vehicles] 11 11 Various forms that such a provision could take…"
+  check: forbidden_text
+  probe: "lective investment vehicles] 11 11"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2021/article-1.md"]
+  why: >
+    The optional provision is split across a page break and its text is replaced
+    by the text of footnote 11. This also creates a FALSE diff entry
+    ("Article 1: paragraphs added: 4") in the flagship 2017->2021 report.
+
+- id: d12-chapter-title-art23B-2017
+  invariant: F5
+  status: defect
+  title: Chapter title appended at the end of an article
+  source: UN Model 2017
+  location: article-23B, paragraph 2 (tail)
+  evidence: "…take into account the exempted income or capital. Chapter VI SPECIAL PROVISIONS"
+  check: forbidden_text
+  probe: "Chapter VI SPECIAL PROVISIONS"
+  probe_kind: literal
+  targets: ["derived/markdown/un-model/2017/article-23B.md"]
+  why: Not covered by any declared residual-artefact list in the 2026-09-27 audit.
+
+- id: d13-alternative-label-as-paragraph
+  invariant: F4
+  status: defect
+  title: An "Alternative A/B" label emitted as a fake paragraph
+  source: UN Model 2017 and 2021
+  location: articles 8, 18, 25 of both editions
+  evidence: '"**1.** Article 25 (alternative A)" as a standalone paragraph'
+  check: forbidden_text
+  probe: '^\*\*1\.\*\* Article \d{1,2} \((?:a|A)lternative [AB]\)$'
+  probe_kind: regex
+  targets: ["derived/markdown/un-model/2017/article-8.md",
+            "derived/markdown/un-model/2017/article-18.md",
+            "derived/markdown/un-model/2017/article-25.md",
+            "derived/markdown/un-model/2021/article-8.md",
+            "derived/markdown/un-model/2021/article-18.md",
+            "derived/markdown/un-model/2021/article-25.md"]
+  why: >
+    The alternative is a structural node in the source. Emitting it as a
+    numbered paragraph corrupts the paragraph count and makes the two branches
+    indistinguishable (only the eId suffix `__v2` tells them apart).
+
+- id: d14-alternative-label-glued-to-tail
+  invariant: F4
+  status: defect
+  title: The "Alternative B" label glued to the last paragraph of Alternative A
+  source: UN Model 2017
+  location: articles 8, 18, 25
+  evidence: "…international operating agency. Articles 8 and 9 Article 8 (alternative B)"
+  check: forbidden_text
+  probe: '(?:operating agency|shall be taxable only in that State|provided for in this Article)\. Articles \d{1,2} and \d{1,2} Article \d{1,2} \((?:a|A)lternative B\)'
+  probe_kind: regex
+  targets: ["derived/markdown/un-model/2017/article-8.md",
+            "derived/markdown/un-model/2017/article-18.md",
+            "derived/markdown/un-model/2017/article-25.md"]
+  why: >
+    A running header AND the next branch label are both swallowed by the tail of
+    the previous paragraph.
+
+- id: d15-broken-words
+  invariant: U4
+  status: regression
+  title: Words broken by a line end remain split in the corpus
+  source: UN Model 2017 and 2021
+  location: whole corpus
+  evidence: '"subdivi sions", "substan-tially", "Contract-ing"'
+  check: forbidden_text
+  probe: "subdivi sions|substan-tially|Contract-ing"
+  probe_kind: regex
+  targets: ["derived/markdown/un-model/**/*.md", "corpora/un-model/**/*.xml"]
+  why: >
+    Regression battery: broken-word joins were already fixed before the
+    2026-09-27 audit, and the pipeline must not regress them.
+
+- id: d16-signatories-rows-missing
+  invariant: S1
+  status: defect
+  title: Signatories table is missing rows
+  source: MLI Signatories and Parties (OECD)
+  location: corpora/mli/signatories-and-parties.json
+  evidence: >
+    100 rows extracted against 107 numbered rows in the PDF: numbers 1-6 live
+    at the bottom of page 0 (never read: the parser loops from page 1), and
+    number 29 (Democratic Republic of the Congo) is dropped because its name
+    wraps onto two lines.
+  check: count_equals
+  target: "corpora/mli/signatories-and-parties.json"
+  selector: "len(rows)"
+  expected: 107
+  why: >
+    The audited artefact reported this as "100 jurisdictions, 0 problems" —
+    a silent drop of exactly the kind its own checklist feared.
+
+- id: d17-signatories-numbering-gap
+  invariant: S1
+  status: defect
+  title: Gap in the numbered row sequence
+  source: MLI Signatories and Parties (OECD)
+  location: corpora/mli/signatories-and-parties.json
+  evidence: "rows numbered 7..107 with 7 and 29 missing"
+  check: field_rule
+  target: "corpora/mli/signatories-and-parties.json"
+  rule: numbering_contiguous
+  why: An arithmetic-only completeness test cannot see a gap inside a range.
+
+- id: d18-signatories-name-has-date
+  invariant: S2
+  status: defect
+  title: Dates and footnote marks inside the jurisdiction name
+  source: MLI Signatories and Parties (OECD)
+  location: corpora/mli/signatories-and-parties.json
+  evidence: '"jurisdiction": "Czechia 13-05-20204 16-08-20245"'
+  check: field_rule
+  target: "corpora/mli/signatories-and-parties.json"
+  rule: no_date_in_jurisdiction
+  why: Superscript footnote markers are glued to the dates and leak into the name field.
+
+- id: d19-positions-excerpts-truncated
+  invariant: P1
+  status: defect
+  title: Position excerpts hard-truncated mid-word
+  source: MLI country positions (OECD)
+  location: corpora/mli/positions/*.json
+  evidence: "491 excerpts of exactly the 1200-character limit, cut mid-word (… 4(3) 19)"
+  check: field_rule
+  target: "corpora/mli/positions/*.json"
+  rule: no_silent_truncation
+  why: A slice `[:1200]` with no flag, undocumented in the audited artefact.
+
+- id: d20-slug-not-canonical
+  invariant: P4
+  status: defect
+  title: Two different slugs for one jurisdiction
+  source: MLI country positions (OECD)
+  location: corpora/mli/positions/
+  evidence: 'czech-republic.json and czechia-additional-notifications.json (the addendum has "country": "")'
+  check: field_rule
+  target: "corpora/mli/positions/*.json"
+  rule: one_file_per_jurisdiction
+  why: >
+    The addendum is unreachable from the base slug, so a lookup by jurisdiction
+    silently loses a document.
+
+- id: d21-covered-agreements-silently-empty
+  invariant: P2
+  status: defect
+  title: A covered-agreements table visible in the text but empty in the fields
+  source: MLI country positions (OECD)
+  location: corpora/mli/positions/*.json
+  evidence: >
+    37 of 103 files have an empty `covered_agreements` while the flattened table
+    sits inside the `excerpt`; qa.warnings never flags it.
+  check: field_rule
+  target: "corpora/mli/positions/*.json"
+  rule: covered_table_present_or_declared
+  why: An empty field must be a decision, not an accident.
+
+- id: d22-local-paths-in-artifacts
+  invariant: F14
+  status: defect
+  title: Absolute local paths inside a committed artefact
+  source: project
+  location: derived/index.json
+  evidence: '"/Users/<user>/Desktop/…/corpora/un-model/2017/model-2017.eng.akn.xml"'
+  check: no_local_paths
+  targets: ["derived/**/*.json", "corpora/**/*.json"]
+  why: >
+    Portability and privacy - the artefact must not describe the machine that
+    built it.
+
+- id: d23-generated-artifact-tracked
+  invariant: F7
+  status: defect
+  title: A generated, non-reproducible binary committed to git
+  source: project
+  location: derived/fts/legal-tax-data.db
+  evidence: >
+    The SQLite FTS index was tracked, differed byte-for-byte from a fresh build
+    and left the working tree dirty after every build.
+  check: absent_tracked_path
+  pattern: "derived/fts/*.db"
+  why: Generated artefacts are outputs, not sources; tracking them breaks the determinism claim.
+
+- id: d25-azerbaijan-footer-band-ate-table-rows
+  invariant: P2
+  status: regression
+  title: The footer band opened inside the table and swallowed its last rows
+  source: MLI country positions (OECD) - azerbaijan
+  location: corpora/mli/positions/azerbaijan.json
+  evidence: >
+    Azerbaijan prints no page number, so a short line repeated at y = 668 on 10 of
+    its 29 pages (share 0.34, just over the declared 0.30) qualified as the foot of
+    the page while the table itself runs to y = 703: the band opened at y = 666,
+    inside the table, and every span below it was classified as apparatus - among
+    them the row of the United Arab Emirates and its printed number 53 at
+    y = 676.92. A printed row number is not a page number.
+  check: count_equals
+  target: "corpora/mli/positions/azerbaijan.json"
+  selector: "len(covered_agreements)"
+  expected: 54
+  why: >
+    Already fixed: rules/20-mli.yaml declares R-BAND-DEFINE-MLI-POSITION-AZERBAIJAN
+    (page_share 0.80), the position reads 54 rows numbered 1..54 without a gap, and
+    row 53 carries United Arab Emirates again. If the band ever re-opens inside the
+    table, rows disappear from the artefact and this count moves.
+
+- id: d26-kuwait-packed-date-cell
+  invariant: P2
+  status: regression
+  title: A signature date and its N/A force value arrived packed in one span
+  source: MLI country positions (OECD) - kuwait
+  location: corpora/mli/positions/kuwait.json
+  evidence: >
+    Kuwait's row 3 prints its signature date and the entry-into-force value as one
+    PDF span, "28/10/2008 N/A": a cell reader that keeps spans whole publishes the
+    packed string as the signature date and publishes no entry-into-force value at
+    all. The table's own column order decides which half is which.
+  check: forbidden_text
+  probe: '"signature": "[^"]*N\s*/\s*A'
+  probe_kind: regex
+  targets: ["corpora/mli/positions/kuwait.json"]
+  why: >
+    Already fixed: harness/covered.py splits a packed date/N-A cell by the table's
+    own column order (row 3 reads signature 28/10/2008, entry_into_force N/A), and
+    the artefact's qa reports dated_cells_split_by_text: 41. The regex fires only
+    when the packed string is published whole as a signature date again.
+
+
+- id: d24-diff-polluted-by-artifact
+  invariant: F9
+  status: defect
+  title: The edition diff reports a change caused by an extraction artefact
+  source: UN Model 2017 -> 2021
+  location: derived/reports/diff-un-model-2017-2021.md
+  evidence: '"Article 1 - paragraphs added: 4", where the 4th is the footnote fragment of d11; and "**Articles 8 and 9**" inside the text of Article 8'
+  check: report_matches_corpus
+  family: un-model
+  editions: ["2017", "2021"]
+  targets: ["derived/reports/diff-un-model-2017-2021.md"]
+  why: >
+    A literal-string placeholder would be a signature, not a check. What the
+    report must do is agree with the corpus it is a view of, in both directions:
+    every Article the corpus holds as modified has to be in the report's modified
+    list, every Article the report lists has to be one the corpus holds as
+    modified, and the summary numbers have to be the recomputed ones. A report
+    built from a second reading of the two PDFs fails on the first count: that
+    is where the artefacts came from - invented changes out of page running
+    heads, and missed Articles 5, 22 and 25, whose text the corpus holds as
+    changed.
+
+    The stronger check this probe still cannot make: comparing the report against
+    the Model's own change notes, in prose, would test the *reading* of the
+    sources and not the view of the corpus. That needs the Model's introduction
+    to be read as a document of its own, which is a corpus family this project
+    does not hold yet.

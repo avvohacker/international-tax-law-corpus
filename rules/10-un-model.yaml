@@ -1,0 +1,330 @@
+# Classification rules, UN Model Double Taxation Convention layer.
+#
+# Applies to sources `un-model-2017` and `un-model-2021`. The two editions are
+# structurally the same document, so they share one rule set; an edition-specific
+# rule must say so in `applies_to`.
+#
+# The invariant these rules serve is U3: the Convention text, the Commentary and
+# the page apparatus are three disjoint sets. The boundary with "Part Two /
+# COMMENTARIES" is a node, and everything after it is a declared drop, not a
+# silent one.
+#
+# Measured on the 2017 PDF (828 pages), and matching the 2021 edition:
+#   header       y = 26, 10pt,  "Article 24" / "Articles 24 and 25" / "... Commentary"
+#   footer       y = 604, 10pt, page number
+#   body         11pt, left margin x = 59 for a paragraph, deeper for sub-levels
+#   notes        10pt, the tail of the page, introduced by a number
+#   chapter      "Chapter VI" 12pt, then the title 14pt on the next line
+#   article      "Article 24" 11pt, then the title in capitals on the next line
+#   alternatives "Article 8 (alternative A)" 11pt, alone on its line
+
+- id: R-CONVENTION-START
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: convention_title
+  region_starts: body
+  rationale: >-
+    The Convention begins here: the book's own matter (cover, contents,
+    foreword, introduction) ends and the instrument starts at "TITLE OF THE
+    CONVENTION", which both editions print identically at 14pt on the first
+    text line of its page (2017 page 26, 2021 page 25).
+
+    Without this marker the region stayed "front_matter" until the first
+    "Chapter I" seven pages later, so the Title and the whole Preamble were
+    dropped as book matter: a deletion of source text, which invariant F3
+    forbids and which the earlier corpus also had. The contents page cannot be
+    mistaken for this line: it prints the same words at 10pt (2017) or 11pt
+    (2021) followed by dotted leaders, and this rule requires 14pt and the exact
+    line.
+  when:
+    all_of:
+      - band: body
+      - font_pt: 14.0
+      - text_fullmatch: 'TITLE OF THE CONVENTION'
+  prevents: []
+
+- id: R-PREAMBLE-START
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: preamble_heading
+  rationale: >-
+    "PREAMBLE OF THE CONVENTION" opens the preamble, which AKN4UN models as a
+    container of its own (`<preamble>`); the sentences under it are unnumbered
+    and belong to it, not to the front matter and not to article 1. The line
+    carries the marker of footnote 9 (2017) or 10 (2021) at 14pt as well, printed
+    in a separate span, so the pattern matches the beginning of the line rather
+    than the whole of it.
+  when:
+    all_of:
+      - band: body
+      - font_pt: 14.0
+      - text_matches: '^PREAMBLE OF THE CONVENTION(\s\d{1,3})?$'
+  prevents: [d11]
+
+- id: R-FRONT-MATTER
+  decision: drop
+  applies_to: [un-model-2017, un-model-2021]
+  rationale: >-
+    The corpus is the Convention and its apparatus, not the book that contains
+    it: cover, contents, editorial notes and introduction are dropped as one
+    declared unit, counted in the audit report. Declared, because a front matter
+    dropped by a rule nobody wrote is text that vanishes without a name.
+  when:
+    region: front_matter
+  prevents: []
+
+- id: R-PART-TWO
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: document_boundary
+  region_starts: commentary
+  rationale: >-
+    "Part Two" opens the Commentaries and closes the Convention. Everything after
+    this line belongs to a different document and is never mixed into the article
+    body, however much it looks like body text. The boundary is itself a node, so
+    it is visible in the corpus rather than being an absence.
+
+    The size is what separates the divider from the contents page. Both editions
+    print the divider at 12pt (2017 page 78, 2021 page 79) and both print
+    "Part Two" in the table of contents at 11pt - in the 2021 edition as a bare
+    heading, with no dotted leaders and at the same left edge (x = 195 against
+    x = 193), so size is the only measurement that tells them apart. Without it
+    the contents page of the 2021 edition opened the Commentaries eight pages
+    early and the table of contents was dropped as commentary.
+  when:
+    all_of:
+      - band: body
+      - font_pt: 12.0
+      - text_fullmatch: '^Part Two$'
+  prevents: []
+
+- id: R-COMMENTARY
+  decision: drop
+  applies_to: [un-model-2017, un-model-2021]
+  rationale: >-
+    The Commentaries are out of scope for version 1.0: they are a separate
+    document with their own structure, and pretending otherwise would double the
+    corpus without a reader for it. Declared and counted, so the decision can be
+    revisited and so nothing after the boundary is claimed as body.
+  when:
+    region: commentary
+  prevents: []
+
+- id: R-CHAPTER-NUMBER
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: chapter
+  region_starts: body
+  rationale: >-
+    "Chapter III" opens a chapter node. The minimum size is what keeps the table
+    of contents out: the contents page prints the same words at 11pt with dotted
+    leaders, and a contents line read as a chapter would start the body seven
+    pages early.
+  when:
+    all_of:
+      - band: body
+      - font_pt: 12.0
+      - text_fullmatch: 'Chapter [IVXLC]+'
+  prevents: [d04, d05, d12]
+
+- id: R-CHAPTER-NAME
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: chapter_title
+  rationale: >-
+    The chapter title follows its number, in capitals, a size larger than the
+    body. It is a property of the chapter node, not a paragraph: a chapter title
+    turned into body text is what appended "Chapter IV TAXATION OF CAPITAL" to
+    the end of article 21.
+  when:
+    all_of:
+      - follows: R-CHAPTER-NUMBER
+      - font_min_pt: 13.0
+      - text_fullmatch: '[A-Z][A-Z0-9 ,.&''\-]{2,80}'
+  prevents: [d04, d05, d12, d14]
+
+- id: R-CHAPTER-NAME-CONT
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: chapter_title
+  rationale: >-
+    A chapter title long enough to wrap ("CONVENTION BETWEEN DEVELOPED AND
+    DEVELOPING COUNTRIES") continues on the next line. The line is still the
+    title, and it is the running header, not this rule, that must not enter the
+    body.
+  when:
+    all_of:
+      - follows: R-CHAPTER-NAME
+      - font_min_pt: 13.0
+      - text_fullmatch: '[A-Z][A-Z0-9 ,.&''\-]{2,80}'
+  prevents: []
+
+- id: R-ART-NUMBER
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: article
+  rationale: >-
+    "Article 24" alone on a line opens an article node. The article id is the
+    heading's own number, never inferred from position and never taken from the
+    table of contents. The heading is printed in two spans, so the space between
+    "Article" and the number is optional in the pattern.
+  when:
+    all_of:
+      - band: body
+      - font_pt: 11.0
+      - x0_min_pt: 120
+      - text_fullmatch: 'Article\s?\d{1,2}\s?[A-Z]?'
+  prevents: []
+
+- id: R-ART-NAME
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: article_title
+  rationale: >-
+    The article title follows its number, in capitals. It belongs to the article
+    node: the title is the article's name, not its first paragraph. The pattern
+    admits the apostrophe the PDF actually uses - article 16 reads
+    "DIRECTORS' FEES AND REMUNERATION OF TOP-LEVEL MANAGERIAL OFFICIALS" with a
+    typographic apostrophe (U+2019), and a rule written with the ASCII one left
+    that article without a title and its heading as body text.
+  when:
+    all_of:
+      - follows: R-ART-NUMBER
+      - text_fullmatch: '[A-Z][A-Z0-9 ,.&''\u2019\-]{2,80}'
+  prevents: []
+
+- id: R-ART-NAME-CONT
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: article_title
+  rationale: >-
+    A long article title wraps onto a second capitalised line.
+  when:
+    all_of:
+      - follows: R-ART-NAME
+      - text_fullmatch: '[A-Z][A-Z0-9 ,.&''\u2019\-]{2,80}'
+  prevents: []
+
+- id: R-ALTERNATIVE-LABEL
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: alternative
+  akn: hcontainer
+  name_pattern: '^alternative-[AB]$'
+  rationale: >-
+    Where the Model offers alternatives (articles 8, 18 and 25 in both editions),
+    the source prints "Article 25 (alternative A)" alone on a line, opening a
+    branch of the article. It is a node, so the paragraphs of the two branches can
+    be counted separately and can never be confused with each other. Emitted as a
+    numbered paragraph it corrupted the paragraph count ("**1.** Article 25
+    (alternative A)"); swallowed by the tail of the previous branch it produced
+    "... operating agency. Articles 8 and 9 Article 8 (alternative B)".
+  when:
+    all_of:
+      - band: body
+      - text_fullmatch: 'Article\s?\d{1,2}\s?[A-Z]? \((?:alternative|Alternative) [AB]\)'
+  prevents: [d13, d14]
+
+- id: R-PARA-NUMBER
+  decision: structural
+  applies_to: [un-model-2017, un-model-2021]
+  node: paragraph
+  node_by_level:
+    1: paragraph
+    2: point
+    3: point
+    4: point
+    5: point
+  rationale: >-
+    A line that opens with a marker - "1.", "(a)", "(ii)", "(A)" - opens a
+    node at the depth its marker implies. The marker is a property of the node,
+    not text inside it, which is why a paragraph count can be compared with the
+    source. It is the printed line that is matched, so this rule depends on
+    R-LINE-BUILD joining the marker to the sentence it numbers.
+
+    The depth names come from the AKN4UN guidelines (part 1, 4.4.3 "Hierarchical
+    Content Model", "Lists inside points or indents"), which are the authority
+    for modelling a UN document: a numbered "1." is a `paragraph`, that is a
+    basic unit; a lettered or roman item is a `point`, that is, an item of a
+    `list`; and because a list may sit inside a point, "(i)" inside "(a)" and
+    "(A)" inside "(i)" are points of a nested list as well, introduced by the
+    AKN writer. `indent` is reserved by that guideline for indented text that
+    carries no marker at all, which is what R-BODY-TEXT produces here.
+
+    The depth a marker sits at is not read from its glyphs but from the printed
+    column it stands in (R-MARKER-COLUMN), and that is what tells the two apart
+    in article 29: its list of definitions runs (a), (b), ..., (i), (j), so the
+    ninth item is printed "(i)" at the letter column, while the roman numerals
+    that open the nested lists of (c), (e), (f) and (h) are printed one column
+    further right at x = 92.4. Reading the depth off the shape made the ninth
+    item a sibling of the sub-items of (h) and gave three nodes one eId.
+
+    A depth this rule has no tag for raises RuleError instead of being silently
+    emitted at the wrong level: the 2017 Convention prints four columns (pages
+    66, 70-72 of article 29) and the 2021 edition five (page 71), and finding
+    that out by measurement is the reason the map is written down.
+
+    A marker may also carry more than one dot. The 2017 Model prints a paragraph
+    numbered "4.1" between paragraphs 4 and 5 of article 5, at the paragraph
+    column and the paragraph tab stop; read as body text it put the two list
+    items hanging from it under paragraph 4, and two nodes ended up sharing an
+    identity.
+  when:
+    all_of:
+      - band: body
+      - text_matches: '^(\d{1,2}\.\d{1,2}|\d{1,2}\.|\([a-z]{1,4}\)|\([A-Z]\)) '
+  prevents: [d13]
+
+- id: R-PARA-MARKER
+  decision: transform
+  applies_to: [un-model-2017, un-model-2021]
+  transform: split_marker_to_number
+  rationale: >-
+    The marker is moved out of the text and into the node's number, by a ledger
+    entry, so that "1." is a number and "This Convention shall apply to persons
+    who are residents..." is the sentence. The marker is its own span in this PDF
+    (x = 59 to 69, the sentence starting at x = 90), so nothing is edited: the
+    span is kept and its text is declared to be a number. A paragraph count read
+    off the text is what made the previous pipeline report "Article 1 -
+    paragraphs added: 4" against a comparison that had lost the paragraph
+    markers themselves.
+  when:
+    text_matches: '^(\d{1,2}\.\d{1,2}|\d{1,2}\.|\([a-z]{1,4}\)|\([A-Z]\)) '
+  prevents: [d13]
+
+- id: R-BODY-TEXT
+  decision: keep
+  applies_to: [un-model-2017, un-model-2021]
+  node: alinea
+  rationale: >-
+    Everything inside an open article node, in the body band, at body size, that
+    no drop rule claimed. This rule is deliberately last among the claims: a span
+    that reaches it has been offered to every drop rule first, so "kept" is a
+    positive statement rather than a fallback.
+
+    Its node is an `alinea`: text of the article that carries no marker of its
+    own. AKN4UN (4.4.2) defines an alinea as "an odd paragraph that appears
+    unnumbered within a numbered hierarchy", and a continuation line of a
+    numbered paragraph is not a node at all - it belongs to the paragraph it
+    continues - which is why the projection joins lines that follow one another
+    down a page and across a page the sentence ran off.
+  when:
+    all_of:
+      - band: body
+      - font_min_pt: 9.5
+  prevents: []
+
+- id: R-UNCLAIMED
+  decision: drop
+  catch_all: true
+  applies_to: [un-model-2017, un-model-2021]
+  rationale: >-
+    The last rule of this source, and the one that makes the ledger trustworthy:
+    whatever no other rule claims is dropped and listed, span by span, in the
+    audit report. It drops rather than keeps because the previous pipeline's
+    failure was exactly this - "kept" was the default, so apparatus that looked
+    like a sentence became body text. Text listed here is a rule somebody has to
+    write, not a silent loss.
+  when:
+    always: true
+  prevents: []

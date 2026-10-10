@@ -1,0 +1,2721 @@
+{
+  "attach_bands": {
+    "layouts": {
+      "algeria": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "andorra": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "antigua-and-barbuda": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "argentina": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "armenia": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "australia": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "austria": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "azerbaijan": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "bahrain": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.39,
+          13.47
+        ],
+        "row_attach_pt": 6.0
+      },
+      "barbados": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.02,
+          13.92
+        ],
+        "row_attach_pt": 6.0
+      },
+      "belgium": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "belize": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "bosnia-and-herzegovina": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.33,
+          11.76
+        ],
+        "row_attach_pt": 6.0
+      },
+      "brazil": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "bulgaria": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.24,
+          6.84
+        ],
+        "row_attach_pt": 6.0
+      },
+      "burkina-faso": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "cameroon": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "canada": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "chile": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "china-people-s-republic-of": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "colombia": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "costa-rica": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "cote-d-ivoire": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "croatia": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.6,
+          6.6
+        ],
+        "row_attach_pt": 6.0
+      },
+      "curacao": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "cyprus": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "czechia": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "czechia-additional-notifications": {
+        "reader": null,
+        "row_attach_band_pt": [],
+        "row_attach_pt": null
+      },
+      "democratic-republic-of-the-congo": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "denmark": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "egypt": {
+        "reader": "block",
+        "row_attach_band_pt": [
+          6.77,
+          11.69
+        ],
+        "row_attach_pt": 8.0
+      },
+      "eswatini": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "fiji": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.12,
+          13.92
+        ],
+        "row_attach_pt": 6.0
+      },
+      "finland": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "france": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "gabon": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "georgia": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "germany": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          2.37,
+          13.32
+        ],
+        "row_attach_pt": 6.0
+      },
+      "greece": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "guernsey": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "hong-kong-china": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.15,
+          11.55
+        ],
+        "row_attach_pt": 6.0
+      },
+      "hungary": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "iceland": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "india": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          2.01,
+          13.92
+        ],
+        "row_attach_pt": 6.0
+      },
+      "indonesia": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "ireland": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.01,
+          13.32
+        ],
+        "row_attach_pt": 6.0
+      },
+      "isle-of-man": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "israel": {
+        "reader": "block",
+        "row_attach_band_pt": [
+          1.71,
+          12.44
+        ],
+        "row_attach_pt": 8.0
+      },
+      "italy": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          5.06,
+          12.74
+        ],
+        "row_attach_pt": 6.0
+      },
+      "jamaica": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "japan": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "jersey": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "kazakhstan": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "kenya": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.14,
+          26.04
+        ],
+        "row_attach_pt": 6.0
+      },
+      "korea": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.12,
+          12.84
+        ],
+        "row_attach_pt": 6.0
+      },
+      "kuwait": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "latvia": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "lesotho": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "liechtenstein": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.24,
+          13.32
+        ],
+        "row_attach_pt": 6.0
+      },
+      "lithuania": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "luxembourg": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "malaysia": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "malta": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.12,
+          13.26
+        ],
+        "row_attach_pt": 6.0
+      },
+      "mauritius": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          5.76,
+          6.6
+        ],
+        "row_attach_pt": 6.0
+      },
+      "mauritius-draft": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.0,
+          6.6
+        ],
+        "row_attach_pt": 6.0
+      },
+      "mexico": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "monaco": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "mongolia": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          0.12,
+          18.96
+        ],
+        "row_attach_pt": 6.0
+      },
+      "montenegro": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "morocco": {
+        "reader": null,
+        "row_attach_band_pt": [],
+        "row_attach_pt": null
+      },
+      "netherlands": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "new-zealand": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "nigeria": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "north-macedonia": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "norway": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "pakistan": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "panama": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "papua-new-guinea": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          2.11,
+          13.92
+        ],
+        "row_attach_pt": 6.0
+      },
+      "peru": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "poland": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "portugal": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "qatar": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          5.64,
+          6.72
+        ],
+        "row_attach_pt": 6.0
+      },
+      "romania": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "russian-federation": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "russian-federation-provisional": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "san-marino": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "senegal": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "serbia": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "seychelles": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "singapore": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "slovak-republic": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "slovenia": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "south-africa": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "spain": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "sweden": {
+        "reader": "block",
+        "row_attach_band_pt": [
+          2.01,
+          13.87
+        ],
+        "row_attach_pt": 8.0
+      },
+      "switzerland": {
+        "reader": null,
+        "row_attach_band_pt": [],
+        "row_attach_pt": null
+      },
+      "thailand": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "tunisia": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      },
+      "turkiye": {
+        "reader": "number-first",
+        "row_attach_band_pt": [
+          2.37,
+          13.26
+        ],
+        "row_attach_pt": 6.0
+      },
+      "ukraine": {
+        "reader": "block",
+        "row_attach_band_pt": [
+          6.75,
+          13.43
+        ],
+        "row_attach_pt": 8.0
+      },
+      "united-kingdom": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "uruguay": {
+        "reader": "number-first",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 6.0
+      },
+      "viet-nam": {
+        "reader": "block",
+        "row_attach_band_pt": [],
+        "row_attach_pt": 8.0
+      }
+    },
+    "tight": {
+      "POS_ATTACH_PT": {
+        "high": "croatia",
+        "low": "mauritius"
+      },
+      "POS_ATTACH_REACH_PT": {
+        "high": "egypt",
+        "low": "egypt"
+      }
+    }
+  },
+  "declared": 110,
+  "directory": "sources/mli-positions",
+  "documents": [
+    {
+      "base_slug": "",
+      "country": "Algeria",
+      "covered_agreements": 35,
+      "file": "sources/mli-positions/mli-position-algeria.pdf",
+      "is_companion": false,
+      "pages": 20,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 8,
+      "sha256": "ea912b227f8d09433096f9334a55e7826240510754a601789fb9dbd5e9cbbce2",
+      "slug": "algeria",
+      "spans": {
+        "dropped": 21,
+        "kept": 2031,
+        "read": 2052,
+        "transformed": 0,
+        "unclaimed": 21
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Andorra",
+      "covered_agreements": 6,
+      "file": "sources/mli-positions/mli-position-andorra.pdf",
+      "is_companion": false,
+      "pages": 23,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 17,
+      "sha256": "471fc11ded803d45c96b8f8a9a5d908756e600f41584649a99486c1fa464dd62",
+      "slug": "andorra",
+      "spans": {
+        "dropped": 23,
+        "kept": 491,
+        "read": 514,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Antigua and Barbuda",
+      "covered_agreements": 2,
+      "file": "sources/mli-positions/mli-position-antigua-and-barbuda.pdf",
+      "is_companion": false,
+      "pages": 7,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "02c7efca3571835f761f47b9bbae1221137f30d90a5ef30d4c3b27b3bc2ccecb",
+      "slug": "antigua-and-barbuda",
+      "spans": {
+        "dropped": 14,
+        "kept": 216,
+        "read": 230,
+        "transformed": 0,
+        "unclaimed": 7
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Argentina",
+      "covered_agreements": 17,
+      "file": "sources/mli-positions/mli-position-argentina.pdf",
+      "is_companion": false,
+      "pages": 22,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "89748d458daee6e43311fe452ed38fc455ce7a41b18518aaf2820838d0e690db",
+      "slug": "argentina",
+      "spans": {
+        "dropped": 22,
+        "kept": 1068,
+        "read": 1090,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Armenia",
+      "covered_agreements": 46,
+      "file": "sources/mli-positions/mli-position-armenia.pdf",
+      "is_companion": false,
+      "pages": 23,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 8,
+      "sha256": "f4b1d4e2b43beb9145ba9ae4a21f01359830a27d4cffe0cd6e302457563d430d",
+      "slug": "armenia",
+      "spans": {
+        "dropped": 23,
+        "kept": 1876,
+        "read": 1899,
+        "transformed": 2,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Australia",
+      "covered_agreements": 43,
+      "file": "sources/mli-positions/mli-position-australia.pdf",
+      "is_companion": false,
+      "pages": 35,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "e2e5c19d26a8f0a109c4c825f4878c33c9c218ddcdff4d152ef2cfd4adf17ffc",
+      "slug": "australia",
+      "spans": {
+        "dropped": 35,
+        "kept": 2169,
+        "read": 2204,
+        "transformed": 3,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Austria",
+      "covered_agreements": 38,
+      "file": "sources/mli-positions/mli-position-austria.pdf",
+      "is_companion": false,
+      "pages": 20,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 22,
+      "sha256": "96a1de0d8fadd609015c22441666cb3bec8185ef256836f3196966165c9c5b91",
+      "slug": "austria",
+      "spans": {
+        "dropped": 20,
+        "kept": 1396,
+        "read": 1416,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Azerbaijan",
+      "covered_agreements": 54,
+      "file": "sources/mli-positions/mli-position-azerbaijan.pdf",
+      "is_companion": false,
+      "pages": 29,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "7d4020e9dca363c05af2d5d16e3432509ea053230c4bb1b5afdfd148634f0f6e",
+      "slug": "azerbaijan",
+      "spans": {
+        "dropped": 131,
+        "kept": 2043,
+        "read": 2174,
+        "transformed": 0,
+        "unclaimed": 108
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Bahrain*",
+      "covered_agreements": 44,
+      "file": "sources/mli-positions/mli-position-bahrain.pdf",
+      "is_companion": false,
+      "pages": 18,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "7d14dbdf2b6e40e992465b2da3d5c28a7ef38c347e0182043f2ba18a01a72511",
+      "slug": "bahrain",
+      "spans": {
+        "dropped": 36,
+        "kept": 1442,
+        "read": 1478,
+        "transformed": 0,
+        "unclaimed": 18
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Barbados",
+      "covered_agreements": 33,
+      "file": "sources/mli-positions/mli-position-barbados.pdf",
+      "is_companion": false,
+      "pages": 21,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 11,
+      "sha256": "59c13f773b4664363d845256de81ac15789658b87e4ac2f93672e9da4b1c97fc",
+      "slug": "barbados",
+      "spans": {
+        "dropped": 39,
+        "kept": 1187,
+        "read": 1226,
+        "transformed": 0,
+        "unclaimed": 21
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Belgium",
+      "covered_agreements": 98,
+      "file": "sources/mli-positions/mli-position-belgium.pdf",
+      "is_companion": false,
+      "pages": 53,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "96981556e8531ebc6a114bcb0e6527549c275b7137f3cbd81570f2b4afb7d5c7",
+      "slug": "belgium",
+      "spans": {
+        "dropped": 53,
+        "kept": 4460,
+        "read": 4513,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Belize",
+      "covered_agreements": 4,
+      "file": "sources/mli-positions/mli-position-belize.pdf",
+      "is_companion": false,
+      "pages": 18,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 12,
+      "sha256": "02ffbe89926ea0a036c3965e329f601d4af1d7d7044718512a8d2d2fa4385a74",
+      "slug": "belize",
+      "spans": {
+        "dropped": 18,
+        "kept": 260,
+        "read": 278,
+        "transformed": 0,
+        "unclaimed": 18
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Bosnia and Herzegovina",
+      "covered_agreements": 37,
+      "file": "sources/mli-positions/mli-position-bosnia-and-herzegovina.pdf",
+      "is_companion": false,
+      "pages": 27,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "87af36722b6bbc864b585c6c15027a1f4b3a1807761774e83e7b45299028c302",
+      "slug": "bosnia-and-herzegovina",
+      "spans": {
+        "dropped": 54,
+        "kept": 1302,
+        "read": 1356,
+        "transformed": 1,
+        "unclaimed": 27
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Brazil",
+      "covered_agreements": 26,
+      "file": "sources/mli-positions/mli-position-brazil.pdf",
+      "is_companion": false,
+      "pages": 20,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "2b182092480c4479f5d81014149621a7952b6f9a1e054d62dbaa2db0e760c1c0",
+      "slug": "brazil",
+      "spans": {
+        "dropped": 40,
+        "kept": 1489,
+        "read": 1529,
+        "transformed": 0,
+        "unclaimed": 20
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Bulgaria",
+      "covered_agreements": 66,
+      "file": "sources/mli-positions/mli-position-bulgaria.pdf",
+      "is_companion": false,
+      "pages": 36,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "63d4cd11e8150930ea92f440c4e10bd29c1f284780c9e373e192154dfac9ac21",
+      "slug": "bulgaria",
+      "spans": {
+        "dropped": 36,
+        "kept": 1927,
+        "read": 1963,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Burkina Faso",
+      "covered_agreements": 3,
+      "file": "sources/mli-positions/mli-position-burkina-faso.pdf",
+      "is_companion": false,
+      "pages": 8,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 6,
+      "sha256": "b88b4a60e7bbcd151d1e967dcaf5ecacdf28e2f95c74cd75a6c56e06ee103ad8",
+      "slug": "burkina-faso",
+      "spans": {
+        "dropped": 8,
+        "kept": 313,
+        "read": 321,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Cameroon",
+      "covered_agreements": 5,
+      "file": "sources/mli-positions/mli-position-cameroon.pdf",
+      "is_companion": false,
+      "pages": 8,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 7,
+      "sha256": "abfd855257ce48de155556bc26edd4f91dd352ea79c49b422a58d72eba9de970",
+      "slug": "cameroon",
+      "spans": {
+        "dropped": 8,
+        "kept": 486,
+        "read": 494,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Canada",
+      "covered_agreements": 75,
+      "file": "sources/mli-positions/mli-position-canada.pdf",
+      "is_companion": false,
+      "pages": 54,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 17,
+      "sha256": "424f14acff1c0bbd336ec8804768a2b3677a2c4b06cf396b44c40ee108e2325e",
+      "slug": "canada",
+      "spans": {
+        "dropped": 124,
+        "kept": 3437,
+        "read": 3561,
+        "transformed": 4,
+        "unclaimed": 60
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Chile",
+      "covered_agreements": 34,
+      "file": "sources/mli-positions/mli-position-chile.pdf",
+      "is_companion": false,
+      "pages": 20,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "08f673a13a52102baabc055c2f7c8ed83f5d56d4ea829bbe56da18a93f44e713",
+      "slug": "chile",
+      "spans": {
+        "dropped": 32,
+        "kept": 1588,
+        "read": 1620,
+        "transformed": 0,
+        "unclaimed": 12
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "China (People’s Republic of)",
+      "covered_agreements": 99,
+      "file": "sources/mli-positions/mli-position-china.pdf",
+      "is_companion": false,
+      "pages": 37,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "6d9bfa4053457fa563facb938a438fc97362e89d31b2b7152f7c9b4fe7664afc",
+      "slug": "china-people-s-republic-of",
+      "spans": {
+        "dropped": 89,
+        "kept": 3716,
+        "read": 3805,
+        "transformed": 0,
+        "unclaimed": 45
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Colombia",
+      "covered_agreements": 10,
+      "file": "sources/mli-positions/mli-position-colombia.pdf",
+      "is_companion": false,
+      "pages": 19,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 12,
+      "sha256": "85f6a8abe42f62b322a01fc8583d731ebb61f16c6d57234b71ae9d9f89e1a9b1",
+      "slug": "colombia",
+      "spans": {
+        "dropped": 0,
+        "kept": 681,
+        "read": 681,
+        "transformed": 3,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Costa Rica",
+      "covered_agreements": 3,
+      "file": "sources/mli-positions/mli-position-costa-rica.pdf",
+      "is_companion": false,
+      "pages": 19,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 23,
+      "sha256": "af1c33d34598acfb1789190f925c22ebae4b746a177af4f9994fa9436d010c3a",
+      "slug": "costa-rica",
+      "spans": {
+        "dropped": 0,
+        "kept": 338,
+        "read": 338,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Côte d'Ivoire",
+      "covered_agreements": 11,
+      "file": "sources/mli-positions/mli-position-cote-divoire.pdf",
+      "is_companion": false,
+      "pages": 13,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 9,
+      "sha256": "489e7f56997c0b40bf84b4630d689f7024e4dd6b617e93c703da2ee245059404",
+      "slug": "cote-d-ivoire",
+      "spans": {
+        "dropped": 26,
+        "kept": 794,
+        "read": 820,
+        "transformed": 1,
+        "unclaimed": 13
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Croatia",
+      "covered_agreements": 62,
+      "file": "sources/mli-positions/mli-position-croatia.pdf",
+      "is_companion": false,
+      "pages": 38,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "83a71597de3a19862886f16adf7fdb64353d4b2f8ce4d1fd01a2291071ae5feb",
+      "slug": "croatia",
+      "spans": {
+        "dropped": 38,
+        "kept": 2313,
+        "read": 2351,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Curaçao*",
+      "covered_agreements": 2,
+      "file": "sources/mli-positions/mli-position-curacao.pdf",
+      "is_companion": false,
+      "pages": 18,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "ce6abd00bc5d7359179112e3369b46be1a3182821b4ebdef61ac00ec1b0ce23e",
+      "slug": "curacao",
+      "spans": {
+        "dropped": 25,
+        "kept": 271,
+        "read": 296,
+        "transformed": 1,
+        "unclaimed": 25
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Cyprus",
+      "covered_agreements": 61,
+      "file": "sources/mli-positions/mli-position-cyprus.pdf",
+      "is_companion": false,
+      "pages": 28,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "55afe9227fdf705220ba0421011e6aa3992dcf18c377cf860f3a60d2549efbcc",
+      "slug": "cyprus",
+      "spans": {
+        "dropped": 28,
+        "kept": 2127,
+        "read": 2155,
+        "transformed": 3,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Czechia",
+      "covered_agreements": 87,
+      "file": "sources/mli-positions/mli-position-czech-republic.pdf",
+      "is_companion": false,
+      "pages": 26,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "556aa5d349bee3b06337a1b06970eb3dcff5696a4246aac38f5e43b0400dd98e",
+      "slug": "czechia",
+      "spans": {
+        "dropped": 26,
+        "kept": 2673,
+        "read": 2699,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "czechia",
+      "country": "Czechia",
+      "covered_agreements": 0,
+      "file": "sources/mli-positions/mli-position-czechia-additional-notifications.pdf",
+      "is_companion": true,
+      "pages": 7,
+      "resolved_from": "the position of Czechia, which its own file name says this document belongs to",
+      "sections_with_options": 3,
+      "sha256": "5736f99836af1bc078de69429340b2dca7f0c21cac46cb76ebd021413f145d59",
+      "slug": "czechia-additional-notifications",
+      "spans": {
+        "dropped": 21,
+        "kept": 625,
+        "read": 646,
+        "transformed": 0,
+        "unclaimed": 21
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Democratic Republic of the Congo",
+      "covered_agreements": 2,
+      "file": "sources/mli-positions/mli-position-democratic-republic-of-the-congo.pdf",
+      "is_companion": false,
+      "pages": 9,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 10,
+      "sha256": "36775e32815d16358071c7906c711c39517d230bbd1a47fa9538c127bbaa505e",
+      "slug": "democratic-republic-of-the-congo",
+      "spans": {
+        "dropped": 18,
+        "kept": 285,
+        "read": 303,
+        "transformed": 0,
+        "unclaimed": 9
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Denmark",
+      "covered_agreements": 65,
+      "file": "sources/mli-positions/mli-position-denmark.pdf",
+      "is_companion": false,
+      "pages": 28,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "c710c0f1b5275db6e28d867349b2a1873b3b97efc88cf1572efd358e9fa247df",
+      "slug": "denmark",
+      "spans": {
+        "dropped": 28,
+        "kept": 2008,
+        "read": 2036,
+        "transformed": 93,
+        "unclaimed": 28
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Egypt",
+      "covered_agreements": 55,
+      "file": "sources/mli-positions/mli-position-egypt.pdf",
+      "is_companion": false,
+      "pages": 38,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "1175f10b3edfa4f1153fcf7544426f073d70cd653f78aba40b48cf5896b43016",
+      "slug": "egypt",
+      "spans": {
+        "dropped": 38,
+        "kept": 2605,
+        "read": 2643,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Eswatini",
+      "covered_agreements": 6,
+      "file": "sources/mli-positions/mli-position-eswatini.pdf",
+      "is_companion": false,
+      "pages": 8,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 12,
+      "sha256": "ac2dd9b88793510743ae74a1387ed705540410fdcae995b014aaf67c255316fd",
+      "slug": "eswatini",
+      "spans": {
+        "dropped": 16,
+        "kept": 452,
+        "read": 468,
+        "transformed": 0,
+        "unclaimed": 8
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Fiji",
+      "covered_agreements": 11,
+      "file": "sources/mli-positions/mli-position-fiji.pdf",
+      "is_companion": false,
+      "pages": 21,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "99075a1ef44f06572ecccd82c58b11dba02e23b44af1842c0c339a29841c9964",
+      "slug": "fiji",
+      "spans": {
+        "dropped": 0,
+        "kept": 641,
+        "read": 641,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Finland",
+      "covered_agreements": 71,
+      "file": "sources/mli-positions/mli-position-finland.pdf",
+      "is_companion": false,
+      "pages": 34,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 18,
+      "sha256": "b839d7b6d49bd3b79240e8c1a230f80de76a6269d166a8f8407f0fe459d7e7ae",
+      "slug": "finland",
+      "spans": {
+        "dropped": 6,
+        "kept": 2392,
+        "read": 2398,
+        "transformed": 8,
+        "unclaimed": 6
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "France*",
+      "covered_agreements": 88,
+      "file": "sources/mli-positions/mli-position-france.pdf",
+      "is_companion": false,
+      "pages": 70,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "8feab381125ae31c9ca191bc4845200d1e703a1bd3bcf842359c66184f96c297",
+      "slug": "france",
+      "spans": {
+        "dropped": 69,
+        "kept": 4442,
+        "read": 4511,
+        "transformed": 2,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Gabon",
+      "covered_agreements": 4,
+      "file": "sources/mli-positions/mli-position-gabon.pdf",
+      "is_companion": false,
+      "pages": 8,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 8,
+      "sha256": "d33c59d84de37fb6a40311b244e954a6da31f5552b4c68d6d427da9b6866a364",
+      "slug": "gabon",
+      "spans": {
+        "dropped": 7,
+        "kept": 490,
+        "read": 497,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Georgia",
+      "covered_agreements": 34,
+      "file": "sources/mli-positions/mli-position-georgia.pdf",
+      "is_companion": false,
+      "pages": 15,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "670e6e952e11d02d7824fc4c2c23b1e8fd9ad0b97c38816c6d3d1eb7fa7ec69e",
+      "slug": "georgia",
+      "spans": {
+        "dropped": 15,
+        "kept": 1319,
+        "read": 1334,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Germany",
+      "covered_agreements": 35,
+      "file": "sources/mli-positions/mli-position-germany.pdf",
+      "is_companion": false,
+      "pages": 40,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 20,
+      "sha256": "16756175b3cc3743f86654ebe37b07aa519050563ca0b82b4ed4ca25f8531789",
+      "slug": "germany",
+      "spans": {
+        "dropped": 40,
+        "kept": 1764,
+        "read": 1804,
+        "transformed": 17,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Greece",
+      "covered_agreements": 57,
+      "file": "sources/mli-positions/mli-position-greece.pdf",
+      "is_companion": false,
+      "pages": 26,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 21,
+      "sha256": "b9ff32484a6ff8ad345ece9f65c03ab894a69fce9abcb6285c1500fd1f51d5fe",
+      "slug": "greece",
+      "spans": {
+        "dropped": 26,
+        "kept": 1828,
+        "read": 1854,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Guernsey",
+      "covered_agreements": 10,
+      "file": "sources/mli-positions/mli-position-guernsey.pdf",
+      "is_companion": false,
+      "pages": 9,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "a3bb0be3b1682937d3202050e3abcf201fd359af7106ad04b7b160552fd03dc6",
+      "slug": "guernsey",
+      "spans": {
+        "dropped": 9,
+        "kept": 411,
+        "read": 420,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Hong Kong (China)",
+      "covered_agreements": 36,
+      "file": "sources/mli-positions/mli-position-hong-kong.pdf",
+      "is_companion": false,
+      "pages": 17,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "49c58eeb07825ba7d1f46eed8df92cd9bd3b7008ca51962099783d9a22d3dde0",
+      "slug": "hong-kong-china",
+      "spans": {
+        "dropped": 20,
+        "kept": 1368,
+        "read": 1388,
+        "transformed": 2,
+        "unclaimed": 4
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Hungary",
+      "covered_agreements": 66,
+      "file": "sources/mli-positions/mli-position-hungary.pdf",
+      "is_companion": false,
+      "pages": 27,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "35e0a74bd0ca1255752af54c3e613e4c59e3846ae4f5aa474a64e2a14f90cb0b",
+      "slug": "hungary",
+      "spans": {
+        "dropped": 27,
+        "kept": 1782,
+        "read": 1809,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Iceland",
+      "covered_agreements": 35,
+      "file": "sources/mli-positions/mli-position-iceland.pdf",
+      "is_companion": false,
+      "pages": 16,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "b6d16e8519e2f1197c98baa66e6c5707dea8cba20bfc2cd8054d5ceb9a2a2937",
+      "slug": "iceland",
+      "spans": {
+        "dropped": 0,
+        "kept": 1075,
+        "read": 1075,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "India",
+      "covered_agreements": 93,
+      "file": "sources/mli-positions/mli-position-india.pdf",
+      "is_companion": false,
+      "pages": 44,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 7,
+      "sha256": "9e815d67774cae5c646386d82a6a79d60ebe1749aef761bd46a9a121e9d441b7",
+      "slug": "india",
+      "spans": {
+        "dropped": 45,
+        "kept": 3762,
+        "read": 3807,
+        "transformed": 6,
+        "unclaimed": 1
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Indonesia",
+      "covered_agreements": 33,
+      "file": "sources/mli-positions/mli-position-indonesia.pdf",
+      "is_companion": false,
+      "pages": 27,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "54873581e7de88f695a0ac712df74678f879bac2818e5b4f8eaed2190b0c1a88",
+      "slug": "indonesia",
+      "spans": {
+        "dropped": 27,
+        "kept": 1477,
+        "read": 1504,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Ireland",
+      "covered_agreements": 71,
+      "file": "sources/mli-positions/mli-position-ireland.pdf",
+      "is_companion": false,
+      "pages": 49,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 20,
+      "sha256": "5cf6329aa6489d49ab450915de771d7d4753fc90fbf5ecb37c26f4f9190c9bd5",
+      "slug": "ireland",
+      "spans": {
+        "dropped": 60,
+        "kept": 3449,
+        "read": 3509,
+        "transformed": 4,
+        "unclaimed": 12
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Isle of Man",
+      "covered_agreements": 8,
+      "file": "sources/mli-positions/mli-position-isle-of-man.pdf",
+      "is_companion": false,
+      "pages": 8,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "0fa3f3062b6a87bf31d6c4866a8192c7436d8424c113b7dd4772ae7a4490b85c",
+      "slug": "isle-of-man",
+      "spans": {
+        "dropped": 8,
+        "kept": 398,
+        "read": 406,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Israel*",
+      "covered_agreements": 56,
+      "file": "sources/mli-positions/mli-position-israel.pdf",
+      "is_companion": false,
+      "pages": 32,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "4fcaf8d0d915e7fded4fd06e1628c060a2a6ab12102c53c214e83aa703e610e3",
+      "slug": "israel",
+      "spans": {
+        "dropped": 31,
+        "kept": 2543,
+        "read": 2574,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Italy",
+      "covered_agreements": 84,
+      "file": "sources/mli-positions/mli-position-italy.pdf",
+      "is_companion": false,
+      "pages": 52,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 19,
+      "sha256": "99c8893d20e8312b020ca50b177ff173f2a83007af6d82c1febf0f0a2222ada9",
+      "slug": "italy",
+      "spans": {
+        "dropped": 52,
+        "kept": 3046,
+        "read": 3098,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Jamaica",
+      "covered_agreements": 14,
+      "file": "sources/mli-positions/mli-position-jamaica.pdf",
+      "is_companion": false,
+      "pages": 13,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 11,
+      "sha256": "66373aa5dde47f8ea0133c263212645247d58dfbd420591250e647b0d03e336a",
+      "slug": "jamaica",
+      "spans": {
+        "dropped": 13,
+        "kept": 857,
+        "read": 870,
+        "transformed": 1,
+        "unclaimed": 13
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Japan",
+      "covered_agreements": 35,
+      "file": "sources/mli-positions/mli-position-japan.pdf",
+      "is_companion": false,
+      "pages": 23,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "aa943db1a3d0d07977521e74d7e1a1f3cbad7adaf7d8df15ca9a7ef4bbac8f9b",
+      "slug": "japan",
+      "spans": {
+        "dropped": 23,
+        "kept": 1889,
+        "read": 1912,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Jersey*",
+      "covered_agreements": 10,
+      "file": "sources/mli-positions/mli-position-jersey.pdf",
+      "is_companion": false,
+      "pages": 9,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "abfbd1e8a394185570a222d3b190f458cc00e03cca5728b9221371b4e9803ff4",
+      "slug": "jersey",
+      "spans": {
+        "dropped": 9,
+        "kept": 431,
+        "read": 440,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Kazakhstan",
+      "covered_agreements": 54,
+      "file": "sources/mli-positions/mli-position-kazakhstan.pdf",
+      "is_companion": false,
+      "pages": 35,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 11,
+      "sha256": "137a51e51342cb1d41cd16a15345627f7be7cde043c40e9bc41f89bcdfa77bbc",
+      "slug": "kazakhstan",
+      "spans": {
+        "dropped": 70,
+        "kept": 2456,
+        "read": 2526,
+        "transformed": 0,
+        "unclaimed": 35
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Kenya",
+      "covered_agreements": 14,
+      "file": "sources/mli-positions/mli-position-kenya.pdf",
+      "is_companion": false,
+      "pages": 22,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "06fd4ee2240ea1aaa6d884046f1e3366ae51cd5e97d48701f7cba76cd32a7faa",
+      "slug": "kenya",
+      "spans": {
+        "dropped": 44,
+        "kept": 783,
+        "read": 827,
+        "transformed": 0,
+        "unclaimed": 22
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Korea",
+      "covered_agreements": 63,
+      "file": "sources/mli-positions/mli-position-korea.pdf",
+      "is_companion": false,
+      "pages": 21,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "ce34a162dd2f6bea674491918113305861cc0dd639e4d09dc5e9432812da1561",
+      "slug": "korea",
+      "spans": {
+        "dropped": 21,
+        "kept": 1753,
+        "read": 1774,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Kuwait",
+      "covered_agreements": 45,
+      "file": "sources/mli-positions/mli-position-kuwait.pdf",
+      "is_companion": false,
+      "pages": 20,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 12,
+      "sha256": "bbad362b0fe992021ab6db8eaab05d160f253e518bfbefa35fc6d84f349b0fb2",
+      "slug": "kuwait",
+      "spans": {
+        "dropped": 0,
+        "kept": 1486,
+        "read": 1486,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Latvia",
+      "covered_agreements": 47,
+      "file": "sources/mli-positions/mli-position-latvia.pdf",
+      "is_companion": false,
+      "pages": 16,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "e32d199d28b6ae92596407fff81c63293d976c72cd55be820b8e15c753f9cc53",
+      "slug": "latvia",
+      "spans": {
+        "dropped": 17,
+        "kept": 1286,
+        "read": 1303,
+        "transformed": 0,
+        "unclaimed": 1
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Lesotho",
+      "covered_agreements": 7,
+      "file": "sources/mli-positions/mli-position-lesotho.pdf",
+      "is_companion": false,
+      "pages": 20,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "5b13a18700133a6b8e00752a681e70a70d19957f9b332957e6071b10504fccbc",
+      "slug": "lesotho",
+      "spans": {
+        "dropped": 40,
+        "kept": 499,
+        "read": 539,
+        "transformed": 0,
+        "unclaimed": 20
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Liechtenstein",
+      "covered_agreements": 15,
+      "file": "sources/mli-positions/mli-position-liechtenstein.pdf",
+      "is_companion": false,
+      "pages": 29,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 20,
+      "sha256": "7578096458c27740c2455a52c0f1bb2eb6bc593bdaacb372767b1a2b4116824a",
+      "slug": "liechtenstein",
+      "spans": {
+        "dropped": 29,
+        "kept": 819,
+        "read": 848,
+        "transformed": 8,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Lithuania*",
+      "covered_agreements": 55,
+      "file": "sources/mli-positions/mli-position-lithuania.pdf",
+      "is_companion": false,
+      "pages": 26,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "d31e16a91fcfa5c4ed568c35b974048ca202d3a022c358fcf7272f8d0fc05c99",
+      "slug": "lithuania",
+      "spans": {
+        "dropped": 26,
+        "kept": 2287,
+        "read": 2313,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Luxembourg",
+      "covered_agreements": 81,
+      "file": "sources/mli-positions/mli-position-luxembourg.pdf",
+      "is_companion": false,
+      "pages": 71,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 11,
+      "sha256": "c6af0962e1de8f3e4437c8003fe2f9d5f3da6a104e994e6f5996b5c7fc69b128",
+      "slug": "luxembourg",
+      "spans": {
+        "dropped": 84,
+        "kept": 4283,
+        "read": 4367,
+        "transformed": 3,
+        "unclaimed": 13
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Malaysia*",
+      "covered_agreements": 73,
+      "file": "sources/mli-positions/mli-position-malaysia.pdf",
+      "is_companion": false,
+      "pages": 35,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "6b9d02bb43edc888b58b2d92acdd678a41234f56e764e28806249eca9e28cf06",
+      "slug": "malaysia",
+      "spans": {
+        "dropped": 105,
+        "kept": 2941,
+        "read": 3046,
+        "transformed": 0,
+        "unclaimed": 105
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Malta*",
+      "covered_agreements": 71,
+      "file": "sources/mli-positions/mli-position-malta.pdf",
+      "is_companion": false,
+      "pages": 46,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 22,
+      "sha256": "7cd91c451755a35d66a2ec7b32612f2200cac45bdb2f07c3941c47afaad16eff",
+      "slug": "malta",
+      "spans": {
+        "dropped": 46,
+        "kept": 2535,
+        "read": 2581,
+        "transformed": 2,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "mauritius",
+      "country": "Mauritius",
+      "covered_agreements": 41,
+      "file": "sources/mli-positions/mli-position-mauritius-draft.pdf",
+      "is_companion": true,
+      "pages": 20,
+      "resolved_from": "the position of Mauritius, which its own file name says this document belongs to",
+      "sections_with_options": 19,
+      "sha256": "7c3ee69603e7806a26d82d6be3ecb539e5ff60ddd811d77fd1ff0917f891a85e",
+      "slug": "mauritius-draft",
+      "spans": {
+        "dropped": 40,
+        "kept": 1492,
+        "read": 1532,
+        "transformed": 0,
+        "unclaimed": 20
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Mauritius",
+      "covered_agreements": 23,
+      "file": "sources/mli-positions/mli-position-mauritius.pdf",
+      "is_companion": false,
+      "pages": 14,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 20,
+      "sha256": "b2b6b6958f57014357adff86d653ac600e8b9f4f04b5344b781c178f26c526c7",
+      "slug": "mauritius",
+      "spans": {
+        "dropped": 14,
+        "kept": 926,
+        "read": 940,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Mexico",
+      "covered_agreements": 61,
+      "file": "sources/mli-positions/mli-position-mexico.pdf",
+      "is_companion": false,
+      "pages": 36,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 12,
+      "sha256": "7e52149f7b03a60747f403d7f9f58a99c64d16d5cb6958c64e94c3d1c48477cc",
+      "slug": "mexico",
+      "spans": {
+        "dropped": 36,
+        "kept": 3564,
+        "read": 3600,
+        "transformed": 2,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Monaco",
+      "covered_agreements": 8,
+      "file": "sources/mli-positions/mli-position-monaco.pdf",
+      "is_companion": false,
+      "pages": 18,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "0561abb6424d87dcb60095bc0c88bce18ff40801dd80d05c492a07a8f528eedb",
+      "slug": "monaco",
+      "spans": {
+        "dropped": 0,
+        "kept": 364,
+        "read": 364,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Mongolia",
+      "covered_agreements": 26,
+      "file": "sources/mli-positions/mli-position-mongolia.pdf",
+      "is_companion": false,
+      "pages": 20,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 9,
+      "sha256": "42dffa08b275972e7514b92ee47e81170c1498b375347bb0d03d1eb599ae184a",
+      "slug": "mongolia",
+      "spans": {
+        "dropped": 20,
+        "kept": 1210,
+        "read": 1230,
+        "transformed": 1,
+        "unclaimed": 20
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Montenegro",
+      "covered_agreements": 40,
+      "file": "sources/mli-positions/mli-position-montenegro.pdf",
+      "is_companion": false,
+      "pages": 28,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "ede2e3e8832b4aec01a3d3fbb7ab4d1f63ef93c95c0ed6a0907e6d9770e841f8",
+      "slug": "montenegro",
+      "spans": {
+        "dropped": 56,
+        "kept": 1834,
+        "read": 1890,
+        "transformed": 3,
+        "unclaimed": 28
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Morocco",
+      "covered_agreements": 0,
+      "file": "sources/mli-positions/mli-position-morocco.pdf",
+      "is_companion": false,
+      "pages": 44,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 0,
+      "sha256": "7bfb29e5318a20f0017691d77e489fd30de9a42a915ea30fb18912e9d4a2ca24",
+      "slug": "morocco",
+      "spans": {
+        "dropped": 260,
+        "kept": 7269,
+        "read": 7529,
+        "transformed": 0,
+        "unclaimed": 260
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Netherlands",
+      "covered_agreements": 82,
+      "file": "sources/mli-positions/mli-position-netherlands.pdf",
+      "is_companion": false,
+      "pages": 50,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 16,
+      "sha256": "f7a5b824fa437b159588a4de90a88abd744d8205194d0f055ffd23b7490f6b81",
+      "slug": "netherlands",
+      "spans": {
+        "dropped": 50,
+        "kept": 4735,
+        "read": 4785,
+        "transformed": 2,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "New Zealand",
+      "covered_agreements": 36,
+      "file": "sources/mli-positions/mli-position-new-zealand.pdf",
+      "is_companion": false,
+      "pages": 30,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 18,
+      "sha256": "80084fa717414a566c884a1892da8e46675590761bf38361e9a15c9ce7569502",
+      "slug": "new-zealand",
+      "spans": {
+        "dropped": 30,
+        "kept": 1899,
+        "read": 1929,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Nigeria",
+      "covered_agreements": 19,
+      "file": "sources/mli-positions/mli-position-nigeria.pdf",
+      "is_companion": false,
+      "pages": 19,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 5,
+      "sha256": "2a85efe19074d847880142479bb9828a3a184a65cb58e184ac91141a3c7867cc",
+      "slug": "nigeria",
+      "spans": {
+        "dropped": 0,
+        "kept": 1105,
+        "read": 1105,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "North Macedonia",
+      "covered_agreements": 49,
+      "file": "sources/mli-positions/mli-position-north-macedonia.pdf",
+      "is_companion": false,
+      "pages": 34,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "51a331e0337c23e4a90848d7aa2fcca70fe59ce6a20eaeb71c2da68a08965ac1",
+      "slug": "north-macedonia",
+      "spans": {
+        "dropped": 68,
+        "kept": 2023,
+        "read": 2091,
+        "transformed": 1,
+        "unclaimed": 34
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Norway",
+      "covered_agreements": 28,
+      "file": "sources/mli-positions/mli-position-norway.pdf",
+      "is_companion": false,
+      "pages": 27,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "5ae2af95bd2caa9b243cf01429a4d0643ab2a84f8e5cf9702941746e30909c9a",
+      "slug": "norway",
+      "spans": {
+        "dropped": 27,
+        "kept": 1543,
+        "read": 1570,
+        "transformed": 5,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Pakistan",
+      "covered_agreements": 63,
+      "file": "sources/mli-positions/mli-position-pakistan.pdf",
+      "is_companion": false,
+      "pages": 37,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "515f8e4991085c91353a2c1c46de38eaccaeee766fd2264455b137edcc968d7c",
+      "slug": "pakistan",
+      "spans": {
+        "dropped": 0,
+        "kept": 2056,
+        "read": 2056,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Panama",
+      "covered_agreements": 17,
+      "file": "sources/mli-positions/mli-position-panama.pdf",
+      "is_companion": false,
+      "pages": 10,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "c0ac0e0da0f87b5e9b7e8d251f581e2f53d63c88cfaea16324aa7045b8b2c247",
+      "slug": "panama",
+      "spans": {
+        "dropped": 20,
+        "kept": 667,
+        "read": 687,
+        "transformed": 0,
+        "unclaimed": 20
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Papua New Guinea",
+      "covered_agreements": 10,
+      "file": "sources/mli-positions/mli-position-papua-new-guinea.pdf",
+      "is_companion": false,
+      "pages": 22,
+      "resolved_from": "the publisher's file name - the document's own opening names no jurisdiction at all",
+      "sections_with_options": 15,
+      "sha256": "d680f0e4e4fa82086f6ae536f81d3cfe95195606c662ca1fd388110f24eb3896",
+      "slug": "papua-new-guinea",
+      "spans": {
+        "dropped": 44,
+        "kept": 684,
+        "read": 728,
+        "transformed": 1,
+        "unclaimed": 22
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Peru",
+      "covered_agreements": 7,
+      "file": "sources/mli-positions/mli-position-peru.pdf",
+      "is_companion": false,
+      "pages": 17,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 13,
+      "sha256": "580cc614b6919150a5be4b8722d8d6c5fa0b1fd322938d4153f599036dbc6a33",
+      "slug": "peru",
+      "spans": {
+        "dropped": 34,
+        "kept": 569,
+        "read": 603,
+        "transformed": 0,
+        "unclaimed": 17
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Poland*",
+      "covered_agreements": 78,
+      "file": "sources/mli-positions/mli-position-poland.pdf",
+      "is_companion": false,
+      "pages": 37,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "c8a56a0aab303b1b30752238bbc6cffde6994663c182d6b3e8d622d55e29b9a6",
+      "slug": "poland",
+      "spans": {
+        "dropped": 37,
+        "kept": 2687,
+        "read": 2724,
+        "transformed": 2,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Portugal",
+      "covered_agreements": 79,
+      "file": "sources/mli-positions/mli-position-portugal.pdf",
+      "is_companion": false,
+      "pages": 40,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 22,
+      "sha256": "99cd1ae1a69b588a87ac88b9ec677bf0f3332ffc00a39df21b6de2b318cdbf9b",
+      "slug": "portugal",
+      "spans": {
+        "dropped": 40,
+        "kept": 2973,
+        "read": 3013,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Qatar*",
+      "covered_agreements": 84,
+      "file": "sources/mli-positions/mli-position-qatar.pdf",
+      "is_companion": false,
+      "pages": 31,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 5,
+      "sha256": "a4dd71eb95c99c4eec188173900566a5c1a59d6d6df8430ef2b53d72bc7c686e",
+      "slug": "qatar",
+      "spans": {
+        "dropped": 61,
+        "kept": 2516,
+        "read": 2577,
+        "transformed": 0,
+        "unclaimed": 31
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Romania",
+      "covered_agreements": 91,
+      "file": "sources/mli-positions/mli-position-romania.pdf",
+      "is_companion": false,
+      "pages": 49,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 12,
+      "sha256": "8e7b7076ee5c8061fa61f56993054e3035a4f159a46c5fffb2b2efc4f178fceb",
+      "slug": "romania",
+      "spans": {
+        "dropped": 49,
+        "kept": 3873,
+        "read": 3922,
+        "transformed": 3,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "russian-federation",
+      "companion_suffix": "provisional",
+      "country": "Russian Federation",
+      "covered_agreements": 66,
+      "file": "sources/mli-positions/mli-position-russia.pdf",
+      "is_companion": true,
+      "pages": 40,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 10,
+      "sha256": "875b94c6ce64da3a226d617d43d6d0d794898b0a00e8b549e8773a1e47c2f160",
+      "slug": "russian-federation-provisional",
+      "spans": {
+        "dropped": 39,
+        "kept": 3197,
+        "read": 3236,
+        "transformed": 8,
+        "unclaimed": 0
+      },
+      "suffix_from": "the document's own opening, which says it is a provisional list of expected reservations and notifications"
+    },
+    {
+      "base_slug": "",
+      "country": "Russian Federation",
+      "covered_agreements": 71,
+      "file": "sources/mli-positions/mli-position-russian-federation.pdf",
+      "is_companion": false,
+      "pages": 43,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 11,
+      "sha256": "f1c7e2b6a09efd92474736dbd3e9cfd12c5a65c6316f3912a12b63f16b33c80b",
+      "slug": "russian-federation",
+      "spans": {
+        "dropped": 85,
+        "kept": 3507,
+        "read": 3592,
+        "transformed": 11,
+        "unclaimed": 43
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "San Marino*",
+      "covered_agreements": 21,
+      "file": "sources/mli-positions/mli-position-san-marino.pdf",
+      "is_companion": false,
+      "pages": 26,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "3dbea8ffd2ebc38494933acbd37697b55b99157fb9a418a715f0f4cb1ac099e2",
+      "slug": "san-marino",
+      "spans": {
+        "dropped": 84,
+        "kept": 1053,
+        "read": 1137,
+        "transformed": 0,
+        "unclaimed": 84
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Senegal",
+      "covered_agreements": 20,
+      "file": "sources/mli-positions/mli-position-senegal.pdf",
+      "is_companion": false,
+      "pages": 35,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 10,
+      "sha256": "5947b38141453abbad63e04bbe6106a383bedd53cf6471efa732aa304cd3ff1d",
+      "slug": "senegal",
+      "spans": {
+        "dropped": 36,
+        "kept": 1512,
+        "read": 1548,
+        "transformed": 24,
+        "unclaimed": 1
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Serbia",
+      "covered_agreements": 64,
+      "file": "sources/mli-positions/mli-position-serbia.pdf",
+      "is_companion": false,
+      "pages": 36,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "15eba23768fc56605987a79928b52f15f70b8c0c9e78d87797b5b3b4d1eb8e5a",
+      "slug": "serbia",
+      "spans": {
+        "dropped": 36,
+        "kept": 2757,
+        "read": 2793,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Seychelles",
+      "covered_agreements": 28,
+      "file": "sources/mli-positions/mli-position-seychelles.pdf",
+      "is_companion": false,
+      "pages": 14,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "0592cb1444432109f35ba3cd397a87669b6db76b9f8baedc4249dcda6e0aeea8",
+      "slug": "seychelles",
+      "spans": {
+        "dropped": 14,
+        "kept": 874,
+        "read": 888,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Singapore",
+      "covered_agreements": 68,
+      "file": "sources/mli-positions/mli-position-singapore.pdf",
+      "is_companion": false,
+      "pages": 29,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 21,
+      "sha256": "eea3cf1b8cd627acbd52fd5d9c8c55f202166d05955244b7abf703d6aeac7520",
+      "slug": "singapore",
+      "spans": {
+        "dropped": 29,
+        "kept": 2530,
+        "read": 2559,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Slovak Republic",
+      "covered_agreements": 64,
+      "file": "sources/mli-positions/mli-position-slovak-republic.pdf",
+      "is_companion": false,
+      "pages": 32,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "b80befca7d0481c3e06e6dfedbbbf81ec10f775faac870b8b7e968cc11c62f89",
+      "slug": "slovak-republic",
+      "spans": {
+        "dropped": 32,
+        "kept": 3111,
+        "read": 3143,
+        "transformed": 0,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Slovenia",
+      "covered_agreements": 58,
+      "file": "sources/mli-positions/mli-position-slovenia.pdf",
+      "is_companion": false,
+      "pages": 40,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 17,
+      "sha256": "a3e4dd65f86e23527f87906dff638d7843e505267bb9082fce846940d51267d2",
+      "slug": "slovenia",
+      "spans": {
+        "dropped": 42,
+        "kept": 2709,
+        "read": 2751,
+        "transformed": 0,
+        "unclaimed": 3
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "South Africa",
+      "covered_agreements": 76,
+      "file": "sources/mli-positions/mli-position-south-africa.pdf",
+      "is_companion": false,
+      "pages": 43,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "853eb9b113b3588ebe7370813d2f2e8599ed6f01e7bf275c9c5c581cb4937bd9",
+      "slug": "south-africa",
+      "spans": {
+        "dropped": 43,
+        "kept": 3819,
+        "read": 3862,
+        "transformed": 1,
+        "unclaimed": 43
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Spain",
+      "covered_agreements": 86,
+      "file": "sources/mli-positions/mli-position-spain.pdf",
+      "is_companion": false,
+      "pages": 66,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 20,
+      "sha256": "432affbad280499f7c148bc394601cdb0a6126ad77bf5294b836411244dfb685",
+      "slug": "spain",
+      "spans": {
+        "dropped": 66,
+        "kept": 4219,
+        "read": 4285,
+        "transformed": 6,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Sweden",
+      "covered_agreements": 64,
+      "file": "sources/mli-positions/mli-position-sweden.pdf",
+      "is_companion": false,
+      "pages": 28,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 22,
+      "sha256": "1e945fd200503b4b1747ad438b89e03e72925c8e3267b5fd78231c048ddba2d1",
+      "slug": "sweden",
+      "spans": {
+        "dropped": 33,
+        "kept": 1709,
+        "read": 1742,
+        "transformed": 7,
+        "unclaimed": 6
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Switzerland",
+      "covered_agreements": 0,
+      "file": "sources/mli-positions/mli-position-switzerland.pdf",
+      "is_companion": false,
+      "pages": 15,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 8,
+      "sha256": "2798f5c4bc2cb81ecd71bd9275051769089ea91e635ccca40cccb1d1cbb2d80f",
+      "slug": "switzerland",
+      "spans": {
+        "dropped": 15,
+        "kept": 897,
+        "read": 912,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Thailand",
+      "covered_agreements": 58,
+      "file": "sources/mli-positions/mli-position-thailand.pdf",
+      "is_companion": false,
+      "pages": 33,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "3e9f4dee2f21da1b9e170002aa437128b1219cf863a40ce122a803defb3d8875",
+      "slug": "thailand",
+      "spans": {
+        "dropped": 66,
+        "kept": 1947,
+        "read": 2013,
+        "transformed": 0,
+        "unclaimed": 33
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Tunisia",
+      "covered_agreements": 28,
+      "file": "sources/mli-positions/mli-position-tunisia.pdf",
+      "is_companion": false,
+      "pages": 30,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 7,
+      "sha256": "81dfd78ca2cfa6769162c3202c7a8a9091e5ccace640b079b6fe03219c55b748",
+      "slug": "tunisia",
+      "spans": {
+        "dropped": 59,
+        "kept": 1460,
+        "read": 1519,
+        "transformed": 2,
+        "unclaimed": 30
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Türkiye",
+      "covered_agreements": 90,
+      "file": "sources/mli-positions/mli-position-turkey.pdf",
+      "is_companion": false,
+      "pages": 42,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "79128ff8554cf49e13f26ea0396cd30eb08f5dce50341c0cbf40aad4a6fc0601",
+      "slug": "turkiye",
+      "spans": {
+        "dropped": 0,
+        "kept": 3393,
+        "read": 3393,
+        "transformed": 1,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Ukraine*",
+      "covered_agreements": 77,
+      "file": "sources/mli-positions/mli-position-ukraine.pdf",
+      "is_companion": false,
+      "pages": 46,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 14,
+      "sha256": "b4174dff758142c10b9fce2b20cbba8eb8c82e1950d41539b05353eed9f04919",
+      "slug": "ukraine",
+      "spans": {
+        "dropped": 46,
+        "kept": 3934,
+        "read": 3980,
+        "transformed": 1,
+        "unclaimed": 46
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "United Kingdom*",
+      "covered_agreements": 119,
+      "file": "sources/mli-positions/mli-position-united-kingdom.pdf",
+      "is_companion": false,
+      "pages": 64,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 17,
+      "sha256": "d7eba5f9c06d11ca9150b1981522153306a45962b9da0682ff4c4ec84319e7ec",
+      "slug": "united-kingdom",
+      "spans": {
+        "dropped": 64,
+        "kept": 5341,
+        "read": 5405,
+        "transformed": 2,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Uruguay",
+      "covered_agreements": 20,
+      "file": "sources/mli-positions/mli-position-uruguay.pdf",
+      "is_companion": false,
+      "pages": 24,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "cbc4dd000df087082360156958f4e5fb8e2715b135e8a3e76ffbb25b6651370f",
+      "slug": "uruguay",
+      "spans": {
+        "dropped": 24,
+        "kept": 1234,
+        "read": 1258,
+        "transformed": 2,
+        "unclaimed": 0
+      }
+    },
+    {
+      "base_slug": "",
+      "country": "Viet Nam",
+      "covered_agreements": 75,
+      "file": "sources/mli-positions/mli-position-viet-nam.pdf",
+      "is_companion": false,
+      "pages": 44,
+      "resolved_from": "the document's own title",
+      "sections_with_options": 15,
+      "sha256": "2c7f91965a8cf09164068388a468e0b40ac85703f567198bb9e218d002f1f5a8",
+      "slug": "viet-nam",
+      "spans": {
+        "dropped": 88,
+        "kept": 2946,
+        "read": 3034,
+        "transformed": 0,
+        "unclaimed": 44
+      }
+    }
+  ],
+  "jurisdictions_with_more_than_one_document": [
+    {
+      "documents": [
+        "sources/mli-positions/mli-position-russia.pdf",
+        "sources/mli-positions/mli-position-russian-federation.pdf"
+      ],
+      "jurisdiction": "Russian Federation",
+      "position": "sources/mli-positions/mli-position-russian-federation.pdf",
+      "published_as": [
+        {
+          "file": "sources/mli-positions/mli-position-russia.pdf",
+          "slug": "russian-federation-provisional"
+        },
+        {
+          "file": "sources/mli-positions/mli-position-russian-federation.pdf",
+          "slug": "russian-federation"
+        }
+      ],
+      "slug": "russian-federation"
+    }
+  ],
+  "positions_whose_numbering_has_a_gap": [
+    {
+      "numbers_with_no_row": [
+        5
+      ],
+      "slug": "papua-new-guinea"
+    }
+  ],
+  "positions_without_a_covered_agreements_table": [
+    {
+      "file": "sources/mli-positions/mli-position-czechia-additional-notifications.pdf",
+      "reason": "this document has no Article 2 section to read a table from",
+      "slug": "czechia-additional-notifications"
+    },
+    {
+      "file": "sources/mli-positions/mli-position-morocco.pdf",
+      "reason": "this document has no Article 2 section to read a table from",
+      "slug": "morocco"
+    },
+    {
+      "file": "sources/mli-positions/mli-position-switzerland.pdf",
+      "reason": "no dated table in this section",
+      "slug": "switzerland"
+    }
+  ],
+  "published": 103,
+  "qa": {
+    "attach_bands": "`attach_bands.layouts` carries every published position's own measured band - the reader its rows were decided with, the tolerance, and the interval that layout left it - so the global intersection the tests pin is readable without re-reading the sources. A layout that publishes no tolerance carries nulls. `attach_bands.tight` names, per tolerance, the layouts that set the two edges of that intersection: `low` the layout with the deepest absorbed lead-in (the maximum of the measured lows), `high` the layout with the nearest refused tail (the minimum of the measured highs).",
+    "covered_agreements": "`positions_without_a_covered_agreements_table` lists every position whose covered agreements are not in the corpus, with the reason its own artefact gives. The reasons are not the same fact: \"this document has no Article 2 section to read a table from\" is a fact about a document that has no such table - an addendum, a list of notifications - while a reason that names a column is a reading this projection could not do (a bilingual table, whose cells this corpus holds in two scripts, is the case the family has and the projection does not yet read).",
+    "numbering": "`positions_whose_numbering_has_a_gap` lists the tables whose covered agreements are numbered with a hole in the run, and which numbers the projection found no row for. It is published rather than repaired: a table renumbered to close its gaps cannot be checked against the page it came from.",
+    "one_position_per_jurisdiction": "`published` is the number of positions, and it can be smaller than `read`: a jurisdiction can have more than one document, and which document is its position and which are documents about it is written down in `jurisdictions_with_more_than_one_document`.",
+    "order": "documents and unread are in the directory's own order, by file name, so two runs compare line by line",
+    "read_in_one_pass": "Every document the directory holds is read by one command, and this report is its account: a document missing from `documents` is in `unread` with the reader's own reason, and one that is in neither was not declared here at all.",
+    "unclaimed_spans": "`spans.unclaimed` counts the spans no rule claimed and the catch-all dropped. They are not lost silently - every document's own audit lists them with their text - but they are the part of this reading that is dropped by default rather than by a named rule, and on this family most of them are the publisher's deposit stamp repeated in the footer band of every page. Where one of them is not apparatus the document needs a rule of its own: a cell's continuation line that no rule claims is text the corpus does not hold."
+  },
+  "read": 103,
+  "source": "mli-positions-batch",
+  "spans": {
+    "dropped": 4066,
+    "kept": 200699,
+    "read": 204765,
+    "transformed": 262,
+    "unclaimed": 1698
+  },
+  "unread": [
+    {
+      "file": "sources/mli-positions/mli-position-albania.pdf",
+      "reason": "mli-positions-batch: mli-position-albania.pdf has no text to read - the reader found 26 span(s) in it and every one of them is the page's stamp, because each page is a scanned image. There is no OCR in this pipeline, so no position can be projected from these bytes and the family's own report declares the document as unread",
+      "sha256": "a644e3fd6b89067304c210c0350b9b5ea9328d2c3bf32b2c0f5c74bd487c04f5",
+      "spans": {
+        "dropped": 26,
+        "kept": 0,
+        "read": 26,
+        "transformed": 0,
+        "unclaimed": 26
+      }
+    },
+    {
+      "file": "sources/mli-positions/mli-position-estonia.pdf",
+      "reason": "mli-positions-batch: mli-position-estonia.pdf has no text to read - the reader found 29 span(s) in it and every one of them is the page's stamp, because each page is a scanned image. There is no OCR in this pipeline, so no position can be projected from these bytes and the family's own report declares the document as unread",
+      "sha256": "1e14fe7f6fa65ba45a0cb0718b36bec367e336711308bdaae9a48230fb9233f1",
+      "spans": {
+        "dropped": 29,
+        "kept": 0,
+        "read": 29,
+        "transformed": 0,
+        "unclaimed": 29
+      }
+    },
+    {
+      "file": "sources/mli-positions/mli-position-jordan.pdf",
+      "reason": "mli-positions-batch: mli-position-jordan.pdf has no text to read - the reader found 22 span(s) in it and every one of them is the page's stamp, because each page is a scanned image. There is no OCR in this pipeline, so no position can be projected from these bytes and the family's own report declares the document as unread",
+      "sha256": "706dd217c089c5f88b32a6d65ca289e3fc728036aa0cbd700d416d77ceee055e",
+      "spans": {
+        "dropped": 22,
+        "kept": 0,
+        "read": 22,
+        "transformed": 0,
+        "unclaimed": 22
+      }
+    },
+    {
+      "file": "sources/mli-positions/mli-position-namibia.pdf",
+      "reason": "mli-positions-batch: mli-position-namibia.pdf has no text to read - the reader found 20 span(s) in it and every one of them is the page's stamp, because each page is a scanned image. There is no OCR in this pipeline, so no position can be projected from these bytes and the family's own report declares the document as unread",
+      "sha256": "84f448003868388b53ad40e4b1601ceedb658cae54738d72cf655196b5bb3262",
+      "spans": {
+        "dropped": 20,
+        "kept": 0,
+        "read": 20,
+        "transformed": 0,
+        "unclaimed": 20
+      }
+    },
+    {
+      "file": "sources/mli-positions/mli-position-oman.pdf",
+      "reason": "mli-positions-batch: mli-position-oman.pdf has no text to read - the reader found 30 span(s) in it and every one of them is the page's stamp, because each page is a scanned image. There is no OCR in this pipeline, so no position can be projected from these bytes and the family's own report declares the document as unread",
+      "sha256": "43e0c2aa5c42639c57a7854a26bc4607229fcab2c74b09bb5438d6a81f97c232",
+      "spans": {
+        "dropped": 30,
+        "kept": 0,
+        "read": 30,
+        "transformed": 0,
+        "unclaimed": 30
+      }
+    },
+    {
+      "file": "sources/mli-positions/mli-position-saudi-arabia.pdf",
+      "reason": "mli-positions-batch: mli-position-saudi-arabia.pdf has no text to read - the reader found 41 span(s) in it and every one of them is the page's stamp, because each page is a scanned image. There is no OCR in this pipeline, so no position can be projected from these bytes and the family's own report declares the document as unread",
+      "sha256": "58ecefa4b9f2e2f9e74ad07fb1d70a864808a06a06128851877cb9668fc63cab",
+      "spans": {
+        "dropped": 41,
+        "kept": 0,
+        "read": 41,
+        "transformed": 0,
+        "unclaimed": 41
+      }
+    },
+    {
+      "file": "sources/mli-positions/mli-position-united-arab-emirates.pdf",
+      "reason": "mli-positions-batch: mli-position-united-arab-emirates.pdf has no text to read - the reader found 52 span(s) in it and every one of them is the page's stamp, because each page is a scanned image. There is no OCR in this pipeline, so no position can be projected from these bytes and the family's own report declares the document as unread",
+      "sha256": "355e5ae925c3080151be99fb69ccc16596cc96a576f19a6fa9b740c8cf68d2da",
+      "spans": {
+        "dropped": 52,
+        "kept": 0,
+        "read": 52,
+        "transformed": 0,
+        "unclaimed": 52
+      }
+    }
+  ],
+  "unresolved": []
+}

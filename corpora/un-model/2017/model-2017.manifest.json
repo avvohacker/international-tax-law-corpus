@@ -1,0 +1,37 @@
+{
+  "akn": "model-2017.akn.xml",
+  "akn_sha256": "538ef9562530b109f017ab1f918b607f7912eafdc158c1783ca980111c6779a5",
+  "edition": "2017",
+  "family": "un-model",
+  "format": "akn manifest v1",
+  "ledger": "model-2017.spans.jsonl",
+  "ledger_sha256": "2cd61e332ad260aa7a6b348722aa24c7d9bf909c8fead772ba526a62cc093200",
+  "missing": [
+    {
+      "id": "un-model-2017__front_matter",
+      "reason": "the book's own matter (cover, contents, foreword, introduction): 879 span(s) dropped by R-FRONT-MATTER, before the instrument begins"
+    },
+    {
+      "id": "un-model-2017__commentaries",
+      "reason": "Part Two, the Commentaries: 31239 span(s) dropped by R-COMMENTARY as a separate document, after the boundary on page 78"
+    }
+  ],
+  "nodes": "model-2017.nodes.jsonl",
+  "source": "un-model-2017",
+  "source_file": "sources/un-model-2017.pdf",
+  "source_pages": 828,
+  "source_sha256": "323c8d8abf3bc6482d4115e0cee1d891c9a55ccc3e64ae25c601b3cf5c8696f8",
+  "source_url": "https://www.un.org/esa/ffd/wp-content/uploads/2018/05/MDT_2017.pdf",
+  "units": {
+    "alinea": 34,
+    "article": 33,
+    "authorialNote": 4,
+    "chapter": 7,
+    "hcontainer": 7,
+    "list": 45,
+    "paragraph": 139,
+    "point": 133,
+    "preamble": 1,
+    "preface": 1
+  }
+}

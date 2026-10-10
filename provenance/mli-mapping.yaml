@@ -1,0 +1,340 @@
+# The declared half of the MLI-to-treaty mapping: how each Article of the
+# Multilateral Convention acts on a Covered Tax Agreement, and which Articles of
+# the base text this corpus holds it acts on.
+#
+# The other half is not here, and does not need declaring: each row's Article
+# number and its title are read from the Convention's own text by the projection
+# (`harness/mli.py`, `mapping()`), so a title in the corpus is the source's title
+# and cannot drift from it. This file carries only what the source does not print
+# in a form a machine can read.
+#
+# `mode` is one of:
+#     overlay               the Article's provisions apply in place of, or in the
+#                           absence of, the treaty provisions they address
+#     preamble              the Article inserts text into the treaty's preamble
+#     support               definitions used by other Articles of the Convention
+#     arbitration_part_vi   Part VI, which reaches the treaty's mutual agreement
+#                           article only where both Contracting Jurisdictions
+#                           have chosen it (Article 18)
+#     none                  scope and definitions; no treaty provision is
+#                           replaced by the Article
+#     admin                 the Convention's own final provisions, which act on
+#                           the Convention and not on a treaty
+#
+# `targets` are Articles of the base text this corpus holds, by the number the
+# base text prints, with the alternatives one row may resolve to in one list:
+# 23A and 23B are the exemption and the credit method, and a treaty has one of
+# them. Every number here is checked against the built base text (test M1): a
+# target that names no Article of the Model is a reading that has stopped being
+# about this corpus, and the check has already cost the previous reading one - its
+# Article 5 resolved to 23A, 23B or "23", and the UN Model has no Article 23: it
+# is split into 23A and 23B.
+#
+# `note` is this project's own summary of what the Article does, not the Article's
+# text. The Convention's text is the OECD's and is not reproduced here. A note is
+# written only where it adds something the row does not already say; Articles
+# whose whole effect is in their title, and whose mode is `admin`, carry none.
+#
+# `articles_without_options` (below, after the Articles) is the one claim in
+# this file about the *positions* rather than about the Convention: that these
+# Articles take no reservation, notification or choice, so a position document
+# showing an option on one of them has been read wrong. The claim comes from the
+# previous build, where it was established by scanning 99 position documents;
+# here it is checked against the documents the corpus holds today, and the check
+# reports how many it looked at rather than assuming a number.
+
+articles:
+- article: "1"
+  mode: none
+  targets: []
+  note: >-
+    The Convention modifies all Covered Tax Agreements as defined in
+    Article 2(1)(a). No provision of a treaty is replaced.
+
+- article: "2"
+  mode: none
+  targets: []
+  note: >-
+    Definitions, including "Covered Tax Agreement" itself. A Contracting
+    Jurisdiction may notify agreements that would otherwise fall outside that
+    definition, which is why this Article is not in `articles_without_options`.
+
+- article: "3"
+  mode: overlay
+  targets: [["1", "4"]]
+  note: >-
+    Income derived through an entity that is fiscally transparent under either
+    jurisdiction's law is treated as income of a resident to the extent the other
+    jurisdiction treats it as such, in place of or in the absence of the treaty's
+    own rules on persons covered and residence.
+
+- article: "4"
+  mode: overlay
+  targets: [["4"]]
+  note: >-
+    Where the treaty makes a person other than an individual a resident of both
+    jurisdictions, the competent authorities endeavour to determine residence by
+    mutual agreement.
+
+- article: "5"
+  mode: overlay
+  targets: [["23A", "23B"]]
+  note: >-
+    Option A, B or C (or none), modifying how the treaty's method article
+    interacts with the elimination of double taxation. 23A and 23B are
+    alternatives: a treaty applies one of the two methods.
+
+- article: "6"
+  mode: preamble
+  targets: []
+  note: >-
+    The treaty is modified to include a preamble text stating the intention to
+    eliminate double taxation without creating opportunities for non-taxation or
+    reduced taxation through treaty shopping.
+
+- article: "7"
+  mode: overlay
+  targets: []
+  note: >-
+    A benefit under the treaty shall not be granted where obtaining it was one of
+    the principal purposes of the arrangement, unless granting it is in
+    accordance with the object and purpose of the provisions. The Article acts on
+    benefits under the treaty as a whole, so it names no single Article of the
+    base text; a Party may also choose the simplified limitation on benefits
+    provision of paragraph 3.
+
+- article: "8"
+  mode: overlay
+  targets: [["10"]]
+  note: >-
+    A minimum holding period is added to the treaty's rule on dividends: the
+    reduced rate or exemption applies only where the holding requirement has been
+    met for 365 days.
+
+- article: "9"
+  mode: overlay
+  targets: [["13"]]
+  note: >-
+    The treaty's capital gains rule is modified by a 365-day value test, extended
+    to interests in partnerships and trusts.
+
+- article: "10"
+  mode: overlay
+  targets: []
+  note: >-
+    Where the tax borne on the income in the third jurisdiction is below 60 per
+    cent, the treaty benefits are denied for that income. The Article acts on the
+    provisions granting those benefits rather than on one Article of the base
+    text.
+
+- article: "11"
+  mode: overlay
+  targets: [["4"]]
+  note: >-
+    The saving clause is preserved and its exceptions are added: the treaty does
+    not affect a jurisdiction's taxation of its own residents except as listed.
+
+- article: "12"
+  mode: overlay
+  targets: [["5"]]
+  note: >-
+    Where a person habitually concludes contracts in the name of an enterprise,
+    the enterprise is deemed to have a permanent establishment notwithstanding
+    the treaty's own definition.
+
+- article: "13"
+  mode: overlay
+  targets: [["5"]]
+  note: >-
+    Option A or B (or neither) narrows the treaty's specific-activity exemptions
+    from permanent establishment status.
+
+- article: "14"
+  mode: overlay
+  targets: [["5"]]
+  note: >-
+    For the sole purpose of determining the period after which a site or project
+    constitutes a permanent establishment, connected activities carried on by
+    closely related enterprises are aggregated.
+
+- article: "15"
+  mode: support
+  targets: [["5"]]
+  note: >-
+    A definition, not a modification: Articles 12, 13 and 14 use it, and it is
+    expressed in the treaty's permanent establishment terms.
+
+- article: "16"
+  mode: overlay
+  targets: [["25"]]
+  note: >-
+    The first sentence of the treaty's procedure is replaced: a person may
+    present a case irrespective of the remedies provided by domestic law.
+
+- article: "17"
+  mode: overlay
+  targets: [["9"]]
+  note: >-
+    The treaty's associated enterprises provision is replaced by a corresponding
+    adjustment with a time limit.
+
+- article: "18"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    Arbitration reaches the treaty's mutual agreement article only where both
+    Contracting Jurisdictions have notified the Depositary that they choose it.
+
+- article: "19"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    Where the competent authorities have not reached agreement on a presented
+    case, it is submitted to arbitration if the taxpayer requests it.
+
+- article: "20"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    The rules for composing the arbitration panel, and the fallback where a
+    jurisdiction does not appoint its member.
+
+- article: "21"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    The tax information the panel's members receive is treated as information
+    exchanged under the treaty's exchange-of-information article.
+
+- article: "22"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    The mutual agreement may end the case at any time before the panel's
+    decision, and is given effect notwithstanding the time limits of domestic
+    law.
+
+- article: "23"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    A Party chooses the default process - final offer or independent opinion -
+    subject to the competent authorities agreeing otherwise.
+
+- article: "24"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    A Party may allow the competent authorities to agree on a resolution other
+    than the panel's, which then binds both jurisdictions.
+
+- article: "25"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    The panel's fees and expenses are borne by the Contracting Jurisdictions in
+    equal shares.
+
+- article: "26"
+  mode: arbitration_part_vi
+  targets: [["25"]]
+  note: >-
+    Part VI applies in place of or in the absence of the treaty's own provisions
+    for arbitration of unresolved mutual agreement cases. The previous reading
+    called this Article administrative and said it touched no treaty provision;
+    the Article's own words are that it applies in place of treaty provisions,
+    and the mutual agreement article is the one it stands in for.
+
+- article: "27"
+  mode: admin
+  targets: []
+  note: >-
+    Final provisions of the Convention itself. Where a Party may sign, and what
+    instrument it must deposit.
+
+- article: "28"
+  mode: admin
+  targets: []
+  note: >-
+    Lists the Articles to which a reservation is expressly permitted.
+
+- article: "29"
+  mode: admin
+  targets: []
+  note: >-
+    Where and when the notifications the Convention provides for are made.
+
+- article: "30"
+  mode: admin
+  targets: []
+  note: >-
+    The Convention is without prejudice to later modifications of a Covered Tax
+    Agreement agreed between its Contracting Jurisdictions.
+
+- article: "31"
+  mode: admin
+  targets: []
+  note: >-
+    The Parties may convene a Conference of the Parties to take decisions or
+    exercise functions under the Convention.
+
+- article: "32"
+  mode: admin
+  targets: []
+  note: >-
+    Questions about provisions of a treaty as modified by the Convention are
+    determined under the treaty's own interpretation rule, with recourse to the
+    competent authorities.
+
+- article: "33"
+  mode: admin
+  targets: []
+  note: >-
+    Any Party may propose an amendment, which a Conference of the Parties
+    considers.
+
+- article: "34"
+  mode: admin
+  targets: []
+  note: >-
+    The Convention enters into force after the fifth instrument of ratification,
+    acceptance or approval.
+
+- article: "35"
+  mode: admin
+  targets: []
+  note: >-
+    When the Convention's provisions take effect for a Covered Tax Agreement.
+
+- article: "36"
+  mode: admin
+  targets: []
+  note: >-
+    The later and separate date on which Part VI takes effect.
+
+- article: "37"
+  mode: admin
+  targets: []
+  note: >-
+    A Party may withdraw by notification to the Depositary, with effect from the
+    date of its receipt.
+
+- article: "38"
+  mode: admin
+  targets: []
+  note: >-
+    The Convention may be supplemented by protocols; a party to a protocol must
+    be a Party to the Convention.
+
+- article: "39"
+  mode: admin
+  targets: []
+  note: >-
+    The Secretary-General of the OECD is the Depositary.
+
+# The Articles a position document cannot show a reservation, notification or
+# choice about, because the Convention provides none for them. Article 2 is not
+# here: the notifications under Article 2(1)(a)(ii) extend the list of Covered
+# Tax Agreements, and there is a notification of that kind in the documents this
+# corpus holds.
+articles_without_options: ["1", "27", "30", "31", "32", "33", "34", "38", "39"]

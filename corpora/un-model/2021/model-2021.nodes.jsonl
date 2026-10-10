@@ -1,0 +1,400 @@
+{"depth": 1, "eId": "un-model-2021__convention", "number": "", "page": 25, "parent": "un-model-2021", "spans": [851, 851], "tag": "convention", "title": "TITLE OF THE CONVENTION"}
+{"depth": 2, "eId": "un-model-2021__convention__a1", "number": "", "page": 25, "parent": "un-model-2021__convention", "spans": [852, 854], "tag": "alinea", "title": ""}
+{"depth": 2, "eId": "un-model-2021__convention__preamble", "number": "", "page": 25, "parent": "un-model-2021__convention", "spans": [855, 856], "tag": "preamble", "title": "PREAMBLE OF THE CONVENTION"}
+{"depth": 3, "eId": "un-model-2021__convention__preamble__a2", "number": "", "page": 25, "parent": "un-model-2021__convention__preamble", "spans": [857, 857], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "un-model-2021__convention__preamble__a3", "number": "", "page": 25, "parent": "un-model-2021__convention__preamble", "spans": [858, 859], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "un-model-2021__convention__preamble__a4", "number": "", "page": 25, "parent": "un-model-2021__convention__preamble", "spans": [860, 865], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "un-model-2021__convention__preamble__a5", "number": "", "page": 25, "parent": "un-model-2021__convention__preamble", "spans": [866, 866], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "un-model-2021__convention__preamble__note10", "number": "10", "page": 25, "parent": "un-model-2021__convention__preamble", "spans": [867, 869], "tag": "note", "title": ""}
+{"depth": 1, "eId": "ch_I", "number": "Chapter I", "page": 26, "parent": "un-model-2021", "spans": [872, 873], "tag": "chapter", "title": "SCOPE OF THE CONVENTION"}
+{"depth": 2, "eId": "art_1", "number": "Article 1", "page": 26, "parent": "ch_I", "spans": [874, 875], "tag": "article", "title": "PERSONS COVERED"}
+{"depth": 3, "eId": "art_1__p1", "number": "1.", "page": 26, "parent": "art_1", "spans": [876, 878], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_1__p2", "number": "2.", "page": 26, "parent": "art_1", "spans": [879, 885], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_1__p3", "number": "3.", "page": 26, "parent": "art_1", "spans": [886, 891], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_1__p4", "number": "4.", "page": 26, "parent": "art_1", "spans": [892, 895], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_1__p4__note11", "number": "11", "page": 26, "parent": "art_1__p4", "spans": [896, 905], "tag": "note", "title": ""}
+{"depth": 2, "eId": "art_2", "number": "Article 2", "page": 27, "parent": "ch_I", "spans": [908, 909], "tag": "article", "title": "TAXES COVERED"}
+{"depth": 3, "eId": "art_2__p1", "number": "1.", "page": 27, "parent": "art_2", "spans": [910, 913], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_2__p2", "number": "2.", "page": 27, "parent": "art_2", "spans": [914, 919], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_2__p3", "number": "3.", "page": 27, "parent": "art_2", "spans": [920, 922], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_2__p3__pa", "number": "(a)", "page": 27, "parent": "art_2__p3", "spans": [923, 925], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_2__p3__pb", "number": "(b)", "page": 27, "parent": "art_2__p3", "spans": [926, 928], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_2__p4", "number": "4.", "page": 27, "parent": "art_2", "spans": [929, 934], "tag": "paragraph", "title": ""}
+{"depth": 1, "eId": "ch_II", "number": "Chapter II", "page": 28, "parent": "un-model-2021", "spans": [937, 938], "tag": "chapter", "title": "DEFINITIONS"}
+{"depth": 2, "eId": "art_3", "number": "Article 3", "page": 28, "parent": "ch_II", "spans": [939, 940], "tag": "article", "title": "GENERAL DEFINITIONS"}
+{"depth": 3, "eId": "art_3__p1", "number": "1.", "page": 28, "parent": "art_3", "spans": [941, 943], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_3__p1__pa", "number": "(a)", "page": 28, "parent": "art_3__p1", "spans": [944, 947], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_3__p1__pb", "number": "(b)", "page": 28, "parent": "art_3__p1", "spans": [948, 951], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_3__p1__pc", "number": "(c)", "page": 28, "parent": "art_3__p1", "spans": [952, 957], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_3__p1__pd", "number": "(d)", "page": 28, "parent": "art_3__p1", "spans": [958, 963], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_3__p1__pe", "number": "(e)", "page": 28, "parent": "art_3__p1", "spans": [964, 965], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_3__p1__pe__pi", "number": "(i)", "page": 28, "parent": "art_3__p1__pe", "spans": [966, 966], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_3__p1__pe__pii", "number": "(ii)", "page": 28, "parent": "art_3__p1__pe", "spans": [967, 967], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_3__p1__pf", "number": "(f)", "page": 28, "parent": "art_3__p1", "spans": [968, 970], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_3__p1__pf__pi", "number": "(i)", "page": 28, "parent": "art_3__p1__pf", "spans": [971, 972], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_3__p1__pf__pii", "number": "(ii)", "page": 28, "parent": "art_3__p1__pf", "spans": [973, 974], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_3__p1__pg", "number": "(g)", "page": 28, "parent": "art_3__p1", "spans": [975, 980], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_3__p1__pg__pi", "number": "(i)", "page": 29, "parent": "art_3__p1__pg", "spans": [983, 987], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_3__p1__pg__pii", "number": "(ii)", "page": 29, "parent": "art_3__p1__pg", "spans": [988, 990], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_3__p2", "number": "2.", "page": 29, "parent": "art_3", "spans": [991, 997], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_4", "number": "Article 4", "page": 29, "parent": "ch_II", "spans": [998, 999], "tag": "article", "title": "RESIDENT"}
+{"depth": 3, "eId": "art_4__p1", "number": "1.", "page": 29, "parent": "art_4", "spans": [1000, 1009], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_4__p2", "number": "2.", "page": 29, "parent": "art_4", "spans": [1010, 1013], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_4__p2__pa", "number": "(a)", "page": 29, "parent": "art_4__p2", "spans": [1014, 1020], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_4__p2__pb", "number": "(b)", "page": 30, "parent": "art_4__p2", "spans": [1023, 1028], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_4__p2__pc", "number": "(c)", "page": 30, "parent": "art_4__p2", "spans": [1029, 1033], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_4__p2__pd", "number": "(d)", "page": 30, "parent": "art_4__p2", "spans": [1034, 1038], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_4__p3", "number": "3.", "page": 30, "parent": "art_4", "spans": [1039, 1050], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_5", "number": "Article 5", "page": 30, "parent": "ch_II", "spans": [1051, 1052], "tag": "article", "title": "PERMANENT ESTABLISHMENT"}
+{"depth": 3, "eId": "art_5__p1", "number": "1.", "page": 30, "parent": "art_5", "spans": [1053, 1056], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_5__p2", "number": "2.", "page": 30, "parent": "art_5", "spans": [1057, 1058], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_5__p2__pa", "number": "(a)", "page": 30, "parent": "art_5__p2", "spans": [1059, 1061], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p2__pb", "number": "(b)", "page": 30, "parent": "art_5__p2", "spans": [1062, 1064], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p2__pc", "number": "(c)", "page": 30, "parent": "art_5__p2", "spans": [1065, 1067], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p2__pd", "number": "(d)", "page": 30, "parent": "art_5__p2", "spans": [1068, 1070], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p2__pe", "number": "(e)", "page": 30, "parent": "art_5__p2", "spans": [1071, 1073], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p2__pf", "number": "(f)", "page": 31, "parent": "art_5__p2", "spans": [1076, 1079], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_5__p3", "number": "3.", "page": 31, "parent": "art_5", "spans": [1080, 1081], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_5__p3__pa", "number": "(a)", "page": 31, "parent": "art_5__p3", "spans": [1082, 1086], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p3__pb", "number": "(b)", "page": 31, "parent": "art_5__p3", "spans": [1087, 1094], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_5__p4", "number": "4.", "page": 31, "parent": "art_5", "spans": [1095, 1097], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_5__p4__pa", "number": "(a)", "page": 31, "parent": "art_5__p4", "spans": [1098, 1101], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p4__pb", "number": "(b)", "page": 31, "parent": "art_5__p4", "spans": [1102, 1105], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p4__pc", "number": "(c)", "page": 31, "parent": "art_5__p4", "spans": [1106, 1110], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p4__pd", "number": "(d)", "page": 31, "parent": "art_5__p4", "spans": [1111, 1115], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p4__pe", "number": "(e)", "page": 31, "parent": "art_5__p4", "spans": [1116, 1119], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p4__pf", "number": "(f)", "page": 31, "parent": "art_5__p4", "spans": [1120, 1132], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_5__p41", "number": "4.1", "page": 31, "parent": "art_5", "spans": [1133, 1137], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_5__p41__pa", "number": "(a)", "page": 32, "parent": "art_5__p41", "spans": [1140, 1144], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p41__pb", "number": "(b)", "page": 32, "parent": "art_5__p41", "spans": [1145, 1154], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_5__p5", "number": "5.", "page": 32, "parent": "art_5", "spans": [1155, 1161], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_5__p5__pa", "number": "(a)", "page": 32, "parent": "art_5__p5", "spans": [1162, 1167], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_5__p5__pa__pi", "number": "(i)", "page": 32, "parent": "art_5__p5__pa", "spans": [1168, 1168], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_5__p5__pa__pii", "number": "(ii)", "page": 32, "parent": "art_5__p5__pa", "spans": [1169, 1171], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_5__p5__pa__piii", "number": "(iii)", "page": 32, "parent": "art_5__p5__pa", "spans": [1172, 1177], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_5__p5__pb", "number": "(b)", "page": 32, "parent": "art_5__p5", "spans": [1178, 1184], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_5__p6", "number": "6.", "page": 33, "parent": "art_5", "spans": [1187, 1193], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_5__p7", "number": "7.", "page": 33, "parent": "art_5", "spans": [1194, 1202], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_5__p8", "number": "8.", "page": 33, "parent": "art_5", "spans": [1203, 1209], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_5__p9", "number": "9.", "page": 33, "parent": "art_5", "spans": [1210, 1224], "tag": "paragraph", "title": ""}
+{"depth": 1, "eId": "ch_III", "number": "Chapter III", "page": 34, "parent": "un-model-2021", "spans": [1227, 1228], "tag": "chapter", "title": "TAXATION OF INCOME"}
+{"depth": 2, "eId": "art_6", "number": "Article 6", "page": 34, "parent": "ch_III", "spans": [1229, 1230], "tag": "article", "title": "INCOME FROM IMMOVABLE PROPERTY"}
+{"depth": 3, "eId": "art_6__p1", "number": "1.", "page": 34, "parent": "art_6", "spans": [1231, 1234], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_6__p2", "number": "2.", "page": 34, "parent": "art_6", "spans": [1235, 1244], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_6__p3", "number": "3.", "page": 34, "parent": "art_6", "spans": [1245, 1248], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_6__p4", "number": "4.", "page": 34, "parent": "art_6", "spans": [1249, 1253], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_7", "number": "Article 7", "page": 34, "parent": "ch_III", "spans": [1254, 1255], "tag": "article", "title": "BUSINESS PROFITS"}
+{"depth": 3, "eId": "art_7__p1", "number": "1.", "page": 34, "parent": "art_7", "spans": [1256, 1259], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_7__p1__a6", "number": "", "page": 35, "parent": "art_7__p1", "spans": [1262, 1264], "tag": "alinea", "title": ""}
+{"depth": 4, "eId": "art_7__p1__pa", "number": "(a)", "page": 35, "parent": "art_7__p1", "spans": [1265, 1267], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_7__p1__pb", "number": "(b)", "page": 35, "parent": "art_7__p1", "spans": [1268, 1272], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_7__p1__pc", "number": "(c)", "page": 35, "parent": "art_7__p1", "spans": [1273, 1277], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_7__p2", "number": "2.", "page": 35, "parent": "art_7", "spans": [1278, 1286], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_7__p3", "number": "3.", "page": 35, "parent": "art_7", "spans": [1287, 1306], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_7__p3__a7", "number": "", "page": 36, "parent": "art_7__p3", "spans": [1309, 1311], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_7__p4", "number": "4.", "page": 36, "parent": "art_7", "spans": [1312, 1320], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_7__p5", "number": "5.", "page": 36, "parent": "art_7", "spans": [1321, 1325], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_7__p6", "number": "6.", "page": 36, "parent": "art_7", "spans": [1326, 1329], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_8", "number": "Article 8", "page": 36, "parent": "ch_III", "spans": [1330, 1331], "tag": "article", "title": "INTERNATIONAL SHIPPING AND AIR TRANSPORT"}
+{"depth": 3, "eId": "art_8__alt_A", "number": "Article 8", "page": 36, "parent": "art_8", "spans": [1332, 1332], "tag": "alternative", "title": "alternative A"}
+{"depth": 4, "eId": "art_8__alt_A__p1", "number": "1.", "page": 36, "parent": "art_8__alt_A", "spans": [1333, 1336], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_8__alt_A__p2", "number": "2.", "page": 36, "parent": "art_8__alt_A", "spans": [1337, 1340], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_8__alt_B", "number": "Article 8", "page": 36, "parent": "art_8", "spans": [1341, 1341], "tag": "alternative", "title": "alternative B"}
+{"depth": 4, "eId": "art_8__alt_B__p1", "number": "1.", "page": 36, "parent": "art_8__alt_B", "spans": [1342, 1344], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_8__alt_B__p2", "number": "2.", "page": 37, "parent": "art_8__alt_B", "spans": [1347, 1359], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_8__alt_B__p3", "number": "3.", "page": 37, "parent": "art_8__alt_B", "spans": [1360, 1363], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_9", "number": "Article 9", "page": 37, "parent": "ch_III", "spans": [1364, 1365], "tag": "article", "title": "ASSOCIATED ENTERPRISES"}
+{"depth": 3, "eId": "art_9__p1", "number": "1.", "page": 37, "parent": "art_9", "spans": [1366, 1367], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_9__p1__pa", "number": "(a)", "page": 37, "parent": "art_9__p1", "spans": [1368, 1372], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_9__p1__pb", "number": "(b)", "page": 37, "parent": "art_9__p1", "spans": [1373, 1384], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_9__p2", "number": "2.", "page": 37, "parent": "art_9", "spans": [1385, 1389], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_9__p2__a8", "number": "", "page": 38, "parent": "art_9__p2", "spans": [1392, 1398], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_9__p3", "number": "3.", "page": 38, "parent": "art_9", "spans": [1399, 1404], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_10", "number": "Article 10", "page": 38, "parent": "ch_III", "spans": [1405, 1406], "tag": "article", "title": "DIVIDENDS"}
+{"depth": 3, "eId": "art_10__p1", "number": "1.", "page": 38, "parent": "art_10", "spans": [1407, 1410], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_10__p2", "number": "2.", "page": 38, "parent": "art_10", "spans": [1411, 1415], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_10__p2__pa", "number": "(a)", "page": 38, "parent": "art_10__p2", "spans": [1416, 1429], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_10__p2__pb", "number": "(b)", "page": 38, "parent": "art_10__p2", "spans": [1430, 1436], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_10__p2__pb__a9", "number": "", "page": 39, "parent": "art_10__p2__pb", "spans": [1439, 1442], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_10__p3", "number": "3.", "page": 39, "parent": "art_10", "spans": [1443, 1449], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_10__p4", "number": "4.", "page": 39, "parent": "art_10", "spans": [1450, 1459], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_10__p5", "number": "5.", "page": 39, "parent": "art_10", "spans": [1460, 1470], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_11", "number": "Article 11", "page": 39, "parent": "ch_III", "spans": [1471, 1472], "tag": "article", "title": "INTEREST"}
+{"depth": 3, "eId": "art_11__p1", "number": "1.", "page": 39, "parent": "art_11", "spans": [1473, 1475], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_11__p2", "number": "2.", "page": 40, "parent": "art_11", "spans": [1478, 1487], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_11__p3", "number": "3.", "page": 40, "parent": "art_11", "spans": [1488, 1495], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_11__p4", "number": "4.", "page": 40, "parent": "art_11", "spans": [1496, 1503], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_11__p4__pa", "number": "(a)", "page": 40, "parent": "art_11__p4", "spans": [1504, 1506], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_11__p4__pb", "number": "(b)", "page": 40, "parent": "art_11__p4", "spans": [1507, 1513], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_11__p5", "number": "5.", "page": 40, "parent": "art_11", "spans": [1514, 1522], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_11__p6", "number": "6.", "page": 40, "parent": "art_11", "spans": [1523, 1525], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_11__p6__a10", "number": "", "page": 41, "parent": "art_11__p6", "spans": [1528, 1534], "tag": "alinea", "title": ""}
+{"depth": 2, "eId": "art_12", "number": "Article 12", "page": 41, "parent": "ch_III", "spans": [1535, 1536], "tag": "article", "title": "ROYALTIES"}
+{"depth": 3, "eId": "art_12__p1", "number": "1.", "page": 41, "parent": "art_12", "spans": [1537, 1539], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12__p2", "number": "2.", "page": 41, "parent": "art_12", "spans": [1540, 1549], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12__p3", "number": "3.", "page": 41, "parent": "art_12", "spans": [1550, 1558], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12__p4", "number": "4.", "page": 41, "parent": "art_12", "spans": [1559, 1566], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_12__p4__pa", "number": "(a)", "page": 42, "parent": "art_12__p4", "spans": [1569, 1571], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12__p4__pb", "number": "(b)", "page": 42, "parent": "art_12__p4", "spans": [1572, 1578], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_12__p5", "number": "5.", "page": 42, "parent": "art_12", "spans": [1579, 1587], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12__p6", "number": "6.", "page": 42, "parent": "art_12", "spans": [1588, 1597], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_12A", "number": "Article 12A", "page": 42, "parent": "ch_III", "spans": [1598, 1599], "tag": "article", "title": "FEES FOR TECHNICAL SERVICES"}
+{"depth": 3, "eId": "art_12A__p1", "number": "1.", "page": 42, "parent": "art_12A", "spans": [1600, 1603], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12A__p2", "number": "2.", "page": 42, "parent": "art_12A", "spans": [1604, 1613], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12A__p3", "number": "3.", "page": 43, "parent": "art_12A", "spans": [1616, 1619], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_12A__p3__pa", "number": "(a)", "page": 43, "parent": "art_12A__p3", "spans": [1620, 1622], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12A__p3__pb", "number": "(b)", "page": 43, "parent": "art_12A__p3", "spans": [1623, 1626], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12A__p3__pc", "number": "(c)", "page": 43, "parent": "art_12A__p3", "spans": [1627, 1629], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_12A__p4", "number": "4.", "page": 43, "parent": "art_12A", "spans": [1630, 1638], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_12A__p4__pa", "number": "(a)", "page": 43, "parent": "art_12A__p4", "spans": [1639, 1641], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12A__p4__pb", "number": "(b)", "page": 43, "parent": "art_12A__p4", "spans": [1642, 1648], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_12A__p5", "number": "5.", "page": 43, "parent": "art_12A", "spans": [1649, 1656], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12A__p6", "number": "6.", "page": 43, "parent": "art_12A", "spans": [1657, 1664], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12A__p7", "number": "7.", "page": 43, "parent": "art_12A", "spans": [1665, 1667], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_12A__p7__a11", "number": "", "page": 44, "parent": "art_12A__p7", "spans": [1670, 1677], "tag": "alinea", "title": ""}
+{"depth": 2, "eId": "art_12B", "number": "Article 12B", "page": 44, "parent": "ch_III", "spans": [1678, 1679], "tag": "article", "title": "INCOME FROM AUTOMATED DIGITAL SERVICES"}
+{"depth": 3, "eId": "art_12B__p1", "number": "1.", "page": 44, "parent": "art_12B", "spans": [1680, 1683], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12B__p2", "number": "2.", "page": 44, "parent": "art_12B", "spans": [1684, 1694], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12B__p3", "number": "3.", "page": 44, "parent": "art_12B", "spans": [1695, 1707], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_12B__p3__a12", "number": "", "page": 45, "parent": "art_12B__p3", "spans": [1710, 1724], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_12B__p4", "number": "4.", "page": 45, "parent": "art_12B", "spans": [1725, 1734], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12B__p5", "number": "5.", "page": 45, "parent": "art_12B", "spans": [1735, 1739], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12B__p6", "number": "6.", "page": 45, "parent": "art_12B", "spans": [1740, 1741], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__pa", "number": "(a)", "page": 45, "parent": "art_12B__p6", "spans": [1742, 1744], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__pb", "number": "(b)", "page": 45, "parent": "art_12B__p6", "spans": [1745, 1747], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__pc", "number": "(c)", "page": 45, "parent": "art_12B__p6", "spans": [1748, 1750], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__pd", "number": "(d)", "page": 45, "parent": "art_12B__p6", "spans": [1751, 1753], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__pe", "number": "(e)", "page": 45, "parent": "art_12B__p6", "spans": [1754, 1756], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__pf", "number": "(f)", "page": 45, "parent": "art_12B__p6", "spans": [1757, 1759], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__pg", "number": "(g)", "page": 46, "parent": "art_12B__p6", "spans": [1762, 1764], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__ph", "number": "(h)", "page": 46, "parent": "art_12B__p6", "spans": [1765, 1767], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p6__pi", "number": "(i)", "page": 46, "parent": "art_12B__p6", "spans": [1768, 1770], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_12B__p7", "number": "7.", "page": 46, "parent": "art_12B", "spans": [1771, 1775], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12B__p8", "number": "8.", "page": 46, "parent": "art_12B", "spans": [1776, 1784], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_12B__p8__pa", "number": "(a)", "page": 46, "parent": "art_12B__p8", "spans": [1785, 1787], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_12B__p8__pb", "number": "(b)", "page": 46, "parent": "art_12B__p8", "spans": [1788, 1795], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_12B__p9", "number": "9.", "page": 46, "parent": "art_12B", "spans": [1796, 1806], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_12B__p10", "number": "10.", "page": 46, "parent": "art_12B", "spans": [1807, 1812], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_12B__p10__a13", "number": "", "page": 47, "parent": "art_12B__p10", "spans": [1815, 1818], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_12B__p11", "number": "11.", "page": 47, "parent": "art_12B", "spans": [1819, 1830], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_13", "number": "Article 13", "page": 47, "parent": "ch_III", "spans": [1831, 1832], "tag": "article", "title": "CAPITAL GAINS"}
+{"depth": 3, "eId": "art_13__p1", "number": "1.", "page": 47, "parent": "art_13", "spans": [1833, 1836], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_13__p2", "number": "2.", "page": 47, "parent": "art_13", "spans": [1837, 1846], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_13__p3", "number": "3.", "page": 47, "parent": "art_13", "spans": [1847, 1851], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_13__p4", "number": "4.", "page": 48, "parent": "art_13", "spans": [1854, 1861], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_13__p5", "number": "5.", "page": 48, "parent": "art_13", "spans": [1862, 1871], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_13__p6", "number": "6.", "page": 48, "parent": "art_13", "spans": [1872, 1877], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_13__p7", "number": "7.", "page": 48, "parent": "art_13", "spans": [1878, 1882], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_13__p7__pa", "number": "(a)", "page": 48, "parent": "art_13__p7", "spans": [1883, 1890], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_13__p7__pb", "number": "(b)", "page": 48, "parent": "art_13__p7", "spans": [1891, 1895], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_13__p7__pb__pi", "number": "(i)", "page": 48, "parent": "art_13__p7__pb", "spans": [1896, 1900], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_13__p7__pb__pii", "number": "(ii)", "page": 49, "parent": "art_13__p7__pb", "spans": [1903, 1903], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_13__p8", "number": "8.", "page": 49, "parent": "art_13", "spans": [1904, 1907], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_14", "number": "Article 14", "page": 49, "parent": "ch_III", "spans": [1908, 1909], "tag": "article", "title": "INDEPENDENT PERSONAL SERVICES"}
+{"depth": 3, "eId": "art_14__p1", "number": "1.", "page": 49, "parent": "art_14", "spans": [1910, 1914], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_14__p1__pa", "number": "(a)", "page": 49, "parent": "art_14__p1", "spans": [1915, 1920], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_14__p1__pb", "number": "(b)", "page": 49, "parent": "art_14__p1", "spans": [1921, 1928], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_14__p2", "number": "2.", "page": 49, "parent": "art_14", "spans": [1929, 1933], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_15", "number": "Article 15", "page": 49, "parent": "ch_III", "spans": [1934, 1935], "tag": "article", "title": "DEPENDENT PERSONAL SERVICES"}
+{"depth": 3, "eId": "art_15__p1", "number": "1.", "page": 49, "parent": "art_15", "spans": [1936, 1939], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_15__p1__a14", "number": "", "page": 50, "parent": "art_15__p1", "spans": [1942, 1944], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_15__p2", "number": "2.", "page": 50, "parent": "art_15", "spans": [1945, 1949], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_15__p2__pa", "number": "(a)", "page": 50, "parent": "art_15__p2", "spans": [1950, 1954], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_15__p2__pb", "number": "(b)", "page": 50, "parent": "art_15__p2", "spans": [1955, 1958], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_15__p2__pc", "number": "(c)", "page": 50, "parent": "art_15__p2", "spans": [1959, 1962], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_15__p3", "number": "3.", "page": 50, "parent": "art_15", "spans": [1963, 1970], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_16", "number": "Article 16", "page": 50, "parent": "ch_III", "spans": [1971, 1972], "tag": "article", "title": "DIRECTORS’ FEES AND REMUNERATION OF TOP-LEVEL"}
+{"depth": 3, "eId": "art_16__a15", "number": "", "page": 50, "parent": "art_16", "spans": [1973, 1973], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_16__p1", "number": "1.", "page": 50, "parent": "art_16", "spans": [1974, 1978], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_16__p2", "number": "2.", "page": 50, "parent": "art_16", "spans": [1979, 1983], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_17", "number": "Article 17", "page": 51, "parent": "ch_III", "spans": [1986, 1987], "tag": "article", "title": "ARTISTES AND SPORTSPERSONS"}
+{"depth": 3, "eId": "art_17__p1", "number": "1.", "page": 51, "parent": "art_17", "spans": [1988, 1993], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_17__p2", "number": "2.", "page": 51, "parent": "art_17", "spans": [1994, 2000], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_18", "number": "Article 18", "page": 51, "parent": "ch_III", "spans": [2001, 2002], "tag": "article", "title": "PENSIONS AND SOCIAL SECURITY PAYMENTS"}
+{"depth": 3, "eId": "art_18__alt_A", "number": "Article 18", "page": 51, "parent": "art_18", "spans": [2003, 2003], "tag": "alternative", "title": "alternative A"}
+{"depth": 4, "eId": "art_18__alt_A__p1", "number": "1.", "page": 51, "parent": "art_18__alt_A", "spans": [2004, 2008], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_18__alt_A__p2", "number": "2.", "page": 51, "parent": "art_18__alt_A", "spans": [2009, 2013], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_18__alt_B", "number": "Article 18", "page": 51, "parent": "art_18", "spans": [2014, 2014], "tag": "alternative", "title": "alternative B"}
+{"depth": 4, "eId": "art_18__alt_B__p1", "number": "1.", "page": 51, "parent": "art_18__alt_B", "spans": [2015, 2018], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_18__alt_B__p2", "number": "2.", "page": 52, "parent": "art_18__alt_B", "spans": [2021, 2029], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_18__alt_B__p3", "number": "3.", "page": 52, "parent": "art_18__alt_B", "spans": [2030, 2034], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_19", "number": "Article 19", "page": 52, "parent": "ch_III", "spans": [2035, 2036], "tag": "article", "title": "GOVERNMENT SERVICE"}
+{"depth": 3, "eId": "art_19__p1", "number": "1.", "page": 52, "parent": "art_19", "spans": [2037, 2043], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_19__p1__pb", "number": "(b)", "page": 52, "parent": "art_19__p1", "spans": [2044, 2049], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_19__p1__pb__pi", "number": "(i)", "page": 52, "parent": "art_19__p1__pb", "spans": [2050, 2050], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_19__p1__pb__pii", "number": "(ii)", "page": 52, "parent": "art_19__p1__pb", "spans": [2051, 2052], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_19__p2", "number": "2.", "page": 52, "parent": "art_19", "spans": [2053, 2059], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_19__p2__pb", "number": "(b)", "page": 52, "parent": "art_19__p2", "spans": [2060, 2064], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_19__p3", "number": "3.", "page": 53, "parent": "art_19", "spans": [2067, 2071], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_20", "number": "Article 20", "page": 53, "parent": "ch_III", "spans": [2072, 2073], "tag": "article", "title": "STUDENTS"}
+{"depth": 3, "eId": "art_20__a16", "number": "", "page": 53, "parent": "art_20", "spans": [2074, 2079], "tag": "alinea", "title": ""}
+{"depth": 2, "eId": "art_21", "number": "Article 21", "page": 53, "parent": "ch_III", "spans": [2080, 2081], "tag": "article", "title": "OTHER INCOME"}
+{"depth": 3, "eId": "art_21__p1", "number": "1.", "page": 53, "parent": "art_21", "spans": [2082, 2085], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_21__p2", "number": "2.", "page": 53, "parent": "art_21", "spans": [2086, 2095], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_21__p3", "number": "3.", "page": 53, "parent": "art_21", "spans": [2096, 2100], "tag": "paragraph", "title": ""}
+{"depth": 1, "eId": "ch_IV", "number": "Chapter IV", "page": 54, "parent": "un-model-2021", "spans": [2103, 2104], "tag": "chapter", "title": "TAXATION OF CAPITAL"}
+{"depth": 2, "eId": "art_22", "number": "Article 22", "page": 54, "parent": "ch_IV", "spans": [2105, 2106], "tag": "article", "title": "CAPITAL"}
+{"depth": 3, "eId": "art_22__p1", "number": "1.", "page": 54, "parent": "art_22", "spans": [2107, 2110], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_22__p2", "number": "2.", "page": 54, "parent": "art_22", "spans": [2111, 2118], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_22__p3", "number": "3.", "page": 54, "parent": "art_22", "spans": [2119, 2123], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_22__p3__a17", "number": "", "page": 54, "parent": "art_22__p3", "spans": [2124, 2126], "tag": "alinea", "title": ""}
+{"depth": 4, "eId": "art_22__p3__a18", "number": "", "page": 54, "parent": "art_22__p3", "spans": [2127, 2132], "tag": "alinea", "title": ""}
+{"depth": 1, "eId": "ch_V", "number": "Chapter V", "page": 55, "parent": "un-model-2021", "spans": [2135, 2136], "tag": "chapter", "title": "METHODS FOR THE ELIMINATION OF"}
+{"depth": 2, "eId": "ch_V__a19", "number": "", "page": 55, "parent": "ch_V", "spans": [2137, 2137], "tag": "alinea", "title": ""}
+{"depth": 2, "eId": "art_23A", "number": "Article 23 A", "page": 55, "parent": "ch_V", "spans": [2138, 2139], "tag": "article", "title": "EXEMPTION METHOD"}
+{"depth": 3, "eId": "art_23A__p1", "number": "1.", "page": 55, "parent": "art_23A", "spans": [2140, 2148], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_23A__p2", "number": "2.", "page": 55, "parent": "art_23A", "spans": [2149, 2157], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_23A__p3", "number": "3.", "page": 55, "parent": "art_23A", "spans": [2158, 2163], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_23A__p4", "number": "4.", "page": 55, "parent": "art_23A", "spans": [2164, 2169], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_23A__p4__a20", "number": "", "page": 56, "parent": "art_23A__p4", "spans": [2172, 2174], "tag": "alinea", "title": ""}
+{"depth": 2, "eId": "art_23B", "number": "Article 23 B", "page": 56, "parent": "ch_V", "spans": [2175, 2176], "tag": "article", "title": "CREDIT METHOD"}
+{"depth": 3, "eId": "art_23B__p1", "number": "1.", "page": 56, "parent": "art_23B", "spans": [2177, 2184], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_23B__p1__pa", "number": "(a)", "page": 56, "parent": "art_23B__p1", "spans": [2185, 2188], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_23B__p1__pb", "number": "(b)", "page": 56, "parent": "art_23B__p1", "spans": [2189, 2196], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_23B__p2", "number": "2.", "page": 56, "parent": "art_23B", "spans": [2197, 2202], "tag": "paragraph", "title": ""}
+{"depth": 1, "eId": "ch_VI", "number": "Chapter VI", "page": 57, "parent": "un-model-2021", "spans": [2205, 2206], "tag": "chapter", "title": "SPECIAL PROVISIONS"}
+{"depth": 2, "eId": "art_24", "number": "Article 24", "page": 57, "parent": "ch_VI", "spans": [2207, 2208], "tag": "article", "title": "NON-DISCRIMINATION"}
+{"depth": 3, "eId": "art_24__p1", "number": "1.", "page": 57, "parent": "art_24", "spans": [2209, 2217], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_24__p2", "number": "2.", "page": 57, "parent": "art_24", "spans": [2218, 2224], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_24__p3", "number": "3.", "page": 57, "parent": "art_24", "spans": [2225, 2233], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_24__p4", "number": "4.", "page": 57, "parent": "art_24", "spans": [2234, 2240], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_24__p4__a21", "number": "", "page": 58, "parent": "art_24__p4", "spans": [2243, 2249], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_24__p5", "number": "5.", "page": 58, "parent": "art_24", "spans": [2250, 2257], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_24__p6", "number": "6.", "page": 58, "parent": "art_24", "spans": [2258, 2260], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_25", "number": "Article 25", "page": 58, "parent": "ch_VI", "spans": [2261, 2262], "tag": "article", "title": "MUTUAL AGREEMENT PROCEDURE"}
+{"depth": 3, "eId": "art_25__alt_A", "number": "Article 25", "page": 58, "parent": "art_25", "spans": [2263, 2263], "tag": "alternative", "title": "alternative A"}
+{"depth": 4, "eId": "art_25__alt_A__p1", "number": "1.", "page": 58, "parent": "art_25__alt_A", "spans": [2264, 2274], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_25__alt_A__p2", "number": "2.", "page": 58, "parent": "art_25__alt_A", "spans": [2275, 2278], "tag": "paragraph", "title": ""}
+{"depth": 5, "eId": "art_25__alt_A__p2__a22", "number": "", "page": 59, "parent": "art_25__alt_A__p2", "spans": [2281, 2284], "tag": "alinea", "title": ""}
+{"depth": 4, "eId": "art_25__alt_A__p3", "number": "3.", "page": 59, "parent": "art_25__alt_A", "spans": [2285, 2290], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_25__alt_A__p4", "number": "4.", "page": 59, "parent": "art_25__alt_A", "spans": [2291, 2299], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_25__alt_B", "number": "Article 25", "page": 59, "parent": "art_25", "spans": [2300, 2300], "tag": "alternative", "title": "alternative B"}
+{"depth": 4, "eId": "art_25__alt_B__p1", "number": "1.", "page": 59, "parent": "art_25__alt_B", "spans": [2301, 2311], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_25__alt_B__p2", "number": "2.", "page": 59, "parent": "art_25__alt_B", "spans": [2312, 2319], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_25__alt_B__p3", "number": "3.", "page": 60, "parent": "art_25__alt_B", "spans": [2322, 2327], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_25__alt_B__p4", "number": "4.", "page": 60, "parent": "art_25__alt_B", "spans": [2328, 2336], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_25__alt_B__p5", "number": "5.", "page": 60, "parent": "art_25__alt_B", "spans": [2337, 2338], "tag": "paragraph", "title": ""}
+{"depth": 5, "eId": "art_25__alt_B__p5__pa", "number": "(a)", "page": 60, "parent": "art_25__alt_B__p5", "spans": [2339, 2345], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_25__alt_B__p5__pb", "number": "(b)", "page": 60, "parent": "art_25__alt_B__p5", "spans": [2346, 2365], "tag": "point", "title": ""}
+{"depth": 2, "eId": "art_26", "number": "Article 26", "page": 61, "parent": "ch_VI", "spans": [2368, 2369], "tag": "article", "title": "EXCHANGE OF INFORMATION"}
+{"depth": 3, "eId": "art_26__p1", "number": "1.", "page": 61, "parent": "art_26", "spans": [2370, 2381], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_26__p2", "number": "2.", "page": 61, "parent": "art_26", "spans": [2382, 2396], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_26__p3", "number": "3.", "page": 61, "parent": "art_26", "spans": [2397, 2399], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_26__p3__pa", "number": "(a)", "page": 61, "parent": "art_26__p3", "spans": [2400, 2404], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_26__p3__pb", "number": "(b)", "page": 61, "parent": "art_26__p3", "spans": [2405, 2409], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_26__p3__pc", "number": "(c)", "page": 62, "parent": "art_26__p3", "spans": [2412, 2419], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_26__p4", "number": "4.", "page": 62, "parent": "art_26", "spans": [2420, 2428], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_26__p5", "number": "5.", "page": 62, "parent": "art_26", "spans": [2429, 2434], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_26__p6", "number": "6.", "page": 62, "parent": "art_26", "spans": [2435, 2438], "tag": "paragraph", "title": ""}
+{"depth": 2, "eId": "art_27", "number": "Article 27", "page": 62, "parent": "ch_VI", "spans": [2439, 2441], "tag": "article", "title": "ASSISTANCE IN THE COLLECTION OF TAXES"}
+{"depth": 3, "eId": "art_27__p1", "number": "1.", "page": 62, "parent": "art_27", "spans": [2442, 2444], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_27__p1__note12", "number": "12", "page": 62, "parent": "art_27__p1", "spans": [2445, 2454], "tag": "note", "title": ""}
+{"depth": 4, "eId": "art_27__p1__a23", "number": "", "page": 63, "parent": "art_27__p1", "spans": [2457, 2458], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_27__p2", "number": "2.", "page": 63, "parent": "art_27", "spans": [2459, 2466], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_27__p3", "number": "3.", "page": 63, "parent": "art_27", "spans": [2467, 2476], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_27__p4", "number": "4.", "page": 63, "parent": "art_27", "spans": [2477, 2489], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_27__p5", "number": "5.", "page": 63, "parent": "art_27", "spans": [2490, 2496], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_27__p5__a24", "number": "", "page": 64, "parent": "art_27__p5", "spans": [2499, 2500], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_27__p6", "number": "6.", "page": 64, "parent": "art_27", "spans": [2501, 2504], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_27__p7", "number": "7.", "page": 64, "parent": "art_27", "spans": [2505, 2509], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_27__p7__pa", "number": "(a)", "page": 64, "parent": "art_27__p7", "spans": [2510, 2515], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_27__p7__pb", "number": "(b)", "page": 64, "parent": "art_27__p7", "spans": [2516, 2525], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_27__p8", "number": "8.", "page": 64, "parent": "art_27", "spans": [2526, 2528], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_27__p8__pa", "number": "(a)", "page": 64, "parent": "art_27__p8", "spans": [2529, 2533], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_27__p8__pb", "number": "(b)", "page": 64, "parent": "art_27__p8", "spans": [2534, 2539], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_27__p8__pc", "number": "(c)", "page": 64, "parent": "art_27__p8", "spans": [2540, 2544], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_27__p8__pd", "number": "(d)", "page": 64, "parent": "art_27__p8", "spans": [2545, 2549], "tag": "point", "title": ""}
+{"depth": 2, "eId": "art_28", "number": "Article 28", "page": 65, "parent": "ch_VI", "spans": [2552, 2553], "tag": "article", "title": "MEMBERS OF DIPLOMATIC MISSIONS AND CONSULAR POSTS"}
+{"depth": 3, "eId": "art_28__a25", "number": "", "page": 65, "parent": "art_28", "spans": [2554, 2556], "tag": "alinea", "title": ""}
+{"depth": 2, "eId": "art_29", "number": "Article 29", "page": 65, "parent": "ch_VI", "spans": [2557, 2559], "tag": "article", "title": "ENTITLEMENT TO BENEFITS"}
+{"depth": 3, "eId": "art_29__p1", "number": "1.", "page": 65, "parent": "art_29", "spans": [2560, 2566], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_29__p2", "number": "2.", "page": 65, "parent": "art_29", "spans": [2567, 2570], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_29__p2__pa", "number": "(a)", "page": 65, "parent": "art_29__p2", "spans": [2571, 2573], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p2__pb", "number": "(b)", "page": 65, "parent": "art_29__p2", "spans": [2574, 2578], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p2__pc", "number": "(c)", "page": 65, "parent": "art_29__p2", "spans": [2579, 2584], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pc__note13", "number": "13", "page": 65, "parent": "art_29__p2__pc", "spans": [2585, 2592], "tag": "note", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pc__pi", "number": "(i)", "page": 66, "parent": "art_29__p2__pc", "spans": [2595, 2598], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pc__pii", "number": "(ii)", "page": 66, "parent": "art_29__p2__pc", "spans": [2599, 2601], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p2__pd", "number": "(d)", "page": 66, "parent": "art_29__p2", "spans": [2602, 2604], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pd__pi", "number": "(i)", "page": 66, "parent": "art_29__p2__pd", "spans": [2605, 2617], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pd__pii", "number": "(ii)", "page": 66, "parent": "art_29__p2__pd", "spans": [2618, 2639], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p2__pe", "number": "(e)", "page": 66, "parent": "art_29__p2", "spans": [2640, 2642], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pe__pi", "number": "(i)", "page": 66, "parent": "art_29__p2__pe", "spans": [2643, 2646], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pe__pii", "number": "(ii)", "page": 66, "parent": "art_29__p2__pe", "spans": [2647, 2647], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p2__pf", "number": "(f)", "page": 67, "parent": "art_29__p2", "spans": [2650, 2652], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pf__pi", "number": "(i)", "page": 67, "parent": "art_29__p2__pf", "spans": [2653, 2671], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p2__pf__pii", "number": "(ii)", "page": 67, "parent": "art_29__p2__pf", "spans": [2672, 2692], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p2__pg", "number": "(g)", "page": 67, "parent": "art_29__p2", "spans": [2693, 2699], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_29__p3", "number": "3.", "page": 67, "parent": "art_29", "spans": [2700, 2708], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_29__p3__note14", "number": "14", "page": 67, "parent": "art_29__p3", "spans": [2709, 2714], "tag": "note", "title": ""}
+{"depth": 4, "eId": "art_29__p3__a26", "number": "", "page": 68, "parent": "art_29__p3", "spans": [2717, 2718], "tag": "alinea", "title": ""}
+{"depth": 4, "eId": "art_29__p3__pi", "number": "(i)", "page": 68, "parent": "art_29__p3", "spans": [2719, 2719], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p3__pii", "number": "(ii)", "page": 68, "parent": "art_29__p3", "spans": [2720, 2721], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p3__piii", "number": "(iii)", "page": 68, "parent": "art_29__p3", "spans": [2722, 2722], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p3__piv", "number": "(iv)", "page": 68, "parent": "art_29__p3", "spans": [2723, 2727], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p3__pb", "number": "(b)", "page": 68, "parent": "art_29__p3", "spans": [2728, 2743], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p3__pc", "number": "(c)", "page": 68, "parent": "art_29__p3", "spans": [2744, 2748], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_29__p4", "number": "4.", "page": 68, "parent": "art_29", "spans": [2749, 2752], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_29__p5", "number": "5.", "page": 68, "parent": "art_29", "spans": [2753, 2760], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_29__p5__pa", "number": "(a)", "page": 69, "parent": "art_29__p5", "spans": [2763, 2766], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p5__pb", "number": "(b)", "page": 69, "parent": "art_29__p5", "spans": [2767, 2773], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p5__pc", "number": "(c)", "page": 69, "parent": "art_29__p5", "spans": [2774, 2779], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p5__pd", "number": "(d)", "page": 69, "parent": "art_29__p5", "spans": [2780, 2783], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p5__pe", "number": "(e)", "page": 69, "parent": "art_29__p5", "spans": [2784, 2788], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p5__pf", "number": "(f)", "page": 69, "parent": "art_29__p5", "spans": [2789, 2821], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_29__p6", "number": "6.", "page": 69, "parent": "art_29", "spans": [2822, 2825], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_29__p6__a27", "number": "", "page": 70, "parent": "art_29__p6", "spans": [2828, 2839], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_29__p7", "number": "7.", "page": 70, "parent": "art_29", "spans": [2840, 2842], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pa", "number": "(a)", "page": 70, "parent": "art_29__p7", "spans": [2843, 2845], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pa__pi", "number": "(i)", "page": 70, "parent": "art_29__p7__pa", "spans": [2846, 2849], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pa__pii", "number": "(ii)", "page": 70, "parent": "art_29__p7__pa", "spans": [2850, 2851], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pb", "number": "(b)", "page": 70, "parent": "art_29__p7", "spans": [2852, 2855], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pc", "number": "(c)", "page": 70, "parent": "art_29__p7", "spans": [2856, 2865], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pd", "number": "(d)", "page": 70, "parent": "art_29__p7", "spans": [2866, 2875], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pd__a28", "number": "", "page": 71, "parent": "art_29__p7__pd", "spans": [2878, 2880], "tag": "alinea", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pe", "number": "(e)", "page": 71, "parent": "art_29__p7", "spans": [2881, 2883], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pe__pi", "number": "(i)", "page": 71, "parent": "art_29__p7__pe", "spans": [2884, 2884], "tag": "point", "title": ""}
+{"depth": 6, "eId": "art_29__p7__pe__pi__pA", "number": "(A)", "page": 71, "parent": "art_29__p7__pe__pi", "spans": [2885, 2917], "tag": "point", "title": ""}
+{"depth": 6, "eId": "art_29__p7__pe__pi__pB", "number": "(B)", "page": 71, "parent": "art_29__p7__pe__pi", "spans": [2918, 2928], "tag": "point", "title": ""}
+{"depth": 7, "eId": "art_29__p7__pe__pi__pB__pI", "number": "(I)", "page": 71, "parent": "art_29__p7__pe__pi__pB", "spans": [2929, 2933], "tag": "point", "title": ""}
+{"depth": 8, "eId": "art_29__p7__pe__pi__pB__pI__a29", "number": "", "page": 72, "parent": "art_29__p7__pe__pi__pB__pI", "spans": [2936, 2955], "tag": "alinea", "title": ""}
+{"depth": 6, "eId": "art_29__p7__pe__pi__pC", "number": "(C)", "page": 72, "parent": "art_29__p7__pe__pi", "spans": [2956, 2968], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pe__pii", "number": "(ii)", "page": 72, "parent": "art_29__p7__pe", "spans": [2969, 2981], "tag": "point", "title": ""}
+{"depth": 6, "eId": "art_29__p7__pe__pii__a30", "number": "", "page": 73, "parent": "art_29__p7__pe__pii", "spans": [2984, 2991], "tag": "alinea", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pe__piii", "number": "(iii)", "page": 73, "parent": "art_29__p7__pe", "spans": [2992, 2998], "tag": "point", "title": ""}
+{"depth": 6, "eId": "art_29__p7__pe__piii__pc", "number": "(c)", "page": 73, "parent": "art_29__p7__pe__piii", "spans": [2999, 3008], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pf", "number": "(f)", "page": 73, "parent": "art_29__p7", "spans": [3009, 3016], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pg", "number": "(g)", "page": 73, "parent": "art_29__p7", "spans": [3017, 3020], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pg__pi", "number": "(i)", "page": 73, "parent": "art_29__p7__pg", "spans": [3021, 3028], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pg__pii", "number": "(ii)", "page": 73, "parent": "art_29__p7__pg", "spans": [3029, 3033], "tag": "point", "title": ""}
+{"depth": 6, "eId": "art_29__p7__pg__pii__a31", "number": "", "page": 74, "parent": "art_29__p7__pg__pii", "spans": [3036, 3038], "tag": "alinea", "title": ""}
+{"depth": 4, "eId": "art_29__p7__ph", "number": "(h)", "page": 74, "parent": "art_29__p7", "spans": [3039, 3042], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__ph__pi", "number": "(i)", "page": 74, "parent": "art_29__p7__ph", "spans": [3043, 3046], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__ph__pii", "number": "(ii)", "page": 74, "parent": "art_29__p7__ph", "spans": [3047, 3054], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pi", "number": "(i)", "page": 74, "parent": "art_29__p7", "spans": [3055, 3065], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pi__pi", "number": "(i)", "page": 74, "parent": "art_29__p7__pi", "spans": [3066, 3068], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pi__pii", "number": "(ii)", "page": 74, "parent": "art_29__p7__pi", "spans": [3069, 3071], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p7__pj", "number": "(j)", "page": 74, "parent": "art_29__p7", "spans": [3072, 3083], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pj__pi", "number": "(i)", "page": 74, "parent": "art_29__p7__pj", "spans": [3084, 3086], "tag": "point", "title": ""}
+{"depth": 6, "eId": "art_29__p7__pj__pi__a32", "number": "", "page": 75, "parent": "art_29__p7__pj__pi", "spans": [3089, 3090], "tag": "alinea", "title": ""}
+{"depth": 5, "eId": "art_29__p7__pj__pii", "number": "(ii)", "page": 75, "parent": "art_29__p7__pj", "spans": [3091, 3094], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_29__p8", "number": "8.", "page": 75, "parent": "art_29", "spans": [3095, 3097], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_29__p8__pi", "number": "(i)", "page": 75, "parent": "art_29__p8", "spans": [3098, 3102], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p8__pii", "number": "(ii)", "page": 75, "parent": "art_29__p8", "spans": [3103, 3116], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p8__pb", "number": "(b)", "page": 75, "parent": "art_29__p8", "spans": [3117, 3126], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_29__p8__pc", "number": "(c)", "page": 75, "parent": "art_29__p8", "spans": [3127, 3133], "tag": "point", "title": ""}
+{"depth": 5, "eId": "art_29__p8__pc__a33", "number": "", "page": 76, "parent": "art_29__p8__pc", "spans": [3136, 3143], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_29__p9", "number": "9.", "page": 76, "parent": "art_29", "spans": [3144, 3153], "tag": "paragraph", "title": ""}
+{"depth": 1, "eId": "ch_VII", "number": "Chapter VII", "page": 77, "parent": "un-model-2021", "spans": [3156, 3157], "tag": "chapter", "title": "FINAL PROVISIONS"}
+{"depth": 2, "eId": "art_30", "number": "Article 30", "page": 77, "parent": "ch_VII", "spans": [3158, 3159], "tag": "article", "title": "ENTRY INTO FORCE"}
+{"depth": 3, "eId": "art_30__p1", "number": "1.", "page": 77, "parent": "art_30", "spans": [3160, 3163], "tag": "paragraph", "title": ""}
+{"depth": 3, "eId": "art_30__p2", "number": "2.", "page": 77, "parent": "art_30", "spans": [3164, 3166], "tag": "paragraph", "title": ""}
+{"depth": 4, "eId": "art_30__p2__pa", "number": "(a)", "page": 77, "parent": "art_30__p2", "spans": [3167, 3169], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_30__p2__pb", "number": "(b)", "page": 77, "parent": "art_30__p2", "spans": [3170, 3172], "tag": "point", "title": ""}
+{"depth": 2, "eId": "art_31", "number": "Article 31", "page": 77, "parent": "ch_VII", "spans": [3173, 3174], "tag": "article", "title": "TERMINATION"}
+{"depth": 3, "eId": "art_31__a34", "number": "", "page": 77, "parent": "art_31", "spans": [3175, 3179], "tag": "alinea", "title": ""}
+{"depth": 3, "eId": "art_31__pa", "number": "(a)", "page": 77, "parent": "art_31", "spans": [3180, 3182], "tag": "point", "title": ""}
+{"depth": 3, "eId": "art_31__pb", "number": "(b)", "page": 77, "parent": "art_31", "spans": [3183, 3185], "tag": "point", "title": ""}
+{"depth": 4, "eId": "art_31__pb__a35", "number": "", "page": 77, "parent": "art_31__pb", "spans": [3186, 3186], "tag": "alinea", "title": ""}
+{"depth": 4, "eId": "art_31__pb__a36", "number": "", "page": 77, "parent": "art_31__pb", "spans": [3187, 3190], "tag": "alinea", "title": ""}
+{"depth": 1, "eId": "un-model-2021__part_two", "number": "", "page": 79, "parent": "un-model-2021", "spans": [3192, 3192], "tag": "document_boundary", "title": "Part Two"}

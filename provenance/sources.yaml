@@ -1,0 +1,247 @@
+# The register of every input this project reads.
+#
+# Invariant F11: every source has a URL, a SHA-256, a retrieval date and a
+# verified, dated rights note, and nothing is silently absent from the register.
+# `tests/test_invariants.py::test_f11_*` reads this file; `harness/report.py`
+# never copies a number out of it by hand.
+#
+# The PDFs themselves are NOT redistributed. They are fetched, hashed and
+# ignored by git (`.gitignore`), which is why the hash, not the file, is the
+# contract. `sha256` is the hash of the exact bytes the extraction was run on.
+#
+# Every hash below was verified with `shasum -a 256` on 2026-09-27, against the
+# same bytes the audit was performed on.
+#
+# rights.status:  public_domain | open_licence | licence_with_conditions | unknown
+# rights.redistribute: whether the PDF may be committed to this repository.
+#
+# produces: what the pipeline builds FROM this source. It is declared here, next
+#   to the hash of the bytes it is built from, because "what is this source for"
+#   is a property of the register and not of the code that happens to read it.
+#   `tests/test_invariants.py::test_f07_build_is_byte_identical` builds exactly
+#   what is declared here and fails when a source declares an artefact it cannot
+#   produce; `harness/report.py` prints the same declaration, so a source whose
+#   artefact is not built yet is a line in the status report rather than an
+#   absence somebody has to notice.
+#
+#
+# `artefact`: where in `corpora/` that thing is, so that "is it there" is a
+#   lookup and not a derivation - the register knows the path, and no reader has
+#   to reconstruct it from the id.
+#
+#     akn    corpora/<family>/<edition>/ - the span ledger, the node index, the
+#            AKN document, its manifest and the markdown views
+#     table  one JSON document: the source is a table, and its corpus artefact
+#            is the table's data rather than a marked-up document
+#     positions  one JSON document per jurisdiction, under positions/: the
+#            source is a country's position, which is prose and table together
+#     mapping  one JSON document: the source is the Convention, and its
+#            artefact is the index of what each Article does to a treaty
+#     none   the register declares that no corpus artefact is built from this
+#            source yet, with the reason, and F7 compares the one artefact the
+#            pipeline does produce for it: the reading, which is what F2 and F6
+#            are answered from.
+
+- id: un-model-2017
+  produces: akn
+  artefact: corpora/un-model/2017/
+  title: >-
+    United Nations Model Double Taxation Convention between Developed and
+    Developing Countries (2017 edition)
+  publisher: United Nations
+  url: https://www.un.org/esa/ffd/wp-content/uploads/2018/05/MDT_2017.pdf
+  file: sources/un-model-2017.pdf
+  sha256: 323c8d8abf3bc6482d4115e0cee1d891c9a55ccc3e64ae25c601b3cf5c8696f8
+  size_bytes: 4869235
+  pages: 828
+  retrieved: 2026-09-20
+  rights:
+    status: licence_with_conditions
+    redistribute: false
+    basis: >-
+      United Nations publication with no per-document copyright notice. The UN
+      text-and-data-mining assertion permits reproduction of content for
+      non-commercial use with attribution.
+    attribution: "United Nations, UN Model Double Taxation Convention (2017)"
+    verified_on: 2026-09-27
+
+- id: un-model-2021
+  produces: akn
+  artefact: corpora/un-model/2021/
+  title: >-
+    United Nations Model Double Taxation Convention between Developed and
+    Developing Countries (2021 edition)
+  publisher: United Nations
+  url: https://financing.desa.un.org/sites/default/files/2023-05/UN%20Model_2021.pdf
+  file: sources/un-model-2021.pdf
+  sha256: 9c456d1dd45b6b4dbcd63c4bbe56b5e794e9b8ccf17d3900b9896fd8856d20e6
+  size_bytes: 5554240
+  pages: 933
+  retrieved: 2026-09-20
+  rights:
+    status: licence_with_conditions
+    redistribute: false
+    basis: >-
+      Copyright United Nations 2021, all rights reserved
+      (Sales No. E.21.XVI.1). The UN text-and-data-mining assertion permits
+      reproduction of content for non-commercial use with attribution.
+    attribution: "United Nations, UN Model Double Taxation Convention (2021)"
+    verified_on: 2026-09-27
+
+- id: mli-signatories-and-parties
+  produces: table
+  artefact: corpora/mli/signatories-and-parties.json
+  title: Signatories and Parties to the Multilateral Instrument
+  publisher: OECD
+  url: >-
+    https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/beps-mli/beps-mli-signatories-and-parties.pdf
+  file: sources/mli-signatories-and-parties.pdf
+  sha256: 522f7a9c9b93ec9570dbe68a5e62dea5232a6ffe72d23dc67d6408987fc6c60a
+  size_bytes: 298484
+  retrieved: 2026-09-15
+  status_as_of: 2026-09-15
+  rights:
+    status: licence_with_conditions
+    redistribute: false
+    basis: >-
+      OECD Terms and Conditions (updated 1 July 2024): written content may be
+      used, copied, adapted and distributed with citation; adaptations must
+      carry a disclaimer.
+    attribution: "OECD, Signatories and Parties to the MLI, 2026"
+    verified_on: 2026-09-27
+
+- id: mli-convention-2016
+  produces: mapping
+  artefact: corpora/mli/mapping.json
+  title: >-
+    Multilateral Convention to Implement Tax Treaty Related Measures to Prevent
+    BEPS (consolidated text)
+  publisher: OECD
+  url: >-
+    https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/beps-mli/multilateral-convention-to-implement-tax-treaty-related-measures-to-prevent-beps.pdf
+  file: sources/mli-convention-2016.pdf
+  sha256: f863f260005376b11f4677b60d6e5b51ac2947e582d2defc26170db42020c691
+  size_bytes: 282870
+  pages: 49
+  retrieved: 2026-09-26
+  rights:
+    status: licence_with_conditions
+    redistribute: false
+    basis: >-
+      OECD publication. Kept locally to verify article titles and their
+      numbering in the mapping; used for verification only.
+    attribution: "OECD, Multilateral Instrument (2016)"
+    verified_on: 2026-09-27
+
+# One entry for a whole family of documents that share a URL pattern: the
+# publisher ships one position per jurisdiction, they are all laid out the same
+# way, and 110 entries saying so would be a register nobody reads. The per-file
+# hashes live in `manifest`, which is exactly as binding as an inline hash and is
+# verified the same way (F11); keeping them out of this file keeps the register
+# readable without making any byte uncheckable.
+#
+# The dir and its manifest are also the completeness contract: a document in
+# `dir` that is not in `manifest` is a file nobody hashed, and a line in
+# `manifest` whose file is not in `dir` is a hash of nothing.
+- id: mli-positions-batch
+  produces: positions
+  artefact: corpora/mli/positions/
+  title: MLI positions - one PDF per jurisdiction
+  publisher: OECD
+  url_pattern: >-
+    https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/beps-mli/beps-mli-position-{slug}.pdf
+  dir: sources/mli-positions
+  manifest: provenance/mli-positions.sha256
+  retrieved: 2026-09-26
+  note: >-
+    Read in one pass, which writes one position per document that could be read
+    (corpora/mli/positions/<slug>.json) and the family's own account of itself
+    (corpora/mli/positions/batch-report.json): how many documents the directory
+    declares, which were read, which were not and why. A document that cannot be
+    read from its bytes is in that report with the reader's reason instead of
+    being published as a position about a jurisdiction that notified nothing.
+    The four positions this project's audit named - Italy, Germany, Czechia, and
+    Czechia's additional notifications - are documents of this family like the
+    rest, read here and published under the slugs their own titles give.
+  rights:
+    status: licence_with_conditions
+    redistribute: false
+    basis: OECD Terms and Conditions; used with citation.
+    attribution: "OECD, MLI positions"
+    verified_on: 2026-09-27
+
+# Two documents of the family are also at the root of `sources/`, byte for byte:
+# the pair the pipeline was first run on, before the family was fetched. They are
+# declared so that nothing in `sources/` is unregistered (F11), and they are
+# declared as building nothing, because building the same position twice from the
+# same bytes would produce two artefacts whose only difference is which register
+# entry names their source.
+- id: mli-position-italy
+  produces: none
+  produces_pending: >-
+    Nothing, and by design: these bytes are the document
+    sources/mli-positions/mli-position-italy.pdf, whose sha256 is the same, and
+    the family source `mli-positions-batch` reads it there. What is published
+    from these bytes is corpora/mli/positions/italy.json. The copy is registered
+    so that no file in `sources/` is unregistered.
+  title: MLI position - Italy (copy of the family's document)
+  publisher: OECD
+  url: >-
+    https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/beps-mli/beps-mli-position-italy.pdf
+  file: sources/mli-position-italy.pdf
+  sha256: 99c8893d20e8312b020ca50b177ff173f2a83007af6d82c1febf0f0a2222ada9
+  size_bytes: 490573
+  retrieved: 2026-09-26
+  rights:
+    status: licence_with_conditions
+    redistribute: false
+    basis: OECD Terms and Conditions; used with citation.
+    attribution: "OECD, MLI Position - Italy"
+    verified_on: 2026-09-27
+
+- id: mli-position-germany
+  produces: none
+  produces_pending: >-
+    Nothing, and by design: these bytes are the document
+    sources/mli-positions/mli-position-germany.pdf, whose sha256 is the same, and
+    the family source `mli-positions-batch` reads it there. What is published
+    from these bytes is corpora/mli/positions/germany.json. The copy is
+    registered so that no file in `sources/` is unregistered.
+  title: MLI position - Germany (copy of the family's document)
+  publisher: OECD
+  url: >-
+    https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/beps-mli/beps-mli-position-germany.pdf
+  file: sources/mli-position-germany.pdf
+  sha256: 16756175b3cc3743f86654ebe37b07aa519050563ca0b82b4ed4ca25f8531789
+  size_bytes: 644662
+  retrieved: 2026-09-26
+  rights:
+    status: licence_with_conditions
+    redistribute: false
+    basis: OECD Terms and Conditions; used with citation.
+    attribution: "OECD, MLI Position - Germany"
+    verified_on: 2026-09-27
+
+- id: akn-xsd
+  produces: none
+  produces_pending: >-
+    Nothing is built from the schema; it is vendored and validated against
+    (invariant F7's strongest form, not yet possible: the vendor/ directory and
+    lxml are both absent).
+  title: Akoma Ntoso 3.0 schema
+  publisher: OASIS legaldocml TC Open Repository
+  url: https://github.com/oasis-open/legaldocml-akomantoso
+  files:
+    - vendor/akn/akomantoso30.xsd
+    - vendor/akn/xml.xsd
+  sha256: pending
+  hash_note: >-
+    Third-party schema, vendored verbatim and validated against, not extracted
+    from. Its hash is recorded when the vendored copy is added.
+  retrieved: 2026-09-26
+  rights:
+    status: open_licence
+    redistribute: true
+    basis: OASIS TC Open Repository; validation only.
+    attribution: "OASIS legaldocml TC, Akoma Ntoso 3.0"
+    verified_on: 2026-09-27

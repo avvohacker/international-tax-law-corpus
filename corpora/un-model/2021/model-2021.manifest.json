@@ -1,0 +1,37 @@
+{
+  "akn": "model-2021.akn.xml",
+  "akn_sha256": "4cd4847be909a6c2d6e66c5f5264834a636d262e2bc24e4c9dd269f48d0d6889",
+  "edition": "2021",
+  "family": "un-model",
+  "format": "akn manifest v1",
+  "ledger": "model-2021.spans.jsonl",
+  "ledger_sha256": "c33ed8b37a6665b22b8190339ce5db85e9ab2358724e408f7464aa8fb79ed008",
+  "missing": [
+    {
+      "id": "un-model-2021__front_matter",
+      "reason": "the book's own matter (cover, contents, foreword, introduction): 817 span(s) dropped by R-FRONT-MATTER, before the instrument begins"
+    },
+    {
+      "id": "un-model-2021__commentaries",
+      "reason": "Part Two, the Commentaries: 38524 span(s) dropped by R-COMMENTARY as a separate document, after the boundary on page 79"
+    }
+  ],
+  "nodes": "model-2021.nodes.jsonl",
+  "source": "un-model-2021",
+  "source_file": "sources/un-model-2021.pdf",
+  "source_pages": 933,
+  "source_sha256": "9c456d1dd45b6b4dbcd63c4bbe56b5e794e9b8ccf17d3900b9896fd8856d20e6",
+  "source_url": "https://financing.desa.un.org/sites/default/files/2023-05/UN%20Model_2021.pdf",
+  "units": {
+    "alinea": 31,
+    "article": 34,
+    "authorialNote": 5,
+    "chapter": 7,
+    "hcontainer": 7,
+    "list": 53,
+    "paragraph": 153,
+    "point": 156,
+    "preamble": 1,
+    "preface": 1
+  }
+}

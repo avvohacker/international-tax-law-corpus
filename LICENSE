@@ -1,0 +1,49 @@
+PROPRIETARY - ALL RIGHTS RESERVED
+
+Copyright (c) 2026 avvohacker - international-tax-law-corpus
+All rights reserved.
+
+This repository is PUBLIC and source-visible: anyone may read it on GitHub.
+No permission is hereby granted to any person to use, copy, modify, merge,
+publish, distribute, sublicense, sell, or create derivative works from this
+repository - including its specification, pipeline code, derived corpora
+(corpora/, derived/), documentation, configuration, and any other file -
+except with prior explicit written permission from the copyright holder.
+Contact via GitHub before any reuse beyond reading. The owner has stated
+ownership here; any reuse without permission is unauthorised.
+
+Text-and-data mining and AI/ML training rights over the original contributions
+in this repository are expressly reserved, including generative training. No
+text-and-data mining, scraping for model training, or inclusion in training
+datasets is permitted without prior explicit written permission. Contact via
+GitHub to request permission.
+
+Pre-existing third-party rights are NOT affected and remain with their holders;
+this LICENSE governs only the original contributions of this repository and does
+not grant, nor claim to grant, rights over the third-party source texts:
+
+  * UN Model Double Taxation Convention (2017 edition): United Nations
+    publication. No copyright notice in the document. Structured derivatives
+    (AKN, markdown, search index) are reproduced for text-and-data-mining with
+    attribution ("Source: United Nations, UN Model Double Taxation Convention
+    2017") and do NOT replace the official UN text. The source PDF is never
+    redistributed - fetch and hash only.
+
+  * UN Model Double Taxation Convention (2021 edition): Copyright (C)
+    United Nations 2021, all rights reserved (Sales No. E.21.XVI.1). The UN
+    text-and-data-mining terms allow reproduction for non-commercial TDM with
+    attribution only; the PDF itself is never redistributed.
+
+  * Multilateral Instrument (consolidated text), Signatories and Parties, and
+    the country position documents: OECD material. No per-document copyright
+    notice. Under the OECD Terms & Conditions (updated 1 July 2024) written
+    content may be used, copied, adapted and distributed for commercial and
+    non-commercial purposes with citation [OECD (year), Title, URL] and the
+    adaptation disclaimer when adapting; content published after 1 July 2024 is
+    CC BY 4.0. Structured extraction is provided with full attribution and a link
+    to the original. The source PDFs are fetched locally and not redistributed.
+
+  * Akoma Ntoso 3.0 XSD and related schemas: (c) OASIS Open, TC Open Repository -
+    used solely for validation (vendor/akn/).
+
+THE REPOSITORY IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

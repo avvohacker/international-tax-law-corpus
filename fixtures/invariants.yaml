@@ -1,0 +1,311 @@
+# Fidelity invariants — machine-readable source of truth.
+#
+# SPEC.md is the human explanation; this file is what the harness checks.
+# Rule: an invariant that no test enforces is not an invariant. Every entry must
+# declare `enforced_by` (test function names and/or "known_defects"), and the
+# meta-test tests/test_spec_is_executable.py fails if that reference is broken.
+#
+# `scope` says where the invariant is evaluated:
+#   project  = the repository's own artefacts (code, docs, reports)
+#   corpus   = the extracted legal data
+#   sources  = the hashed input PDFs and their register
+
+- id: F1
+  name: Completeness
+  statement: >
+    Every unit count in the corpus equals the count in the source, and every
+    unit that is not extracted appears in an explicit `missing` list with a
+    reason. Silence is never a valid outcome.
+  scope: corpus
+  enforced_by: [test_f01_completeness_counts, known_defects]
+
+- id: F2
+  name: No insertion
+  statement: >
+    No character in the corpus is foreign to the source spans it derives from.
+    Apparatus (running headers, page numbers, chapter titles, footnote marks)
+    never enters the body.
+  scope: corpus
+  enforced_by: [test_f02_no_insertion, known_defects]
+
+- id: F3
+  name: No deletion
+  statement: >
+    No body token of the source is absent from the corpus, except through a
+    declared and logged typographic transform (dehyphenation, line joining).
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: F4
+  name: Faithful structure
+  statement: >
+    The corpus hierarchy reflects the source hierarchy. Structural distinctions
+    of the source (e.g. "Alternative A / B") are nodes with labels, never free
+    text inside a paragraph.
+  scope: corpus
+  enforced_by: [test_f04_structure_is_nodes_not_text, known_defects]
+
+- id: F5
+  name: Apparatus separation
+  statement: >
+    Body and apparatus never touch: footnotes are anchored `note` nodes, and
+    running headers, page numbers and chapter titles do not exist in the body -
+    not at the head, not at the tail, and not mid-sentence.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: F6
+  name: Traceability
+  statement: >
+    Every leaf unit carries provenance: source id and hash, page, and the span
+    range it was built from.
+  scope: corpus
+  enforced_by: [test_f06_every_leaf_has_provenance]
+
+- id: F7
+  name: Determinism
+  statement: >
+    The same source with the same code produces the same bytes, for every
+    artefact, including generated ones. No generated artefact is tracked in git.
+  scope: project
+  enforced_by: [test_f07_no_generated_artifacts_tracked,
+                test_f07_every_source_declares_what_is_built_from_it,
+                test_f07_build_is_byte_identical]
+
+- id: F8
+  name: Never fake
+  statement: >
+    When a datum is absent, unreadable or unclassifiable, the value is
+    `unknown`/`unclassified` with a reason - never a plausible invented value,
+    and never a silent truncation.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: F9
+  name: View consistency
+  statement: >
+    The XML, JSON, markdown and SQLite views are generated from one structure
+    and never diverge, in content or in counts; a report of two editions is a
+    view of the corpus and not a second reading of the sources, so every change
+    it shows is one the corpus holds and every change the corpus holds is one it
+    shows.
+  scope: corpus
+  enforced_by: [test_f09_diff_report_is_a_view_of_the_corpus, known_defects]
+
+- id: F10
+  name: Resolvable identity
+  statement: >
+    Every slug/id resolves to exactly one object; related artefacts (addenda,
+    instrument variants) are reachable from their base object.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: F11
+  name: Source provenance
+  statement: >
+    Every source has URL, SHA-256, date and a verified, dated rights note. The
+    register is complete: no source is silently absent from it.
+  scope: sources
+  enforced_by: [test_f11_manifest_is_complete, test_f11_hashes_match_if_present]
+
+- id: F12
+  name: Claim honesty
+  statement: >
+    Every number or assertion in README/docs is produced by a command or by a
+    committed document; nothing is hand-copied, and no verification is claimed
+    without the artefact that proves it.
+  scope: project
+  enforced_by: [known_defects]
+
+- id: F13
+  name: Single language (English)
+  statement: >
+    Everything belonging to the project is in English: code, comments,
+    docstrings, test names, printed messages, machine-readable reports,
+    documents and commit messages. The corpus is exempt: it is source data and
+    is multilingual by nature (a country's MLI position is published in its own
+    language and must stay faithful to it).
+  scope: project
+  enforced_by: [test_f13_no_italian_in_project_artifacts]
+
+- id: F14
+  name: No environment leakage
+  statement: >
+    No artefact contains absolute local paths, user or machine names, or any
+    other trace of the environment it was produced in.
+  scope: project
+  enforced_by: [test_f14_no_local_paths_in_artifacts, known_defects]
+
+- id: U1
+  name: UN Model article set
+  statement: >
+    The set and order of articles is exactly the source's (2017 and 2021 as
+    published), verified against the table of contents.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: U2
+  name: Alternatives are structure
+  statement: >
+    Where the source offers alternatives (arts. 8, 18, 25 in both editions),
+    each alternative is a labelled node and its paragraphs are never confused
+    with the other alternative's.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: U3
+  name: Body, commentary and apparatus are disjoint
+  statement: >
+    The Convention text, the Commentary and the page apparatus are three
+    disjoint sets; the boundary with "Part Two / COMMENTARIES" is inviolable.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: U4
+  name: No broken words
+  statement: >
+    A word hyphenated across a line break never becomes two tokens, and a
+    legitimate internal hyphen ("day-to-day") is never joined away.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: S1
+  name: Signatories row completeness
+  statement: >
+    The number of extracted rows equals the number of numbered rows in the
+    source, across every page including the first, with no gap in the sequence.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: S2
+  name: Clean signatories fields
+  statement: >
+    No date, footnote mark or page artefact appears inside a jurisdiction name.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: S3
+  name: Status is dated
+  statement: >
+    `status_as_of` is the source's own date, and a stale snapshot is declared
+    as stale.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: P1
+  name: No silent truncation
+  statement: >
+    Extracted text is complete, or explicitly marked as truncated with a
+    reason.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: P2
+  name: Covered-agreements tables
+  statement: >
+    The "covered agreements" table is parsed into structured fields, or
+    declared not-parsed with a reason. An empty field is never silent.
+  scope: corpus
+  enforced_by: [known_defects, test_d25_azerbaijan_footer_band_probe_fires_on_lost_rows,
+                test_d26_kuwait_packed_date_probe_fires_on_packed_signature]
+
+- id: P3
+  name: Option classification budget
+  statement: >
+    Every option carries a kind in {Reservation, Notification, Choice,
+    unclassified}; unclassified options are counted, listed and justified by
+    language, and stay under 2% of the total.
+  scope: corpus
+  enforced_by: [known_defects]
+
+- id: P4
+  name: Canonical slugs
+  statement: >
+    One canonical slug per jurisdiction; addenda and instrument variants are
+    linked to their base object; the country name is never empty; and every
+    jurisdiction the corpus' own signatories table names is a published position
+    or a document the position family declares unread, with the reader's reason.
+  scope: corpus
+  enforced_by: [known_defects, test_p04_the_positions_cover_every_jurisdiction]
+
+- id: P5
+  name: Title cells match printed numbers
+  statement: >
+    In every readable position's covered-agreements table, each printed number
+    the number column holds opens exactly one row in the selected reader. The
+    legacy title-cell reader must not put multiple printed numbers in one cell;
+    where its measured cells disagree with the page, that position is either
+    read by the verified block reader or declared as a legacy exception. The
+    four small footer row numbers in China are admitted only by a source-specific
+    rule and each recovered row is checked for its counterparty, title and dates.
+    A printed number is never silently lost. In the signatories table, where a
+    line is placed relative to the numbers around it is decided by a window that
+    is declared and by a row-pitch tolerance the reader measures from the table's
+    own line step and row pitch rather than declares; the value the corpus
+    publishes for that tolerance is compared against the measurement, and the
+    interval the table's own printed lines leave for the window is measured too
+    and published as `qa.row_attach_band_pt`, the declared window having to sit
+    inside a gap the page prints nothing in. The covered-agreements readers
+    attach in two ways and declare the two apart: the number-first window, whose
+    band is measured on the layouts that place a span by the numbers around them,
+    and the block reader's prefix reach, whose band is measured on the promoted
+    layouts - disjoint halves of the corpus - with each declared value held
+    inside its own band and each tolerance also walked on its own half, the
+    reading asked away from the declared value until the rows move. The window's
+    walk is the tighter record of its upper edge and the data says why: its band
+    is an intersection over the layouts that leave both sides of the decision
+    open, and the layout that sets that edge left one side empty and so reports
+    no band, while the window's lower edge is the page's deepest lead-in in both
+    records. Each reading publishes the interval it measured on its own layout as
+    `qa.covered_agreements.row_attach_band_pt` - empty where it asks the
+    tolerance nowhere - so the drift control names a run moved into one of these
+    gaps instead of leaving it to the invariants. The same interval is printed in
+    the position's derived markdown view, beside the rows it decided, with an
+    empty interval said in words rather than drawn as `[]`, and the view control
+    reads the tolerance and both edges back out of that line and holds them
+    against the artefact's own `row_attach_pt` and `row_attach_band_pt` - so the
+    band is read where the rows are read and cannot move in the view alone. The
+    signatories table's view carries the same line with its own reader named,
+    read back against the same two fields. The family's own report carries every
+    layout's band at once, with nulls where a layout publishes no tolerance, and
+    per tolerance the layouts that set the two edges of the global intersection
+    - so the intersection is readable without re-reading the sources, and the
+    report is held against the artefacts. No
+    declared tolerance may hide
+    a second role: a module-level constant computed from one, or a call passing
+    one's number where the call takes a tolerance, fails by name, which is the
+    shape that made the two attach tolerances share a band; a default holding
+    one's number for a different role is reported by
+    `.verify/probe_constant_roles.py` for a reader to decide.
+  scope: corpus
+  enforced_by: [test_p05_title_cells_hold_each_printed_number_once,
+                test_p05_a_number_inside_the_heading_is_justified_by_the_page,
+                test_p05_the_block_reader_tolerances_stay_inside_the_band_the_pages_allow,
+                test_p05_the_declared_tolerances_stay_inside_the_band_the_sources_allow,
+                test_p05_the_attach_window_sits_inside_the_band_the_page_prints,
+                test_p05_the_attach_tolerances_sit_inside_the_bands_their_pages_leave,
+                test_p05_the_published_tolerances_are_the_ones_the_reader_uses,
+                test_p05_no_declared_tolerance_hides_a_second_role,
+                test_p05_a_tolerance_the_sources_never_read_is_held_by_its_published_value]
+
+- id: M1
+  name: Mapping verified against the source
+  statement: >
+    Every row's Article number and title is read from the official Convention
+    PDF and looked up again in the source's own spans by the test, so the corpus
+    cannot hold a title the Convention does not print; every target names an
+    Article of the base text this corpus holds; the Articles declared to take no
+    option are absent from every position document; and if the source hash
+    changes, the test fails explicitly.
+  scope: corpus
+  enforced_by: [test_m1_every_title_is_the_sources_title,
+                test_m1_targets_are_articles_of_the_base_text,
+                test_m1_articles_without_options_are_absent_from_the_positions]
+
+- id: M2
+  name: The engine never fakes
+  statement: >
+    Missing base text, unreliable positions and unclassifiable language all
+    produce `unknown`, never a plausible answer.
+  scope: corpus
+  enforced_by: [known_defects]

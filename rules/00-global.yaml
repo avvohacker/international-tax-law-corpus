@@ -1,0 +1,326 @@
+# Classification rules, global layer.
+#
+# These are the rules the classifier reads, and the reason a span was dropped is
+# always a rule id from here - never a comment in a source file. `spans.jsonl`
+# records, for every span in every page, a decision and the rule that made it.
+#
+# Why rules and not heuristics: the previous pipeline decided what to keep by
+# looking at the text (font size, line shape, regexes in Python) and then checked
+# the result with form gates. A running header that looked like a sentence
+# entered the body of article 24 and no gate saw it (d01). A rule declared here
+# can be read, argued with, and counted.
+#
+# ORDER IS MEANING. Rules are evaluated top to bottom, per line, and the first
+# match wins. Nothing is a "default": the last span rule of every source is an
+# explicit catch-all that *drops* what no other rule claims, so that `unknown`
+# can never quietly become `body`.
+#
+# `kind`:
+#   span         a rule the classifier evaluates for every line (the default)
+#   policy       a standing decision about the pipeline, not about a line
+#   declaration  a statement of how something is measured, kept for the reader
+#
+# `decision`:
+#   keep         part of the corpus body
+#   drop         apparatus: never reaches the corpus, listed with this rule id
+#   structural   opens a node in the hierarchy (chapter, article, paragraph...)
+#   transform    kept, and its text rewritten; the rewrite is a ledger entry
+#
+# `when` vocabulary (implemented in harness/ledger.py, SUPPORTED):
+#   band                        header | footer | note | body - measured geometry
+#   shape                       prose | table | mixed - what kind of page this
+#                               document has (R-SOURCE-SHAPE). The rules that
+#                               read a band are statements about a prose page and
+#                               say so; a table's top is a row of the table.
+#   region                      front_matter | body | commentary
+#   text_matches                regex, searched      (on whitespace-collapsed text)
+#   text_fullmatch              regex, anchored      (on whitespace-collapsed text)
+#   font_pt / font_min_pt / font_max_pt
+#   x0_min_pt                   left edge at least this far from the margin
+#                               (what separates a centred heading from a
+#                               table-of-contents entry at the left margin)
+#   line_ends_with_hyphen       the line ends in "-" or a soft hyphen
+#   next_line_starts_lowercase  the next line on the same page starts lowercase
+#   follows                     the previous line was decided by this rule id
+#   always                      true / false
+#   all_of / any_of / not       composites over the same vocabulary
+
+- id: R-LINE-BUILD
+  kind: declaration
+  decision: structural
+  applies_to: ["*"]
+  params:
+    max_gap_pt: 25.0
+    y_tol_pt: 2.5
+    space_gap_pt: 2.0
+  rationale: >-
+    How a printed line is rebuilt from the positioned spans of a page, in
+    numbers measured from the document rather than chosen. The PDF has no lines,
+    only spans, and PyMuPDF splits a tab-indented marker into a line of its own:
+    paragraph 1 of article 1 arrives as "1.\t" at x = 59 and the sentence at
+    x = 90. A rule matching "^(\d{1,2}\.) " never sees that marker, so the
+    Convention's paragraphs were not paragraphs - they were body text with a
+    marker glued to the front of the sentence (measured: 262 lines open with a
+    marker before this rule, 1776 after). Inside a printed line consecutive
+    spans sit 0.0pt apart; a tab column starts 11-21pt to the right; printed
+    lines are 13pt apart vertically. A source laid out in table cells declares
+    its own policy: for a table, two cells of one row must stay two spans.
+    space_gap_pt answers a different question - which spans of one line must be
+    read with a space between them. The spans of a font run are contiguous: on
+    the 2017 Convention the gaps inside a run reach 1.7pt (383 pairs wider than
+    0.5pt, an italic letter leaning into the roman bracket beside it) and a
+    marker in a tab column stands 2.4pt or more away, so 2.0pt is the measured
+    knee between "these characters touch" and "the printer left a space".
+    Without it the corpus read article 29's "(2) with respect to an item of
+    income" as "(2)with respect to an item of income" - a word nothing printed.
+  when:
+    derived_from: span_geometry
+  prevents: [d04, d05, d13]
+
+- id: R-SOURCE-SHAPE
+  kind: declaration
+  decision: structural
+  applies_to: ["*"]
+  params:
+    shape: prose
+  rationale: >-
+    What kind of page this document has, so that a rule reading a band knows
+    which claim it is making. `prose` is a page whose top is a running header and
+    whose foot is a page number - the shape every source in this repository had
+    until the OECD material arrived - and this declaration is what makes that an
+    assumption a source can correct rather than one baked into the classifier.
+
+    The correction is not cosmetic. Measured on the OECD signatories table, 8
+    short lines repeat at y = 502 on 4 of the 6 pages - table rows that align by
+    accident - and the footer band taken from them begins at y = 500, halfway up
+    a table whose rows run to y = 760; on the country positions, whose
+    covered-agreements tables resume at the top of every page, the header band
+    holds table rows ("Bangladesh Original", "6 Convention between the",
+    "20-03-1990 07-07-1996" on page 2 of Italy's). A band rule applied there does
+    not nearly work: it deletes the data the corpus is for.
+  when:
+    derived_from: page_layout
+  prevents: [d16, d17, d21]
+
+- id: R-MARKER-COLUMN
+  kind: declaration
+  decision: structural
+  applies_to: ["*"]
+  params:
+    x_tol_pt: 6.0
+  rationale: >-
+    How far apart two paragraph markers may stand and still be one column, in a
+    number measured from the document. A marker's depth is the rank of the
+    column it is printed in: 1 is the outermost. The shape of the marker cannot
+    give the depth, because a list of definitions that runs (a), (b), ..., (i),
+    (j) prints its ninth item "(i)" - the glyphs of the roman numeral that opens
+    a nested list, one column further right. Measured for the 2017 Model, the
+    columns are x = 59.7 ("1.", "4.1"), 71.7 ("(a)"), 92.4 ("(i)") and 112.5
+    ("(A)"); the 2021 edition adds a fifth at x = 131.7 ("(I)"). The closest
+    pair is 11.5pt apart, and the roman column is right-aligned - "(ii)" starts
+    left of "(i)" - so a column is a cluster with this tolerance, not an
+    equality. A marker printed in no measured column raises RuleError: a depth
+    nobody declared is not emitted at a guessed level.
+  when:
+    derived_from: marker_span_x
+  prevents: [d13, d14]
+
+- id: R-BAND-DEFINE
+  kind: declaration
+  decision: structural
+  applies_to: ["*"]
+  params:
+    page_share: 0.30
+  rationale: >-
+    The page bands are measured from the document, not written into it. A header
+    band and a footer band are the vertical positions where lines shorter than 40
+    characters appear on most pages - for the 2017 Model, y<40 on 807 of 828
+    pages and y>590 on 809 of them, both set at 10pt while the body is 11pt. The
+    note band is the tail of a page whose lines are set smaller than the body.
+    A line is called a running header because it sits where the running headers
+    sit, page after page - not because it matches a pattern someone guessed.
+
+    `page_share` is the one number the measurement needs and the one number a
+    document may disagree about: how many pages count as "page after page". It
+    is counted in pages, not in lines, because a table's column headings are
+    several short lines at one height on one page, and counting lines lets a
+    single page's header block outvote the share on its own. The default 0.30 is
+    permissive on purpose: it is measured on the 2017 Model as 807 of 828 pages,
+    and it has to survive a running header that changes on the first page of a
+    chapter. A document whose pages are not prose declares its own share
+    (rules/20-mli.yaml, R-BAND-DEFINE-MLI-TABLE: 0.80, where the page number is
+    on 6 of 6 pages and the aligning table rows on 4 of 6).
+  when:
+    derived_from: repeated_short_lines_at_same_y
+  prevents: [d01, d02, d04, d06, d08, d12]
+
+- id: R-PAGE-NUMBER
+  decision: drop
+  applies_to: ["*"]
+  band: header_or_footer
+  rationale: >-
+    A bare number, or a bare roman numeral, in the header or footer band is a
+    page number. The front matter is numbered in roman, the body in arabic.
+
+    `shape: prose`, because both halves of the claim are about a prose page: that
+    a band is where a page number stands, and that a bare number there is not
+    data. On a table the first is false - Italy's position prints its row numbers
+    as lines of their own, and a page of that document can open with the number
+    of a covered agreement - so a document that is not prose declares its own
+    page-number rule (rules/20-mli.yaml, R-MLI-PAGE-NUMBER), which reads the one
+    band that is a page number on every one of these documents: the footer.
+  when:
+    all_of:
+      - shape: prose
+      - band: [header, footer]
+      - text_fullmatch: '^(\d{1,4}|[ivxlcdm]{1,7})$'
+  prevents: []
+
+- id: R-RUNNING-HEADER
+  decision: drop
+  applies_to: ["*"]
+  rationale: >-
+    The running header names the article, or the commentary, on the pages it
+    spans: "Article 29", "Articles 24 and 25", "Article 29 Commentary". It is
+    apparatus: it belongs to the edition's navigation, not to any article.
+    Reading it as body text is what produced "be deductible Articles 24 and 25
+    under the same conditions" (page 57) and "situated Articles 12B and 13 in
+    that other State" (2021, page 47).
+  when:
+    all_of:
+      - shape: prose
+      - band: header
+      - text_fullmatch: '^(Articles? \d{1,2}[A-Z]?((, \d{1,2}[A-Z]?)* and \d{1,2}[A-Z]?)?( Commentary)?|Introduction|Contents)$'
+  prevents: [d01, d08, d14]
+
+- id: R-HEADER-BAND
+  decision: drop
+  applies_to: ["*"]
+  rationale: >-
+    Anything else in the header band, and this rule exists because of a typo: the
+    2017 Model prints "Artilces 26 and 27" as a running header on its pages, and
+    a rule that had to name the text would have let a misspelt header through.
+    The band is the evidence - it was measured from lines that repeat at the same
+    height on hundreds of pages - and a line standing where the running headers
+    stand is a running header, spelling included. The named rule above still
+    counts the ordinary case, so the numbers stay readable.
+  when:
+    all_of:
+      - shape: prose
+      - band: header
+  prevents: [d01, d08]
+
+- id: R-CHAPTER-FOOTER
+  decision: drop
+  applies_to: ["*"]
+  rationale: >-
+    The footer of a chapter's last page points at the next articles ("Articles 6
+    and 7"). It is apparatus, and it is the text that ended up glued to the tail
+    of the preceding paragraph (d02, d06).
+  when:
+    all_of:
+      - shape: prose
+      - band: footer
+      - text_fullmatch: '^Articles? \d{1,2}[A-Z]?((, \d{1,2}[A-Z]?)* and \d{1,2}[A-Z]?)?$'
+  prevents: [d02, d03, d06, d07]
+
+- id: R-FOOTER-BAND
+  decision: drop
+  applies_to: ["*"]
+  rationale: >-
+    The same reasoning as R-HEADER-BAND, for the foot of the page: what stands
+    where the footers stand is a footer. Whatever is not a page number is listed
+    by this rule, so a footer nobody anticipated cannot appear in a sentence.
+
+    `shape: prose` for the reason given in R-BAND-DEFINE, and it is the sharper
+    half of it: this rule drops *everything* in the band. Take the signatories
+    table with the default share and the band begins at y = 500 while the table
+    runs to y = 760: this rule alone would take some ninety of the 107
+    jurisdictions and report them as apparatus - d16's loss, reproduced by a rule
+    instead of by a loop, and with a rule id to show for it.
+  when:
+    all_of:
+      - shape: prose
+      - band: footer
+  prevents: [d02, d06, d12]
+
+- id: R-NOTE-MARK
+  decision: transform
+  applies_to: ["*"]
+  transform: strip_markers_to_anchors
+  rationale: >-
+    Footnote markers are printed inline as a thin space, the number and another
+    thin space ("recognised pension fund 12 to which ..."). They are removed from
+    the body text and recorded as an anchor, so the sentence reads as the source
+    reads it and the marker is not lost: it is a ledger entry naming the note.
+
+    The band condition is load-bearing. A note line begins with its own number
+    set the same way - thin spaces around an 8pt digit, "9 The Preamble of the
+    Convention shall be..." on page 26 - so without it this rule ate the number
+    of every note, and the note read as a sentence that had lost the numeral it
+    is cited by.
+  when:
+    all_of:
+      - band: body
+      - text_matches_raw: '[\u2009\u2004]\d{1,3}[\u2009\u2004]'
+  prevents: [d09, d10]
+
+- id: R-NOTE-BAND
+  decision: structural
+  applies_to: ["*"]
+  node: note
+  rationale: >-
+    Footnote text is the tail of the page, set smaller than the body. It becomes
+    a `note` node anchored by its marker, and its text is never available to the
+    body flow. Without this rule a footnote span passes every boilerplate filter
+    and lands inside a sentence: "at least 50 per 12 As to incorporation of such
+    a definition ... cent of the aggregate vote" (2017, article 29, page 66).
+    The region condition keeps this to the Convention: the notes of the
+    Commentaries belong to the Commentaries, which are dropped as a unit, and a
+    note kept from a dropped section would be text surviving its own document.
+  when:
+    all_of:
+      - band: note
+      - region: body
+  prevents: [d09, d10]
+
+- id: R-HYPHEN-JOIN
+  decision: transform
+  applies_to: ["*"]
+  transform: join_hyphenated_line
+  params:
+    soft_hyphen_share_min: 0.5
+  rationale: >-
+    A line ending in a hyphen or a soft hyphen, followed by a line starting
+    lowercase, is one word broken across two lines ("personal allow/ances",
+    "subdivi/sions"). The two halves are joined and the join is declared, so the
+    ledger shows it instead of hiding it. A hyphen inside a line ("day-to-day")
+    is never touched by this rule - but a hyphen at the *end* of a line is, and
+    that is where the two editions differ. Measured over the Convention: the
+    2017 Model marks 199 of its 200 line-ending marks with the soft hyphen, the
+    2021 Model only 1 of 206 (and prints the other 205 as a plain "-"). So the
+    document is asked which mark it hyphenates with (`soft_hyphen_share_min` is
+    the threshold on that share), and the answer decides whether a plain "-" at
+    the end of a line is a break to remove or a hyphen the word already had.
+    Without the measurement the corpus read the 2017 sentence "more of the
+    day-to-day activities" as "more of the day-today activities": stripping the
+    hyphen of a compound, which is a word in no edition.
+  when:
+    all_of:
+      - line_ends_with_hyphen: true
+      - next_line_starts_lowercase: true
+  prevents: [d15]
+
+- id: R-NO-TRUNCATE
+  kind: policy
+  decision: transform
+  applies_to: ["*"]
+  transform: never_truncate
+  rationale: >-
+    Extracted text is never sliced to fit a field. If a view wants a shorter
+    form, the view generates it from the full text. A hard slice is a silent
+    deletion of source text: the previous corpus had 491 excerpts ending exactly
+    at 1200 characters, cut mid-word, none of them flagged.
+  when:
+    always: true
+  prevents: [d19]

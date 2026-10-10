@@ -1,0 +1,26 @@
+# Input documents. Fetched, SHA-256 verified, never redistributed.
+# The contract is the hash in provenance/sources.yaml, not the file.
+sources/
+
+# Environment
+.venv/
+__pycache__/
+*.pyc
+
+# Generated search index. Rebuilt by the build; never a source of truth.
+derived/fts/
+
+# Generated reports are committed on purpose (they are the evidence of a build),
+# but are always regenerated rather than edited.
+
+# Scratch probes and replays. Never part of the published corpus.
+.verify/
+
+# OS
+.DS_Store
+.pytest_cache/
+
+# Editor / tooling metadata
+.freebuff/
+.idea/
+.vscode/

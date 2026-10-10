@@ -1,0 +1,442 @@
+{
+  "article_sections": {
+    "11": [
+      {
+        "excerpt": "Pursuant to Article 11(3)(a) of the Convention, Nigeria reserves the right for the entirety of Article 11 not to apply to its Covered Tax Agreements.",
+        "kind": "Reservation",
+        "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
+        "option_title": "",
+        "page": 11,
+        "truncated": false
+      }
+    ],
+    "17": [
+      {
+        "excerpt": "Pursuant to Article 17(3)(a) of the Convention, Nigeria reserves the right for the entirety of Article 17 not to apply to its Covered Tax Agreements that already contain a provision described in Article 17(2). The following agreements contain provisions that are within the scope of this reservation.",
+        "kind": "Reservation",
+        "mli_article_title": "Corresponding Adjustments",
+        "option_title": "",
+        "page": 17,
+        "truncated": false
+      }
+    ],
+    "35": [
+      {
+        "excerpt": "Pursuant to Article 35(3) of the Convention, solely for purposes of its own application of Article 35(1)(b) and 5(b), Nigeria hereby chooses to replace the reference to “taxable periods beginning on or after the expiration of a period” with a reference to “taxable periods beginning on or after the first day of the next calendar year beginning on or after the expiration of a period”.",
+        "kind": "Notification",
+        "mli_article_title": "Entry into Effect",
+        "option_title": "of Choice of Optional Provisions",
+        "page": 18,
+        "truncated": false
+      }
+    ],
+    "8": [
+      {
+        "excerpt": "Pursuant to Article 8(3)(a) of the Convention, Nigeria reserves the right for the entirety of Article 8 not to apply to its Covered Tax Agreements.",
+        "kind": "Reservation",
+        "mli_article_title": "Dividend Transfer Transactions",
+        "option_title": "",
+        "page": 9,
+        "truncated": false
+      }
+    ],
+    "9": [
+      {
+        "excerpt": "Pursuant to Article 9(8) of the Convention, Nigeria hereby chooses to apply Article 9(4).",
+        "kind": "Notification",
+        "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
+        "option_title": "of Choice of Optional Provisions",
+        "page": 10,
+        "truncated": false
+      },
+      {
+        "excerpt": "Pursuant to Article 9(7) of the Convention, Nigeria considers that the following agreements contain a provision described in Article 9(1). The article and paragraph number of each such provision is identified below.",
+        "kind": "Notification",
+        "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
+        "option_title": "of Existing Provisions in Listed Agreements",
+        "page": 10,
+        "truncated": false
+      }
+    ]
+  },
+  "base_slug": "",
+  "companion_suffix": "",
+  "country": "Nigeria",
+  "covered_agreements": [
+    {
+      "entry_into_force": "03-12-1994",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "03-12-1994",
+          "label": "Original",
+          "signature": "20-11-1989"
+        }
+      ],
+      "no": 1,
+      "other_jurisdiction": "Belgium",
+      "page": 1,
+      "signature": "20-11-1989",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the Kingdom of Belgium for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "16-11-1999",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "16-11-1999",
+          "label": "Original",
+          "signature": "04-08-1992"
+        }
+      ],
+      "no": 2,
+      "other_jurisdiction": "Canada",
+      "page": 1,
+      "signature": "04-08-1992",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of Canada for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "21-03-2009",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "21-03-2009",
+          "label": "Original",
+          "signature": "15-04-2002"
+        }
+      ],
+      "no": 3,
+      "other_jurisdiction": "China",
+      "page": 1,
+      "signature": "15-04-2002",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of The People’s Republic of China for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income"
+    },
+    {
+      "entry_into_force": "02-12-1990",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "02-12-1990",
+          "label": "Original",
+          "signature": "31-08-1989"
+        }
+      ],
+      "no": 4,
+      "other_jurisdiction": "Czechoslovak Socialist Republic (Czech Republic)",
+      "page": 1,
+      "signature": "31-08-1989",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the Czech Republic for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "02-12-1990",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "02-12-1990",
+          "label": "Original",
+          "signature": "31-08-1989"
+        }
+      ],
+      "no": 5,
+      "other_jurisdiction": "Czechoslovak Socialist Republic (Slovak Republic)",
+      "page": 1,
+      "signature": "31-08-1989",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the Slovak Republic for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "02-05-1991",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "02-05-1991",
+          "label": "Original",
+          "signature": "27-02-1990"
+        }
+      ],
+      "no": 6,
+      "other_jurisdiction": "France",
+      "page": 2,
+      "signature": "27-02-1990",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the French Republic for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "N/A",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "N/A",
+          "label": "Original",
+          "signature": "06-11-2006"
+        }
+      ],
+      "no": 7,
+      "other_jurisdiction": "Korea",
+      "page": 2,
+      "signature": "06-11-2006",
+      "title": "Agreement between The Federal Republic of Nigeria and The Republic of Korea for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "N/A N/A",
+      "instrument": "Original Amending Instrument (a)",
+      "instruments": [
+        {
+          "entry_into_force": "N/A",
+          "label": "Original",
+          "signature": "10-08-2012"
+        },
+        {
+          "entry_into_force": "N/A",
+          "label": "Amending",
+          "signature": "09-05-2013"
+        },
+        {
+          "label": "Instrument (a)"
+        }
+      ],
+      "no": 8,
+      "other_jurisdiction": "Mauritius",
+      "page": 2,
+      "signature": "10-08-2012 09-05-2013",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the Republic of Mauritius for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "09-12-1992",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "09-12-1992",
+          "label": "Original",
+          "signature": "11-12-1991"
+        }
+      ],
+      "no": 9,
+      "other_jurisdiction": "Netherlands",
+      "page": 2,
+      "signature": "11-12-1991",
+      "title": "Agreement between The Federal Republic of Nigeria and The Kingdom of Netherlands for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "07-03-1990",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "07-03-1990",
+          "label": "Original",
+          "signature": "10-10-1989"
+        }
+      ],
+      "no": 10,
+      "other_jurisdiction": "Pakistan",
+      "page": 2,
+      "signature": "10-10-1989",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the Islamic Republic of Pakistan for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "18-08-2013",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "18-08-2013",
+          "label": "Original",
+          "signature": "30-09-1997"
+        }
+      ],
+      "no": 11,
+      "other_jurisdiction": "Philippines",
+      "page": 2,
+      "signature": "30-09-1997",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of The Republic of the Philippines for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "N/A",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "N/A",
+          "label": "Original",
+          "signature": "28-02-2016"
+        }
+      ],
+      "no": 12,
+      "other_jurisdiction": "Qatar",
+      "page": 2,
+      "signature": "28-02-2016",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the State of Qatar for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "18-04-1993",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "18-04-1993",
+          "label": "Original",
+          "signature": "21-07-1992"
+        }
+      ],
+      "no": 13,
+      "other_jurisdiction": "Romania",
+      "page": 3,
+      "signature": "21-07-1992",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of Romania for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "N/A",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "N/A",
+          "label": "Original",
+          "signature": "02-08-2017"
+        }
+      ],
+      "no": 14,
+      "other_jurisdiction": "Singapore",
+      "page": 3,
+      "signature": "02-08-2017",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the Republic of Singapore for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "05-07-2008",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "05-07-2008",
+          "label": "Original",
+          "signature": "29-04-2000"
+        }
+      ],
+      "no": 15,
+      "other_jurisdiction": "South Africa",
+      "page": 3,
+      "signature": "29-04-2000",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of The Republic of South Africa for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "N/A",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "N/A",
+          "label": "Original",
+          "signature": "23-06-2009"
+        }
+      ],
+      "no": 16,
+      "other_jurisdiction": "Spain",
+      "page": 3,
+      "signature": "23-06-2009",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the Kingdom of Spain for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "N/A",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "N/A",
+          "label": "Original",
+          "signature": "18-11-2004"
+        }
+      ],
+      "no": 17,
+      "other_jurisdiction": "Sweden",
+      "page": 3,
+      "signature": "18-11-2004",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the Republic of Sweden for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "N/A",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "N/A",
+          "label": "Original",
+          "signature": "18-01-2016"
+        }
+      ],
+      "no": 18,
+      "other_jurisdiction": "United Arab Emirates",
+      "page": 3,
+      "signature": "18-01-2016",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of the United Arab Emirates for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    },
+    {
+      "entry_into_force": "27-12-1987",
+      "instrument": "Original",
+      "instruments": [
+        {
+          "entry_into_force": "27-12-1987",
+          "label": "Original",
+          "signature": "09-06-1987"
+        }
+      ],
+      "no": 19,
+      "other_jurisdiction": "United Kingdom of Great Britain and Northern Ireland",
+      "page": 4,
+      "signature": "09-06-1987",
+      "title": "Agreement between The Government of the Federal Republic of Nigeria and The Government of The United Kingdom of Great Britain and Northern Ireland for the Avoidance of Double Taxation and the Prevention of Fiscal Evasion with respect to Taxes on Income and on Capital Gains"
+    }
+  ],
+  "is_companion": false,
+  "n_covered": 19,
+  "pages": 19,
+  "qa": {
+    "covered_agreements": {
+      "columns": {
+        "entry_into_force": 467.3,
+        "instrument": 337.1,
+        "no": 77.4,
+        "other_jurisdiction": 268.9,
+        "signature": 408.1,
+        "title": 101.2
+      },
+      "date_columns": "two x: the signature and the entry into force are separated by where the table prints them",
+      "dated_cells_split_by_text": 0,
+      "note": "The title-cell reader cannot see this table's row boundaries: its cells hold more than one printed number, or a printed number opens no cell. This reading groups the table's lines into blocks separated by ragged (short) lines and keys each block by the number printed inside it, so every printed number opens its own row. A run of lines printed above a number is absorbed as that row's own prefix within `row_attach_pt` of the number it opens, which is this reader's own reach and the tolerance its rows were decided with, and `row_attach_band_pt` is the interval this table's own printed runs leave that reach: the declared value lies in it, a run printed at its lower edge is absorbed up and one printed at its upper edge would be, and a reading that leaves one side of that decision empty carries an empty interval. This reading was accepted only because it accounts for every number the table prints.",
+      "numbered_rows_without_a_number": [],
+      "numbering": {
+        "first": 1,
+        "last": 19,
+        "rows": 19,
+        "runs_from_one_without_a_gap": true
+      },
+      "numbers_with_no_row": [],
+      "printed_number_anchors": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "read": true,
+      "row_attach_band_pt": [],
+      "row_attach_pt": 8.0,
+      "rows_delimited_by": "title blocks separated by ragged lines, each keyed by the number printed inside it",
+      "span_tol_pt": 6.0,
+      "spans_that_fitted_no_column": []
+    },
+    "jurisdiction": {
+      "name": "Nigeria",
+      "resolved_from": "the document's own title",
+      "slug": "nigeria",
+      "title_read": "NIGERIA"
+    }
+  },
+  "sha256": "2a85efe19074d847880142479bb9828a3a184a65cb58e184ac91141a3c7867cc",
+  "slug": "nigeria",
+  "source": "mli-positions-batch",
+  "title_read": "NIGERIA"
+}

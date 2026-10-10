@@ -1,0 +1,448 @@
+{
+  "pages": 49,
+  "qa": {
+    "articles_read_from_the_source": 39,
+    "articles_without_options": [
+      "1",
+      "27",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "38",
+      "39"
+    ],
+    "articles_without_options_note": "the declared claim that these Articles take no reservation, notification or choice; it is about the position documents and not about this source, and test M1 checks it against the positions the corpus holds",
+    "how_a_heading_is_told_from_the_text": "the Convention sets an Article heading in bold (every span's PyMuPDF flags carry bit 16) and its body text in the regular weight, so the body's cross-references - and the ones a position document quotes inside a table cell - are not headings",
+    "mode_targets_and_notes_from": "provenance/mli-mapping.yaml",
+    "numbering": {
+      "articles": 39,
+      "first": "1",
+      "last": "39",
+      "runs_from_one_without_a_gap": true
+    },
+    "targets_are_base_text_articles": "by the number the base text prints; alternatives of one row are one list",
+    "title_edge_pt": 0.5,
+    "titles": "read from the Convention's own text, not typed here: every row's number and title are the heading the source prints, and test M1 looks each one up in the source's own spans",
+    "titles_that_run_onto_a_second_line": [
+      {
+        "article": "9",
+        "page": 15,
+        "title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value Principally from Immovable Property"
+      },
+      {
+        "article": "12",
+        "page": 19,
+        "title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire Arrangements and Similar Strategies"
+      },
+      {
+        "article": "13",
+        "page": 20,
+        "title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity Exemptions"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "article": "1",
+      "mode": "none",
+      "note": "The Convention modifies all Covered Tax Agreements as defined in Article 2(1)(a). No provision of a treaty is replaced.",
+      "page": 2,
+      "targets": [],
+      "title": "Scope of the Convention"
+    },
+    {
+      "article": "2",
+      "mode": "none",
+      "note": "Definitions, including \"Covered Tax Agreement\" itself. A Contracting Jurisdiction may notify agreements that would otherwise fall outside that definition, which is why this Article is not in `articles_without_options`.",
+      "page": 2,
+      "targets": [],
+      "title": "Interpretation of Terms"
+    },
+    {
+      "article": "3",
+      "mode": "overlay",
+      "note": "Income derived through an entity that is fiscally transparent under either jurisdiction's law is treated as income of a resident to the extent the other jurisdiction treats it as such, in place of or in the absence of the treaty's own rules on persons covered and residence.",
+      "page": 3,
+      "targets": [
+        [
+          "1",
+          "4"
+        ]
+      ],
+      "title": "Transparent Entities"
+    },
+    {
+      "article": "4",
+      "mode": "overlay",
+      "note": "Where the treaty makes a person other than an individual a resident of both jurisdictions, the competent authorities endeavour to determine residence by mutual agreement.",
+      "page": 4,
+      "targets": [
+        [
+          "4"
+        ]
+      ],
+      "title": "Dual Resident Entities"
+    },
+    {
+      "article": "5",
+      "mode": "overlay",
+      "note": "Option A, B or C (or none), modifying how the treaty's method article interacts with the elimination of double taxation. 23A and 23B are alternatives: a treaty applies one of the two methods.",
+      "page": 5,
+      "targets": [
+        [
+          "23A",
+          "23B"
+        ]
+      ],
+      "title": "Application of Methods for Elimination of Double Taxation"
+    },
+    {
+      "article": "6",
+      "mode": "preamble",
+      "note": "The treaty is modified to include a preamble text stating the intention to eliminate double taxation without creating opportunities for non-taxation or reduced taxation through treaty shopping.",
+      "page": 8,
+      "targets": [],
+      "title": "Purpose of a Covered Tax Agreement"
+    },
+    {
+      "article": "7",
+      "mode": "overlay",
+      "note": "A benefit under the treaty shall not be granted where obtaining it was one of the principal purposes of the arrangement, unless granting it is in accordance with the object and purpose of the provisions. The Article acts on benefits under the treaty as a whole, so it names no single Article of the base text; a Party may also choose the simplified limitation on benefits provision of paragraph 3.",
+      "page": 8,
+      "targets": [],
+      "title": "Prevention of Treaty Abuse"
+    },
+    {
+      "article": "8",
+      "mode": "overlay",
+      "note": "A minimum holding period is added to the treaty's rule on dividends: the reduced rate or exemption applies only where the holding requirement has been met for 365 days.",
+      "page": 14,
+      "targets": [
+        [
+          "10"
+        ]
+      ],
+      "title": "Dividend Transfer Transactions"
+    },
+    {
+      "article": "9",
+      "mode": "overlay",
+      "note": "The treaty's capital gains rule is modified by a 365-day value test, extended to interests in partnerships and trusts.",
+      "page": 15,
+      "targets": [
+        [
+          "13"
+        ]
+      ],
+      "title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value Principally from Immovable Property"
+    },
+    {
+      "article": "10",
+      "mode": "overlay",
+      "note": "Where the tax borne on the income in the third jurisdiction is below 60 per cent, the treaty benefits are denied for that income. The Article acts on the provisions granting those benefits rather than on one Article of the base text.",
+      "page": 16,
+      "targets": [],
+      "title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions"
+    },
+    {
+      "article": "11",
+      "mode": "overlay",
+      "note": "The saving clause is preserved and its exceptions are added: the treaty does not affect a jurisdiction's taxation of its own residents except as listed.",
+      "page": 17,
+      "targets": [
+        [
+          "4"
+        ]
+      ],
+      "title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents"
+    },
+    {
+      "article": "12",
+      "mode": "overlay",
+      "note": "Where a person habitually concludes contracts in the name of an enterprise, the enterprise is deemed to have a permanent establishment notwithstanding the treaty's own definition.",
+      "page": 19,
+      "targets": [
+        [
+          "5"
+        ]
+      ],
+      "title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire Arrangements and Similar Strategies"
+    },
+    {
+      "article": "13",
+      "mode": "overlay",
+      "note": "Option A or B (or neither) narrows the treaty's specific-activity exemptions from permanent establishment status.",
+      "page": 20,
+      "targets": [
+        [
+          "5"
+        ]
+      ],
+      "title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity Exemptions"
+    },
+    {
+      "article": "14",
+      "mode": "overlay",
+      "note": "For the sole purpose of determining the period after which a site or project constitutes a permanent establishment, connected activities carried on by closely related enterprises are aggregated.",
+      "page": 22,
+      "targets": [
+        [
+          "5"
+        ]
+      ],
+      "title": "Splitting-up of Contracts"
+    },
+    {
+      "article": "15",
+      "mode": "support",
+      "note": "A definition, not a modification: Articles 12, 13 and 14 use it, and it is expressed in the treaty's permanent establishment terms.",
+      "page": 23,
+      "targets": [
+        [
+          "5"
+        ]
+      ],
+      "title": "Definition of a Person Closely Related to an Enterprise"
+    },
+    {
+      "article": "16",
+      "mode": "overlay",
+      "note": "The first sentence of the treaty's procedure is replaced: a person may present a case irrespective of the remedies provided by domestic law.",
+      "page": 24,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Mutual Agreement Procedure"
+    },
+    {
+      "article": "17",
+      "mode": "overlay",
+      "note": "The treaty's associated enterprises provision is replaced by a corresponding adjustment with a time limit.",
+      "page": 27,
+      "targets": [
+        [
+          "9"
+        ]
+      ],
+      "title": "Corresponding Adjustments"
+    },
+    {
+      "article": "18",
+      "mode": "arbitration_part_vi",
+      "note": "Arbitration reaches the treaty's mutual agreement article only where both Contracting Jurisdictions have notified the Depositary that they choose it.",
+      "page": 29,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Choice to Apply Part VI"
+    },
+    {
+      "article": "19",
+      "mode": "arbitration_part_vi",
+      "note": "Where the competent authorities have not reached agreement on a presented case, it is submitted to arbitration if the taxpayer requests it.",
+      "page": 29,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Mandatory Binding Arbitration"
+    },
+    {
+      "article": "20",
+      "mode": "arbitration_part_vi",
+      "note": "The rules for composing the arbitration panel, and the fallback where a jurisdiction does not appoint its member.",
+      "page": 32,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Appointment of Arbitrators"
+    },
+    {
+      "article": "21",
+      "mode": "arbitration_part_vi",
+      "note": "The tax information the panel's members receive is treated as information exchanged under the treaty's exchange-of-information article.",
+      "page": 32,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Confidentiality of Arbitration Proceedings"
+    },
+    {
+      "article": "22",
+      "mode": "arbitration_part_vi",
+      "note": "The mutual agreement may end the case at any time before the panel's decision, and is given effect notwithstanding the time limits of domestic law.",
+      "page": 33,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Resolution of a Case Prior to the Conclusion of the Arbitration"
+    },
+    {
+      "article": "23",
+      "mode": "arbitration_part_vi",
+      "note": "A Party chooses the default process - final offer or independent opinion - subject to the competent authorities agreeing otherwise.",
+      "page": 33,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Type of Arbitration Process"
+    },
+    {
+      "article": "24",
+      "mode": "arbitration_part_vi",
+      "note": "A Party may allow the competent authorities to agree on a resolution other than the panel's, which then binds both jurisdictions.",
+      "page": 35,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Agreement on a Different Resolution"
+    },
+    {
+      "article": "25",
+      "mode": "arbitration_part_vi",
+      "note": "The panel's fees and expenses are borne by the Contracting Jurisdictions in equal shares.",
+      "page": 35,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Costs of Arbitration Proceedings"
+    },
+    {
+      "article": "26",
+      "mode": "arbitration_part_vi",
+      "note": "Part VI applies in place of or in the absence of the treaty's own provisions for arbitration of unresolved mutual agreement cases. The previous reading called this Article administrative and said it touched no treaty provision; the Article's own words are that it applies in place of treaty provisions, and the mutual agreement article is the one it stands in for.",
+      "page": 35,
+      "targets": [
+        [
+          "25"
+        ]
+      ],
+      "title": "Compatibility"
+    },
+    {
+      "article": "27",
+      "mode": "admin",
+      "note": "Final provisions of the Convention itself. Where a Party may sign, and what instrument it must deposit.",
+      "page": 37,
+      "targets": [],
+      "title": "Signature and Ratification, Acceptance or Approval"
+    },
+    {
+      "article": "28",
+      "mode": "admin",
+      "note": "Lists the Articles to which a reservation is expressly permitted.",
+      "page": 37,
+      "targets": [],
+      "title": "Reservations"
+    },
+    {
+      "article": "29",
+      "mode": "admin",
+      "note": "Where and when the notifications the Convention provides for are made.",
+      "page": 40,
+      "targets": [],
+      "title": "Notifications"
+    },
+    {
+      "article": "30",
+      "mode": "admin",
+      "note": "The Convention is without prejudice to later modifications of a Covered Tax Agreement agreed between its Contracting Jurisdictions.",
+      "page": 42,
+      "targets": [],
+      "title": "Subsequent Modifications of Covered Tax Agreements"
+    },
+    {
+      "article": "31",
+      "mode": "admin",
+      "note": "The Parties may convene a Conference of the Parties to take decisions or exercise functions under the Convention.",
+      "page": 42,
+      "targets": [],
+      "title": "Conference of the Parties"
+    },
+    {
+      "article": "32",
+      "mode": "admin",
+      "note": "Questions about provisions of a treaty as modified by the Convention are determined under the treaty's own interpretation rule, with recourse to the competent authorities.",
+      "page": 43,
+      "targets": [],
+      "title": "Interpretation and Implementation"
+    },
+    {
+      "article": "33",
+      "mode": "admin",
+      "note": "Any Party may propose an amendment, which a Conference of the Parties considers.",
+      "page": 43,
+      "targets": [],
+      "title": "Amendment"
+    },
+    {
+      "article": "34",
+      "mode": "admin",
+      "note": "The Convention enters into force after the fifth instrument of ratification, acceptance or approval.",
+      "page": 43,
+      "targets": [],
+      "title": "Entry into Force"
+    },
+    {
+      "article": "35",
+      "mode": "admin",
+      "note": "When the Convention's provisions take effect for a Covered Tax Agreement.",
+      "page": 43,
+      "targets": [],
+      "title": "Entry into Effect"
+    },
+    {
+      "article": "36",
+      "mode": "admin",
+      "note": "The later and separate date on which Part VI takes effect.",
+      "page": 46,
+      "targets": [],
+      "title": "Entry into Effect of Part VI"
+    },
+    {
+      "article": "37",
+      "mode": "admin",
+      "note": "A Party may withdraw by notification to the Depositary, with effect from the date of its receipt.",
+      "page": 47,
+      "targets": [],
+      "title": "Withdrawal"
+    },
+    {
+      "article": "38",
+      "mode": "admin",
+      "note": "The Convention may be supplemented by protocols; a party to a protocol must be a Party to the Convention.",
+      "page": 47,
+      "targets": [],
+      "title": "Relation with Protocols"
+    },
+    {
+      "article": "39",
+      "mode": "admin",
+      "note": "The Secretary-General of the OECD is the Depositary.",
+      "page": 47,
+      "targets": [],
+      "title": "Depositary"
+    }
+  ],
+  "sha256": "f863f260005376b11f4677b60d6e5b51ac2947e582d2defc26170db42020c691",
+  "source": "mli-convention-2016"
+}

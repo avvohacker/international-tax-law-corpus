@@ -1,0 +1,9 @@
+# The harness and its tests.
+pyyaml>=6.0
+pytest>=8.0
+
+# `harness/ledger.py` reads the PDFs through PyMuPDF: `get_text("dict")` gives
+# positioned spans with their font size, which is what the span ledger is made
+# of. It is imported inside the reader, so everything except `harness ledger`
+# works without it.
+pymupdf>=1.24

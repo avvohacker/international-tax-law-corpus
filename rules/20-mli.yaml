@@ -1,0 +1,360 @@
+# Classification rules, Multilateral Instrument layer.
+#
+# Three shapes of page, and every document the register declares has one of
+# them:
+#
+#   mli-signatories-and-parties   one table, 107 numbered rows over six pages,
+#                                 with no prose after the first page. Its page
+#                                 top is a row of the table, not a running header
+#   mli-position-*                one country's list of reservations and
+#                                 notifications, with a covered-agreements table
+#                                 on every page and the table resuming at the top
+#                                 of the page, plus a footnote block at the foot
+#   mli-positions-batch           the same shape as `mli-position-*`, and named
+#                                 here because it is one register entry for the
+#                                 whole family: the publisher ships one document
+#                                 per jurisdiction and they share this layout, so
+#                                 the rules that read one read all of them. A
+#                                 document whose layout differs will fail under a
+#                                 rule id rather than be read wrongly under this one
+#   mli-convention-2016           the Convention text: prose, an article per
+#                                 heading, the Netherlands' publication layout
+#
+# The corpus stays multilingual: a position is quoted in the language the OECD
+# published it in. Only this project's own text is English (invariant F13).
+#
+# WHAT THIS LAYER DECIDES, AND WHAT IT DOES NOT
+#
+# It decides what is the page's text and what is its apparatus, span by span,
+# with a rule id behind every decision. On these documents the apparatus is the
+# page number and the footnote block at the foot of the page - and that is all,
+# because the second candidate is a trap. The column headings of the tables and
+# the rows under them are one object: "the table" is a structure, and this
+# layer's business is not to guess which printed line is which cell. Measured,
+# the OECD position tables resume at the top of pages 2 and 3 ("Bangladesh
+# Original", "6 Convention between the", "20-03-1990 07-07-1996" on page 2 of
+# Italy's), so a rule that called the top of a page a running header would delete
+# covered agreements - which is invariant P2's injury, committed by a rule rather
+# than by an omission. Reading rows, cells and options is the MLI projection's
+# job (`harness/mli.py`), and this layer is deliberately blind to it: a rule file
+# that guessed which printed line is which cell would have to be rewritten every
+# time a document laid its table out differently.
+#
+# Every span is claimed by a rule here or listed as unclaimed by R-MLI-UNCLAIMED.
+# Nothing is dropped for looking like apparatus: the rules that drop are about
+# the foot of a page and about nothing else.
+
+# --------------------------------------------------------------------------- #
+# declarations: how this layer measures the page
+# --------------------------------------------------------------------------- #
+
+- id: R-LINE-BUILD-MLI-TABLE
+  kind: declaration
+  decision: structural
+  applies_to: [mli-signatories-and-parties]
+  params:
+    max_gap_pt: 3.0
+    y_tol_pt: 2.5
+  rationale: >-
+    A table row is not a printed line. This source overrides R-LINE-BUILD so
+    that the cells of one row stay separate spans: the name cell and the two date
+    cells sit at the same height, 20pt or more apart, and joining them is how a
+    jurisdiction came to be called "Czechia 13-05-20204 16-08-20245". The row is
+    reassembled from the cells by the MLI projection, which reads their geometry.
+    Measured on page 0: the number and the jurisdiction share a line at x = 86
+    ("1 Albania"), while the signature date stands at x = 251 and the entry into
+    force at x = 446 - separate cells, and the 3pt threshold is what keeps the
+    two halves of "Democratic Republic of the Congo" one cell as well.
+  when:
+    derived_from: span_geometry
+  prevents: [d18]
+
+- id: R-SOURCE-SHAPE-MLI-TABLE
+  kind: declaration
+  decision: structural
+  applies_to: [mli-signatories-and-parties]
+  params:
+    shape: table
+  rationale: >-
+    This document is a table from its first row to its last, so its pages have no
+    running header and no footer band beyond the page number. Measured: 8 short
+    lines repeat at y = 502 on 4 of the 6 pages because table rows align by
+    accident, and at the default band share the footer band would begin there,
+    halfway up a table whose rows run to y = 760.
+  when:
+    derived_from: page_layout
+  prevents: [d16, d17]
+
+- id: R-BAND-DEFINE-MLI-TABLE
+  kind: declaration
+  decision: structural
+  applies_to: [mli-signatories-and-parties]
+  params:
+    page_share: 0.80
+  rationale: >-
+    How many pages a short line must repeat at a height on before that height is
+    a band, for this document. Measured on the six pages: the page number stands
+    at y = 552 on all six (share 1.00), the accidental row alignments at y = 502
+    on four (share 0.67) and at y = 515 on two (share 0.33). So 0.80 keeps the
+    footer band where a footer is - one line, the page number - and leaves the
+    table above it in the body.
+  when:
+    derived_from: repeated_short_lines_at_same_y
+  prevents: [d16, d17]
+
+- id: R-SOURCE-SHAPE-MLI-POSITION
+  kind: declaration
+  decision: structural
+  applies_to: [mli-position-*, mli-positions-batch]
+  params:
+    shape: mixed
+  rationale: >-
+    A country's position is prose whose every page carries a table, and the table
+    resumes at the top of the page. Measured on Italy's position: page 2 opens
+    with the row "Bangladesh Original" / "6 Convention between the" /
+    "20-03-1990 07-07-1996" at y = 72, inside the header band the prose rules
+    measure. Reading that band as a running header would drop a covered
+    agreement per page. The footer band is real on these documents (the page
+    number at y = 786 on all 52 pages of Italy's), and the note band is too
+    (Germany's footnotes are set at 10.02pt against a body of 10.5pt).
+  when:
+    derived_from: page_layout
+  prevents: [d21]
+
+- id: R-BAND-DEFINE-MLI-POSITION-AZERBAIJAN
+  kind: declaration
+  decision: structural
+  applies_to: [mli-position-azerbaijan]
+  params:
+    page_share: 0.80
+  rationale: >-
+    How many pages a short line must repeat at a height on before that height is
+    a band, for this document. Azerbaijan prints no page number at all, and its
+    table's rows align by accident from page to page: at the default share the
+    height y = 668 qualifies as the foot of the page because a short line stands
+    there on 10 of its 29 pages (share 0.34, just over the declared 0.30), while
+    the table itself runs to y = 703. The band therefore opened at y = 666,
+    inside the table, and every span below it was classified as apparatus - the
+    last rows of the pages it touched, among them the row of the United Arab
+    Emirates and its printed number 53 at y = 676.92. A printed row number is
+    not a page number and must not be dropped (P2's injury, committed by the
+    band rather than by a rule). At 0.80 no height repeats on enough pages and the
+    document keeps its table whole. Declared for this document alone rather than
+    for mli-position-* because the other positions do print a page number at the
+    foot, and at a share this high that page number would be read as body text.
+  when:
+    derived_from: repeated_short_lines_at_same_y
+  prevents: [d21]
+
+# --------------------------------------------------------------------------- #
+# reading rules
+# --------------------------------------------------------------------------- #
+
+- id: R-MLI-TITLE
+  decision: structural
+  region_starts: body
+  applies_to: ["mli-*"]
+  rationale: >-
+    The document's own title, and the place its text begins. Each of these
+    documents is headed by a line set larger than anything under it - the
+    jurisdiction or "MULTILATERAL CONVENTION", at 16pt against a body of 11pt
+    (10.5pt for Germany's) - and 15pt is the measured gap between the two, not a
+    guess at a heading. The title also starts the `body` region, which is what
+    lets R-NOTE-BAND anchor the footnote block at the foot of these pages: with
+    the region left at front_matter the notes stay body text, and a footnote
+    printed in the middle of a table is F5's injury arriving through the back
+    door.
+
+    It is kept, not dropped: it is the document's name and the carrier of its
+    identity (a slug taken from anything else is P4's defect, one jurisdiction
+    under two names).
+  when:
+    all_of:
+      - font_min_pt: 15.0
+  prevents: [d19, d20]
+
+- id: R-MLI-SIG-TITLE
+  decision: structural
+  region_starts: body
+  applies_to: [mli-signatories-and-parties]
+  rationale: >-
+    The same for the signatories table, where the title is set at 11pt because
+    the table under it is set at 9pt. The size is again the measurement, and the
+    band is deliberately not part of it: the title's first two lines fall inside
+    the header band and its third ("BASE EROSION AND PROFIT SHIFTING") outside
+    it, so a band condition would cut the title in half.
+  when:
+    all_of:
+      - font_min_pt: 10.0
+      - not:
+          band: [footer, note]
+  prevents: [d19]
+
+- id: R-MLI-NOTE-MARK
+  decision: transform
+  transform: strip_superscript_marker
+  applies_to: ["mli-*"]
+  rationale: >-
+    A footnote marker is not a character of the words it annotates, and on these
+    documents it is printed raised and smaller than the text around it - measured,
+    a 6pt span with the superscript flag set in a line of 9pt text. So the marker
+    leaves the text and is recorded as the number of the note it points at, on
+    the marker's own span, which is a ledger entry rather than a quiet edit.
+    Without it the corpus' own defect d18 comes back through the front door: the
+    table's names arrive as "Curaçao*2" and "Hong Kong (China)6", the digit is a
+    footnote number, and a jurisdiction whose name ends in a digit is a
+    jurisdiction nobody can look up.
+
+    The asterisk stays, and the distinction is the point: `Curaçao*` carries a
+    mark the source prints as part of the name (the introduction explains it -
+    asterisked Parties are the ones that confirmed their agreements entered into
+    force), while the raised digit belongs to the note. Stripping the digit by
+    taking the end of the string would also take the digit of a name that really
+    ended in one, which is why the rule reads the typography and not the text.
+
+    The UN Model is not covered, and must not be: it prints its markers a
+    different way (a thin space, the digit, another thin space, at the body
+    size), R-NOTE-MARK already reads that, and a rule that reached both would
+    rewrite the Model's corpus through a rule written for the OECD's.
+  when:
+    superscript_marker: true
+  prevents: [d18]
+
+- id: R-MLI-PAGE-NUMBER
+  decision: drop
+  applies_to: ["mli-*"]
+  rationale: >-
+    A bare number in the footer band is the page number - 552 on the signatories
+    table, 786 on Italy's position, 785 on Germany's, and the one band that is a
+    page number on all four documents. It is declared here rather than inherited
+    from R-PAGE-NUMBER because that rule reads *both* bands and both halves of
+    its claim are about a prose page. On a position, a page can open with a
+    covered agreement's row number, and a rule that called it a page number would
+    delete it.
+  when:
+    all_of:
+      - band: footer
+      - text_fullmatch: '^(\d{1,4}|[ivxlcdm]{1,7})$'
+  prevents: []
+
+- id: R-MLI-CHINA-COVERED-ROWS
+  decision: keep
+  applies_to: [mli-position-china]
+  rationale: >-
+    Four covered-agreement rows at the bottom of China's pages 2, 5, 9 and 11
+    are set in the footer band and reach R-MLI-UNCLAIMED. Their printed row
+    numbers stand at y = 754.2pt on zero-based pages 2, 5, 9 and 11. Keep only
+    these exact table-line texts in that narrow page/height band; the rule is
+    source-specific, while every other footer and unclaimed span still reaches
+    its existing decision.
+  when:
+    all_of:
+      - shape: mixed
+      - page_in: [2, 5, 9, 11]
+      - y_min_pt: 753.5
+      - y_max_pt: 755.0
+      - text_fullmatch: '^(20 Agreement between the Government Australia|43 Agreement between the Government Slovenia|74 Agreement between the Government|Oman|89 Agreement between the Government Saudi Arabia|Original 17-11-1988 28-12-1990|Original 13-02-1995 27-12-1995|Original 25-03-2002 20-07-2002|Original 23-01-2006 01-09-2006)$'
+  prevents: []
+
+- id: R-MLI-BODY
+  decision: keep
+  applies_to: ["mli-*"]
+  rationale: >-
+    The text of the page: everything that is neither the foot of it nor its note
+    block, at or above the size the documents are set at. This rule is last among
+    the claims for the same reason R-BODY-TEXT is last among the 2017 Model's: a
+    span that reaches it has been offered to every drop rule first, so "kept" is
+    a positive statement and not a fallback.
+
+    `not band [footer, note]` and not `band: body`, and that is the whole point
+    of declaring the page shapes above. On these documents the top of a page is
+    content: the table resumes there, and on the first page of a position the
+    first article heading stands there. A keep rule written against the body
+    band would leave the top of every page to the catch-all, which is how a
+    covered-agreements table loses its first row on every page it continues onto.
+
+    `font_min_pt: 9.0` is the floor the documents are set at (9pt for the
+    signatories table, 10.5 and 11pt for the positions, 11pt for the Convention).
+    What is below it is footnote furniture and is either in the note block
+    already or is listed by the catch-all for somebody to name.
+  when:
+    all_of:
+      - not:
+          band: [footer, note]
+      - font_min_pt: 9.0
+  prevents: [d21]
+
+- id: R-MLI-UNCLAIMED
+  decision: drop
+  catch_all: true
+  applies_to: ["mli-*"]
+  rationale: >-
+    The last rule of this layer, and the one that makes the ledger trustworthy:
+    whatever no other rule claims is dropped and listed, span by span, in the
+    audit report. It drops rather than keeps because "kept" as a default is how
+    apparatus that looks like a sentence becomes data - the failure this ledger
+    exists to prevent. Text listed here is a rule somebody has to write, not a
+    silent loss.
+
+    Measured on the four documents, it is a short list and it is the same list on
+    each: the footnote markers, which are the note block's own numbers, and the
+    small print of the tables' furniture. It is reviewed with every build, and
+    `python -m harness ledger --source mli-...` prints it.
+  when:
+    always: true
+  prevents: []
+
+# --------------------------------------------------------------------------- #
+# standing decisions about the MLI corpus
+# --------------------------------------------------------------------------- #
+
+- id: R-POS-EXCERPT
+  kind: policy
+  decision: transform
+  transform: never_truncate
+  applies_to: [mli-position-*, mli-positions-batch]
+  rationale: >-
+    The excerpt keeps the full text of the option. There is no length limit and
+    no slice: a short form, if any view wants one, is produced by that view from
+    the full text. A hard slice is a silent deletion of source text, and the
+    previous corpus had 491 excerpts ending at exactly 1200 characters, cut
+    mid-word, none of them flagged.
+  when:
+    always: true
+  prevents: [d19]
+
+- id: R-POS-IDENTITY
+  kind: policy
+  decision: transform
+  transform: one_canonical_slug
+  applies_to: [mli-position-*, mli-positions-batch]
+  rationale: >-
+    One canonical slug per jurisdiction, taken from the document's own title -
+    which is why R-MLI-TITLE keeps that line rather than dropping it with the
+    rest of a document's furniture. Additional notifications and other addenda
+    attach to the base jurisdiction instead of becoming a second, unreachable
+    file with an empty country field.
+  when:
+    always: true
+  prevents: [d20]
+
+- id: R-MLI-NO-OCR
+  kind: policy
+  decision: structural
+  applies_to: ["mli-*"]
+  rationale: >-
+    What this layer still cannot do, written down so that a reading of these
+    documents is not mistaken for the whole of them. It reads a page's text
+    spans, and a page that is a scanned image has none: this pipeline has no OCR,
+    so such a document cannot be read from its bytes. The family holds seven of
+    them - the OECD's deposit notices, whose every page is an image and whose
+    only text is a rotated stamp - and they are declared unread, with the
+    reader's own reason, in the family's report
+    (corpora/mli/positions/batch-report.json), rather than published as a
+    position about a jurisdiction that notified nothing.
+
+    The rest of the modelling is not a reading rule and does not live here: a
+    signatory row, a position's option and a covered-agreements table are the
+    MLI projection's job (`harness/mli.py`), which reads the geometry this layer
+    has already decided is part of the page.
+  prevents: [d16, d17, d18, d19, d20, d21]

@@ -1,0 +1,67 @@
+{
+  "article_sections": {
+    "16": [
+      {
+        "excerpt": "Following the inclusion of the additional agreements in its list of agreements pursuant to Article 29(5) of the Convention, the Czech Republic considers pursuant to Article 16(6)(a) of the Convention that the following agreements contain a provision described in Article 16(4)(a)(i). The article and paragraph number of each such provision is identified below. Following the inclusion of the additional agreements in its list of agreements pursuant to Article 29(5) of the Convention, the Czech Republic considers pursuant to Article 16(6)(b)(ii) of the Convention that the following agreements contain a provision that provides that a case referred to in the first sentence of Article 16(1) must be presented within a specific time period that is at least three years from the first notification of the action resulting in taxation not in accordance with the provisions of the Covered Tax Agreement. The article and paragraph number of each such provision is identified below. Following the inclusion of the additional agreements in its list of agreements pursuant to Article 29(5) of the Convention, the Czech Republic considers pursuant to Article 16(6)(c)(ii) of the Convention that the following agreements do not contain a provision described in Article 16(4)(b)(ii). Following the inclusion of the additional agreements in its list of agreements pursuant to Article 29(5) of the Convention, the Czech Republic considers pursuant to Article 16(6)(d)(ii) of the Convention that the following agreement does not contain a provision described in Article 16(4)(c)(ii). 2. The Czech Republic makes the notification in order to correct the English title of the Convention formerly notified as Number 52. The correct title is “Convention between the Government of the Czech and Slovak Federal Republic and the Government of the United Kingdom of Great Britain and Northern Ireland for the avoidance of double taxation with respect to taxes on income and capital gains”.",
+        "kind": "Notification",
+        "mli_article_title": "Mutual Agreement Procedure",
+        "option_title": "s as a consequence of the extension of the list of agreements covered by the Convention",
+        "page": 4,
+        "truncated": false
+      }
+    ],
+    "6": [
+      {
+        "excerpt": "Following the inclusion of the additional agreements in its list of agreements pursuant to Article 29(5) of the Convention, the Czech Republic considers pursuant to Article 6(5) of the Convention that the following agreements are not within the scope of a reservation under Article 6(4) and contain preamble language described in Article 6(2). The text of the relevant preambular paragraph is identified below.",
+        "kind": "Notification",
+        "mli_article_title": "Purpose of a Covered Tax Agreement",
+        "option_title": "s as a consequence of the extension of the list of agreements covered by the Convention",
+        "page": 2,
+        "truncated": false
+      }
+    ],
+    "7": [
+      {
+        "excerpt": "Following the inclusion of the additional agreements in its list of agreements pursuant to Article 29(5) of the Convention, the Czech Republic hereby chooses to apply pursuant to Article 7(17)(b) of the Convention Article 7(4) with regard to all additionally covered agreements.",
+        "kind": "Notification",
+        "mli_article_title": "Prevention of Treaty Abuse",
+        "option_title": "of Choice of Optional Provisions",
+        "page": 4,
+        "truncated": false
+      },
+      {
+        "excerpt": "Following the inclusion of the additional agreements in its list of agreements pursuant to Article 29(5) of the Convention, the Czech Republic considers pursuant to Article 7(17)(a) of the Convention that the following agreements are not subject to a reservation under Article 7(15)(b) and contain a provision described in Article 7(2). The article and paragraph number of each such provision is identified below.",
+        "kind": "Notification",
+        "mli_article_title": "Prevention of Treaty Abuse",
+        "option_title": "s as a consequence of the extension of the list of agreements covered by the Convention",
+        "page": 4,
+        "truncated": false
+      }
+    ]
+  },
+  "base_slug": "czechia",
+  "companion_suffix": "additional-notifications",
+  "country": "Czechia",
+  "covered_agreements": [],
+  "is_companion": true,
+  "n_covered": 0,
+  "pages": 7,
+  "qa": {
+    "covered_agreements": {
+      "read": false,
+      "reason": "this document has no Article 2 section to read a table from"
+    },
+    "jurisdiction": {
+      "name": "Czechia",
+      "resolved_from": "the position of Czechia, which its own file name says this document belongs to",
+      "slug": "czechia-additional-notifications",
+      "suffix": "additional-notifications",
+      "suffix_from": "the publisher's own file name",
+      "title_read": "Additional notifications made by the Czech Republic on the MULTILATERAL CONVENTION TO"
+    }
+  },
+  "sha256": "5736f99836af1bc078de69429340b2dca7f0c21cac46cb76ebd021413f145d59",
+  "slug": "czechia-additional-notifications",
+  "source": "mli-positions-batch",
+  "title_read": "Additional notifications made by the Czech Republic on the MULTILATERAL CONVENTION TO"
+}

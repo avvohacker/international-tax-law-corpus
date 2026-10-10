@@ -1,0 +1,26 @@
+{
+  "article_sections": {},
+  "base_slug": "",
+  "companion_suffix": "",
+  "country": "Morocco",
+  "covered_agreements": [],
+  "is_companion": false,
+  "n_covered": 0,
+  "pages": 44,
+  "qa": {
+    "covered_agreements": {
+      "read": false,
+      "reason": "this document has no Article 2 section to read a table from"
+    },
+    "jurisdiction": {
+      "name": "Morocco",
+      "resolved_from": "the document's own title",
+      "slug": "morocco",
+      "title_read": "MAROC"
+    }
+  },
+  "sha256": "7bfb29e5318a20f0017691d77e489fd30de9a42a915ea30fb18912e9d4a2ca24",
+  "slug": "morocco",
+  "source": "mli-positions-batch",
+  "title_read": "MAROC"
+}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "international-tax-law-corpus"
+version = "0.1.0"
+description = "Specification and fidelity harness for a citable corpus of the UN Model Tax Convention and the OECD MLI material"
+requires-python = ">=3.9"
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"

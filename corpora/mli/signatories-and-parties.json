@@ -1,0 +1,1667 @@
+{
+  "columns": {
+    "deposit": 440.0,
+    "entry_into_force": 620.0,
+    "jurisdiction": 240.0,
+    "no": 100.0,
+    "notifications": 700.0,
+    "signature": 340.0
+  },
+  "qa": {
+    "cells_where_the_two_placements_disagree": [
+      {
+        "column": "arbitration_profile",
+        "decided_by": "attached-up",
+        "distance_to_number_pt": -2.52,
+        "nearest_distance_pt": 2.52,
+        "nearest_number": 3,
+        "no": 3,
+        "page": 0,
+        "text": "28-06-2022",
+        "y": 410.64
+      },
+      {
+        "column": "jurisdiction",
+        "decided_by": "attached-up",
+        "distance_to_number_pt": -5.16,
+        "nearest_distance_pt": 5.16,
+        "nearest_number": 29,
+        "no": 29,
+        "page": 2,
+        "text": "Democratic Republic of the",
+        "y": 148.44
+      },
+      {
+        "column": "notifications",
+        "decided_by": "slot",
+        "distance_to_number_pt": 14.16,
+        "nearest_distance_pt": 8.16,
+        "nearest_number": 36,
+        "no": 35,
+        "page": 2,
+        "text": "22-09-2020",
+        "y": 274.68
+      }
+    ],
+    "lines_outside_the_table": [
+      {
+        "column": "signature",
+        "page": 0,
+        "text": "SIGNATORIES AND PARTIES TO THE MULTILATERAL CONVENTION",
+        "y": 70.88
+      },
+      {
+        "column": "signature",
+        "page": 0,
+        "text": "TO IMPLEMENT TAX TREATY RELATED MEASURES TO PREVENT",
+        "y": 83.72
+      },
+      {
+        "column": "signature",
+        "page": 0,
+        "text": "BASE EROSION AND PROFIT SHIFTING",
+        "y": 96.68
+      },
+      {
+        "column": "deposit",
+        "page": 0,
+        "text": "Status as of 15 September 2026",
+        "y": 120.25
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "This document contains a list of signatories and parties to the Multilateral Con",
+        "y": 155.39
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "the provisions of the Convention, each jurisdiction is required to provide a lis",
+        "y": 165.95
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "The MLI Positions provided for each jurisdiction upon the deposit of the instrum",
+        "y": 187.07
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "35(7)(b) of the MLI and the notifications made after becoming a Party to the Con",
+        "y": 197.62
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "Arbitration Profiles have been developed to provide taxpayers with relevant info",
+        "y": 218.62
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "IMPORTANT: The current position for each jurisdiction will be the later of the p",
+        "y": 248.07
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "Convention or made after becoming a Party to the Convention.",
+        "y": 260.85
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "Entry into force of agreements notified pursuant to Article 2 of the Convention:",
+        "y": 279.74
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "without indicating dates on the entry into force of those agreements. Following ",
+        "y": 292.52
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "force. The information associated with those agreements is accessible in this in",
+        "y": 303.08
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "confirmed that some of their agreements notified pursuant to Article 2 have now ",
+        "y": 313.68
+      },
+      {
+        "column": "signature",
+        "page": 0,
+        "text": "Deposit of Instrument",
+        "y": 332.86
+      },
+      {
+        "column": "entry_into_force",
+        "page": 0,
+        "text": "Notifications",
+        "y": 332.86
+      },
+      {
+        "column": "entry_into_force",
+        "page": 0,
+        "text": "Notifications made",
+        "y": 338.02
+      },
+      {
+        "column": "signature",
+        "page": 0,
+        "text": "of Ratification,",
+        "y": 343.18
+      },
+      {
+        "column": "notifications",
+        "page": 0,
+        "text": "made after",
+        "y": 343.18
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 0,
+        "text": "Arbitration",
+        "y": 343.18
+      },
+      {
+        "column": "no",
+        "page": 0,
+        "text": "No",
+        "y": 348.34
+      },
+      {
+        "column": "jurisdiction",
+        "page": 0,
+        "text": "Jurisdiction",
+        "y": 348.34
+      },
+      {
+        "column": "signature",
+        "page": 0,
+        "text": "Signature",
+        "y": 348.34
+      },
+      {
+        "column": "deposit",
+        "page": 0,
+        "text": "Entry into Force",
+        "y": 348.34
+      },
+      {
+        "column": "entry_into_force",
+        "page": 0,
+        "text": "pursuant to Article",
+        "y": 348.34
+      },
+      {
+        "column": "signature",
+        "page": 0,
+        "text": "Acceptance or",
+        "y": 353.5
+      },
+      {
+        "column": "notifications",
+        "page": 0,
+        "text": "becoming a",
+        "y": 353.5
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 0,
+        "text": "Profile",
+        "y": 353.5
+      },
+      {
+        "column": "entry_into_force",
+        "page": 0,
+        "text": "35(7)(b) of the MLI",
+        "y": 358.66
+      },
+      {
+        "column": "deposit",
+        "page": 0,
+        "text": "Approval",
+        "y": 363.94
+      },
+      {
+        "column": "notifications",
+        "page": 0,
+        "text": "Party1",
+        "y": 363.94
+      },
+      {
+        "column": "signature",
+        "page": 1,
+        "text": "Deposit of Instrument",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 1,
+        "text": "Notifications",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 1,
+        "text": "Notifications made",
+        "y": 76.54
+      },
+      {
+        "column": "signature",
+        "page": 1,
+        "text": "of Ratification,",
+        "y": 81.7
+      },
+      {
+        "column": "notifications",
+        "page": 1,
+        "text": "made after",
+        "y": 81.7
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 1,
+        "text": "Arbitration",
+        "y": 81.7
+      },
+      {
+        "column": "no",
+        "page": 1,
+        "text": "No",
+        "y": 86.98
+      },
+      {
+        "column": "jurisdiction",
+        "page": 1,
+        "text": "Jurisdiction",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 1,
+        "text": "Signature",
+        "y": 86.98
+      },
+      {
+        "column": "deposit",
+        "page": 1,
+        "text": "Entry into Force",
+        "y": 86.98
+      },
+      {
+        "column": "entry_into_force",
+        "page": 1,
+        "text": "pursuant to Article",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 1,
+        "text": "Acceptance or",
+        "y": 92.14
+      },
+      {
+        "column": "notifications",
+        "page": 1,
+        "text": "becoming a",
+        "y": 92.14
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 1,
+        "text": "Profile",
+        "y": 92.14
+      },
+      {
+        "column": "entry_into_force",
+        "page": 1,
+        "text": "35(7)(b) of the MLI",
+        "y": 97.3
+      },
+      {
+        "column": "deposit",
+        "page": 1,
+        "text": "Approval",
+        "y": 102.46
+      },
+      {
+        "column": "notifications",
+        "page": 1,
+        "text": "Party1",
+        "y": 102.46
+      },
+      {
+        "column": "signature",
+        "page": 2,
+        "text": "Deposit of Instrument",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 2,
+        "text": "Notifications",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 2,
+        "text": "Notifications made",
+        "y": 76.54
+      },
+      {
+        "column": "signature",
+        "page": 2,
+        "text": "of Ratification,",
+        "y": 81.7
+      },
+      {
+        "column": "notifications",
+        "page": 2,
+        "text": "made after",
+        "y": 81.7
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 2,
+        "text": "Arbitration",
+        "y": 81.7
+      },
+      {
+        "column": "no",
+        "page": 2,
+        "text": "No",
+        "y": 86.98
+      },
+      {
+        "column": "jurisdiction",
+        "page": 2,
+        "text": "Jurisdiction",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 2,
+        "text": "Signature",
+        "y": 86.98
+      },
+      {
+        "column": "deposit",
+        "page": 2,
+        "text": "Entry into Force",
+        "y": 86.98
+      },
+      {
+        "column": "entry_into_force",
+        "page": 2,
+        "text": "pursuant to Article",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 2,
+        "text": "Acceptance or",
+        "y": 92.14
+      },
+      {
+        "column": "notifications",
+        "page": 2,
+        "text": "becoming a",
+        "y": 92.14
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 2,
+        "text": "Profile",
+        "y": 92.14
+      },
+      {
+        "column": "entry_into_force",
+        "page": 2,
+        "text": "35(7)(b) of the MLI",
+        "y": 97.3
+      },
+      {
+        "column": "deposit",
+        "page": 2,
+        "text": "Approval",
+        "y": 102.46
+      },
+      {
+        "column": "notifications",
+        "page": 2,
+        "text": "Party1",
+        "y": 102.46
+      },
+      {
+        "column": "signature",
+        "page": 3,
+        "text": "Deposit of Instrument",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 3,
+        "text": "Notifications",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 3,
+        "text": "Notifications made",
+        "y": 76.54
+      },
+      {
+        "column": "signature",
+        "page": 3,
+        "text": "of Ratification,",
+        "y": 81.7
+      },
+      {
+        "column": "notifications",
+        "page": 3,
+        "text": "made after",
+        "y": 81.7
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 3,
+        "text": "Arbitration",
+        "y": 81.7
+      },
+      {
+        "column": "no",
+        "page": 3,
+        "text": "No",
+        "y": 86.98
+      },
+      {
+        "column": "jurisdiction",
+        "page": 3,
+        "text": "Jurisdiction",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 3,
+        "text": "Signature",
+        "y": 86.98
+      },
+      {
+        "column": "deposit",
+        "page": 3,
+        "text": "Entry into Force",
+        "y": 86.98
+      },
+      {
+        "column": "entry_into_force",
+        "page": 3,
+        "text": "pursuant to Article",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 3,
+        "text": "Acceptance or",
+        "y": 92.14
+      },
+      {
+        "column": "notifications",
+        "page": 3,
+        "text": "becoming a",
+        "y": 92.14
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 3,
+        "text": "Profile",
+        "y": 92.14
+      },
+      {
+        "column": "entry_into_force",
+        "page": 3,
+        "text": "35(7)(b) of the MLI",
+        "y": 97.3
+      },
+      {
+        "column": "deposit",
+        "page": 3,
+        "text": "Approval",
+        "y": 102.46
+      },
+      {
+        "column": "notifications",
+        "page": 3,
+        "text": "Party1",
+        "y": 102.46
+      },
+      {
+        "column": "signature",
+        "page": 4,
+        "text": "Deposit of Instrument",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 4,
+        "text": "Notifications",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 4,
+        "text": "Notifications made",
+        "y": 76.54
+      },
+      {
+        "column": "signature",
+        "page": 4,
+        "text": "of Ratification,",
+        "y": 81.7
+      },
+      {
+        "column": "notifications",
+        "page": 4,
+        "text": "made after",
+        "y": 81.7
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 4,
+        "text": "Arbitration",
+        "y": 81.7
+      },
+      {
+        "column": "no",
+        "page": 4,
+        "text": "No",
+        "y": 86.98
+      },
+      {
+        "column": "jurisdiction",
+        "page": 4,
+        "text": "Jurisdiction",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 4,
+        "text": "Signature",
+        "y": 86.98
+      },
+      {
+        "column": "deposit",
+        "page": 4,
+        "text": "Entry into Force",
+        "y": 86.98
+      },
+      {
+        "column": "entry_into_force",
+        "page": 4,
+        "text": "pursuant to Article",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 4,
+        "text": "Acceptance or",
+        "y": 92.14
+      },
+      {
+        "column": "notifications",
+        "page": 4,
+        "text": "becoming a",
+        "y": 92.14
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 4,
+        "text": "Profile",
+        "y": 92.14
+      },
+      {
+        "column": "entry_into_force",
+        "page": 4,
+        "text": "35(7)(b) of the MLI",
+        "y": 97.3
+      },
+      {
+        "column": "deposit",
+        "page": 4,
+        "text": "Approval",
+        "y": 102.46
+      },
+      {
+        "column": "notifications",
+        "page": 4,
+        "text": "Party1",
+        "y": 102.46
+      },
+      {
+        "column": "signature",
+        "page": 5,
+        "text": "Deposit of Instrument",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 5,
+        "text": "Notifications",
+        "y": 71.38
+      },
+      {
+        "column": "entry_into_force",
+        "page": 5,
+        "text": "Notifications made",
+        "y": 76.54
+      },
+      {
+        "column": "signature",
+        "page": 5,
+        "text": "of Ratification,",
+        "y": 81.7
+      },
+      {
+        "column": "notifications",
+        "page": 5,
+        "text": "made after",
+        "y": 81.7
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 5,
+        "text": "Arbitration",
+        "y": 81.7
+      },
+      {
+        "column": "no",
+        "page": 5,
+        "text": "No",
+        "y": 86.98
+      },
+      {
+        "column": "jurisdiction",
+        "page": 5,
+        "text": "Jurisdiction",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 5,
+        "text": "Signature",
+        "y": 86.98
+      },
+      {
+        "column": "deposit",
+        "page": 5,
+        "text": "Entry into Force",
+        "y": 86.98
+      },
+      {
+        "column": "entry_into_force",
+        "page": 5,
+        "text": "pursuant to Article",
+        "y": 86.98
+      },
+      {
+        "column": "signature",
+        "page": 5,
+        "text": "Acceptance or",
+        "y": 92.14
+      },
+      {
+        "column": "notifications",
+        "page": 5,
+        "text": "becoming a",
+        "y": 92.14
+      },
+      {
+        "column": "arbitration_profile",
+        "page": 5,
+        "text": "Profile",
+        "y": 92.14
+      },
+      {
+        "column": "entry_into_force",
+        "page": 5,
+        "text": "35(7)(b) of the MLI",
+        "y": 97.3
+      },
+      {
+        "column": "deposit",
+        "page": 5,
+        "text": "Approval",
+        "y": 102.46
+      },
+      {
+        "column": "notifications",
+        "page": 5,
+        "text": "Party1",
+        "y": 102.46
+      },
+      {
+        "column": "no",
+        "page": 5,
+        "text": "The following jurisdiction has expressed its intent to sign the Convention:",
+        "y": 449.57
+      },
+      {
+        "column": "no",
+        "page": 5,
+        "text": "−",
+        "y": 471.55
+      },
+      {
+        "column": "jurisdiction",
+        "page": 5,
+        "text": "Lebanon",
+        "y": 473.39
+      }
+    ],
+    "note": "A cell within row_attach_pt above a row's number belongs to that row; otherwise it belongs to the row whose number is the last one above it. The two placements disagree about the cells listed above, and each is given with both distances and the row it went to, so these can be checked against the page instead of trusted. `row_attach_band_pt` is the interval the table's own printed lines leave that window: the declared row_attach_pt lies in it, a line printed at its lower edge is captured up, and one printed at its upper edge would be taken out of the row the page prints it in.",
+    "row_attach_band_pt": [
+      5.16,
+      8.16
+    ],
+    "row_attach_pt": 6.0,
+    "row_pitch_tol": 1.5
+  },
+  "rows": [
+    {
+      "deposit": "22-09-2020",
+      "entry_into_force": "01-01-2021",
+      "jurisdiction": "Albania",
+      "no": 1,
+      "page": 0,
+      "signature": "28-05-2019"
+    },
+    {
+      "jurisdiction": "Algeria",
+      "no": 2,
+      "page": 0,
+      "signature": "27-06-2024"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "29-09-2021",
+      "entry_into_force": "01-01-2022",
+      "jurisdiction": "Andorra",
+      "no": 3,
+      "page": 0,
+      "signature": "07-06-2017"
+    },
+    {
+      "jurisdiction": "Antigua and Barbuda",
+      "no": 4,
+      "page": 0,
+      "signature": "18-06-2025"
+    },
+    {
+      "deposit": "29-09-2025",
+      "entry_into_force": "01-01-2026",
+      "jurisdiction": "Argentina",
+      "no": 5,
+      "page": 0,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "25-09-2023",
+      "entry_into_force": "01-01-2024",
+      "jurisdiction": "Armenia",
+      "no": 6,
+      "page": 0,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "15-09-2026",
+      "deposit": "26-09-2018",
+      "entry_into_force": "01-01-2019",
+      "jurisdiction": "Australia",
+      "no": 7,
+      "notifications": "02-10-2020",
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "22-09-2017",
+      "entry_into_force": "01-07-2018",
+      "jurisdiction": "Austria",
+      "no": 8,
+      "notifications": "28-08-2023",
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "24-09-2024",
+      "entry_into_force": "01-01-2025",
+      "jurisdiction": "Azerbaijan",
+      "no": 9,
+      "page": 1,
+      "signature": "20-11-2023"
+    },
+    {
+      "deposit": "23-02-2022",
+      "entry_into_force": "01-06-2022",
+      "jurisdiction": "Bahrain*",
+      "no": 10,
+      "page": 1,
+      "signature": "27-11-2020"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "deposit": "21-12-2020",
+      "entry_into_force": "01-04-2021",
+      "jurisdiction": "Barbados",
+      "no": 11,
+      "page": 1,
+      "signature": "24-01-2018"
+    },
+    {
+      "arbitration_profile": "29-09-2025",
+      "deposit": "26-06-2019",
+      "entry_into_force": "01-10-2019",
+      "jurisdiction": "Belgium",
+      "no": 12,
+      "notifications": "25-11-2021",
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "07-04-2022",
+      "entry_into_force": "01-08-2022",
+      "jurisdiction": "Belize",
+      "no": 13,
+      "page": 1,
+      "signature": "11-01-2019"
+    },
+    {
+      "deposit": "16-09-2020",
+      "entry_into_force": "01-01-2021",
+      "jurisdiction": "Bosnia and Herzegovina",
+      "no": 14,
+      "page": 1,
+      "signature": "30-10-2019"
+    },
+    {
+      "jurisdiction": "Brazil",
+      "no": 15,
+      "page": 1,
+      "signature": "20-10-2025"
+    },
+    {
+      "deposit": "16-09-2022",
+      "entry_into_force": "01-01-2023",
+      "jurisdiction": "Bulgaria",
+      "no": 16,
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "30-10-2020",
+      "entry_into_force": "01-02-2021",
+      "jurisdiction": "Burkina Faso",
+      "no": 17,
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "21-04-2022",
+      "entry_into_force": "01-08-2022",
+      "jurisdiction": "Cameroon",
+      "no": 18,
+      "page": 1,
+      "signature": "11-07-2017"
+    },
+    {
+      "arbitration_profile": "16-12-2022",
+      "deposit": "29-08-2019",
+      "entry_into_force": "01-12-2019",
+      "jurisdiction": "Canada",
+      "no": 19,
+      "notifications": "08-10-2020",
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "26-11-2020",
+      "entry_into_force": "01-03-2021",
+      "jurisdiction": "Chile",
+      "no": 20,
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "25-05-2022",
+      "entry_into_force": "01-09-2022",
+      "jurisdiction": "China (People’s Republic of)",
+      "no": 21,
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "jurisdiction": "Colombia",
+      "no": 22,
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "22-09-2020",
+      "entry_into_force": "01-01-2021",
+      "jurisdiction": "Costa Rica",
+      "no": 23,
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "25-09-2023",
+      "entry_into_force": "01-01-2024",
+      "jurisdiction": "Côte d'Ivoire",
+      "no": 24,
+      "page": 1,
+      "signature": "24-01-2018"
+    },
+    {
+      "deposit": "18-02-2021",
+      "entry_into_force": "01-06-2021",
+      "jurisdiction": "Croatia",
+      "no": 25,
+      "notifications": "02-10-2024",
+      "page": 1,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "deposit": "29-03-2019",
+      "entry_into_force": "01-07-2019",
+      "jurisdiction": "Curaçao*",
+      "no": 26,
+      "page": 1,
+      "signature": "20-12-2017"
+    },
+    {
+      "deposit": "23-01-2020",
+      "entry_into_force": "01-05-2020",
+      "jurisdiction": "Cyprus",
+      "no": 27,
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "13-05-2020",
+      "entry_into_force": "01-09-2020",
+      "jurisdiction": "Czechia",
+      "no": 28,
+      "notifications": "16-08-2024",
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "jurisdiction": "Democratic Republic of the Congo",
+      "no": 29,
+      "page": 2,
+      "signature": "19-09-2024"
+    },
+    {
+      "arbitration_profile": "07-09-2023",
+      "deposit": "30-09-2019",
+      "entry_into_force": "01-01-2020",
+      "jurisdiction": "Denmark",
+      "no": 30,
+      "notifications": "29-06-2021",
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "30-09-2020",
+      "entry_into_force": "01-01-2021",
+      "jurisdiction": "Egypt",
+      "no": 31,
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "15-01-2021",
+      "entry_into_force": "01-05-2021 01-06-2022",
+      "jurisdiction": "Estonia",
+      "no": 32,
+      "page": 2,
+      "signature": "29-06-2018"
+    },
+    {
+      "jurisdiction": "Eswatini",
+      "no": 33,
+      "page": 2,
+      "signature": "27-09-2023"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "jurisdiction": "Fiji",
+      "no": 34,
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "26-05-2025",
+      "deposit": "25-02-2019",
+      "entry_into_force": "01-06-2019",
+      "jurisdiction": "Finland",
+      "no": 35,
+      "notifications": "11-12-2025 22-09-2020",
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "16-09-2022",
+      "deposit": "26-09-2018",
+      "entry_into_force": "01-01-2019",
+      "jurisdiction": "France*",
+      "no": 36,
+      "notifications": "13-11-2024",
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "jurisdiction": "Gabon",
+      "no": 37,
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "29-03-2019",
+      "entry_into_force": "01-07-2019",
+      "jurisdiction": "Georgia",
+      "no": 38,
+      "notifications": "27-11-2025",
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "18-12-2020",
+      "entry_into_force": "01-04-2021 01-06-2025",
+      "jurisdiction": "Germany",
+      "no": 39,
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "deposit": "30-03-2021",
+      "entry_into_force": "01-07-2021",
+      "jurisdiction": "Greece",
+      "no": 40,
+      "notifications": "02-10-2024",
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "12-02-2019",
+      "entry_into_force": "01-06-2019",
+      "jurisdiction": "Guernsey",
+      "no": 41,
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "25-05-2022",
+      "entry_into_force": "01-09-2022 22-02-2024",
+      "jurisdiction": "Hong Kong (China)",
+      "no": 42,
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "25-03-2021",
+      "entry_into_force": "01-07-2021",
+      "jurisdiction": "Hungary",
+      "no": 43,
+      "notifications": "02-10-2024",
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "26-09-2019",
+      "entry_into_force": "01-01-2020",
+      "jurisdiction": "Iceland",
+      "no": 44,
+      "notifications": "14-12-2021",
+      "page": 2,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "25-06-2019",
+      "entry_into_force": "01-10-2019",
+      "jurisdiction": "India",
+      "no": 45,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "28-04-2020",
+      "entry_into_force": "01-08-2020 12-01-2026",
+      "jurisdiction": "Indonesia",
+      "no": 46,
+      "notifications": "27-11-2023",
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "deposit": "29-01-2019",
+      "entry_into_force": "01-05-2019",
+      "jurisdiction": "Ireland",
+      "no": 47,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "25-10-2017",
+      "entry_into_force": "01-07-2018",
+      "jurisdiction": "Isle of Man",
+      "no": 48,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "13-09-2018",
+      "entry_into_force": "01-01-2019",
+      "jurisdiction": "Israel*",
+      "no": 49,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "jurisdiction": "Italy",
+      "no": 50,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "jurisdiction": "Jamaica",
+      "no": 51,
+      "page": 3,
+      "signature": "24-01-2018"
+    },
+    {
+      "arbitration_profile": "15-09-2026",
+      "deposit": "26-09-2018",
+      "entry_into_force": "01-01-2019",
+      "jurisdiction": "Japan",
+      "no": 52,
+      "notifications": "20-06-2023",
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "15-12-2017",
+      "entry_into_force": "01-07-2018",
+      "jurisdiction": "Jersey*",
+      "no": 53,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "29-09-2020",
+      "entry_into_force": "01-01-2021",
+      "jurisdiction": "Jordan",
+      "no": 54,
+      "page": 3,
+      "signature": "19-12-2019"
+    },
+    {
+      "deposit": "24-06-2020",
+      "entry_into_force": "01-10-2020",
+      "jurisdiction": "Kazakhstan",
+      "no": 55,
+      "notifications": "26-11-2020",
+      "page": 3,
+      "signature": "25-06-2018"
+    },
+    {
+      "deposit": "08-01-2025",
+      "entry_into_force": "01-05-2025",
+      "jurisdiction": "Kenya",
+      "no": 56,
+      "page": 3,
+      "signature": "26-11-2019"
+    },
+    {
+      "deposit": "13-05-2020",
+      "entry_into_force": "01-09-2020",
+      "jurisdiction": "Korea",
+      "no": 57,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "jurisdiction": "Kuwait",
+      "no": 58,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "29-10-2019",
+      "entry_into_force": "01-02-2020",
+      "jurisdiction": "Latvia",
+      "no": 59,
+      "notifications": "20-04-2021",
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "28-07-2022",
+      "entry_into_force": "01-11-2022",
+      "jurisdiction": "Lesotho",
+      "no": 60,
+      "page": 3,
+      "signature": "09-02-2022"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "deposit": "19-12-2019",
+      "entry_into_force": "01-04-2020",
+      "jurisdiction": "Liechtenstein",
+      "no": 61,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "11-09-2018",
+      "entry_into_force": "01-01-2019",
+      "jurisdiction": "Lithuania*",
+      "no": 62,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "21-02-2023",
+      "deposit": "09-04-2019",
+      "entry_into_force": "01-08-2019",
+      "jurisdiction": "Luxembourg",
+      "no": 63,
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "18-02-2021",
+      "entry_into_force": "01-06-2021",
+      "jurisdiction": "Malaysia*",
+      "no": 64,
+      "notifications": "10-11-2022",
+      "page": 3,
+      "signature": "24-01-2018"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "18-12-2018",
+      "entry_into_force": "01-04-2019",
+      "jurisdiction": "Malta*",
+      "no": 65,
+      "notifications": "02-10-2024",
+      "page": 3,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "18-10-2019",
+      "entry_into_force": "01-02-2020",
+      "jurisdiction": "Mauritius",
+      "no": 66,
+      "page": 3,
+      "signature": "05-07-2017"
+    },
+    {
+      "deposit": "15-03-2023",
+      "entry_into_force": "01-07-2023",
+      "jurisdiction": "Mexico",
+      "no": 67,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "10-01-2019",
+      "entry_into_force": "01-05-2019",
+      "jurisdiction": "Monaco",
+      "no": 68,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "30-09-2024",
+      "entry_into_force": "01-01-2025",
+      "jurisdiction": "Mongolia",
+      "no": 69,
+      "page": 4,
+      "signature": "06-10-2022"
+    },
+    {
+      "deposit": "06-05-2026",
+      "entry_into_force": "01-09-2026",
+      "jurisdiction": "Montenegro",
+      "no": 70,
+      "page": 4,
+      "signature": "12-11-2025"
+    },
+    {
+      "jurisdiction": "Morocco",
+      "no": 71,
+      "page": 4,
+      "signature": "25-06-2019"
+    },
+    {
+      "jurisdiction": "Namibia",
+      "no": 72,
+      "page": 4,
+      "signature": "30-09-2021"
+    },
+    {
+      "arbitration_profile": "15-09-2026",
+      "deposit": "29-03-2019",
+      "entry_into_force": "01-07-2019",
+      "jurisdiction": "Netherlands",
+      "no": 73,
+      "notifications": "25-11-2021",
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "29-09-2025",
+      "deposit": "27-06-2018",
+      "entry_into_force": "01-10-2018",
+      "jurisdiction": "New Zealand",
+      "no": 74,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "jurisdiction": "Nigeria",
+      "no": 75,
+      "page": 4,
+      "signature": "17-08-2017"
+    },
+    {
+      "jurisdiction": "North Macedonia",
+      "no": 76,
+      "page": 4,
+      "signature": "29-01-2020"
+    },
+    {
+      "deposit": "17-07-2019",
+      "entry_into_force": "01-11-2019",
+      "jurisdiction": "Norway",
+      "no": 77,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "07-07-2020",
+      "entry_into_force": "01-11-2020",
+      "jurisdiction": "Oman",
+      "no": 78,
+      "page": 4,
+      "signature": "26-11-2019"
+    },
+    {
+      "deposit": "18-12-2020",
+      "entry_into_force": "01-04-2021",
+      "jurisdiction": "Pakistan",
+      "no": 79,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "05-11-2020",
+      "entry_into_force": "01-03-2021",
+      "jurisdiction": "Panama",
+      "no": 80,
+      "page": 4,
+      "signature": "24-01-2018"
+    },
+    {
+      "arbitration_profile": "11-01-2024",
+      "deposit": "31-08-2023",
+      "entry_into_force": "01-12-2023",
+      "jurisdiction": "Papua New Guinea",
+      "no": 81,
+      "page": 4,
+      "signature": "23-01-2019"
+    },
+    {
+      "deposit": "09-06-2025",
+      "entry_into_force": "01-10-2025",
+      "jurisdiction": "Peru",
+      "no": 82,
+      "page": 4,
+      "signature": "27-06-2018"
+    },
+    {
+      "deposit": "23-01-2018",
+      "entry_into_force": "01-07-2018",
+      "jurisdiction": "Poland*",
+      "no": 83,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "deposit": "28-02-2020",
+      "entry_into_force": "01-06-2020",
+      "jurisdiction": "Portugal",
+      "no": 84,
+      "notifications": "06-03-2023",
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "23-12-2019",
+      "entry_into_force": "01-04-2020",
+      "jurisdiction": "Qatar*",
+      "no": 85,
+      "notifications": "25-11-2021",
+      "page": 4,
+      "signature": "04-12-2018"
+    },
+    {
+      "deposit": "28-02-2022",
+      "entry_into_force": "01-06-2022 15-09-2026",
+      "jurisdiction": "Romania",
+      "no": 86,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "18-06-2019",
+      "entry_into_force": "01-10-2019 17-01-2024",
+      "jurisdiction": "Russian Federation",
+      "no": 87,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "11-03-2020",
+      "entry_into_force": "01-07-2020",
+      "jurisdiction": "San Marino*",
+      "no": 88,
+      "page": 4,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "23-01-2020",
+      "entry_into_force": "01-05-2020",
+      "jurisdiction": "Saudi Arabia*",
+      "no": 89,
+      "page": 4,
+      "signature": "18-09-2018"
+    },
+    {
+      "deposit": "10-05-2022",
+      "entry_into_force": "01-09-2022",
+      "jurisdiction": "Senegal",
+      "no": 90,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "05-06-2018",
+      "entry_into_force": "01-10-2018",
+      "jurisdiction": "Serbia",
+      "no": 91,
+      "notifications": "27-09-2023",
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "14-12-2021",
+      "entry_into_force": "01-04-2022",
+      "jurisdiction": "Seychelles",
+      "no": 92,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "20-12-2024",
+      "deposit": "21-12-2018",
+      "entry_into_force": "01-04-2019",
+      "jurisdiction": "Singapore",
+      "no": 93,
+      "notifications": "11-08-2021",
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "20-09-2018",
+      "entry_into_force": "01-01-2019",
+      "jurisdiction": "Slovak Republic",
+      "no": 94,
+      "notifications": "02-10-2024",
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "22-03-2018",
+      "entry_into_force": "01-07-2018",
+      "jurisdiction": "Slovenia",
+      "no": 95,
+      "notifications": "15-09-2026",
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "30-09-2022",
+      "entry_into_force": "01-01-2023",
+      "jurisdiction": "South Africa",
+      "no": 96,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "deposit": "28-09-2021",
+      "entry_into_force": "01-01-2022 26-05-2026",
+      "jurisdiction": "Spain",
+      "no": 97,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "25-03-2021",
+      "deposit": "22-06-2018",
+      "entry_into_force": "01-10-2018",
+      "jurisdiction": "Sweden",
+      "no": 98,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "arbitration_profile": "28-06-2022",
+      "deposit": "29-08-2019",
+      "entry_into_force": "01-12-2019 28-05-2026",
+      "jurisdiction": "Switzerland",
+      "no": 99,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "31-03-2022",
+      "entry_into_force": "01-07-2022",
+      "jurisdiction": "Thailand",
+      "no": 100,
+      "page": 5,
+      "signature": "09-02-2022"
+    },
+    {
+      "deposit": "24-07-2023",
+      "entry_into_force": "01-11-2023",
+      "jurisdiction": "Tunisia",
+      "no": 101,
+      "page": 5,
+      "signature": "24-01-2018"
+    },
+    {
+      "jurisdiction": "Türkiye",
+      "no": 102,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "08-08-2019",
+      "entry_into_force": "01-12-2019",
+      "jurisdiction": "Ukraine*",
+      "no": 103,
+      "notifications": "20-10-2025",
+      "page": 5,
+      "signature": "23-07-2018"
+    },
+    {
+      "deposit": "29-05-2019",
+      "entry_into_force": "01-09-2019",
+      "jurisdiction": "United Arab Emirates*",
+      "no": 104,
+      "page": 5,
+      "signature": "27-06-2018"
+    },
+    {
+      "arbitration_profile": "31-05-2024",
+      "deposit": "29-06-2018",
+      "entry_into_force": "01-10-2018",
+      "jurisdiction": "United Kingdom*",
+      "no": 105,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "06-02-2020",
+      "entry_into_force": "01-06-2020",
+      "jurisdiction": "Uruguay",
+      "no": 106,
+      "page": 5,
+      "signature": "07-06-2017"
+    },
+    {
+      "deposit": "23-05-2023",
+      "entry_into_force": "01-09-2023",
+      "jurisdiction": "Viet Nam",
+      "no": 107,
+      "page": 5,
+      "signature": "09-02-2022"
+    }
+  ],
+  "sha256": "522f7a9c9b93ec9570dbe68a5e62dea5232a6ffe72d23dc67d6408987fc6c60a",
+  "source": "mli-signatories-and-parties",
+  "status_as_of": {
+    "date": "2026-09-15",
+    "printed": "15 September 2026"
+  }
+}
