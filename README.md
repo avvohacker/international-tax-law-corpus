@@ -15,13 +15,14 @@ Three layers, three repositories, one contract of fidelity:
 * **library** ([international-tax-law-library](https://github.com/avvohacker/international-tax-law-library)) — the bilateral treaties people work on, contributed as
   they go: each treaty enters with the same fidelity contract (source hash,
   page-anchored units, declared gaps, no invention). Invitation: as you work a
-  treaty, put it here. **State**: contract walking, first treaty in —
-  `uk-us-2001` (US–UK 2001, 39 pages, 0 gaps), rebuilt byte-identically by
-  CI on every push.
+  treaty, put it here.  **State**: contract walking, two treaties in —
+  `uk-us-2001` (US–UK 2001, 39 pages) and `no-uk-2013` (UK–Norway 2013,
+  28 pages), rebuilt byte-identically by CI on every push.
 * **mcp** ([international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp)) — the query mind over corpus plus library: treaty
   questions answered from the data (as-modified verdicts), never from guesses.
-  **State**: scaffold — README, LICENSE, TDM; the server lands once the
-  library walks.
+  **State**: server — five tools answering from this corpus and the library,
+  including the as-modified chain of MLI Articles behind a verdict, and
+  refusing when they cannot; tested over the protocol in CI.
 
 ## Roadmap
 
@@ -30,8 +31,9 @@ Three layers, three repositories, one contract of fidelity:
 2. **Library walks** (now) — bilateral treaties enter one by one under the
    same fidelity contract; the first is in (`uk-us-2001`) as the proof, with
    fetch + rebuild + contract tests in CI.
-3. **MCP walks** (after) — the server over corpus plus library: as-modified
-   verdicts, citations to units, and silence where the data is silent.
+3. **MCP walks** (now) — this server is built: five tools over corpus plus
+   library, as-modified verdicts, citations to units, and silence where the
+   data is silent.
 4. **OECD Model** (later) — a corpus extension once 1–3 walk; excluded today
    on scope grounds only.
 
