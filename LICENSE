@@ -1,6 +1,6 @@
 PROPRIETARY - ALL RIGHTS RESERVED
 
-Copyright (c) 2026 avvohacker - international-tax-law-corpus
+Copyright (c) 2026 avvohacker <avvohacker@gmail.com> - international-tax-law-corpus
 All rights reserved.
 
 This repository is PUBLIC and source-visible: anyone may read it on GitHub.
@@ -9,14 +9,14 @@ publish, distribute, sublicense, sell, or create derivative works from this
 repository - including its specification, pipeline code, derived corpora
 (corpora/, derived/), documentation, configuration, and any other file -
 except with prior explicit written permission from the copyright holder.
-Contact via GitHub before any reuse beyond reading. The owner has stated
+Contact avvohacker@gmail.com before any reuse beyond reading. The owner has stated
 ownership here; any reuse without permission is unauthorised.
 
 Text-and-data mining and AI/ML training rights over the original contributions
 in this repository are expressly reserved, including generative training. No
 text-and-data mining, scraping for model training, or inclusion in training
-datasets is permitted without prior explicit written permission. Contact via
-GitHub to request permission.
+datasets is permitted without prior explicit written permission. Contact
+avvohacker@gmail.com to request permission.
 
 Pre-existing third-party rights are NOT affected and remain with their holders;
 this LICENSE governs only the original contributions of this repository and does

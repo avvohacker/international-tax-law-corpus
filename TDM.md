@@ -16,7 +16,7 @@ What is not permitted without prior explicit written permission: text-and-data
 mining, scraping for model training, or inclusion of any part of this
 repository in training datasets.
 
-How to request permission: contact via GitHub before any reuse beyond reading.
+How to request permission: contact avvohacker@gmail.com before any reuse beyond reading.
 
 This is a human-readable record of intent. It does not replace the `LICENSE`,
 and it is not, on its own, a machine-readable reservation on hosts the

@@ -190,7 +190,7 @@ code, comments, tests, reports, documents - is English (invariant F13).
 ## Rights
 
 See `LICENSE`. All rights reserved; this repository is public and source-visible.
-Contact via GitHub before any reuse beyond reading. Text-and-data mining and
+Contact avvohacker@gmail.com before any reuse beyond reading. Text-and-data mining and
 AI/ML training rights, including generative training, are expressly reserved;
 see `TDM.md`. Third-party rights in the
 source documents remain with their holders and are not affected by it.
