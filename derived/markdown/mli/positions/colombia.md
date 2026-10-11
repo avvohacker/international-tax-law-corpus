@@ -16,3 +16,15 @@
 | 8 | Mexico | Original | 13-08-2009 | 11-07-2013 | 3 |
 | 9 | Portugal | Original | 30-08-2010 | 30-01-2015 | 3 |
 | 10 | Switzerland | Original | 26-10-2007 | 11-09-2011 | 3 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 1 row(s) between them. Every announcement's table was read.*
+
+### Article 6 — the list under the reservation on page 6, one list
+
+*1 row(s), printed on page 6.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 5 | France | DESIRING to further develop their economic relationship and to enhance their cooperation in tax matters, INTENDING to conclude a Convention fot the elimination of double taxation with respect to taxes on income and on capital without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance (including through treaty shopping arrangements aimed at obtaining reliefs provided in this Convention for the indirect benefit of residents of third States) TAKING NOTE of the OECD Model Tax Convention as interpreted by the Commentaries thereon, Have agreed as follows: | 6 |

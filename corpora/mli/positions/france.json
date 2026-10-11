@@ -1896,6 +1896,15 @@
       "resolved_from": "the document's own title",
       "slug": "france",
       "title_read": "FRANCE"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "8feab381125ae31c9ca191bc4845200d1e703a1bd3bcf842359c66184f96c297",

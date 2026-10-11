@@ -103,6 +103,7 @@
         "mli_article_title": "Type of Arbitration Process",
         "option_title": "",
         "page": 26,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -129,6 +130,7 @@
         "mli_article_title": "Agreement on a Different Resolution",
         "option_title": "",
         "page": 27,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -139,6 +141,7 @@
         "mli_article_title": "Compatibility",
         "option_title": "",
         "page": 28,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -157,6 +160,7 @@
         "mli_article_title": "Reservations",
         "option_title": "Formulated for Scope of Arbitration",
         "page": 29,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -1079,6 +1083,15 @@
       "resolved_from": "the document's own title",
       "slug": "new-zealand",
       "title_read": "New Zealand"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "80084fa717414a566c884a1892da8e46675590761bf38361e9a15c9ce7569502",

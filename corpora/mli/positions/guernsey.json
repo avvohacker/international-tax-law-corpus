@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -37,6 +40,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -47,6 +51,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -57,6 +62,7 @@
         "mli_article_title": "Definition of a Person Closely Related to an Enterprise",
         "option_title": "",
         "page": 6,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -77,6 +83,82 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 7,
+        "scope_lists": [
+          {
+            "headings": [
+              "Provision",
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction"
+            ],
+            "page": 7,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Cyprus",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Hong Kong",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "Liechtenstein",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 4,
+                "other_jurisdiction": "Luxembourg",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Malta",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Mauritius",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Monaco",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "Qatar",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Seychelles",
+                "page": 7,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Singapore",
+                "page": 7,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 364.7
+          }
+        ],
         "truncated": false
       }
     ],
@@ -87,6 +169,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 2,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -97,6 +180,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 8,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -107,6 +191,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 2,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -117,6 +202,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 3,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -137,6 +223,7 @@
         "mli_article_title": "Prevention of Treaty Abuse",
         "option_title": "",
         "page": 4,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -155,6 +242,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 4,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -165,6 +253,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -407,6 +496,15 @@
       "resolved_from": "the document's own title",
       "slug": "guernsey",
       "title_read": "Guernsey"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 10,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "a3bb0be3b1682937d3202050e3abcf201fd359af7106ad04b7b160552fd03dc6",

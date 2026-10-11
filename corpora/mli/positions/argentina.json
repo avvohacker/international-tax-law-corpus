@@ -7,6 +7,28 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 13,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 13,
+            "read": true,
+            "rows": [
+              {
+                "no": 4,
+                "other_jurisdiction": "Chile",
+                "page": 13,
+                "text": "Article 24(8)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 361.9
+          }
+        ],
         "truncated": false
       }
     ],
@@ -27,6 +49,28 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 15,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 15,
+            "read": true,
+            "rows": [
+              {
+                "no": 4,
+                "other_jurisdiction": "Chile",
+                "page": 15,
+                "text": "Article 5(4)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 363.2
+          }
+        ],
         "truncated": false
       },
       {
@@ -131,6 +175,38 @@
         "mli_article_title": "Purpose of a Covered Tax Agreement",
         "option_title": "",
         "page": 7,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed",
+              "Other",
+              "Agreement",
+              "Contracting",
+              "Preamble Text",
+              "Number",
+              "Jurisdiction"
+            ],
+            "page": 7,
+            "read": true,
+            "rows": [
+              {
+                "no": 4,
+                "other_jurisdiction": "Chile",
+                "page": 7,
+                "text": "La República Argentina y la República de Chile, Deseosos de promover el desarrollo de su relación económica y fortalecer su cooperación en materia tributaria, Con la intención de concluir un Convenio para la eliminación de la doble imposición en relación a los impuestos sobre la renta y sobre el patrimonio sin crear oportunidades para situaciones de nula o reducida tributación a través de evasión o elusión fiscal (incluyendo aquellos acuerdos para el uso abusivo de tratados -treaty-shopping- dirigidos a que residentes de terceros Estados obtengan indirectamente beneficios de este Convenio)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Mexico",
+                "page": 7,
+                "text": "La República Argentina y los Estados Unidos Mexicanos, con el objeto de promover el desarrollo de sus relaciones económicas y la cooperación en materia fiscal, y deseosos de concluir un Acuerdo para evitar la doble imposición y prevenir la evasión fiscal con respecto a los impuestos sobre la renta y el patrimonio, sin crear oportunidades para la no imposición o imposición reducida a través de la evasión o elusión fiscal (incluyendo a través de acuerdos para el uso abusivo de tratados cuyo objetivo es extender indirectamente los beneficios previstos en este Acuerdo a residentes de terceros Estados)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 201.7
+          }
+        ],
         "truncated": false
       },
       {
@@ -165,6 +241,60 @@
         "mli_article_title": "Prevention of Treaty Abuse",
         "option_title": "",
         "page": 10,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 10,
+            "read": true,
+            "rows": [
+              {
+                "no": 4,
+                "other_jurisdiction": "Chile",
+                "page": 10,
+                "text": "Article 24(6)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Mexico",
+                "page": 10,
+                "text": "Article 28(7)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 361.9
+          },
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 10,
+            "read": true,
+            "rows": [
+              {
+                "no": 4,
+                "other_jurisdiction": "Chile",
+                "page": 10,
+                "text": "Article 24(1) through (5)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Mexico",
+                "page": 10,
+                "text": "Article 28(1) through (5)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 349.3
+          }
+        ],
         "truncated": false
       },
       {
@@ -745,6 +875,15 @@
       "resolved_from": "the document's own title",
       "slug": "argentina",
       "title_read": "Argentina pursuant to Articles 28(7) and 29(4) of the Convention."
+    },
+    "scope_lists": {
+      "announced": 5,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 1,
+      "read": 5,
+      "rows": 8,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "89748d458daee6e43311fe452ed38fc455ce7a41b18518aaf2820838d0e690db",

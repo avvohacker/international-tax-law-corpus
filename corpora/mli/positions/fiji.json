@@ -133,6 +133,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 4,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -475,6 +476,15 @@
       "resolved_from": "the document's own title",
       "slug": "fiji",
       "title_read": "Fiji"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "99075a1ef44f06572ecccd82c58b11dba02e23b44af1842c0c339a29841c9964",

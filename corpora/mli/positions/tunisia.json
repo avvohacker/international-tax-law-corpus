@@ -627,6 +627,15 @@
       "resolved_from": "the document's own title",
       "slug": "tunisia",
       "title_read": "La République Tunisienne"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "81dfd78ca2cfa6769162c3202c7a8a9091e5ccace640b079b6fe03219c55b748",

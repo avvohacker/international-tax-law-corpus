@@ -90,3 +90,34 @@
 | 82 | United States | Original | 25-08-1999 | 16-12-2009 | 13 |
 | 83 | Vietnam | Original | 26-11-1996 | 22-02-1999 | 13 |
 | 84 | Zambia | Original Amending Instrument (a) | 27-10-1972 13-11-1980 | 30-03-1990 30-03-1990 | 14 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 13 row(s) between them. 1 statement(s) announce more than one list, and every one is printed below. Every announcement's table was read.*
+
+### Article 7 — the list under the reservation on page 23, list 1 of 2
+
+*12 row(s), printed on page 24.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 5 | Azerbaijan -20 Estonia | Article 30(1) Article 28 (1) | 24 |
+| 27 | Hong Kong | Article 27; Art.10(6); Art.11(8); Art.12(7); Art. 21(4) | 24 |
+| 29 | Iceland | Article 8 a) Protocol | 24 |
+| 36 | Kazakhstan | Article 29(1) | 24 |
+| 39 | Kuwait | Protocol b) Art. 6 | 24 |
+| 40 | Latvia | Article 30(1) | 24 |
+| 41 | Lebanon | Article 29(1) | 24 |
+| 42 | Lithuania | Article 30(1) | 24 |
+| 49 | Mongolia | Article 29(1) | 24 |
+| 58 | Qatar | Article 29(1) | 24 |
+| 62 | San Marino | Article 29(1) | 24 |
+| 63 | Saudi Arabia | Article 29(1) | 24 |
+
+### Article 7 — the list under the reservation on page 23, list 2 of 2
+
+*1 row(s), printed on page 24.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 82 | United States of America | Article 2 - Protocol | 24 |

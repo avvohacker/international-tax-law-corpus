@@ -27,3 +27,45 @@
 | 19 | Singapore | Original 11-12- 2013 | 18-12-2015 |  | 4 |
 | 20 | Saint Kitts and Nevis | Original 20-04- 2010 | 12-02-2014 |  | 4 |
 | 21 | Vietnam T +378 (0549) 882 661 | Original 14-02- 2013 | 13-01-2016 |  | 4 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 24 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 24, one list
+
+*21 row(s), printed on page 24.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Austria | Article 9(2) | 24 |
+| 2 | Azerbaijan | Article 9(2) | 24 |
+| 3 | Barbados | Article 9(2) | 24 |
+| 4 | Belgium | Article 9(2) | 24 |
+| 5 | Croatia | Article 9(2) | 24 |
+| 6 | Cyprus | Article 9(2) | 24 |
+| 7 | Georgia | Article 9(2) | 24 |
+| 8 | Greece | Article 9(2) | 24 |
+| 9 | Hungary | Article 9(2) | 24 |
+| 10 | Italy | Article 9(2) | 24 |
+| 11 | Liechtenstein | Article 9(2) | 24 |
+| 12 | Luxembourg | Article 9(2) | 24 |
+| 13 | Malaysia | Article 9(2) | 24 |
+| 14 | Malta | Article 9(2) | 24 |
+| 15 | Portugal | Article 9(2) | 24 |
+| 16 | Qatar | Article 9(2) | 24 |
+| 17 | Romania | Article 9(2) | 24 |
+| 18 | Seychelles | Article 9(2) | 24 |
+| 19 | Singapore | Article 9(2) | 24 |
+| 20 | Saint Kitts and Nevis | Article 9(2) | 24 |
+| 21 | Vietnam | Article 9(2) | 24 |
+
+### Article 7 — the list under the reservation on page 12, one list
+
+*3 row(s), printed on page 12.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 2 | Azerbaijan | Article 29(1) | 12 |
+| 3 | Barbados | Article 28(1) | 12 |
+| 10 | Italy | Article 29(1) | 12 |

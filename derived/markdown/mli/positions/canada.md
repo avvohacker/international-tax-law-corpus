@@ -81,3 +81,74 @@
 | 73 | Vietnam |  | 14-11-1997 | 16-12-1998 | 13 |
 | 74 | Zambia |  | 16-02-1984 | 28-12-1989 | 13 |
 | 75 | Zimbabwe |  | 16-04-1992 | 15-12-1994 | 13 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 60 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 21, one list
+
+*60 row(s), printed on page 21.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 9(2) | 21 |
+| 2 | Australia | Article 9(3) | 21 |
+| 4 | Azerbaijan | Article 9(2) | 21 |
+| 5 | Bangladesh | Article 9(2) | 21 |
+| 6 | Barbados | Article IX(2) | 21 |
+| 7 | Belgium | Article 9(2) | 21 |
+| 9 | Bulgaria | Article 9(2) | 21 |
+| 11 | Chile | Article 9(2) | 21 |
+| 13 | Colombia | Article 9(2) | 21 |
+| 15 | Cyprus | Article 9(2) | 21 |
+| 16 | Czech Republic | Article 9(2) | 21 |
+| 17 | Denmark | Article 9(2) | 21 |
+| 18 | Dominican Republic | Article 9(2) | 21 |
+| 19 | Egypt | Article 9(2) | 21 |
+| 20 | Estonia | Article 9(2) | 22 |
+| 21 | Finland | Article 9(2) | 22 |
+| 24 | Greece | Article 9(2) | 22 |
+| 25 | Hong Kong | Article 9(2) | 22 |
+| 26 | Hungary | Article 9(2) | 22 |
+| 27 | Iceland | Article 9(2) | 22 |
+| 28 | India | Article 9(2) | 22 |
+| 30 | Ireland | Article 9(2) | 22 |
+| 31 | Israel | Article 9(2) | 22 |
+| 32 | Italy | Article 9(2) | 22 |
+| 33 | Jamaica | Article 9(2) | 22 |
+| 34 | Japan | Article 9(2) | 22 |
+| 35 | Jordon | Article 9(2) | 22 |
+| 37 | Kenya | Article 9(2) | 22 |
+| 38 | Korea, Rep. of | Article 9(2) | 22 |
+| 39 | Latvia | Article 9(2) | 22 |
+| 40 | Lithuania | Article 9(2) | 22 |
+| 41 | Luxembourg | Article 9(2) | 22 |
+| 43 | Malta | Article 9(2) | 22 |
+| 44 | Mexico | Article 9(2) | 22 |
+| 45 | Moldova | Article 9(2) | 22 |
+| 48 | Netherlands | Article 9(2) | 22 |
+| 49 | New Zealand | Article 9(2) | 22 |
+| 50 | Nigeria | Article 9(2) | 22 |
+| 53 | Philippines | Article 9(2) | 22 |
+| 54 | Poland | Article 9(2) | 22 |
+| 55 | Portugal | Article 9(2) | 22 |
+| 56 | Romania | Article 9(2) | 22 |
+| 57 | Russia | Article 9(2) | 22 |
+| 58 | Senegal | Article 9(2) | 22 |
+| 59 | Serbia | Article 9(2) | 22 |
+| 61 | Slovak Republic | Article 9(2) | 22 |
+| 62 | Slovenia | Article 9(2) | 22 |
+| 63 | South Africa | Article 9(2) | 22 |
+| 64 | Spain | Article 9(2) | 22 |
+| 65 | Sri Lanka | Article 9(2) | 23 |
+| 66 | Sweden | Article 9(2) | 23 |
+| 67 | Tanzania | Article 9(2) | 23 |
+| 68 | Thailand | Article 9(2) | 23 |
+| 69 | Tunisia | Article 9(2) | 23 |
+| 70 | Turkey | Article 9(2) | 23 |
+| 71 | Ukraine | Article 9(2) | 23 |
+| 72 | United Kingdom | Article 9(2) | 23 |
+| 73 | Vietnam | Article 9(2) | 23 |
+| 74 | Zambia | Article IX(2) | 23 |
+| 75 | Zimbabwe | Article 9(2) | 23 |

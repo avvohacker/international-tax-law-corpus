@@ -32,3 +32,28 @@
 | 24 | Ukraine | Original | 01-07-2002 | 03-11-2006 | 3 |
 | 25 | United Kingdom | Original | 23-04-1996 | 04-12-1996 | 3 |
 | 26 | Vietnam | Original | 09-05-1996 | 11-10-1996 | 3 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 14 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 18, one list
+
+*14 row(s), printed on page 18.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Аustria | Article 9(2) | 19 |
+| 2 | Belarus | Article 9(2) | 19 |
+| 4 | Bulgaria | Article 9(2) | 19 |
+| 6 | China | Article 9(2) | 19 |
+| 8 | France | Article 9(2) | 19 |
+| 10 | Hungary | Article 9(2) | 19 |
+| 12 | Indonesia | Article 9(2) | 19 |
+| 13 | Italy | Article 9(2) | 19 |
+| 14 | Kazakhstan | Article 9(2) | 19 |
+| 15 | Korea (Rep.) | Article 9(2) | 19 |
+| 18 | North Korea | Article 9(2) | 19 |
+| 20 | Russia | Article 9(2) | 19 |
+| 23 | Turkey | Article 9(2) | 19 |
+| 25 | United Kingdom | Article 9(2) | 19 |

@@ -64,3 +64,42 @@
 | 56 | United States Original |  | 26-11-1996 | 15-12-1997 | 8 |
 | 57 | Uzbekistan Original |  | 23-04-1999 | 21-07-1999 | 8 |
 | 58 | Vietnam Original |  | 23-12-1992 | 31-12-1992 | 8 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 28 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 31, one list
+
+*28 row(s), printed on page 31.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Armenia | Article 9(2) | 31 |
+| 2 | Australia | Article 9(3) | 31 |
+| 6 | Belarus | Article 9(2) | 31 |
+| 8 | Bulgaria | Article 9(2) | 31 |
+| 9 | Cambodia | Article 9(2) | 31 |
+| 10 | Canada | Article 9(2) | 31 |
+| 11 | Chile | Article 9(2) | 31 |
+| 16 | Estonia | Article 9(2) | 31 |
+| 17 | Finland | Article 9(2) | 31 |
+| 20 | Hong Kong (China) | Article 9(2) | 31 |
+| 22 | India | Article 9(2) | 31 |
+| 24 | Ireland | Article 9(2) | 31 |
+| 27 | Japan | Article 9(2) | 31 |
+| 28 | Korea | Article 9(2) | 31 |
+| 29 | Kuwait | Article 9(2) | 31 |
+| 35 | Nepal | Article 9(2) | 31 |
+| 36 | New Zealand | Article 9(3) | 31 |
+| 37 | Oman | Article 9(2) | 31 |
+| 38 | Pakistan | Article 9(2) | 31 |
+| 39 | Philippines | Article 9(2) | 31 |
+| 43 | Seychelles | Article 9(2) | 31 |
+| 44 | Singapore | Article 9(2) | 31 |
+| 51 | Tajikistan | Article 9(2) | 31 |
+| 52 | Turkey | Article 9(2) | 31 |
+| 53 | Ukraine | Article 9(2) | 31 |
+| 54 | United Arab Emirates | Article 9(2) | 31 |
+| 56 | United States | Article 9(2) | 31 |
+| 57 | Uzbekistan | Article 9(2) | 31 |

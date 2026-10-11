@@ -122,6 +122,15 @@
       "resolved_from": "the document's own title",
       "slug": "switzerland",
       "title_read": "Confédération suisse"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "2798f5c4bc2cb81ecd71bd9275051769089ea91e635ccca40cccb1d1cbb2d80f",

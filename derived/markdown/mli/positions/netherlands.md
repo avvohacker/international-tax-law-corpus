@@ -88,3 +88,64 @@
 | 80 | Zambia Original |  | 19-12-1977 | 09-11-1982 | 12 |
 | 81 | Zambia Original |  | 15-7-2015 | N/A | 12 |
 | 82 | Zimbabwe Original |  | 18-05-1989 | 21-04-1991 | 12 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 43 row(s) between them. Every announcement's table was read.*
+
+### Article 14 — the list under the reservation on page 38, one list
+
+*40 row(s), printed on page 38.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 23A | 38 |
+| 2 | Argentina | Article 26 | 38 |
+| 3 | Armenia | Article 25 | 38 |
+| 6 | Azerbaijan | Article 24 | 38 |
+| 7 | Bahrain | Article 23 | 38 |
+| 9 | Barbados | Article 25 | 38 |
+| 10 | Belarus | Article 24 | 38 |
+| 12 | Canada | Article 23 | 38 |
+| 14 | Croatia | Article 24 | 38 |
+| 16 | Egypt | Article 23 | 38 |
+| 17 | Estonia | Article 25 | 38 |
+| 18 | Ethiopia | Article 5(4),(5) and (6) | 38 |
+| 19 | Finland | Article 24 | 38 |
+| 21 | Georgia | Article 24 | 38 |
+| 22 | Germany | Article 5(4) | 38 |
+| 25 | Hong Kong | Article 22 | 38 |
+| 27 | Iceland | Article 25 | 38 |
+| 29 | Indonesia | Article 25 | 38 |
+| 33 | Jordan | Article 23 | 38 |
+| 34 | Kazakhstan | Article 25 | 38 |
+| 37 | Kuwait | Article 24 | 38 |
+| 38 | Latvia | Article 25 | 38 |
+| 39 | Lithuania | Article 25 | 38 |
+| 41 | Macedonia (FYROM) | Article 25 | 38 |
+| 46 | Moldova | Article 24 | 38 |
+| 51 | Norway | Article 24(3) | 38 |
+| 54 | Panama | Article 5(4) and (5) | 38 |
+| 56 | Portugal | Article 25 | 38 |
+| 57 | Qatar | Article 23 | 38 |
+| 58 | Romania | Article 25 | 38 |
+| 59 | Russian Federation | Article 24 | 38 |
+| 64 | Slovenia | Article 23 | 38 |
+| 65 | South Africa | Article 24 | 38 |
+| 68 | Sweden | Article 25 | 38 |
+| 73 | Uganda | Article 23 | 38 |
+| 75 | United Kingdom | Article 23 | 38 |
+| 76 | United States of America | Article 27 | 38 |
+| 77 | Uzbekistan | Article 25 | 38 |
+| 78 | Venezuela | Article 24 | 38 |
+| 81 | Zambia | Article 5(4),(5) and (6) | 38 |
+
+### Article 3 — the list under the reservation on page 13, one list
+
+*3 row(s), printed on page 13.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 32 | Japan | Article 4(5) | 13 |
+| 75 | United Kingdom | Article 22(3), (4) and (5) | 13 |
+| 76 | United States of America | Article 24(4) and Memorandum of Understanding (XIV) | 13 |

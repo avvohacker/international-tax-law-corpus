@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -25,6 +27,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -45,6 +48,42 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 22,
+        "scope_lists": [
+          {
+            "headings": [
+              "Provision",
+              "Listed Agreement",
+              "Other Contracting",
+              "Number",
+              "Jurisdiction"
+            ],
+            "page": 22,
+            "read": true,
+            "rows": [
+              {
+                "no": 25,
+                "other_jurisdiction": "Latvia",
+                "page": 22,
+                "text": "Article 21"
+              },
+              {
+                "no": 26,
+                "other_jurisdiction": "Lithuania",
+                "page": 22,
+                "text": "Article 21"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Moldova",
+                "page": 22,
+                "text": "Articles 14(4) and 15(3)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 353.9
+          }
+        ],
         "truncated": false
       }
     ],
@@ -83,6 +122,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -93,6 +133,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -103,6 +144,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -141,6 +183,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -151,6 +194,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -1075,6 +1119,15 @@
       "resolved_from": "the document's own title",
       "slug": "azerbaijan",
       "title_read": "Republic of Azerbaijan"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 3,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "7d4020e9dca363c05af2d5d16e3432509ea053230c4bb1b5afdfd148634f0f6e",

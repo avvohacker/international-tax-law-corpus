@@ -25,3 +25,33 @@
 | 17 | Sweden | Original | 18-11-2004 | N/A | 3 |
 | 18 | United Arab Emirates | Original | 18-01-2016 | N/A | 3 |
 | 19 | United Kingdom of Great Britain and Northern Ireland | Original | 09-06-1987 | 27-12-1987 | 4 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 19 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 17, one list
+
+*19 row(s), printed on page 17.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Belgium | Article 9(2) | 17 |
+| 2 | Canada | Article 9(2) | 17 |
+| 3 | China | Article 9(2) | 17 |
+| 4 | Czechoslovak Socialist Republic (Czech Republic) | Article 8(2) | 17 |
+| 5 | Czechoslovak Socialist Republic (Slovak Republic) | Article 8(2) | 17 |
+| 6 | France | Article 9(2) | 17 |
+| 7 | Korea | Article 9(2) | 17 |
+| 8 | Mauritius | Article 9(2) | 17 |
+| 9 | Netherlands | Article 9(2) | 17 |
+| 10 | Pakistan | Article 9(2) | 17 |
+| 11 | Philippines | Article 9(2) | 17 |
+| 12 | Qatar | Article 9(2) | 17 |
+| 13 | Romania | Article 9(2) | 17 |
+| 14 | Singapore | Article 9(2) | 17 |
+| 15 | South Africa | Article 9(2) | 17 |
+| 16 | Spain | Article 9(2) | 17 |
+| 17 | Sweden | Article 9(2) | 17 |
+| 18 | UAE | Article 10(2) | 17 |
+| 19 | United Kingdom | Article 9(2) | 17 |

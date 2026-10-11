@@ -16,3 +16,24 @@
 | 8 | Qatar | Original | 22-02-2013 | 11-07-2013 | 2 |
 | 9 | Seychelles | Original | 27-01-2014 | 06-10-2016 | 2 |
 | 10 | Singapore | Original | 06-02-2013 | 26-11-2013 | 2 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 10 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 7, one list
+
+*10 row(s), printed on page 7.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Cyprus | Article 9(2) | 7 |
+| 2 | Hong Kong | Article 9(2) | 7 |
+| 3 | Liechtenstein | Article 9(2) | 7 |
+| 4 | Luxembourg | Article 9(2) | 7 |
+| 5 | Malta | Article 9(2) | 7 |
+| 6 | Mauritius | Article 9(2) | 7 |
+| 7 | Monaco | Article 9(2) | 7 |
+| 8 | Qatar | Article 9(2) | 7 |
+| 9 | Seychelles | Article 9(2) | 7 |
+| 10 | Singapore | Article 9(2) | 7 |

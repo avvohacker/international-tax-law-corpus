@@ -67,3 +67,141 @@
 | 59 | United Kingdom | Original Amending Instrument (a) | 02-06-1994 23-04-2009 | 15-12-1994 18-01-2011 | 9 |
 | 60 | United States | Original Amending Instrument (a) Amending Instrument (b) | 18-09-1992 08-09-1994 26-11-2002 | 28-12-1993 26-10-1995 03-07-2003 | 9 |
 | 61 | Uruguay | Original | 14-08-2009 | 29-12-2010 | 9 |
+
+## The agreements the reservations bring within their scope
+
+*6 list(s) of agreements are announced under the reservations of this position: 6 read, holding 92 row(s) between them. 2 statement(s) announce more than one list, and every one is printed below. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 34, one list
+
+*46 row(s), printed on page 34.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 9(2) | 34 |
+| 2 | Australia | Article 9(2) | 34 |
+| 3 | Austria | Article 9(2) | 34 |
+| 4 | Bahrain | Article 9(2) | 34 |
+| 5 | Barbados | Article 9(2) | 34 |
+| 8 | Canada | Article 9(2) | 34 |
+| 9 | Chile | Article 9(2) | 34 |
+| 11 | Colombia | Article 9(2) | 34 |
+| 12 | Costa Rica | Article 9(2) | 34 |
+| 14 | Denmark | Article 9(2) | 34 |
+| 16 | Estonia | Article 9(2) | 34 |
+| 17 | Finland | Article 9(2) | 34 |
+| 19 | Germany | Article 9(2) | 34 |
+| 20 | Greece | Article 9(2) | 34 |
+| 21 | Guatemala | Article 9(2) | 34 |
+| 22 | Hong Kong | Article 9(2) | 34 |
+| 23 | Hungary | Article 9(2) | 34 |
+| 24 | Iceland | Article 9(2) | 34 |
+| 25 | India | Article 9(2) | 34 |
+| 27 | Ireland | Article 9(2) | 34 |
+| 28 | Israel | Article 9(2) | 34 |
+| 30 | Jamaica | Article 9(2) | 34 |
+| 31 | Japan | Article 9(2) | 34 |
+| 33 | Kuwait | Article 9(2) | 34 |
+| 34 | Latvia | Article 9(2) | 34 |
+| 35 | Lithuania | Article 9(2) | 34 |
+| 36 | Luxembourg | Article 9(2) | 34 |
+| 37 | Malta | Article 9(2) | 34 |
+| 38 | Netherlands | Article 9(2) | 34 |
+| 39 | New Zealand | Article 9(2) | 34 |
+| 42 | Peru | Article 9(2) | 34 |
+| 43 | Philippines | Article 9(2) | 34 |
+| 45 | Portugal | Article 9(2) | 34 |
+| 47 | Romania | Article 9(2) | 34 |
+| 48 | Russia | Article 9(2) | 34 |
+| 49 | Saudi Arabia | Article 9(2) | 34 |
+| 51 | Slovakia | Article 9(2) | 35 |
+| 52 | South Africa | Article 9(2) | 35 |
+| 53 | Spain | Article 9(2) (Amending Instrument (a)) | 35 |
+| 54 | Sweden | Article 9(2) | 35 |
+| 56 | Turkey | Article 9(2) | 35 |
+| 57 | Ukraine | Article 9(2) | 35 |
+| 58 | United Arab Emirates | Article 9(2) | 35 |
+| 59 | United Kingdom | Article 9(2) | 35 |
+| 60 | United States | Article 9(2) | 35 |
+| 61 | Uruguay | Article 9(2) | 35 |
+
+### Article 4 — the list under the reservation on page 10, list 1 of 2
+
+*2 row(s), printed on page 10.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 26 | Indonesia | Article 4 (3) | 10 |
+| 60 | United States | Article 4 (3) | 10 |
+
+### Article 4 — the list under the reservation on page 10, list 2 of 2
+
+*26 row(s), printed on page 11.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 4(3) | 11 |
+| 3 | Austria | Article 4(3) | 11 |
+| 5 | Barbados | Article 4(3) | 11 |
+| 7 | Brazil | Article 4(3) | 11 |
+| 8 | Canada | Article 4(3) | 11 |
+| 9 | Chile | Article 4(4) | 11 |
+| 11 | Colombia | Article 4(3) | 11 |
+| 13 | Czech Republic | Article 4(3) | 11 |
+| 14 | Denmark | Article 4(3) | 11 |
+| 19 | Germany | Article 4(3) | 11 |
+| 22 | Hong Kong | Article 4(3) | 11 |
+| 23 | Hungary | Article 4(3) | 11 |
+| 24 | Iceland | Article 4(3) | 11 |
+| 34 | Latvia | Article 4(3) | 11 |
+| 35 | Lithuania | Article 4(3) | 11 |
+| 37 | Malta | Article 4(3) | 11 |
+| 38 | Netherlands | Article 4(3) | 11 |
+| 41 | Panama | Article 4(3) | 11 |
+| 42 | Peru | Article 4(3) | 11 |
+| 46 | Qatar | Article 4(3) | 11 |
+| 48 | Russia | Article 4(3) | 11 |
+| 51 | Slovakia | Article 4 (3) | 11 |
+| 52 | South Africa | Article 4(3) | 11 |
+| 55 | Switzerland | Article 4(3) Amending Instrument (a) | 11 |
+| 56 | Turkey | Article 4(3) | 11 |
+| 61 | Uruguay | Article 4(3) | 11 |
+
+### Article 6 — the list under the reservation on page 12, one list
+
+*4 row(s), printed on page 12.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | La República Argentina y los Estados Unidos Mexicanos, con el objeto de promover el desarrollo de sus relaciones económicas y la cooperación en materia fiscal, y deseosos de concluir un Acuerdo para evitar la doble imposición y prevenir la evasión fiscal con respecto a los impuestos sobre la renta y el patrimonio, sin crear oportunidades para la no imposición o imposición reducida a través de la evasión o elusión fiscal (incluyendo a través de acuerdos para el uso abusivo de tratados cuyo objetivo es extender indirectamente los beneficios previstos en este Acuerdo a residentes de terceros Estados) | 12 |
+| 21 | Guatemala | DESEANDO fortalecer su relación económica así como incrementar su cooperación en materia tributaria y concluir un Acuerdo para Eliminar la Doble Imposición en materia del Impuesto sobre la Renta, sin crear oportunidades para la no imposición o imposición reducida, a través de la evasión o elusión fiscal (incluyendo operaciones a través de acuerdos para el uso abusivo de tratados - treaty shopping arrangements - cuyo objetivo es extender indirectamente los beneficios previstos en este Acuerdo a residentes de terceros Estados), | 13 |
+| 43 | Philippines | DESIRING to further develop their economic relationship and to enhance their cooperation in tax matters, INTENDING to conclude an between the Government of the United Mexican States and the Government of the Republic of the Philippines for the Avoidance of Double Taxation with Respect to Taxes on Income and the Prevention of Fiscal Evasion, without creating opportunities for non- taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Agreement for the indirect benefit of residents of third States) | 13 |
+| 53 | Spain | <DESEANDO promover el desarrollo de sus relaciones económicas y mejorar la cooperación en materia fiscal;> CON LA INTENCIÓN de concluir un convenio para evitar la doble imposición con respecto a los impuestos sobre la renta y sobre el patrimonio, sin generar oportunidades para la no imposición o la imposición reducida a través de la evasión o elusión fiscales (comprendidos los acuerdos para el uso abusivo de los convenios cuyo objetivo es permitir que residentes de terceros Estados se aprovechen indirectamente de los beneficios previstos en este Convenio); | 13 |
+
+### Article 7 — the list under the reservation on page 19, list 1 of 2
+
+*3 row(s), printed on page 19.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 28(7) | 19 |
+| 43 | Philippines | Article 22 (1) | 19 |
+| 53 | Spain | Protocol 1 b) (after amendment by Article XVII (1) of (a)) | 19 |
+
+### Article 7 — the list under the reservation on page 19, list 2 of 2
+
+*11 row(s), printed on page 20.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 11 | Colombia | Article 26(1) through (4) | 20 |
+| 12 | Costa Rica | Article 24 (1) through (4) Article 23(1) through (4) and | 20 |
+| 25 | Guatemala | (6) India Article 28 (1) through (5) | 20 |
+| 28 | Israel | Article 25(1) through (3) | 20 |
+| 30 | Jamaica | Article 24 (1) through (4) and (6) | 20 |
+| 33 | Kuwait | Article 22(1) (2) and (4) | 20 |
+| 41 | Panama | Article 10 (A) through (D) and (F) of the Protocol of the Convention | 20 |
+| 52 | South Africa | Article 21(1) through (4) | 20 |
+| 57 | Ukraine | Article 22(1) through (3) | 20 |
+| 58 | United Arab Emirates | Article 22(1) through (4) | 20 |
+| 60 | United States | Article 17 | 20 |

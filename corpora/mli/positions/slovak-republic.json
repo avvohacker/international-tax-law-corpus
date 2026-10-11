@@ -65,6 +65,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 26,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -91,6 +92,292 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 30,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 30,
+            "read": true,
+            "rows": [
+              {
+                "no": 3,
+                "other_jurisdiction": "Republic of Estonia",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 4,
+                "other_jurisdiction": "Ireland",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Malaysia",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Malta",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "The Republic of Singapore",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "The Swiss Confederation",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "The United Kingdom of Great Britain and Northern Ireland",
+                "page": 30,
+                "text": "Article 22(4)"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "The Republic of Bulgaria",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "The Republic of Latvia",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "The Republic of Lithuania",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Romania",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "The Kingdom of Denmark",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "The Grand Duchy of Luxembourg",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 21,
+                "other_jurisdiction": "Australia",
+                "page": 30,
+                "text": "Article 9(3)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "Canada",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 23,
+                "other_jurisdiction": "The People´s Republic of China",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "Croatia",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "Czech Republic",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 26,
+                "other_jurisdiction": "The Republic of Finland",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "Georgia",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 29,
+                "other_jurisdiction": "Germany",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "The Republic of Iceland",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 33,
+                "other_jurisdiction": "Indonesia",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "The State of Israel",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 37,
+                "other_jurisdiction": "The Republic of Kazakhstan",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 39,
+                "other_jurisdiction": "The United Mexican States",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 40,
+                "other_jurisdiction": "The Republic of Moldova",
+                "page": 30,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 41,
+                "other_jurisdiction": "The Federal Republic of Nigeria",
+                "page": 30,
+                "text": "Article 8(2) Article 9(2) of the"
+              },
+              {
+                "no": 43,
+                "other_jurisdiction": "The Republic of Poland",
+                "page": 30,
+                "text": "Agreement between the Republic of Poland and the"
+              },
+              {
+                "no": 44,
+                "other_jurisdiction": "The Portuguese Republic",
+                "page": 31,
+                "text": "Slovak Republic for the Avoidance of Double Taxation with Respect to Taxes on Income and on Capital, amended by Article 1 of Amending Instrument a) Article 9(2)"
+              },
+              {
+                "no": 45,
+                "other_jurisdiction": "Russian Federation",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 48,
+                "other_jurisdiction": "The Republic of Slovenia",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 49,
+                "other_jurisdiction": "The Republic of South Africa",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 50,
+                "other_jurisdiction": "Spain",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 52,
+                "other_jurisdiction": "The Republic of Tunisia",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 53,
+                "other_jurisdiction": "The Republic of Turkey",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 55,
+                "other_jurisdiction": "The United States of America",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 56,
+                "other_jurisdiction": "The Socialist Republic of Vietnam",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 57,
+                "other_jurisdiction": "Republic of Belarus",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 59,
+                "other_jurisdiction": "The State of Kuwait",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 60,
+                "other_jurisdiction": "The Great Socialist People´s Libyan Arab Jamahiriya",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 61,
+                "other_jurisdiction": "The Republic of Macedonia",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 62,
+                "other_jurisdiction": "The Syrian Arab Republic",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 63,
+                "other_jurisdiction": "Turkmenistan",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 64,
+                "other_jurisdiction": "The Republic of Uzbekistan",
+                "page": 31,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 344.6
+          }
+        ],
         "truncated": false
       }
     ],
@@ -167,6 +454,34 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 18,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 18,
+            "read": true,
+            "rows": [
+              {
+                "no": 43,
+                "other_jurisdiction": "The Republic of Poland",
+                "page": 18,
+                "text": "Article 10(2)(a) (Article 2 of the Protocol)"
+              },
+              {
+                "no": 44,
+                "other_jurisdiction": "The Portuguese Republic",
+                "page": 18,
+                "text": "Article 10 (3)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 326.4
+          }
+        ],
         "truncated": false
       },
       {
@@ -1286,6 +1601,15 @@
       "resolved_from": "the document's own title",
       "slug": "slovak-republic",
       "title_read": "Slovak Republic"
+    },
+    "scope_lists": {
+      "announced": 2,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 2,
+      "rows": 47,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "b80befca7d0481c3e06e6dfedbbbf81ec10f775faac870b8b7e968cc11c62f89",

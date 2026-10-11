@@ -79,3 +79,37 @@
 | 71 | Venezuela Original |  | 28.08.2006 | 08.01.2008 | 14 |
 | 72 | Vietnam Original |  | 07.09.1995 | 13.08.1996 | 14 |
 | 73 | Zimbabwe Original |  | 28.04.1994 | 08.08.1996 | 14 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 23 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 33, one list
+
+*23 row(s), printed on page 33.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 2 | Australia | Article 9(3) | 33 |
+| 6 | Belgium | Article 9(2) | 33 |
+| 10 | Chile | Article 9(2) | 33 |
+| 12 | Croatia | Article 9(2) | 33 |
+| 19 | Germany | Article 9(2) | 33 |
+| 20 | Hong Kong | Article 9(2) | 33 |
+| 25 | Ireland | Article 9(2) | 33 |
+| 27 | Japan | Article 9(2) | 33 |
+| 33 | Laos | Article 9(2) | 33 |
+| 34 | Lebanon | Article 9(2) | 33 |
+| 35 | Luxembourg | Article 9(2) | 33 |
+| 48 | Poland | Article 9(2) | 33 |
+| 52 | San Marino | Article 9(2) | 33 |
+| 53 | Saudi Arabia | Article 9(2) | 33 |
+| 55 | Seychelles | Article 9(2) | 33 |
+| 56 | Singapore | Article 9(2) | 33 |
+| 57 | Slovak Republic | Article 9(2) | 33 |
+| 59 | Spain | Article 9(2) | 33 |
+| 62 | Sweden | Article 9(2) | 33 |
+| 64 | Syria | Article 9(2) | 33 |
+| 67 | Turkmenistan | Article 9(2) | 33 |
+| 69 | United Kingdom | Article 9(2) | 33 |
+| 71 | Venezuela | Article 9(2) | 33 |

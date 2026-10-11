@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -37,6 +40,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -47,6 +51,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -57,6 +62,7 @@
         "mli_article_title": "Definition of a Person Closely Related to an Enterprise",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -85,6 +91,124 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 9,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 9,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Barbados",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Czech Republic",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "France",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 4,
+                "other_jurisdiction": "Ireland",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Israel",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Italy",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Korea",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "Luxemburg",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Mexico",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Netherlands",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "Portugal",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "Qatar",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 13,
+                "other_jurisdiction": "Singapore",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "Spain",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "United Arab Emirates",
+                "page": 9,
+                "text": "Article 10 (2)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "United Kingdom",
+                "page": 9,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Vietnam",
+                "page": 9,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 351.5
+          }
+        ],
         "truncated": false
       }
     ],
@@ -95,6 +219,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 4,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -105,6 +230,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 9,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -115,6 +241,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 4,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -135,6 +262,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 6,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -145,6 +273,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 6,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -511,6 +640,15 @@
       "resolved_from": "the document's own title",
       "slug": "panama",
       "title_read": "REPUBLIC OF PANAMA"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 17,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "c0ac0e0da0f87b5e9b7e8d251f581e2f53d63c88cfaea16324aa7045b8b2c247",

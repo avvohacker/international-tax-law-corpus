@@ -97,3 +97,94 @@
 | 89 | Uzbekistan Original Amending Instrument |  | 06-06-1996 04-07-2016 | 17-10-1997 17-05-2017 | 12 |
 | 90 | Vietnam Original |  | 08-07-1995 | 24-04-1996 | 12 |
 | 91 | Zambia Original |  | 21-07-1983 | 29-10-1992 | 13 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 73 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 45, one list
+
+*72 row(s), printed on page 45.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 45 |
+| 2 | Algeria | Article 9(2) | 45 |
+| 3 | Armenia | Article 9(2) | 45 |
+| 4 | Australia | Article 9(3) | 45 |
+| 5 | Austria | Article 9(2) | 45 |
+| 6 | Azerbaijan | Article 9(2) | 45 |
+| 8 | Belarus | Article 9(2) | 45 |
+| 9 | Belgium | Article 9(2) | 45 |
+| 11 | Bosnia and Herzegovina | Article 9(2) | 45 |
+| 12 | Bulgaria | Article 9(2) | 45 |
+| 13 | Canada | Article 9(2) | 45 |
+| 15 | China (People’s Republic of) (new) | Article 9(2) | 45 |
+| 16 | Croatia | Article 9(2) | 45 |
+| 17 | Cyprus | Article 9(2) | 45 |
+| 18 | Czech Republic | Article 9(2) | 45 |
+| 20 | Ecuador | Article 9 | 45 |
+| 21 | Egypt | Article 9(2) | 45 |
+| 22 | Estonia | Article 9(2) | 45 |
+| 23 | Ethiopia | Article 9(2) | 45 |
+| 24 | Finland | Article 9(2) | 45 |
+| 26 | Georgia | Article 9(2) | 45 |
+| 27 | Germany | Article 9(2) | 45 |
+| 29 | Hong Kong (China) | Article 9(2) | 45 |
+| 31 | Iceland | Article 9(2) | 45 |
+| 32 | India | Article 9(2) | 45 |
+| 34 | Iran | Article 9(2) | 45 |
+| 35 | Ireland | Article 9(2) | 45 |
+| 38 | Italy (new) | Article 9(2) | 45 |
+| 41 | Kazakhstan | Article 9(2) | 45 |
+| 42 | Korea (Democratic People’s Republic of) | Article 9(2) | 45 |
+| 43 | Korea (Republic of) | Article 9(2) | 45 |
+| 44 | Kuwait | Article 9(2) | 45 |
+| 45 | Latvia | Article 9(2) | 45 |
+| 46 | Lebanon | Article 9(2) | 45 |
+| 47 | Lithuania | Article 9(2) | 45 |
+| 48 | Luxembourg | Article 9(2) | 45 |
+| 49 | Macedonia (Former Yugoslav Republic of) | Article 9(2) | 45 |
+| 51 | Malta | Article 9(2) | 46 |
+| 52 | Mexico | Article 9(2) | 46 |
+| 53 | Moldova (Republic of) | Article 9(2) | 46 |
+| 54 | Yugoslavia (Federal Republic of) Montenegro | Article 9(2) | 46 |
+| 55 | Morocco | Article 9(2) | 46 |
+| 56 | Namibia | Article 9(2) | 46 |
+| 57 | Netherlands | Article 9(2) | 46 |
+| 58 | Nigeria | Article 9(2) | 46 |
+| 59 | Norway | Article 9(2) | 46 |
+| 60 | Pakistan | Article 9(2) | 46 |
+| 61 | Philippines | Article 9(2) | 46 |
+| 62 | Poland | Article 9(2) | 46 |
+| 63 | Portugal | Article 9(2) | 46 |
+| 65 | Russian Federation | Article 9(2) | 46 |
+| 66 | San Marino | Article 9(2) | 46 |
+| 67 | Saudi Arabia | Article 9(2) | 46 |
+| 68 | Yugoslavia (Federal Republic of) Serbia | Article 9(2) | 46 |
+| 69 | Singapore | Article 9(2) | 46 |
+| 70 | Slovak Republic | Article 9(2) | 46 |
+| 71 | Slovenia | Article 9(2) | 46 |
+| 72 | South Africa | Article 9(2) | 46 |
+| 73 | Spain | Article 9(2) | 46 |
+| 74 | Sri Lanka | Article 9(2) | 46 |
+| 75 | Sudan | Article 9(2) | 46 |
+| 77 | Switzerland | Article 9(2) | 46 |
+| 78 | Syrian Arab Republic | Article 9(2) | 46 |
+| 79 | Tajikistan | Article 9(2) | 46 |
+| 82 | Turkey | Article 9(2) | 46 |
+| 83 | Turkmenistan | Article 9(2) | 46 |
+| 84 | Ukraine | Article 9(2) | 46 |
+| 85 | United Arab Emirates | Article 9(2) | 46 |
+| 87 | United States | Article 9(2) | 46 |
+| 88 | Uruguay | Article 9(2) | 46 |
+| 89 | Uzbekistan | Article 9(2) | 46 |
+| 90 | Vietnam | Article 9(2) | 46 |
+
+### Article 4 — the list under the reservation on page 14, one list
+
+*1 row(s), printed on page 14.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 59 | Norway | Article 4(3) | 14 |

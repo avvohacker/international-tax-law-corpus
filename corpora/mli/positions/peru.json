@@ -7,6 +7,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 9,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -45,6 +46,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -55,6 +57,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -91,6 +94,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 2,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -111,6 +115,58 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 3,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 3,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Brazil",
+                "page": 3,
+                "text": "Article 4(3)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Canada",
+                "page": 3,
+                "text": "Article 4(3) and Article 4(4)"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "Chile",
+                "page": 3,
+                "text": "Article 4(3)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Mexico",
+                "page": 3,
+                "text": "Article 4(3)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Portugal",
+                "page": 3,
+                "text": "Article 4(3)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Switzerland",
+                "page": 3,
+                "text": "Article 4(3)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 344.6
+          }
+        ],
         "truncated": false
       },
       {
@@ -372,6 +428,15 @@
       "resolved_from": "the document's own title",
       "slug": "peru",
       "title_read": "THE REPUBLIC OF PERU"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 6,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "580cc614b6919150a5be4b8722d8d6c5fa0b1fd322938d4153f599036dbc6a33",

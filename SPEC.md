@@ -837,6 +837,85 @@ an exception list nobody prunes.
 
 ---
 
+## P6 · Reservation scope lists
+
+**Statement.** Every list of agreements a reservation announces within its scope
+is read from the page that prints it, one reading per announcement, and
+published with the rows the page's own table holds; a statement that announces
+more than one list carries one reading each; and a table that was not read is
+declared with the reader's reason, in the position's own `qa` and in the family's
+report.
+
+**Scope.** corpus. **Proof.** `known_defects`,
+`test_p06_the_view_names_the_lists_the_artefact_holds`,
+`test_p06_the_view_control_catches_a_stale_list`,
+`test_p06_the_lists_are_the_tables_the_page_prints`,
+`test_p06_the_page_control_catches_an_invented_row`.
+
+**Why it exists.** A reservation that says "the following agreements contain
+provisions that are within the scope of this reservation" and then prints a
+table settles, for one specific treaty, whether the reservation reaches it - and
+this corpus kept the sentence and not the list, so the only honest answer was
+"not in this data". Worse, six statements announce two lists each: Argentina's
+Article 7 prints a reservation under Article 7(15)(b) and, under it, one under
+Article 7(15)(c), each with its own table of agreements, and this corpus' own
+option model reads the two statements as one option because the second carries
+no printed label of its own. A reading that took the first announcement for the
+statement's only list lost the second table in silence. The family now holds
+119 announced lists, reads all 119, and holds 2 156 rows between them.
+
+**What is read, and from where.** The table is located by its own heading row
+rather than by the sentence above it, because a statement's prose can continue
+past the announcement - Italy's Article 7 prints three lines of explanation
+between the sentence and its table - and a table is not claimed when a later
+announcement of the same statement stands between the two, because that second
+table belongs to the other reservation. Its columns are split where the table
+leaves its widest gap in x, its rows are anchored on the numbers that open their
+own lines, and each row's number, counterparty, provision and page are published
+as the page prints them. What the page prints in a heading the table does not
+name does not enter the list: Norway's Article 3 carries three digits two points
+above its own headings, the tail of the covered-agreements table on the page
+before, and reading them as rows would put two agreements into a list of one.
+
+**Where the lists are read.** The position's derived view
+(`derived/markdown/mli/positions/<slug>.md`) carries one table per announced
+list, after the covered agreements, with a line naming how many lists the
+position's statements announce and, where a table was not read, the reader's own
+reason in words. The view control reads those tables back against the artefact,
+statement by statement, list by list and row by row, so the second list of a
+two-list statement cannot go missing from the view either.
+
+**Why the register exists.** `corpora/mli/positions/batch-report.json` carries
+`reservation_scope_lists` (how many lists the statements announce, how many were
+read, how many rows they hold, how many rows came back with an empty
+counterparty or an empty text, and how many statements announce more than one
+list), `reservations_announcing_a_list_not_read` (every announcement whose table
+this reading could not read, with the reader's own reason) and
+`reservations_announcing_more_than_one_list` (the statements that announce more
+than one, named, because their second table is the one likeliest to be lost).
+Each position publishes the same counts in its own `qa.scope_lists`, and the
+control holds the two against each other and against the artefacts.
+
+**What is not claimed.** The rows are the page's, and they are not a judgement
+about the reservation: whether a treaty named in a list is inside the reservation
+is a question about the Convention's compatibility clauses, which this corpus
+does not hold, so the corpus publishes the list and leaves that reading to its
+reader. The page control holds the rows against the page in three ways - the
+announcement count of the statement's own published prose, each row's number as
+the number that opens its line on the row's own page, and every word of every
+cell against the page it was read from - and it does not ask the fourth question,
+whether the page prints a row the corpus dropped, because that needs the table's
+extent on the page and a page can carry two tables under the same headings
+(Argentina's page 15 prints its Article 13 reservation's table and, below it, a
+notification's, each with its own run of numbers). The control says so here
+rather than drawing a band it cannot draw.
+
+**Anti-pattern.** A list announced and not kept, so one treaty's position inside
+a reservation has to be called unknowable; a statement's second table read as if
+the first were all it printed.
+
+---
+
 ## M1 · Mapping verified against the source
 
 **Statement.** Every row's Article number and title is read from the official

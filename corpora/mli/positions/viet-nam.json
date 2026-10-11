@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third",
         "option_title": "",
         "page": 28,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own",
         "option_title": "",
         "page": 29,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -55,6 +57,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 36,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -65,6 +68,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 37,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -91,6 +95,7 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 41,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -111,6 +116,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -129,6 +135,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 43,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -139,6 +146,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -149,6 +157,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 14,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -169,6 +178,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 23,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -179,6 +189,418 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their",
         "option_title": "",
         "page": 24,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 24,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Australia",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Austria",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "Azerbaijan",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 4,
+                "other_jurisdiction": "Bangladesh",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Belarus",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Belgium",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Brunei",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "Bulgaria",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Cambodia",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "People’s Republic of China",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "Croatia",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 13,
+                "other_jurisdiction": "Cuba",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "Czech Republic",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "Democratic People’s Republic of Korea",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "Denmark",
+                "page": 24,
+                "text": "Article 13(3)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Estonia",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "Finland",
+                "page": 24,
+                "text": "Article 13(2)"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "France",
+                "page": 24,
+                "text": "Article 12(2)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "Germany",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 21,
+                "other_jurisdiction": "Hong Kong",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "Hungary",
+                "page": 24,
+                "text": "Article 13(3)"
+              },
+              {
+                "no": 23,
+                "other_jurisdiction": "Iceland",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "India",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "Indonesia",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 26,
+                "other_jurisdiction": "Iran",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "Ireland",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "Israel",
+                "page": 24,
+                "text": "Article 13(2)"
+              },
+              {
+                "no": 30,
+                "other_jurisdiction": "Japan",
+                "page": 24,
+                "text": "Article 13(3)"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Kazakhstan",
+                "page": 24,
+                "text": "Article 14(2)"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "Republic of Korea",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 33,
+                "other_jurisdiction": "Kuwait",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 35,
+                "other_jurisdiction": "Latvia",
+                "page": 24,
+                "text": "Article 13(2)"
+              },
+              {
+                "no": 36,
+                "other_jurisdiction": "Luxembourg",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 37,
+                "other_jurisdiction": "Macao",
+                "page": 24,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 38,
+                "other_jurisdiction": "Malaysia",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 39,
+                "other_jurisdiction": "Malta",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 40,
+                "other_jurisdiction": "Mongolia",
+                "page": 24,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 41,
+                "other_jurisdiction": "Morocco",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 42,
+                "other_jurisdiction": "Mozambique",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 43,
+                "other_jurisdiction": "Myanmar",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 44,
+                "other_jurisdiction": "Netherlands",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 45,
+                "other_jurisdiction": "New Zealand",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 46,
+                "other_jurisdiction": "Norway",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 47,
+                "other_jurisdiction": "Oman",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 48,
+                "other_jurisdiction": "Pakistan",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 49,
+                "other_jurisdiction": "Palestine",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 50,
+                "other_jurisdiction": "Panama",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 53,
+                "other_jurisdiction": "Portuguese Republic",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 54,
+                "other_jurisdiction": "Qatar",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 56,
+                "other_jurisdiction": "Russia",
+                "page": 25,
+                "text": "Article 13(3)"
+              },
+              {
+                "no": 57,
+                "other_jurisdiction": "San Marino",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 59,
+                "other_jurisdiction": "Serbia",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 60,
+                "other_jurisdiction": "Seychelles",
+                "page": 25,
+                "text": "Article 13(3)"
+              },
+              {
+                "no": 61,
+                "other_jurisdiction": "Singapore",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 62,
+                "other_jurisdiction": "Slovak Republic",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 63,
+                "other_jurisdiction": "Spain",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 64,
+                "other_jurisdiction": "Sri Lanka",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 65,
+                "other_jurisdiction": "Sweden",
+                "page": 25,
+                "text": "Article 13(1) second sentence"
+              },
+              {
+                "no": 66,
+                "other_jurisdiction": "Switzerland",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 68,
+                "other_jurisdiction": "Tunisia",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 69,
+                "other_jurisdiction": "Turkey",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 70,
+                "other_jurisdiction": "Ukraine",
+                "page": 25,
+                "text": "Article 13(2)"
+              },
+              {
+                "no": 71,
+                "other_jurisdiction": "United Arab Emirates",
+                "page": 25,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 72,
+                "other_jurisdiction": "United Kingdom",
+                "page": 25,
+                "text": "Article 13(2)"
+              },
+              {
+                "no": 74,
+                "other_jurisdiction": "Uzbekistan",
+                "page": 25,
+                "text": "Article 14(4)"
+              },
+              {
+                "no": 75,
+                "other_jurisdiction": "Venezuela",
+                "page": 25,
+                "text": "Article 13(4)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 314.9
+          }
+        ],
         "truncated": false
       },
       {
@@ -1590,6 +2012,15 @@
       "resolved_from": "the document's own title",
       "slug": "viet-nam",
       "title_read": "The Socialist Republic of Viet Nam"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 66,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "2c7f91965a8cf09164068388a468e0b40ac85703f567198bb9e218d002f1f5a8",

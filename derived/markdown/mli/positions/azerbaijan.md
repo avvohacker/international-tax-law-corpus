@@ -60,3 +60,17 @@
 | 52 | United Kingdom | Original | 23.02.1994 | 03.10.1995 | 11 |
 | 53 | United Arab Emirates | Original | 20.11.2006 | 25.07.2007 | 11 |
 | 54 | Viet Nam | Original | 19.05.2014 | 11.11.2014 | 12 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 3 row(s) between them. Every announcement's table was read.*
+
+### Article 14 — the list under the reservation on page 22, one list
+
+*3 row(s), printed on page 22.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 25 | Latvia | Article 21 | 22 |
+| 26 | Lithuania | Article 21 | 22 |
+| 31 | Moldova | Articles 14(4) and 15(3) | 22 |

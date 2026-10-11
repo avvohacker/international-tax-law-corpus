@@ -70,3 +70,69 @@
 | 62 | United Kingdom | Original | 06-11-1981 | 16-09-1982 | 8 |
 | 63 | Vietnam | Original | 01-03-2013 | 18-10-2013 | 8 |
 | 64 | Zimbabwe | Original | 19-10-1996 | N/A | 8 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 48 row(s) between them. Every announcement's table was read.*
+
+### Article 14 — the list under the reservation on page 30, one list
+
+*1 row(s), printed on page 30.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 45 | Norway | Article 21(3) | 30 |
+
+### Article 17 — the list under the reservation on page 34, one list
+
+*47 row(s), printed on page 34.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 34 |
+| 2 | Armenia | Article 9(2) | 34 |
+| 3 | Austria | Article 9(2) | 34 |
+| 4 | Azerbaijan | Article 9(2) | 34 |
+| 5 | Belarus | Article 9(2) | 34 |
+| 7 | Bosnia and Herzegovina | Article 9(2) | 34 |
+| 8 | Bulgaria | Article 9(2) | 34 |
+| 9 | Canada | Article 9(2) | 34 |
+| 10 | China | Article 9(2) | 34 |
+| 11 | Croatia | Article 9(2) | 34 |
+| 14 | Denmark | Article 9(2) | 34 |
+| 15 | Egypt | Article 9(2) | 34 |
+| 16 | Estonia | Article 9(2) | 34 |
+| 19 | Georgia | Article 9(2) | 34 |
+| 21 | Ghana | Article 9(2) | 34 |
+| 22 | Greece | Article 9(2) | 34 |
+| 23 | Guinea | Article 9(2) | 34 |
+| 25 | India | Article 9(2) | 34 |
+| 26 | Indonesia | Article 9(2) | 34 |
+| 27 | Iran | Article 9(2) | 34 |
+| 28 | Ireland | Article 9(2) | 34 |
+| 30 | Kazakhstan | Article 9(2) | 34 |
+| 31 | Korea (DPR) | Article 9(2) | 34 |
+| 32 | Korea (Rep.) | Article 9(2) | 34 |
+| 33 | Kuwait | Article 9(2) | 34 |
+| 34 | Latvia | Article 9(2) | 34 |
+| 35 | Libya | Article 9(2) | 34 |
+| 37 | Luxembourg | Article 9(2) | 34 |
+| 38 | Macedonia | Article 9(2) | 34 |
+| 40 | Malta | Article 9(2) | 34 |
+| 41 | Moldova | Article 9(2) | 34 |
+| 42 | Morocco | Article 9(2) | 34 |
+| 43 | Montenegro | Article 9(2) | 34 |
+| 45 | Norway | Article 9(2) | 34 |
+| 46 | Pakistan | Article 9(2) | 34 |
+| 47 | Palestine | Article 9(2) | 34 |
+| 48 | Poland | Article 9(2) | 34 |
+| 49 | Qatar | Article 9(2) | 34 |
+| 50 | Romania | Article 9(2) | 34 |
+| 51 | Russia | Article 9(2) | 34 |
+| 53 | Slovenia | Article 9(2) | 35 |
+| 54 | Spain | Article 9(2) | 35 |
+| 58 | Tunisia | Article 9(2) | 35 |
+| 59 | Turkey | Article 9(2) | 35 |
+| 60 | Ukraine | Article 9(2) | 35 |
+| 61 | United Arab Emirates | Article 9(2) | 35 |
+| 64 | Zimbabwe |  | 35 |

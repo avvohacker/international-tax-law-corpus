@@ -7,6 +7,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 17,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -55,6 +56,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 24,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -119,6 +121,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 31,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -159,6 +162,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 15,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -1400,6 +1404,15 @@
       "resolved_from": "the document's own title",
       "slug": "israel",
       "title_read": "The State of Israel"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "4fcaf8d0d915e7fded4fd06e1628c060a2a6ab12102c53c214e83aa703e610e3",

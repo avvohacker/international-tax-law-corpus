@@ -43,6 +43,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific",
         "option_title": "s",
         "page": 15,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -69,6 +70,107 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "s",
         "page": 18,
+        "scope_lists": [
+          {
+            "headings": [
+              "Other Contracting Jurisdiction",
+              "Provision",
+              "Listed Agreement",
+              "Number"
+            ],
+            "page": 18,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Аustria",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Belarus",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 4,
+                "other_jurisdiction": "Bulgaria",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "China",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "France",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Hungary",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "Indonesia",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 13,
+                "other_jurisdiction": "Italy",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "Kazakhstan",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "Korea (Rep.)",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "North Korea",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "Russia",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 23,
+                "other_jurisdiction": "Turkey",
+                "page": 19,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "United Kingdom",
+                "page": 19,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 358.2
+          }
+        ],
         "truncated": false
       }
     ],
@@ -79,6 +181,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 4,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -89,6 +192,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -654,6 +758,15 @@
       "resolved_from": "the document's own title",
       "slug": "mongolia",
       "title_read": "MONGOLIA"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 14,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "42dffa08b275972e7514b92ee47e81170c1498b375347bb0d03d1eb599ae184a",

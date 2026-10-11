@@ -43,3 +43,36 @@
 | 35 | Original |  | 16-02-2005 | 23-04-2009 | 7 |
 | 36 | Original |  | 18-09-2006 | 30-04-2007 | 7 |
 | 37 | Original |  | 06-11-1981 | 16-09-1982 | 7 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 22 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 26, one list
+
+*22 row(s), printed on page 26.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 26 |
+| 2 | Algeria | Article 9(2) | 26 |
+| 3 | Austria | Article 9(2) | 26 |
+| 4 | Azerbaijan | Article 9(2) | 26 |
+| 7 | Croatia | Article 9(2) | 26 |
+| 9 | Czech Republic | Article 9(2) | 26 |
+| 13 | Greece | Article 9(2) | 26 |
+| 15 | Ireland | Article 9(2) | 26 |
+| 17 | Jordan | Article 9(2) | 26 |
+| 18 | Kuwait | Article 9(2) | 26 |
+| 19 | Macedonia (FYR) | Article 9(2) | 26 |
+| 20 | Malaysia | Article 9(2) | 26 |
+| 21 | Moldova | Article 9(2) | 26 |
+| 22 | Serbia and Montenegro (Montenegro) | Article 9(2) | 26 |
+| 25 | Pakistan | Article 9(2) | 26 |
+| 26 | Poland | Article 9(2) | 26 |
+| 27 | Qatar | Article 9(2) | 26 |
+| 28 | Romania | Article 9(2) | 26 |
+| 29 | Serbia and Montenegro (Serbia) | Article 9(2) | 26 |
+| 31 | Slovenia | Article 9(2) | 26 |
+| 32 | Spain | Article 9(2) | 26 |
+| 35 | Turkey | Article 9(2) | 26 |

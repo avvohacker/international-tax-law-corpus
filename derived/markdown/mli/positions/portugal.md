@@ -85,3 +85,46 @@
 | 77 | Uruguay Original |  | 30-11-2009 | 13-09-2012 | 10 |
 | 78 | Venezuela Original |  | 23-04-1996 | 08-01-1998 | 11 |
 | 79 | Viet Nam Original |  | 03-06-2015 | N/A | 11 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 25 row(s) between them. Every announcement's table was read.*
+
+### Article 11 — the list under the reservation on page 26, one list
+
+*1 row(s), printed on page 26.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 76 | United States | Subparagraphs b) and c) of paragraph 1 of the Protocol | 26 |
+
+### Article 8 — the list under the reservation on page 22, one list
+
+*24 row(s), printed on page 22.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Algeria | Article 10(2)(b) | 22 |
+| 2 | Andorra | Article 10(2)(a) | 22 |
+| 7 | Brazil | Article 10(2)(a) | 22 |
+| 8 | Bulgaria | Article 10(3) | 22 |
+| 10 | Canada | Article 10(2)(a)(ii) | 22 |
+| 18 | Czech Republic | Article 10(3) | 22 |
+| 29 | Hungary | Article 10(3) | 22 |
+| 30 | Iceland | Article 10(2)(a) | 22 |
+| 31 | India | Article 10(2)(a)(ii) and (b)(ii) | 22 |
+| 36 | Japan | Article 10(2)(a)(i) and (ii) | 22 |
+| 37 | Korea | Article 10(3) | 22 |
+| 43 | Malta | Article 10(2)(a)(ii) | 22 |
+| 47 | Morocco | Article 10(2)(a) | 22 |
+| 50 | Norway | Article 10(2)(a) | 22 |
+| 52 | Pakistan | Article 10(2)(ii) | 22 |
+| 55 | Poland | Article 10(3) | 22 |
+| 57 | Romania | Article 10(3) | 22 |
+| 58 | Russia | Article 10(3) | 22 |
+| 64 | Slovak Republic | Article 10(3) | 22 |
+| 66 | South Africa | Article 10(2)(b) | 22 |
+| 69 | Switzerland | Article 10(3)(b) | 22 |
+| 72 | Turkey | Article 10(2)(a) | 22 |
+| 73 | Ukraine | Article 10(3) | 22 |
+| 76 | United States | Article 10(3) | 22 |

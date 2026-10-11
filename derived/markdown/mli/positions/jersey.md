@@ -16,3 +16,22 @@
 | 8 | The Republic of Seychelles | Original 28-07- 2015 | 05-01-2017 |  | 2 |
 | 9 | The Government of the Republic of Singapore | Original 17-10- 2012 | 02-05-2013 |  | 2 |
 | 10 | The United Arab Emirates | Original 20-04- 2016 |  | N/A | 2 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 8 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 8, one list
+
+*8 row(s), printed on page 8.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Cyprus | Article 9(2) | 8 |
+| 2 | Estonia | Article 9(2) | 8 |
+| 3 | Hong Kong Special Administrative Region of the People’s Republic of China | Article 9(2) | 8 |
+| 4 | The Grand Duchy of Luxembourg | Article 9(2) | 8 |
+| 5 | Malta | Article 9(2) | 8 |
+| 7 | Republic of Rwanda | Article 9(2) | 8 |
+| 9 | Republic of Singapore | Article 9(2) | 8 |
+| 10 | United Arab Emirates | Article 10(2) | 8 |

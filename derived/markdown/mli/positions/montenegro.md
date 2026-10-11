@@ -46,3 +46,38 @@
 | 38 | Original |  | 22-03-2001 | 29-11-2001 | 6 |
 | 39 | Original |  | 26-03-2012 | 10-12-2013 | 6 |
 | 40 | Original |  | 06-11-1981 | 16-09-1982 | 6 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 24 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 27, one list
+
+*24 row(s), printed on page 27.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 27 |
+| 2 | Andorra | Article 9(2) | 27 |
+| 3 | Austria | Article 9(2) | 27 |
+| 4 | Azerbaijan | Article 9(2) | 27 |
+| 6 | Bosnia and Herzegovina | Article 9(2) | 27 |
+| 7 | Bulgaria | Article 9(2) | 27 |
+| 8 | China | Article 9(2) | 27 |
+| 9 | Croatia | Article 9(2) | 27 |
+| 17 | Ireland | Article 9(2) | 27 |
+| 19 | Kuwait | Article 9(2) | 27 |
+| 20 | Latvia | Article 9(2) | 27 |
+| 21 | Liechtenstein | Article 9(2) | 27 |
+| 22 | Luxembourg | Article 9(2) | 27 |
+| 23 | Malta | Article 9(2) | 27 |
+| 24 | Moldova | Article 9(2) | 27 |
+| 25 | Monaco | Article 9(2) | 27 |
+| 27 | North Macedonia | Article 9(2) | 27 |
+| 29 | Poland | Article 9(2) | 27 |
+| 30 | Portugal | Article 9(2) | 27 |
+| 31 | Romania | Article 9(2) | 27 |
+| 32 | Serbia | Article 9(2) | 27 |
+| 34 | Slovenia | Article 9(2) | 27 |
+| 37 | Türkiye | Article 9(2) | 27 |
+| 38 | Ukraine | Article 9(2) | 27 |

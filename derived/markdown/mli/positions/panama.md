@@ -23,3 +23,31 @@
 | 15 | United Arab Emirates | Original | 13-10-2012 | 23-10-2013 | 3 |
 | 16 | United Kingdom | Original | 29-07-2013 | 13-12-2013 | 3 |
 | 17 | Vietnam | Original | 30-08-2016 | 14-02-2017 | 3 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 17 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 9, one list
+
+*17 row(s), printed on page 9.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Barbados | Article 9(2) | 9 |
+| 2 | Czech Republic | Article 9(2) | 9 |
+| 3 | France | Article 9(2) | 9 |
+| 4 | Ireland | Article 9(2) | 9 |
+| 5 | Israel | Article 9(2) | 9 |
+| 6 | Italy | Article 9(2) | 9 |
+| 7 | Korea | Article 9(2) | 9 |
+| 8 | Luxemburg | Article 9(2) | 9 |
+| 9 | Mexico | Article 9(2) | 9 |
+| 10 | Netherlands | Article 9(2) | 9 |
+| 11 | Portugal | Article 9(2) | 9 |
+| 12 | Qatar | Article 9(2) | 9 |
+| 13 | Singapore | Article 9(2) | 9 |
+| 14 | Spain | Article 9(2) | 9 |
+| 15 | United Arab Emirates | Article 10 (2) | 9 |
+| 16 | United Kingdom | Article 9(2) | 9 |
+| 17 | Vietnam | Article 9(2) | 9 |

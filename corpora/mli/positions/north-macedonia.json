@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 22,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -55,6 +57,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 28,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -65,6 +68,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 29,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -101,6 +105,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 10,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -121,6 +126,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 11,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -131,6 +137,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -974,6 +981,15 @@
       "resolved_from": "the document's own title",
       "slug": "north-macedonia",
       "title_read": "Republic of North Macedonia"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "51a331e0337c23e4a90848d7aa2fcca70fe59ce6a20eaeb71c2da68a08965ac1",

@@ -61,3 +61,16 @@
 | 53 | UAE | Original | 12-Apr-1994 | 16-Jul-1995 | 9 |
 | 54 | United Kingdom | Original | 25-Apr-1977 | 23-Aug-1980 | 9 |
 | 55 | Yemen | Original | 12-Dec-1997 | 02-Aug-2000 | 10 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 2 row(s) between them. Every announcement's table was read.*
+
+### Article 14 — the list under the reservation on page 31, one list
+
+*2 row(s), printed on page 31.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 23 | Ireland | Article 5(4) | 31 |
+| 35 | Netherlands | Article 23 | 31 |

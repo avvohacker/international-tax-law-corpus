@@ -81,3 +81,80 @@
 | 73 | Uruguay | Original | 09-12-2013 | 26-07-2016 | 11 |
 | 74 | Uzbekistan | Original | 28-03-1996 | 16-08-1996 | 11 |
 | 75 | Venezuela | Original | 20-11-2008 | 26-05-2009 | 11 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 66 row(s) between them. Every announcement's table was read.*
+
+### Article 9 — the list under the reservation on page 24, one list
+
+*66 row(s), printed on page 24.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Australia | Article 13(4) | 24 |
+| 2 | Austria | Article 13(4) | 24 |
+| 3 | Azerbaijan | Article 14(4) | 24 |
+| 4 | Bangladesh | Article 14(4) | 24 |
+| 5 | Belarus | Article 13(4) | 24 |
+| 6 | Belgium | Article 13(4) | 24 |
+| 7 | Brunei | Article 13(4) | 24 |
+| 8 | Bulgaria | Article 13(4) | 24 |
+| 9 | Cambodia | Article 14(4) | 24 |
+| 11 | People’s Republic of China | Article 13(4) | 24 |
+| 12 | Croatia | Article 14(4) | 24 |
+| 13 | Cuba | Article 13(4) | 24 |
+| 14 | Czech Republic | Article 13(4) | 24 |
+| 15 | Democratic People’s Republic of Korea | Article 13(4) | 24 |
+| 16 | Denmark | Article 13(3) | 24 |
+| 17 | Estonia | Article 13(4) | 24 |
+| 18 | Finland | Article 13(2) | 24 |
+| 19 | France | Article 12(2) | 24 |
+| 20 | Germany | Article 13(4) | 24 |
+| 21 | Hong Kong | Article 13(4) | 24 |
+| 22 | Hungary | Article 13(3) | 24 |
+| 23 | Iceland | Article 13(4) | 24 |
+| 24 | India | Article 14(4) | 24 |
+| 25 | Indonesia | Article 13(4) | 24 |
+| 26 | Iran | Article 14(4) | 24 |
+| 27 | Ireland | Article 14(4) | 24 |
+| 28 | Israel | Article 13(2) | 24 |
+| 30 | Japan | Article 13(3) | 24 |
+| 31 | Kazakhstan | Article 14(2) | 24 |
+| 32 | Republic of Korea | Article 13(4) | 24 |
+| 33 | Kuwait | Article 13(4) | 24 |
+| 35 | Latvia | Article 13(2) | 24 |
+| 36 | Luxembourg | Article 13(4) | 24 |
+| 37 | Macao | Article 13(4) | 24 |
+| 38 | Malaysia | Article 14(4) | 24 |
+| 39 | Malta | Article 14(4) | 24 |
+| 40 | Mongolia | Article 14(4) | 24 |
+| 41 | Morocco | Article 13(4) | 25 |
+| 42 | Mozambique | Article 14(4) | 25 |
+| 43 | Myanmar | Article 14(4) | 25 |
+| 44 | Netherlands | Article 13(4) | 25 |
+| 45 | New Zealand | Article 13(4) | 25 |
+| 46 | Norway | Article 13(4) | 25 |
+| 47 | Oman | Article 14(4) | 25 |
+| 48 | Pakistan | Article 14(4) | 25 |
+| 49 | Palestine | Article 13(4) | 25 |
+| 50 | Panama | Article 13(4) | 25 |
+| 53 | Portuguese Republic | Article 13(4) | 25 |
+| 54 | Qatar | Article 14(4) | 25 |
+| 56 | Russia | Article 13(3) | 25 |
+| 57 | San Marino | Article 14(4) | 25 |
+| 59 | Serbia | Article 13(4) | 25 |
+| 60 | Seychelles | Article 13(3) | 25 |
+| 61 | Singapore | Article 13(4) | 25 |
+| 62 | Slovak Republic | Article 14(4) | 25 |
+| 63 | Spain | Article 13(4) | 25 |
+| 64 | Sri Lanka | Article 14(4) | 25 |
+| 65 | Sweden | Article 13(1) second sentence | 25 |
+| 66 | Switzerland | Article 13(4) | 25 |
+| 68 | Tunisia | Article 13(4) | 25 |
+| 69 | Turkey | Article 13(4) | 25 |
+| 70 | Ukraine | Article 13(2) | 25 |
+| 71 | United Arab Emirates | Article 13(4) | 25 |
+| 72 | United Kingdom | Article 13(2) | 25 |
+| 74 | Uzbekistan | Article 14(4) | 25 |
+| 75 | Venezuela | Article 13(4) | 25 |

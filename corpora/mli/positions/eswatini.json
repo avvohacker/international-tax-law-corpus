@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -394,6 +395,15 @@
       "resolved_from": "the document's own title",
       "slug": "eswatini",
       "title_read": "The Kingdom of Eswatini"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "ac2dd9b88793510743ae74a1387ed705540410fdcae995b014aaf67c255316fd",

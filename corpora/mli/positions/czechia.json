@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -37,6 +40,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -47,6 +51,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -57,6 +62,7 @@
         "mli_article_title": "Definition of a Person Closely Related to an Enterprise",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -85,6 +91,7 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 25,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -95,6 +102,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -105,6 +113,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -115,6 +124,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -153,6 +163,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 18,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -163,6 +174,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -1754,6 +1766,15 @@
       "resolved_from": "the document's own title",
       "slug": "czechia",
       "title_read": "Czech Republic"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "556aa5d349bee3b06337a1b06970eb3dcff5696a4246aac38f5e43b0400dd98e",

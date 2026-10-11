@@ -96,3 +96,133 @@
 | 88 | Yemen Original |  | 26-10-2005 | 16-03-2010 | 9 |
 | 89 | Qatar (revised) Original |  | 18-12-2016 | N/A | 9 |
 | 90 | Montenegro Original |  | 12-10-2005 | 10-08-2007 | 9 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 112 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 39, one list
+
+*88 row(s), printed on page 39.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Austria | Article 9(2) | 39 |
+| 2 | Albania | Article 9(2) | 39 |
+| 3 | Algeria | Article 9(2) | 39 |
+| 4 | Australia | Article 9(3) | 39 |
+| 5 | Azerbaijan | Article 9(2) | 39 |
+| 6 | Bahrain | Article 9(2) | 39 |
+| 7 | Bangladesh | Article 9(2) | 39 |
+| 8 | Belarus | Article 9(2) | 39 |
+| 9 | Belgium | Article 9(2) | 39 |
+| 10 | Bosnia and Herzegovina | Article 9(2) | 39 |
+| 12 | Bulgaria | Article 9(2) | 39 |
+| 13 | Canada | Article 9(2) | 39 |
+| 14 | Côte D’ivoire | Article 9(2) | 39 |
+| 15 | Croatia | Article 9(2) | 39 |
+| 16 | Czech Republic | Article 9(2) | 39 |
+| 17 | Denmark | Article 9(2) | 39 |
+| 18 | Egypt | Article 9(2) | 39 |
+| 19 | Estonia | Article 9(2) | 39 |
+| 20 | Ethiopia | Article 9(2) | 39 |
+| 21 | Finland | Article 9(2) | 39 |
+| 22 | France | Article 9(2) | 39 |
+| 23 | Georgia | Article 9(2) | 39 |
+| 24 | Germany | Article 9(2) | 39 |
+| 25 | Greece | Article 9(2) | 39 |
+| 26 | Hungary | Article 9(2) | 39 |
+| 27 | India | Article 9(2) | 39 |
+| 28 | Indonesia | Article 9(2) | 39 |
+| 29 | Iran | Article 9(2) | 39 |
+| 30 | Ireland | Article 9(2) | 39 |
+| 31 | Israel | Article 9(2) | 39 |
+| 32 | Italy | Article 9(2) | 39 |
+| 33 | Japan | Article 9(2) | 39 |
+| 34 | Jordan | Article 9(2) | 39 |
+| 35 | Kazakhstan | Article 9(2) | 39 |
+| 37 | Kosovo | Article 9(2) | 39 |
+| 38 | Kuwait | Article 9(2) | 39 |
+| 39 | Kyrgyzstan | Article 9(2) | 39 |
+| 40 | Latvia | Article 9(2) | 39 |
+| 41 | Lebanon | Article 9(2) | 39 |
+| 42 | Lithuania | Article 9(2) | 39 |
+| 43 | Luxembourg | Article 9(2) | 39 |
+| 44 | Macedonia | Article 9(2) | 40 |
+| 45 | Malaysia | Article 9(2) | 40 |
+| 46 | Malta | Article 9(2) | 40 |
+| 47 | Mexico | Article 9(2) | 40 |
+| 48 | Moldova | Article 9(2) | 40 |
+| 49 | Mongolia | Article 9(2) | 40 |
+| 50 | Morocco | Article 9(2) | 40 |
+| 51 | New Zealand | Article 9(2) | 40 |
+| 52 | Norway | Article 9(2) | 40 |
+| 53 | Oman | Article 9(2) | 40 |
+| 54 | P.R.C. | Article 9(2) | 40 |
+| 55 | Pakistan | Article 9(2) | 40 |
+| 56 | Philippines | Article 9(2) | 40 |
+| 57 | Poland | Article 9(2) | 40 |
+| 58 | Portugal | Article 9(2) | 40 |
+| 59 | Qatar | Article 9(2) | 40 |
+| 60 | Romania | Article 9(2) | 40 |
+| 61 | Russia | Article 9(2) | 40 |
+| 62 | Saudi Arabia | Article 9(2) | 40 |
+| 63 | Senegal | Article 9(2) | 40 |
+| 64 | Serbia | Article 9(2) | 40 |
+| 65 | Singapore | Article 9(2) | 40 |
+| 66 | Slovakia | Article 9(2) | 40 |
+| 67 | Slovenia | Article 9(2) | 40 |
+| 68 | Somalia | Article 9(2) | 40 |
+| 69 | South Africa | Article 9(2) | 40 |
+| 70 | Spain | Article 9(2) | 40 |
+| 71 | Sudan | Article 9(2) | 40 |
+| 72 | Sweden | Article 9(2) | 40 |
+| 73 | Switzerland | Article 9(2) | 40 |
+| 74 | Syria | Article 9(2) | 40 |
+| 75 | Tajikistan | Article 9(2) | 40 |
+| 76 | Thailand | Article 9(2) | 40 |
+| 77 | The Gambia | Article 9(2) | 40 |
+| 78 | The Netherlands | Article 9(2) | 40 |
+| 79 | Tunisia | Article 9(2) | 40 |
+| 80 | Turkish Republic of Northern Cyprus | Article 9(2) | 40 |
+| 81 | Turkmenistan | Article 9(2) | 40 |
+| 82 | U.A.E | Article 9(2) | 40 |
+| 83 | Ukraine | Article 9(2) | 40 |
+| 84 | United Kingdom | Article 9(2) | 40 |
+| 85 | United States | Article 9(2) | 40 |
+| 86 | Uzbekistan | Article 9(2) | 40 |
+| 87 | Vietnam | Article 9(2) | 40 |
+| 88 | Yemen | Article 9(2) | 40 |
+| 89 | Qatar (revised) | Article 9(2) | 40 |
+| 90 | Montenegro | Article 9(2) | 40 |
+
+### Article 9 — the list under the reservation on page 23, one list
+
+*24 row(s), printed on page 23.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 4 | Australia | Article 13(4) | 23 |
+| 13 | Canada | Article 13(4) | 23 |
+| 14 | Côte D’ivoire | Article 13(4) | 23 |
+| 18 | Egypt | Article 13(4) | 23 |
+| 19 | Estonia | Article 13(1) | 23 |
+| 21 | Finland | Article 13(4) | 23 |
+| 22 | France | Article 13(2) | 23 |
+| 24 | Germany | Article 13(2) | 23 |
+| 27 | India | Article 13(4) | 23 |
+| 30 | Ireland | Article 13(2) | 23 |
+| 31 | Israel | Article 13(4) | 23 |
+| 40 | Latvia | Article 13(1) | 23 |
+| 42 | Lithuania | Article 13(1) | 23 |
+| 46 | Malta | Article 13(2) | 23 |
+| 47 | Mexico | Article 13(2) | 23 |
+| 51 | New Zealand | Article 13(4) | 23 |
+| 50 | Morocco | Article 13(4) | 23 |
+| 52 | Norway | Article 13(4) | 23 |
+| 54 | P.R.C. | Article 13(4) | 23 |
+| 56 | Philippines | Article 13(4) | 23 |
+| 69 | South Africa | Article 13(4) | 23 |
+| 63 | Senegal | Article 13(4) | 23 |
+| 85 | United States | Article 13(1)(b) | 23 |
+| 87 | Vietnam | Article 13(4) | 23 |

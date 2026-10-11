@@ -7,6 +7,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -85,6 +88,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -95,6 +99,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -1042,6 +1047,15 @@
       "resolved_from": "the document's own title",
       "slug": "barbados",
       "title_read": "8th Floor, Baobab Tower, Warrens, St. Michael, Barbados"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "59c13f773b4664363d845256de81ac15789658b87e4ac2f93672e9da4b1c97fc",

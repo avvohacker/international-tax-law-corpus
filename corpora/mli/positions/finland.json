@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -37,6 +40,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -47,6 +51,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -57,6 +62,7 @@
         "mli_article_title": "Definition of a Person Closely Related to an Enterprise",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -85,6 +91,280 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 27,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 27,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "THE KINGDOM OF THE NETHERLANDS",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "THE UNITED STATES OF AMERICA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "THE REPUBLIC OF ARMENIA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "AUSTRALIA",
+                "page": 27,
+                "text": "Article 9(3)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "THE REPUBLIC OF AZERBAIJAN",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "BARBADOS",
+                "page": 27,
+                "text": "Article 10(2)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "THE KINGDOM OF BELGIUM",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "ESPANJAN KUNINGASKUNTA (THE KINGDOM OF SPAIN)",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 13,
+                "other_jurisdiction": "THE REPUBLIC OF SOUTH AFRICA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "GEORGIA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "THE REPUBLIC OF INDONESIA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "THE REPUBLIC OF INDIA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "IRELAND",
+                "page": 27,
+                "text": "Article 10(2)"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "THE UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND",
+                "page": 27,
+                "text": "Article 10(2)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "THE STATE OF ISRAEL",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "ITÄVALLAN TASAVALTA (THE REPUBLIC OF AUSTRIA)",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "CANADA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "THE REPUBLIC OF KAZAKHSTAN",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 26,
+                "other_jurisdiction": "THE PEOPLE'S REPUBLIC OF",
+                "page": 27,
+                "text": "Article 9(2) CHINA"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "THE KYRGYZ REPUBLIC",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 30,
+                "other_jurisdiction": "THE REPUBLIC OF CYPRUS",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "THE REPUBLIC OF LATVIA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "THE REPUBLIC OF LITHUANIA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "MACEDONIA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 36,
+                "other_jurisdiction": "MALTA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 39,
+                "other_jurisdiction": "THE REPUBLIC OF MOLDOVA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 40,
+                "other_jurisdiction": "THE ISLAMIC REPUBLIC OF PAKISTAN",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 41,
+                "other_jurisdiction": "THE PORTUGUESE REPUBLIC",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 42,
+                "other_jurisdiction": "THE REPUBLIC OF POLAND",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 44,
+                "other_jurisdiction": "ROMANIA",
+                "page": 27,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 45,
+                "other_jurisdiction": "SAKSAN LIITTOTASAVALTA (THE FEDERAL REPUBLIC OF GERMANY)",
+                "page": 28,
+                "text": "29 (34) Article 9(2)"
+              },
+              {
+                "no": 47,
+                "other_jurisdiction": "THE REPUBLIC OF SINGAPORE",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 49,
+                "other_jurisdiction": "THE REPUBLIC OF SLOVENIA",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 50,
+                "other_jurisdiction": "THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 52,
+                "other_jurisdiction": "THE REPUBLIC OF TAJIKISTAN",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 53,
+                "other_jurisdiction": "TANZANIA",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 56,
+                "other_jurisdiction": "THE REPUBLIC OF TURKEY",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 57,
+                "other_jurisdiction": "TURKMENISTAN",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 58,
+                "other_jurisdiction": "UKRAINE",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 62,
+                "other_jurisdiction": "THE REPUBLIC OF UZBEKISTAN",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 63,
+                "other_jurisdiction": "THE REPUBLIC OF BELARUS",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 64,
+                "other_jurisdiction": "THE RUSSIAN FEDERATION",
+                "page": 28,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 66,
+                "other_jurisdiction": "THE REPUBLIC OF ESTONIA",
+                "page": 28,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 290.6
+          }
+        ],
         "truncated": false
       }
     ],
@@ -105,6 +385,7 @@
         "mli_article_title": "Mandatory Binding Arbitration",
         "option_title": "",
         "page": 30,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -115,6 +396,7 @@
         "mli_article_title": "Type of Arbitration Process",
         "option_title": "",
         "page": 31,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -133,6 +415,7 @@
         "mli_article_title": "Reservations",
         "option_title": "Formulated for Scope of Arbitration",
         "page": 32,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -143,6 +426,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -161,6 +445,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 33,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -171,6 +456,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -191,6 +477,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -201,6 +488,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -1632,6 +1920,15 @@
       "resolved_from": "the document's own title",
       "slug": "finland",
       "title_read": "The Republic of Finland"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 43,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "b839d7b6d49bd3b79240e8c1a230f80de76a6269d166a8f8407f0fe459d7e7ae",

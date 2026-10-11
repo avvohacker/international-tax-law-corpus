@@ -17,6 +17,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 31,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -55,6 +56,262 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 38,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 38,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Albania",
+                "page": 38,
+                "text": "Article 23A"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Argentina",
+                "page": 38,
+                "text": "Article 26"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "Armenia",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Azerbaijan",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Bahrain",
+                "page": 38,
+                "text": "Article 23"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Barbados",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Belarus",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "Canada",
+                "page": 38,
+                "text": "Article 23"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "Croatia",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "Egypt",
+                "page": 38,
+                "text": "Article 23"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Estonia",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "Ethiopia",
+                "page": 38,
+                "text": "Article 5(4),(5) and (6)"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "Finland",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 21,
+                "other_jurisdiction": "Georgia",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "Germany",
+                "page": 38,
+                "text": "Article 5(4)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "Hong Kong",
+                "page": 38,
+                "text": "Article 22"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "Iceland",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 29,
+                "other_jurisdiction": "Indonesia",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 33,
+                "other_jurisdiction": "Jordan",
+                "page": 38,
+                "text": "Article 23"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Kazakhstan",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 37,
+                "other_jurisdiction": "Kuwait",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 38,
+                "other_jurisdiction": "Latvia",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 39,
+                "other_jurisdiction": "Lithuania",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 41,
+                "other_jurisdiction": "Macedonia (FYROM)",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 46,
+                "other_jurisdiction": "Moldova",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 51,
+                "other_jurisdiction": "Norway",
+                "page": 38,
+                "text": "Article 24(3)"
+              },
+              {
+                "no": 54,
+                "other_jurisdiction": "Panama",
+                "page": 38,
+                "text": "Article 5(4) and (5)"
+              },
+              {
+                "no": 56,
+                "other_jurisdiction": "Portugal",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 57,
+                "other_jurisdiction": "Qatar",
+                "page": 38,
+                "text": "Article 23"
+              },
+              {
+                "no": 58,
+                "other_jurisdiction": "Romania",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 59,
+                "other_jurisdiction": "Russian Federation",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 64,
+                "other_jurisdiction": "Slovenia",
+                "page": 38,
+                "text": "Article 23"
+              },
+              {
+                "no": 65,
+                "other_jurisdiction": "South Africa",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 68,
+                "other_jurisdiction": "Sweden",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 73,
+                "other_jurisdiction": "Uganda",
+                "page": 38,
+                "text": "Article 23"
+              },
+              {
+                "no": 75,
+                "other_jurisdiction": "United Kingdom",
+                "page": 38,
+                "text": "Article 23"
+              },
+              {
+                "no": 76,
+                "other_jurisdiction": "United States of America",
+                "page": 38,
+                "text": "Article 27"
+              },
+              {
+                "no": 77,
+                "other_jurisdiction": "Uzbekistan",
+                "page": 38,
+                "text": "Article 25"
+              },
+              {
+                "no": 78,
+                "other_jurisdiction": "Venezuela",
+                "page": 38,
+                "text": "Article 24"
+              },
+              {
+                "no": 81,
+                "other_jurisdiction": "Zambia",
+                "page": 38,
+                "text": "Article 5(4),(5) and (6)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 349.5
+          }
+        ],
         "truncated": false
       },
       {
@@ -111,6 +368,7 @@
         "mli_article_title": "Compatibility",
         "option_title": "",
         "page": 48,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -129,6 +387,40 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 13,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 13,
+            "read": true,
+            "rows": [
+              {
+                "no": 32,
+                "other_jurisdiction": "Japan",
+                "page": 13,
+                "text": "Article 4(5)"
+              },
+              {
+                "no": 75,
+                "other_jurisdiction": "United Kingdom",
+                "page": 13,
+                "text": "Article 22(3), (4) and (5)"
+              },
+              {
+                "no": 76,
+                "other_jurisdiction": "United States of America",
+                "page": 13,
+                "text": "Article 24(4) and Memorandum of Understanding (XIV)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 347.4
+          }
+        ],
         "truncated": false
       },
       {
@@ -2776,6 +3068,15 @@
       "resolved_from": "the document's own title",
       "slug": "netherlands",
       "title_read": "The Netherlands"
+    },
+    "scope_lists": {
+      "announced": 2,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 2,
+      "rows": 43,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "f7a5b824fa437b159588a4de90a88abd744d8205194d0f055ffd23b7490f6b81",

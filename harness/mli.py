@@ -571,21 +571,312 @@ def _options(section: dict, book) -> list:
         kind = next((word for word in OPTION_KINDS if text.startswith(word)), "")
         if kind:
             found.append((position, kind, text))
+    order = sorted(section["spans"], key=lambda span: (span.page, span.y, span.x))
     out = []
     for index, (position, kind, text) in enumerate(found):
         end = found[index + 1][0] if index + 1 < len(found) else len(body)
         prose = [_text(line, book) for line in body[position + 1:end]
                  if round(line.x0, 1) == left]
+        # The lines and spans of this option alone. The next statement's table must
+        # not be a candidate for this statement's, and the reservation-scope reader
+        # works on the option's own printed geometry, so the band travels with it.
+        first = (body[position].page, body[position].y)
+        last = ((body[end].page, body[end].y) if end < len(body) else None)
         out.append({"kind": kind, "title": _option_title(kind, text),
                     "page": body[position].page,
                     "excerpt": " ".join(part.strip() for part in prose if part.strip()),
-                    "body": body[position + 1:end]})
+                    "body": body[position + 1:end],
+                    "lines": body[position:end], "left": left,
+                    "spans": [span for span in order
+                              if (span.page, span.y) >= first
+                              and (last is None or (span.page, span.y) < last)]})
     return out
 
 
 def _option_title(kind: str, text: str) -> str:
     rest = text[len(kind):].strip()
     return re.sub(r"^[-\u2013\u2014:]\s*", "", rest).strip()
+
+
+# The sentence a reservation ends with when it announces that a list of
+# agreements follows it. It is looked for in the option's prose *lines* joined as
+# the option's own `excerpt` joins them, because the printer wraps the sentence:
+# on Argentina's Article 6 the phrase straddles two lines, so a search of one
+# span at a time reports that a document announcing a list announces nothing.
+SCOPE_ANNOUNCEMENT_RE = re.compile(
+    r"within\s+the\s+scope\s+of\s+(?:this|the)\s+reservation", re.IGNORECASE)
+
+# The headings the table under the announcement prints over its columns. They
+# are the table's own words, and the printer wraps them -- Argentina's and
+# Georgia's set "Listed Agreement Number" over three lines -- so a cell is part
+# of the heading row when its own words stand inside one of these headings, and
+# not merely when it begins like one: Spain's Article 6 prints a cell of preamble
+# text beginning with "Preamble" 230 pt below its own "Preamble Text" heading,
+# and a test that matched the first word would take that cell for a heading and
+# end the table before its first row.
+SCOPE_HEADINGS = ("Listed Agreement Number", "Other Contracting Jurisdiction",
+                  "Provision", "Preamble Text")
+
+# An agreement's printed number: the table's left column, and only that. A cell
+# that reads "4" is not a number column, which is why the match is anchored on
+# the whole cell and the column is measured rather than assumed. The full stop
+# is the table's: Georgia's and Malaysia's Article 17 lists number their rows
+# "1." rather than "1", and a reading that took only the bare digits would
+# declare a table of five rows unreadable.
+SCOPE_NUMBER_RE = re.compile(r"^\d{1,3}\.?$")
+
+
+def _scope_announcements(prose: list, book) -> list:
+    """Every announcement in the option's prose: its line, and the prose itself.
+
+    A statement can announce more than one list, and the corpus keeps them all.
+    Argentina's Article 7 prints a reservation under Article 7(15)(b) with the
+    agreements within its scope, and immediately after it a reservation under
+    Article 7(15)(c) with a list of its own; the corpus' option model reads the
+    two as one option, because the second paragraph carries no label of its own
+    (`_options` splits on a printed kind word, and the second statement has
+    none). Reading only the first list left the second out of the corpus in
+    silence, which is what this returns a list for.
+
+    Each entry is `(line, joined)`, where `line` is the option's own line the
+    announcement ends on: the table an announcement promises is the one printed
+    below *that* line, so which line it is matters and not just the fact. An
+    option that announces no list gives `[]` -- a fact, and not the same fact as
+    an option nobody looked at.
+    """
+    said = [(line, _text(line, book).strip()) for line in prose]
+    said = [(line, piece) for line, piece in said if piece]
+    if not said:
+        return []
+    joined = " ".join(piece for _line, piece in said)
+    endings = []
+    consumed = 0
+    for line, piece in said:
+        consumed += len(piece) + 1          # the space this module joins with
+        endings.append((consumed, line))
+    found = []
+    for match in SCOPE_ANNOUNCEMENT_RE.finditer(joined):
+        line = next((line for consumed, line in endings if consumed > match.end()),
+                    said[-1][0])
+        found.append((line, joined))
+    return found
+
+
+def _scope_heading(span) -> bool:
+    """Whether a cell is part of the announced table's heading row."""
+    printed = " ".join(span.text.split()).lower()
+    if not printed:
+        return False
+    return any(printed in heading.lower() for heading in SCOPE_HEADINGS)
+
+
+def _scope_cell(pieces: list) -> str:
+    """A row's cell, as the table prints it, in one line."""
+    return " ".join(" ".join(pieces).split())
+
+
+def _scope_number(cell: str) -> int:
+    """The number a row prints, with the table's own full stop taken off."""
+    return int(cell.strip().rstrip("."))
+
+
+def reservation_scope(option: dict, book) -> dict:
+    """The agreements a reservation prints under it, as the page prints them.
+
+    A reservation often ends by announcing that a list follows -- "The following
+    agreements contain provisions that are within the scope of this reservation"
+    -- and then prints it as a table: an agreement's number, the other
+    contracting jurisdiction, and the provision of that agreement. That list is
+    what settles whether a particular treaty falls inside the reservation, so it
+    is kept here instead of being left inside the sentence that announces it.
+
+    `lists` holds one reading per announcement, in the page's own order, and is
+    empty when the statement announces no list at all. A statement that
+    announces two lists (Argentina's Article 7 and Brazil's Article 4 do) gives
+    two readings: the corpus keeps both tables, and a caller that wants to know
+    whether one agreement falls inside the reservation reads every one of them,
+    because the two reservations act on different agreements.
+    """
+    prose = [line for line in option["lines"]
+             if round(line.x0, 1) == option["left"]]
+    announced = _scope_announcements(prose, book)
+    if not announced:
+        return {"announced": 0, "lists": []}
+    return {"announced": len(announced),
+            "lists": [_scope_list(announced, index, option, book)
+                      for index in range(len(announced))]}
+
+
+def _scope_list(announcements: list, index: int, option: dict, book) -> dict:
+    """The one table a reservation prints under one announcement of it.
+
+    Every decision is the page's own geometry:
+
+    * the table is located by its own heading row - the row the page prints over
+      its columns - and not by the sentence it follows: the statement's prose can
+      continue past the announcement and the table still belongs to that
+      sentence. Italy's Article 7 prints three lines explaining what it assumes
+      between the sentence and the table, and a reader that took the first line
+      set back at the margin for the end of the table declared that list
+      unreadable while the page printed it;
+    * a table is not claimed when a later announcement of the same statement
+      stands between the sentence and the heading row: that sentence announces no
+      table of its own, and reading the next one's would put another
+      reservation's agreements under its words;
+    * where no heading row is printed, the table is the run of spans from the
+      announcement down to the first line set back at the prose margin, which is
+      where the next paragraph or heading begins;
+    * its columns are split where the table leaves its widest gap in x, so no
+      boundary is a number this module chose;
+    * its rows are anchored on the numbers printed in its left column, and a cell
+      that wraps is attached to the number it stands nearest -- the row the table
+      sets it in, whether the cell is printed above or below that number. On
+      Andorra's Article 7 the first row's provision is printed *above* its number
+      and the second line of it below, and both belong to that row.
+
+    What cannot be read is declared and not left empty: an announcement with no
+    table under it, or a table whose columns cannot be found, comes back with
+    `read: False` and the reader's own reason.
+    """
+    announced, _prose = announcements[index]
+    left = option["left"]
+    pool = [span for span in sorted(option["spans"], key=lambda s: (s.page, s.y, s.x))
+            if (span.page, span.y) > (announced.page, announced.y)]
+    later = [(line.page, line.y) for line, _prose in announcements[index + 1:]]
+    heading_at = next((at for at, span in enumerate(pool) if _scope_heading(span)),
+                      None)
+    if heading_at is not None:
+        head = pool[heading_at]
+        if any((head.page, head.y) > position for position in later):
+            heading_at = None       # that table belongs to a later announcement
+    if heading_at is None:
+        below = []
+        for span in pool:
+            if round(span.x, 1) <= left + 2.0:
+                break
+            below.append(span)
+    else:
+        below = []
+        for span in pool[heading_at:]:
+            if round(span.x, 1) <= left + 2.0:
+                break
+            below.append(span)
+
+    reading = {"page": announced.page}
+    if not below:
+        reading.update({
+            "read": False,
+            "reason": ("the statement announces a list of agreements and no "
+                       "table is printed under that sentence")})
+        return reading
+
+    headings = [span.text.strip() for span in below if _scope_heading(span)]
+    data = [span for span in below if not _scope_heading(span)]
+    # A row of the announced list stands under the table's heading row. The
+    # digits printed above that row are not rows of this list: Norway's Article 3
+    # carries three of them 2 pt above its own headings, the tail of the covered
+    # agreements table the page before, and reading them as rows would put two
+    # agreements into a list of one. Where no heading row was printed, the first
+    # number the table prints is where its rows begin.
+    if headings:
+        top_page = min(span.page for span in below if _scope_heading(span))
+        top = max(span.y for span in below
+                  if _scope_heading(span) and span.page == top_page)
+        data = [span for span in data if (span.page, span.y) > (top_page, top)]
+    numbers = [span for span in data
+               if SCOPE_NUMBER_RE.match(span.text.strip())]
+    if not numbers:
+        reading.update({
+            "read": False,
+            "reason": ("the statement announces a list of agreements and the "
+                       "table under it prints no row numbers in a left column")})
+        return reading
+
+    # A row's number opens the line it is printed on. A figure standing in a
+    # column of words is one of a row's cells rather than a row of its own, and
+    # the register counts the rows that end up with no counterparty, so such a
+    # cell appears in the family's own account instead of quietly becoming a row.
+    anchors = sorted(
+        [span for span in numbers
+         if not any(other is not span and other.page == span.page
+                    and round(other.y, 1) == round(span.y, 1)
+                    and other.x < span.x for other in data)],
+        key=lambda span: (span.page, span.y))
+    if not anchors:
+        reading.update({
+            "read": False,
+            "reason": ("every figure the table prints stands inside a line of "
+                       "words, so no row is opened by a number")})
+        return reading
+
+    keys = [(anchor.page, anchor.y) for anchor in anchors]
+    # A cell belongs to the number it stands nearest, which is the row the table
+    # sets it in: a cell that wraps is printed above and below its number alike
+    # (Andorra's Article 7 prints its first row's provision in two lines, one
+    # either side of that row's number).
+    cells: dict = {key: [] for key in keys}
+    for span in data:
+        if any(span is anchor for anchor in anchors):
+            continue                        # a row's own number, already its anchor
+        same_page = [(abs(span.y - y), (page, y)) for (page, y) in keys
+                     if page == span.page]
+        if not same_page:
+            continue
+        cells[min(same_page)[1]].append(span)
+
+    # The counterparty column is where the leftmost cell of each row begins, and
+    # the boundary is the midpoint between that band's right edge and the nearest
+    # cell standing right of it. The table's own geometry is what is measured
+    # here, because neither of the other two candidates can place the boundary:
+    # these tables centre the heading over its column (Spain's Article 6 prints
+    # "Preamble Text" 100 pt right of the text it heads), and a wrapped line's
+    # tail arrives as a cell of its own (the same page prints the end of one
+    # preamble line 157 pt right of that line's start).
+    first_cells = [min(group, key=lambda span: span.x)
+                   for group in cells.values() if group]
+    if not first_cells:
+        reading.update({
+            "read": False,
+            "reason": ("the table under the announcement prints numbers and no "
+                       "words beside them, so no row can name a counterparty")})
+        return reading
+    band_right = max(span.x for span in first_cells)
+    right_of_band = [span.x for group in cells.values() for span in group
+                     if span.x > band_right]
+    if not right_of_band:
+        reading.update({
+            "read": False,
+            "reason": ("the table prints one column of words beside its "
+                       "numbers, so there is no boundary between a "
+                       "counterparty column and a column after it")})
+        return reading
+    split = (band_right + min(right_of_band)) / 2.0
+
+    rows = {key: {"no": None, "page": None,
+                  "other_jurisdiction": [], "text": []} for key in keys}
+    for anchor in anchors:
+        rows[(anchor.page, anchor.y)]["no"] = _scope_number(anchor.text)
+        rows[(anchor.page, anchor.y)]["page"] = anchor.page
+    for key in keys:
+        for span in cells[key]:
+            row = rows[key]
+            row["other_jurisdiction" if span.x <= split else "text"].append(span.text)
+
+    published = [{"no": rows[key]["no"], "page": rows[key]["page"],
+                  "other_jurisdiction": _scope_cell(rows[key]["other_jurisdiction"]),
+                  "text": _scope_cell(rows[key]["text"])} for key in keys]
+    # A row can come back with a cell the table prints nothing in, and that is
+    # published as an empty cell rather than filled in. It is counted so that a
+    # row losing a cell to the page rather than to the page's silence shows up in
+    # the family's own account: two rows in the family are empty this way, both
+    # where the table prints the cell on the line the next row's number opens.
+    reading.update({
+        "read": True, "headings": headings, "split_x": round(split, 1),
+        "rows_without_a_counterparty": sum(
+            1 for row in published if not row["other_jurisdiction"]),
+        "rows_without_a_text": sum(1 for row in published if not row["text"]),
+        "rows": published})
+    return reading
 
 
 def _join_wrapped_dates(spans: list) -> list:
@@ -2518,14 +2809,48 @@ def position(book: ledger.Ledger, source: str, pdf: Path) -> dict:
         "companion_suffix": suffix, "title_read": title_read,
         "article_sections": {}, "covered_agreements": [], "n_covered": 0, "qa": {},
     }
+    scope = {"announced": 0, "read": 0, "rows": 0,
+             "rows_without_a_counterparty": 0, "rows_without_a_text": 0,
+             "options_announcing_more_than_one_list": 0,
+             "not_read": []}
     for section in sections(lines, spans):
         options = _options(section, book)
         if options:
-            out["article_sections"][str(section["no"])] = [
-                {"mli_article_title": section["title"], "kind": option["kind"],
-                 "option_title": option["title"], "page": option["page"],
-                 "excerpt": option["excerpt"], "truncated": False}
-                for option in options]
+            entries: list[dict] = []
+            for option in options:
+                entry = {"mli_article_title": section["title"],
+                         "kind": option["kind"],
+                         "option_title": option["title"], "page": option["page"],
+                         "excerpt": option["excerpt"], "truncated": False}
+                if option["kind"] == "Reservation":
+                    # Every reservation carries the reader's answer, including the
+                    # answer "this statement announces no list": a statement that
+                    # says nothing about a list is not the same fact as one nobody
+                    # looked at, and the two would read alike if the field were
+                    # published only when something was found. The answer is a
+                    # list because a statement can announce more than one list
+                    # (Argentina's Article 7 prints two reservations' tables in
+                    # one option), and keeping only the first would drop the
+                    # second in silence.
+                    reading = reservation_scope(option, book)
+                    entry["scope_lists"] = reading["lists"]
+                    if reading["announced"] > 1:
+                        scope["options_announcing_more_than_one_list"] += 1
+                    for one in reading["lists"]:
+                        scope["announced"] += 1
+                        if one["read"]:
+                            scope["read"] += 1
+                            scope["rows"] += len(one["rows"])
+                            scope["rows_without_a_counterparty"] += \
+                                one["rows_without_a_counterparty"]
+                            scope["rows_without_a_text"] += one["rows_without_a_text"]
+                        else:
+                            scope["not_read"].append(
+                                {"article": section["no"],
+                                 "page": one.get("page", option["page"]),
+                                 "reason": one["reason"]})
+                entries.append(entry)
+            out["article_sections"][str(section["no"])] = entries
         if section["no"] == 2 and "covered_agreements" not in out["qa"]:
             rows, qa = covered_agreements(
                 section["spans"], book, reader_source=Path(pdf).stem)
@@ -2536,6 +2861,7 @@ def position(book: ledger.Ledger, source: str, pdf: Path) -> dict:
         out["qa"]["covered_agreements"] = {
             "read": False,
             "reason": "this document has no Article 2 section to read a table from"}
+    out["qa"]["scope_lists"] = scope
     out["qa"]["jurisdiction"] = {
         "title_read": title_read, "resolved_from": resolved_by,
         "name": country, "slug": slug,
@@ -3036,6 +3362,40 @@ def _family_build(directory: Path, source: str, root: Path) -> dict:
                                   "reason": covered_qa.get("reason", ""),
                                   "slug": doc["slug"]})
 
+    # The lists the reservations announce. What is kept here is what was read:
+    # how many statements announced a list, how many of those lists were read
+    # and how many rows they hold together, and every announcement whose table
+    # was not read, with the reader's own reason. An announcement is not a row:
+    # a statement can announce a list and print nothing under it, and that is a
+    # declared gap rather than a row count of zero.
+    scope_totals = {"announced": 0, "read": 0, "rows": 0,
+                    "rows_without_a_counterparty": 0, "rows_without_a_text": 0,
+                    "options_announcing_more_than_one_list": 0}
+    scope_unread: list[dict] = []
+    # A statement that announces two lists is a statement whose second table a
+    # reader is most likely to have lost, so the ones the corpus has are named
+    # here rather than left to the total: the count says how many there are and
+    # the list says which, so a reading that dropped one of them shows up as a
+    # shorter list and not only as a smaller number.
+    scope_multiple: list[dict] = []
+    for doc in documents:
+        data = positions[doc["slug"]]
+        scope_qa = data["qa"].get("scope_lists") or {}
+        for key in scope_totals:
+            scope_totals[key] += int(scope_qa.get(key, 0))
+        for gap in scope_qa.get("not_read") or []:
+            scope_unread.append({"file": doc["file"], "slug": doc["slug"],
+                                 "article": gap.get("article"),
+                                 "page": gap.get("page"),
+                                 "reason": gap.get("reason", "")})
+        for article, entries in (data.get("article_sections") or {}).items():
+            for entry in entries:
+                if len(entry.get("scope_lists") or []) > 1:
+                    scope_multiple.append(
+                        {"file": doc["file"], "slug": doc["slug"],
+                         "article": article, "page": entry.get("page"),
+                         "lists": len(entry["scope_lists"])})
+
     # Every published position's own measured band, so the global intersection
     # the tests pin is readable here without re-reading the sources. Each entry
     # mirrors what that layout's artefact publishes - the reader its rows were
@@ -3091,6 +3451,9 @@ def _family_build(directory: Path, source: str, root: Path) -> dict:
         "jurisdictions_with_more_than_one_document": multiple,
         "positions_whose_numbering_has_a_gap": gaps,
         "positions_without_a_covered_agreements_table": without_table,
+        "reservation_scope_lists": scope_totals,
+        "reservations_announcing_a_list_not_read": scope_unread,
+        "reservations_announcing_more_than_one_list": scope_multiple,
         "published": len(positions), "read": len(documents),
         "source": source,
         "spans": {key: total[key] for key in
@@ -3118,6 +3481,30 @@ def _family_build(directory: Path, source: str, root: Path) -> dict:
                 "column is a reading this projection could not do (a bilingual "
                 "table, whose cells this corpus holds in two scripts, is the case "
                 "the family has and the projection does not yet read)."),
+            "reservation_scope_lists": (
+                "`reservation_scope_lists` counts the lists the positions' own "
+                "reservations announce and this reading keeps: how many "
+                "statements announce a list of agreements, how many of those "
+                "lists were read, how many rows they hold together, and how many "
+                "of those rows came back with an empty counterparty or an empty "
+                "text. An empty cell is published as the page prints it and "
+                "counted here, so a cell lost to a page break shows up as a "
+                "number rather than as a thinner row. "
+                "`reservations_announcing_a_list_not_read` lists every "
+                "announcement whose table was not read, with the reader's own "
+                "reason - a statement that announces a list and prints no table "
+                "under it is a declared gap, not a list of no rows. A statement "
+                "can announce more than one list - Argentina's Article 7 prints "
+                "a reservation under Article 7(15)(b) and, under it, a second "
+                "reservation under Article 7(15)(c), each with its own table, "
+                "and the option model reads the two statements as one option "
+                "because the second carries no printed label - so "
+                "`options_announcing_more_than_one_list` counts those "
+                "statements and "
+                "`reservations_announcing_more_than_one_list` names them: the "
+                "second table is the one a reader is likeliest to lose, and a "
+                "list that lost it would show here as a shorter list and not "
+                "only as a smaller count."),
             "numbering": (
                 "`positions_whose_numbering_has_a_gap` lists the tables whose "
                 "covered agreements are numbered with a hole in the run, and "

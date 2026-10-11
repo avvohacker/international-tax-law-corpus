@@ -32,3 +32,68 @@
 | 24 | Türkiye | Original | 16-12-2010 | 09-10-2012 | 5 |
 | 25 | Ukraine | Original | 16-01-2002 | 25-04-2006 | 5 |
 | 26 | Venezuela | Original | 14-02-2005 | 19-08-2010 | 5 |
+
+## The agreements the reservations bring within their scope
+
+*4 list(s) of agreements are announced under the reservations of this position: 4 read, holding 33 row(s) between them. 1 statement(s) announce more than one list, and every one is printed below. Every announcement's table was read.*
+
+### Article 10 — the list under the reservation on page 12, one list
+
+*25 row(s), printed on page 12.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Austria | Article 11(6) | 12 |
+| 2 | Belgium | Article 11(6) | 12 |
+| 3 | Canada | Article 11(6) | 12 |
+| 4 | Czech Republic | Article 11(6) | 12 |
+| 5 | Denmark | Article 11(6) | 12 |
+| 6 | Ecuador | Article 11(6) | 12 |
+| 7 | Finland | Article 11(7) | 12 |
+| 8 | France | Article 11(6) | 12 |
+| 9 | Hungary | Article 11(6) | 12 |
+| 10 | Israel | Article 11(6) | 12 |
+| 11 | Italy | Article 11(6) | 12 |
+| 13 | Luxembourg | Article 11(6) | 12 |
+| 14 | Mexico | Article 11(7) | 12 |
+| 15 | Netherlands | Article 11(6) | 12 |
+| 16 | Peru | Article 11(5) | 12 |
+| 17 | Philippines | Article 11(6) | 12 |
+| 18 | Portugal | Article 11(4) | 12 |
+| 19 | Russia | Article 11(8) | 12 |
+| 20 | South Africa | Article 11(6) | 12 |
+| 21 | South Korea | Article 11(6) | 13 |
+| 22 | Spain | Article 11(7) | 13 |
+| 23 | Trinidad and Tobago | Article 11(8) | 13 |
+| 24 | Türkiye | Protocol(2) | 13 |
+| 25 | Ukraine | Article 11(8) | 13 |
+| 26 | Venezuela | Article 11(6) | 13 |
+
+### Article 4 — the list under the reservation on page 6, list 1 of 2
+
+*4 row(s), printed on page 6.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 3 | Canada | Article 4(3) | 6 |
+| 7 | Finland | Article 4(3) | 6 |
+| 12 | Japan | Article 3(2) | 6 |
+| 17 | Philippines | Article 4(3) | 6 |
+
+### Article 4 — the list under the reservation on page 6, list 2 of 2
+
+*3 row(s), printed on page 6.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 14 | Mexico | Article 4(3) | 6 |
+| 16 | Peru | Article 4(3) | 6 |
+| 24 | Türkiye | Article 4(3) | 6 |
+
+### Article 8 — the list under the reservation on page 11, one list
+
+*1 row(s), printed on page 11.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 18 | Portugal | Article 10(2)(a) | 11 |

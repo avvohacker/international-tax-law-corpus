@@ -7,6 +7,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -45,6 +46,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 16,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -93,6 +95,7 @@
         "mli_article_title": "Type of Arbitration Process",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -103,6 +106,7 @@
         "mli_article_title": "Compatibility",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -113,6 +117,7 @@
         "mli_article_title": "Reservations",
         "option_title": "Formulated for Scope of Arbitration",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -131,6 +136,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 5,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -149,6 +155,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 6,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -167,6 +174,39 @@
         "mli_article_title": "Purpose of a Covered Tax Agreement",
         "option_title": "",
         "page": 7,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed",
+              "Other",
+              "Agreement",
+              "Contracting",
+              "Preamble Text",
+              "Number",
+              "Jurisdiction",
+              "Listed",
+              "Other",
+              "Agreement",
+              "Contracting",
+              "Preamble Text",
+              "Number",
+              "Jurisdiction"
+            ],
+            "page": 7,
+            "read": true,
+            "rows": [
+              {
+                "no": 9,
+                "other_jurisdiction": "Germany",
+                "page": 7,
+                "text": "Desiring to further develop their economic relationship and to enhance their cooperation in tax matters, Intending to conclude a new Agreement for the elimination of double taxation with respect to taxes on income and to certain other taxes without creating opportunities for non-taxation or"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 196.7
+          }
+        ],
         "truncated": false
       },
       {
@@ -211,6 +251,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -1281,6 +1322,15 @@
       "resolved_from": "the document's own title",
       "slug": "japan",
       "title_read": "Japan"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 1,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "aa943db1a3d0d07977521e74d7e1a1f3cbad7adaf7d8df15ca9a7ef4bbac8f9b",

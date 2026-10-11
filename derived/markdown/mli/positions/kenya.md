@@ -20,3 +20,31 @@
 | 12 | United Kingdom | Original | 31/07/73 | 30/09/77 | 2 |
 | 13 | Seychelles | Original | 17/03/2014 | 09/04/2015 | 2 |
 | 14 | United Arab Emirates | Original | 21/11/2011 | 22/2/2017 | 3 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 10 row(s) between them. Every announcement's table was read.*
+
+### Article 13 — the list under the reservation on page 15, one list
+
+*5 row(s), printed on page 15.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 4 | India | Article 5(4) | 15 |
+| 8 | Norway | Article 5(3) | 15 |
+| 9 | Qatar | Article 5(4) | 15 |
+| 10 | South Africa | Article 5(4) | 15 |
+| 11 | Sweden | Article 5(3) | 15 |
+
+### Article 8 — the list under the reservation on page 10, one list
+
+*5 row(s), printed on page 10.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Canada | Article 10 (2) | 10 |
+| 2 | Denmark | Article 10 (2) | 10 |
+| 5 | Italy | Article 10 (2) | 10 |
+| 8 | Norway | Article 10 (2) | 10 |
+| 11 | Sweden | Article 8 (2) | 10 |

@@ -70,3 +70,68 @@
 | 62 | The Syrian Original Arab Republic |  | 18-02-2009 | 27-02-2010 | 7 |
 | 63 | Turkmenistan Original |  | 26-03-1996 | 26-06-1998 | 8 |
 | 64 | The Republic Original of Uzbekistan |  | 06-03-2003 | 17-10-2003 | 8 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 47 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 30, one list
+
+*45 row(s), printed on page 30.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 3 | Republic of Estonia | Article 9(2) | 30 |
+| 4 | Ireland | Article 9(2) | 30 |
+| 5 | Malaysia | Article 9(2) | 30 |
+| 6 | Malta | Article 9(2) | 30 |
+| 8 | The Republic of Singapore | Article 9(2) | 30 |
+| 9 | The Swiss Confederation | Article 9(2) | 30 |
+| 10 | The United Kingdom of Great Britain and Northern Ireland | Article 22(4) | 30 |
+| 14 | The Republic of Bulgaria | Article 9(2) | 30 |
+| 15 | The Republic of Latvia | Article 9(2) | 30 |
+| 16 | The Republic of Lithuania | Article 9(2) | 30 |
+| 17 | Romania | Article 9(2) | 30 |
+| 18 | The Kingdom of Denmark | Article 9(2) | 30 |
+| 19 | The Grand Duchy of Luxembourg | Article 9(2) | 30 |
+| 21 | Australia | Article 9(3) | 30 |
+| 22 | Canada | Article 9(2) | 30 |
+| 23 | The People´s Republic of China | Article 9(2) | 30 |
+| 24 | Croatia | Article 9(2) | 30 |
+| 25 | Czech Republic | Article 9(2) | 30 |
+| 26 | The Republic of Finland | Article 9(2) | 30 |
+| 28 | Georgia | Article 9(2) | 30 |
+| 29 | Germany | Article 9(2) | 30 |
+| 31 | The Republic of Iceland | Article 9(2) | 30 |
+| 33 | Indonesia | Article 9(2) | 30 |
+| 34 | The State of Israel | Article 9(2) | 30 |
+| 37 | The Republic of Kazakhstan | Article 9(2) | 30 |
+| 39 | The United Mexican States | Article 9(2) | 30 |
+| 40 | The Republic of Moldova | Article 9(2) | 30 |
+| 41 | The Federal Republic of Nigeria | Article 8(2) Article 9(2) of the | 30 |
+| 43 | The Republic of Poland | Agreement between the Republic of Poland and the | 30 |
+| 44 | The Portuguese Republic | Slovak Republic for the Avoidance of Double Taxation with Respect to Taxes on Income and on Capital, amended by Article 1 of Amending Instrument a) Article 9(2) | 31 |
+| 45 | Russian Federation | Article 9(2) | 31 |
+| 48 | The Republic of Slovenia | Article 9(2) | 31 |
+| 49 | The Republic of South Africa | Article 9(2) | 31 |
+| 50 | Spain | Article 9(2) | 31 |
+| 52 | The Republic of Tunisia | Article 9(2) | 31 |
+| 53 | The Republic of Turkey | Article 9(2) | 31 |
+| 55 | The United States of America | Article 9(2) | 31 |
+| 56 | The Socialist Republic of Vietnam | Article 9(2) | 31 |
+| 57 | Republic of Belarus | Article 9(2) | 31 |
+| 59 | The State of Kuwait | Article 9(2) | 31 |
+| 60 | The Great Socialist People´s Libyan Arab Jamahiriya | Article 9(2) | 31 |
+| 61 | The Republic of Macedonia | Article 9(2) | 31 |
+| 62 | The Syrian Arab Republic | Article 9(2) | 31 |
+| 63 | Turkmenistan | Article 9(2) | 31 |
+| 64 | The Republic of Uzbekistan | Article 9(2) | 31 |
+
+### Article 8 — the list under the reservation on page 18, one list
+
+*2 row(s), printed on page 18.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 43 | The Republic of Poland | Article 10(2)(a) (Article 2 of the Protocol) | 18 |
+| 44 | The Portuguese Republic | Article 10 (3) | 18 |

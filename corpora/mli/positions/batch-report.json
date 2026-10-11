@@ -2620,9 +2620,63 @@
     "one_position_per_jurisdiction": "`published` is the number of positions, and it can be smaller than `read`: a jurisdiction can have more than one document, and which document is its position and which are documents about it is written down in `jurisdictions_with_more_than_one_document`.",
     "order": "documents and unread are in the directory's own order, by file name, so two runs compare line by line",
     "read_in_one_pass": "Every document the directory holds is read by one command, and this report is its account: a document missing from `documents` is in `unread` with the reader's own reason, and one that is in neither was not declared here at all.",
+    "reservation_scope_lists": "`reservation_scope_lists` counts the lists the positions' own reservations announce and this reading keeps: how many statements announce a list of agreements, how many of those lists were read, how many rows they hold together, and how many of those rows came back with an empty counterparty or an empty text. An empty cell is published as the page prints it and counted here, so a cell lost to a page break shows up as a number rather than as a thinner row. `reservations_announcing_a_list_not_read` lists every announcement whose table was not read, with the reader's own reason - a statement that announces a list and prints no table under it is a declared gap, not a list of no rows. A statement can announce more than one list - Argentina's Article 7 prints a reservation under Article 7(15)(b) and, under it, a second reservation under Article 7(15)(c), each with its own table, and the option model reads the two statements as one option because the second carries no printed label - so `options_announcing_more_than_one_list` counts those statements and `reservations_announcing_more_than_one_list` names them: the second table is the one a reader is likeliest to lose, and a list that lost it would show here as a shorter list and not only as a smaller count.",
     "unclaimed_spans": "`spans.unclaimed` counts the spans no rule claimed and the catch-all dropped. They are not lost silently - every document's own audit lists them with their text - but they are the part of this reading that is dropped by default rather than by a named rule, and on this family most of them are the publisher's deposit stamp repeated in the footer band of every page. Where one of them is not apparatus the document needs a rule of its own: a cell's continuation line that no rule claims is text the corpus does not hold."
   },
   "read": 103,
+  "reservation_scope_lists": {
+    "announced": 119,
+    "options_announcing_more_than_one_list": 6,
+    "read": 119,
+    "rows": 2156,
+    "rows_without_a_counterparty": 0,
+    "rows_without_a_text": 2
+  },
+  "reservations_announcing_a_list_not_read": [],
+  "reservations_announcing_more_than_one_list": [
+    {
+      "article": "7",
+      "file": "sources/mli-positions/mli-position-argentina.pdf",
+      "lists": 2,
+      "page": 10,
+      "slug": "argentina"
+    },
+    {
+      "article": "4",
+      "file": "sources/mli-positions/mli-position-brazil.pdf",
+      "lists": 2,
+      "page": 6,
+      "slug": "brazil"
+    },
+    {
+      "article": "7",
+      "file": "sources/mli-positions/mli-position-chile.pdf",
+      "lists": 2,
+      "page": 8,
+      "slug": "chile"
+    },
+    {
+      "article": "7",
+      "file": "sources/mli-positions/mli-position-italy.pdf",
+      "lists": 2,
+      "page": 23,
+      "slug": "italy"
+    },
+    {
+      "article": "4",
+      "file": "sources/mli-positions/mli-position-mexico.pdf",
+      "lists": 2,
+      "page": 10,
+      "slug": "mexico"
+    },
+    {
+      "article": "7",
+      "file": "sources/mli-positions/mli-position-mexico.pdf",
+      "lists": 2,
+      "page": 19,
+      "slug": "mexico"
+    }
+  ],
   "source": "mli-positions-batch",
   "spans": {
     "dropped": 4066,

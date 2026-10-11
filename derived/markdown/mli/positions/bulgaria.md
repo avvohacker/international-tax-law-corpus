@@ -72,3 +72,74 @@
 | 64 |  | Original | 14-12-1998 | 10-01-2000 | 9 |
 | 65 | State: | Original | 14-12-1998 | 10-01-2000 | 10 |
 | 66 |  | Original | 12-10-1988 | 29-01-1990 | 10 |
+
+## The agreements the reservations bring within their scope
+
+*3 list(s) of agreements are announced under the reservations of this position: 3 read, holding 46 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 33, one list
+
+*44 row(s), printed on page 33.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 33 |
+| 2 | Algeria | Article 9(2) | 33 |
+| 3 | Armenia | Article 9(2) | 33 |
+| 4 | Austria | Article 9(2) | 33 |
+| 6 | Bahrain | Article 9(2) | 33 |
+| 7 | Belarus | Article 9(2) | 33 |
+| 9 | Canada | Article 9(2) | 33 |
+| 11 | Croatia | Article 9(2) | 33 |
+| 12 | Cyprus | Article 9(2) | 33 |
+| 16 | Estonia | Article 9(2) | 33 |
+| 18 | Georgia | Article 9(2) | 33 |
+| 19 | Germany | Article 9(2) | 33 |
+| 21 | Hungary | Article 9(2) | 33 |
+| 23 | Indonesia | Article 9(2) | 33 |
+| 25 | Ireland | Article 9(2) | 33 |
+| 26 | Israel | Article 9(2) | 33 |
+| 28 | Japan | Article 9(2) | 33 |
+| 29 | Jordan | Article 9(2) | 33 |
+| 30 | Kazakhstan | Article 9(2) | 33 |
+| 31 | North Korea | Article 9(2) | 33 |
+| 32 | Korea | Article 9(2) | 33 |
+| 35 | Lebanon | Article 9(2) | 33 |
+| 37 | Luxembourg | Article 9(2) | 33 |
+| 38 | Macedonia | Article 9(2) | 33 |
+| 39 | Moldova | Article 9(2) | 33 |
+| 40 | Mongolia | Article 9(2) | 33 |
+| 41 | Morocco | Article 9(2) | 33 |
+| 42 | Norway | Article 9(2) | 33 |
+| 43 | Poland | Article 9(2) | 33 |
+| 44 | Portugal | Article 9(2) | 33 |
+| 47 | Russia | Article 9(2) | 33 |
+| 48 | Singapore | Article 9(2) | 33 |
+| 49 | Slovakia | Article 9(2) | 33 |
+| 54 | Switzerland | Article 9(2) | 33 |
+| 56 | Thailand | Article 9(2) | 33 |
+| 57 | Turkey | Article 9(2) | 33 |
+| 58 | Ukraine | Article 9(2) | 33 |
+| 59 | United Arab Emirates | Article 9(2) | 33 |
+| 60 | United Kingdom of Great Britain | Article 9(2) | 33 |
+| 61 | and Norhern Ireland United States of America | Article 9(2) | 34 |
+| 62 | Uzbekistan | Article 9(2) | 34 |
+| 63 | Vietnam | Article 9(2) | 34 |
+| 64 | Serbia | Article 9(2) | 34 |
+| 65 | Montenegro | Article 9(2) | 34 |
+
+### Article 6 — the list under the reservation on page 14, one list
+
+*1 row(s), printed on page 14.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 46 | Romania | Intending to conclude a Convention for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Convention for the indirect benefit of residents of third States, | 14 |
+
+### Article 7 — the list under the reservation on page 20, one list
+
+*1 row(s), printed on page 20.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 61 | United States of America | Article 21(1) through (6) | 20 |

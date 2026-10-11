@@ -61,3 +61,61 @@
 | 53 | United Kingdom | Original Amending Instrument | 19-03-2001 21-05-2002 | 04-02-2002 28-11-2002 | 7 |
 | 54 | United States | Original | 15-01-1998 | 30-12-1999 | 8 |
 | 55 | Uzbekistan | Original | 18-02-2002 | 11-11-2002 | 8 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 47 row(s) between them. Every announcement's table was read.*
+
+### Article 14 — the list under the reservation on page 19, one list
+
+*47 row(s), printed on page 19.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Armenia | Article 5(3b) | 19 |
+| 2 | Austria | Article 21 | 19 |
+| 3 | Azerbaijan | Article 21 | 19 |
+| 5 | Belgium | Article 21 | 19 |
+| 6 | Bulgaria | Article 5 (3c) | 19 |
+| 7 | Canada | Article 29 | 19 |
+| 8 | China | Article 22 | 19 |
+| 9 | Croatia | Article 21 | 19 |
+| 11 | Cyprus | Article 21 | 19 |
+| 12 | Denmark | Article 21 | 19 |
+| 13 | Estonia | Article 29 | 19 |
+| 14 | Finland | Article 21 | 19 |
+| 16 | Georgia | Article 21 | 19 |
+| 17 | Germany | Article 20a | 19 |
+| 18 | Greece | Article 21 | 19 |
+| 19 | Hungary | Article 5(b) | 19 |
+| 20 | Iceland | Article 21 | 19 |
+| 21 | India | Article 5(c) | 19 |
+| 22 | Ireland | Article 22 | 19 |
+| 23 | Israel | Article 5 (3b) | 19 |
+| 24 | Italy | Article 22 | 19 |
+| 25 | Kazakhstan | Article 21 | 19 |
+| 27 | Kuwait | Article 5(3c) | 19 |
+| 28 | Kyrgyzstan | Article 21 | 19 |
+| 29 | Latvia | Article 29 | 19 |
+| 30 | Luxembourg | Article 21 | 19 |
+| 31 | Macedonia | Article 5(3c) | 19 |
+| 32 | Malta | Article 21 | 19 |
+| 33 | Mexico | Article 21 | 19 |
+| 34 | Moldova | Article 5 (3b) | 19 |
+| 35 | Morocco | Article 5(3c) | 19 |
+| 36 | Netherlands | Article 25 | 19 |
+| 37 | Norway | Article 21 | 19 |
+| 38 | Poland | Article 22 | 19 |
+| 39 | Portugal | Article 22 | 19 |
+| 40 | Romania | Protocol | 19 |
+| 41 | Russia | Article 21 | 19 |
+| 42 | Serbia | Article 5 (3 (2)) | 19 |
+| 43 | Slovakia | Protocol (para. III) | 19 |
+| 44 | Slovenia | Article 5 (3b) | 19 |
+| 46 | Spain | Article 21 | 19 |
+| 47 | Sweden | Article 21 | 19 |
+| 51 | Ukraine | Article 21 | 19 |
+| 52 | United Arab Emirates | Article 22 | 20 |
+| 53 | United Kingdom | Article 23 | 20 |
+| 54 | United States | Article 21 | 20 |
+| 55 | Uzbekistan | Article 21 | 20 |

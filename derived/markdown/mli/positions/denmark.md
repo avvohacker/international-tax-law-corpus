@@ -71,3 +71,64 @@
 | 63 | Venezuela | Original | 03-12-1998 | 21-06-2001 | 11 |
 | 64 | Vietnam | Original | 31-05-1995 | 24-04-1996 | 12 |
 | 65 | Zambia | Original | 13-09-1973 | 18-10-1974 | 12 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 50 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 26, one list
+
+*50 row(s), printed on page 26.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 9(2) | 26 |
+| 2 | Australia | Article 9(3) | 26 |
+| 3 | Austria | Article 9(2) | 26 |
+| 4 | Bangladesh | Article 9(2) | 26 |
+| 8 | Canada | Article 9(2) | 26 |
+| 9 | Chile | Article 9(2) | 26 |
+| 10 | China | Article 9(2) | 26 |
+| 11 | Croatia | Article 9(2) | 26 |
+| 12 | Cyprus | Article 9(2) | 26 |
+| 13 | Czech Republic | Article 9(2) | 26 |
+| 15 | Estonia | Article 9(2) | 26 |
+| 16 | Georgia | Article 9(2) | 26 |
+| 17 | Germany | Article 9(2) | 26 |
+| 18 | Ghana | Article 9(2) | 26 |
+| 19 | Greece | Article 9(2) | 26 |
+| 20 | Hungary | Article 9(2) | 26 |
+| 21 | India | Article 10(2) | 26 |
+| 22 | Indonesia | Article 9(2) | 26 |
+| 23 | Ireland | Article 9(2) | 26 |
+| 24 | Israel | Article 9(2) | 26 |
+| 25 | Italy | Article 9(2) | 26 |
+| 29 | Kuwait | Article 9(2) | 26 |
+| 30 | Latvia | Article 9(2) | 26 |
+| 31 | Lithuania | Article 9(2) | 26 |
+| 32 | Luxembourg | Article 9(2) | 26 |
+| 33 | Marcedonia | Article 9(2) | 26 |
+| 35 | Malta | Article 9(2) | 26 |
+| 36 | Mexico | Article 9(2) | 26 |
+| 38 | Morocco | Article 9(2) | 26 |
+| 39 | New Zealand | Article 9(2) | 26 |
+| 40 | Pakistan | Article 9(2) | 26 |
+| 41 | Philippines | Article 9(2) | 26 |
+| 42 | Poland | Article 9(2) | 26 |
+| 43 | Portugal | Article 9(2) | 27 |
+| 45 | Russia | Article 9(2) | 27 |
+| 46 | Serbia | Article 9(2) | 27 |
+| 47 | Singapore | Article 9(2) | 27 |
+| 48 | Slovakia | Article 9(2) | 27 |
+| 49 | Slovenia | Article 9(2) | 27 |
+| 50 | South Africa | Article 9(2) | 27 |
+| 51 | Sri Lanka | Article 9(2) | 27 |
+| 53 | Taiwan | Article 9(2) | 27 |
+| 55 | Thailand | Article 9(2) | 27 |
+| 57 | Tunesia | Article 9(2) | 27 |
+| 58 | Turkey | Article 9(2) | 27 |
+| 59 | Uganda | Article 9(2) | 27 |
+| 60 | Ukraine | Article 9(2) | 27 |
+| 62 | United States of America | Article 9(2) | 27 |
+| 63 | Venezuela | Article 9(2) | 27 |
+| 64 | Vietnam | Article 9(3) | 27 |

@@ -26,3 +26,33 @@
 | 18 | United Arab Emirates | Original | 10-10-2014 | 13-06-2016 | 3 |
 | 19 | United Kingdom | Original | 24-02-2016 | 14-11-2016 | 3 |
 | 20 | Viet Nam | Original | 09-12-2013 | 26-07-2016 | 3 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 19 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 22, one list
+
+*19 row(s), printed on page 22.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Belgium | Article 9(2) | 22 |
+| 2 | Chile | Article 9(2) | 22 |
+| 3 | Ecuador | Article 9(2) | 22 |
+| 4 | Finland | Article 9(2) | 22 |
+| 5 | Germany | Article 9(2) | 22 |
+| 7 | India | Article 9(2) | 22 |
+| 8 | Korea | Article 9(2) | 22 |
+| 9 | Liechtenstein | Article 9(2) | 22 |
+| 10 | Luxembourg | Article 9(2) | 22 |
+| 11 | Malta | Article 9(2) | 22 |
+| 12 | Mexico | Article 9(2) | 22 |
+| 13 | Portugal | Article 9(2) | 22 |
+| 14 | Romania | Article 9(2) | 22 |
+| 15 | Singapore | Article 9(2) | 22 |
+| 16 | Spain | Article 9(2) | 22 |
+| 17 | Switzerland | Article 9(2) | 22 |
+| 18 | United Arab Emirates | Article 9(2) | 22 |
+| 19 | United Kingdom | Article 9(2) | 22 |
+| 20 | Viet Nam | Article 9(2) | 22 |

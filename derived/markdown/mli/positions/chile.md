@@ -40,3 +40,131 @@
 | 32 | Japan | Original | 21-01-2016 | 28-12-2016 | 5 |
 | 33 | United States of America | Original Amending instrument (a): Exchange of notes Amending instrument (b ): Exchange of notes | 04-02-2010 25-02-2011 10-02-2012 21-02-2012 | N/A N/A N/A | 5 |
 | 34 | Uruguay | Original | 01-04-2016 | N/A | 5 |
+
+## The agreements the reservations bring within their scope
+
+*8 list(s) of agreements are announced under the reservations of this position: 8 read, holding 68 row(s) between them. 1 statement(s) announce more than one list, and every one is printed below. Every announcement's table was read.*
+
+### Article 10 — the list under the reservation on page 12, one list
+
+*8 row(s), printed on page 12.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 33 | United States of America | Article 24(5) | 12 |
+| 32 | Japan | Article 22(2) | 12 |
+| 27 | Argentina | Article 24(8) | 12 |
+| 28 | China | Article 26(6) | 12 |
+| 31 | Italy | Article 27(2) | 12 |
+| 2 | Austria | Protocol (12) | 12 |
+| 30 | Czech Republic | Article 28(5) | 12 |
+| 34 | Uruguay | Article 28(7) | 12 |
+
+### Article 11 — the list under the reservation on page 12, one list
+
+*1 row(s), printed on page 12.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 33 | United States of America | Protocol (4) | 12 |
+
+### Article 17 — the list under the reservation on page 18, one list
+
+*33 row(s), printed on page 18.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Australia | Article 9(2) | 18 |
+| 2 | Austria | Article 9(2) | 18 |
+| 3 | Belgium | Article 9(2) | 18 |
+| 5 | Canada | Article 9(2) | 18 |
+| 6 | Colombia | Article 9(2) | 18 |
+| 7 | Korea | Article 9(2) | 18 |
+| 8 | Croatia | Article 9(2) | 18 |
+| 9 | Denmark | Article 9(2) | 18 |
+| 10 | Ecuador | Article 9(2) | 18 |
+| 11 | Spain | Article 9(2) | 18 |
+| 12 | France | Article 9(2) | 18 |
+| 13 | Ireland | Article 9(2) | 18 |
+| 14 | Malaysia | Article 9(2) | 18 |
+| 15 | Mexico | Article 9(2) | 18 |
+| 16 | Norway | Article 9(2) | 18 |
+| 17 | New Zealand | Article 9(2) | 18 |
+| 18 | Paraguay | Article 9(2) | 18 |
+| 19 | Peru | Article 9(2) | 18 |
+| 20 | Poland | Article 9(2) | 18 |
+| 21 | Portugal | Article 9(2) | 18 |
+| 22 | United Kingdom | Article 9(2) | 18 |
+| 23 | Russia | Article 9(2) | 18 |
+| 24 | Sweden | Article 9(2) | 18 |
+| 25 | Switzerland | Article 9(2) | 18 |
+| 26 | Thailand | Article 9(2) | 18 |
+| 27 | Argentina | Article 9(2) | 18 |
+| 28 | China | Article 9(2) | 18 |
+| 29 | South Africa | Article 9(2) | 18 |
+| 30 | Czech Republic | Article 9(2) | 18 |
+| 31 | Italy | Article 9(2) | 18 |
+| 32 | Japan | Article 9(2) | 18 |
+| 33 | United States of America | Article 9(2) | 18 |
+| 34 | Uruguay | Article 9(2) | 18 |
+
+### Article 3 — the list under the reservation on page 6, one list
+
+*7 row(s), printed on page 6.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 17 | New Zealand | Article 4(4) | 6 |
+| 22 | United Kingdom | Article 4(4) | 6 |
+| 24 | Sweden | Article 4(1) | 6 |
+| 32 | Japan | Article 1(2) | 6 |
+| 29 | South Africa | Article 4(3) Protocol (1) | 6 |
+| 33 | United States of America |  | 6 |
+| 34 | Uruguay | Article 1(2) | 6 |
+
+### Article 6 — the list under the reservation on page 6, one list
+
+*5 row(s), printed on page 6.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 27 | Argentina | “Deseosos de promover el desarrollo de su relación económica y fortalecer su cooperación en materia tributaria, Con la intención de concluir un Convenio para la eliminación de la doble imposición con relación a los impuestos sobre la renta y sobre el patrimonio sin crear oportunidades para situaciones de nula o reducida tributación a través de evasión o elusión fiscal (incluyendo aquellos acuerdos para el uso abusivo de tratados – treaty-shopping – dirigidos a que residentes de terceros Estados | 6 |
+| 28 | China | obtengan indirectamente beneficios de este Convenio),” “Desiring to further develop their economic relationship and to enhance their cooperation in tax matters, Intending to conclude an Agreement for the elimination of double taxation with respect to taxes on income without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Agreement for the indirect benefit of residents of third States)” | 7 |
+| 31 | Italy | “Desiring to further develop their economic relationship and to enhance their cooperation in tax matters, Intending to conclude a Convention for the elimination of double taxation with respect to taxes on income without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Convention for the indirect benefit of residents of third States)” | 7 |
+| 32 | Japan | “Desiring to further develop their economic relationship and to enhance their cooperation in tax matters, Intending to conclude a Convention for the elimination of double taxation with respect to taxes on income without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Convention for the indirect benefit of residents of third States)” | 7 |
+| 34 | Uruguay | “Deseando promover el desarrollo de su relación económica y fortalecer su cooperación en materias tributarias, Con la intención de concluir un Convenio para la eliminación de la doble imposición con relación a los impuestos sobre la renta y sobre el patrimonio sin crear oportunidades para situaciones de nula o reducida tributación a través de evasión o elusión fiscal (incluyendo aquellos acuerdos para el uso abusivo de tratados – treaty-shopping – dirigidos a que residentes de terceros Estados obtengan indirectamente beneficios de este Convenio),” | 7 |
+
+### Article 7 — the list under the reservation on page 8, list 1 of 2
+
+*5 row(s), printed on page 9.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 27 | Argentina | Article 24(6) | 9 |
+| 28 | China | Article 26(5) | 9 |
+| 31 | Italy | Article 27(1) | 9 |
+| 32 | Japan | Article 22(1) | 9 |
+| 34 | Uruguay | Article 28(6) | 9 |
+
+### Article 7 — the list under the reservation on page 8, list 2 of 2
+
+*4 row(s), printed on page 9.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 27 | Argentina | Article 24(1) through (5) | 9 |
+| 28 | China | Article 26(1) through (4) | 9 |
+| 33 | United States of America | Article 24(1) through (4) and (6) | 9 |
+| 34 | Uruguay | Article 28(1) through (5) | 9 |
+
+### Article 9 — the list under the reservation on page 11, one list
+
+*5 row(s), printed on page 11.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 27 | Argentina | Article 13(4) | 11 |
+| 28 | China | Article 13(4) | 11 |
+| 32 | Japan | Article 13(4)(a)(ii) | 11 |
+| 31 | Italy | Article 13(4)(b) | 11 |
+| 34 | Uruguay | Article 13(4) | 11 |

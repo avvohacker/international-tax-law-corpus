@@ -72,3 +72,116 @@
 | 64 | United Kingdom | Original | 15-02-1994 | 18-04-1997 | 10 |
 | 65 |  | Original | 17-06-1992 | 16-12-1993 | 10 |
 | 66 | Vietnam | Original | 27-05-1993 | 21-03-1996 | 10 |
+
+## The agreements the reservations bring within their scope
+
+*5 list(s) of agreements are announced under the reservations of this position: 5 read, holding 74 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 38, one list
+
+*45 row(s), printed on page 38.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 9(2) | 38 |
+| 3 | Australia | Article 9(3) | 38 |
+| 4 | Austria | Article 9(2) | 38 |
+| 5 | Azerbaijan | Article 9(2) | 38 |
+| 7 | Belgium (new) | Article 9(2) | 38 |
+| 9 | Bulgaria | Article 9(2) | 38 |
+| 10 | Canada | Article 9(2) | 38 |
+| 11 | Chile | Article 9(2) | 38 |
+| 12 | China | Article 9(2) | 38 |
+| 13 | Croatia | Article 9(2) | 38 |
+| 14 | Cyprus | Article 9(2) | 38 |
+| 16 | Denmark | Article 9(2) | 38 |
+| 18 | Finland | Article 9(2) | 38 |
+| 19 | France | Article 9(2) | 38 |
+| 21 | Greece | Article 9(2) | 38 |
+| 22 | Hong Kong | Article 9(2) | 38 |
+| 24 | Iceland | Article 9(2) | 38 |
+| 27 | Ireland | Article 9(2) | 38 |
+| 28 | Israel | Article 9(2) | 38 |
+| 29 | Italy | Protocol, para c) | 38 |
+| 30 | Kazakhstan | Article 9(2) | 38 |
+| 32 | Kuwait | Article 9(2) | 38 |
+| 33 | Latvia | Article 9(2) | 38 |
+| 34 | Lebanon | Article 9(2) | 38 |
+| 35 | Lithuania | Article 9(2) | 38 |
+| 36 | Luxemburg | Article 9(2) | 38 |
+| 38 | Malta | Article 9(2) | 38 |
+| 39 | Mexico | Article 9(2) | 38 |
+| 41 | Mongolia | Article 9(2) | 38 |
+| 43 | Netherlands | Article 9(2) | 38 |
+| 44 | New Zealand | Article 9(2) | 38 |
+| 45 | Norway | Article 9(2) | 38 |
+| 46 | Philippines | Article 9(2) | 38 |
+| 48 | Portugal | Article 9(2) | 38 |
+| 50 | Romania | Article 9(2) | 38 |
+| 51 | Saudi Arabia | Article 9(2) | 38 |
+| 52 | Serbia | Article 9(2) | 38 |
+| 53 | Singapore | Article 9(2) | 38 |
+| 54 | Slovak Republic | Article 9(2) | 38 |
+| 55 | Slovenia | Article 9(2) | 39 |
+| 56 | South Africa | Article 9(2) | 39 |
+| 57 | Spain | Article 9(2) | 39 |
+| 58 | Sri Lanka | Article 9(2) | 39 |
+| 61 | Turkey | Article 9(2) | 39 |
+| 64 | United Kingdom | Article 9(2) | 39 |
+
+### Article 4 — the list under the reservation on page 11, one list
+
+*19 row(s), printed on page 11.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 4(3) + 4(4) | 11 |
+| 2 | Armenia | Article 4(3) | 11 |
+| 11 | Chile | Article 4(3) | 11 |
+| 14 | Cyprus | Article 4(3) + 4(4) | 11 |
+| 17 | Egypt | Article 4(3)+4(4) | 11 |
+| 18 | Finland | Article 4(3) | 11 |
+| 24 | Iceland | Article 4(3) | 11 |
+| 26 | Indonesia | Article 4(3) | 11 |
+| 28 | Israel | Article 4(3) | 11 |
+| 30 | Kazakhstan | Article 4(3) | 11 |
+| 33 | Latvia | Article 4(3) | 11 |
+| 35 | Lithuania | Article 4(3) | 11 |
+| 36 | Luxemburg | Article 4(4) | 11 |
+| 38 | Malta | Article 4(3) | 11 |
+| 39 | Mexico | Article 4(3) | 11 |
+| 45 | Norway | Article 4(3) + 4(4) | 11 |
+| 53 | Singapore | Article 4(3) | 11 |
+| 58 | Sri Lanka | Article 4(3) | 11 |
+| 65 | United States | Article 4(3) + 4(4) | 11 |
+
+### Article 7 — the list under the reservation on page 22, one list
+
+*2 row(s), printed on page 22.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 12 | China | Article 23(1) through (6) | 22 |
+| 65 | United States | Article 20(1) through (3) | 22 |
+
+### Article 8 — the list under the reservation on page 23, one list
+
+*1 row(s), printed on page 23.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 48 | Portugal | Article 10(3) | 23 |
+
+### Article 9 — the list under the reservation on page 25, one list
+
+*7 row(s), printed on page 25.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 3 | Australia | Article 13(4) | 25 |
+| 10 | Canada | Article 13(4) | 25 |
+| 14 | Cyprus | Article 13(4) | 25 |
+| 28 | Israel | Article 13(3)(b) | 25 |
+| 30 | Kazakhstan | Article 13 (1) | 25 |
+| 33 | Latvia | Article 13 (2) | 25 |
+| 64 | United Kingdom | Article 13(2)(b) | 25 |

@@ -17,6 +17,15 @@
       "resolved_from": "the document's own title",
       "slug": "morocco",
       "title_read": "MAROC"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "7bfb29e5318a20f0017691d77e489fd30de9a42a915ea30fb18912e9d4a2ca24",

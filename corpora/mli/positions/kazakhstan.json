@@ -7,6 +7,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 25,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -45,6 +46,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 31,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -63,6 +65,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 11,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -83,6 +86,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 14,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -1059,6 +1063,15 @@
       "resolved_from": "the document's own title",
       "slug": "kazakhstan",
       "title_read": "Republic of Kazakhstan"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "137a51e51342cb1d41cd16a15345627f7be7cde043c40e9bc41f89bcdfa77bbc",

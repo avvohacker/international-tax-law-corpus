@@ -72,3 +72,50 @@
 | 64 | United States Original |  | 12-12-1979 | 12-02-1979 | 12 |
 | 65 | Uruguay Original |  | 25-10-1988 | 13-08-1993 | 12 |
 | 66 | Vietnam Original |  | 26-08-1994 | 30-06-1995 | 13 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 36 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 25, one list
+
+*36 row(s), printed on page 25.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Australia | Article 9(3) | 25 |
+| 3 | Azerbaijan | Article 9(2) | 25 |
+| 7 | Canada | Article 9(2) | 25 |
+| 9 | Croatia | Article 9(2) | 25 |
+| 12 | Denmark | Article 9(2) | 26 |
+| 13 | Egypt | Article 9(2) | 26 |
+| 14 | Estonia | Article 9(2) | 26 |
+| 17 | Georgia | Article 9(2) | 26 |
+| 18 | Germany | Article 9(2) | 26 |
+| 20 | Hong Kong | Article 9(2) | 26 |
+| 21 | Iceland | Article 9(2) | 26 |
+| 22 | India | Article 9(2) | 26 |
+| 24 | Ireland | Article 9(2) | 26 |
+| 28 | Kazakhstan | Article 9(2) | 26 |
+| 30 | Latvia | Article 9(2) | 26 |
+| 31 | Liechtenstein | Article 9(2) | 26 |
+| 32 | Lithuania | Article 9(2) | 26 |
+| 33 | Luxemburg | Article 9(2) | 26 |
+| 35 | Malta | Article 9(2) | 26 |
+| 36 | Mexico | Article 9(2) | 26 |
+| 38 | Mongolia | Article 9(2) | 26 |
+| 39 | Morocco | Article 9(2) | 26 |
+| 40 | Netherlands | Article 9(2) | 26 |
+| 42 | Pakistan | Article 9(2) | 26 |
+| 43 | Philippines | Article 8(2) | 26 |
+| 45 | Portugal | Article 9(2) | 26 |
+| 46 | Qatar | Article 9(2) | 26 |
+| 49 | San Marino | Article 9(2) | 26 |
+| 50 | Saudi Arabia | Article 9(2) | 26 |
+| 54 | Slovenia | Article 9(2) | 26 |
+| 55 | South Africa | Article 9(2) | 26 |
+| 57 | Sweden | Article 9(2) | 26 |
+| 58 | Switzerland | Article 9(2) | 26 |
+| 61 | Turkey | Article 9(2) | 26 |
+| 62 | Ukraine | Article 9(2) | 26 |
+| 63 | United Kingdom | Article 9(2) | 26 |

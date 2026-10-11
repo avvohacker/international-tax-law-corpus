@@ -49,3 +49,109 @@
 | 41 | United Original Kingdom |  | 21-08-2003 | 17-12-2003 | 5 |
 | 42 | United States Original Amending Protocol No 1 |  | 06-08- 1982 27-09- 2001 | 31-10-1983 12-05-2003 | 6 |
 | 43 | Vietnam Original Amending Exchange of Notes Amending Exchange of Letters |  | 13-04-1992 22-11- 1996 01-11- 2000 | 30-12-1992 23-07-1997 11-02-2003 | 6 |
+
+## The agreements the reservations bring within their scope
+
+*5 list(s) of agreements are announced under the reservations of this position: 5 read, holding 67 row(s) between them. Every announcement's table was read.*
+
+### Article 13 — the list under the reservation on page 21, one list
+
+*3 row(s), printed on page 21.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 10 | Finland | Article 5(6) | 21 |
+| 24 | New Zealand | Article 5(7) | 21 |
+| 33 | South Africa | Article 5(6) | 21 |
+
+### Article 14 — the list under the reservation on page 23, one list
+
+*1 row(s), printed on page 23.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 25 | Norway | Article 20(3) | 23 |
+
+### Article 17 — the list under the reservation on page 28, one list
+
+*42 row(s), printed on page 28.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 9(3) | 28 |
+| 2 | Austria | Article 9(3) | 28 |
+| 3 | Belgium | Article 9(3) | 28 |
+| 4 | Canada | Article 9(3) | 28 |
+| 5 | Chile | Article 9(2) | 28 |
+| 6 | China | Article 9(3) | 28 |
+| 7 | Czech Republic | Article 9(3) | 28 |
+| 8 | Denmark | Article 9(3) | 28 |
+| 9 | Fiji | Article 9(4) | 28 |
+| 10 | Finland | Article 9(3) | 28 |
+| 11 | France | Article 9(3) | 28 |
+| 12 | Hungary | Article 9(3) | 28 |
+| 13 | India | Article 9(3) | 28 |
+| 14 | Indonesia | Article 9(3) | 28 |
+| 15 | Ireland | Article 10(4) | 28 |
+| 17 | Japan | Article 9(3) | 28 |
+| 18 | Kiribati | Article 9(3) | 28 |
+| 19 | Korea | Article 9(5) | 28 |
+| 20 | Malaysia | Article 9(3) | 28 |
+| 21 | Malta | Article 9(3) | 28 |
+| 22 | Mexico | Article 9(2) | 28 |
+| 23 | Netherlands | Article 9(2) | 28 |
+| 24 | New Zealand | Article 9(3) | 28 |
+| 25 | Norway | Article 9(3) | 28 |
+| 26 | Papua New Guinea | Article 9(3) | 28 |
+| 27 | Philippines | Article 9(3) | 28 |
+| 28 | Poland | Article 9(3) | 28 |
+| 29 | Romania | Article 9(3) | 28 |
+| 30 | Russian Federation | Article 9(3) | 28 |
+| 31 | Singapore | Article 6(3) | 28 |
+| 32 | Slovak Republic | Article 9(3) | 28 |
+| 33 | South Africa | Article 9(3) | 28 |
+| 34 | Spain | Article 9(3) | 28 |
+| 35 | Sri Lanka | Article 9(3) | 28 |
+| 36 | Sweden | Article 9(3) | 28 |
+| 37 | Switzerland | Article 9(2) | 28 |
+| 38 | Taiwan/Taipei | Article 9(3) | 28 |
+| 39 | Thailand | Article 9(3) | 28 |
+| 40 | Turkey | Article 9(3) | 28 |
+| 41 | United Kingdom | Article 9(3) | 28 |
+| 42 | United States | Article 9(2) | 28 |
+| 43 | Vietnam | Article 9(3) | 29 |
+
+### Article 3 — the list under the reservation on page 7, one list
+
+*2 row(s), printed on page 7.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 11 | France | Articles 4(5) and 29(1) and (2), Protocol (2) | 7 |
+| 17 | Japan | Article 4(5) | 7 |
+
+### Article 9 — the list under the reservation on page 16, one list
+
+*19 row(s), printed on page 16.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Argentina | Article 13(2) | 16 |
+| 4 | Canada | Article 13(4) | 16 |
+| 5 | Chile | Article 13(4) | 16 |
+| 10 | Finland | Article 13(4) | 16 |
+| 11 | France | Article 13(4) | 16 |
+| 15 | Ireland | Article 14(1), 14(2)(b)(iii) and (iv), and 14(2)(c)(iii) | 16 |
+| 17 | Japan | Article 13(2) | 16 |
+| 20 | Malaysia | Article 13(4) | 16 |
+| 22 | Mexico | Article 13(2) | 16 |
+| 24 | New Zealand | Article 13(4) | 16 |
+| 25 | Norway | Article 13(4) | 16 |
+| 29 | Romania | Article 13(4) | 16 |
+| 30 | Russia | Article 13(4) | 16 |
+| 32 | Slovak Republic | Article 13(4) | 16 |
+| 33 | South Africa | Article 13(4) | 16 |
+| 37 | Switzerland | Article 13(4) | 16 |
+| 40 | Turkey | Article 13(4) | 16 |
+| 41 | United Kingdom | Article 13(4) | 16 |
+| 42 | United States | Article 13(1), 13(2)(a), 13(2)(b)(ii) and (iii) | 16 |

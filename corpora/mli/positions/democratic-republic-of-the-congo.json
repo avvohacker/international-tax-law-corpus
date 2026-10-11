@@ -17,6 +17,34 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 6,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 6,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "South Africa",
+                "page": 6,
+                "text": "Article 5(4)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Belgium",
+                "page": 6,
+                "text": "Article 5(4)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 364.6
+          }
+        ],
         "truncated": false
       },
       {
@@ -233,6 +261,15 @@
       "resolved_from": "the document's own title",
       "slug": "democratic-republic-of-the-congo",
       "title_read": "Democratic Republic of the Congo"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 2,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "36775e32815d16358071c7906c711c39517d230bbd1a47fa9538c127bbaa505e",

@@ -99,3 +99,15 @@
 | 91 | Uzbekistan | Original Amending Instrument (a) | 29-07-1993 11-04-2012 | 25-01-1994 20-07-2012 | 18 |
 | 92 | Vietnam | Original Amending Instrument (a) | 07-09-1994 03-09-2016 | 02-02-1995 N/A | 18 |
 | 93 | Zambia | Original | 05.06.1981 | 18.01.1984 | 18 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 1 row(s) between them. Every announcement's table was read.*
+
+### Article 8 — the list under the reservation on page 26, one list
+
+*1 row(s), printed on page 26.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 63 | Listed Agreement Number Other Contracting Jurisdiction Provision | Portugal Article 10(2) | 26 |

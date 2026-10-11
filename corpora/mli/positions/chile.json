@@ -7,6 +7,70 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 12,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 12,
+            "read": true,
+            "rows": [
+              {
+                "no": 33,
+                "other_jurisdiction": "United States of America",
+                "page": 12,
+                "text": "Article 24(5)"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "Japan",
+                "page": 12,
+                "text": "Article 22(2)"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "Argentina",
+                "page": 12,
+                "text": "Article 24(8)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "China",
+                "page": 12,
+                "text": "Article 26(6)"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Italy",
+                "page": 12,
+                "text": "Article 27(2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Austria",
+                "page": 12,
+                "text": "Protocol (12)"
+              },
+              {
+                "no": 30,
+                "other_jurisdiction": "Czech Republic",
+                "page": 12,
+                "text": "Article 28(5)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Uruguay",
+                "page": 12,
+                "text": "Article 28(7)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 361.9
+          }
+        ],
         "truncated": false
       }
     ],
@@ -17,6 +81,28 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 12,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 12,
+            "read": true,
+            "rows": [
+              {
+                "no": 33,
+                "other_jurisdiction": "United States of America",
+                "page": 12,
+                "text": "Protocol (4)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 341.2
+          }
+        ],
         "truncated": false
       }
     ],
@@ -47,6 +133,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 15,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -57,6 +144,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 15,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -83,6 +171,220 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 18,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 18,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Australia",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Austria",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "Belgium",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Canada",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Colombia",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Korea",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "Croatia",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Denmark",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Ecuador",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "Spain",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "France",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 13,
+                "other_jurisdiction": "Ireland",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "Malaysia",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "Mexico",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "Norway",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "New Zealand",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "Paraguay",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "Peru",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "Poland",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 21,
+                "other_jurisdiction": "Portugal",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "United Kingdom",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 23,
+                "other_jurisdiction": "Russia",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "Sweden",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "Switzerland",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 26,
+                "other_jurisdiction": "Thailand",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "Argentina",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "China",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 29,
+                "other_jurisdiction": "South Africa",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 30,
+                "other_jurisdiction": "Czech Republic",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Italy",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "Japan",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 33,
+                "other_jurisdiction": "United States of America",
+                "page": 18,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Uruguay",
+                "page": 18,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 356.5
+          }
+        ],
         "truncated": false
       }
     ],
@@ -93,6 +395,64 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 6,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 6,
+            "read": true,
+            "rows": [
+              {
+                "no": 17,
+                "other_jurisdiction": "New Zealand",
+                "page": 6,
+                "text": "Article 4(4)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "United Kingdom",
+                "page": 6,
+                "text": "Article 4(4)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "Sweden",
+                "page": 6,
+                "text": "Article 4(1)"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "Japan",
+                "page": 6,
+                "text": "Article 1(2)"
+              },
+              {
+                "no": 29,
+                "other_jurisdiction": "South Africa",
+                "page": 6,
+                "text": "Article 4(3) Protocol (1)"
+              },
+              {
+                "no": 33,
+                "other_jurisdiction": "United States of America",
+                "page": 6,
+                "text": ""
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Uruguay",
+                "page": 6,
+                "text": "Article 1(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 1,
+            "split_x": 361.7
+          }
+        ],
         "truncated": false
       }
     ],
@@ -113,6 +473,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 6,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -123,6 +484,56 @@
         "mli_article_title": "Purpose of a Covered Tax Agreement",
         "option_title": "",
         "page": 6,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed",
+              "Other",
+              "Agreement",
+              "Contracting",
+              "Preamble Text",
+              "Number",
+              "Jurisdiction"
+            ],
+            "page": 6,
+            "read": true,
+            "rows": [
+              {
+                "no": 27,
+                "other_jurisdiction": "Argentina",
+                "page": 6,
+                "text": "“Deseosos de promover el desarrollo de su relación económica y fortalecer su cooperación en materia tributaria, Con la intención de concluir un Convenio para la eliminación de la doble imposición con relación a los impuestos sobre la renta y sobre el patrimonio sin crear oportunidades para situaciones de nula o reducida tributación a través de evasión o elusión fiscal (incluyendo aquellos acuerdos para el uso abusivo de tratados – treaty-shopping – dirigidos a que residentes de terceros Estados"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "China",
+                "page": 7,
+                "text": "obtengan indirectamente beneficios de este Convenio),” “Desiring to further develop their economic relationship and to enhance their cooperation in tax matters, Intending to conclude an Agreement for the elimination of double taxation with respect to taxes on income without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Agreement for the indirect benefit of residents of third States)”"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Italy",
+                "page": 7,
+                "text": "“Desiring to further develop their economic relationship and to enhance their cooperation in tax matters, Intending to conclude a Convention for the elimination of double taxation with respect to taxes on income without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Convention for the indirect benefit of residents of third States)”"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "Japan",
+                "page": 7,
+                "text": "“Desiring to further develop their economic relationship and to enhance their cooperation in tax matters, Intending to conclude a Convention for the elimination of double taxation with respect to taxes on income without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Convention for the indirect benefit of residents of third States)”"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Uruguay",
+                "page": 7,
+                "text": "“Deseando promover el desarrollo de su relación económica y fortalecer su cooperación en materias tributarias, Con la intención de concluir un Convenio para la eliminación de la doble imposición con relación a los impuestos sobre la renta y sobre el patrimonio sin crear oportunidades para situaciones de nula o reducida tributación a través de evasión o elusión fiscal (incluyendo aquellos acuerdos para el uso abusivo de tratados – treaty-shopping – dirigidos a que residentes de terceros Estados obtengan indirectamente beneficios de este Convenio),”"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 190.8
+          }
+        ],
         "truncated": false
       },
       {
@@ -149,6 +560,90 @@
         "mli_article_title": "Prevention of Treaty Abuse",
         "option_title": "",
         "page": 8,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 9,
+            "read": true,
+            "rows": [
+              {
+                "no": 27,
+                "other_jurisdiction": "Argentina",
+                "page": 9,
+                "text": "Article 24(6)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "China",
+                "page": 9,
+                "text": "Article 26(5)"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Italy",
+                "page": 9,
+                "text": "Article 27(1)"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "Japan",
+                "page": 9,
+                "text": "Article 22(1)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Uruguay",
+                "page": 9,
+                "text": "Article 28(6)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 362.6
+          },
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 9,
+            "read": true,
+            "rows": [
+              {
+                "no": 27,
+                "other_jurisdiction": "Argentina",
+                "page": 9,
+                "text": "Article 24(1) through (5)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "China",
+                "page": 9,
+                "text": "Article 26(1) through (4)"
+              },
+              {
+                "no": 33,
+                "other_jurisdiction": "United States of America",
+                "page": 9,
+                "text": "Article 24(1) through (4) and (6)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Uruguay",
+                "page": 9,
+                "text": "Article 28(1) through (5)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 343.9
+          }
+        ],
         "truncated": false
       },
       {
@@ -175,6 +670,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 11,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -185,6 +681,52 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 11,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 11,
+            "read": true,
+            "rows": [
+              {
+                "no": 27,
+                "other_jurisdiction": "Argentina",
+                "page": 11,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "China",
+                "page": 11,
+                "text": "Article 13(4)"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "Japan",
+                "page": 11,
+                "text": "Article 13(4)(a)(ii)"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Italy",
+                "page": 11,
+                "text": "Article 13(4)(b)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Uruguay",
+                "page": 11,
+                "text": "Article 13(4)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 356.9
+          }
+        ],
         "truncated": false
       },
       {
@@ -915,6 +1457,15 @@
       "resolved_from": "the document's own title",
       "slug": "chile",
       "title_read": "THE REPUBLIC OF CHILE"
+    },
+    "scope_lists": {
+      "announced": 8,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 1,
+      "read": 8,
+      "rows": 68,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 1
     }
   },
   "sha256": "08f673a13a52102baabc055c2f7c8ed83f5d56d4ea829bbe56da18a93f44e713",

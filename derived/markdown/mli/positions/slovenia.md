@@ -64,3 +64,89 @@
 | 56 | United Kingdom of Great Britain and Northern Ireland | Original | 13-11-2007 | 11-09-2008 | 7 |
 | 57 | United States of America | Original | 21-06-1999 | 22-06-2001 | 7 |
 | 58 | Republic of Uzbekistan | Original | 11-02-2013 | 08-11-2013 | 7 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 68 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 31, one list
+
+*47 row(s), printed on page 31.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Republic of Albania | Article 9(2) | 31 |
+| 2 | Republic of Armenia | Article 9(2) | 31 |
+| 3 | Republic of Austria | Article 9(2) | 31 |
+| 4 | Republic of Azerbaijan | Article 9(2) | 31 |
+| 5 | Republic of Belarus | Article 9(2) | 31 |
+| 7 | Bosnia and Herzegovina | Article 9(2) | 31 |
+| 9 | Canada | Article 9(2) | 31 |
+| 11 | Republic of Croatia | Article 9(2) | 31 |
+| 12 | Republic of Cyprus | Article 9(2) | 31 |
+| 13 | Czech Republic | Article 9(2) | 31 |
+| 14 | Kingdom of Denmark | Article 9(2) | 31 |
+| 15 | Arab Republic of Egypt | Article 9(2) | 31 |
+| 17 | Republic of Finland | Article 9(2) | 31 |
+| 18 | French Republic | Article 9(2) | 31 |
+| 19 | Georgia | Article 9(2) | 31 |
+| 20 | Federal Republic of Germany | Article 9(2) | 31 |
+| 21 | Hellenic Republic | Article 9(2) | 31 |
+| 22 | Republic of Hungary | Article 9(2) | 31 |
+| 23 | Iceland | Article 9(2) | 31 |
+| 24 | Republic of India | Article 9(2) | 31 |
+| 26 | Ireland | Article 9(2) | 31 |
+| 27 | State of Israel | Article 9(2) | 31 |
+| 28 | Italian Republic | Article 9(2) | 31 |
+| 29 | Republic of Kazakhstan | Article 9(2) | 31 |
+| 30 | Republic of Korea | Article 9(2) | 31 |
+| 31 | Republic of Kosovo | Article 9(2) | 31 |
+| 32 | State of Kuwait | Article 9(2) | 31 |
+| 35 | Grand Duchy of Luxembourg | Article 9(2) | 31 |
+| 36 | Republic of Macedonia | Article 9(2) | 31 |
+| 37 | Malta | Article 9(2) | 31 |
+| 38 | Republic of Moldova | Article 9(2) | 31 |
+| 39 | Kingdom of Morocco | Article 9(2) | 31 |
+| 40 | Kingdom of the Netherlands | Article 9(2) | 31 |
+| 41 | Kingdom of Norway | Article 9(2) | 31 |
+| 42 | Republic of Poland | Article 9(2) | 31 |
+| 43 | Portuguese Republic | Article 9(2) | 31 |
+| 46 | Russian Federation | Article 9(2) | 31 |
+| 47 | Serbia and Montenegro (Republic of Serbia) | Article 9(2) | 31 |
+| 48 | Republic of Singapore | Article 9(2) | 31 |
+| 49 | Slovak Republic | Article 9(2) | 32 |
+| 51 | Switzerland | Article 9(2) and Protocol (3) | 32 |
+| 53 | Republic of Turkey | Article 9(2) | 32 |
+| 54 | Ukraine | Article 9(2) | 32 |
+| 55 | United Arab Emirates | Article 9(2) | 32 |
+| 56 | United Kingdom of Great Britain and Northern Ireland | Article 9(2) | 32 |
+| 57 | United States of America | Article 9(2) | 32 |
+| 58 | Republic of Uzbekistan | Article 9(2) | 32 |
+
+### Article 9 — the list under the reservation on page 19, one list
+
+*21 row(s), printed on page 19.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Republic of Albania | Article 13(2) | 19 |
+| 2 | Republic of Armenia | Article 13(4) | 19 |
+| 4 | Republic of Azerbaijan | Article 13(4) | 19 |
+| 5 | Republic of Belarus | Article 13(4) | 19 |
+| 8 | Republic of Bulgaria | Article 13(2) | 19 |
+| 9 | Canada | Article 13(4)(b) | 19 |
+| 15 | Arab Republic of Egypt | Article 13(2) | 19 |
+| 18 | French Republic | Article 13(1)(b) | 19 |
+| 19 | Georgia | Article 13(2) | 19 |
+| 22 | Republic of Hungary | Article 13(2) | 19 |
+| 23 | Iceland | Article 13(2) | 19 |
+| 27 | State of Israel | Article 13(2) | 19 |
+| 31 | Republic of Kosovo | Article 13(4) | 19 |
+| 38 | Republic of Moldova | Article 13(2) | 19 |
+| 41 | Kingdom of Norway | Article 13(4) | 19 |
+| 43 | Portuguese Republic | Article 13(2) | 19 |
+| 51 | Switzerland | Article 13(4) | 19 |
+| 55 | United Arab Emirates | Article 13(4) | 19 |
+| 56 | United Kingdom of Great Britain and Northern Ireland | Article 13(2) | 19 |
+| 57 | United States of America | Article 13(2) | 19 |
+| 58 | Republic of Uzbekistan | Article 13(4) | 19 |

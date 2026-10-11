@@ -13,3 +13,20 @@
 | 5 | Mexico | Original Amending Instrument (a) | 27-04-2011 14-10-2017 | 19-02-2014 N/A | 1 |
 | 6 | Portugal | Original | 19-11-2012 | 12-04-2014 | 1 |
 | 7 | Switzerland | Original | 21-09-2012 | 10-03-2014 | 1 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 6 row(s) between them. Every announcement's table was read.*
+
+### Article 4 — the list under the reservation on page 3, one list
+
+*6 row(s), printed on page 3.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Brazil | Article 4(3) | 3 |
+| 2 | Canada | Article 4(3) and Article 4(4) | 3 |
+| 3 | Chile | Article 4(3) | 3 |
+| 5 | Mexico | Article 4(3) | 3 |
+| 6 | Portugal | Article 4(3) | 3 |
+| 7 | Switzerland | Article 4(3) | 3 |

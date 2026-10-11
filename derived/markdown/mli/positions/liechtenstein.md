@@ -21,3 +21,29 @@
 | 13 | United Arab Emirates | Original | 01-10-2015 | N/A | 3 |
 | 14 | United Kingdom | Original | 11-06-2012 | 19-12-2012 | 3 |
 | 15 | Uruguay | Original | 18-10-2010 | 03-09-2012 | 3 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 15 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 22, one list
+
+*15 row(s), printed on page 22.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Andorra | Art. 9 (2) | 22 |
+| 2 | Czech Republic | Art. 9 (2) | 22 |
+| 3 | Georgia | Art. 9(2) | 22 |
+| 4 | Germany | Art. 9(2) | 22 |
+| 5 | Guernsey | Art. 9(2) | 22 |
+| 6 | Hong Kong, China | Art. 9(2) | 22 |
+| 7 | Hungary | Art. 9(2) | 22 |
+| 8 | Luxembourg | Art. 9(2) | 22 |
+| 9 | Malta | Art. 9(2) | 22 |
+| 10 | San Marino | Art. 9(2) | 22 |
+| 11 | Singapore | Art. 9(2) | 22 |
+| 12 | Switzerland | Art. 9(2) | 22 |
+| 13 | United Arab Emirates | Art. 9(2) | 22 |
+| 14 | United Kingdom | Art. 9(2) | 22 |
+| 15 | Uruguay | Art. 9(2) | 22 |

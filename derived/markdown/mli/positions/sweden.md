@@ -70,3 +70,58 @@
 | 62 | Vietnam | Original | 24-03-1994 | 09-08-1994 | 10 |
 | 63 | Zambia | Original | 18-03-1974 | 07-11-1975 | 10 |
 | 64 | Zimbabwe | Original | 10-03-1989 | 05-12-1990 | 10 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 44 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 21, one list
+
+*44 row(s), printed on page 21.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 21 |
+| 3 | Armenia | Article 9(2) | 21 |
+| 4 | Azerbaijan | Article 9(2) | 21 |
+| 5 | Bangladesh | Article 10(2) | 21 |
+| 6 | Barbados | Article 9(2) | 21 |
+| 7 | Belarus | Article 9(2) | 21 |
+| 9 | Bolivia | Article 9(2) | 21 |
+| 10 | Botswana | Article 9(2) | 21 |
+| 13 | Chile | Article 9(2) | 21 |
+| 14 | China | Article 9(2) | 21 |
+| 15 | Cyprus | Article 9(2) | 21 |
+| 17 | Egypt | Article 9(2) | 21 |
+| 18 | Estonia | Article 9(2) | 21 |
+| 19 | Gambia | Article 9(2) | 21 |
+| 20 | Georgia | Article 9(2) | 21 |
+| 22 | Hungary | Article 9(2) | 21 |
+| 24 | Indonesia | Article 9(2) | 21 |
+| 25 | Ireland | Article 10(2) | 21 |
+| 29 | Japan | Article 9(2) | 21 |
+| 30 | Kazakhstan | Article 9(2) | 21 |
+| 33 | Latvia | Article 9(2) | 21 |
+| 34 | Lithuania | Article 9(2) | 21 |
+| 35 | Luxembourg | Article 9(2) | 21 |
+| 36 | Macedonia | Article 9(2) | 21 |
+| 37 | Malaysia | Article 9(2) | 21 |
+| 38 | Malta | Article 9(2) | 21 |
+| 39 | Mauritius | Article 9(2) | 21 |
+| 41 | Namibia | Article 9(2) | 21 |
+| 42 | The Netherlands | Article 9(2) | 21 |
+| 44 | Nigeria | Article 9(2) | 21 |
+| 45 | Pakistan | Article 9(2) | 21 |
+| 46 | Philippines | Article 9(2) | 21 |
+| 47 | Poland | Article 9(2) | 21 |
+| 49 | Saudi Arabia | Article 9(2) | 21 |
+| 51 | South Africa | Article 9(2) | 21 |
+| 52 | Sri Lanka | Article 9(2) | 21 |
+| 55 | Trinidad and Tobago | Article 9(2) | 21 |
+| 56 | Tunisia | Article 9(2) | 21 |
+| 57 | Turkey | Article 9(2) | 21 |
+| 58 | Ukraine | Article 9(2) | 21 |
+| 59 | United Kingdom | Article 9(2) | 22 |
+| 60 | USA | Article 9(2) | 22 |
+| 61 | Venezuela | Article 9(2) | 22 |
+| 64 | Zimbabwe | Article 9(2) | 22 |

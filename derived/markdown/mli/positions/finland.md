@@ -77,3 +77,57 @@
 | 69 | THE SOCIALIST FEDERAL REPUBLIC OF YUGOSLAVIA (THE REPUBLIC OF CROATIA) | Original | 08-05-1986 | 18-12-1987 | 11 |
 | 70 | THE SOCIALIST FEDERAL REPUBLIC OF YUGOSLAVIA (MONTENE- GRO) | Original | 08-05-1986 | 18-12-1987 | 11 |
 | 71 | THE SOCIALIST FEDERAL REPUBLIC OF YUGOSLAVIA (REPUBLIC OF SERBIA) | Original | 08-05-1986 | 18-12-1987 | 12 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 43 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 27, one list
+
+*43 row(s), printed on page 27.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | THE KINGDOM OF THE NETHERLANDS | Article 9(2) | 27 |
+| 2 | THE UNITED STATES OF AMERICA | Article 9(2) | 27 |
+| 5 | THE REPUBLIC OF ARMENIA | Article 9(2) | 27 |
+| 6 | AUSTRALIA | Article 9(3) | 27 |
+| 7 | THE REPUBLIC OF AZERBAIJAN | Article 9(2) | 27 |
+| 8 | BARBADOS | Article 10(2) | 27 |
+| 9 | THE KINGDOM OF BELGIUM | Article 9(2) | 27 |
+| 12 | ESPANJAN KUNINGASKUNTA (THE KINGDOM OF SPAIN) | Article 9(2) | 27 |
+| 13 | THE REPUBLIC OF SOUTH AFRICA | Article 9(2) | 27 |
+| 15 | GEORGIA | Article 9(2) | 27 |
+| 16 | THE REPUBLIC OF INDONESIA | Article 9(2) | 27 |
+| 17 | THE REPUBLIC OF INDIA | Article 9(2) | 27 |
+| 18 | IRELAND | Article 10(2) | 27 |
+| 19 | THE UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND | Article 10(2) | 27 |
+| 20 | THE STATE OF ISRAEL | Article 9(2) | 27 |
+| 22 | ITÄVALLAN TASAVALTA (THE REPUBLIC OF AUSTRIA) | Article 9(2) | 27 |
+| 24 | CANADA | Article 9(2) | 27 |
+| 25 | THE REPUBLIC OF KAZAKHSTAN | Article 9(2) | 27 |
+| 26 | THE PEOPLE'S REPUBLIC OF | Article 9(2) CHINA | 27 |
+| 27 | THE KYRGYZ REPUBLIC | Article 9(2) | 27 |
+| 30 | THE REPUBLIC OF CYPRUS | Article 9(2) | 27 |
+| 31 | THE REPUBLIC OF LATVIA | Article 9(2) | 27 |
+| 32 | THE REPUBLIC OF LITHUANIA | Article 9(2) | 27 |
+| 34 | MACEDONIA | Article 9(2) | 27 |
+| 36 | MALTA | Article 9(2) | 27 |
+| 39 | THE REPUBLIC OF MOLDOVA | Article 9(2) | 27 |
+| 40 | THE ISLAMIC REPUBLIC OF PAKISTAN | Article 9(2) | 27 |
+| 41 | THE PORTUGUESE REPUBLIC | Article 9(2) | 27 |
+| 42 | THE REPUBLIC OF POLAND | Article 9(2) | 27 |
+| 44 | ROMANIA | Article 9(2) | 27 |
+| 45 | SAKSAN LIITTOTASAVALTA (THE FEDERAL REPUBLIC OF GERMANY) | 29 (34) Article 9(2) | 28 |
+| 47 | THE REPUBLIC OF SINGAPORE | Article 9(2) | 28 |
+| 49 | THE REPUBLIC OF SLOVENIA | Article 9(2) | 28 |
+| 50 | THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA | Article 9(2) | 28 |
+| 52 | THE REPUBLIC OF TAJIKISTAN | Article 9(2) | 28 |
+| 53 | TANZANIA | Article 9(2) | 28 |
+| 56 | THE REPUBLIC OF TURKEY | Article 9(2) | 28 |
+| 57 | TURKMENISTAN | Article 9(2) | 28 |
+| 58 | UKRAINE | Article 9(2) | 28 |
+| 62 | THE REPUBLIC OF UZBEKISTAN | Article 9(2) | 28 |
+| 63 | THE REPUBLIC OF BELARUS | Article 9(2) | 28 |
+| 64 | THE RUSSIAN FEDERATION | Article 9(2) | 28 |
+| 66 | THE REPUBLIC OF ESTONIA | Article 9(2) | 28 |

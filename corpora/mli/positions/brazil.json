@@ -7,6 +7,172 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 12,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 12,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Austria",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Belgium",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "Canada",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 4,
+                "other_jurisdiction": "Czech Republic",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Denmark",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Ecuador",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Finland",
+                "page": 12,
+                "text": "Article 11(7)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "France",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Hungary",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Israel",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "Italy",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 13,
+                "other_jurisdiction": "Luxembourg",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "Mexico",
+                "page": 12,
+                "text": "Article 11(7)"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "Netherlands",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "Peru",
+                "page": 12,
+                "text": "Article 11(5)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Philippines",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "Portugal",
+                "page": 12,
+                "text": "Article 11(4)"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "Russia",
+                "page": 12,
+                "text": "Article 11(8)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "South Africa",
+                "page": 12,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 21,
+                "other_jurisdiction": "South Korea",
+                "page": 13,
+                "text": "Article 11(6)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "Spain",
+                "page": 13,
+                "text": "Article 11(7)"
+              },
+              {
+                "no": 23,
+                "other_jurisdiction": "Trinidad and Tobago",
+                "page": 13,
+                "text": "Article 11(8)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "Türkiye",
+                "page": 13,
+                "text": "Protocol(2)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "Ukraine",
+                "page": 13,
+                "text": "Article 11(8)"
+              },
+              {
+                "no": 26,
+                "other_jurisdiction": "Venezuela",
+                "page": 13,
+                "text": "Article 11(6)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 345.5
+          }
+        ],
         "truncated": false
       }
     ],
@@ -55,6 +221,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 16,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -73,6 +240,7 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 18,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -83,6 +251,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -93,6 +262,78 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 6,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 6,
+            "read": true,
+            "rows": [
+              {
+                "no": 3,
+                "other_jurisdiction": "Canada",
+                "page": 6,
+                "text": "Article 4(3)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Finland",
+                "page": 6,
+                "text": "Article 4(3)"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "Japan",
+                "page": 6,
+                "text": "Article 3(2)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Philippines",
+                "page": 6,
+                "text": "Article 4(3)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 367.2
+          },
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 6,
+            "read": true,
+            "rows": [
+              {
+                "no": 14,
+                "other_jurisdiction": "Mexico",
+                "page": 6,
+                "text": "Article 4(3)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "Peru",
+                "page": 6,
+                "text": "Article 4(3)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "Türkiye",
+                "page": 6,
+                "text": "Article 4(3)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 368.4
+          }
+        ],
         "truncated": false
       },
       {
@@ -157,6 +398,28 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 11,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 11,
+            "read": true,
+            "rows": [
+              {
+                "no": 18,
+                "other_jurisdiction": "Portugal",
+                "page": 11,
+                "text": "Article 10(2)(a)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 359.8
+          }
+        ],
         "truncated": false
       },
       {
@@ -704,6 +967,15 @@
       "resolved_from": "the document's own title",
       "slug": "brazil",
       "title_read": "THE FEDERATIVE REPUBLIC OF BRAZIL"
+    },
+    "scope_lists": {
+      "announced": 4,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 1,
+      "read": 4,
+      "rows": 33,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "2b182092480c4479f5d81014149621a7952b6f9a1e054d62dbaa2db0e760c1c0",

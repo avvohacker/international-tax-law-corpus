@@ -34,12 +34,14 @@ from harness.language import violations
 from mli_row_audit import (ARTIFACT_SLUGS, DEFECT_INVENTORY,
                            LEGACY_DEFECT_INVENTORY, ROW_FIELDS,
                            audit_block_rows, audit_published_artifacts,
+                           audit_scope_lists,
                            block_reading, block_rows_at, block_tolerances,
                            compare_published_rows, derived_tolerances,
                            covered_attach_band, format_row_divergences,
                            heading_habit, legacy_reading,
                            number_first_attach_band, number_first_rows_at,
-                           position_view_divergences, signatories_geometry,
+                           position_view_divergences, scope_view_divergences,
+                           signatories_geometry,
                            signatories_rows_at,
                            signatories_view_divergences, tolerance_audit)
 from support import ROOT, UNBUILT
@@ -3096,6 +3098,242 @@ def test_p05_published_positions_cannot_lag_the_reader(tmp_path):
         "the corpus lags the reader - rebuild the positions so every row the "
         "reader measures is the row the corpus holds:\n"
         + "\n".join(divergences))
+
+
+def _positions_family():
+    """The declared MLI positions family: its register entry and its directory."""
+    sources = corpus.declared_sources(ROOT)
+    _need(sources, "the source register (provenance/sources.yaml)")
+    entry = next((item for item in sources
+                  if item["id"] == "mli-positions-batch"), None)
+    _need(entry is not None and entry.get("dir"),
+          "the source register declares the positions family")
+    directory = ROOT / entry["dir"]
+    if not directory.is_dir():
+        pytest.skip("the MLI positions family is not in sources/, so there "
+                    "is nothing to read")
+    return entry, directory
+
+
+def _stored_positions() -> list:
+    """Every published position artefact, in the order the directory lists them."""
+    stored = corpus.corpus_root(ROOT) / "mli" / "positions"
+    return [path for path in sorted(stored.glob("*.json"))
+            if path.stem != "batch-report"]
+
+
+def test_p06_the_view_names_the_lists_the_artefact_holds():
+    """A view cannot print a list row - or a whole list - its artefact does not.
+
+    A reservation's own list of agreements is read from the page and kept in the
+    artefact, and it is printed in the position's markdown view beside the rows
+    it decides, because a list nobody can read where the rows are read is a list
+    nobody checks. The two can fall apart the way every derived view can: the
+    artefact is regenerated and the view stays behind. So this control reads each
+    view back, list by list, statement by statement and row by row, and holds it
+    against the artefact - including the second list of a statement that
+    announces two, and an unread list, which the view has to say in the reader's
+    own words rather than draw as an empty table.
+
+    The register is checked with it, and not as a second count of the same
+    number: `reservation_scope_lists` in the family's report must equal what the
+    artefacts hold, and every announced list must be either read or named in
+    `reservations_announcing_a_list_not_read`. An announcement in neither is the
+    silent loss this invariant exists for.
+    """
+    artifacts = _stored_positions()
+    _need(artifacts, "the MLI position artefacts (corpora/mli/positions/*.json)")
+    views_dir = ROOT / "derived" / "markdown" / "mli" / "positions"
+    problems: list[str] = []
+    announced = read = 0
+    multiple: list[tuple] = []
+    for path in artifacts:
+        record = json.loads(path.read_text(encoding="utf-8"))
+        for article, entries in (record.get("article_sections") or {}).items():
+            for statement, entry in enumerate(entries):
+                lists = entry.get("scope_lists") or []
+                announced += len(lists)
+                read += sum(1 for one in lists if one.get("read"))
+                if len(lists) > 1:
+                    multiple.append((record.get("slug"), article,
+                                     statement, len(lists)))
+        view = views_dir / f"{path.stem}.md"
+        if not view.is_file():
+            problems.append(f"{path.name}: no derived view at "
+                            f"{view.relative_to(ROOT).as_posix()}")
+            continue
+        problems.extend(f"{path.name} {line}" for line in
+                        scope_view_divergences(
+                            record, view.read_text(encoding="utf-8")))
+    assert not problems, "\n".join(problems[:40])
+
+    report = json.loads((corpus.corpus_root(ROOT) / "mli" / "positions"
+                         / "batch-report.json").read_text(encoding="utf-8"))
+    totals = report["reservation_scope_lists"]
+    unread = report["reservations_announcing_a_list_not_read"]
+    assert announced == totals["announced"], (
+        f"the family's report counts {totals['announced']} announced list(s) "
+        f"and the artefacts hold {announced}")
+    assert read + len(unread) == announced, (
+        f"{announced} list(s) are announced, {read} read and {len(unread)} "
+        f"declared - the rest are announced and neither read nor named")
+    assert totals["read"] == read, (
+        f"the report says {totals['read']} list(s) were read, the artefacts "
+        f"say {read}")
+    named = {(item["slug"], str(item["article"]), item["lists"])
+             for item in report["reservations_announcing_more_than_one_list"]}
+    assert named == {(slug, article, count)
+                     for slug, article, _statement, count in multiple}, (
+        "the statements that announce more than one list are not the ones the "
+        "family's report names")
+    assert multiple, ("no statement in this corpus announces more than one "
+                      "list, so the second-list case is not exercised anywhere")
+
+
+def test_p06_the_view_control_catches_a_stale_list():
+    """The control bites: a view with a list the artefact does not hold fails.
+
+    The sample is rendered by the same renderer the corpus uses - the real
+    renderer on invented content, never invented markdown - and then corrupted in
+    each way a stale list view goes stale: a row the artefact does not hold, a
+    row the view dropped, a cell the page did not print, a second list that the
+    view lost, and a reason where the artefact read the table.
+    """
+    record = {"slug": "probe", "country": "Probe",
+              "covered_agreements": [],
+              "article_sections": {
+                  "7": [{"kind": "Reservation", "page": 4, "scope_lists": [
+                      {"read": True, "page": 4,
+                       "headings": ["Listed Agreement Number"],
+                       "split_x": 100.0,
+                       "rows": [{"no": 1, "page": 4,
+                                 "other_jurisdiction": "Chile",
+                                 "text": "Article 24(6)"},
+                                {"no": 2, "page": 4,
+                                 "other_jurisdiction": "Mexico",
+                                 "text": "Article 28(7)"}],
+                       "rows_without_a_counterparty": 0,
+                       "rows_without_a_text": 0},
+                      {"read": True, "page": 4,
+                       "headings": ["Listed Agreement Number"],
+                       "split_x": 100.0,
+                       "rows": [{"no": 2, "page": 4,
+                                 "other_jurisdiction": "Mexico",
+                                 "text": "Article 28(1) through (5)"}],
+                       "rows_without_a_counterparty": 0,
+                       "rows_without_a_text": 0}]}]},
+              "qa": {"scope_lists": {"announced": 2, "read": 2, "rows": 3,
+                                    "rows_without_a_counterparty": 0,
+                                    "rows_without_a_text": 0,
+                                    "options_announcing_more_than_one_list": 1,
+                                    "not_read": []}}}
+    fresh = view_writer.position_view(record)
+    assert scope_view_divergences(record, fresh) == []
+    assert "list 2 of 2" in fresh
+    assert scope_view_divergences(
+        record, fresh.replace("Article 24(6)", "Article 24(7)")) == [
+            "Article 7 list 1 row 1 text: the view names 'Article 24(7)', "
+            "the artefact holds 'Article 24(6)'"]
+    dropped = "\n".join(line for line in fresh.splitlines()
+                        if not line.startswith("| 1 ")) + "\n"
+    assert scope_view_divergences(record, dropped) == [
+        "Article 7 list 1: rows [] named by the view are not in the artefact "
+        "and [1] are missing"]
+    # A whole list going missing is the failure this invariant exists for, and
+    # a view that loses the second one is caught by the list count.
+    second = ("### Article 7 — the list under the reservation on page 4, "
+              "list 2 of 2")
+    assert second in fresh
+    assert scope_view_divergences(record, fresh.split(second)[0]) == [
+        "the view prints 1 announced list(s), the artefact holds 2"]
+    # An unread list is a fact the view has to say in words, with the reader's
+    # own reason; drawing a table there is a claim the artefact does not make.
+    unread = json.loads(json.dumps(record))
+    unread["article_sections"]["7"][0]["scope_lists"][1] = {
+        "read": False, "page": 4,
+        "reason": "the statement announces a list of agreements and no table "
+                  "is printed under that sentence"}
+    unread_view = view_writer.position_view(unread)
+    assert scope_view_divergences(unread, unread_view) == []
+    assert "was not read: the statement announces a list" in unread_view
+    # And the inverse: an artefact that read the table read by a view that
+    # declares it unread is a claim the artefact makes nowhere.
+    assert scope_view_divergences(unread, fresh) == [
+        "Article 7 list 2: the view gives the reason None, the artefact holds "
+        "'the statement announces a list of agreements and no table is "
+        "printed under that sentence'"]
+
+
+def test_p06_the_lists_are_the_tables_the_page_prints():
+    """Every announced list the corpus holds is held against its own page.
+
+    Three things the reading cannot answer about itself: whether the statement's
+    own published prose announces as many lists as the artefact holds (the second
+    table of a two-list statement is exactly the one a reading loses in silence);
+    whether every row number is printed on the row's own page as the number that
+    opens its line; and whether every word of every published cell is on the page
+    the row was read from, because a cell is assembled from the page's spans and a
+    word that is nowhere on the page was not read but written.
+
+    The control states what it does not ask as well: it does not hold the page
+    for a row the corpus dropped, because that needs the table's extent and a page
+    can carry two tables under the same headings (Argentina's page 15 prints its
+    Article 13 reservation's table and, below it, a notification's). The counts it
+    did check are asserted not to be empty, so a green cannot be green by having
+    read nothing.
+    """
+    entry, directory = _positions_family()
+    stored = _stored_positions()
+    _need(stored, "the MLI position artefacts to audit")
+    result = audit_scope_lists(ROOT, directory, entry["id"])
+    assert result["checked"]["lists"] and result["checked"]["rows"], (
+        f"the page control measured nothing: {result['checked']}")
+    assert not result["divergences"], "\n".join(
+        result["divergences"][:40])
+
+
+def test_p06_the_page_control_catches_an_invented_row(tmp_path):
+    """The page control bites: an invented row and cell are named with the page.
+
+    Built from one real artefact, whose family report is copied to name that
+    document alone, so the control reads one PDF and not the family: the reading
+    of the other 102 documents is not what is under test here. Two things are
+    corrupted - a counterparty no page prints and a whole row the page does not
+    print - and both have to be reported, because a control that only caught the
+    cell would pass a corpus that invented rows wholesale.
+    """
+    entry, directory = _positions_family()
+    stored = corpus.corpus_root(ROOT) / "mli" / "positions"
+    report = json.loads((stored / "batch-report.json").read_text(encoding="utf-8"))
+    record = json.loads((stored / "andorra.json").read_text(encoding="utf-8"))
+    document = next((item for item in report["documents"]
+                     if item.get("slug") == "andorra"), None)
+    _need(document is not None and document.get("file"),
+          "the family's report names the Andorra document")
+    entry_with_a_list = next(
+        one for entries in record["article_sections"].values()
+        for statement in entries for one in statement.get("scope_lists") or [])
+    rows = entry_with_a_list["rows"]
+    page = rows[0]["page"]
+    rows[0]["other_jurisdiction"] = "Invention"
+    rows.append({"no": 99, "page": page, "other_jurisdiction": "Invention",
+                 "text": "Article 99"})
+    fake = tmp_path / "root"
+    positions = fake / "corpora" / "mli" / "positions"
+    positions.mkdir(parents=True)
+    (positions / "batch-report.json").write_text(
+        json.dumps({"documents": [document]}), encoding="utf-8")
+    (positions / "andorra.json").write_text(json.dumps(record),
+                                            encoding="utf-8")
+    result = audit_scope_lists(fake, directory, entry["id"])
+    assert result["checked"]["positions"] == 1, (
+        f"the control read {result['checked']['positions']} document(s), not "
+        f"the one the report names")
+    found = "\n".join(result["divergences"])
+    assert "'Invention'" in found, (
+        f"the control did not name the invented cell: {found}")
+    assert "row 99" in found, (
+        f"the control did not name the row the page does not print: {found}")
 
 
 def test_m1_every_title_is_the_sources_title():

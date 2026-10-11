@@ -41,3 +41,46 @@
 | 33 | Ukraine | Original | 08-11-2006 | 09-10-2008 | 5 |
 | 34 | The Czech Republic | Original | 18-01-2000 | 28-12-2000 | 5 |
 | 35 | The Socialist Republic of Vietnam | Original | 03-04-2002 | 27-12-2002 | 5 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 32 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 14, one list
+
+*32 row(s), printed on page 14.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 14 |
+| 2 | United States of America | Article 9(2) | 14 |
+| 3 | Barbados | Article 9(2) | 14 |
+| 4 | Belgium | Article 9(2) | 14 |
+| 5 | United Kingdom | Article 9(2) | 14 |
+| 6 | Estonia | Article 9(2) | 14 |
+| 8 | Georgia | Article 9(2) | 14 |
+| 9 | Greece | Article 9(2) | 14 |
+| 10 | Netherlands | Article 9(2) | 14 |
+| 11 | Ireland | Article 9(2) | 14 |
+| 12 | Italy | Article 9(2) | 14 |
+| 13 | India | Article 9(2) | 14 |
+| 14 | Canada | Article 9(2) | 14 |
+| 15 | China | Article 9(2) | 14 |
+| 16 | Cyprus | Article 9(2) | 14 |
+| 17 | Croatia | Article 9(2) | 14 |
+| 18 | Latvia | Article 9(2) | 14 |
+| 19 | Lithuania | Article 9(2) | 14 |
+| 20 | Luxembourg | Article 9(2) | 14 |
+| 21 | Malta | Article 9(2) | 14 |
+| 22 | Mexico | Article 9(2) | 14 |
+| 23 | Portugal | Article 9(2) | 14 |
+| 24 | Poland | Article 9(2) | 14 |
+| 25 | Romania | Article 9(2) | 14 |
+| 26 | Russia | Article 9(2) | 14 |
+| 27 | The Slovak Republic | Article 9(2) | 14 |
+| 28 | Slovenia | Article 9(2) | 14 |
+| 29 | Spain | Article 9(2) | 14 |
+| 30 | Korea | Article 9(2) | 14 |
+| 31 | Switzerland | Article 9(2) | 14 |
+| 32 | Hungary | Article 9(2) | 14 |
+| 33 | Ukraine | Article 9(2) | 14 |

@@ -69,3 +69,52 @@
 | 61 | Ukraine | Original | 29-09-1999 | 19-03-2002 | 8 |
 | 62 | United Kingdom | Original | 25-10-1996 | 30-12-1996 | 8 |
 | 63 | Uruguay | Original | 29-11-2011 | 22-01-2013 | 8 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 38 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 19, one list
+
+*38 row(s), printed on page 19.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Azerbaijan | Article 9(2) | 19 |
+| 4 | Bulgaria | Article 9(2) | 19 |
+| 5 | Canada | Article 9(2) | 19 |
+| 6 | Chile | Article 9(2) | 19 |
+| 8 | Colombia | Article 9(2) | 19 |
+| 9 | Croatia | Article 9(2) | 19 |
+| 12 | Estonia | Article 9(2) | 19 |
+| 16 | Gabon | Article 9(2) | 19 |
+| 17 | Georgia | Article 9(2) | 19 |
+| 18 | Germany | Article 9(2) | 19 |
+| 19 | Greece | Article 9(2) | 19 |
+| 20 | Hong Kong | Article 9(2) | 20 |
+| 22 | Iceland | Article 9(2) | 20 |
+| 23 | India | Article 9(2) | 20 |
+| 24 | Indonesia | Article 9(2) | 20 |
+| 26 | Israel | Article 9(2) | 20 |
+| 28 | Japan | Article 9(2) | 20 |
+| 29 | Jordan | Article 9(2) | 20 |
+| 30 | Kazakhstan | Article 9(2) | 20 |
+| 31 | Kuwait | Article 9(2) | 20 |
+| 32 | Latvia | Article 9(2) | 20 |
+| 33 | Lithuania | Article 9(2) | 20 |
+| 34 | Luxembourg | Article 9(2) | 20 |
+| 35 | Malta | Article 9(2) | 20 |
+| 37 | Mongolia | Article 9(2) | 20 |
+| 38 | Morocco | Article 9(2) | 20 |
+| 43 | Papua New Guinea | Article 9(2) | 20 |
+| 45 | Poland | Article 9(2) | 20 |
+| 47 | Qatar | Article 9(2) | 20 |
+| 48 | Romania | Article 9(2) | 20 |
+| 50 | Saudi Arabia | Article 9(2) | 20 |
+| 51 | Serbia | Article 9(2) | 20 |
+| 53 | Slovenia | Article 9(2) | 20 |
+| 54 | South Africa | Article 9(2) | 20 |
+| 58 | Switzerland | Article 9(2) | 20 |
+| 59 | Thailand | Article 9(2) | 20 |
+| 61 | Ukraine | Article 9(2) | 20 |
+| 62 | United Kingdom | Article 9(2) | 20 |

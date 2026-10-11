@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 14,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -55,6 +57,304 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 19,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 19,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Armenia",
+                "page": 19,
+                "text": "Article 5(3b)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Austria",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "Azerbaijan",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Belgium",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Bulgaria",
+                "page": 19,
+                "text": "Article 5 (3c)"
+              },
+              {
+                "no": 7,
+                "other_jurisdiction": "Canada",
+                "page": 19,
+                "text": "Article 29"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "China",
+                "page": 19,
+                "text": "Article 22"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Croatia",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "Cyprus",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "Denmark",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 13,
+                "other_jurisdiction": "Estonia",
+                "page": 19,
+                "text": "Article 29"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "Finland",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "Georgia",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Germany",
+                "page": 19,
+                "text": "Article 20a"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "Greece",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "Hungary",
+                "page": 19,
+                "text": "Article 5(b)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "Iceland",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 21,
+                "other_jurisdiction": "India",
+                "page": 19,
+                "text": "Article 5(c)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "Ireland",
+                "page": 19,
+                "text": "Article 22"
+              },
+              {
+                "no": 23,
+                "other_jurisdiction": "Israel",
+                "page": 19,
+                "text": "Article 5 (3b)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "Italy",
+                "page": 19,
+                "text": "Article 22"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "Kazakhstan",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "Kuwait",
+                "page": 19,
+                "text": "Article 5(3c)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "Kyrgyzstan",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 29,
+                "other_jurisdiction": "Latvia",
+                "page": 19,
+                "text": "Article 29"
+              },
+              {
+                "no": 30,
+                "other_jurisdiction": "Luxembourg",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Macedonia",
+                "page": 19,
+                "text": "Article 5(3c)"
+              },
+              {
+                "no": 32,
+                "other_jurisdiction": "Malta",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 33,
+                "other_jurisdiction": "Mexico",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Moldova",
+                "page": 19,
+                "text": "Article 5 (3b)"
+              },
+              {
+                "no": 35,
+                "other_jurisdiction": "Morocco",
+                "page": 19,
+                "text": "Article 5(3c)"
+              },
+              {
+                "no": 36,
+                "other_jurisdiction": "Netherlands",
+                "page": 19,
+                "text": "Article 25"
+              },
+              {
+                "no": 37,
+                "other_jurisdiction": "Norway",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 38,
+                "other_jurisdiction": "Poland",
+                "page": 19,
+                "text": "Article 22"
+              },
+              {
+                "no": 39,
+                "other_jurisdiction": "Portugal",
+                "page": 19,
+                "text": "Article 22"
+              },
+              {
+                "no": 40,
+                "other_jurisdiction": "Romania",
+                "page": 19,
+                "text": "Protocol"
+              },
+              {
+                "no": 41,
+                "other_jurisdiction": "Russia",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 42,
+                "other_jurisdiction": "Serbia",
+                "page": 19,
+                "text": "Article 5 (3 (2))"
+              },
+              {
+                "no": 43,
+                "other_jurisdiction": "Slovakia",
+                "page": 19,
+                "text": "Protocol (para. III)"
+              },
+              {
+                "no": 44,
+                "other_jurisdiction": "Slovenia",
+                "page": 19,
+                "text": "Article 5 (3b)"
+              },
+              {
+                "no": 46,
+                "other_jurisdiction": "Spain",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 47,
+                "other_jurisdiction": "Sweden",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 51,
+                "other_jurisdiction": "Ukraine",
+                "page": 19,
+                "text": "Article 21"
+              },
+              {
+                "no": 52,
+                "other_jurisdiction": "United Arab Emirates",
+                "page": 20,
+                "text": "Article 22"
+              },
+              {
+                "no": 53,
+                "other_jurisdiction": "United Kingdom",
+                "page": 20,
+                "text": "Article 23"
+              },
+              {
+                "no": 54,
+                "other_jurisdiction": "United States",
+                "page": 20,
+                "text": "Article 21"
+              },
+              {
+                "no": 55,
+                "other_jurisdiction": "Uzbekistan",
+                "page": 20,
+                "text": "Article 21"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 356.5
+          }
+        ],
         "truncated": false
       }
     ],
@@ -85,6 +385,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 9,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -95,6 +396,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 9,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -133,6 +435,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -143,6 +446,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -1149,6 +1453,15 @@
       "resolved_from": "the document's own title",
       "slug": "lithuania",
       "title_read": "Republic of Lithuania"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 47,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "d31e16a91fcfa5c4ed568c35b974048ca202d3a022c358fcf7272f8d0fc05c99",

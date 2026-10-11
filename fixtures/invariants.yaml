@@ -288,6 +288,23 @@
                 test_p05_no_declared_tolerance_hides_a_second_role,
                 test_p05_a_tolerance_the_sources_never_read_is_held_by_its_published_value]
 
+- id: P6
+  name: Reservation scope lists
+  statement: >
+    Every list of agreements a reservation announces within its scope is read
+    from the page that prints it, one reading per announcement, and published
+    with the rows the page's own table holds; a statement that announces more
+    than one list carries one reading each; and a table that was not read is
+    declared with the reader's reason, in the position's own `qa` and in the
+    family's report. The lists are printed where the position's rows are read,
+    and the view control reads them back against the artefact.
+  scope: corpus
+  enforced_by: [known_defects,
+                test_p06_the_view_names_the_lists_the_artefact_holds,
+                test_p06_the_view_control_catches_a_stale_list,
+                test_p06_the_lists_are_the_tables_the_page_prints,
+                test_p06_the_page_control_catches_an_invented_row]
+
 - id: M1
   name: Mapping verified against the source
   statement: >

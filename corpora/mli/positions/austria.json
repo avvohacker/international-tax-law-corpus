@@ -17,6 +17,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -37,6 +38,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -63,6 +65,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 14,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -73,6 +76,7 @@
         "mli_article_title": "Definition of a Person Closely Related to an Enterprise",
         "option_title": "",
         "page": 14,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -83,6 +87,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 14,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -129,6 +134,7 @@
         "mli_article_title": "Mandatory Binding Arbitration",
         "option_title": "",
         "page": 18,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -149,6 +155,7 @@
         "mli_article_title": "Compatibility",
         "option_title": "",
         "page": 18,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -159,6 +166,7 @@
         "mli_article_title": "Reservations",
         "option_title": "Formulated for Scope of Arbitration",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -169,6 +177,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -189,6 +198,7 @@
         "mli_article_title": "Entry into Effect of Part VI",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -199,6 +209,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -247,6 +258,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -257,6 +269,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -1264,6 +1277,15 @@
       "resolved_from": "the document's own title",
       "slug": "austria",
       "title_read": "Republic of Austria"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "96a1de0d8fadd609015c22441666cb3bec8185ef256836f3196966165c9c5b91",

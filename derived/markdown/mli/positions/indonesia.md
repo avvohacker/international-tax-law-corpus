@@ -39,3 +39,16 @@
 | 31 | Slovakia | Original | 12-10-2000 | 30-01-2001 | 5 |
 | 32 | South Africa | Original | 15-07-1997 | 23-11-1998 | 5 |
 | 33 | Turkey | Original | 25-02-1997 | 06-03-2000 | 6 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 2 row(s) between them. Every announcement's table was read.*
+
+### Article 4 — the list under the reservation on page 8, one list
+
+*2 row(s), printed on page 8.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 33 | Turkey | Article 4(3) | 8 |
+| 22 | USA | Article 4(4) | 8 |

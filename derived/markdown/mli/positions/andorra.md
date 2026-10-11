@@ -12,3 +12,16 @@
 | 4 | Malta Original |  | 20-09-2016 | N/A | 1 |
 | 5 | Portugal Original |  | 27-09-2015 | 23-04-2017 | 2 |
 | 6 | Liechtenstein Original |  | 30-09-2015 | 21-11-2016 | 2 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 2 row(s) between them. Every announcement's table was read.*
+
+### Article 7 — the list under the reservation on page 6, one list
+
+*2 row(s), printed on page 6.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 3 | Spain | Subparagraph (I) (c) of the Protocol | 6 |
+| 5 | Portugal | Article 28 (4) | 6 |

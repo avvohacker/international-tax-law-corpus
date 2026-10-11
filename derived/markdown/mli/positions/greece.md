@@ -63,3 +63,52 @@
 | 55 | Czechoslovak Socialist Republic (Czech Republic) | Original | 23-10-1986 | 23-05-1989 | 8 |
 | 56 | Tunisia | Original | 31-10-1992 | 29-09-2010 | 8 |
 | 57 | Finland | Original | 21-01-1980 | 04-10-1981 | 9 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 38 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 23, one list
+
+*38 row(s), printed on page 23.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | San Marino | Article 9(2) | 23 |
+| 2 | Azerbaijan | Article 9(2) | 23 |
+| 3 | Egypt | Article 9(2) | 23 |
+| 4 | Albania | Article 9(2) | 23 |
+| 5 | Armenia | Article 9(2) | 23 |
+| 6 | Austria | Article 9(2) | 23 |
+| 8 | Bosnia and Herzegovina | Article 9(2) | 23 |
+| 12 | Georgia | Article 9(2) | 23 |
+| 13 | Denmark | Article 9(2) | 23 |
+| 15 | Estonia | Article 9(2) | 23 |
+| 16 | United Arab Emirates | Article 9(2) | 23 |
+| 20 | Ireland | Article 9(2) | 23 |
+| 21 | Iceland | Article 9(2) | 23 |
+| 22 | Spain | Article 9(2) | 23 |
+| 25 | Canada | Article 9(2) | 23 |
+| 26 | Qatar | Article 9(2) | 23 |
+| 27 | China | Article 9(2) | 23 |
+| 28 | Korea | Article 9(2) | 23 |
+| 29 | Kuwait | Article 9(2) | 23 |
+| 30 | Croatia | Article 9(2) | 23 |
+| 32 | Latvia | Article 9(2) | 23 |
+| 33 | Lithuania | Article 9(2) | 23 |
+| 34 | Luxembourg | Article 9(2) | 23 |
+| 35 | Malta | Article 9(2) | 23 |
+| 36 | Morocco | Article 9(2) | 23 |
+| 37 | Mexico | Article 9(2) | 23 |
+| 38 | Moldova | Article 9(2) | 23 |
+| 39 | South Africa | Article 9(2) | 23 |
+| 41 | Netherlands | Article 9(2) | 23 |
+| 43 | Ukraine | Article 9(2) | 23 |
+| 44 | Uzbekistan | Article 9(2) | 23 |
+| 46 | Portugal | Article 9(2) | 23 |
+| 48 | Russian Federation | Article 9(2) | 23 |
+| 49 | Saudi Arabia | Article 9(2) | 23 |
+| 50 | Serbia | Article 9(2) | 23 |
+| 52 | Slovenia | Article 9(2) | 23 |
+| 54 | Turkey | Article 9(2) | 23 |
+| 56 | Tunisia | Article 9(2) | 23 |

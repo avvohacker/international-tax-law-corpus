@@ -84,3 +84,85 @@
 | 76 | Italy | Original | 21.06.1985 | 26.09.1989 | 9 |
 | 77 |  | Original Original | 09.07.1993 31.01.1993 | 28.11.1994 21.04.1994 | 9 |
 | 78 | Amending Emirates Instrument (a) |  | 11.12.2013 | 01.05.2015 | 9 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 64 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 35, one list
+
+*53 row(s), printed on page 35.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 35 |
+| 2 | Saudi Arabia | Article 9(2) | 35 |
+| 3 | Armenia | Article 9(2) | 35 |
+| 4 | Australia | Article 9(3) | 35 |
+| 5 | Austria | Article 9(2) | 35 |
+| 6 | Azerbaijan | Article 9(2) | 35 |
+| 8 | Belgium | Article 9(2) | 35 |
+| 10 | Bosnia and Herzegovina | Article 9(2) | 35 |
+| 11 | Bulgaria | Article 9(2) | 35 |
+| 14 | Croatia | Article 9(2) | 35 |
+| 15 | Cyprus | Article 9(2) | 35 |
+| 16 | Czech Republic | Article 9(2) | 35 |
+| 17 | Denmark | Article 9(2) | 35 |
+| 18 | Egypt | Article 9(2) | 35 |
+| 19 | Estonia | Article 9(2) | 35 |
+| 20 | Ethiopia | Article 9(2) | 35 |
+| 21 | Philippines | Article 9(2) | 35 |
+| 22 | Finland | Article 9(2) | 35 |
+| 25 | Spain | Article 9(2) | 35 |
+| 26 | Netherlands | Article 9(2) | 35 |
+| 27 | India | Article 10(2) | 35 |
+| 28 | Indonesia | Article 9(2) | 35 |
+| 29 | Iran | Article 9(2) | 35 |
+| 30 | Ireland | Article 9(2) | 35 |
+| 31 | Iceland | Article 9(2) | 35 |
+| 34 | Jordan | Article 9(2) | 35 |
+| 35 | Canada | Article 9(2) | 35 |
+| 39 | Korea | Article 9(2) | 35 |
+| 40 | Kuwait | Article 9(2) | 35 |
+| 41 | Lebanon | Article 9(2) | 35 |
+| 42 | Lithuania | Article 9(2) | 35 |
+| 43 | Luxembourg | Article 9(2) | 35 |
+| 44 | Latvia | Article 9(2) | 35 |
+| 45 | Macedonia | Article 9(2) | 35 |
+| 46 | Malaysia | Article 9(2) | 35 |
+| 47 | Malta | Article 9(3) | 35 |
+| 48 | Morocco | Article 9(2) | 35 |
+| 52 | Norway | Article 9(2) | 35 |
+| 53 | New Zealand | Article 9(2) | 35 |
+| 55 | Portugal | Article 9(2) | 36 |
+| 56 | South Africa | Article 9(2) | 36 |
+| 58 | Romania | Article 9(2) | 36 |
+| 59 | Serbia | Article 9(2) | 36 |
+| 60 | Singapore | Article 9(2) | 36 |
+| 61 | Slovak Republic | Article 9(2) | 36 |
+| 62 | Slovenia | Article 9(2) | 36 |
+| 63 | Sri Lanka | Article 9(2) | 36 |
+| 64 | Syria | Article 9(2) | 36 |
+| 66 | Sweden | Article 9(2) | 36 |
+| 69 | Tunisia | Article 9(2) | 36 |
+| 70 | Turkey | Article 9(2) | 36 |
+| 74 | United Kingdom | Article 9(2) | 36 |
+| 77 | Zimbabwe | Article 9(2) | 36 |
+
+### Article 8 — the list under the reservation on page 22, one list
+
+*11 row(s), printed on page 22.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 8 | Belgium | Article 10(2)(a) (after amendment by Article II of (a): Article 10(2), | 22 |
+| 15 | Cyprus | second subparagraph (a)) Article 10(2)(a) | 22 |
+| 17 | Denmark | Article 10(2)(a) | 22 |
+| 43 | Luxembourg | Article 10(2)(a) | 22 |
+| 47 | Malta | Article 10(2)(a) | 22 |
+| 52 | Norway | Article 10(2)(a) | 22 |
+| 55 | Portugal | Article 10(3) | 22 |
+| 60 | Singapore | Article 10(2)(a) | 22 |
+| 61 | Slovak Republic | Article 10(2)(a) | 22 |
+| 65 | Swiss Confederation | Article 10(2a)(a) | 22 |
+| 74 | United Kingdom | Article 10(2)(a) | 22 |

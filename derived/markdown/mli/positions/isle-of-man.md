@@ -14,3 +14,21 @@
 | 6 | The Government of the State of Qatar | Original | 06-05-2012 | 15-11-2012 | 1 |
 | 7 | The Government of the Republic of Seychelles | Original | 28-03-2013 | 16-12-2013 | 1 |
 | 8 | The Government of the Republic of Singapore | Original | 21-09-2012 | 02-05-2013 | 2 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 7 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 6, one list
+
+*7 row(s), printed on page 6.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | The Government of the Kingdom of | Article 9(2) Bahrain | 6 |
+| 2 | The Government of the Kingdom of | Article 9(2) Belgium | 6 |
+| 3 | The Republic of Estonia | Article 9(2) | 6 |
+| 4 | The Government of the Grand | Article 9(2) Duchy of Luxembourg | 6 |
+| 5 | The Government of Malta | Article 9(2) | 6 |
+| 7 | The Government of the Republic of | Article 9(2) the Seychelles | 6 |
+| 8 | The Government of the Republic of | Article 9(2) Singapore | 6 |

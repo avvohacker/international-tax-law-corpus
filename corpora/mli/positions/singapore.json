@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -37,6 +40,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -63,6 +67,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -73,6 +78,7 @@
         "mli_article_title": "Definition of a Person Closely Related to an Enterprise",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -83,6 +89,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 22,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -137,6 +144,7 @@
         "mli_article_title": "Type of Arbitration Process",
         "option_title": "",
         "page": 27,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -175,6 +183,7 @@
         "mli_article_title": "Reservations",
         "option_title": "Formulated for Scope of Arbitration",
         "page": 28,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -193,6 +202,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 9,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -203,6 +213,7 @@
         "mli_article_title": "Entry into Effect of Part VI",
         "option_title": "",
         "page": 28,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -213,6 +224,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 11,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -223,6 +235,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 11,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -277,6 +290,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -287,6 +301,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -2454,6 +2469,15 @@
       "resolved_from": "the document's own title",
       "slug": "singapore",
       "title_read": "Republic of Singapore"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "eea3cf1b8cd627acbd52fd5d9c8c55f202166d05955244b7abf703d6aeac7520",

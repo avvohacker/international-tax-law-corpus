@@ -70,7 +70,20 @@ and prints, because it is what a corpus is for:
   measured, and one has no dated table. The 11 tables whose numbering runs with a
   hole in it are in `positions_whose_numbering_has_a_gap`, with which numbers the
   projection found no row for - published rather than renumbered, because a table
-  renumbered to close its gaps cannot be checked against the page it came from.
+  renumbered to close its gaps cannot be checked against the page it came from;
+* **the lists a reservation prints under itself, kept**: where a statement says
+  "the following agreements contain provisions that are within the scope of this
+  reservation" and prints a table of them, that table is read and published in
+  the statement's own artefact, so whether one particular treaty falls inside the
+  reservation is a lookup and not an unanswerable question. The family holds 119
+  announced lists, reads all 119 and holds 2 156 rows between them - including
+  the six statements that print **two** lists each (Argentina's Article 7 prints a
+  reservation under Article 7(15)(b) and, in the next paragraph, one under
+  Article 7(15)(c), each with its own table), which the reading keeps one list
+  per announcement rather than the first alone. A table the reading could not
+  read would be named in `reservations_announcing_a_list_not_read` with the
+  reader's reason; none is. The lists are printed in each position's markdown
+  view beside the rows it decides.
 
 The family is checked byte for byte like the rest: `test_f07_build_is_byte_identical`
 reads it once and compares every file it writes with the corpus this repository

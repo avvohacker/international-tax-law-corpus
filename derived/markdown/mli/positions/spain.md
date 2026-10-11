@@ -92,3 +92,107 @@
 | 84 | Venezuela | Original | 08-04-2003 | 29-04-2004 | 17 |
 | 85 | Vietnam | Original | 07-03-2005 | 22-12-2005 | 17 |
 | 86 | India | Original Amending Instrument (a) | 8-02-1993 26-10-2012 | 12-01-1995 N/A | 17 |
+
+## The agreements the reservations bring within their scope
+
+*4 list(s) of agreements are announced under the reservations of this position: 4 read, holding 72 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 56, one list
+
+*66 row(s), printed on page 56.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 56 |
+| 2 | Germany | Article 9(2) | 56 |
+| 3 | Andorra | Article 9(2) | 56 |
+| 4 | Saudi Arabia | Article 9(2) | 56 |
+| 5 | Algeria | Article 9(2) | 56 |
+| 6 | Argentina | Article 9(2) | 56 |
+| 7 | Armenia | Article 9(2) | 56 |
+| 8 | Australia | Article 9(3) | 56 |
+| 10 | Azerbaijan | Article 9(2) | 56 |
+| 11 | Barbados | Article 9(2) | 56 |
+| 12 | Belgium | Article 9(2) | 56 |
+| 13 | Bolivia | Article 9(2) | 56 |
+| 14 | Bosnia and Herzegovina | Article 9(2) | 56 |
+| 18 | Qatar | Article 9(2) | 56 |
+| 19 | Czech Republic | Article 9(2) | 56 |
+| 20 | Chile | Article 9(2) | 56 |
+| 21 | Cyprus | Article 9(2) | 56 |
+| 22 | Colombia | Article 9(2) | 56 |
+| 24 | Costa Rica | Article 9(2) | 56 |
+| 25 | Croatia | Article 9(2) | 56 |
+| 26 | Cuba | Article 9(2) | 56 |
+| 28 | Egypt | Article 9(2) | 56 |
+| 29 | El Salvador | Article 9(2) | 56 |
+| 30 | United Arab Emirates | Article 9(2) | 56 |
+| 31 | Slovak Republic | Article 9(2) | 56 |
+| 34 | Estonia | Article 9(2) | 56 |
+| 35 | Philippines | Article 9(2) | 56 |
+| 33 | United States of America | Article 9(2) | 56 |
+| 36 | Finland | Article 9(2) | 56 |
+| 37 | France | Article 9(2) | 56 |
+| 38 | Georgia | Article 9(2) | 56 |
+| 39 | Greece | Article 9(2) | 56 |
+| 40 | Hong Kong (China) | Article 9(2) | 57 |
+| 43 | Iran | Article 9(2) | 57 |
+| 44 | Ireland | Article 9(2) | 57 |
+| 46 | Israel | Article 9(2) | 57 |
+| 48 | Jamaica | Article 9(2) | 57 |
+| 49 | Kazakhstan | Article 9(2) | 57 |
+| 51 | Kuwait | Article 9(2) | 57 |
+| 52 | Latvia | Article 9(2) | 57 |
+| 53 | Lithuania | Article 9(2) | 57 |
+| 55 | Macedonia | Article 9(2) | 57 |
+| 56 | Malaysia | Article 9(2) | 57 |
+| 57 | Malta | Article 9(2) | 57 |
+| 59 | Mexico | Article 9(2) | 57 |
+| 60 | Moldova | Article 9(2) | 57 |
+| 61 | Nigeria | Article 9(2) | 57 |
+| 63 | Oman | Article 9(2) | 57 |
+| 64 | Pakistan | Article 9(2) | 57 |
+| 65 | Panama | Article 9(2) | 57 |
+| 66 | Poland | Article 9(2) | 57 |
+| 67 | Portugal | Article 9(2) | 57 |
+| 68 | United Kingdom | Article 9(2) | 57 |
+| 69 | Dominican Republic | Article 9(2) | 57 |
+| 70 | Russia | Article 9(2) | 57 |
+| 71 | Senegal | Article 9(2) | 57 |
+| 72 | Serbia | Article 9(2) | 57 |
+| 73 | Singapore | Article 9(2) | 57 |
+| 75 | Switzerland | Article 9(2) | 57 |
+| 78 | Trinidad and Tobago | Article 9(2) | 57 |
+| 81 | Turkey | Article 9(2) | 57 |
+| 82 | Uruguay | Article 9(2) | 57 |
+| 83 | Uzbekistan | Article 9(2) | 57 |
+| 84 | Venezuela | Article 9(2) | 57 |
+| 85 | Vietnam | Article 9(2) | 57 |
+| 86 | India | Article 10(2) after amendment by A.2 of (a) | 57 |
+
+### Article 3 — the list under the reservation on page 18, one list
+
+*3 row(s), printed on page 18.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 33 | United States of America | Article 1(6) (after amendment by Article I of a)) | 18 |
+| 36 | Finland | Article 1(2) + Protocol (II) | 18 |
+| 68 | United Kingdom | Article 4(4) | 18 |
+
+### Article 6 — the list under the reservation on page 21, one list
+
+*1 row(s), printed on page 21.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 59 | Mexico | <DESEANDO promover el desarrollo de sus relaciones económicas y> CON LA INTENCIÓN de concluir un convenio para evitar la doble imposición con respecto a los impuestos sobre la renta y sobre el patrimonio, sin generar oportunidades para la no imposición o la imposición reducida a través de la evasión o elusión fiscales (comprendidos los acuerdos para el uso abusivo de los convenios cuyo objetivo es permitir que residentes de terceros Estados se aprovechen indirectamente de los beneficios previstos en este Convenio); [DESIRING to promote their mutual economic relations and> INTENDING to conclude a Convention for the elimination of double taxation with respect to taxes on income and on capital without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Convention for the indirect benefit of residents of third States)] Preamble after amendment by Article I of (a) | 21 |
+
+### Article 7 — the list under the reservation on page 35, one list
+
+*2 row(s), printed on page 35.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 3 | Andorra | Protocol I 3 | 35 |
+| 59 | Mexico | Protocol 1b) (after amendment by Article XVII (1) of (a)) | 35 |

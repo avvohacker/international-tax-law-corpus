@@ -68,3 +68,70 @@
 | 60 |  | Original | 29-04-2014 | 06-04-2015 | 8 |
 | 61 | Ukraine United | Original | 10-09-1996 | 01-06-1999 | 9 |
 | 62 | Kingdom | Original | 15-01-2015 | 19-11-2015 | 9 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 56 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 35, one list
+
+*56 row(s), printed on page 35.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Albania | Article 9(2) | 35 |
+| 2 | Armenia | Article 9(2) | 35 |
+| 4 | Azerbaijan | Article 9(2) | 35 |
+| 5 | Belarus | Article 9(2) | 35 |
+| 6 | Belgium | Article 9(2) | 35 |
+| 7 | Bosnia and Herzegovina | Article 9(2) | 35 |
+| 8 | Bulgaria | Article 9(2) | 35 |
+| 10 | Chile | Article 9(2) | 35 |
+| 11 | China | Article 9(2) | 35 |
+| 12 | Czech Republic | Article 9(2) | 35 |
+| 13 | Denmark | Article 9(2) | 35 |
+| 14 | Estonia | Article 9(2) | 35 |
+| 16 | France | Article 9(2) | 35 |
+| 17 | Georgia | Article 9(2) | 35 |
+| 18 | Germany | Article 9(2) | 35 |
+| 19 | Greece | Article 9(2) | 35 |
+| 20 | Hungary | Article 9(2) | 35 |
+| 21 | Iceland | Article 9(2) | 35 |
+| 22 | India | Article 9(2) | 35 |
+| 23 | Indonesia | Article 9(2) | 35 |
+| 24 | Iran | Article 9(2) | 35 |
+| 25 | Ireland | Article 9(2) | 35 |
+| 26 | Israel | Article 9(2) | 35 |
+| 27 | Italy | Article 9(2) | 35 |
+| 28 | Jordan | Article 9(2) | 35 |
+| 29 | Korea | Article 9(2) | 35 |
+| 30 | Kosovo | Article 9(2) | 35 |
+| 31 | Kuwait | Article 9(2) | 35 |
+| 32 | Latvia | Article 9(2) | 35 |
+| 33 | Lithuania | Article 9(2) | 35 |
+| 34 | Luxembourg | Article 9(2) | 35 |
+| 35 | Macedonia | Article 9(2) | 35 |
+| 36 | Malaysia | Article 9(2) | 35 |
+| 37 | Malta | Article 9(2) | 35 |
+| 38 | Mauritius | Article 9(2) | 35 |
+| 39 | Moldova | Article 9(2) | 35 |
+| 40 | Montenegro | Article 9(2) | 35 |
+| 41 | Morocco | Article 9(2) | 35 |
+| 42 | Netherlands | Article 9(2) | 35 |
+| 44 | Oman | Article 9(2) | 35 |
+| 45 | Poland | Article 9(2) | 36 |
+| 46 | Portugal | Article 9(2) | 36 |
+| 47 | Qatar | Article 9(2) | 36 |
+| 48 | Romania | Article 9(2) | 36 |
+| 49 | Russia | Article 9(2) | 36 |
+| 50 | San Marino | Article 9(2) | 36 |
+| 51 | Serbia | Article 9(2) | 36 |
+| 52 | Slovakia | Article 9(2) | 36 |
+| 53 | Slovenia | Article 9(2) | 36 |
+| 54 | South Africa | Article 9(2) | 36 |
+| 55 | Spain | Article 9(2) | 36 |
+| 58 | Syrian Arab Republic | Article 9(2) | 36 |
+| 59 | Turkey | Article 9(2) | 36 |
+| 60 | Turkmenistan | Article 9(2) | 36 |
+| 61 | Ukraine | Article 9(2) | 36 |
+| 62 | United Kingdom | Article 9(2) | 36 |

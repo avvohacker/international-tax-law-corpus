@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 11,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -55,6 +56,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 17,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -123,6 +125,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 3,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -363,6 +366,15 @@
       "resolved_from": "the document's own title",
       "slug": "lesotho",
       "title_read": "Lesotho"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "5b13a18700133a6b8e00752a681e70a70d19957f9b332957e6071b10504fccbc",

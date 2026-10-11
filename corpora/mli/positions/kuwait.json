@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -75,6 +78,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -85,6 +89,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -131,6 +136,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -141,6 +147,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 13,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -989,6 +996,15 @@
       "resolved_from": "the document's own title",
       "slug": "kuwait",
       "title_read": "The State of Kuwait"
+    },
+    "scope_lists": {
+      "announced": 0,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 0,
+      "rows": 0,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "bbad362b0fe992021ab6db8eaab05d160f253e518bfbefa35fc6d84f349b0fb2",

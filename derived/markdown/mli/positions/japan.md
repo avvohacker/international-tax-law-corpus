@@ -41,3 +41,15 @@
 | 33 | Sweden | Original Protocol (a) Protocol (b) | 21-01-1983 19-02-1999 05-12-2013 | 18-09-1983 25-12-1999 12-10-2014 | 5 |
 | 34 | Turkey | Original | 08-03-1993 | 28-12-1994 | 5 |
 | 35 | United Kingdom | Original Protocol (a) | 02-02-2006 17-12-2013 | 12-10-2006 12-12-2014 | 5 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 1 row(s) between them. Every announcement's table was read.*
+
+### Article 6 — the list under the reservation on page 7, one list
+
+*1 row(s), printed on page 7.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 9 | Germany | Desiring to further develop their economic relationship and to enhance their cooperation in tax matters, Intending to conclude a new Agreement for the elimination of double taxation with respect to taxes on income and to certain other taxes without creating opportunities for non-taxation or | 7 |

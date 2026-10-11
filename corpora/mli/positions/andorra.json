@@ -7,6 +7,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire",
         "option_title": "",
         "page": 9,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 10,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 11,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -37,6 +40,7 @@
         "mli_article_title": "Definition of a Person Closely Related to an Enterprise",
         "option_title": "",
         "page": 12,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -77,6 +81,7 @@
         "mli_article_title": "Type of Arbitration Process",
         "option_title": "",
         "page": 17,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -123,6 +128,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -141,6 +147,7 @@
         "mli_article_title": "Entry into Effect of Part VI",
         "option_title": "",
         "page": 22,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -159,6 +166,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 3,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -195,6 +203,34 @@
         "mli_article_title": "Prevention of Treaty Abuse",
         "option_title": "",
         "page": 6,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 6,
+            "read": true,
+            "rows": [
+              {
+                "no": 3,
+                "other_jurisdiction": "Spain",
+                "page": 6,
+                "text": "Subparagraph (I) (c) of the Protocol"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Portugal",
+                "page": 6,
+                "text": "Article 28 (4)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 346.5
+          }
+        ],
         "truncated": false
       },
       {
@@ -221,6 +257,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -366,6 +403,15 @@
       "resolved_from": "the document's own title",
       "slug": "andorra",
       "title_read": "THE PRINCIPALITY OF ANDORRA"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 2,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "471fc11ded803d45c96b8f8a9a5d908756e600f41584649a99486c1fa464dd62",

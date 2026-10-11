@@ -40,3 +40,48 @@
 | 32 | State of Israel | Original | 12-05-2010 | 22-11-2011 | 5 |
 | 33 | Sweden | Original | 06-11-2013 | 26-07-2014 | 5 |
 | 34 | United Kingdom of Great Britain and Northern Ireland | Original Amending document | 13-07-2004 03-02-2010 | 11-10-2005 17-12-2010 | 5 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 34 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 13, one list
+
+*34 row(s), printed on page 13.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Czech Republic | Article 9(2) | 13 |
+| 2 | France | Article 9(2) | 13 |
+| 3 | Luxembourg | Article 9(2) | 13 |
+| 4 | Greece | Article 9(2) | 13 |
+| 5 | Hungary | Article 9(2) | 13 |
+| 6 | Iceland | Article 9(2) | 13 |
+| 7 | Ireland | Article 9(2) | 13 |
+| 8 | Italy | Article 9(2) | 13 |
+| 9 | Belgium | Article 9(2) | 13 |
+| 10 | Norway | Article 9(2) | 13 |
+| 11 | Spain | Article 9(2) | 13 |
+| 12 | The Netherlands | Article 9(2) | 13 |
+| 13 | China | Article 9(2) | 14 |
+| 14 | Portugal | Article 9(2) | 14 |
+| 15 | Liechtenstein | Article 9(2) | 14 |
+| 16 | Bulgaria | Article 9(2) | 14 |
+| 17 | Croatia | Article 9(2) | 14 |
+| 18 | Cyprus | Article 9(2) | 14 |
+| 19 | Estonia | Article 9(2) | 14 |
+| 20 | Finland | Article 9(2) | 14 |
+| 21 | India | Article 9(2) | 14 |
+| 22 | Korea | Article 9(2) | 14 |
+| 23 | Latvia | Article 9(2) | 14 |
+| 24 | Lithuania | Article 9(2) | 14 |
+| 25 | San Marino | Article 9(2) | 14 |
+| 26 | Serbia | Article 9(2) | 14 |
+| 27 | Singapore | Article 9(2) | 14 |
+| 28 | Slovenia | Article 9(2) | 14 |
+| 29 | Turkey | Article 9(2) | 14 |
+| 30 | Romania | Article 9(2) | 14 |
+| 31 | Slovak Republic | Article 9(2) | 14 |
+| 32 | Israel | Article 9(2) | 14 |
+| 33 | Sweden | Article 9(2) | 14 |
+| 34 | United Kingdom | Article 9(2) | 14 |

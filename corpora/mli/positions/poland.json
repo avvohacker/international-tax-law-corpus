@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 26,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through Commissionnaire",
         "option_title": "",
         "page": 27,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -27,6 +29,7 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 28,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -37,6 +40,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 29,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -47,6 +51,7 @@
         "mli_article_title": "Definition of a Person Closely Related to an Enterprise",
         "option_title": "",
         "page": 30,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -57,6 +62,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 31,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -83,6 +89,340 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 35,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 35,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Albania",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Saudi Arabia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 3,
+                "other_jurisdiction": "Armenia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 4,
+                "other_jurisdiction": "Australia",
+                "page": 35,
+                "text": "Article 9(3)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Austria",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Azerbaijan",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "Belgium",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Bosnia and Herzegovina",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "Bulgaria",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 14,
+                "other_jurisdiction": "Croatia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "Cyprus",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "Czech Republic",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Denmark",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 18,
+                "other_jurisdiction": "Egypt",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "Estonia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "Ethiopia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 21,
+                "other_jurisdiction": "Philippines",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "Finland",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "Spain",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 26,
+                "other_jurisdiction": "Netherlands",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "India",
+                "page": 35,
+                "text": "Article 10(2)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "Indonesia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 29,
+                "other_jurisdiction": "Iran",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 30,
+                "other_jurisdiction": "Ireland",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 31,
+                "other_jurisdiction": "Iceland",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Jordan",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 35,
+                "other_jurisdiction": "Canada",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 39,
+                "other_jurisdiction": "Korea",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 40,
+                "other_jurisdiction": "Kuwait",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 41,
+                "other_jurisdiction": "Lebanon",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 42,
+                "other_jurisdiction": "Lithuania",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 43,
+                "other_jurisdiction": "Luxembourg",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 44,
+                "other_jurisdiction": "Latvia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 45,
+                "other_jurisdiction": "Macedonia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 46,
+                "other_jurisdiction": "Malaysia",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 47,
+                "other_jurisdiction": "Malta",
+                "page": 35,
+                "text": "Article 9(3)"
+              },
+              {
+                "no": 48,
+                "other_jurisdiction": "Morocco",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 52,
+                "other_jurisdiction": "Norway",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 53,
+                "other_jurisdiction": "New Zealand",
+                "page": 35,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 55,
+                "other_jurisdiction": "Portugal",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 56,
+                "other_jurisdiction": "South Africa",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 58,
+                "other_jurisdiction": "Romania",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 59,
+                "other_jurisdiction": "Serbia",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 60,
+                "other_jurisdiction": "Singapore",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 61,
+                "other_jurisdiction": "Slovak Republic",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 62,
+                "other_jurisdiction": "Slovenia",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 63,
+                "other_jurisdiction": "Sri Lanka",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 64,
+                "other_jurisdiction": "Syria",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 66,
+                "other_jurisdiction": "Sweden",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 69,
+                "other_jurisdiction": "Tunisia",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 70,
+                "other_jurisdiction": "Turkey",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 74,
+                "other_jurisdiction": "United Kingdom",
+                "page": 36,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 77,
+                "other_jurisdiction": "Zimbabwe",
+                "page": 36,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 362.2
+          }
+        ],
         "truncated": false
       }
     ],
@@ -151,6 +491,88 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 22,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 22,
+            "read": true,
+            "rows": [
+              {
+                "no": 8,
+                "other_jurisdiction": "Belgium",
+                "page": 22,
+                "text": "Article 10(2)(a) (after amendment by Article II of (a): Article 10(2),"
+              },
+              {
+                "no": 15,
+                "other_jurisdiction": "Cyprus",
+                "page": 22,
+                "text": "second subparagraph (a)) Article 10(2)(a)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Denmark",
+                "page": 22,
+                "text": "Article 10(2)(a)"
+              },
+              {
+                "no": 43,
+                "other_jurisdiction": "Luxembourg",
+                "page": 22,
+                "text": "Article 10(2)(a)"
+              },
+              {
+                "no": 47,
+                "other_jurisdiction": "Malta",
+                "page": 22,
+                "text": "Article 10(2)(a)"
+              },
+              {
+                "no": 52,
+                "other_jurisdiction": "Norway",
+                "page": 22,
+                "text": "Article 10(2)(a)"
+              },
+              {
+                "no": 55,
+                "other_jurisdiction": "Portugal",
+                "page": 22,
+                "text": "Article 10(3)"
+              },
+              {
+                "no": 60,
+                "other_jurisdiction": "Singapore",
+                "page": 22,
+                "text": "Article 10(2)(a)"
+              },
+              {
+                "no": 61,
+                "other_jurisdiction": "Slovak Republic",
+                "page": 22,
+                "text": "Article 10(2)(a)"
+              },
+              {
+                "no": 65,
+                "other_jurisdiction": "Swiss Confederation",
+                "page": 22,
+                "text": "Article 10(2a)(a)"
+              },
+              {
+                "no": 74,
+                "other_jurisdiction": "United Kingdom",
+                "page": 22,
+                "text": "Article 10(2)(a)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 342.0
+          }
+        ],
         "truncated": false
       },
       {
@@ -1771,6 +2193,15 @@
       "resolved_from": "the document's own title",
       "slug": "poland",
       "title_read": "Republic of Poland"
+    },
+    "scope_lists": {
+      "announced": 2,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 2,
+      "rows": 64,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "c8a56a0aab303b1b30752238bbc6cffde6994663c182d6b3e8d622d55e29b9a6",

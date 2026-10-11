@@ -53,3 +53,53 @@
 | 45 | UKRAINE | Original | 14-05-2004 | 22-12-2004 | 7 |
 | 46 | THE HONG KONG SPECIAL ADMINISTRAT IVE REGION OF THE PEOPLE’S REPUBLIC OF CHINA | Original | 13-04-2016 | N/A | 7 |
 | 47 | CYPRUS | Original | 24-05-2016 | 27-10-2016 | 8 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 39 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 12, one list
+
+*39 row(s), printed on page 12.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | AUSTRIA | Article 9(2) | 12 |
+| 2 | AZERBAIJAN | Article 9(2) | 12 |
+| 3 | BELGIUM | Article 9(2) | 12 |
+| 6 | DENMARK | Article 9(2) | 12 |
+| 7 | KOREA | Article 9(2) | 12 |
+| 9 | THE HELLENIC REPUBLIC | Article 9(2) | 12 |
+| 10 | GEORGIA | Article 9(2) | 12 |
+| 11 | CROATIA | Article 9(2) | 12 |
+| 12 | FINLAND | Article 9(2) | 12 |
+| 13 | ESTONIA | Article 9(2) | 12 |
+| 14 | INDIA | Article 9(2) | 12 |
+| 15 | IRELAND | Article 9(2) | 12 |
+| 16 | THE ITALIAN REPUBLIC | Protocol, g) | 12 |
+| 17 | ICELAND | Article 9(2) | 12 |
+| 18 | THE STATE OF ISRAEL | Article 9(2) | 12 |
+| 19 | CANADA | Article 9(2) | 12 |
+| 20 | QATAR | Article 9(2) | 12 |
+| 21 | KAZAKHSTAN | Article 9(2) | 12 |
+| 22 | THE RUSSIAN FEDERATION | Article 9(2) | 13 |
+| 23 | THE PEOPLE'S REPUBLIC OF CHINA | Article 9(2) | 13 |
+| 24 | THE UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND | Article 9(2) | 13 |
+| 25 | LITHUANIA | Article 9(2) | 13 |
+| 26 | THE GRAND DUCHY OF LUXEMBOURG | Article 9(2) | 13 |
+| 27 | MALTA | Article 9(2) | 13 |
+| 28 | THE UNITED MEXICAN STATES | Article 9(2) | 13 |
+| 29 | MOLDOVA | Article 9(2) | 13 |
+| 31 | THE KINGDOM OF THE NETHERLANDS | Article 9(2) | 13 |
+| 32 | KINGDOM OF NORWAY | Article 9(2) | 13 |
+| 33 | POLAND | Article 9(2) | 13 |
+| 34 | THE PORTUGUESE REPUBLIC | Article 9(2) | 13 |
+| 35 | ROMANIA | Article 9(2) | 13 |
+| 37 | SINGAPORE | Article 9(2) | 13 |
+| 38 | THE SLOVAK REPUBLIC | Article 9(2) | 13 |
+| 40 | THE KINGDOM OF SPAIN | Article 9(2) | 13 |
+| 41 | TURKEY | Article 9(2) | 13 |
+| 42 | HUNGARY | Article 9(2) | 13 |
+| 44 | THE KINGDOM OF SWEDEN | Article 9(2) | 13 |
+| 45 | UKRAINE | Article 9(2) | 13 |
+| 46 | THE HONG KONG SPECIAL ADMINISTRATIVE REGION OF THE PEOPLE’S REPUBLIC OF CHINA | Article 9(2) | 13 |

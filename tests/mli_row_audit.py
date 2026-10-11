@@ -260,6 +260,204 @@ def position_view_divergences(record: dict, view_text: str) -> list[str]:
     return problems
 
 
+# The columns the reservation-scope view renders, and the artefact field each
+# one holds. `#` keys both sides of the comparison; the rest are compared by
+# value. The audit repeats this map rather than importing the renderer's.
+SCOPE_VIEW_COLUMNS = (("#", "no"),
+                      ("Other Contracting Jurisdiction", "other_jurisdiction"),
+                      ("Provision", "text"), ("Page", "page"))
+SCOPE_VIEW_FIELDS = tuple(field for _header, field in SCOPE_VIEW_COLUMNS
+                          if field != "no")
+# The line the view opens each announced list with: the Article the statement
+# stands under, the page the statement is printed on, and which of that
+# statement's lists this one is. Reading these back is what makes the control a
+# comparison and not a second rendering.
+SCOPE_BLOCK_RE = re.compile(
+    r"^### Article (?P<article>\S+) — the list under the reservation on page "
+    r"(?P<page>[0-9]+), (?P<where>.+)$")
+# The line a view carries where its reading found a table:
+# `*N row(s), printed on page P.*`
+SCOPE_ROWS_RE = re.compile(r"^\*(?P<rows>[0-9]+) row\(s\), printed on page "
+                           r"(?P<page>[0-9]+)\.\*$")
+# And where it did not: the reader's own reason, in words.
+SCOPE_UNREAD_RE = re.compile(
+    r"^\*This statement announces a list of agreements and its table was not "
+    r"read: (?P<reason>.+)\*$")
+SCOPE_SUMMARY_RE = re.compile(
+    r"^\*(?P<announced>[0-9]+) list\(s\) of agreements are announced")
+
+
+def parse_scope_lists_view(text: str) -> list:
+    """The announced lists a position view prints, read back in order.
+
+    One entry per `### Article …` block: the Article, the page the statement is
+    printed on, which list of that statement it is, its rows by the number the
+    page printed, and - where the reading could not read the table - the reason
+    in words. A block with no readable table and no reason is reported by the
+    comparison rather than parsed as an empty one.
+    """
+    blocks: list = []
+    current: Optional[dict] = None
+    for line in text.splitlines():
+        line = line.rstrip()
+        head = SCOPE_BLOCK_RE.match(line)
+        if head:
+            current = {"article": head.group("article"),
+                       "page": int(head.group("page")),
+                       "where": head.group("where"), "rows": {},
+                       "reason": None}
+            blocks.append(current)
+            continue
+        if current is None:
+            continue
+        unread = SCOPE_UNREAD_RE.match(line.strip())
+        if unread:
+            # The reader's reasons are published as sentences without a
+            # terminator; the view closes its own line with one, so the full
+            # stop it added is not part of the reason being compared.
+            current["reason"] = unread.group("reason").rstrip(".")
+            continue
+        stripped = line.strip()
+        if not stripped.startswith("|") or not stripped.endswith("|"):
+            continue
+        cells = [cell.strip() for cell in CELL_SPLIT_RE.split(stripped[1:-1])]
+        if len(cells) != len(SCOPE_VIEW_COLUMNS) or not cells[0].isdigit():
+            continue
+        values = {field: cell.replace("\\|", "|").strip()
+                  for (_header, field), cell in zip(SCOPE_VIEW_COLUMNS, cells)
+                  if field != "no"}
+        current["rows"][int(cells[0])] = values
+    return blocks
+
+
+def scope_view_divergences(record: dict, view_text: str) -> list:
+    """Every announced list on which a position view disagrees with its artefact.
+
+    The comparison is by statement and by list - the Article the statement stands
+    under and its own position among that Article's statements - because a
+    statement can announce more than one list and the second one is the list a
+    view is likeliest to lose. An unread list is a fact the view has to print in
+    words, with the reader's own reason; a view that draws a table there, or one
+    that declares unread a list the artefact read, is a disagreement.
+    """
+    expected: list = []
+    for article, entries in (record.get("article_sections") or {}).items():
+        for statement, entry in enumerate(entries):
+            lists = entry.get("scope_lists") or []
+            for index, one in enumerate(lists):
+                expected.append((str(article), statement, entry.get("page"),
+                                 index, len(lists), one))
+    named = parse_scope_lists_view(view_text)
+    if len(named) != len(expected):
+        return [f"the view prints {len(named)} announced list(s), the artefact "
+                f"holds {len(expected)}"]
+    problems: list = []
+    for (article, _statement, entry_page, index, count, one), block in zip(
+            expected, named):
+        where = f"Article {article} list {index + 1}"
+        want_where = (f"list {index + 1} of {count}" if count > 1
+                      else "one list")
+        if block["article"] != article or block["page"] != entry_page:
+            problems.append(f"{where}: the view heads it {block['article']} on "
+                            f"page {block['page']}, the artefact holds it under "
+                            f"Article {article} on page {entry_page}")
+        if block["where"] != want_where:
+            problems.append(f"{where}: the view says {block['where']!r}, the "
+                            f"artefact makes it {want_where!r}")
+        if not one.get("read"):
+            if block["reason"] != (one.get("reason") or ""):
+                problems.append(f"{where}: the view gives the reason "
+                                f"{block['reason']!r}, the artefact holds "
+                                f"{one.get('reason')!r}")
+            elif block["rows"]:
+                problems.append(f"{where}: the view prints rows for a list the "
+                                f"artefact declares unread")
+            continue
+        if block["reason"]:
+            problems.append(f"{where}: the view declares unread a list the "
+                            f"artefact read ({block['reason']!r})")
+        rows = {row["no"]: row for row in one.get("rows") or []}
+        if set(block["rows"]) != set(rows):
+            problems.append(
+                f"{where}: rows {sorted(set(block['rows']) - set(rows))} named "
+                f"by the view are not in the artefact and "
+                f"{sorted(set(rows) - set(block['rows']))} are missing")
+            continue
+        for number in sorted(rows):
+            for field in SCOPE_VIEW_FIELDS:
+                in_view = block["rows"][number].get(field) or ""
+                value = rows[number].get(field)
+                in_artifact = "" if value is None else str(value)
+                if in_view != in_artifact:
+                    problems.append(f"{where} row {number} {field}: the view "
+                                    f"names {in_view!r}, the artefact holds "
+                                    f"{in_artifact!r}")
+    return problems
+
+
+def scope_list_rows(record: dict) -> dict:
+    """Every announced list a position publishes, keyed by where it stands.
+
+    The key is `(article, statement, list)`: the Article the statement stands
+    under, the statement's own position among that Article's statements (the
+    order the page prints them in), and the list's position among that
+    statement's announcements. A statement can announce more than one list, so
+    the option alone does not key one.
+    """
+    out: dict = {}
+    for article, entries in (record.get("article_sections") or {}).items():
+        for statement, entry in enumerate(entries):
+            for index, one in enumerate(entry.get("scope_lists") or []):
+                out[(str(article), statement, index)] = one
+    return out
+
+
+def compare_scope_lists(stored: dict, live: dict, slug: str) -> dict:
+    """Compare two readings' announced lists, list by list and row by row.
+
+    The corpus cannot answer this about itself: the question is whether each
+    table the reader reads now is still the table the artefact holds. A list
+    present on one side only is a divergence too, and so is a row of one - a
+    statement whose second table was added or lost is exactly the drift this
+    looks for.
+    """
+    in_artifact, in_live = scope_list_rows(stored), scope_list_rows(live)
+    changed: list = []
+    only_in_artifact: list = []
+    only_in_live: list = []
+    for key in sorted(set(in_artifact) | set(in_live)):
+        article, statement, index = key
+        name = {"slug": slug, "article": article, "statement": statement + 1,
+                "list": index + 1}
+        stored_one, live_one = in_artifact.get(key), in_live.get(key)
+        if live_one is None:
+            only_in_artifact.append(name)
+            continue
+        if stored_one is None:
+            only_in_live.append(name)
+            continue
+        for field in ("read", "page", "reason", "headings", "split_x"):
+            if stored_one.get(field) != live_one.get(field):
+                changed.append({**name, "field": field,
+                                "stored": stored_one.get(field),
+                                "live": live_one.get(field)})
+        rows = {row["no"]: row for row in stored_one.get("rows") or []}
+        live_rows = {row["no"]: row for row in live_one.get("rows") or []}
+        for number in sorted(set(rows) | set(live_rows)):
+            if number not in live_rows:
+                only_in_artifact.append({**name, "row": number})
+            elif number not in rows:
+                only_in_live.append({**name, "row": number})
+            else:
+                for field in ("other_jurisdiction", "text", "page"):
+                    if rows[number].get(field) != live_rows[number].get(field):
+                        changed.append({**name, "row": number, "field": field,
+                                        "stored": rows[number].get(field),
+                                        "live": live_rows[number].get(field)})
+    return {"changed": changed, "only_in_artifact": only_in_artifact,
+            "only_in_live": only_in_live}
+
+
 def _capture_reading(pdf: Path, slug: str, *, force_block: bool = False):
     """Read one PDF with its production classification and block reader."""
     original_sources = mli_writer.BLOCK_READER_SOURCES
@@ -1282,6 +1480,10 @@ def compare_published_rows(stored_dir: Path, built: dict) -> dict:
     only_in_artifact: list[dict] = []
     only_in_live: list[dict] = []
     stored_slugs: set[str] = set()
+    scope_changed: list[dict] = []
+    scope_only_in_artifact: list[dict] = []
+    scope_only_in_live: list[dict] = []
+    scope_rows = 0
     compared = rows = 0
     for path in sorted(Path(stored_dir).glob("*.json")):
         if path.stem == "batch-report":
@@ -1293,6 +1495,15 @@ def compare_published_rows(stored_dir: Path, built: dict) -> dict:
         if position is None:
             continue
         compared += 1
+        # The announced lists are compared beside the covered-agreements rows,
+        # and for the same reason: a statement's second table is a reading the
+        # artefact and the reader can disagree about in silence.
+        scope = compare_scope_lists(stored, position, slug)
+        scope_changed += scope["changed"]
+        scope_only_in_artifact += scope["only_in_artifact"]
+        scope_only_in_live += scope["only_in_live"]
+        scope_rows += sum(len(one.get("rows") or [])
+                          for one in scope_list_rows(stored).values())
         stored_rows = {row["no"]: row
                        for row in stored.get("covered_agreements") or []}
         live_rows = {row["no"]: row
@@ -1317,6 +1528,10 @@ def compare_published_rows(stored_dir: Path, built: dict) -> dict:
         "changed": changed,
         "only_in_artifact": only_in_artifact,
         "only_in_live": only_in_live,
+        "scope_rows": scope_rows,
+        "scope_changed": scope_changed,
+        "scope_only_in_artifact": scope_only_in_artifact,
+        "scope_only_in_live": scope_only_in_live,
         "artifacts_without_a_live_position": sorted(stored_slugs - set(live)),
         "live_positions_without_an_artifact": sorted(set(live) - stored_slugs),
     }
@@ -1327,6 +1542,118 @@ def audit_published_artifacts(root: Path, directory: Path, source: str) -> dict:
     built = mli_writer.family_once(Path(directory), source, Path(root))
     stored_dir = corpus.corpus_root(Path(root)) / "mli" / "positions"
     return compare_published_rows(stored_dir, built)
+
+
+# A word of four letters or more, in the working alphabet: the words a cell of an
+# announced list is checked for. Two-letter words and initials are left out
+# because a name's particles ("de", "van", "of") stand on many pages and would
+# make the control quiet rather than strict, and the class is "letters of any
+# script" rather than A-Z so that a word like Tuerkiye is one word and not the
+# fragment "rkiye".
+SCOPE_CHECKED_WORD_RE = re.compile(r"[^\W\d_]{4,}", re.UNICODE)
+
+
+def audit_scope_lists(root: Path, directory: Path, source: str) -> dict:
+    """Re-measure every announced list the corpus holds against its own page.
+
+    `audit_published_artifacts` compares the corpus with a fresh *reading*; this
+    walks the other way and compares the reading with the *page*, and it asks
+    three questions the reading cannot answer about itself:
+
+    * does the statement announce as many lists as the corpus holds? The count
+      is taken from the statement's own published prose, so a reservation that
+      announces two lists and has one read is caught here even though the one
+      reading is faithful to the one table;
+    * is every row number the corpus publishes printed on the row's own page, as
+      the number that opens its line? A row the page does not print was not
+      read from it, whichever page the corpus places it on;
+    * is every word of a published cell on the page the row was read from? A
+      table's cells are assembled from the page's own spans, so a word that is
+      nowhere on the page was not read but written.
+
+    What this does *not* ask is whether the page prints a row the corpus dropped.
+    That question needs the table's extent on the page, and a page can carry two
+    tables under the same headings - Argentina's page 15 prints its Article 13
+    reservation's table and, below it, a notification's, each with its own run of
+    numbers - so the extent is readable only from the statement's own span range,
+    which is the reading under test. The row count is therefore held by the
+    announcement count above and by the reading the corpus publishes, and the
+    control says so here rather than pretending a band it cannot draw.
+    """
+    slugs = published_slugs(Path(root))
+    stored_dir = corpus.corpus_root(Path(root)) / "mli" / "positions"
+    problems: list = []
+    checked = {"positions": 0, "lists": 0, "rows": 0}
+    for pdf in sorted(Path(directory).glob("*.pdf")):
+        slug = slugs.get(pdf.stem)
+        if slug is None:
+            continue
+        path = stored_dir / f"{slug}.json"
+        if not path.is_file():
+            problems.append(f"{slug}: the family published it and no artefact "
+                            f"holds it")
+            continue
+        record = json.loads(path.read_text(encoding="utf-8"))
+        lists = scope_list_rows(record)
+        if not lists:
+            continue
+        book = ledger.Classifier.classify(ledger.SpanStream.read(pdf, source),
+                                          ledger.Ledger())
+        spans = sorted((span for span, _rule in book.kept),
+                       key=lambda span: (span.page, span.y, span.x))
+        checked["positions"] += 1
+        for (article, statement, index), one in sorted(lists.items()):
+            where = (f"{slug} Article {article} statement {statement + 1} "
+                     f"list {index + 1}")
+            checked["lists"] += 1
+            if not one.get("read"):
+                if not one.get("reason"):
+                    problems.append(f"{where}: unread and no reason given")
+                continue
+            by_page: dict = {}
+            for row in one.get("rows") or []:
+                by_page.setdefault(row.get("page"), []).append(row)
+            for page in sorted(by_page):
+                page_spans = [span for span in spans if span.page == page]
+                page_words = {word.casefold() for span in page_spans
+                              for word in SCOPE_CHECKED_WORD_RE.findall(span.text)}
+                for row in by_page[page]:
+                    checked["rows"] += 1
+                    # The row's own number, printed on the row's own page, as the
+                    # number that opens its line: a row the corpus holds and the
+                    # page does not print is a row nobody read.
+                    numbers = [span for span in page_spans
+                               if mli_writer.SCOPE_NUMBER_RE.match(span.text.strip())
+                               and int(span.text.strip().rstrip(".")) == row["no"]]
+                    opening = [span for span in numbers
+                               if not any(other is not span
+                                          and round(other.y, 1) == round(span.y, 1)
+                                          and other.x < span.x
+                                          for other in page_spans)]
+                    if not opening:
+                        problems.append(
+                            f"{where} row {row['no']}: page {page} prints no "
+                            f"number {row['no']} opening a line")
+                    for field in ("other_jurisdiction", "text"):
+                        for word in SCOPE_CHECKED_WORD_RE.findall(
+                                str(row.get(field) or "")):
+                            if word.casefold() not in page_words:
+                                problems.append(
+                                    f"{where} row {row['no']} {field}: the word "
+                                    f"{word!r} is not printed on page {page}")
+    # The count of announcements is taken statement by statement, from the
+    # prose the corpus publishes for it, and held against the lists it holds.
+    for article, entries in (record.get("article_sections") or {}).items():
+        for statement, entry in enumerate(entries):
+            lists = entry.get("scope_lists") or []
+            announced = len(mli_writer.SCOPE_ANNOUNCEMENT_RE.findall(
+                " ".join(str(entry.get("excerpt") or "").split())))
+            if announced != len(lists):
+                problems.append(
+                    f"{slug} Article {article} statement {statement + 1}: its "
+                    f"published prose announces a list {announced} time(s) and "
+                    f"the corpus holds {len(lists)} list(s)")
+    return {"checked": checked, "divergences": problems}
 
 
 def format_row_divergences(report: dict) -> list[str]:
@@ -1341,6 +1668,22 @@ def format_row_divergences(report: dict) -> list[str]:
     for item in report["only_in_live"]:
         lines.append(f"{item['slug']} row {item['row']}: the reader measures it "
                      "but the corpus does not hold it")
+    for item in report.get("scope_changed") or []:
+        lines.append(f"{item['slug']} Article {item['article']} statement "
+                     f"{item['statement']} list {item['list']}"
+                     + (f" row {item['row']}" if item.get("row") else "")
+                     + f" {item['field']}: corpus {item['stored']!r}, "
+                       f"reader {item['live']!r}")
+    for item in report.get("scope_only_in_artifact") or []:
+        lines.append(f"{item['slug']} Article {item['article']} statement "
+                     f"{item['statement']} list {item['list']}"
+                     + (f" row {item['row']}" if item.get("row") else "")
+                     + ": in the corpus and not among the lists the reader reads")
+    for item in report.get("scope_only_in_live") or []:
+        lines.append(f"{item['slug']} Article {item['article']} statement "
+                     f"{item['statement']} list {item['list']}"
+                     + (f" row {item['row']}" if item.get("row") else "")
+                     + ": the reader reads it and the corpus does not hold it")
     for slug in report["artifacts_without_a_live_position"]:
         lines.append(f"{slug}: the live reading publishes no such position")
     for slug in report["live_positions_without_an_artifact"]:

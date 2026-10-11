@@ -165,7 +165,12 @@ jobs:
         # inside its heading - so a layout that changed sides, or a position
         # whose pinned rows no longer match the page, fails here naming itself.
         # It reads the same sources the drift control reads.
-        run: python -m pytest -q -k "p05"
+        # The reservation-scope gate (P6) rides here too, and for the same
+        # reason: it holds every list a reservation announces against the page
+        # that prints it - the statement's own announcement count, each row's
+        # number and each row's words - which a rebuilt corpus cannot check
+        # about itself.
+        run: python -m pytest -q -k "p05 or p06"
 
       - name: The run is red while the corpus is out of step
         # The control above records the difference and opens the repair request,

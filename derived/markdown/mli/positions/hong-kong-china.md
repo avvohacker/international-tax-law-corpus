@@ -42,3 +42,67 @@
 | 34 | United Arab Emirates | Original | 11-12-2014 | 10-12-2015 | 4 |
 | 35 | United Kingdom | Original | 21-06-2010 | 20-12-2010 | 4 |
 | 36 | Vietnam | Original | 16-12-2008 | 12-08-2009 | 4 |
+
+## The agreements the reservations bring within their scope
+
+*3 list(s) of agreements are announced under the reservations of this position: 3 read, holding 39 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 13, one list
+
+*36 row(s), printed on page 13.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 1 | Austria | Article 9(2) | 14 |
+| 2 | Belarus | Article 9(2) | 14 |
+| 3 | Belgium | Article 9(2) | 14 |
+| 4 | Brunei | Article 9(2) | 14 |
+| 5 | Canada | Article 9(2) | 14 |
+| 6 | Czech | Article 9(2) | 14 |
+| 7 | France | Article 9(2) | 14 |
+| 8 | Guernsey | Article 9(2) | 14 |
+| 9 | Hungary | Article 9(2) | 14 |
+| 10 | Indonesia | Article 9(2) | 14 |
+| 11 | Ireland | Article 9(2) | 14 |
+| 12 | Italy | Article 9(2) | 14 |
+| 13 | Japan | Article 9(2) | 14 |
+| 14 | Jersey | Article 9(2) | 14 |
+| 15 | Korea | Article 9(2) | 14 |
+| 16 | Kuwait | Article 9(2) | 14 |
+| 17 | Latvia | Article 9(2) | 14 |
+| 18 | Liechtenstein | Article 9(2) | 14 |
+| 19 | Luxembourg | Article 9(2) | 14 |
+| 20 | Malaysia | Article 9(2) | 14 |
+| 21 | Malta | Article 9(2) | 14 |
+| 22 | Mexico | Article 9(2) | 14 |
+| 23 | Netherlands | Article 9(2) | 14 |
+| 24 | New Zealand | Article 9(2) | 14 |
+| 25 | Pakistan | Article 9(2) | 14 |
+| 26 | Portugal | Article 9(2) | 14 |
+| 27 | Qatar | Article 9(2) | 14 |
+| 28 | Romania | Article 9(2) | 14 |
+| 29 | Russia | Article 9(2) | 14 |
+| 30 | South Africa | Article 9(2) | 14 |
+| 31 | Spain | Article 9(2) | 14 |
+| 32 | Switzerland | Article 9(2) | 14 |
+| 33 | Thailand | Article 9(2) | 14 |
+| 34 | United Arab Emirates | Article 9(2) | 14 |
+| 35 | United Kingdom | Article 9(2) | 14 |
+| 36 | Vietnam | Article 9(2) | 14 |
+
+### Article 6 — the list under the reservation on page 5, one list
+
+*1 row(s), printed on page 5.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 2 | Belarus | Intending to eliminate double taxation with respect to taxes on income and on capital without creating opportunities for non- taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Agreement for the indirect benefit of residents of third Parties), | 5 |
+
+### Article 7 — the list under the reservation on page 9, one list
+
+*2 row(s), printed on page 9.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 2 | Belarus | Article 27(1) | 9 |
+| 25 | Pakistan | Article 28(1) | 9 |

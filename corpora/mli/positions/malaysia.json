@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 22,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -55,6 +57,7 @@
         "mli_article_title": "Splitting-up of Contracts",
         "option_title": "",
         "page": 27,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -83,6 +86,160 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 33,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 33,
+            "read": true,
+            "rows": [
+              {
+                "no": 2,
+                "other_jurisdiction": "Australia",
+                "page": 33,
+                "text": "Article 9(3)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Belgium",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Chile",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 12,
+                "other_jurisdiction": "Croatia",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 19,
+                "other_jurisdiction": "Germany",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "Hong Kong",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 25,
+                "other_jurisdiction": "Ireland",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "Japan",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 33,
+                "other_jurisdiction": "Laos",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 34,
+                "other_jurisdiction": "Lebanon",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 35,
+                "other_jurisdiction": "Luxembourg",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 48,
+                "other_jurisdiction": "Poland",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 52,
+                "other_jurisdiction": "San Marino",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 53,
+                "other_jurisdiction": "Saudi Arabia",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 55,
+                "other_jurisdiction": "Seychelles",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 56,
+                "other_jurisdiction": "Singapore",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 57,
+                "other_jurisdiction": "Slovak Republic",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 59,
+                "other_jurisdiction": "Spain",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 62,
+                "other_jurisdiction": "Sweden",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 64,
+                "other_jurisdiction": "Syria",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 67,
+                "other_jurisdiction": "Turkmenistan",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 69,
+                "other_jurisdiction": "United Kingdom",
+                "page": 33,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 71,
+                "other_jurisdiction": "Venezuela",
+                "page": 33,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 362.9
+          }
+        ],
         "truncated": false
       }
     ],
@@ -93,6 +250,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 15,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -111,6 +269,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 34,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -121,6 +280,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 15,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -131,6 +291,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 15,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -161,6 +322,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -171,6 +333,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -2629,6 +2792,15 @@
       "resolved_from": "the document's own title",
       "slug": "malaysia",
       "title_read": "MALAYSIA"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 23,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "6b9d02bb43edc888b58b2d92acdd678a41234f56e764e28806249eca9e28cf06",

@@ -90,7 +90,7 @@ CORPUS (corpora/)
 |---|---|---|---|
 | UN Model 2017 / 2021 | Model Convention text, article by article | "What does Article X of the 2021 UN Model say, paragraph by paragraph?" | One file per article (`article-*.md`) + XML with page and line references |
 | MLI signatories and parties | Who signed or ratified the MLI, with dates | "Is Italy (or country Y) a party? With which dates and notifications?" | 107-row JSON table + Markdown view |
-| MLI country positions | Each country reservation, notification, and choice + its covered-agreements table | "For that bilateral treaty, does country X reservation cover Article Y?" | One JSON per country + a view with counterparty and date tables; every blank carries its reason |
+| MLI country positions | Each country reservation, notification, and choice + its covered-agreements table + the lists of agreements a reservation prints within its scope (119 lists, 2 156 rows) | "For that bilateral treaty, does country X reservation cover Article Y?" | One JSON per country + a view with counterparty, date and reservation-scope tables; every blank carries its reason |
 | MLI map | What each MLI Convention article does to the bilateral treaty | "Does MLI Article 6 replace or complete Model Article 7?" | 39 rows with PDF-read titles + declared and checked modes and targets |
 | Edition comparison | What changed between the 2017 and 2021 Models | "Did Article 12B exist in 2017?" | Markdown + JSON report, recomputed from the corpus (never by re-reading the PDFs) |
 
@@ -111,6 +111,7 @@ CORPUS (corpora/)
 | Honest claims (F12) | Every number in README and docs is produced by a command or a tracked document | Probes on the claims |
 | English only (F13) | Code, tests, and reports in English; the corpus stays multilingual (fidelity to sources) | Italian-language detector over the project |
 | Verified map (M1) | 39 titles re-read in the PDF at the stated page; targets resolved in the Model; option-free articles absent from positions | Three dedicated tests (titles, targets, absences) |
+| Reservation scope kept (P6) | Every list a reservation prints under itself ("the following agreements are within the scope of this reservation") is read, one reading per announcement - including the six statements that print two, whose second table the corpus' own option model would otherwise lose - and printed in the position's view | A test re-reads every list on its page (row numbers, cells, announcement count); a second test reads each view back against the artefact; a third shows the control biting |
 
 ## 6. Table 3 — the controls (what the dashboard does)
 
@@ -157,6 +158,15 @@ of passing quietly).
   the verified reader only after line-by-line checks against the PDF. No
   layout holds an exception today; the test fails both for a missing and
   for a stale exception.
+- **One statement, two lists of agreements (6 cases).** Six reservations print
+  two tables under one printed label: Argentina's Article 7 says the agreements
+  within the scope of the reservation under Article 7(15)(b) and, in the next
+  paragraph, the same under 7(15)(c). The corpus reads a statement by its
+  printed label, so the two reservations are one option - and a reading that
+  took the first announcement for the statement's whole list dropped the second
+  table in silence. The reading now keeps one list per announcement and the
+  family names those six statements, so the case shows up as a shorter list and
+  not only as a smaller count.
 
 ## 8. What the project does NOT do (an honest boundary)
 
@@ -183,8 +193,11 @@ of passing quietly).
 
 ## 10. Reference numbers (generated, never hand-copied)
 
-- Invariants: 28 (F1–F14, U1–U4, S1–S3, P1–P5, M1–M2) · known-defect
-  probes: 26 · test functions: 80 in 10 files.
+- Invariants: 29 (F1–F14, U1–U4, S1–S3, P1–P6, M1–M2) · known-defect
+  probes: 26 · test functions: 78 in 9 files.
 - Corpus: 2 UN editions (33 + 34 articles), 107 signatory rows, 39 map
   rows, 110 documents → 103 positions + family report (104 JSON files),
   98 agreement tables read, 103 Markdown position views.
+- Reservation scope lists: 59 positions announce at least one, 119 lists
+  announced, 119 read, 2 156 rows between them, 6 statements announcing two
+  lists each, none left unread (`batch-report.json`, `reservation_scope_lists`).

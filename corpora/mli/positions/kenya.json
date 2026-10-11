@@ -45,6 +45,52 @@
         "mli_article_title": "Artificial Avoidance of Permanent Establishment Status through the Specific Activity",
         "option_title": "",
         "page": 15,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 15,
+            "read": true,
+            "rows": [
+              {
+                "no": 4,
+                "other_jurisdiction": "India",
+                "page": 15,
+                "text": "Article 5(4)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "Norway",
+                "page": 15,
+                "text": "Article 5(3)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Qatar",
+                "page": 15,
+                "text": "Article 5(4)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "South Africa",
+                "page": 15,
+                "text": "Article 5(4)"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "Sweden",
+                "page": 15,
+                "text": "Article 5(3)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 368.1
+          }
+        ],
         "truncated": false
       },
       {
@@ -81,6 +127,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 17,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -119,6 +166,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 21,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -139,6 +187,7 @@
         "mli_article_title": "Application of Methods for Elimination of Double Taxation",
         "option_title": "",
         "page": 6,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -177,6 +226,52 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 10,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 10,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Canada",
+                "page": 10,
+                "text": "Article 10 (2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Denmark",
+                "page": 10,
+                "text": "Article 10 (2)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Italy",
+                "page": 10,
+                "text": "Article 10 (2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "Norway",
+                "page": 10,
+                "text": "Article 10 (2)"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "Sweden",
+                "page": 10,
+                "text": "Article 8 (2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 316.9
+          }
+        ],
         "truncated": false
       },
       {
@@ -497,6 +592,15 @@
       "resolved_from": "the document's own title",
       "slug": "kenya",
       "title_read": "REPUBLIC OF KENYA"
+    },
+    "scope_lists": {
+      "announced": 2,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 2,
+      "rows": 10,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "06fd4ee2240ea1aaa6d884046f1e3366ae51cd5e97d48701f7cba76cd32a7faa",

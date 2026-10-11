@@ -29,6 +29,16 @@ The signatories table has the same kind of view
 (`derived/markdown/<family>/signatories-and-parties.md`, `signatories_view`):
 its rows, and the window and band its own reading publishes, in the same
 `attach_line` format with that table's own reader named.
+
+The position view carries a second thing too: the lists of agreements the
+reservations announce (`scope_summary`, `scope_blocks`). A reservation that says
+"the following agreements are within the scope of this reservation" settles
+whether a particular treaty falls inside it, so those rows are printed where the
+treaty's own covered-agreements rows are read -- one table per announcement, in
+the order the pages print them, with the reader's own reason where a table could
+not be read. A statement can announce more than one list (Argentina's Article 7
+prints two reservations' tables in one option), so the view names each list
+after the statement that announces it rather than one table per statement.
 """
 from __future__ import annotations
 
@@ -224,7 +234,94 @@ def position_view(record: dict) -> str:
                  else _view_cell(row.get(field))
                  for _header, field in POSITION_VIEW_COLUMNS]
         lines.append("| " + " | ".join(cells) + " |")
+    summary = scope_summary(record)
+    if summary:
+        lines += ["", "## The agreements the reservations bring within their "
+                      "scope", "", summary]
+        lines += scope_blocks(record)
     return "\n".join(lines).rstrip() + "\n"
+
+
+# The columns the reservation-scope view renders, and the artefact field each
+# one holds: the number the page printed in the table's left column, the other
+# contracting jurisdiction the row names, the provision of that agreement, and
+# the page the row stands on. The audit repeats this map rather than importing
+# it, so the comparison stays a comparison.
+SCOPE_VIEW_COLUMNS = (
+    ("#", "no"),
+    ("Other Contracting Jurisdiction", "other_jurisdiction"),
+    ("Provision", "text"),
+    ("Page", "page"),
+)
+
+
+def scope_summary(record: dict) -> str | None:
+    """One line over the lists this position's reservations announce.
+
+    `None` when no statement announces a list, so a position that has no such
+    list carries no header rather than an empty one. The count is of lists and
+    not of statements: a statement can announce more than one (Argentina's
+    Article 7 prints two reservations' tables, and the option model reads them
+    as one option), so the statements that do are named as such. What was not
+    read is said in words with the reader's own reason, because an announcement
+    whose table this reading could not find is a declared gap and not a list of
+    no rows.
+    """
+    qa = (record.get("qa") or {}).get("scope_lists") or {}
+    announced = int(qa.get("announced") or 0)
+    if not announced:
+        return None
+    said = (f"*{announced} list(s) of agreements are announced under the "
+            f"reservations of this position: {int(qa.get('read') or 0)} read, "
+            f"holding {int(qa.get('rows') or 0)} row(s) between them.")
+    multiple = int(qa.get("options_announcing_more_than_one_list") or 0)
+    if multiple:
+        said += (f" {multiple} statement(s) announce more than one list, and "
+                 f"every one is printed below.")
+    gaps = qa.get("not_read") or []
+    if not gaps:
+        said += " Every announcement's table was read."
+    else:
+        named = "; ".join(
+            f"Article {gap.get('article')} (page {gap.get('page')}): "
+            f"{gap.get('reason')}" for gap in gaps)
+        said += (f" {len(gaps)} announcement's table was not read, and the "
+                 f"reader's reason is given with it - {named}.")
+    return said + "*"
+
+
+def scope_blocks(record: dict) -> list[str]:
+    """Every announced list, one table each, in the order the pages print them."""
+    lines: list[str] = []
+    for article, entries in (record.get("article_sections") or {}).items():
+        for entry in entries:
+            lists = entry.get("scope_lists") or []
+            for index, one in enumerate(lists, 1):
+                where = (f"list {index} of {len(lists)}" if len(lists) > 1
+                         else "one list")
+                lines += ["",
+                          f"### Article {article} — the list under the "
+                          f"reservation on page {entry.get('page')}, {where}",
+                          ""]
+                if not one.get("read"):
+                    lines.append(
+                        f"*This statement announces a list of agreements and "
+                        f"its table was not read: {one.get('reason')}.*")
+                    continue
+                rows = one.get("rows") or []
+                lines.append(f"*{len(rows)} row(s), printed on page "
+                             f"{one.get('page')}.*")
+                lines += ["", "| " + " | ".join(header
+                                                 for header, _field in SCOPE_VIEW_COLUMNS)
+                          + " |",
+                          "|" + "|".join("---:" if header == "#" else "---"
+                                         for header, _field in SCOPE_VIEW_COLUMNS)
+                          + "|"]
+                for row in rows:
+                    lines.append("| " + " | ".join(
+                        _view_cell(row.get(field))
+                        for _header, field in SCOPE_VIEW_COLUMNS) + " |")
+    return lines
 
 
 # The columns the signatories markdown view renders, and the artefact field

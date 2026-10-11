@@ -7,6 +7,7 @@
         "mli_article_title": "Anti-abuse Rule for Permanent Establishments Situated in Third Jurisdictions",
         "option_title": "",
         "page": 19,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -17,6 +18,7 @@
         "mli_article_title": "Application of Tax Agreements to Restrict a Party’s Right to Tax its Own Residents",
         "option_title": "",
         "page": 20,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -65,6 +67,7 @@
         "mli_article_title": "Mutual Agreement Procedure",
         "option_title": "",
         "page": 27,
+        "scope_lists": [],
         "truncated": false
       },
       {
@@ -91,6 +94,190 @@
         "mli_article_title": "Corresponding Adjustments",
         "option_title": "",
         "page": 31,
+        "scope_lists": [
+          {
+            "headings": [
+              "Listed Agreement Number",
+              "Other Contracting Jurisdiction",
+              "Provision"
+            ],
+            "page": 31,
+            "read": true,
+            "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Armenia",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 2,
+                "other_jurisdiction": "Australia",
+                "page": 31,
+                "text": "Article 9(3)"
+              },
+              {
+                "no": 6,
+                "other_jurisdiction": "Belarus",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 8,
+                "other_jurisdiction": "Bulgaria",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 9,
+                "other_jurisdiction": "Cambodia",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "Canada",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 11,
+                "other_jurisdiction": "Chile",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 16,
+                "other_jurisdiction": "Estonia",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 17,
+                "other_jurisdiction": "Finland",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 20,
+                "other_jurisdiction": "Hong Kong (China)",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 22,
+                "other_jurisdiction": "India",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 24,
+                "other_jurisdiction": "Ireland",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 27,
+                "other_jurisdiction": "Japan",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 28,
+                "other_jurisdiction": "Korea",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 29,
+                "other_jurisdiction": "Kuwait",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 35,
+                "other_jurisdiction": "Nepal",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 36,
+                "other_jurisdiction": "New Zealand",
+                "page": 31,
+                "text": "Article 9(3)"
+              },
+              {
+                "no": 37,
+                "other_jurisdiction": "Oman",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 38,
+                "other_jurisdiction": "Pakistan",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 39,
+                "other_jurisdiction": "Philippines",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 43,
+                "other_jurisdiction": "Seychelles",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 44,
+                "other_jurisdiction": "Singapore",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 51,
+                "other_jurisdiction": "Tajikistan",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 52,
+                "other_jurisdiction": "Turkey",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 53,
+                "other_jurisdiction": "Ukraine",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 54,
+                "other_jurisdiction": "United Arab Emirates",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 56,
+                "other_jurisdiction": "United States",
+                "page": 31,
+                "text": "Article 9(2)"
+              },
+              {
+                "no": 57,
+                "other_jurisdiction": "Uzbekistan",
+                "page": 31,
+                "text": "Article 9(2)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_x": 355.3
+          }
+        ],
         "truncated": false
       }
     ],
@@ -101,6 +288,7 @@
         "mli_article_title": "Transparent Entities",
         "option_title": "",
         "page": 9,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -111,6 +299,7 @@
         "mli_article_title": "Entry into Effect",
         "option_title": "",
         "page": 32,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -121,6 +310,7 @@
         "mli_article_title": "Dual Resident Entities",
         "option_title": "",
         "page": 10,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -169,6 +359,7 @@
         "mli_article_title": "Dividend Transfer Transactions",
         "option_title": "",
         "page": 17,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -179,6 +370,7 @@
         "mli_article_title": "Capital Gains from Alienation of Shares or Interests of Entities Deriving their Value",
         "option_title": "",
         "page": 18,
+        "scope_lists": [],
         "truncated": false
       }
     ]
@@ -1109,6 +1301,15 @@
       "resolved_from": "the document's own title",
       "slug": "thailand",
       "title_read": "The Kingdom of Thailand"
+    },
+    "scope_lists": {
+      "announced": 1,
+      "not_read": [],
+      "options_announcing_more_than_one_list": 0,
+      "read": 1,
+      "rows": 28,
+      "rows_without_a_counterparty": 0,
+      "rows_without_a_text": 0
     }
   },
   "sha256": "3e9f4dee2f21da1b9e170002aa437128b1219cf863a40ce122a803defb3d8875",
