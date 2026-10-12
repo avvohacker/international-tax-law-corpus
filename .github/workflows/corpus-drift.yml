@@ -182,3 +182,50 @@ jobs:
         run: |
           echo "::error::python -m harness drift reports the corpus out of step with the reader; the rebuild and its request are above"
           exit 1
+
+  compatibility:
+    # The two ends `requires-python = ">=3.11"` claims, beside the pinned 3.13
+    # the control above runs on. The pin is the interpreter the corpus is built
+    # and published with; the floor is what a reader with an older checkout may
+    # run, and the newest release is what a reader who just upgraded gets. A
+    # floor nobody executes is an opinion (SPEC.md: a claim without a
+    # reproducing command), so both ends run the drift control and the whole
+    # suite, and a syntax, a stdlib call or a dependency that only the pinned
+    # interpreter has fails here rather than in a user's checkout.
+    #
+    # This job fetches its own bytes rather than sharing a cache with the
+    # control above: the fetch decrypts the sealed Model 2021 PDF into
+    # `sources/`, and an actions/cache entry is restorable from a pull request -
+    # a place the register's key is deliberately not given to.
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install the harness
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Fetch the sources
+        env:
+          UN_MODEL_2021_KEY: ${{ secrets.UN_MODEL_2021_KEY }}
+        run: python scripts/fetch-sources.py
+
+      - name: Is the corpus in step with the reader, on this interpreter?
+        run: python -m harness drift
+
+      - name: Does every invariant hold, on this interpreter?
+        # Everything the control job runs, minus the machinery that opens a
+        # repair request: the block-reader gate (p05) and the reservation-scope
+        # gate (p06), which re-read the layouts from their own pages, the
+        # working language and machine traces of every artefact (F13, F14), and
+        # the meta-tests that hold the catalogues and SPEC.md together.
+        run: python -m pytest -q

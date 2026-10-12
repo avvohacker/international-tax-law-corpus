@@ -83,10 +83,10 @@ and prints, because it is what a corpus is for:
   per announcement rather than the first alone. The one list it cannot read -
   Gabon's Article 17, whose table prints no row numbers in a left column - and
   the one row whose cell came back empty (Chile's Article 3 list, row 33) are
-  declared by name rather than passed over. A table the reading could not
-  read would be named in `reservations_announcing_a_list_not_read` with the
-  reader's reason; none is. The lists are printed in each position's markdown
-  view beside the rows it decides.
+  declared by name rather than passed over. A table the reading could not read
+  is named in `reservations_announcing_a_list_not_read` with the reader's
+  reason, and Gabon's Article 17 is the one that is. The lists are printed in
+  each position's markdown view beside the rows it decides.
 
 The family is checked byte for byte like the rest: `test_f07_build_is_byte_identical`
 reads it once and compares every file it writes with the corpus this repository
@@ -143,7 +143,7 @@ What is here:
 ## Running it
 
 ```bash
-python3 -m venv .venv
+python3 -m venv .venv                  # 3.11 or newer; `pyproject.toml` says so
 .venv/bin/pip install -r requirements.txt
 
 .venv/bin/python scripts/fetch-sources.py  # download + hash-verify the input PDFs
@@ -182,6 +182,13 @@ Three verdicts, and the third is the point:
 exits non-zero for `NOT-EVALUATED`: a corpus that does not exist yet is not a
 defect in a corpus, and `tests/` is where "the corpus is missing" is reported
 loudly.
+
+CI runs this control on three interpreters: the pinned 3.13 the corpus is built
+and published with, and - because `requires-python = ">=3.11"` is a claim, and a
+claim nobody executes is an opinion - on the floor (3.11) and on the newest
+release (3.14), where the whole suite and the drift control run again. The floor
+job is also where a stdlib call or a dependency that only the pinned interpreter
+has fails, rather than in a reader's checkout.
 
 ## Probe discipline
 
