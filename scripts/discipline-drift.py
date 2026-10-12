@@ -17,12 +17,21 @@ Five things are compared, and each of them can fail on its own:
     not enough by themselves - a family can agree on the wrong rule - but a copy
     that names its own rule is not a family at all;
   * **the rule, run**: the machine-trace scan is then run for each repository
-    under the identity CI gives it - the account `runner`, the checkout named
-    after the project - and must come back empty. This is the half that equal
-    bytes cannot show: the rule walks through prose, and the prose differs. The
-    first version of the rule failed here for all three repositories, on lines
-    that name nobody, because CI's account name is an ordinary English word and
-    all three say it in their own workflow comments;
+    under the identity its *own* CI gives it - the account `runner`, the checkout
+    `actions/checkout` makes in that repository's own workflow, which is the
+    project's name - and must come back empty. This is the half that equal bytes
+    cannot show: the rule walks through prose, and the prose differs. The first
+    version of the rule failed here for all three repositories, on lines that
+    name nobody, because CI's account name is an ordinary English word and all
+    three say it in their own workflow comments.
+
+    The identity is the repository's own and not the one this control happens to
+    give it: which directory a *sibling's* workflow checks another repository out
+    into is that workflow's business, and the first version of this control
+    scanned each repository under whatever path it was handed - which on the
+    server's runner was `library`, and made the library look red for the word
+    "library" in its own prose. A scan whose answer depends on the path the
+    grader used is not a check about a machine;
   * **the floor**: every repository must declare the same `requires-python` and
     run it, as a matrix leg that runs the control, or "the family's floor" means
     three different things;
@@ -95,7 +104,6 @@ def facts(root: Path, discipline) -> dict:
         "board": board,
         "as_ci": discipline.machine_traces.problems(root, user=AS_CI,
                                                     checkout=project),
-        "as_desk": discipline.machine_traces.problems(root),
         "board_problems": discipline.board.problems(root, project),
     }
 
@@ -117,11 +125,7 @@ def compare(corpus: Path, library: Path, mcp: Path) -> list[str]:
         if root != corpus:
             for problem in vendor.drifted(root):
                 failures.append(f"{root}: {problem}")
-        problems = sheets[root]["as_ci"] + sheets[root]["board_problems"]
-        if sheets[root]["as_desk"]:
-            problems += [f"(the desk's own account) {hit}"
-                         for hit in sheets[root]["as_desk"]]
-        for problem in problems:
+        for problem in sheets[root]["as_ci"] + sheets[root]["board_problems"]:
             failures.append(f"{root}: {problem}")
 
     if len(sheets) != 3:

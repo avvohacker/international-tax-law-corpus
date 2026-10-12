@@ -24,6 +24,15 @@ The pin is `provenance/vendored-discipline.yaml` in the repository that receives
 the copy. The vendored files go to `vendor/discipline/`, because a repository
 that carries somebody else's rules should be able to say, from the path alone,
 which of the two things in front of it is the one it did not write.
+
+The source is named by URL, and not by the short `owner/repo` slug: a URL is how
+every other register in this family names the bytes it did not write, and the
+machine-trace rule of this very package recognises an owner only where it is a
+URL or an owner line. A slug is a bare word - the account that owns these
+repositories read as a machine trace on the desk of the person most likely to be
+re-vendoring, red in all three repositories at once, and green on CI, where the
+account is `runner`. Which form to write here is not a matter of taste: one of
+them is a name the rule already exempts, and the other is a name it must not.
 """
 from __future__ import annotations
 
@@ -37,18 +46,20 @@ from pathlib import Path
 import yaml
 
 SOURCE = Path(__file__).resolve().parent.parent / "harness" / "discipline"
-REPOSITORY = "avvohacker/international-tax-law-corpus"
+REPOSITORY = "https://github.com/avvohacker/international-tax-law-corpus"
 PIN = Path("provenance") / "vendored-discipline.yaml"
 VENDORED = Path("vendor") / "discipline"
 
 HEADER = """\
 # The shared discipline, vendored from the corpus and pinned by hash.
 #
-# Written by `scripts/vendor-discipline.py` in
-# {repository}, which is the one implementation of what may not be committed
-# about a machine, how a workflow is read, and what a status board owes a
-# reader. The copy under `vendor/discipline/` must be these bytes: a copy that
-# has drifted from the pin is a red test
+# Written by `scripts/vendor-discipline.py` in the corpus, at
+# {repository}.
+#
+# That package is the one implementation of what may not be committed about a
+# machine, how a workflow is read, and what a status board owes a reader. The
+# copy under `vendor/discipline/` must be these bytes: a copy that has drifted
+# from the pin is a red test
 # (`tests/test_the_vendored_discipline_is_pinned.py`) rather than a surprise,
 # and `scripts/discipline-drift.py`, run against the corpus' own checkout, is
 # what refuses a copy that has gone back to inventing its own rule.
