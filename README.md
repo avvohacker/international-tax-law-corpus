@@ -137,6 +137,7 @@ What is here:
 | `rules/*.yaml` | the classification rules the extractor will read |
 | `harness/` | the probe engine and the status report |
 | `tests/` | the invariants, as tests |
+| `scripts/read-audit.py` | what a command really reads here, in files and bytes — the measurement behind what CI fetches |
 | `docs/harness-status.md` | generated. Do not edit. |
 | `docs/guide-maps-and-tables.md` | what this project is, in plain language with maps and tables — the first file to read for a newcomer |
 
@@ -148,6 +149,10 @@ python3 -m venv .venv                  # 3.11 or newer; `pyproject.toml` says so
 
 .venv/bin/python scripts/fetch-sources.py  # download + hash-verify the input PDFs
                                             # (URLs and SHA-256 in provenance/sources.yaml)
+                                            # set ITL_SOURCE_CACHE=<dir> to reuse bytes
+                                            # an earlier run already verified; a source
+                                            # with a sealed copy is never cached
+.venv/bin/python scripts/read-audit.py module harness drift   # what a command reads
 
 .venv/bin/python -m pytest -q          # the invariants and the probes
 .venv/bin/python -m harness status     # one line: is there a corpus, and what does the harness see
@@ -189,6 +194,14 @@ claim nobody executes is an opinion - on the floor (3.11) and on the newest
 release (3.14), where the whole suite and the drift control run again. The floor
 job is also where a stdlib call or a dependency that only the pinned interpreter
 has fails, rather than in a reader's checkout.
+
+All three jobs read the same 116 source files — 135.7 MB, which is what
+`scripts/read-audit.py` measures and why the fetch cannot be made smaller, only
+repeated less — so they share a cache of the public bytes the fetcher downloaded
+and verified. A source the repository carries sealed is never written to it:
+`sealed/un-model-2021.pdf.enc` is decrypted in every job, because a cache entry
+is restorable from a pull request and the register's passphrase is not given to
+one.
 
 ## Probe discipline
 

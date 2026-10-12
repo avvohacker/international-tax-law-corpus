@@ -134,7 +134,9 @@
     No artefact contains absolute local paths, user or machine names, or any
     other trace of the environment it was produced in.
   scope: project
-  enforced_by: [test_f14_no_local_paths_in_artifacts, known_defects]
+  enforced_by: [test_f14_no_local_paths_in_artifacts,
+                test_no_committed_file_carries_a_machine_trace,
+                known_defects]
 
 - id: U1
   name: UN Model article set

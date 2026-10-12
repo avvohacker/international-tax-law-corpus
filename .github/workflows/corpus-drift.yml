@@ -58,17 +58,35 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Restore what an earlier run fetched
+        # The public sources are reused through this cache instead of being
+        # downloaded again. There is no smaller fetch to make:
+        # `scripts/read-audit.py` measures that the drift control and the suite
+        # together read all 116 source files, 135.7 MB, so the only saving is a
+        # fetch not repeated. The cache holds what scripts/fetch-sources.py
+        # downloaded over the network and hash-verified, and never a file it
+        # unsealed: the entry is restorable from a pull request, and the
+        # register's passphrase must not lead to one. The key is the register's
+        # own bytes, so a changed source is never restored stale.
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/international-tax-law-corpus/sources
+          key: sources-${{ hashFiles('provenance/sources.yaml', 'provenance/mli-positions.sha256') }}
+
       - name: Fetch the sources
         # The PDFs are never committed (see provenance/sources.yaml and
         # LICENSE); without them every artefact is "published but unbuilt"
-        # and the control below is red by construction. This step downloads
-        # exactly the registered bytes and hash-verifies each one, so the
-        # runner reads what the corpus was built from. The UN Model 2021 PDF
-        # cannot be fetched by automated clients and travels sealed instead:
+        # and the control below is red by construction. This step gets exactly
+        # the registered bytes - from the cache above when they are there, over
+        # the network otherwise - and hash-verifies each one, so the runner
+        # reads what the corpus was built from. The UN Model 2021 PDF cannot be
+        # fetched by automated clients and travels sealed instead:
         # scripts/fetch-sources.py decrypts sealed/un-model-2021.pdf.enc with
-        # this passphrase, which lives only in the repo secret (never in git).
+        # this passphrase, which lives only in the repo secret (never in git),
+        # and which is why a source with a sealed copy is never cached.
         env:
           UN_MODEL_2021_KEY: ${{ secrets.UN_MODEL_2021_KEY }}
+          ITL_SOURCE_CACHE: ~/.cache/international-tax-law-corpus/sources
         run: python scripts/fetch-sources.py
 
       - name: Is the corpus in step with the reader?
@@ -193,10 +211,13 @@ jobs:
     # suite, and a syntax, a stdlib call or a dependency that only the pinned
     # interpreter has fails here rather than in a user's checkout.
     #
-    # This job fetches its own bytes rather than sharing a cache with the
-    # control above: the fetch decrypts the sealed Model 2021 PDF into
-    # `sources/`, and an actions/cache entry is restorable from a pull request -
-    # a place the register's key is deliberately not given to.
+    # This job fetches through the same cache as the control above, so the
+    # floor and the newest release do not download 135.7 MB the control job has
+    # just read. The cache holds the public bytes only: the sealed Model 2021
+    # PDF is decrypted into `sources/` here, in every job, and
+    # `scripts/fetch-sources.py` refuses to cache a source that has a sealed
+    # copy - an actions/cache entry is restorable from a pull request, a place
+    # the register's key is deliberately not given to.
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -214,9 +235,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Restore what an earlier run fetched
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/international-tax-law-corpus/sources
+          key: sources-${{ hashFiles('provenance/sources.yaml', 'provenance/mli-positions.sha256') }}
+
       - name: Fetch the sources
         env:
           UN_MODEL_2021_KEY: ${{ secrets.UN_MODEL_2021_KEY }}
+          ITL_SOURCE_CACHE: ~/.cache/international-tax-law-corpus/sources
         run: python scripts/fetch-sources.py
 
       - name: Is the corpus in step with the reader, on this interpreter?

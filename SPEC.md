@@ -294,15 +294,27 @@ text "for consistency".
 or any other trace of the environment it was produced in.
 
 **Scope.** project. **Proof.** `test_f14_no_local_paths_in_artifacts`,
-`known_defects`.
+`test_no_committed_file_carries_a_machine_trace`, `known_defects`.
 
 **Why it exists.** The committed `derived/index.json` contained an absolute path
 into the builder's home directory, twice. It is harmless and it is a leak of both
 portability and privacy - and it is why nothing generated here may record where
 it was generated.
 
+The probe `d22` reads the artefacts the pipeline writes, from a list of globs;
+the class is wider than that list, and it has three shapes worth naming: an
+absolute path, the directory a checkout happens to live in (a fact about one
+desk, never about the project), and the account name on the machine that ran
+the check. The second and third are what `harness/report.py` answers for itself
+by printing the project's name from `pyproject.toml`, and what
+`test_no_committed_file_carries_a_machine_trace` answers for every file git
+tracks - the names that are supposed to be there (a copyright line, an email
+address, a GitHub owner) excepted, because a repository that could not name its
+own author would be a worse repository, not a cleaner one.
+
 **Anti-pattern.** Any absolute path that survives into an output. A report that
-names the machine that generated it.
+names the machine that generated it. A committed file that names the folder it
+was checked out into.
 
 ---
 
