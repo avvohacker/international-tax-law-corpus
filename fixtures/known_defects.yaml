@@ -424,3 +424,34 @@
     sources and not the view of the corpus. That needs the Model's introduction
     to be read as a document of its own, which is a corpus family this project
     does not hold yet.
+
+- id: d27-reservation-list-cell-lost-to-the-page
+  invariant: P6
+  status: target
+  title: A reservation list row whose cell the page prints where it cannot be attached
+  source: MLI country positions (OECD)
+  location: 'corpora/mli/positions/chile.json, Article 3, list row 33 (page 6)'
+  evidence: >
+    Chile's Article 3 list prints a single `Article 1(2)` between its rows 33 and
+    34, 2 pt above row 34's number and 31 pt below row 33's. The row the cell
+    stands nearest keeps it, so row 33 ("United States of America") is published
+    with an empty provision rather than given the cell beside it.
+  check: count_equals
+  target: "corpora/mli/positions/batch-report.json"
+  selector: "len(reservation_scope_rows_with_an_empty_cell)"
+  expected: 1
+  why: >
+    An empty cell has to be a name, not an absent value: the row is published
+    empty - filling it from the row beside it would be a value the page does not
+    print - and the family's report names it with its page, its number and which
+    cell came back empty. Pinning the count here means the declaration cannot
+    drift: a reading that loses another cell to a page break fails this probe
+    until the new row is named, and one that stops losing this cell has to update
+    the declaration rather than leave it claiming a row that is no longer empty.
+    The name itself is held by `test_p06_a_row_the_page_leaves_empty_is_named_not_thinned`,
+    which holds the report's names against the artefacts row by row.
+
+    The other empty row this audit found is gone: Serbia's Article 17 list row 64
+    (Zimbabwe) was published with an empty provision because the section's band
+    ended at the document's last span, and a section that runs to the end of the
+    document now runs to the end of the stream.
