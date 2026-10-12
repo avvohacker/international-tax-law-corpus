@@ -90,7 +90,7 @@ CORPUS (corpora/)
 |---|---|---|---|
 | UN Model 2017 / 2021 | Model Convention text, article by article | "What does Article X of the 2021 UN Model say, paragraph by paragraph?" | One file per article (`article-*.md`) + XML with page and line references |
 | MLI signatories and parties | Who signed or ratified the MLI, with dates | "Is Italy (or country Y) a party? With which dates and notifications?" | 107-row JSON table + Markdown view |
-| MLI country positions | Each country reservation, notification, and choice + its covered-agreements table + the lists of agreements a reservation prints within its scope (119 lists, 2 156 rows) | "For that bilateral treaty, does country X reservation cover Article Y?" | One JSON per country + a view with counterparty, date and reservation-scope tables; every blank carries its reason |
+| MLI country positions | Each country reservation, notification, and choice + its covered-agreements table + the lists of agreements a reservation prints within its scope (127 announced lists, 126 read, 2 176 rows) | "For that bilateral treaty, does country X reservation cover Article Y?" | One JSON per country + a view with counterparty, date and reservation-scope tables; every blank carries its reason |
 | MLI map | What each MLI Convention article does to the bilateral treaty | "Does MLI Article 6 replace or complete Model Article 7?" | 39 rows with PDF-read titles + declared and checked modes and targets |
 | Edition comparison | What changed between the 2017 and 2021 Models | "Did Article 12B exist in 2017?" | Markdown + JSON report, recomputed from the corpus (never by re-reading the PDFs) |
 
@@ -198,6 +198,9 @@ of passing quietly).
 - Corpus: 2 UN editions (33 + 34 articles), 107 signatory rows, 39 map
   rows, 110 documents → 103 positions + family report (104 JSON files),
   98 agreement tables read, 103 Markdown position views.
-- Reservation scope lists: 59 positions announce at least one, 119 lists
-  announced, 119 read, 2 156 rows between them, 6 statements announcing two
-  lists each, none left unread (`batch-report.json`, `reservation_scope_lists`).
+- Reservation scope lists: 64 positions announce at least one, 127 lists
+  announced, 126 read, 2 176 rows between them, 6 statements announcing two
+  lists each, 1 announced list left unread and 1 row whose cell came back empty -
+  both named, not counted only (`batch-report.json`, `reservation_scope_lists`,
+  `reservations_announcing_a_list_not_read`,
+  `reservation_scope_rows_with_an_empty_cell`).

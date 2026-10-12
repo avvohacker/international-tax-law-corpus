@@ -1646,7 +1646,7 @@ def audit_scope_lists(root: Path, directory: Path, source: str) -> dict:
     for article, entries in (record.get("article_sections") or {}).items():
         for statement, entry in enumerate(entries):
             lists = entry.get("scope_lists") or []
-            announced = len(mli_writer.SCOPE_ANNOUNCEMENT_RE.findall(
+            announced = len(mli_writer.scope_announcements_in(
                 " ".join(str(entry.get("excerpt") or "").split())))
             if announced != len(lists):
                 problems.append(

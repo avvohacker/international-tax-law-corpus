@@ -296,7 +296,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 362.4
+            "split_measured_by": "the widest corridor this table's own words leave between them: 53.67 pt between x 377.5 and x 431.2",
+            "split_x": 404.4
           }
         ],
         "truncated": false
@@ -448,7 +449,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 211.0
+            "split_measured_by": "the widest corridor this table's own words leave between them: 9.27 pt between x 231.2 and x 240.4",
+            "split_x": 235.8
           }
         ],
         "truncated": false
@@ -506,7 +508,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 361.1
+            "split_measured_by": "the widest corridor this table's own words leave between them: 57.26 pt between x 371.3 and x 428.6",
+            "split_x": 399.9
           }
         ],
         "truncated": false
@@ -564,7 +567,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 345.1
+            "split_measured_by": "the widest corridor this table's own words leave between them: 22.51 pt between x 374.0 and x 396.5",
+            "split_x": 385.3
           }
         ],
         "truncated": false
@@ -1301,6 +1305,7 @@
     },
     "scope_lists": {
       "announced": 4,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 4,

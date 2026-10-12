@@ -10,3 +10,11 @@
 | 2 | Canada | (a) Original | 14-11-2002 | 22-12-2008 | 0 |
 | 3 | France | Original | 20-09-1995 | 01-03-2008 | 0 |
 | 4 | Maroc | Original | 03-06-1999 | 01-02-2008 | 0 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 0 read, holding 0 row(s) between them. 1 announcement's table was not read, and the reader's reason is given with it - Article 17 (page 7): the statement announces a list of agreements and the table under it prints no row numbers in a left column.*
+
+### Article 17 — the list under the reservation on page 7, one list
+
+*This statement announces a list of agreements and its table was not read: the statement announces a list of agreements and the table under it prints no row numbers in a left column.*

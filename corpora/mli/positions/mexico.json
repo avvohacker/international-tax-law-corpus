@@ -362,7 +362,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 352.9
+            "split_measured_by": "the widest corridor this table's own words leave between them: 43.95 pt between x 359.9 and x 403.8",
+            "split_x": 381.9
           }
         ],
         "truncated": false
@@ -429,7 +430,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 363.5
+            "split_measured_by": "the widest corridor this table's own words leave between them: 92.97 pt between x 343.0 and x 435.9",
+            "split_x": 389.5
           },
           {
             "headings": [
@@ -599,7 +601,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 354.5
+            "split_measured_by": "the widest corridor this table's own words leave between them: 60.87 pt between x 346.2 and x 407.1",
+            "split_x": 376.6
           }
         ],
         "truncated": false
@@ -629,8 +632,7 @@
               "Contracting",
               "Preamble Text",
               "Number",
-              "Jurisdiction",
-              "Agreement"
+              "Jurisdiction"
             ],
             "page": 12,
             "read": true,
@@ -651,7 +653,7 @@
                 "no": 43,
                 "other_jurisdiction": "Philippines",
                 "page": 13,
-                "text": "DESIRING to further develop their economic relationship and to enhance their cooperation in tax matters, INTENDING to conclude an between the Government of the United Mexican States and the Government of the Republic of the Philippines for the Avoidance of Double Taxation with Respect to Taxes on Income and the Prevention of Fiscal Evasion, without creating opportunities for non- taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Agreement for the indirect benefit of residents of third States)"
+                "text": "DESIRING to further develop their economic relationship and to enhance their cooperation in tax matters, INTENDING to conclude an Agreement between the Government of the United Mexican States and the Government of the Republic of the Philippines for the Avoidance of Double Taxation with Respect to Taxes on Income and the Prevention of Fiscal Evasion, without creating opportunities for non- taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Agreement for the indirect benefit of residents of third States)"
               },
               {
                 "no": 53,
@@ -662,7 +664,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 207.1
+            "split_measured_by": "the widest corridor this table's own words leave between them: 19.82 pt between x 214.7 and x 234.6",
+            "split_x": 224.6
           }
         ],
         "truncated": false
@@ -730,18 +733,36 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 348.4
+            "split_measured_by": "the widest corridor this table's own words leave between them: 59.19 pt between x 337.4 and x 396.6",
+            "split_x": 367.0
           },
           {
             "headings": [
               "Listed Agreement Number",
               "Other Contracting Jurisdiction",
-              "Provision",
-              "Agreement"
+              "Provision"
             ],
             "page": 20,
             "read": true,
             "rows": [
+              {
+                "no": 1,
+                "other_jurisdiction": "Argentina",
+                "page": 20,
+                "text": "Article 28(1) through (5)"
+              },
+              {
+                "no": 5,
+                "other_jurisdiction": "Barbados",
+                "page": 20,
+                "text": "Article 28(1) through (6)"
+              },
+              {
+                "no": 10,
+                "other_jurisdiction": "China",
+                "page": 20,
+                "text": "Article VI(1) through (4) of the Protocol of the Agreement"
+              },
               {
                 "no": 11,
                 "other_jurisdiction": "Colombia",
@@ -756,9 +777,9 @@
               },
               {
                 "no": 25,
-                "other_jurisdiction": "Guatemala",
+                "other_jurisdiction": "Guatemala India",
                 "page": 20,
-                "text": "(6) India Article 28 (1) through (5)"
+                "text": "(6) Article 28 (1) through (5)"
               },
               {
                 "no": 28,
@@ -811,7 +832,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 300.2
+            "split_measured_by": "the widest corridor this table's own words leave between them: 33.64 pt between x 362.2 and x 395.8",
+            "split_x": 379.0
           }
         ],
         "truncated": false
@@ -2033,10 +2055,11 @@
     },
     "scope_lists": {
       "announced": 6,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 2,
       "read": 6,
-      "rows": 92,
+      "rows": 95,
       "rows_without_a_counterparty": 0,
       "rows_without_a_text": 0
     }

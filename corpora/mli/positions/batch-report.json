@@ -614,7 +614,7 @@
       "is_companion": false,
       "pages": 20,
       "resolved_from": "the document's own title",
-      "sections_with_options": 8,
+      "sections_with_options": 11,
       "sha256": "ea912b227f8d09433096f9334a55e7826240510754a601789fb9dbd5e9cbbce2",
       "slug": "algeria",
       "spans": {
@@ -899,7 +899,7 @@
       "is_companion": false,
       "pages": 8,
       "resolved_from": "the document's own title",
-      "sections_with_options": 6,
+      "sections_with_options": 10,
       "sha256": "b88b4a60e7bbcd151d1e967dcaf5ecacdf28e2f95c74cd75a6c56e06ee103ad8",
       "slug": "burkina-faso",
       "spans": {
@@ -918,7 +918,7 @@
       "is_companion": false,
       "pages": 8,
       "resolved_from": "the document's own title",
-      "sections_with_options": 7,
+      "sections_with_options": 11,
       "sha256": "abfd855257ce48de155556bc26edd4f91dd352ea79c49b422a58d72eba9de970",
       "slug": "cameroon",
       "spans": {
@@ -1032,7 +1032,7 @@
       "is_companion": false,
       "pages": 13,
       "resolved_from": "the document's own title",
-      "sections_with_options": 9,
+      "sections_with_options": 14,
       "sha256": "489e7f56997c0b40bf84b4630d689f7024e4dd6b617e93c703da2ee245059404",
       "slug": "cote-d-ivoire",
       "spans": {
@@ -1260,7 +1260,7 @@
       "is_companion": false,
       "pages": 70,
       "resolved_from": "the document's own title",
-      "sections_with_options": 14,
+      "sections_with_options": 19,
       "sha256": "8feab381125ae31c9ca191bc4845200d1e703a1bd3bcf842359c66184f96c297",
       "slug": "france",
       "spans": {
@@ -1279,7 +1279,7 @@
       "is_companion": false,
       "pages": 8,
       "resolved_from": "the document's own title",
-      "sections_with_options": 8,
+      "sections_with_options": 13,
       "sha256": "d33c59d84de37fb6a40311b244e954a6da31f5552b4c68d6d427da9b6866a364",
       "slug": "gabon",
       "spans": {
@@ -1754,7 +1754,7 @@
       "is_companion": false,
       "pages": 71,
       "resolved_from": "the document's own title",
-      "sections_with_options": 11,
+      "sections_with_options": 20,
       "sha256": "c6af0962e1de8f3e4437c8003fe2f9d5f3da6a104e994e6f5996b5c7fc69b128",
       "slug": "luxembourg",
       "spans": {
@@ -2250,7 +2250,7 @@
       "is_companion": false,
       "pages": 35,
       "resolved_from": "the document's own title",
-      "sections_with_options": 10,
+      "sections_with_options": 12,
       "sha256": "5947b38141453abbad63e04bbe6106a383bedd53cf6471efa732aa304cd3ff1d",
       "slug": "senegal",
       "spans": {
@@ -2421,7 +2421,7 @@
       "is_companion": false,
       "pages": 15,
       "resolved_from": "the document's own title",
-      "sections_with_options": 8,
+      "sections_with_options": 20,
       "sha256": "2798f5c4bc2cb81ecd71bd9275051769089ea91e635ccca40cccb1d1cbb2d80f",
       "slug": "switzerland",
       "spans": {
@@ -2459,7 +2459,7 @@
       "is_companion": false,
       "pages": 30,
       "resolved_from": "the document's own title",
-      "sections_with_options": 7,
+      "sections_with_options": 11,
       "sha256": "81dfd78ca2cfa6769162c3202c7a8a9091e5ccace640b079b6fe03219c55b748",
       "slug": "tunisia",
       "spans": {
@@ -2620,19 +2620,39 @@
     "one_position_per_jurisdiction": "`published` is the number of positions, and it can be smaller than `read`: a jurisdiction can have more than one document, and which document is its position and which are documents about it is written down in `jurisdictions_with_more_than_one_document`.",
     "order": "documents and unread are in the directory's own order, by file name, so two runs compare line by line",
     "read_in_one_pass": "Every document the directory holds is read by one command, and this report is its account: a document missing from `documents` is in `unread` with the reader's own reason, and one that is in neither was not declared here at all.",
-    "reservation_scope_lists": "`reservation_scope_lists` counts the lists the positions' own reservations announce and this reading keeps: how many statements announce a list of agreements, how many of those lists were read, how many rows they hold together, and how many of those rows came back with an empty counterparty or an empty text. An empty cell is published as the page prints it and counted here, so a cell lost to a page break shows up as a number rather than as a thinner row. `reservations_announcing_a_list_not_read` lists every announcement whose table was not read, with the reader's own reason - a statement that announces a list and prints no table under it is a declared gap, not a list of no rows. A statement can announce more than one list - Argentina's Article 7 prints a reservation under Article 7(15)(b) and, under it, a second reservation under Article 7(15)(c), each with its own table, and the option model reads the two statements as one option because the second carries no printed label - so `options_announcing_more_than_one_list` counts those statements and `reservations_announcing_more_than_one_list` names them: the second table is the one a reader is likeliest to lose, and a list that lost it would show here as a shorter list and not only as a smaller count.",
+    "reservation_scope_lists": "`reservation_scope_lists` counts the lists the positions' own reservations announce and this reading keeps: how many statements announce a list of agreements, how many of those lists were read, how many rows they hold together, and how many of those rows came back with an empty counterparty or an empty text. An empty cell is published as the page prints it and counted here, so a cell lost to a page break shows up as a number rather than as a thinner row. `reservation_scope_rows_with_an_empty_cell` names the rows whose count above is not zero, row by row, with the cell that came back empty - a count says how many and a name says which, and a row the page printed on a line the reading could not attach a cell to is a row this corpus reports rather than one it quietly thins. `reservations_announcing_a_list_not_read` lists every announcement whose table was not read, with the reader's own reason - a statement that announces a list and prints no table under it is a declared gap, not a list of no rows. A statement can announce more than one list - Argentina's Article 7 prints a reservation under Article 7(15)(b) and, under it, a second reservation under Article 7(15)(c), each with its own table, and the option model reads the two statements as one option because the second carries no printed label - so `options_announcing_more_than_one_list` counts those statements and `reservations_announcing_more_than_one_list` names them: the second table is the one a reader is likeliest to lose, and a list that lost it would show here as a shorter list and not only as a smaller count.",
     "unclaimed_spans": "`spans.unclaimed` counts the spans no rule claimed and the catch-all dropped. They are not lost silently - every document's own audit lists them with their text - but they are the part of this reading that is dropped by default rather than by a named rule, and on this family most of them are the publisher's deposit stamp repeated in the footer band of every page. Where one of them is not apparatus the document needs a rule of its own: a cell's continuation line that no rule claims is text the corpus does not hold."
   },
   "read": 103,
   "reservation_scope_lists": {
-    "announced": 119,
+    "announced": 127,
     "options_announcing_more_than_one_list": 6,
-    "read": 119,
-    "rows": 2156,
+    "read": 126,
+    "rows": 2176,
     "rows_without_a_counterparty": 0,
-    "rows_without_a_text": 2
+    "rows_without_a_text": 1
   },
-  "reservations_announcing_a_list_not_read": [],
+  "reservation_scope_rows_with_an_empty_cell": [
+    {
+      "article": 3,
+      "fields": [
+        "text"
+      ],
+      "file": "sources/mli-positions/mli-position-chile.pdf",
+      "no": 33,
+      "page": 6,
+      "slug": "chile"
+    }
+  ],
+  "reservations_announcing_a_list_not_read": [
+    {
+      "article": 17,
+      "file": "sources/mli-positions/mli-position-gabon.pdf",
+      "page": 7,
+      "reason": "the statement announces a list of agreements and the table under it prints no row numbers in a left column",
+      "slug": "gabon"
+    }
+  ],
   "reservations_announcing_more_than_one_list": [
     {
       "article": "7",

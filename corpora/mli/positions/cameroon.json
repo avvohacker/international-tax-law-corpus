@@ -1,5 +1,29 @@
 {
   "article_sections": {
+    "10": [
+      {
+        "excerpt": "appliquer l’intégralité de l’article 10 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Règle anti-abus visant les établissements stables situés dans des juridictions",
+        "option_title": "s",
+        "page": 4,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
+    "11": [
+      {
+        "excerpt": "appliquer l’intégralité de l’article 11 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Application des conventions fiscales pour limiter le droit d’une Partie d’imposer ses",
+        "option_title": "s",
+        "page": 5,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
     "12": [
       {
         "excerpt": "suivantes contiennent une disposition décrite à l’article 12(3) (a). Les numéros de l’article et du paragraphe des dispositions pertinentes sont indiqués ci-dessous. suivantes contiennent une disposition décrite à l’article 12(3)(b). Les numéros de l’article et du paragraphe des dispositions pertinentes sont indiqués ci-dessous.",
@@ -53,6 +77,30 @@
         "mli_article_title": "Ajustements corrélatifs",
         "option_title": "relative aux dispositions pertinentes de Conventions fiscales couvertes",
         "page": 7,
+        "truncated": false
+      }
+    ],
+    "3": [
+      {
+        "excerpt": "En vertu de l’article 3(5)(a) de la Convention, le Cameroun se réserve le droit de ne pas appliquer l’intégralité de l’article 3 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Entités transparentes",
+        "option_title": "s",
+        "page": 2,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
+    "4": [
+      {
+        "excerpt": "En vertu de l’article 4(3)(a) de la Convention, le Cameroun se réserve le droit de ne pas appliquer l’intégralité de l’article 4 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Entités ayant une double résidence",
+        "option_title": "s",
+        "page": 2,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -341,6 +389,7 @@
     },
     "scope_lists": {
       "announced": 0,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 0,

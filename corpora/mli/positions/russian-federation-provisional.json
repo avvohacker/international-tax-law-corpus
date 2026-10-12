@@ -332,11 +332,18 @@
                 "other_jurisdiction": "United Kingdom",
                 "page": 39,
                 "text": "Article 9(2)"
+              },
+              {
+                "no": 65,
+                "other_jurisdiction": "United States",
+                "page": 39,
+                "text": "Article 7(2)"
               }
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 358.1
+            "split_measured_by": "the widest corridor this table's own words leave between them: 76.83 pt between x 342.8 and x 419.6",
+            "split_x": 381.2
           }
         ],
         "truncated": false
@@ -476,7 +483,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 354.6
+            "split_measured_by": "the widest corridor this table's own words leave between them: 76.36 pt between x 338.2 and x 414.6",
+            "split_x": 376.4
           }
         ],
         "truncated": false
@@ -559,7 +567,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 348.5
+            "split_measured_by": "the widest corridor this table's own words leave between them: 66.15 pt between x 337.0 and x 403.2",
+            "split_x": 370.1
           }
         ],
         "truncated": false
@@ -607,7 +616,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 357.8
+            "split_measured_by": "the widest corridor this table's own words leave between them: 101.32 pt between x 327.2 and x 428.6",
+            "split_x": 377.9
           }
         ],
         "truncated": false
@@ -683,7 +693,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 358.5
+            "split_measured_by": "the widest corridor this table's own words leave between them: 82.21 pt between x 340.4 and x 422.6",
+            "split_x": 381.5
           }
         ],
         "truncated": false
@@ -2092,10 +2103,11 @@
     },
     "scope_lists": {
       "announced": 5,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 5,
-      "rows": 74,
+      "rows": 75,
       "rows_without_a_counterparty": 0,
       "rows_without_a_text": 0
     }

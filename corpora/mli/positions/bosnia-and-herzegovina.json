@@ -229,11 +229,18 @@
                 "other_jurisdiction": "Turkey",
                 "page": 26,
                 "text": "Article 9(2)"
+              },
+              {
+                "no": 36,
+                "other_jurisdiction": "United Arab Emirates",
+                "page": 26,
+                "text": "Article 9(2)"
               }
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 361.8
+            "split_measured_by": "the widest corridor this table's own words leave between them: 71.97 pt between x 358.1 and x 430.0",
+            "split_x": 394.1
           }
         ],
         "truncated": false
@@ -925,10 +932,11 @@
     },
     "scope_lists": {
       "announced": 1,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 1,
-      "rows": 22,
+      "rows": 23,
       "rows_without_a_counterparty": 0,
       "rows_without_a_text": 0
     }

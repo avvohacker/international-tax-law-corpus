@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "international-tax-law-corpus"
 version = "0.1.0"
 description = "Specification and fidelity harness for a citable corpus of the UN Model Tax Convention and the OECD MLI material"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = ["pyyaml>=6.0"]
 
 [project.optional-dependencies]

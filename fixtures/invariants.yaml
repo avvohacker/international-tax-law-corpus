@@ -294,14 +294,18 @@
     Every list of agreements a reservation announces within its scope is read
     from the page that prints it, one reading per announcement, and published
     with the rows the page's own table holds; a statement that announces more
-    than one list carries one reading each; and a table that was not read is
-    declared with the reader's reason, in the position's own `qa` and in the
-    family's report. The lists are printed where the position's rows are read,
-    and the view control reads them back against the artefact.
+    than one list carries one reading each; a table that was not read is
+    declared with the reader's reason, and a row whose cell the page printed on
+    no line the reading could attach to it is published empty and named - with
+    its page, its number and the cell - never filled in from the row beside it.
+    Both are declared in the position's own `qa` and in the family's report, by
+    name and not by count alone. The lists are printed where the position's rows
+    are read, and the view control reads them back against the artefact.
   scope: corpus
   enforced_by: [known_defects,
                 test_p06_the_view_names_the_lists_the_artefact_holds,
                 test_p06_the_view_control_catches_a_stale_list,
+                test_p06_a_row_the_page_leaves_empty_is_named_not_thinned,
                 test_p06_the_lists_are_the_tables_the_page_prints,
                 test_p06_the_page_control_catches_an_invented_row]
 

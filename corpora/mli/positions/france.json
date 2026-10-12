@@ -1,5 +1,29 @@
 {
   "article_sections": {
+    "10": [
+      {
+        "excerpt": "En vertu de l’article 10(5)(a) de la Convention, la France se réserve le droit de ne pas appliquer l’intégralité de l’article 10 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Règle anti-abus visant les établissements stables situés dans des juridictions tierces",
+        "option_title": "",
+        "page": 36,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
+    "11": [
+      {
+        "excerpt": "En vertu de l’article 11(3)(a) de la Convention, la France se réserve le droit de ne pas appliquer l’intégralité de l’article 11 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Application des conventions fiscales pour limiter le droit d’une Partie d’imposer ses",
+        "option_title": "",
+        "page": 37,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
     "12": [
       {
         "excerpt": "En vertu de l’article 12(5) de la Convention, la France considère que les conventions suivantes contiennent une disposition décrite à l’article 12(3)(a). Les numéros de l’article et du paragraphe des dispositions pertinentes sont indiqués ci-dessous. En vertu de l’article 12(6) de la Convention, la France considère que les conventions suivantes contiennent une disposition décrite à l’article 12(3)(b). Les numéros de l’article et du paragraphe des dispositions pertinentes sont indiqués ci-dessous.",
@@ -106,13 +130,59 @@
         "truncated": false
       }
     ],
+    "3": [
+      {
+        "excerpt": "En vertu de l’article 3(5)(a) de la Convention, la France se réserve le droit de ne pas appliquer l’intégralité de l’article 3 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Entités transparentes",
+        "option_title": "",
+        "page": 16,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
     "36": [
+      {
+        "excerpt": "En vertu de l’article 36(2) de la Convention, la France se réserve le droit de ne pas appliquer la partie VI à l’égard d’un cas soumis à l’autorité compétente d’une Juridiction contractante avant la dernière des dates à laquelle la présente Convention entre en vigueur pour chacune des Juridictions contractantes ayant conclu la Convention fiscale couverte que dans la mesure où les autorités compétentes de toutes les Juridictions contractantes conviennent de l’appliquer à ce cas.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Prise d’effet de la partie VI",
+        "option_title": "",
+        "page": 69,
+        "scope_lists": [],
+        "truncated": false
+      },
       {
         "excerpt": "vigueur de la Convention Néant",
         "kind": "Notification",
         "mli_article_title": "Prise d’effet de la partie VI",
         "option_title": "relative à l’accord amiable sur la prise d’effet aux fins de cas soumis avant l’entrée en",
         "page": 69,
+        "truncated": false
+      }
+    ],
+    "4": [
+      {
+        "excerpt": "En vertu de l’article 4(3)(a) de la Convention, la France se réserve le droit de ne pas appliquer l’intégralité de l’article 4 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Entités ayant une double résidence",
+        "option_title": "",
+        "page": 17,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
+    "5": [
+      {
+        "excerpt": "En vertu de l’article 5(8) de la Convention, la France se réserve le droit de ne pas appliquer l’intégralité de l’article 5 à toutes ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Application des méthodes d’élimination de la double imposition",
+        "option_title": "",
+        "page": 18,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -1899,6 +1969,7 @@
     },
     "scope_lists": {
       "announced": 0,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 0,

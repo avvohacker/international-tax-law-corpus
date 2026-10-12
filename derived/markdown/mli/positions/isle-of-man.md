@@ -25,10 +25,10 @@
 
 | # | Other Contracting Jurisdiction | Provision | Page |
 |---:|---|---|---|
-| 1 | The Government of the Kingdom of | Article 9(2) Bahrain | 6 |
-| 2 | The Government of the Kingdom of | Article 9(2) Belgium | 6 |
+| 1 | The Government of the Kingdom of Bahrain | Article 9(2) | 6 |
+| 2 | The Government of the Kingdom of Belgium | Article 9(2) | 6 |
 | 3 | The Republic of Estonia | Article 9(2) | 6 |
-| 4 | The Government of the Grand | Article 9(2) Duchy of Luxembourg | 6 |
+| 4 | The Government of the Grand Duchy of Luxembourg | Article 9(2) | 6 |
 | 5 | The Government of Malta | Article 9(2) | 6 |
-| 7 | The Government of the Republic of | Article 9(2) the Seychelles | 6 |
-| 8 | The Government of the Republic of | Article 9(2) Singapore | 6 |
+| 7 | The Government of the Republic of the Seychelles | Article 9(2) | 6 |
+| 8 | The Government of the Republic of Singapore | Article 9(2) | 6 |

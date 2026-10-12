@@ -383,7 +383,26 @@ def _parse_date(text: str) -> str:
 # --------------------------------------------------------------------------- #
 
 SECTION_RE = re.compile(r"^Article\s+(\d+)\s*[\u2013\u2014-]\s*(.+?)\s*$")
+# The four kinds a statement is published under, and the words the documents of
+# the family print to open one. A document prints its own language's word for
+# the same statement: a francophone position (Algeria, Senegal, Luxembourg,
+# Canada's French half, Gabon) opens its reservations with `Réserve`, while
+# `Notification` is the same word in French and English alike. Not reading a
+# word is not reading no statement: before the French word was declared, a
+# French reservation was folded into the notification that preceded it, so it
+# was published as a notification and the list of agreements it prints was
+# never looked for. Nothing is translated here that the page does not print:
+# each word is listed as the page sets it, and the word a statement was read
+# from is published beside the kind (`kind_printed`), so a reader can see that
+# the corpus mapped a word rather than transcribed one.
 OPTION_KINDS = ("Reservation", "Notification", "Choice", "Declaration")
+OPTION_KIND_WORDS = (
+    ("Reservation", "Reservation"),
+    ("Réserve", "Reservation"),
+    ("Notification", "Notification"),
+    ("Choice", "Choice"),
+    ("Declaration", "Declaration"),
+)
 CELL_TOL_PT = 6.0
 # The attach window of the number-first reader: a span printed within this
 # distance above a row's number belongs to that row - the lead-in a number
@@ -548,12 +567,22 @@ def sections(lines: list, spans: list) -> list:
         end = marks[index + 1][0] if index + 1 < len(marks) else len(lines)
         body = lines[position + 1:end]
         first = (lines[position].page, lines[position].y)
-        last = ((lines[end].page, lines[end].y) if end < len(lines)
-                else (order[-1].page, order[-1].y) if order else first)
+        # The last section's body is the rest of the document, and its spans are
+        # every span the reader kept after its own heading. The band used to
+        # end at the document's *last* span, half-open, which dropped that one
+        # span from the section whose body reaches it: on Serbia's page 36 that
+        # span is the provision cell of the last row of the Article 17
+        # reservation's list (`Article 9(2)`, no. 64 Zimbabwe), and the row was
+        # published with an empty cell the page does not print empty. A bound
+        # that excludes the span it was measured from is not a bound, so a
+        # section that runs to the end of the document runs to the end of the
+        # stream.
+        last = (lines[end].page, lines[end].y) if end < len(lines) else None
         out.append({"no": number, "title": title, "page": lines[position].page,
                     "lines": body,
                     "spans": [span for span in order
-                              if first <= (span.page, span.y) < last]})
+                              if first <= (span.page, span.y)
+                              and (last is None or (span.page, span.y) < last)]})
     return out
 
 
@@ -568,12 +597,13 @@ def _options(section: dict, book) -> list:
         if round(line.x0, 1) != left:
             continue
         text = _text(line, book).strip()
-        kind = next((word for word in OPTION_KINDS if text.startswith(word)), "")
+        printed, kind = next(((word, kind) for word, kind in OPTION_KIND_WORDS
+                              if text.startswith(word)), ("", ""))
         if kind:
-            found.append((position, kind, text))
+            found.append((position, kind, printed, text))
     order = sorted(section["spans"], key=lambda span: (span.page, span.y, span.x))
     out = []
-    for index, (position, kind, text) in enumerate(found):
+    for index, (position, kind, printed, text) in enumerate(found):
         end = found[index + 1][0] if index + 1 < len(found) else len(body)
         prose = [_text(line, book) for line in body[position + 1:end]
                  if round(line.x0, 1) == left]
@@ -582,7 +612,8 @@ def _options(section: dict, book) -> list:
         # works on the option's own printed geometry, so the band travels with it.
         first = (body[position].page, body[position].y)
         last = ((body[end].page, body[end].y) if end < len(body) else None)
-        out.append({"kind": kind, "title": _option_title(kind, text),
+        out.append({"kind": kind, "kind_printed": printed,
+                    "title": _option_title(printed, text),
                     "page": body[position].page,
                     "excerpt": " ".join(part.strip() for part in prose if part.strip()),
                     "body": body[position + 1:end],
@@ -593,29 +624,64 @@ def _options(section: dict, book) -> list:
     return out
 
 
-def _option_title(kind: str, text: str) -> str:
-    rest = text[len(kind):].strip()
+def _option_title(printed: str, text: str) -> str:
+    """What a statement's line says after the word that opens it.
+
+    `printed` is that word as the page sets it and not the kind the corpus
+    publishes it under: the two are the same length only in English, and a
+    title cut by the canonical word's length would take ten characters off a
+    French `Réserve` line's own words.
+    """
+    rest = text[len(printed):].strip()
     return re.sub(r"^[-\u2013\u2014:]\s*", "", rest).strip()
 
 
 # The sentence a reservation ends with when it announces that a list of
-# agreements follows it. It is looked for in the option's prose *lines* joined as
-# the option's own `excerpt` joins them, because the printer wraps the sentence:
-# on Argentina's Article 6 the phrase straddles two lines, so a search of one
-# span at a time reports that a document announcing a list announces nothing.
-SCOPE_ANNOUNCEMENT_RE = re.compile(
-    r"within\s+the\s+scope\s+of\s+(?:this|the)\s+reservation", re.IGNORECASE)
+# agreements follows it, one pattern per language the family prints it in. It is
+# looked for in the option's prose *lines* joined as the option's own `excerpt`
+# joins them, because the printer wraps the sentence: on Argentina's Article 6
+# the English phrase straddles two lines, so a search of one span at a time
+# reports that a document announcing a list announces nothing.
+#
+# The French announcement is not the English one word for word, and it is not
+# one phrase either: the statement prints
+#
+#     Convention(s) fiscale(s) couverte(s) suivante(s) contient (contiennent)
+#     un préambule / des dispositions   visée(s) par la réserve.
+#
+# so what carries the scope is the tail `visée(s) par la réserve`, while the
+# thing the list is of - `un préambule` (the preamble language, quoted in the
+# table's own `Texte du préambule` column) or `des dispositions` - stands
+# between the verb and the tail. Matching the tail, with the object it follows,
+# is what keeps the reading from taking the *notification* that says the
+# opposite (`... ne sont pas visées par la réserve prévue à l'article 6(4)`) for
+# an announcement: that sentence names no préambule or dispositions before the
+# tail, and the tables under it are a notification's, which this reader does not
+# claim.
+SCOPE_ANNOUNCEMENT_RES = (
+    re.compile(r"within\s+the\s+scope\s+of\s+(?:this|the)\s+reservation",
+               re.IGNORECASE),
+    re.compile(r"(?:pr[eé]ambules?|dispositions?)\s+vis[ée]e?s?\s+par\s+la\s+"
+               r"r[eé]serve", re.IGNORECASE),
+)
 
-# The headings the table under the announcement prints over its columns. They
-# are the table's own words, and the printer wraps them -- Argentina's and
-# Georgia's set "Listed Agreement Number" over three lines -- so a cell is part
-# of the heading row when its own words stand inside one of these headings, and
-# not merely when it begins like one: Spain's Article 6 prints a cell of preamble
-# text beginning with "Preamble" 230 pt below its own "Preamble Text" heading,
-# and a test that matched the first word would take that cell for a heading and
-# end the table before its first row.
+# The headings the table under the announcement prints over its columns, in the
+# languages the family sets them in. They are the table's own words, and the
+# printer wraps them -- Argentina's and Georgia's set "Listed Agreement Number"
+# over three lines, Senegal's and Luxembourg's set "Numéro de la Convention
+# couverte" over three -- so a cell is part of the heading row when its own words
+# stand inside one of these headings, and not merely when it begins like one:
+# Spain's Article 6 prints a cell of preamble text beginning with "Preamble"
+# 230 pt below its own "Preamble Text" heading, and a test that matched the
+# first word would take that cell for a heading and end the table before its
+# first row. The French forms are the ones the francophone positions print; the
+# English ones are the same table's headings in the rest of the family, because
+# a position's own language does not change which columns its table has.
 SCOPE_HEADINGS = ("Listed Agreement Number", "Other Contracting Jurisdiction",
-                  "Provision", "Preamble Text")
+                  "Provision", "Preamble Text",
+                  "Numéro de la Convention couverte", "Numéro de la Convention",
+                  "Autre Juridiction contractante", "Texte du préambule",
+                  "Disposition")
 
 # An agreement's printed number: the table's left column, and only that. A cell
 # that reads "4" is not a number column, which is why the match is anchored on
@@ -643,6 +709,11 @@ def _scope_announcements(prose: list, book) -> list:
     below *that* line, so which line it is matters and not just the fact. An
     option that announces no list gives `[]` -- a fact, and not the same fact as
     an option nobody looked at.
+
+    Every pattern in `SCOPE_ANNOUNCEMENT_RES` is tried, and two patterns that
+    meet in the same words count once: the sentences of the family are not
+    translations of one another, and a statement that announced a list in
+    English and again in French would still print one table.
     """
     said = [(line, _text(line, book).strip()) for line in prose]
     said = [(line, piece) for line, piece in said if piece]
@@ -655,19 +726,60 @@ def _scope_announcements(prose: list, book) -> list:
         consumed += len(piece) + 1          # the space this module joins with
         endings.append((consumed, line))
     found = []
-    for match in SCOPE_ANNOUNCEMENT_RE.finditer(joined):
-        line = next((line for consumed, line in endings if consumed > match.end()),
+    for _start, end in scope_announcements_in(joined):
+        line = next((line for consumed, line in endings if consumed > end),
                     said[-1][0])
         found.append((line, joined))
     return found
 
 
+def scope_announcements_in(text: str) -> list[tuple[int, int]]:
+    """Where a piece of prose announces a list, as this module reads it.
+
+    The spans `(start, end)` are returned in the order the prose prints them,
+    and two patterns that meet in the same words give one span and not two: the
+    family's sentences are not translations of one another, and a statement that
+    announced a list in English and again in French would still print one table.
+
+    Named and public because the page control counts a statement's announcements
+    from the prose the corpus publishes and holds that count against the lists
+    the corpus holds - and it has to count with the patterns the reader read
+    with, or it would check the corpus against a rule the corpus was not built
+    by.
+    """
+    announced: list[tuple[int, int]] = []
+    for pattern in SCOPE_ANNOUNCEMENT_RES:
+        for match in pattern.finditer(text):
+            if any(start < match.end() and match.start() < end
+                   for start, end in announced):
+                continue                    # the same sentence, said once
+            announced.append((match.start(), match.end()))
+    return sorted(announced)
+
+
 def _scope_heading(span) -> bool:
-    """Whether a cell is part of the announced table's heading row."""
-    printed = " ".join(span.text.split()).lower()
+    """Whether a cell is part of the announced table's heading row.
+
+    A cell belongs to the heading row when its own words stand in one of the
+    declared headings *as whole words, in order* - and not when its text is
+    merely a substring of one. The difference is not academic once a heading is
+    not English: the French heading `Numéro de la Convention couverte` contains
+    the word `de`, and in a table whose counterparty is set justified one
+    fragment of a name *is* `de` (Senegal's Article 9 list prints `Royaume Uni
+    de Grande` over four such runs). A substring test takes that fragment for
+    the heading row, ends the table at its own first row, and publishes a
+    counterparty made of the name's second line alone with the rest of the name
+    in the provision column.
+    """
+    printed = " ".join(span.text.split()).lower().split()
     if not printed:
         return False
-    return any(printed in heading.lower() for heading in SCOPE_HEADINGS)
+    for heading in SCOPE_HEADINGS:
+        words = heading.lower().split()
+        for start in range(len(words) - len(printed) + 1):
+            if words[start:start + len(printed)] == printed:
+                return True
+    return False
 
 
 def _scope_cell(pieces: list) -> str:
@@ -684,11 +796,14 @@ def reservation_scope(option: dict, book) -> dict:
     """The agreements a reservation prints under it, as the page prints them.
 
     A reservation often ends by announcing that a list follows -- "The following
-    agreements contain provisions that are within the scope of this reservation"
-    -- and then prints it as a table: an agreement's number, the other
-    contracting jurisdiction, and the provision of that agreement. That list is
-    what settles whether a particular treaty falls inside the reservation, so it
-    is kept here instead of being left inside the sentence that announces it.
+    agreements contain provisions that are within the scope of this reservation",
+    or, in a francophone position, "... contient des dispositions visées par la
+    réserve" / "... contient un préambule visée par la réserve" -- and then
+    prints it as a table: an agreement's number, the other contracting
+    jurisdiction, and the provision (or the preamble language) of that agreement.
+    That list is what settles whether a particular treaty falls inside the
+    reservation, so it is kept here instead of being left inside the sentence
+    that announces it.
 
     `lists` holds one reading per announcement, in the page's own order, and is
     empty when the statement announces no list at all. A statement that
@@ -726,8 +841,8 @@ def _scope_list(announcements: list, index: int, option: dict, book) -> dict:
     * where no heading row is printed, the table is the run of spans from the
       announcement down to the first line set back at the prose margin, which is
       where the next paragraph or heading begins;
-    * its columns are split where the table leaves its widest gap in x, so no
-      boundary is a number this module chose;
+    * its columns are split where the table leaves its widest corridor in x, so
+      no boundary is a number this module chose;
     * its rows are anchored on the numbers printed in its left column, and a cell
       that wraps is attached to the number it stands nearest -- the row the table
       sets it in, whether the cell is printed above or below that number. On
@@ -770,18 +885,43 @@ def _scope_list(announcements: list, index: int, option: dict, book) -> dict:
                        "table is printed under that sentence")})
         return reading
 
-    headings = [span.text.strip() for span in below if _scope_heading(span)]
-    data = [span for span in below if not _scope_heading(span)]
+    # A heading row is a row of the table, and it stands above the table's rows:
+    # that is the whole of where a heading row can be. A cell that reads a word
+    # of a heading and stands below the first row printed on its own page is
+    # that row's own cell and not part of the heading row - Senegal's Article 9
+    # list is set justified, so one run of `Royaume Uni de Grande` *is* the word
+    # `de` of the French heading above it, and Mexico's Article 6 list prints a
+    # `de` of its own preamble text 400 pt under its headings, which a reading
+    # that took every cell reading like a heading for a heading row would drop
+    # from the row it belongs to. A heading row the table repeats over its next
+    # page stands above that page's first row and is a heading row there too:
+    # reading it as a row of words would both put its cells into the row that
+    # follows it and measure the table's columns to the ends of its headings
+    # (Canada's Article 17 list repeats its three headings over page 22, and the
+    # places they begin are 148 pt apart - they are not a boundary between a
+    # counterparty column and a column after it by any reading).
+    looking = [span for span in below if _scope_heading(span)]
+    row_numbers = [span for span in below
+                   if SCOPE_NUMBER_RE.match(span.text.strip())]
+    first_number: dict = {}
+    for span in row_numbers:
+        first_number[span.page] = min(first_number.get(span.page, span.y),
+                                      span.y)
+    looking = [span for span in looking
+               if span.page not in first_number
+               or span.y < first_number[span.page] - POS_ATTACH_PT]
+    heading_spans = {id(span) for span in looking}
+    headings = [span.text.strip() for span in looking]
+    data = [span for span in below if id(span) not in heading_spans]
     # A row of the announced list stands under the table's heading row. The
     # digits printed above that row are not rows of this list: Norway's Article 3
     # carries three of them 2 pt above its own headings, the tail of the covered
     # agreements table the page before, and reading them as rows would put two
     # agreements into a list of one. Where no heading row was printed, the first
     # number the table prints is where its rows begin.
-    if headings:
-        top_page = min(span.page for span in below if _scope_heading(span))
-        top = max(span.y for span in below
-                  if _scope_heading(span) and span.page == top_page)
+    if looking:
+        top_page = min(span.page for span in looking)
+        top = max(span.y for span in looking if span.page == top_page)
         data = [span for span in data if (span.page, span.y) > (top_page, top)]
     numbers = [span for span in data
                if SCOPE_NUMBER_RE.match(span.text.strip())]
@@ -824,33 +964,63 @@ def _scope_list(announcements: list, index: int, option: dict, book) -> dict:
             continue
         cells[min(same_page)[1]].append(span)
 
-    # The counterparty column is where the leftmost cell of each row begins, and
-    # the boundary is the midpoint between that band's right edge and the nearest
-    # cell standing right of it. The table's own geometry is what is measured
-    # here, because neither of the other two candidates can place the boundary:
-    # these tables centre the heading over its column (Spain's Article 6 prints
-    # "Preamble Text" 100 pt right of the text it heads), and a wrapped line's
-    # tail arrives as a cell of its own (the same page prints the end of one
-    # preamble line 157 pt right of that line's start).
-    first_cells = [min(group, key=lambda span: span.x)
-                   for group in cells.values() if group]
-    if not first_cells:
+    # Where the counterparty column ends, measured from the table's own page:
+    # at the widest corridor the table's words leave between them. A column is
+    # where its cells stand, so the cells' own extents, laid side by side along
+    # x, leave vertical bands no word crosses, and one of them is the place the
+    # counterparty column ends and the column after it begins.
+    #
+    # The rule used to be the midpoint between the rightmost of the rows' own
+    # *first* cells and the nearest cell right of it, which is the same boundary
+    # for a table whose counterparty is printed as one run of words. It is not
+    # the same for a table that sets its counterparty justified or centred over
+    # its column: a francophone page spreads `Royaume Uni de Grande et de
+    # l'Irlande du Nord` over four runs, the first of them begins the band and
+    # the other three stand right of it, so that midpoint falls inside the name
+    # and the name's own words are published as the provision - and the Isle of
+    # Man's list centres `The Government of the Kingdom of` over the column with
+    # `Bahrain` beneath it, which the same midpoint cuts in two.
+    #
+    # Nor is the boundary the widest gap between the places the cells *begin*:
+    # Spain's Article 6 list sets its preamble text justified, so one line of it
+    # arrives as two runs whose places are 157 pt apart - the widest gap on that
+    # page, and a gap *inside* the column after the boundary, not the boundary
+    # itself. Such a run starts inside the column it continues, so it crosses no
+    # corridor and cannot move one, whatever the page's justification does to
+    # its place.
+    #
+    # A cell that begins where the table's row numbers stand is not the start of
+    # a column: it is a cell of the row the numbers belong to, printed under
+    # them (Italy's Article 7 list prints `-20` under its row 5, the tail of that
+    # row's own number). A cell that begins in the numbers' column would leave a
+    # corridor between the numbers and the words beside them, and every
+    # counterparty in the table would be read as part of the provision.
+    numbers_right = max((span.x1 for span in anchors), default=0.0)
+    columns = sorted((span.x, span.x1) for group in cells.values()
+                     for span in group if span.x > numbers_right)
+    if not columns:
         reading.update({
             "read": False,
             "reason": ("the table under the announcement prints numbers and no "
                        "words beside them, so no row can name a counterparty")})
         return reading
-    band_right = max(span.x for span in first_cells)
-    right_of_band = [span.x for group in cells.values() for span in group
-                     if span.x > band_right]
-    if not right_of_band:
+    corridors = []
+    edge = columns[0][1]
+    for start, end in columns[1:]:
+        if start > edge:
+            corridors.append((start - edge, edge, start))
+            edge = end
+        else:
+            edge = max(edge, end)
+    if not corridors:
         reading.update({
             "read": False,
             "reason": ("the table prints one column of words beside its "
                        "numbers, so there is no boundary between a "
                        "counterparty column and a column after it")})
         return reading
-    split = (band_right + min(right_of_band)) / 2.0
+    width, before, after = max(corridors)
+    split = (before + after) / 2.0
 
     rows = {key: {"no": None, "page": None,
                   "other_jurisdiction": [], "text": []} for key in keys}
@@ -866,12 +1036,18 @@ def _scope_list(announcements: list, index: int, option: dict, book) -> dict:
                   "other_jurisdiction": _scope_cell(rows[key]["other_jurisdiction"]),
                   "text": _scope_cell(rows[key]["text"])} for key in keys]
     # A row can come back with a cell the table prints nothing in, and that is
-    # published as an empty cell rather than filled in. It is counted so that a
-    # row losing a cell to the page rather than to the page's silence shows up in
-    # the family's own account: two rows in the family are empty this way, both
-    # where the table prints the cell on the line the next row's number opens.
+    # published as an empty cell rather than filled in. It is counted and named
+    # so that a row losing a cell to the page rather than to the page's silence
+    # shows up in the family's own account: one row in the family is empty this
+    # way - Chile's Article 3 list prints a single `Article 1(2)` between its rows
+    # 33 and 34, and the row the cell stands nearest is the one that keeps it, so
+    # the other is published with an empty provision rather than given the one
+    # beside it.
     reading.update({
         "read": True, "headings": headings, "split_x": round(split, 1),
+        "split_measured_by": (
+            f"the widest corridor this table's own words leave between them: "
+            f"{width:.2f} pt between x {before:.1f} and x {after:.1f}"),
         "rows_without_a_counterparty": sum(
             1 for row in published if not row["other_jurisdiction"]),
         "rows_without_a_text": sum(1 for row in published if not row["text"]),
@@ -2812,7 +2988,7 @@ def position(book: ledger.Ledger, source: str, pdf: Path) -> dict:
     scope = {"announced": 0, "read": 0, "rows": 0,
              "rows_without_a_counterparty": 0, "rows_without_a_text": 0,
              "options_announcing_more_than_one_list": 0,
-             "not_read": []}
+             "empty_cells": [], "not_read": []}
     for section in sections(lines, spans):
         options = _options(section, book)
         if options:
@@ -2822,6 +2998,13 @@ def position(book: ledger.Ledger, source: str, pdf: Path) -> dict:
                          "kind": option["kind"],
                          "option_title": option["title"], "page": option["page"],
                          "excerpt": option["excerpt"], "truncated": False}
+                if option["kind_printed"] != option["kind"]:
+                    # The word the statement was read from, published when it is
+                    # not the word its kind is published under: a francophone
+                    # document opens its reservations with `Réserve`, and the
+                    # corpus says both the kind it read and the page's own word,
+                    # so nothing here is a translation the reader cannot see.
+                    entry["kind_printed"] = option["kind_printed"]
                 if option["kind"] == "Reservation":
                     # Every reservation carries the reader's answer, including the
                     # answer "this statement announces no list": a statement that
@@ -2844,6 +3027,22 @@ def position(book: ledger.Ledger, source: str, pdf: Path) -> dict:
                             scope["rows_without_a_counterparty"] += \
                                 one["rows_without_a_counterparty"]
                             scope["rows_without_a_text"] += one["rows_without_a_text"]
+                            # A row whose cell came back empty is counted above and
+                            # named here: the count says how many there are and
+                            # this says which, so a reading that lost a cell shows
+                            # up as a named row and not only as a smaller number
+                            # (Chile's Article 3 list prints one provision between
+                            # two of its rows and the row left without one is
+                            # named rather than passed over).
+                            for row in one["rows"]:
+                                empty = [field for field in
+                                         ("other_jurisdiction", "text")
+                                         if not (row.get(field) or "").strip()]
+                                if empty:
+                                    scope["empty_cells"].append(
+                                        {"article": section["no"],
+                                         "page": row["page"], "no": row["no"],
+                                         "fields": empty})
                         else:
                             scope["not_read"].append(
                                 {"article": section["no"],
@@ -3378,6 +3577,10 @@ def _family_build(directory: Path, source: str, root: Path) -> dict:
     # the list says which, so a reading that dropped one of them shows up as a
     # shorter list and not only as a smaller number.
     scope_multiple: list[dict] = []
+    # The rows whose cell the page printed somewhere the reading could not attach
+    # it to. They are named here for the same reason the multi-list statements
+    # are: a count says how many, and only a name says which row lost what.
+    scope_empty: list[dict] = []
     for doc in documents:
         data = positions[doc["slug"]]
         scope_qa = data["qa"].get("scope_lists") or {}
@@ -3388,6 +3591,11 @@ def _family_build(directory: Path, source: str, root: Path) -> dict:
                                  "article": gap.get("article"),
                                  "page": gap.get("page"),
                                  "reason": gap.get("reason", "")})
+        for cell in scope_qa.get("empty_cells") or []:
+            scope_empty.append({"file": doc["file"], "slug": doc["slug"],
+                                "article": cell.get("article"),
+                                "page": cell.get("page"), "no": cell.get("no"),
+                                "fields": cell.get("fields") or []})
         for article, entries in (data.get("article_sections") or {}).items():
             for entry in entries:
                 if len(entry.get("scope_lists") or []) > 1:
@@ -3454,6 +3662,7 @@ def _family_build(directory: Path, source: str, root: Path) -> dict:
         "reservation_scope_lists": scope_totals,
         "reservations_announcing_a_list_not_read": scope_unread,
         "reservations_announcing_more_than_one_list": scope_multiple,
+        "reservation_scope_rows_with_an_empty_cell": scope_empty,
         "published": len(positions), "read": len(documents),
         "source": source,
         "spans": {key: total[key] for key in
@@ -3490,6 +3699,12 @@ def _family_build(directory: Path, source: str, root: Path) -> dict:
                 "text. An empty cell is published as the page prints it and "
                 "counted here, so a cell lost to a page break shows up as a "
                 "number rather than as a thinner row. "
+                "`reservation_scope_rows_with_an_empty_cell` names the rows "
+                "whose count above is not zero, row by row, with the cell that "
+                "came back empty - a count says how many and a name says which, "
+                "and a row the page printed on a line the reading could not "
+                "attach a cell to is a row this corpus reports rather than one "
+                "it quietly thins. "
                 "`reservations_announcing_a_list_not_read` lists every "
                 "announcement whose table was not read, with the reader's own "
                 "reason - a statement that announces a list and prints no table "

@@ -26,3 +26,23 @@
 | 18 | Émirats Arabes Unis | Original | 22-10-2015 | N/A | 3 |
 | 19 | Turquie | Original | 14-11-2015 | N/A | 3 |
 | 20 | Grand-Duché de Luxembourg | Original | 10-02-2016 | N/A | 3 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 2 row(s) between them. Every announcement's table was read.*
+
+### Article 7 — the list under the reservation on page 11, one list
+
+*1 row(s), printed on page 11.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 20 | Grand-Duché de Luxembourg | Article 30(2) | 11 |
+
+### Article 9 — the list under the reservation on page 14, one list
+
+*1 row(s), printed on page 14.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 15 | Royaume Uni de Grande Bretagne et de l’Irlande du Nord | Article 13(5) | 14 |

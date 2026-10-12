@@ -110,4 +110,4 @@
 
 | # | Other Contracting Jurisdiction | Provision | Page |
 |---:|---|---|---|
-| 63 | Listed Agreement Number Other Contracting Jurisdiction Provision | Portugal Article 10(2) | 26 |
+| 63 | Listed Agreement Number Other Contracting Jurisdiction Provision Portugal | Article 10(2) | 26 |

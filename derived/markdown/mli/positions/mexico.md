@@ -70,7 +70,7 @@
 
 ## The agreements the reservations bring within their scope
 
-*6 list(s) of agreements are announced under the reservations of this position: 6 read, holding 92 row(s) between them. 2 statement(s) announce more than one list, and every one is printed below. Every announcement's table was read.*
+*6 list(s) of agreements are announced under the reservations of this position: 6 read, holding 95 row(s) between them. 2 statement(s) announce more than one list, and every one is printed below. Every announcement's table was read.*
 
 ### Article 17 — the list under the reservation on page 34, one list
 
@@ -175,7 +175,7 @@
 |---:|---|---|---|
 | 1 | Argentina | La República Argentina y los Estados Unidos Mexicanos, con el objeto de promover el desarrollo de sus relaciones económicas y la cooperación en materia fiscal, y deseosos de concluir un Acuerdo para evitar la doble imposición y prevenir la evasión fiscal con respecto a los impuestos sobre la renta y el patrimonio, sin crear oportunidades para la no imposición o imposición reducida a través de la evasión o elusión fiscal (incluyendo a través de acuerdos para el uso abusivo de tratados cuyo objetivo es extender indirectamente los beneficios previstos en este Acuerdo a residentes de terceros Estados) | 12 |
 | 21 | Guatemala | DESEANDO fortalecer su relación económica así como incrementar su cooperación en materia tributaria y concluir un Acuerdo para Eliminar la Doble Imposición en materia del Impuesto sobre la Renta, sin crear oportunidades para la no imposición o imposición reducida, a través de la evasión o elusión fiscal (incluyendo operaciones a través de acuerdos para el uso abusivo de tratados - treaty shopping arrangements - cuyo objetivo es extender indirectamente los beneficios previstos en este Acuerdo a residentes de terceros Estados), | 13 |
-| 43 | Philippines | DESIRING to further develop their economic relationship and to enhance their cooperation in tax matters, INTENDING to conclude an between the Government of the United Mexican States and the Government of the Republic of the Philippines for the Avoidance of Double Taxation with Respect to Taxes on Income and the Prevention of Fiscal Evasion, without creating opportunities for non- taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Agreement for the indirect benefit of residents of third States) | 13 |
+| 43 | Philippines | DESIRING to further develop their economic relationship and to enhance their cooperation in tax matters, INTENDING to conclude an Agreement between the Government of the United Mexican States and the Government of the Republic of the Philippines for the Avoidance of Double Taxation with Respect to Taxes on Income and the Prevention of Fiscal Evasion, without creating opportunities for non- taxation or reduced taxation through tax evasion or avoidance (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Agreement for the indirect benefit of residents of third States) | 13 |
 | 53 | Spain | <DESEANDO promover el desarrollo de sus relaciones económicas y mejorar la cooperación en materia fiscal;> CON LA INTENCIÓN de concluir un convenio para evitar la doble imposición con respecto a los impuestos sobre la renta y sobre el patrimonio, sin generar oportunidades para la no imposición o la imposición reducida a través de la evasión o elusión fiscales (comprendidos los acuerdos para el uso abusivo de los convenios cuyo objetivo es permitir que residentes de terceros Estados se aprovechen indirectamente de los beneficios previstos en este Convenio); | 13 |
 
 ### Article 7 — the list under the reservation on page 19, list 1 of 2
@@ -190,13 +190,16 @@
 
 ### Article 7 — the list under the reservation on page 19, list 2 of 2
 
-*11 row(s), printed on page 20.*
+*14 row(s), printed on page 20.*
 
 | # | Other Contracting Jurisdiction | Provision | Page |
 |---:|---|---|---|
+| 1 | Argentina | Article 28(1) through (5) | 20 |
+| 5 | Barbados | Article 28(1) through (6) | 20 |
+| 10 | China | Article VI(1) through (4) of the Protocol of the Agreement | 20 |
 | 11 | Colombia | Article 26(1) through (4) | 20 |
 | 12 | Costa Rica | Article 24 (1) through (4) Article 23(1) through (4) and | 20 |
-| 25 | Guatemala | (6) India Article 28 (1) through (5) | 20 |
+| 25 | Guatemala India | (6) Article 28 (1) through (5) | 20 |
 | 28 | Israel | Article 25(1) through (3) | 20 |
 | 30 | Jamaica | Article 24 (1) through (4) and (6) | 20 |
 | 33 | Kuwait | Article 22(1) (2) and (4) | 20 |

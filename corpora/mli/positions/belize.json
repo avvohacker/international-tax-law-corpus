@@ -259,6 +259,7 @@
     },
     "scope_lists": {
       "announced": 0,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 0,

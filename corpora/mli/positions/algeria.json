@@ -1,5 +1,17 @@
 {
   "article_sections": {
+    "10": [
+      {
+        "excerpt": "En vertu de l’article 10(5)(a) de la Convention, l’Algérie se réserve le droit de ne pas appliquer l’intégralité de l’article 10 à ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Règle anti-abus visant les établissements stables situés dans des juridictions",
+        "option_title": "",
+        "page": 13,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
     "12": [
       {
         "excerpt": "En vertu de l’article 12(5) de la Convention, l’Algérie considère que les conventions suivantes contiennent une disposition décrite à l’article 12(3)(a). Les numéros de l’article et du paragraphe des dispositions pertinentes sont indiqués ci-dessous. En vertu de l’article 12(6) de la Convention, l’Algérie considère que les conventions suivantes contiennent une disposition décrite à l’article 12(3)(b). Les numéros de l’article et du paragraphe des dispositions pertinentes sont indiqués ci-dessous.",
@@ -56,13 +68,47 @@
         "truncated": false
       }
     ],
+    "3": [
+      {
+        "excerpt": "En vertu de l’article 3 (5) (a) de la convention, l’Algérie se réserve le droit de ne pas appliquer l’intégralité de l’article 3 à ses conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Entités transparentes",
+        "option_title": "",
+        "page": 6,
+        "scope_lists": [],
+        "truncated": false
+      }
+    ],
     "4": [
+      {
+        "excerpt": "En vertu de l’article 4(3) (e) de la Convention, l’Algérie se réserve le droit de remplacer la dernière phrase de l’article 4(1) par la phrase suivante pour l’application de ses Conventions fiscales couvertes : « En l’absence d’un tel accord, cette personne ne pourra prétendre à aucun des allègements ou exonérations de l’impôt prévus par la Convention fiscale couverte. »",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Entités ayant une double résidence",
+        "option_title": "",
+        "page": 6,
+        "scope_lists": [],
+        "truncated": false
+      },
       {
         "excerpt": "En vertu de l’article 4(4) de la Convention, l’Algérie considère que les conventions suivantes contiennent une disposition décrite à l’article 4(2) et non visée par une réserve prévue à l’article 4(3) (b) à (d). Les numéros de l’article et du paragraphe des dispositions pertinentes sont indiqués ci-dessous.",
         "kind": "Notification",
         "mli_article_title": "Entités ayant une double résidence",
         "option_title": "relative aux dispositions pertinentes de Conventions fiscales couvertes",
         "page": 6,
+        "truncated": false
+      }
+    ],
+    "5": [
+      {
+        "excerpt": "En vertu de l’article 5(8) de la Convention, le l’Algérie se réserve le droit de ne pas appliquer l’intégralité de l’article 5 à toutes ses Conventions fiscales couvertes.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Application de méthodes d'élimination de la double imposition",
+        "option_title": "",
+        "page": 7,
+        "scope_lists": [],
         "truncated": false
       }
     ],
@@ -78,6 +124,37 @@
     ],
     "8": [
       {
+        "excerpt": "En vertu de l’article 8(3)(b)(i) de la Convention, l’Algérie se réserve le droit de ne pas appliquer l'intégralité du l’article 8 à ses Conventions fiscales couvertes dans la mesure où les dispositions décrites à l’article 8(1) prévoient déjà une période minimale de détention. La Convention fiscale couverte suivante contient des dispositions visées par la réserve.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Transactions relatives au transfert de dividendes",
+        "option_title": "",
+        "page": 11,
+        "scope_lists": [
+          {
+            "headings": [
+              "Autre juridiction contractante",
+              "Disposition"
+            ],
+            "page": 11,
+            "read": true,
+            "rows": [
+              {
+                "no": 12,
+                "other_jurisdiction": "Danemark",
+                "page": 11,
+                "text": "10 (2) (a)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_measured_by": "the widest corridor this table's own words leave between them: 116.28 pt between x 328.2 and x 444.5",
+            "split_x": 386.3
+          }
+        ],
+        "truncated": false
+      },
+      {
         "excerpt": "En vertu de l’article 8(4) de la Convention, l’Algérie considère que les conventions suivantes contiennent une disposition décrite à l’article 8(1) et non visée par une réserve prévue à l’article 8(3) (b). Les numéros de l’article et du paragraphe des dispositions pertinentes sont indiqués ci-dessous.",
         "kind": "Notification",
         "mli_article_title": "Transactions relatives au transfert de dividendes",
@@ -87,6 +164,37 @@
       }
     ],
     "9": [
+      {
+        "excerpt": "En vertu de l’article 9(6) (f) de la Convention, l’Algérie se réserve le droit de ne pas appliquer l’article 9(4) à ses Conventions fiscales couvertes qui contiennent déjà les dispositions décrites au l’article 9(5). La Convention fiscale couverte suivante contient des dispositions visées par la réserve.",
+        "kind": "Reservation",
+        "kind_printed": "Réserve",
+        "mli_article_title": "Gains en capital tirés de l'aliénation d'actions, de droits ou de participations",
+        "option_title": "",
+        "page": 12,
+        "scope_lists": [
+          {
+            "headings": [
+              "Autre juridiction contractante",
+              "Disposition"
+            ],
+            "page": 12,
+            "read": true,
+            "rows": [
+              {
+                "no": 12,
+                "other_jurisdiction": "Danemark",
+                "page": 12,
+                "text": "13 (5)"
+              }
+            ],
+            "rows_without_a_counterparty": 0,
+            "rows_without_a_text": 0,
+            "split_measured_by": "the widest corridor this table's own words leave between them: 139.08 pt between x 328.2 and x 467.3",
+            "split_x": 397.7
+          }
+        ],
+        "truncated": false
+      },
       {
         "excerpt": "En vertu de l’article 9 (8) de la convention, l’Algérie choisit d'appliquer l’article 9(4).",
         "kind": "Notification",
@@ -745,11 +853,12 @@
       "title_read": "REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE"
     },
     "scope_lists": {
-      "announced": 0,
+      "announced": 2,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
-      "read": 0,
-      "rows": 0,
+      "read": 2,
+      "rows": 2,
       "rows_without_a_counterparty": 0,
       "rows_without_a_text": 0
     }

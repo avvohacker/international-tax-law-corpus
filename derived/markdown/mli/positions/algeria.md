@@ -41,3 +41,23 @@
 | 33 | Ukraine | Original | 14-12-2002 | 01-07-2004 | 5 |
 | 34 | UMA | Original | 23-07-1990 | 04-11-2016 | 5 |
 | 35 | Yémen | Original | 29-01-2002 | N/A | 5 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 2 row(s) between them. Every announcement's table was read.*
+
+### Article 8 — the list under the reservation on page 11, one list
+
+*1 row(s), printed on page 11.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 12 | Danemark | 10 (2) (a) | 11 |
+
+### Article 9 — the list under the reservation on page 12, one list
+
+*1 row(s), printed on page 12.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 12 | Danemark | 13 (5) | 12 |

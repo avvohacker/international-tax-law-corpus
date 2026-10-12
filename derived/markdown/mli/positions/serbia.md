@@ -135,4 +135,4 @@
 | 59 | Turkey | Article 9(2) | 35 |
 | 60 | Ukraine | Article 9(2) | 35 |
 | 61 | United Arab Emirates | Article 9(2) | 35 |
-| 64 | Zimbabwe |  | 35 |
+| 64 | Zimbabwe | Article 9(2) | 35 |

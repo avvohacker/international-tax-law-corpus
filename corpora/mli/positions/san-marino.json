@@ -236,7 +236,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 361.6
+            "split_measured_by": "the widest corridor this table's own words leave between them: 72.23 pt between x 355.6 and x 427.8",
+            "split_x": 391.7
           }
         ],
         "truncated": false
@@ -359,7 +360,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 360.0
+            "split_measured_by": "the widest corridor this table's own words leave between them: 92.94 pt between x 331.7 and x 424.7",
+            "split_x": 378.2
           }
         ],
         "truncated": false
@@ -981,6 +983,7 @@
     },
     "scope_lists": {
       "announced": 2,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 2,

@@ -17,3 +17,20 @@
 | 9 | Tunisie | Original | 14-05-1999 | 23-11-2015 | 1 |
 | 10 | Portugal | Original | 17-03-2015 | 1er-01-2018 | 1 |
 | 11 | Turquie | Original | 29-02-2016 | N/A | 1 |
+
+## The agreements the reservations bring within their scope
+
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 6 row(s) between them. Every announcement's table was read.*
+
+### Article 17 — the list under the reservation on page 12, one list
+
+*6 row(s), printed on page 12.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 3 | Canada | Article 9(2) | 12 |
+| 6 | Maroc | Article 9(2) | 12 |
+| 8 | Royaume Uni de Grande Bretagne et d’Irlande du Nord | Article 9(2) | 12 |
+| 9 | Tunisie | Article 9(2) | 12 |
+| 10 | Portugal | Article 9(2) | 12 |
+| 11 | Turquie | Article 9(2) | 12 |

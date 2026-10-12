@@ -3190,6 +3190,64 @@ def test_p06_the_view_names_the_lists_the_artefact_holds():
                       "list, so the second-list case is not exercised anywhere")
 
 
+def test_p06_a_row_the_page_leaves_empty_is_named_not_thinned():
+    """A row whose cell came back empty is counted and named, never filled in.
+
+    A list row is the page's own row, and a cell the reading could not attach to
+    it is published empty - filled in from the row beside it would be a value the
+    page does not print. A number alone would not be enough: a reading that lost
+    a cell to a page break moves the count and nothing says which row it left, so
+    the family's report names the row (its page, its number, and which cell) and
+    this holds the names against the artefacts row by row, then holds their
+    number against the counts the same report publishes.
+
+    The family has one such row today - Chile's Article 3 list row 33, where the
+    page prints a single `Article 1(2)` between rows 33 and 34 and the row the
+    cell stands nearest keeps it - and the test does not require the number to be
+    one: it requires the number and the names to be the same fact, so a corpus
+    with none passes and a corpus with a new one fails until it is declared.
+    """
+    artifacts = _stored_positions()
+    _need(artifacts, "the MLI position artefacts (corpora/mli/positions/*.json)")
+    live: list[tuple] = []
+    for path in artifacts:
+        record = json.loads(path.read_text(encoding="utf-8"))
+        for article, entries in (record.get("article_sections") or {}).items():
+            for entry in entries:
+                for one in entry.get("scope_lists") or []:
+                    for row in one.get("rows") or []:
+                        empty = tuple(field for field in ("other_jurisdiction",
+                                                          "text")
+                                      if not (row.get(field) or "").strip())
+                        if empty:
+                            live.append((record.get("slug"), str(article),
+                                         row.get("page"), row.get("no"), empty))
+    report = json.loads((corpus.corpus_root(ROOT) / "mli" / "positions"
+                         / "batch-report.json").read_text(encoding="utf-8"))
+    named = report.get("reservation_scope_rows_with_an_empty_cell")
+    assert named is not None, (
+        "the family's report says nothing about rows with an empty cell, so a "
+        "row that lost a cell is only a smaller number")
+    held = {(item.get("slug"), str(item.get("article")), item.get("page"),
+             item.get("no"), tuple(item.get("fields") or []))
+            for item in named}
+    assert held == set(live), (
+        f"the artefacts publish {len(live)} row(s) with an empty cell and the "
+        f"family's report names {len(named)}: named and not published "
+        f"{sorted(held - set(live))}, published and not named "
+        f"{sorted(set(live) - held)}")
+    totals = report["reservation_scope_lists"]
+    assert len(live) == (totals["rows_without_a_counterparty"]
+                         + totals["rows_without_a_text"]), (
+        f"the report counts {totals['rows_without_a_counterparty']} row(s) "
+        f"without a counterparty and {totals['rows_without_a_text']} without a "
+        f"text, and the artefacts publish {len(live)} empty cell(s) in all")
+    for _slug, _article, _page, _no, fields in live:
+        assert fields and all(field in ("other_jurisdiction", "text")
+                              for field in fields), (
+            f"a named empty cell is not one of the list's own cells: {fields}")
+
+
 def test_p06_the_view_control_catches_a_stale_list():
     """The control bites: a view with a list the artefact does not hold fails.
 

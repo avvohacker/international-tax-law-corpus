@@ -87,3 +87,23 @@
 | 79 | Ukraine | Original Instrument subséquent | 06-09-1997 30-09-2016 | n/a n/a | 14 |
 | 80 | Uruguay | Original | 10-03-2015 | 11-01-2017 | 14 |
 | 81 | Viêt-Nam | Original | 04-03-1996 | 19-05-1998 | 14 |
+
+## The agreements the reservations bring within their scope
+
+*2 list(s) of agreements are announced under the reservations of this position: 2 read, holding 2 row(s) between them. Every announcement's table was read.*
+
+### Article 6 — the list under the reservation on page 22, one list
+
+*1 row(s), printed on page 22.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 65 | Sénégal | Le Gouvernement du Grand-Duché de Luxembourg et le Gouvernement de la République du Sénégal, soucieux de promouvoir leurs relations économiques et d'améliorer leur coopération en matière fiscale, entendant conclure une Convention pour l'élimination de la double imposition en matière d'impôts sur le revenu et sur la fortune sans créer de possibilités de non-imposition ou d'imposition réduite par l’évasion ou la fraude fiscale (y compris par des mécanismes de chalandage fiscal destinés à obtenir les allégements prévus dans la présente Convention au bénéfice indirect de résidents d'États tiers), sont convenus de ce qui suit : | 22 |
+
+### Article 7 — the list under the reservation on page 40, one list
+
+*1 row(s), printed on page 40.*
+
+| # | Other Contracting Jurisdiction | Provision | Page |
+|---:|---|---|---|
+| 65 | Sénégal | Article 30(2) | 40 |

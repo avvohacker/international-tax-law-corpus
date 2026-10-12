@@ -378,7 +378,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 358.1
+            "split_measured_by": "the widest corridor this table's own words leave between them: 76.69 pt between x 342.8 and x 419.5",
+            "split_x": 381.2
           }
         ],
         "truncated": false
@@ -555,7 +556,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 355.1
+            "split_measured_by": "the widest corridor this table's own words leave between them: 77.54 pt between x 338.3 and x 415.8",
+            "split_x": 377.0
           }
         ],
         "truncated": false
@@ -644,7 +646,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 348.4
+            "split_measured_by": "the widest corridor this table's own words leave between them: 66.13 pt between x 336.9 and x 403.1",
+            "split_x": 370.0
           }
         ],
         "truncated": false
@@ -698,7 +701,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 354.8
+            "split_measured_by": "the widest corridor this table's own words leave between them: 86.08 pt between x 336.7 and x 422.8",
+            "split_x": 379.7
           }
         ],
         "truncated": false
@@ -786,7 +790,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 358.1
+            "split_measured_by": "the widest corridor this table's own words leave between them: 81.44 pt between x 340.5 and x 421.9",
+            "split_x": 381.2
           }
         ],
         "truncated": false
@@ -2078,6 +2083,7 @@
     },
     "scope_lists": {
       "announced": 5,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 5,

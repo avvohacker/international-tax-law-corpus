@@ -49,11 +49,11 @@
 
 ## The agreements the reservations bring within their scope
 
-*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 24 row(s) between them. Every announcement's table was read.*
+*1 list(s) of agreements are announced under the reservations of this position: 1 read, holding 25 row(s) between them. Every announcement's table was read.*
 
 ### Article 17 — the list under the reservation on page 27, one list
 
-*24 row(s), printed on page 27.*
+*25 row(s), printed on page 27.*
 
 | # | Other Contracting Jurisdiction | Provision | Page |
 |---:|---|---|---|
@@ -81,3 +81,4 @@
 | 34 | Slovenia | Article 9(2) | 27 |
 | 37 | Türkiye | Article 9(2) | 27 |
 | 38 | Ukraine | Article 9(2) | 27 |
+| 39 | United Arab Emirates | Article 10(2) | 27 |

@@ -164,7 +164,8 @@
             ],
             "rows_without_a_counterparty": 0,
             "rows_without_a_text": 0,
-            "split_x": 344.6
+            "split_measured_by": "the widest corridor this table's own words leave between them: 62.37 pt between x 332.1 and x 394.4",
+            "split_x": 363.3
           }
         ],
         "truncated": false
@@ -431,6 +432,7 @@
     },
     "scope_lists": {
       "announced": 1,
+      "empty_cells": [],
       "not_read": [],
       "options_announcing_more_than_one_list": 0,
       "read": 1,

@@ -850,6 +850,7 @@ report.
 `test_p06_the_view_names_the_lists_the_artefact_holds`,
 `test_p06_the_view_control_catches_a_stale_list`,
 `test_p06_the_lists_are_the_tables_the_page_prints`,
+`test_p06_a_row_the_page_leaves_empty_is_named_not_thinned`,
 `test_p06_the_page_control_catches_an_invented_row`.
 
 **Why it exists.** A reservation that says "the following agreements contain
@@ -862,7 +863,9 @@ Article 7(15)(c), each with its own table of agreements, and this corpus' own
 option model reads the two statements as one option because the second carries
 no printed label of its own. A reading that took the first announcement for the
 statement's only list lost the second table in silence. The family now holds
-119 announced lists, reads all 119, and holds 2 156 rows between them.
+127 announced lists, reads 126 of them and declares the one it cannot read
+(Gabon's Article 17 prints no row numbers in a left column), and holds 2 176 rows
+between them.
 
 **What is read, and from where.** The table is located by its own heading row
 rather than by the sentence above it, because a statement's prose can continue
@@ -870,12 +873,18 @@ past the announcement - Italy's Article 7 prints three lines of explanation
 between the sentence and its table - and a table is not claimed when a later
 announcement of the same statement stands between the two, because that second
 table belongs to the other reservation. Its columns are split where the table
-leaves its widest gap in x, its rows are anchored on the numbers that open their
-own lines, and each row's number, counterparty, provision and page are published
-as the page prints them. What the page prints in a heading the table does not
-name does not enter the list: Norway's Article 3 carries three digits two points
-above its own headings, the tail of the covered-agreements table on the page
-before, and reading them as rows would put two agreements into a list of one.
+leaves its widest corridor in x - the vertical band no word of the table crosses,
+which a justified line of one column cannot open inside that column - its rows
+are anchored on the numbers that open their own lines, and each row's number,
+counterparty, provision and page are published as the page prints them. What the
+page prints in a heading the table does not name does not enter the list:
+Norway's Article 3 carries three digits two points above its own headings, the
+tail of the covered-agreements table on the page before, and reading them as rows
+would put two agreements into a list of one. Nor does a cell that reads a word of
+a heading and stands below the table's own first row become a heading: Senegal's
+Article 9 list is set justified, so one run of `Royaume Uni de Grande` *is* the
+word `de` of the French heading above it, and Mexico's Article 6 prints a `de` of
+its own preamble text 400 pt under its headings.
 
 **Where the lists are read.** The position's derived view
 (`derived/markdown/mli/positions/<slug>.md`) carries one table per announced
@@ -890,11 +899,18 @@ two-list statement cannot go missing from the view either.
 read, how many rows they hold, how many rows came back with an empty
 counterparty or an empty text, and how many statements announce more than one
 list), `reservations_announcing_a_list_not_read` (every announcement whose table
-this reading could not read, with the reader's own reason) and
+this reading could not read, with the reader's own reason),
 `reservations_announcing_more_than_one_list` (the statements that announce more
-than one, named, because their second table is the one likeliest to be lost).
-Each position publishes the same counts in its own `qa.scope_lists`, and the
-control holds the two against each other and against the artefacts.
+than one, named, because their second table is the one likeliest to be lost) and
+`reservation_scope_rows_with_an_empty_cell` (every row whose cell came back
+empty, named with the page, the row's number and the cell - the family holds one,
+Chile's Article 3 list row 33 on page 6, where the page prints a single
+`Article 1(2)` between rows 33 and 34 and the row it stands nearest keeps it).
+Each position publishes the same counts and the same names in its own
+`qa.scope_lists`, and the control holds the two against each other and against
+the artefacts: the named rows are held against the artefacts row by row, and
+their number against the counts, so a cell lost to a page break cannot move a
+number without saying which row it left.
 
 **What is not claimed.** The rows are the page's, and they are not a judgement
 about the reservation: whether a treaty named in a list is inside the reservation

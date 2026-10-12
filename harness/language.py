@@ -65,6 +65,12 @@ ALLOW = {
     # the pin measures a counterparty exactly, and the source's own word is the
     # only value the row can hold.
     "norvège",
+    # `à` is the French preposition the francophone positions print (`prévue à
+    # l'article 6(4)`), quoted in `harness/mli.py` where the reader declares the
+    # French sentence that announces a list. The accent rule above is written
+    # for Italian endings and this word is not Italian: it is the page's own
+    # word, in a quotation of a sentence the reader has to match.
+    "à",
 }
 
 WORD_RE = re.compile(r"\b([A-Za-zÀ-ÿ']+)\b")

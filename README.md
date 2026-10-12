@@ -11,7 +11,7 @@ Three layers, three repositories, one contract of fidelity:
 
 * **corpus (this repository)** — the citable base: UN Model 2017 and 2021 plus the OECD MLI framework (mapping, signatories and parties, country positions). Closed scope, byte-reproducible, every unit traceable to its page. **State**: both editions and every view built, anti-drift control in CI.
 * **library** ([international-tax-law-library](https://github.com/avvohacker/international-tax-law-library)) — the bilateral treaties people work on, contributed as they go, under the same fidelity contract (source hash, page-anchored units, declared gaps, no invention). Invitation: as you work a treaty, put it here. **State**: contract walking — two treaties in (`uk-us-2001` US–UK 2001, `no-uk-2013` UK–Norway 2013).
-* **mcp** ([international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp)) — the query mind over corpus plus library: treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. **State**: server — six tools answering from the two checkouts and refusing when they cannot; tested over the protocol in CI.
+* **mcp** ([international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp)) — the query mind over corpus plus library: treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. **State**: server — seven tools answering from the two checkouts and refusing when they cannot; tested over the protocol in CI.
 
 ## Roadmap
 
@@ -20,7 +20,7 @@ Three layers, three repositories, one contract of fidelity:
 2. **Library walks** (now) — bilateral treaties enter one by one under the
    same fidelity contract; the first is in (`uk-us-2001`) as the proof, with
    fetch + rebuild + contract tests in CI.
-3. **MCP walks** (now) — this server is built: five tools over corpus plus
+3. **MCP walks** (now) — this server is built: seven tools over corpus plus
    library, as-modified verdicts, citations to units, and silence where the
    data is silent.
 4. **OECD Model** (later) — a corpus extension once 1–3 walk; excluded today
@@ -75,12 +75,15 @@ and prints, because it is what a corpus is for:
   "the following agreements contain provisions that are within the scope of this
   reservation" and prints a table of them, that table is read and published in
   the statement's own artefact, so whether one particular treaty falls inside the
-  reservation is a lookup and not an unanswerable question. The family holds 119
-  announced lists, reads all 119 and holds 2 156 rows between them - including
+  reservation is a lookup and not an unanswerable question. The family holds 127
+  announced lists, reads 126 of them and holds 2 176 rows between them - including
   the six statements that print **two** lists each (Argentina's Article 7 prints a
   reservation under Article 7(15)(b) and, in the next paragraph, one under
   Article 7(15)(c), each with its own table), which the reading keeps one list
-  per announcement rather than the first alone. A table the reading could not
+  per announcement rather than the first alone. The one list it cannot read -
+  Gabon's Article 17, whose table prints no row numbers in a left column - and
+  the one row whose cell came back empty (Chile's Article 3 list, row 33) are
+  declared by name rather than passed over. A table the reading could not
   read would be named in `reservations_announcing_a_list_not_read` with the
   reader's reason; none is. The lists are printed in each position's markdown
   view beside the rows it decides.
