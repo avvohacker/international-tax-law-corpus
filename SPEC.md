@@ -312,9 +312,33 @@ tracks - the names that are supposed to be there (a copyright line, an email
 address, a GitHub owner) excepted, because a repository that could not name its
 own author would be a worse repository, not a cleaner one.
 
+The rule is no longer written in a test file, and no longer in three of them. It
+is `harness/discipline/machine_traces.py`, because the library and the server owe
+it the same rule and the three copies had already drifted - three wordings, three
+exemption lists, three answers to whether a checkout's own directory name is a
+trace. It is vendored verbatim into those two repositories by
+`scripts/vendor-discipline.py`, pinned there by hash, and
+`scripts/discipline-drift.py` holds the three to it in CI: the copies byte for
+byte, and then the rule *run* for each repository under the identity its own CI
+gives it.
+
+Two things the rule cannot decide by itself are declared rather than discovered.
+A path written with a placeholder (`<user>`, the way `fixtures/known_defects.yaml`
+writes one) is not a path to a machine. And the account names CI runs under are
+exempt from the name rule, because they are ordinary English words this family's
+own prose says - a workflow comment here reads "the runner reads what the corpus
+was built from" - while a CI account names no person at all. The exemption is the
+name and never the path: `test_a_ci_accounts_home_path_is_still_a_trace` proves
+that the absolute-path rule still catches a home directory under that account,
+and the scan is run on a desk under CI's identity
+(`test_the_corpus_passes_the_rule_as_the_ci_account_sees_it`), because a rule
+that collides with the repository's own prose is invisible from a desk - which is
+how the first version of it went red on three workflows instead of here.
+
 **Anti-pattern.** Any absolute path that survives into an output. A report that
 names the machine that generated it. A committed file that names the folder it
-was checked out into.
+was checked out into. A fourth copy of this rule, written in the repository that
+happened to need it next.
 
 ---
 

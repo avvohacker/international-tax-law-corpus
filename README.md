@@ -136,8 +136,11 @@ What is here:
 | `provenance/sources.yaml` | every input with its URL, SHA-256, date, rights note, and what is built from it (`produces`) |
 | `rules/*.yaml` | the classification rules the extractor will read |
 | `harness/` | the probe engine and the status report |
+| `harness/discipline/` | the rules the three repositories share — machine traces, the workflow reader, the status board's rule — in one implementation, vendored from here into the library and the server |
 | `tests/` | the invariants, as tests |
 | `scripts/read-audit.py` | what a command really reads here, in files and bytes — the measurement behind what CI fetches |
+| `scripts/vendor-discipline.py` | copies `harness/discipline/` into a repository that runs it, with the pin that says which bytes traveled |
+| `scripts/discipline-drift.py` | holds the three repositories to one discipline, from their three checkouts, the way CI does |
 | `docs/harness-status.md` | generated. Do not edit. |
 | `docs/guide-maps-and-tables.md` | what this project is, in plain language with maps and tables — the first file to read for a newcomer |
 
@@ -153,6 +156,13 @@ python3 -m venv .venv                  # 3.11 or newer; `pyproject.toml` says so
                                             # an earlier run already verified; a source
                                             # with a sealed copy is never cached
 .venv/bin/python scripts/read-audit.py module harness drift   # what a command reads
+
+# the rules the three repositories share: vendored here, pinned there
+.venv/bin/python scripts/vendor-discipline.py --into ../international-tax-law-library \
+                                             --into ../international-tax-law-mcp
+.venv/bin/python scripts/vendor-discipline.py --check --into ../international-tax-law-mcp
+.venv/bin/python scripts/discipline-drift.py --corpus . --library ../international-tax-law-library \
+                                            --mcp ../international-tax-law-mcp
 
 .venv/bin/python -m pytest -q          # the invariants and the probes
 .venv/bin/python -m harness status     # one line: is there a corpus, and what does the harness see

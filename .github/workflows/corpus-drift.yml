@@ -170,7 +170,14 @@ jobs:
         # they take under a second, and they catch the class of regression no
         # corpus rebuild can see: a row repair that carried a path or a
         # non-English phrase into a published file.
-        run: python -m pytest -q -k "f13 or f14 or spec"
+        #
+        # `or traces` is the whole-tree half of F14 (`test_no_machine_traces`),
+        # which scans every tracked file rather than the artefacts this job's
+        # rebuild has just written. It was missing from this selection, so the
+        # only place the whole-tree scan ran was the compatibility job - which is
+        # why a rule that was red on every runner was green here for three runs,
+        # and was found by reading a red badge instead of by this control.
+        run: python -m pytest -q -k "f13 or f14 or spec or traces"
 
       - name: Does the block reader still read every promoted layout?
         # The drift control above rebuilds the corpus and compares it with what
@@ -257,3 +264,49 @@ jobs:
         # working language and machine traces of every artefact (F13, F14), and
         # the meta-tests that hold the catalogues and SPEC.md together.
         run: python -m pytest -q
+
+  discipline:
+    # The other half of this family's anti-drift control. The jobs above hold the
+    # corpus against its own sources; this one holds the three repositories
+    # against the rules they share - and the sharing had been a fiction: the
+    # machine-trace rule existed in three wordings with three exemption lists,
+    # the workflow readers in two different APIs, and the status board's rule was
+    # a paragraph of prose in each repository. All of that was found by reading
+    # the three side by side by hand, which is not a control.
+    #
+    # `scripts/discipline-drift.py`, owned here, takes all three checkouts: it
+    # compares each `vendor/discipline/` copy byte for byte with this one and with
+    # the pin that copy declares, and then *runs* the rule for each repository
+    # under the identity its own CI gives it - the account `runner`, the checkout
+    # named after the project. Equal bytes are not a rule that passes, which is
+    # what the run is for: the first version of the rule was red on all three
+    # workflows, on lines that name nobody, and no desk could see it.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repository, which owns the discipline
+        uses: actions/checkout@v4
+
+      - name: Check out the library
+        uses: actions/checkout@v4
+        with:
+          repository: avvohacker/international-tax-law-library
+          path: library
+
+      - name: Check out the server
+        uses: actions/checkout@v4
+        with:
+          repository: avvohacker/international-tax-law-mcp
+          path: mcp
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install what the reader needs, and nothing else
+        run: |
+          python -m pip install --upgrade pip
+          pip install "PyYAML>=6.0"
+
+      - name: Do the three still hold one discipline?
+        run: python scripts/discipline-drift.py --corpus . --library library --mcp mcp
