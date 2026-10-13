@@ -56,6 +56,15 @@ def live_artifacts(root: Path, destination: Path) -> dict[str, Path]:
         produces, artefact = entry["produces"], entry["artefact"]
         if not artefact or produces in (None, "none"):
             continue
+        # A vendored schema is an *input*, not an artefact this pipeline
+        # rebuilds. `provenance_differences` recomputes its digest against
+        # `provenance/akn-xsd.sha256` and reports a changed byte there, which is
+        # the right control for a file nobody regenerates; asked to rebuild it,
+        # this function could only ever answer "not written", and a drift report
+        # that names a file no command can fix is a report a reader learns to
+        # skip. So it is left to the manifest, which does check it.
+        if produces == "schema":
+            continue
         if produces == "akn":
             if entry["pdf"] is None:
                 continue
@@ -146,6 +155,10 @@ def _declared_artifacts(root: Path) -> list[Path]:
     for entry in corpus.declared_sources(root):
         artefact = entry["artefact"]
         if not artefact or entry["produces"] in (None, "none"):
+            continue
+        # Same reason as in `live_artifacts`: a vendored schema is pinned in a
+        # manifest and checked by digest, not by rebuilding it.
+        if entry["produces"] == "schema":
             continue
         target = root / artefact
         if artefact.endswith("/"):

@@ -168,7 +168,11 @@ def register(root: Path | None = None) -> Path:
 #   mapping   the source is the Convention, and its document is the index of
 #             what each of its Articles does to a treaty
 #   none      nothing is built yet, and the register says why
-PRODUCES = ("akn", "table", "positions", "mapping", "none")
+#   schema    a standard the corpus is validated against rather than read from:
+#             the artefact is the vendored copy (vendor/akn/), pinned in a
+#             manifest, and `harness/oasis.py` is what checks the corpus
+#             against it
+PRODUCES = ("akn", "table", "positions", "mapping", "none", "schema")
 
 
 def register_entries(root: Path | None = None) -> list[dict]:
@@ -208,6 +212,11 @@ def declared_sources(root: Path | None = None) -> list[dict]:
             "pdf": pdf,
             "dir": str(entry.get("dir") or ""),
             "manifest": str(entry.get("manifest") or ""),
+            # What a vendored source declares it puts in the tree, named one by
+            # one: a `schema` entry's artefact is a copy of files that are not
+            # this project's, and "is it built" a reader can only ask if the
+            # register says which files it means.
+            "files": [str(name) for name in (entry.get("files") or [])],
             "rules": bool(entry.get("file") or entry.get("dir")),
         })
     return out

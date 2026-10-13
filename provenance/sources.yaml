@@ -41,6 +41,12 @@
 #            source yet, with the reason, and F7 compares the one artefact the
 #            pipeline does produce for it: the reading, which is what F2 and F6
 #            are answered from.
+#     schema a standard the corpus is checked against rather than read from:
+#            the artefact is the vendored copy itself (vendor/akn/), pinned in
+#            a manifest, and `python -m harness oasis` validates every AKN
+#            document against it without reaching for anything but the vendored
+#            files. A `none` source produces no artefact; this one produces the
+#            schema, and the corpus is the thing being measured against it.
 
 - id: un-model-2017
   produces: akn
@@ -222,26 +228,37 @@
     attribution: "OECD, MLI Position - Germany"
     verified_on: 2026-09-27
 
+# The schema is vendored, not read from: it is committed verbatim under
+# `vendor/akn/`, pinned file by file in `provenance/akn-xsd.sha256`, and used by
+# `python -m harness oasis`, which is invariant F7's strongest form - the
+# document the pipeline writes is checked against the document the standard
+# describes, with no network and no second copy of the schema anywhere.
+#
+# The copy vendored here is the last release of the OASIS TC Open Repository
+# whose target namespace is the namespace this corpus writes,
+# `http://docs.oasis-open.org/legaldocml/ns/akn/3.0`. The CS02 draft in the same
+# repository declares the working namespace `.../akn/3.0/WD17` and would
+# validate a different vocabulary, so it is named here and deliberately not
+# vendored: a schema that does not name the corpus' own namespace could not
+# validate it, and vendoring it would make the disagreement invisible.
 - id: akn-xsd
-  produces: none
-  produces_pending: >-
-    Nothing is built from the schema; it is vendored and validated against
-    (invariant F7's strongest form, not yet possible: the vendor/ directory and
-    lxml are both absent).
+  produces: schema
+  artefact: vendor/akn/
+  manifest: provenance/akn-xsd.sha256
   title: Akoma Ntoso 3.0 schema
   publisher: OASIS legaldocml TC Open Repository
-  url: https://github.com/oasis-open/legaldocml-akomantoso
+  url: >-
+    https://raw.githubusercontent.com/oasis-open/legaldocml-akomantoso/d79ac76044de7a8d2f8c156dbceb86c8e3b0f7aa/TemporaryRelease20170330Final/akomantoso30.xsd
   files:
     - vendor/akn/akomantoso30.xsd
     - vendor/akn/xml.xsd
-  sha256: pending
-  hash_note: >-
-    Third-party schema, vendored verbatim and validated against, not extracted
-    from. Its hash is recorded when the vendored copy is added.
-  retrieved: 2026-09-26
+  retrieved: 2026-10-13
   rights:
     status: open_licence
     redistribute: true
-    basis: OASIS TC Open Repository; validation only.
+    basis: >-
+      OASIS TC Open Repository; vendored verbatim and validated against, never
+      extracted from. Redistribution is the point of a vendored schema: the
+      bytes a validation ran against have to be in the commit that claims it.
     attribution: "OASIS legaldocml TC, Akoma Ntoso 3.0"
-    verified_on: 2026-09-27
+    verified_on: 2026-10-13

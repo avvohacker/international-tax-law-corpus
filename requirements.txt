@@ -9,3 +9,13 @@ pytest==8.4.2
 # of. It is imported inside the reader, so everything except `harness ledger`
 # works without it.
 pymupdf==1.26.5
+
+# `harness/oasis.py` validates every committed AKN document against the schema
+# vendored under `vendor/akn/`. lxml is the only library that enforces an XSD,
+# and it is imported inside the validator - so everything except `harness oasis`
+# works without it, the way everything except `harness ledger` works without
+# PyMuPDF. It is pinned for the same reason the others are: the conformance
+# `fixtures/oasis-conformance.yaml` declares was read with exactly this reader,
+# and a schema engine that reports different messages would move a declaration
+# nobody changed.
+lxml==6.0.2

@@ -110,6 +110,19 @@ jobs:
         # corpus is in step, so it never blocks a clean run.
         run: python -m harness drift --check-schema
 
+      - name: Does the corpus conform to the vendored AKN 3.0 schema?
+        # F7's strongest form. `python -m harness oasis` validates every
+        # committed AKN document against the schema vendored under `vendor/akn/`
+        # (pinned in `provenance/akn-xsd.sha256`, read through a resolver that
+        # refuses anything but a sibling of the schema, so the job needs no
+        # network for it). The violations the corpus declares it still has live
+        # in `fixtures/oasis-conformance.yaml`, and the command compares the run
+        # with that file in both directions: a class the schema reports and
+        # nobody declared fails here, and so does an entry that is still claimed
+        # after the class was fixed. A fix therefore arrives with its
+        # declaration narrowed, which is what keeps the file a worklist.
+        run: python -m harness oasis
+
       - name: Open the repair pull request
         # A pull request from a fork has no write token, so the request is only
         # opened where the control runs with the repository's own credentials.

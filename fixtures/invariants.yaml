@@ -70,7 +70,13 @@
   scope: project
   enforced_by: [test_f07_no_generated_artifacts_tracked,
                 test_f07_every_source_declares_what_is_built_from_it,
-                test_f07_build_is_byte_identical]
+                test_f07_build_is_byte_identical,
+                test_the_vendored_pair_is_the_registered_one,
+                test_the_schema_accepts_a_document_that_conforms,
+                test_the_validator_names_what_the_schema_refuses,
+                test_a_schema_that_would_reach_outside_the_vendored_pair_is_refused,
+                test_an_import_that_was_never_vendored_is_a_stated_failure,
+                test_the_declaration_says_what_the_schema_says]
 
 - id: F8
   name: Never fake

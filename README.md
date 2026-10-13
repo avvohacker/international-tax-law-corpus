@@ -135,6 +135,7 @@ What is here:
 | `fixtures/known_defects.yaml` | the 2026-09-27 audit, as probes that assert a defect is absent |
 | `provenance/sources.yaml` | every input with its URL, SHA-256, date, rights note, and what is built from it (`produces`) |
 | `rules/*.yaml` | the classification rules the extractor will read |
+| `vendor/akn/` | the AKN 3.0 schema, vendored verbatim and validated against, pinned in `provenance/akn-xsd.sha256` |
 | `harness/` | the probe engine and the status report |
 | `harness/discipline/` | the rules the three repositories share — machine traces, the workflow reader, the status board's rule — in one implementation, vendored from here into the library and the server |
 | `tests/` | the invariants, as tests |
@@ -184,6 +185,12 @@ python3 -m venv .venv                  # 3.11 or newer; `pyproject.toml` says so
 # what changed between two editions, as a view of the corpus
 .venv/bin/python -m harness diff                   # defaults to un-model 2017 → 2021
 .venv/bin/python -m harness diff --write           # also write derived/reports/
+
+# the corpus against the standard it is named after
+.venv/bin/python -m harness oasis                  # every AKN document, against vendor/akn/
+.venv/bin/python -m harness oasis --record         # record what the run finds as the
+                                                   # declared violations: a decision,
+                                                   # not a repair. Read the run first
 ```
 
 Three verdicts, and the third is the point:

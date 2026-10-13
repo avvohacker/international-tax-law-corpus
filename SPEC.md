@@ -145,7 +145,10 @@ code.
 
 **Scope.** project. **Proof.** `test_f07_no_generated_artifacts_tracked`,
 `test_f07_every_source_declares_what_is_built_from_it`,
-`test_f07_build_is_byte_identical`.
+`test_f07_build_is_byte_identical`, `test_the_vendored_pair_is_the_registered_one`,
+`test_the_schema_accepts_a_document_that_conforms`,
+`test_the_validator_names_what_the_schema_refuses`,
+`test_the_declaration_says_what_the_schema_says`.
 
 **What F7 does not mean.** "Deterministic" is a statement about an artefact, so
 the test compares exactly the artefacts the register declares are built from
@@ -157,6 +160,36 @@ this invariant must reach, and the declaration in `provenance/sources.yaml` is
 what keeps the difference visible instead of arguable: a source that produces
 nothing says so, with a reason, and
 `test_f07_every_source_declares_what_is_built_from_it` refuses silence.
+
+**The strongest form of F7.** Determinism says the pipeline writes the same
+document twice; it does not say the document is the one the standard describes.
+Both claims are about the same artefact, and the second is checkable: the AKN 3.0
+schema is vendored under `vendor/akn/` - the OASIS legaldocml TC release whose
+target namespace is the one this corpus writes, pinned file by file in
+`provenance/akn-xsd.sha256` - and `python -m harness oasis` validates every
+committed AKN document against it. The validator reads nothing but those two
+files: a resolver refuses every other `schemaLocation`, so a run cannot check the
+corpus against whatever a URL served that day, and asking the question without
+the schema here is a stated failure rather than a pass. The register entry
+`akn-xsd` used to say the opposite in as many words ("not yet possible: the
+vendor/ directory and lxml are both absent"); it now declares the vendored copy,
+and a vendored source that is declared and absent fails
+`test_f07_every_source_declares_what_is_built_from_it`.
+
+**What it says today, and why that is written down.** The committed documents do
+not all conform. The violations are named class by class and document by
+document in `fixtures/oasis-conformance.yaml`, the board prints the count, and
+`python -m harness oasis` fails when the run and that file disagree - in both
+directions: a class nobody declared, a count that moved, or an entry still
+claimed after the class was fixed. The declaration is a worklist and not a
+suppression, and what it records is a finding about the projection, not about the
+schema: `harness/akn.py` writes the shape AKN4UN's guidelines describe for a UN
+document, and AKN 3.0 is stricter about where a `list`, an `alinea` and an
+authorial note may stand inside a hierarchy, about a `preamble`'s heading, and
+about the metadata an act's FRBR block must carry. Fixing those is a change to
+the artefact, rebuilt from the sources and republished; until it is made, this
+corpus says what it is - a projection that does not yet validate against the
+standard it names.
 
 **What it does for a source that is not one document.** The MLI positions are one
 register entry for 110 documents (§P4), and reading them takes about a minute. So

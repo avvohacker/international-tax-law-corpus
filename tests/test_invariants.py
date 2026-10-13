@@ -347,6 +347,23 @@ def test_f07_every_source_declares_what_is_built_from_it():
             problems.append(f"{entry['id']}: declares that no corpus artefact is "
                             f"built from it and gives no reason "
                             f"(`produces_pending`)")
+        if what == "schema":
+            # A vendored standard is the one artefact this pipeline does not
+            # write: it is copied in and then checked against, so the register
+            # has to say which files, and every one of them has to be here. A
+            # declared-and-absent schema would be a validation that cannot run,
+            # which is the state this entry replaced.
+            if not entry["files"]:
+                problems.append(f"{entry['id']}: declares a vendored standard "
+                                f"and names no file (`files`)")
+            for name in entry["files"]:
+                if not (ROOT / name).is_file():
+                    problems.append(f"{entry['id']}: {name} is declared and is "
+                                    f"not here")
+            if not entry["manifest"]:
+                problems.append(f"{entry['id']}: a vendored copy is what the "
+                                f"validation runs against, and it is pinned in "
+                                f"a manifest: this entry declares none")
     assert not problems, "\n".join(problems)
 
 

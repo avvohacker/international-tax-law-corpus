@@ -1,10 +1,12 @@
-"""Command line: `python -m harness [status|probes|report|ledger|drift]`.
+"""Command line: `python -m harness [status|probes|report|ledger|drift|oasis]`.
 
 Exit codes matter (they are read by CI and by humans in a hurry):
 
   0  nothing is wrong in what could be evaluated
-  1  a probe fired in this repository
-  2  the invocation itself was wrong
+  1  a probe fired in this repository (or, for `oasis`, the schema said
+     something the declaration does not)
+  2  the invocation itself was wrong (or, for `oasis`, the schema is not
+     vendored or lxml is missing, so the question cannot be asked)
 
 Note what is *not* an error: `NOT-EVALUATED`. An artefact that does not exist
 yet is not a failure of the artefact; it is a statement that the harness cannot
@@ -18,7 +20,8 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from harness import (akn, corpus, diff, drift, ledger, mli, report, views)
+from harness import (akn, corpus, diff, drift, ledger, mli, oasis, report,
+                     views)
 
 
 def _cmd_status(args) -> int:
@@ -411,6 +414,47 @@ def _cmd_drift(args) -> int:
     return 1 if (result["published_but_unbuilt"] or result["provenance"]) else 0
 
 
+def _cmd_oasis(args) -> int:
+    """Check every committed AKN document against the vendored OASIS schema.
+
+    The report is live and the declaration is the corpus' own statement of what
+    it does not have yet, so the two are compared here rather than trusted:
+
+      0  the run and `fixtures/oasis-conformance.yaml` agree
+      1  they do not - a violation nobody declared, a count that moved, or an
+         entry the schema no longer reports (fixing a class makes this red
+         until the declaration is edited, which is the point)
+      2  the schema is not vendored, or lxml is not installed, so the question
+         cannot be asked at all
+    """
+    root = Path(args.root) if args.root else None
+    try:
+        if args.record:
+            path = oasis.write_declaration(root)
+            print(f"recorded: {path}")
+        live = oasis.report(root)
+    except oasis.SchemaNotVendored as error:
+        print(f"oasis: {error}", file=sys.stderr)
+        return 2
+    for doc in live["documents"]:
+        print(f"[{'VALID  ' if doc['conforms'] else 'INVALID'}] {doc['path']}")
+        for item in doc["classes"]:
+            print(f"          {item['count']:>4}x  {item['class']}")
+    print(f"oasis: {live['conforming']} of {len(live['documents'])} document(s) "
+          f"valid against the vendored schema, {live['violations']} violation(s) "
+          f"in {live['classes']} class(es)")
+    moves = oasis.drift(root)
+    if moves:
+        print(f"the declaration and the schema disagree "
+              f"(`{oasis.DECLARATION.as_posix()}`), {len(moves)} line(s):")
+        for line in moves:
+            print(f"  {line}")
+        return 1
+    print(f"the declaration says what the schema says "
+          f"(`{oasis.DECLARATION.as_posix()}`)")
+    return 0
+
+
 def _cmd_report(args) -> int:
     root = Path(args.root) if args.root else None
     if args.write:
@@ -427,7 +471,7 @@ def main(argv: list[str] | None = None) -> int:
         description="Fidelity harness for international-tax-law-corpus.")
     parser.add_argument("command", nargs="?",
                         choices=("status", "probes", "report", "ledger",
-                                 "diff", "drift"),
+                                 "diff", "drift", "oasis"),
                         default=None)
     parser.add_argument("--source",
                         help="ledger: which source to read, by register id")
@@ -450,6 +494,10 @@ def main(argv: list[str] | None = None) -> int:
                         action="store_true",
                         help="drift: fail if any difference unit names a size "
                              "instead of a line or a field; writes nothing")
+    parser.add_argument("--record", action="store_true",
+                        help="oasis: record the violations the run finds as "
+                             "fixtures/oasis-conformance.yaml. A decision, not "
+                             "a repair: read the run before recording it")
     args = parser.parse_args(argv)
     # `--write` only makes sense for the report and `--body`/`--title`/
     # `--check-schema` only for the drift control, so any of them selects its
@@ -459,7 +507,8 @@ def main(argv: list[str] | None = None) -> int:
         else "report" if args.write else "status")
     return {"status": _cmd_status, "probes": _cmd_probes,
             "report": _cmd_report, "ledger": _cmd_ledger,
-            "diff": _cmd_diff, "drift": _cmd_drift}[command](args)
+            "diff": _cmd_diff, "drift": _cmd_drift,
+            "oasis": _cmd_oasis}[command](args)
 
 
 if __name__ == "__main__":

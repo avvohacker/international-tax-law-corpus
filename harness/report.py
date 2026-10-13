@@ -20,7 +20,7 @@ from __future__ import annotations
 import tomllib
 from pathlib import Path
 
-from harness import corpus
+from harness import corpus, oasis
 from harness.checks import Result, evaluate
 from harness.defects import load_defects, load_invariants
 
@@ -132,6 +132,18 @@ def source_rows(root: Path | None = None) -> list[dict]:
                 partial = bool(unread)
             else:
                 state = "MISSING"
+        elif what == "schema":
+            # A vendored standard: the artefact is the copy itself, so "is it
+            # built" is whether every file the register names is in the tree.
+            # All of them or none, deliberately: a pair minus the file the
+            # other imports is a schema that cannot be built, and printing it as
+            # "vendored" would be the half-truth this report exists to refuse.
+            # Which files are missing is `test_f07_a_vendored_source_is_all_
+            # there_or_a_stated_absence`'s answer, not a number here.
+            named = entry.get("files") or []
+            state = ("built (" + f"{len(named)} vendored file(s))"
+                     if named and all((base / name).is_file() for name in named)
+                     else "MISSING")
         elif what in ("table", "positions", "mapping"):
             # A shape whose corpus artefact is one declared file: "is it built"
             # is the file's existence, and nothing has to be reconstructed from
@@ -147,6 +159,34 @@ def source_rows(root: Path | None = None) -> list[dict]:
                     "built": state.startswith("built"), "partial": partial,
                     "reason": entry["pending"]})
     return out
+
+
+def conformance(root: Path | None = None) -> dict:
+    """What the vendored AKN 3.0 schema says about the corpus' own documents.
+
+    F7's strongest form, asked live: the schema is vendored, so the question can
+    be asked wherever the tree is, and the answer is printed on the board rather
+    than left in a test nobody reads. A question that cannot be asked - no
+    schema in the tree, or no lxml to read it with - is returned as an error and
+    printed as such: "not possible" is a state, and it is never rendered as
+    "nothing to report".
+    """
+    try:
+        return oasis.report(root)
+    except oasis.SchemaNotVendored as error:
+        return {"error": str(error)}
+
+
+def _conformance_lines(state: dict) -> list[str]:
+    """The board's own reading of the schema check, or why it is absent."""
+    if state.get("error"):
+        return [f"- AKN conformance: not asked — {state['error']}"]
+    return [
+        f"- AKN conformance: {state['conforming']} of "
+        f"{len(state['documents'])} committed document(s) valid against the "
+        f"vendored schema, {state['violations']} violation(s) in "
+        f"{state['classes']} class(es)"
+    ]
 
 
 def render(root: Path | None = None) -> str:
@@ -188,6 +228,12 @@ def render(root: Path | None = None) -> str:
         add(f"- sources: {len(sources)} — {len(built)} built{in_part}, "
             f"{len(sources) - len(built)} declared not built "
             f"(`provenance/sources.yaml` says which and why)")
+    # The schema check is a number in the summary like every other: it is the one
+    # claim in this repository that a reader can neither see nor infer from a
+    # green run, and `fixtures/oasis-conformance.yaml` is where the violations it
+    # finds are named.
+    state = conformance(root)
+    lines.extend(_conformance_lines(state))
     add("")
 
     if sources:
@@ -207,6 +253,30 @@ def render(root: Path | None = None) -> str:
             for s in pending:
                 add(f"- **`{s['id']}`** — {s['reason']}")
             add("")
+
+    if not state.get("error") and state["violations"]:
+        add("## What the vendored schema says")
+        add("")
+        add("The AKN 3.0 schema is vendored under `vendor/akn/` and pinned in "
+            "`provenance/akn-xsd.sha256`; `python -m harness oasis` checks every "
+            "committed document against it and reaches for nothing but those "
+            "files. What it finds here is named, class by class, in "
+            "`fixtures/oasis-conformance.yaml` - a class that is fixed has to be "
+            "taken out of that file, and a new one has to be added to it.")
+        add("")
+        add("| document | verdict | violations |")
+        add("| --- | --- | --- |")
+        for doc in state["documents"]:
+            verdict = "valid" if doc["conforms"] else "INVALID"
+            add(f"| `{doc['path']}` | {verdict} | {len(doc['violations'])} |")
+        add("")
+        for doc in state["documents"]:
+            if doc["conforms"]:
+                continue
+            add(f"- **`{doc['path']}`**")
+            for item in doc["classes"]:
+                add(f"  - {item['count']}x {item['class']}")
+        add("")
 
     add("## Invariants")
     add("")
