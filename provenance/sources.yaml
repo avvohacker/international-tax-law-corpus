@@ -176,58 +176,6 @@
     attribution: "OECD, MLI positions"
     verified_on: 2026-09-27
 
-# Two documents of the family are also at the root of `sources/`, byte for byte:
-# the pair the pipeline was first run on, before the family was fetched. They are
-# declared so that nothing in `sources/` is unregistered (F11), and they are
-# declared as building nothing, because building the same position twice from the
-# same bytes would produce two artefacts whose only difference is which register
-# entry names their source.
-- id: mli-position-italy
-  produces: none
-  produces_pending: >-
-    Nothing, and by design: these bytes are the document
-    sources/mli-positions/mli-position-italy.pdf, whose sha256 is the same, and
-    the family source `mli-positions-batch` reads it there. What is published
-    from these bytes is corpora/mli/positions/italy.json. The copy is registered
-    so that no file in `sources/` is unregistered.
-  title: MLI position - Italy (copy of the family's document)
-  publisher: OECD
-  url: >-
-    https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/beps-mli/beps-mli-position-italy.pdf
-  file: sources/mli-position-italy.pdf
-  sha256: 99c8893d20e8312b020ca50b177ff173f2a83007af6d82c1febf0f0a2222ada9
-  size_bytes: 490573
-  retrieved: 2026-09-26
-  rights:
-    status: licence_with_conditions
-    redistribute: false
-    basis: OECD Terms and Conditions; used with citation.
-    attribution: "OECD, MLI Position - Italy"
-    verified_on: 2026-09-27
-
-- id: mli-position-germany
-  produces: none
-  produces_pending: >-
-    Nothing, and by design: these bytes are the document
-    sources/mli-positions/mli-position-germany.pdf, whose sha256 is the same, and
-    the family source `mli-positions-batch` reads it there. What is published
-    from these bytes is corpora/mli/positions/germany.json. The copy is
-    registered so that no file in `sources/` is unregistered.
-  title: MLI position - Germany (copy of the family's document)
-  publisher: OECD
-  url: >-
-    https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/beps-mli/beps-mli-position-germany.pdf
-  file: sources/mli-position-germany.pdf
-  sha256: 16756175b3cc3743f86654ebe37b07aa519050563ca0b82b4ed4ca25f8531789
-  size_bytes: 644662
-  retrieved: 2026-09-26
-  rights:
-    status: licence_with_conditions
-    redistribute: false
-    basis: OECD Terms and Conditions; used with citation.
-    attribution: "OECD, MLI Position - Germany"
-    verified_on: 2026-09-27
-
 # The schema is vendored, not read from: it is committed verbatim under
 # `vendor/akn/`, pinned file by file in `provenance/akn-xsd.sha256`, and used by
 # `python -m harness oasis`, which is invariant F7's strongest form - the
