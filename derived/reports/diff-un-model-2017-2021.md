@@ -1,8 +1,8 @@
 # UN Model 2017 → 2021: structural diff
 
-From `un-model-2017` · `corpora/un-model/2017/model-2017.akn.xml` (sha256 538ef9562530b109…, source sha256 323c8d8abf3bc648…, 828 pages)
+From `un-model-2017` · `corpora/un-model/2017/model-2017.akn.xml` (sha256 4be391b4c2b7b138…, source sha256 323c8d8abf3bc648…, 828 pages)
 
-To `un-model-2021` · `corpora/un-model/2021/model-2021.akn.xml` (sha256 4cd4847be909a6c2…, source sha256 9c456d1dd45b6b4d…, 933 pages)
+To `un-model-2021` · `corpora/un-model/2021/model-2021.akn.xml` (sha256 f01ec6d4f3f042b5…, source sha256 9c456d1dd45b6b4d…, 933 pages)
 
 Articles: 34 · added 1 · removed 0 · modified 27 · unchanged 6
 Units: 98 changed · 46 added · 36 removed · notes 0 changed, 2 added, 2 renumbered · headings retitled 1 · alternative branches added 0

@@ -176,20 +176,20 @@ vendor/ directory and lxml are both absent"); it now declares the vendored copy,
 and a vendored source that is declared and absent fails
 `test_f07_every_source_declares_what_is_built_from_it`.
 
-**What it says today, and why that is written down.** The committed documents do
-not all conform. The violations are named class by class and document by
-document in `fixtures/oasis-conformance.yaml`, the board prints the count, and
-`python -m harness oasis` fails when the run and that file disagree - in both
-directions: a class nobody declared, a count that moved, or an entry still
-claimed after the class was fixed. The declaration is a worklist and not a
-suppression, and what it records is a finding about the projection, not about the
-schema: `harness/akn.py` writes the shape AKN4UN's guidelines describe for a UN
-document, and AKN 3.0 is stricter about where a `list`, an `alinea` and an
-authorial note may stand inside a hierarchy, about a `preamble`'s heading, and
-about the metadata an act's FRBR block must carry. Fixing those is a change to
-the artefact, rebuilt from the sources and republished; until it is made, this
-corpus says what it is - a projection that does not yet validate against the
-standard it names.
+**What it says today, and why that is written down.** The committed documents
+conform: `python -m harness oasis` reports each one valid, the board prints that
+count, and `fixtures/oasis-conformance.yaml` - the declaration of the violations
+the corpus has not yet fixed - is empty. The declaration is a worklist and not a
+suppression, and `python -m harness oasis` fails when the run and that file
+disagree - in both directions: a class nobody declared, a count that moved, or an
+entry still claimed after the class was fixed. It became empty by repairing the
+projection and not by relaxing it: `harness/akn.py` writes the shape AKN4UN's
+guidelines describe for a UN document, and AKN 3.0 is stricter about where a
+`list`, an `alinea` and an authorial note may stand inside a hierarchy, about a
+`preamble`'s heading, and about the metadata an act's FRBR block must carry. Each
+repair is a change to the artefact, rebuilt from the sources and republished; the
+words of the corpus and their traceability to the pages they were read from are
+unchanged.
 
 **What it does for a source that is not one document.** The MLI positions are one
 register entry for 110 documents (§P4), and reading them takes about a minute. So

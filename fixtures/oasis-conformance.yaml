@@ -18,37 +18,3 @@
 # recording what is here without reading it is how a declaration stops
 # being a worklist.
 documents:
-  corpora/un-model/2017/model-2017.akn.xml:
-    - class: "Element 'FRBRWork': Missing child element(s)."
-      count: 1
-    - class: "Element 'FRBRlanguage': This element is not expected."
-      count: 1
-    - class: "Element 'act', attribute 'eId': The attribute 'eId' is not allowed."
-      count: 1
-    - class: "Element 'act': The attribute 'name' is required but missing."
-      count: 1
-    - class: "Element 'alinea': This element is not expected."
-      count: 17
-    - class: "Element 'authorialNote': This element is not expected."
-      count: 1
-    - class: "Element 'heading': This element is not expected."
-      count: 1
-    - class: "Element 'list': This element is not expected."
-      count: 27
-  corpora/un-model/2021/model-2021.akn.xml:
-    - class: "Element 'FRBRWork': Missing child element(s)."
-      count: 1
-    - class: "Element 'FRBRlanguage': This element is not expected."
-      count: 1
-    - class: "Element 'act', attribute 'eId': The attribute 'eId' is not allowed."
-      count: 1
-    - class: "Element 'act': The attribute 'name' is required but missing."
-      count: 1
-    - class: "Element 'alinea': This element is not expected."
-      count: 15
-    - class: "Element 'authorialNote': This element is not expected."
-      count: 3
-    - class: "Element 'heading': This element is not expected."
-      count: 1
-    - class: "Element 'list': This element is not expected."
-      count: 31

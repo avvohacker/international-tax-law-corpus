@@ -16,7 +16,7 @@
   "family": "un-model",
   "from": {
     "akn": "corpora/un-model/2017/model-2017.akn.xml",
-    "akn_sha256": "538ef9562530b109f017ab1f918b607f7912eafdc158c1783ca980111c6779a5",
+    "akn_sha256": "4be391b4c2b7b1386d45a05334bc4d273cca9cc9f4292d93db9a3e8e81388a8d",
     "edition": "2017",
     "family": "un-model",
     "ledger_sha256": "2cd61e332ad260aa7a6b348722aa24c7d9bf909c8fead772ba526a62cc093200",
@@ -1869,7 +1869,7 @@
   "removed": [],
   "to": {
     "akn": "corpora/un-model/2021/model-2021.akn.xml",
-    "akn_sha256": "4cd4847be909a6c2d6e66c5f5264834a636d262e2bc24e4c9dd269f48d0d6889",
+    "akn_sha256": "f01ec6d4f3f042b5aec3884ed9ef7b045158ba1af76747e906356dbfd1ea7bc3",
     "edition": "2021",
     "family": "un-model",
     "ledger_sha256": "c33ed8b37a6665b22b8190339ce5db85e9ab2358724e408f7464aa8fb79ed008",

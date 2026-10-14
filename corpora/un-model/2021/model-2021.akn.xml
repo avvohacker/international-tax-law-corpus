@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
-  <act eId="un-model-2021">
+  <act name="un-model">
     <meta>
       <identification source="#itld">
         <FRBRWork>
@@ -8,6 +8,7 @@
           <FRBRuri value="https://financing.desa.un.org/sites/default/files/2023-05/UN%20Model_2021.pdf" />
           <FRBRdate date="2026-09-20" name="retrieval" />
           <FRBRauthor href="#itld" />
+          <FRBRcountry value="un" />
         </FRBRWork>
         <FRBRExpression>
           <FRBRthis value="/akn/united-nations/un-model-2021/eng@" />
@@ -21,7 +22,6 @@
           <FRBRuri value="https://financing.desa.un.org/sites/default/files/2023-05/UN%20Model_2021.pdf" />
           <FRBRdate date="2026-09-20" name="retrieval" />
           <FRBRauthor href="#itld" />
-          <FRBRlanguage language="en" />
         </FRBRManifestation>
       </identification>
       <references source="#itld">
@@ -36,14 +36,16 @@
       <p eId="un-model-2021__convention__a1">Convention between (State A) and (State B) for the elimination of double taxation with respect to taxes on income and capital and the prevention of tax avoidance and evasion</p>
     </preface>
     <preamble eId="un-model-2021__convention__preamble">
-      <heading>PREAMBLE OF THE CONVENTION</heading>
+      <p>PREAMBLE OF THE CONVENTION</p>
       <p eId="un-model-2021__convention__preamble__a2">(State A) and (State B),</p>
       <p eId="un-model-2021__convention__preamble__a3">Desiring to further develop their economic relationship and to enhance their cooperation in tax matters,</p>
       <p eId="un-model-2021__convention__preamble__a4">Intending to conclude a Convention for the elimination of double taxation with respect to taxes on income and on capital without creating opportunities for non-taxation or reduced taxation through tax avoidance or evasion (including through treaty-shopping arrangements aimed at obtaining reliefs provided in this Convention for the indirect benefit of residents of third States),</p>
       <p eId="un-model-2021__convention__preamble__a5">Have agreed as follows:</p>
-      <authorialNote eId="un-model-2021__convention__preamble__note10" marker="10" placement="bottom">
-        <p>The Preamble of the Convention shall be drafted in accordance with the constitutional procedures of the Contracting States.</p>
-      </authorialNote>
+      <p>
+        <authorialNote eId="un-model-2021__convention__preamble__note10" marker="10" placement="bottom">
+          <p>The Preamble of the Convention shall be drafted in accordance with the constitutional procedures of the Contracting States.</p>
+        </authorialNote>
+      </p>
     </preamble>
     <body eId="un-model-2021__body">
       <chapter eId="ch_I">
@@ -73,11 +75,11 @@
           <paragraph eId="art_1__p4">
             <num>4.</num>
             <content>
-              <p>[Provision dealing with the application of the Convention to collective investment vehicles]</p>
+              <p>[Provision dealing with the application of the Convention to collective investment vehicles]<authorialNote eId="art_1__p4__note11" marker="11" placement="bottom">
+                  <p>Various forms that such a provision could take are discussed in the section “Collective Investment” in the Commentary on Article 1. As discussed in that section, the domestic tax rules applicable to various forms of collective investment vehicles in the Contracting States, disparities in the importance of investment by such vehicles in each of these States as well as other policy or administrative considerations may not justify the inclusion of a provision on collective investment vehicles in a bilateral tax treaty or may require different provisions aimed at different categories of such vehicles.</p>
+                </authorialNote>
+              </p>
             </content>
-            <authorialNote eId="art_1__p4__note11" marker="11" placement="bottom">
-              <p>Various forms that such a provision could take are discussed in the section “Collective Investment” in the Commentary on Article 1. As discussed in that section, the domestic tax rules applicable to various forms of collective investment vehicles in the Contracting States, disparities in the importance of investment by such vehicles in each of these States as well as other policy or administrative considerations may not justify the inclusion of a provision on collective investment vehicles in a bilateral tax treaty or may require different provisions aimed at different categories of such vehicles.</p>
-            </authorialNote>
           </paragraph>
         </article>
         <article eId="art_2">
@@ -97,9 +99,9 @@
           </paragraph>
           <paragraph eId="art_2__p3">
             <num>3.</num>
-            <content>
+            <intro>
               <p>The existing taxes to which the Convention shall apply are in particular:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_2__p3__pa">
                 <num>(a)</num>
@@ -131,9 +133,9 @@
           <heading>GENERAL DEFINITIONS</heading>
           <paragraph eId="art_3__p1">
             <num>1.</num>
-            <content>
+            <intro>
               <p>For the purposes of this Convention, unless the context otherwise requires:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_3__p1__pa">
                 <num>(a)</num>
@@ -161,9 +163,9 @@
               </point>
               <point eId="art_3__p1__pe">
                 <num>(e)</num>
-                <content>
+                <intro>
                   <p>the term “competent authority” means:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_3__p1__pe__pi">
                     <num>(i)</num>
@@ -181,9 +183,9 @@
               </point>
               <point eId="art_3__p1__pf">
                 <num>(f)</num>
-                <content>
+                <intro>
                   <p>the term “national” means:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_3__p1__pf__pi">
                     <num>(i)</num>
@@ -201,9 +203,9 @@
               </point>
               <point eId="art_3__p1__pg">
                 <num>(g)</num>
-                <content>
+                <intro>
                   <p>the term “recognized pension fund” of a Contracting State means an entity or arrangement established in that State that is treated as a separate person under the taxation laws of that State and:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_3__p1__pg__pi">
                     <num>(i)</num>
@@ -239,9 +241,9 @@
           </paragraph>
           <paragraph eId="art_4__p2">
             <num>2.</num>
-            <content>
+            <intro>
               <p>Where by reason of the provisions of paragraph 1 an individual is a resident of both Contracting States, then his status shall be determined as follows:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_4__p2__pa">
                 <num>(a)</num>
@@ -287,9 +289,9 @@
           </paragraph>
           <paragraph eId="art_5__p2">
             <num>2.</num>
-            <content>
+            <intro>
               <p>The term “permanent establishment” includes especially:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_5__p2__pa">
                 <num>(a)</num>
@@ -331,9 +333,9 @@
           </paragraph>
           <paragraph eId="art_5__p3">
             <num>3.</num>
-            <content>
+            <intro>
               <p>The term “permanent establishment” also encompasses:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_5__p3__pa">
                 <num>(a)</num>
@@ -351,9 +353,9 @@
           </paragraph>
           <paragraph eId="art_5__p4">
             <num>4.</num>
-            <content>
+            <intro>
               <p>Notwithstanding the preceding provisions of this Article, the term “permanent establishment” shall be deemed not to include:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_5__p4__pa">
                 <num>(a)</num>
@@ -395,9 +397,9 @@
           </paragraph>
           <paragraph eId="art_5__p41">
             <num>4.1</num>
-            <content>
+            <intro>
               <p>Paragraph 4 shall not apply to a fixed place of business that is used or maintained by an enterprise if the same enterprise or a closely related enterprise carries on business activities at the same place or at another place in the same Contracting State and</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_5__p41__pa">
                 <num>(a)</num>
@@ -415,15 +417,15 @@
           </paragraph>
           <paragraph eId="art_5__p5">
             <num>5.</num>
-            <content>
+            <intro>
               <p>Notwithstanding the provisions of paragraphs  1 and 2 but subject to the provisions of paragraph 7, where a person is acting in a Contracting State on behalf of an enterprise, that enterprise shall be deemed to have a permanent establishment in that State in respect of any activities which that person undertakes for the enterprise, if such a person</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_5__p5__pa">
                 <num>(a)</num>
-                <content>
+                <intro>
                   <p>habitually concludes contracts, or habitually plays the principal role leading to the conclusion of contracts that are routinely concluded without material modification by the enterprise, and these contracts are</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_5__p5__pa__pi">
                     <num>(i)</num>
@@ -515,9 +517,9 @@
           <heading>BUSINESS PROFITS</heading>
           <paragraph eId="art_7__p1">
             <num>1.</num>
-            <content>
+            <intro>
               <p>The profits of an enterprise of a Contracting State shall be taxable only in that State unless the enterprise carries on business in the other Contracting State through a permanent establishment situated </p>
-            </content>
+            </intro>
             <alinea eId="art_7__p1__a6">
               <content>
                 <p>therein. If the enterprise carries on business as aforesaid, the profits of the enterprise may be taxed in the other State but only so much of them as is attributable to:</p>
@@ -552,9 +554,9 @@
           </paragraph>
           <paragraph eId="art_7__p3">
             <num>3.</num>
-            <content>
+            <intro>
               <p>In the determination of the profits of a permanent establishment, there shall be allowed as deductions expenses which are incurred for the purposes of the business of the permanent establishment including executive and general administrative expenses so incurred, whether in the State in which the permanent establishment is situated or elsewhere. However, no such deduction shall be allowed in respect of amounts, if any, paid (otherwise than towards reimbursement of actual expenses) by the permanent establishment to the head office of the enterprise or any of its other offices, by way of royalties, fees or other similar payments in return for the use of patents or other rights, or by way of commission, for specific services performed or for management, or, except in the case of a banking enterprise, by way of interest on moneys lent to the permanent establishment. Likewise, no account shall be taken, in the determination of the profits of a permanent establishment, for amounts charged (otherwise than towards reimbursement of actual expenses), by the permanent establishment to the head office of the enterprise or any of its other offices, by way of royalties, fees or other similar payments in return for the use of patents or other rights, or by way of commission for specific services </p>
-            </content>
+            </intro>
             <alinea eId="art_7__p3__a7">
               <content>
                 <p>performed or for management, or, except in the case of a banking enterprise, by way of interest on moneys lent to the head office of the enterprise or any of its other offices.</p>
@@ -625,9 +627,9 @@
           <heading>ASSOCIATED ENTERPRISES</heading>
           <paragraph eId="art_9__p1">
             <num>1.</num>
-            <content>
+            <intro>
               <p>Where:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_9__p1__pa">
                 <num>(a)</num>
@@ -645,9 +647,9 @@
           </paragraph>
           <paragraph eId="art_9__p2">
             <num>2.</num>
-            <content>
+            <intro>
               <p>Where a Contracting State includes in the profits of an enterprise of that State—and taxes accordingly—profits on which an enterprise of the other Contracting State has been charged to tax in that other State and the profits so included are profits which would have accrued to the </p>
-            </content>
+            </intro>
             <alinea eId="art_9__p2__a8">
               <content>
                 <p>enterprise of the first-mentioned State if the conditions made between the two enterprises had been those which would have been made between independent enterprises, then that other State shall make an appropriate adjustment to the amount of the tax charged therein on those profits. In determining such adjustment, due regard shall be had to the other provisions of the Convention and the competent authorities of the Contracting States shall, if necessary, consult each other.</p>
@@ -672,9 +674,9 @@
           </paragraph>
           <paragraph eId="art_10__p2">
             <num>2.</num>
-            <content>
+            <intro>
               <p>However, dividends paid by a company which is a resident of a Contracting State may also be taxed in that State and according to the laws of that State, but if the beneficial owner of the dividends is a resident of the other Contracting State, the tax so charged shall not exceed:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_10__p2__pa">
                 <num>(a)</num>
@@ -684,9 +686,9 @@
               </point>
               <point eId="art_10__p2__pb">
                 <num>(b)</num>
-                <content>
+                <intro>
                   <p>___ per cent [the percentage is to be established through bilateral negotiations] of the gross amount of the dividends in all other cases.</p>
-                </content>
+                </intro>
                 <alinea eId="art_10__p2__pb__a9">
                   <content>
                     <p>The competent authorities of the Contracting States shall by mutual agreement settle the mode of application of these limitations. This paragraph shall not affect the taxation of the company in respect of the profits out of which the dividends are paid.</p>
@@ -737,9 +739,9 @@
           </paragraph>
           <paragraph eId="art_11__p4">
             <num>4.</num>
-            <content>
+            <intro>
               <p>The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the interest, being a resident of a Contracting State, carries on business in the other Contracting State in which the interest arises, through a permanent establishment situated therein, or performs in that other State independent personal services from a fixed base situated therein, and the debt claim in respect of which the interest is paid is effectively connected with</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_11__p4__pa">
                 <num>(a)</num>
@@ -763,9 +765,9 @@
           </paragraph>
           <paragraph eId="art_11__p6">
             <num>6.</num>
-            <content>
+            <intro>
               <p>Where, by reason of a special relationship between the payer and the beneficial owner or between both of them and some other person, </p>
-            </content>
+            </intro>
             <alinea eId="art_11__p6__a10">
               <content>
                 <p>the amount of the interest, having regard to the debt claim for which it is paid, exceeds the amount which would have been agreed upon by the payer and the beneficial owner in the absence of such relationship, the provisions of this Article shall apply only to the last-mentioned amount. In such case, the excess part of the payments shall remain taxable according to the laws of each Contracting State, due regard being had to the other provisions of this Convention.</p>
@@ -796,9 +798,9 @@
           </paragraph>
           <paragraph eId="art_12__p4">
             <num>4.</num>
-            <content>
+            <intro>
               <p>The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the royalties, being a resident of a Contracting State, carries on business in the other Contracting State in which the royalties arise, through a permanent establishment situated therein, or performs in that other State independent personal services from a fixed base situated therein, and the right or property in respect of which the royalties are paid is effectively connected with</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_12__p4__pa">
                 <num>(a)</num>
@@ -844,9 +846,9 @@
           </paragraph>
           <paragraph eId="art_12A__p3">
             <num>3.</num>
-            <content>
+            <intro>
               <p>The term “fees for technical services” as used in this Article means any payment in consideration for any service of a managerial, technical or consultancy nature, unless the payment is made:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_12A__p3__pa">
                 <num>(a)</num>
@@ -870,9 +872,9 @@
           </paragraph>
           <paragraph eId="art_12A__p4">
             <num>4.</num>
-            <content>
+            <intro>
               <p>The provisions of paragraphs  1 and 2 shall not apply if the beneficial owner of fees for technical services, being a resident of a Contracting State, carries on business in the other Contracting State in which the fees for technical services arise through a permanent establishment situated in that other State, or performs in the other Contracting State independent personal services from a fixed base situated in that other State, and the fees for technical services are effectively connected with:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_12A__p4__pa">
                 <num>(a)</num>
@@ -902,9 +904,9 @@
           </paragraph>
           <paragraph eId="art_12A__p7">
             <num>7.</num>
-            <content>
+            <intro>
               <p>Where, by reason of a special relationship between the payer and the beneficial owner of the fees for technical services or between </p>
-            </content>
+            </intro>
             <alinea eId="art_12A__p7__a11">
               <content>
                 <p>both of them and some other person, the amount of the fees, having regard to the services for which they are paid, exceeds the amount which would have been agreed upon by the payer and the beneficial owner in the absence of such relationship, the provisions of this Article shall apply only to the last-mentioned amount. In such case, the excess part of the fees shall remain taxable according to the laws of each Contracting State, due regard being had to the other provisions of this Convention.</p>
@@ -929,9 +931,9 @@
           </paragraph>
           <paragraph eId="art_12B__p3">
             <num>3.</num>
-            <content>
+            <intro>
               <p>The provisions of paragraph 2 shall not apply if the beneficial owner of the income from automated digital services, being a resident of a Contracting State, requests the other Contracting State where such income arises, to subject its qualified profits from automated digital services for the fiscal year concerned to taxation at the tax rate provided for in the domestic laws of that State. If the beneficial owner so requests, subject to the provisions of Article 8 and notwithstanding the provisions of Article 14, the taxation by that Contracting State shall be carried out accordingly. For the purposes of this paragraph, the qualified profits shall be 30 per cent of the amount resulting from applying the profitability ratio of that beneficial owner’s automated digital services business segment to the gross annual revenue from automated digital services </p>
-            </content>
+            </intro>
             <alinea eId="art_12B__p3__a12">
               <content>
                 <p>derived from the Contracting State where such income arises. Where segmental accounts are not maintained by the beneficial owner, the overall profitability ratio of the beneficial owner will be applied to determine qualified profits. However, where the beneficial owner belongs to a multinational enterprise group, the profitability ratio to be applied shall be that of the business segment of the group relating to the income covered by this Article, or of the group as a whole in case segmental accounts are not maintained by the group, provided such profitability ratio of the multinational enterprise group is higher than the aforesaid profitability ratio of the beneficial owner. Where the segmental profitability ratio or, as the case may be, the overall profitability ratio of the multinational enterprise group to which the beneficial owner belongs is not available to the Contracting State in which the income from automated digital services arises, the provisions of this paragraph shall not apply; in such a case, the provisions of paragraph 2 shall apply.</p>
@@ -952,9 +954,9 @@
           </paragraph>
           <paragraph eId="art_12B__p6">
             <num>6.</num>
-            <content>
+            <intro>
               <p>The term “automated digital services” includes especially:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_12B__p6__pa">
                 <num>(a)</num>
@@ -1020,9 +1022,9 @@
           </paragraph>
           <paragraph eId="art_12B__p8">
             <num>8.</num>
-            <content>
+            <intro>
               <p>The provisions of paragraphs 1, 2 and 3 shall not apply if the beneficial owner of the income from automated digital services, being a resident of a Contracting State, carries on business in the other Contracting State in which the income from automated digital services arises through a permanent establishment situated in that other State, or performs in the other Contracting State independent personal services from a fixed base situated in that other State, and the income from automated digital services is effectively connected with:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_12B__p8__pa">
                 <num>(a)</num>
@@ -1046,9 +1048,9 @@
           </paragraph>
           <paragraph eId="art_12B__p10">
             <num>10.</num>
-            <content>
+            <intro>
               <p>For the purposes of this Article, income from automated digital services shall be deemed not to arise in a Contracting State if the underlying payments for the income from automated digital services are made by a resident of that State which carries on business in the other Contracting State through a permanent establishment situated </p>
-            </content>
+            </intro>
             <alinea eId="art_12B__p10__a13">
               <content>
                 <p>in that other State or performs independent personal services through a fixed base situated in that other State and such underlying payments towards automated digital services are borne by that permanent establishment or fixed base.</p>
@@ -1103,9 +1105,9 @@
           </paragraph>
           <paragraph eId="art_13__p7">
             <num>7.</num>
-            <content>
+            <intro>
               <p>Subject to paragraphs 4 and 5, gains derived by a resident of a Contracting State from the alienation of shares of a company, or comparable interests of an entity, such as interests in a partnership or trust, may be taxed in the other Contracting State if</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_13__p7__pa">
                 <num>(a)</num>
@@ -1115,9 +1117,9 @@
               </point>
               <point eId="art_13__p7__pb">
                 <num>(b)</num>
-                <content>
+                <intro>
                   <p>at any time during the 365 days preceding the alienation, these shares or comparable interests derived more than 50 per cent of their value directly or indirectly from</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_13__p7__pb__pi">
                     <num>(i)</num>
@@ -1147,9 +1149,9 @@
           <heading>INDEPENDENT PERSONAL SERVICES</heading>
           <paragraph eId="art_14__p1">
             <num>1.</num>
-            <content>
+            <intro>
               <p>Income derived by a resident of a Contracting State in respect of professional services or other activities of an independent character shall be taxable only in that State except in the following circumstances, when such income may also be taxed in the other Contracting State:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_14__p1__pa">
                 <num>(a)</num>
@@ -1177,9 +1179,9 @@
           <heading>DEPENDENT PERSONAL SERVICES</heading>
           <paragraph eId="art_15__p1">
             <num>1.</num>
-            <content>
+            <intro>
               <p>Subject to the provisions of Articles 16, 18 and 19, salaries, wages and other similar remuneration derived by a resident of a Contracting State in respect of an employment shall be taxable only in that State </p>
-            </content>
+            </intro>
             <alinea eId="art_15__p1__a14">
               <content>
                 <p>unless the employment is exercised in the other Contracting State. If the employment is so exercised, such remuneration as is derived therefrom may be taxed in that other State.</p>
@@ -1188,9 +1190,9 @@
           </paragraph>
           <paragraph eId="art_15__p2">
             <num>2.</num>
-            <content>
+            <intro>
               <p>Notwithstanding the provisions of paragraph 1, remuneration derived by a resident of a Contracting State in respect of an employment exercised in the other Contracting State shall be taxable only in the first-mentioned State if:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_15__p2__pa">
                 <num>(a)</num>
@@ -1301,15 +1303,15 @@
           <heading>GOVERNMENT SERVICE</heading>
           <paragraph eId="art_19__p1">
             <num>1.</num>
-            <content>
+            <intro>
               <p>(a)	 Salaries, wages and other similar remuneration paid by a Contracting State or a political subdivision or a local authority thereof to an individual in respect of services rendered to that State or subdivision or authority shall be taxable only in that State.</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_19__p1__pb">
                 <num>(b)</num>
-                <content>
+                <intro>
                   <p>However, such salaries, wages and other similar remuneration shall be taxable only in the other Contracting State if the services are rendered in that other State and the individual is a resident of that State who:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_19__p1__pb__pi">
                     <num>(i)</num>
@@ -1329,9 +1331,9 @@
           </paragraph>
           <paragraph eId="art_19__p2">
             <num>2.</num>
-            <content>
+            <intro>
               <p>(a)	 Notwithstanding the provisions of paragraph  1, pensions and other similar remuneration paid by, or out of funds created by, a Contracting State or a political subdivision or a local authority thereof to an individual in respect of services rendered to that State or subdivision or authority shall be taxable only in that State.</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_19__p2__pb">
                 <num>(b)</num>
@@ -1400,9 +1402,9 @@
           </paragraph>
           <paragraph eId="art_22__p3">
             <num>3.</num>
-            <content>
+            <intro>
               <p>Capital of an enterprise of a Contracting State that operates ships or aircraft in international traffic represented by such ships or aircraft, and by movable property pertaining to the operation of such ships or aircraft, shall be taxable only in that State.</p>
-            </content>
+            </intro>
             <alinea eId="art_22__p3__a17">
               <content>
                 <p>[4.	 All other elements of capital of a resident of a Contracting State shall be taxable only in that State.]</p>
@@ -1447,9 +1449,9 @@
           </paragraph>
           <paragraph eId="art_23A__p4">
             <num>4.</num>
-            <content>
+            <intro>
               <p>The provisions of paragraph 1 shall not apply to income derived or capital owned by a resident of a Contracting State where the other Contracting State applies the provisions of this Convention to exempt such income or capital from tax or applies the provisions of paragraph 2 of Article 10, 11, 12 or 12A, or the provisions of Article 12B, to </p>
-            </content>
+            </intro>
             <alinea eId="art_23A__p4__a20">
               <content>
                 <p>such income; in the case where the other Contracting State does not exempt the income, the first-mentioned State shall allow the deduction of tax provided for by paragraph 2.</p>
@@ -1462,9 +1464,9 @@
           <heading>CREDIT METHOD</heading>
           <paragraph eId="art_23B__p1">
             <num>1.</num>
-            <content>
+            <intro>
               <p>Where a resident of a Contracting State derives income or owns capital which may be taxed in the other Contracting State, in accordance with the provisions of this Convention (except to the extent that these provisions allow taxation by that other State solely because the income is also income derived by a resident of that State or because the capital is also capital owned by a resident of that State), the first-mentioned State shall allow:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_23B__p1__pa">
                 <num>(a)</num>
@@ -1514,9 +1516,9 @@
           </paragraph>
           <paragraph eId="art_24__p4">
             <num>4.</num>
-            <content>
+            <intro>
               <p>Except where the provisions of paragraph 1 of Article 9, paragraph  6 of Article  11, paragraph  6 of Article  12, paragraph  7 of Article 12A or paragraph 11 of Article 12B apply, interest, royalties, fees for technical services, payments underlying income from automated digital services, and other disbursements paid by an enterprise of a Contracting State to a resident of the other Contracting State shall, </p>
-            </content>
+            </intro>
             <alinea eId="art_24__p4__a21">
               <content>
                 <p>for the purpose of determining the taxable profits of such enterprise, be deductible under the same conditions as if they had been paid to a resident of the first-mentioned State. Similarly, any debts of an enterprise of a Contracting State to a resident of the other Contracting State shall, for the purpose of determining the taxable capital of such enterprise, be deductible under the same conditions as if they had been contracted to a resident of the first-mentioned State.</p>
@@ -1549,9 +1551,9 @@
             </paragraph>
             <paragraph eId="art_25__alt_A__p2">
               <num>2.</num>
-              <content>
+              <intro>
                 <p>The competent authority shall endeavour, if the objection appears to it to be justified and if it is not itself able to arrive at a satisfactory solution, to resolve the case by mutual agreement with the competent </p>
-              </content>
+              </intro>
               <alinea eId="art_25__alt_A__p2__a22">
                 <content>
                   <p>authority of the other Contracting State, with a view to the avoidance of taxation which is not in accordance with this Convention. Any agreement reached shall be implemented notwithstanding any time limits in the domestic law of the Contracting States.</p>
@@ -1599,9 +1601,9 @@
             </paragraph>
             <paragraph eId="art_25__alt_B__p5">
               <num>5.</num>
-              <content>
+              <intro>
                 <p>Where,</p>
-              </content>
+              </intro>
               <list>
                 <point eId="art_25__alt_B__p5__pa">
                   <num>(a)</num>
@@ -1636,9 +1638,9 @@
           </paragraph>
           <paragraph eId="art_26__p3">
             <num>3.</num>
-            <content>
+            <intro>
               <p>In no case shall the provisions of paragraphs 1 and 2 be construed so as to impose on a Contracting State the obligation:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_26__p3__pa">
                 <num>(a)</num>
@@ -1684,12 +1686,12 @@
           <heading>ASSISTANCE IN THE COLLECTION OF TAXES</heading>
           <paragraph eId="art_27__p1">
             <num>1.</num>
-            <content>
-              <p>The Contracting States shall lend assistance to each other in the collection of revenue claims. This assistance is not restricted by </p>
-            </content>
-            <authorialNote eId="art_27__p1__note12" marker="12" placement="bottom">
-              <p>In some countries, national law, policy or administrative considerations may not allow or justify the type of assistance envisaged under this Article or may require that this type of assistance be restricted, e.g. to countries that have similar tax systems or tax administrations or as to the taxes covered. For that reason, the Article should only be included in the Convention where each State concludes that, based on the factors described in paragraph 1 of the Commentary on the Article, they can agree to provide assistance in the collection of taxes levied by the other State.</p>
-            </authorialNote>
+            <intro>
+              <p>The Contracting States shall lend assistance to each other in the collection of revenue claims. This assistance is not restricted by <authorialNote eId="art_27__p1__note12" marker="12" placement="bottom">
+                  <p>In some countries, national law, policy or administrative considerations may not allow or justify the type of assistance envisaged under this Article or may require that this type of assistance be restricted, e.g. to countries that have similar tax systems or tax administrations or as to the taxes covered. For that reason, the Article should only be included in the Convention where each State concludes that, based on the factors described in paragraph 1 of the Commentary on the Article, they can agree to provide assistance in the collection of taxes levied by the other State.</p>
+                </authorialNote>
+              </p>
+            </intro>
             <alinea eId="art_27__p1__a23">
               <content>
                 <p>Articles 1 and 2. The competent authorities of the Contracting States may by mutual agreement settle the mode of application of this Article.</p>
@@ -1716,9 +1718,9 @@
           </paragraph>
           <paragraph eId="art_27__p5">
             <num>5.</num>
-            <content>
+            <intro>
               <p>Notwithstanding the provisions of paragraphs 3 and 4, a revenue claim accepted by a Contracting State for purposes of paragraph 3 or 4 shall not, in that State, be subject to the time limits or accorded any priority applicable to a revenue claim under the laws of that State by reason of its nature as such. In addition, a revenue claim accepted by a Contracting State for the purposes of paragraph 3 or 4 shall not, </p>
-            </content>
+            </intro>
             <alinea eId="art_27__p5__a24">
               <content>
                 <p>in that State, have any priority applicable to that revenue claim under the laws of the other Contracting State.</p>
@@ -1733,9 +1735,9 @@
           </paragraph>
           <paragraph eId="art_27__p7">
             <num>7.</num>
-            <content>
+            <intro>
               <p>Where, at any time after a request has been made by a Contracting State under paragraph  3 or 4 and before the other Contracting State has collected and remitted the relevant revenue claim to the first-mentioned State, the relevant revenue claim ceases to be</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_27__p7__pa">
                 <num>(a)</num>
@@ -1753,9 +1755,9 @@
           </paragraph>
           <paragraph eId="art_27__p8">
             <num>8.</num>
-            <content>
+            <intro>
               <p>In no case shall the provisions of this Article be construed so as to impose on a Contracting State the obligation:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_27__p8__pa">
                 <num>(a)</num>
@@ -1804,9 +1806,9 @@
           </paragraph>
           <paragraph eId="art_29__p2">
             <num>2.</num>
-            <content>
+            <intro>
               <p>A resident of a Contracting State shall be a qualified person at a time when a benefit would otherwise be accorded by the Convention if, at that time, the resident is:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_29__p2__pa">
                 <num>(a)</num>
@@ -1822,12 +1824,12 @@
               </point>
               <point eId="art_29__p2__pc">
                 <num>(c)</num>
-                <content>
-                  <p>a company or other entity, if, throughout the taxable period that includes that time, the principal class of its shares (and any disproportionate class of shares) is regularly traded on one or more recognised stock exchanges, and either:</p>
-                </content>
-                <authorialNote eId="art_29__p2__pc__note13" marker="13" placement="bottom">
-                  <p>The drafting of this Article will depend on how the Contracting States decide to implement their common intention, reflected in the preamble of the Convention and incorporated in the minimum standard agreed to as part of the OECD-G20 Base Erosion and Profit Shifting project by particular countries, to eliminate double taxation without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including through treaty shopping arrangements.</p>
-                </authorialNote>
+                <intro>
+                  <p>a company or other entity, if, throughout the taxable period that includes that time, the principal class of its shares (and any disproportionate class of shares) is regularly traded on one or more recognised stock exchanges, and either:<authorialNote eId="art_29__p2__pc__note13" marker="13" placement="bottom">
+                      <p>The drafting of this Article will depend on how the Contracting States decide to implement their common intention, reflected in the preamble of the Convention and incorporated in the minimum standard agreed to as part of the OECD-G20 Base Erosion and Profit Shifting project by particular countries, to eliminate double taxation without creating opportunities for non-taxation or reduced taxation through tax evasion or avoidance, including through treaty shopping arrangements.</p>
+                    </authorialNote>
+                  </p>
+                </intro>
                 <list>
                   <point eId="art_29__p2__pc__pi">
                     <num>(i)</num>
@@ -1845,9 +1847,9 @@
               </point>
               <point eId="art_29__p2__pd">
                 <num>(d)</num>
-                <content>
+                <intro>
                   <p>a company, if:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p2__pd__pi">
                     <num>(i)</num>
@@ -1865,9 +1867,9 @@
               </point>
               <point eId="art_29__p2__pe">
                 <num>(e)</num>
-                <content>
+                <intro>
                   <p>a person, other than an individual, that</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p2__pe__pi">
                     <num>(i)</num>
@@ -1885,9 +1887,9 @@
               </point>
               <point eId="art_29__p2__pf">
                 <num>(f)</num>
-                <content>
+                <intro>
                   <p>a person other than an individual, if</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p2__pf__pi">
                     <num>(i)</num>
@@ -1913,12 +1915,12 @@
           </paragraph>
           <paragraph eId="art_29__p3">
             <num>3.</num>
-            <content>
-              <p>(a)	 A resident of a Contracting State shall be entitled to benefits under this Convention with respect to an item of income derived from the other Contracting State, regardless of whether the resident is a qualified person, if the resident is engaged in the active conduct of a business in the first-mentioned State and the income derived from the other State emanates from, or is incidental to, that business. For purposes of this Article, the </p>
-            </content>
-            <authorialNote eId="art_29__p3__note14" marker="14" placement="bottom">
-              <p>Subparagraph (g) should only be inserted if a provision on collective investment vehicles is included in the Convention; see the footnote to paragraph 4 of Article 1.</p>
-            </authorialNote>
+            <intro>
+              <p>(a)	 A resident of a Contracting State shall be entitled to benefits under this Convention with respect to an item of income derived from the other Contracting State, regardless of whether the resident is a qualified person, if the resident is engaged in the active conduct of a business in the first-mentioned State and the income derived from the other State emanates from, or is incidental to, that business. For purposes of this Article, the <authorialNote eId="art_29__p3__note14" marker="14" placement="bottom">
+                  <p>Subparagraph (g) should only be inserted if a provision on collective investment vehicles is included in the Convention; see the footnote to paragraph 4 of Article 1.</p>
+                </authorialNote>
+              </p>
+            </intro>
             <alinea eId="art_29__p3__a26">
               <content>
                 <p>term “active conduct of a business” shall not include the following activities or any combination thereof:</p>
@@ -1971,9 +1973,9 @@
           </paragraph>
           <paragraph eId="art_29__p5">
             <num>5.</num>
-            <content>
+            <intro>
               <p>A company that is a resident of a Contracting State that functions as a headquarters company for a multinational corporate group consisting of such company and its direct and indirect subsidiaries shall be entitled to benefits under this Convention with respect to dividends and interest paid by members of its multinational corporate group, regardless of whether the resident is a qualified person. A company shall be considered a headquarters company for this purpose only if:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_29__p5__pa">
                 <num>(a)</num>
@@ -2015,9 +2017,9 @@
           </paragraph>
           <paragraph eId="art_29__p6">
             <num>6.</num>
-            <content>
+            <intro>
               <p>If a resident of a Contracting State is neither a qualified person pursuant to the provisions of paragraph 2 of this Article, nor entitled to benefits under paragraph 3, 4 or 5, the competent authority of the </p>
-            </content>
+            </intro>
             <alinea eId="art_29__p6__a27">
               <content>
                 <p>Contracting State in which benefits are denied under the previous provisions of this Article may, nevertheless, grant the benefits of this Convention, or benefits with respect to a specific item of income or capital, taking into account the object and purpose of this Convention, but only if such resident demonstrates to the satisfaction of such competent authority that neither its establishment, acquisition or maintenance, nor the conduct of its operations, had as one of its principal purposes the obtaining of benefits under this Convention. The competent authority of the Contracting State to which a request has been made, under this paragraph, by a resident of the other State, shall consult with the competent authority of that other State before either granting or denying the request.</p>
@@ -2026,15 +2028,15 @@
           </paragraph>
           <paragraph eId="art_29__p7">
             <num>7.</num>
-            <content>
+            <intro>
               <p>For the purposes of this and the previous paragraphs  of this Article:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_29__p7__pa">
                 <num>(a)</num>
-                <content>
+                <intro>
                   <p>the term “recognised stock exchange” means:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p7__pa__pi">
                     <num>(i)</num>
@@ -2064,9 +2066,9 @@
               </point>
               <point eId="art_29__p7__pd">
                 <num>(d)</num>
-                <content>
+                <intro>
                   <p>two persons shall be “connected persons” if one owns, directly or indirectly, at least 50 per cent of the beneficial interest in the other (or, in the case of a company, at least 50 per cent of the aggregate vote and value of the company’s shares) or another person owns, directly or indirectly, at least 50 per cent of the beneficial interest (or, in the case of a company, at least 50 per cent of the aggregate vote and value of the company’s shares) in each person. In any case, a person shall be connected to another </p>
-                </content>
+                </intro>
                 <alinea eId="art_29__p7__pd__a28">
                   <content>
                     <p>if, based on all the relevant facts and circumstances, one has control of the other or both are under the control of the same person or persons.</p>
@@ -2075,15 +2077,15 @@
               </point>
               <point eId="art_29__p7__pe">
                 <num>(e)</num>
-                <content>
+                <intro>
                   <p>the term “equivalent beneficiary” means:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p7__pe__pi">
                     <num>(i)</num>
-                    <content>
+                    <intro>
                       <p>a resident of any State, provided that:</p>
-                    </content>
+                    </intro>
                     <list>
                       <point eId="art_29__p7__pe__pi__pA">
                         <num>(A)</num>
@@ -2093,15 +2095,15 @@
                       </point>
                       <point eId="art_29__p7__pe__pi__pB">
                         <num>(B)</num>
-                        <content>
+                        <intro>
                           <p>(1)	 with respect to income referred to in Article 10, 11, 12, 12A or 12B if the resident had received such income directly, the resident would be entitled under such Convention, a provision of domestic law or any international agreement, to a rate of tax with respect to such income for which benefits are being sought under this Convention that is less than or equal to the rate applicable under this Convention. Regarding a company seeking, under paragraph 4, the benefits of Article 10 with respect to dividends, for purposes of this subclause:</p>
-                        </content>
+                        </intro>
                         <list>
                           <point eId="art_29__p7__pe__pi__pB__pI">
                             <num>(I)</num>
-                            <content>
+                            <intro>
                               <p>if the resident is an individual, and the company is engaged in the active conduct of a business in its Contracting State of residence that is substantial in relation, and similar or complementary, to the business that generated the earnings </p>
-                            </content>
+                            </intro>
                             <alinea eId="art_29__p7__pe__pi__pB__pI__a29">
                               <content>
                                 <p>from which the dividend is paid, such individual shall be treated as if he or she were a company. Activities conducted by a person that is a connected person with respect to the company seeking benefits shall be deemed to be conducted by such company. Whether a business activity is substantial shall be determined based on all the facts and circumstances; and (II)	 if the resident is a company (including an individual treated as a company), to determine whether the resident is entitled to a rate of tax that is less than or equal to the rate applicable under this Convention, the resident’s indirect holding of the capital of the company paying the dividends shall be treated as a direct holding; or (2)	 with respect to an item of income referred to in Article 7, 13 or 21 of this Convention, the resident is entitled to benefits under such Convention that are at least as favourable as the benefits that are being sought under this Convention; and</p>
@@ -2120,9 +2122,9 @@
                   </point>
                   <point eId="art_29__p7__pe__pii">
                     <num>(ii)</num>
-                    <content>
+                    <intro>
                       <p>a resident of the same Contracting State as the company seeking benefits under paragraph 4 of this Article that is entitled to all the benefits of this Convention by reason of subparagraph (a), (b), (c) or (e) of paragraph 2 or, when the benefit being sought is with respect to interest or </p>
-                    </content>
+                    </intro>
                     <alinea eId="art_29__p7__pe__pii__a30">
                       <content>
                         <p>dividends paid by a member of the resident’s multinational corporate group, the resident is entitled to benefits under paragraph 5, provided that, in the case of a resident described in paragraph 5, if the resident had received such interest or dividends directly, the resident would be entitled to a rate of tax with respect to such income that is less than or equal to the rate applicable under this Convention to the company seeking benefits under paragraph 4; or</p>
@@ -2131,9 +2133,9 @@
                   </point>
                   <point eId="art_29__p7__pe__piii">
                     <num>(iii)</num>
-                    <content>
+                    <intro>
                       <p>a resident of the Contracting State from which the benefits of this Convention are sought that is entitled to all the benefits of this Convention by reason of subparagraph (a), (b), </p>
-                    </content>
+                    </intro>
                     <list>
                       <point eId="art_29__p7__pe__piii__pc">
                         <num>(c)</num>
@@ -2153,9 +2155,9 @@
               </point>
               <point eId="art_29__p7__pg">
                 <num>(g)</num>
-                <content>
+                <intro>
                   <p>a company’s or entity’s “primary place of management and control” is in the Contracting State of which it is a resident only if:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p7__pg__pi">
                     <num>(i)</num>
@@ -2165,9 +2167,9 @@
                   </point>
                   <point eId="art_29__p7__pg__pii">
                     <num>(ii)</num>
-                    <content>
+                    <intro>
                       <p>such executive officers and senior management employees exercise day-to-day responsibility for more of the strategic, financial and operational policy decision-making for the company or entity and its direct and indirect subsidiaries, and the staff of such persons conduct more of the </p>
-                    </content>
+                    </intro>
                     <alinea eId="art_29__p7__pg__pii__a31">
                       <content>
                         <p>day-to-day activities necessary for preparing and making those decisions, than the officers or employees of any other company or entity;</p>
@@ -2178,9 +2180,9 @@
               </point>
               <point eId="art_29__p7__ph">
                 <num>(h)</num>
-                <content>
+                <intro>
                   <p>the term “qualifying intermediate owner” means an intermediate owner that is either:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p7__ph__pi">
                     <num>(i)</num>
@@ -2198,9 +2200,9 @@
               </point>
               <point eId="art_29__p7__pi">
                 <num>(i)</num>
-                <content>
+                <intro>
                   <p>the term “tested group” means the resident of a Contracting State that is applying the test under subparagraph (d) or (f) of paragraph 2 or under paragraph 4 or 5 to determine whether it is eligible for benefits under the Convention (the “tested resident”), and any company or permanent establishment that:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p7__pi__pi">
                     <num>(i)</num>
@@ -2218,15 +2220,15 @@
               </point>
               <point eId="art_29__p7__pj">
                 <num>(j)</num>
-                <content>
+                <intro>
                   <p>the term “gross income” means gross receipts as determined in the person’s Contracting State of residence for the taxable period that includes the time when the benefit would be accorded, except that where a person is engaged in a business that includes the manufacture, production or sale of goods, “gross income” means such gross receipts reduced by the cost of goods sold, and where a person is engaged in a business of providing non-financial services, “gross income” means such gross receipts reduced by the direct costs of generating such receipts, provided that:</p>
-                </content>
+                </intro>
                 <list>
                   <point eId="art_29__p7__pj__pi">
                     <num>(i)</num>
-                    <content>
+                    <intro>
                       <p>except when relevant for determining benefits under Article  10 of this Convention, gross income shall not include the portion of any dividends that are effectively </p>
-                    </content>
+                    </intro>
                     <alinea eId="art_29__p7__pj__pi__a32">
                       <content>
                         <p>exempt from tax in the person’s Contracting State of residence, whether through deductions or otherwise; and</p>
@@ -2245,9 +2247,9 @@
           </paragraph>
           <paragraph eId="art_29__p8">
             <num>8.</num>
-            <content>
+            <intro>
               <p>(a)	 Where</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_29__p8__pi">
                 <num>(i)</num>
@@ -2269,9 +2271,9 @@
               </point>
               <point eId="art_29__p8__pc">
                 <num>(c)</num>
-                <content>
+                <intro>
                   <p>If benefits under this Convention are denied pursuant to the preceding provisions of this paragraph with respect to an item of income derived by a resident of a Contracting State, the competent authority of the other Contracting State may, nevertheless, grant these benefits with respect to that item of income </p>
-                </content>
+                </intro>
                 <alinea eId="art_29__p8__pc__a33">
                   <content>
                     <p>if, in response to a request by such resident, such competent authority determines that granting such benefits is justified in light of the reasons such resident did not satisfy the requirements of this paragraph (such as the existence of losses). The competent authority of the Contracting State to which a request has been made under the preceding sentence shall consult with the competent authority of the other Contracting State before either granting or denying the request.</p>
@@ -2302,9 +2304,9 @@
           </paragraph>
           <paragraph eId="art_30__p2">
             <num>2.</num>
-            <content>
+            <intro>
               <p>The Convention shall enter into force upon the exchange of instruments of ratification and its provisions shall have effect:</p>
-            </content>
+            </intro>
             <list>
               <point eId="art_30__p2__pa">
                 <num>(a)</num>
@@ -2338,9 +2340,9 @@
             </point>
             <point eId="art_31__pb">
               <num>(b)</num>
-              <content>
+              <intro>
                 <p>(in State B): ............................................</p>
-              </content>
+              </intro>
               <alinea eId="art_31__pb__a35">
                 <content>
                   <p>TERMINAL CLAUSE</p>
