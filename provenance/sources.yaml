@@ -13,7 +13,14 @@
 # same bytes the audit was performed on.
 #
 # rights.status:  public_domain | open_licence | licence_with_conditions | unknown
-# rights.redistribute: whether the PDF may be committed to this repository.
+# rights.redistribute: this project's own commitment, and not a finding about
+#   the holder's terms: false for every third-party source, because this
+#   repository commits no publisher's PDF whatever its licence allows - the hash
+#   is the contract and the file is fetched, hashed and gitignored. What the
+#   holder permits is `status`, and the words it was verified against are in
+#   `basis`, quoted from the document or from the publisher's terms. An open
+#   licence here (e.g. the vendored OASIS schema) is a fact about the source, not
+#   a permission this file grants.
 #
 # produces: what the pipeline builds FROM this source. It is declared here, next
 #   to the hash of the bytes it is built from, because "what is this source for"

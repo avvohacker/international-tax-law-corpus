@@ -136,7 +136,9 @@ def unseal(target: Path, problems: list[str], sealed_dir: Path) -> bool:
     """Decrypt sealed/<name>.enc into place using the env passphrase.
 
     The UN Model 2021 PDF cannot be fetched by automated clients (the UN
-    hosts demand human verification), and its licence forbids committing it.
+    hosts demand human verification), and this repository commits no publisher's
+    PDF whatever its holder permits - here the ciphertext is how the source
+    travels, and the register records the UN's own terms next to its hash.
     The repository therefore carries only AES-256 ciphertext; the passphrase
     lives in the CI secret named by SEALED_KEY_ENV, never in the repo. Without
     the key this reports the file missing instead of guessing.

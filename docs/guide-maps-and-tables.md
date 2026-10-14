@@ -11,7 +11,9 @@ This is a **citable law library**: it takes official PDFs — the UN Model
 Double Taxation Convention (2017 and 2021 editions) and the OECD material on
 the Multilateral Instrument (MLI) — and turns them into texts that can be
 cited article by article, where **every sentence points back to the exact
-page of the PDF it came from**.
+page of the PDF it came from**. The page is the provenance of the reading, which
+is how the text can be checked against the printing; what a citation names is the
+provision - article, paragraph, point - and no page number is part of it.
 
 It is not a legal adviser, it does not interpret, and it never fills a gap
 with a guess: where the source is unclear or unreadable, **it says so**

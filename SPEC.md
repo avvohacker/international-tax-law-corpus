@@ -134,6 +134,17 @@ ledger.
 **Anti-pattern.** Provenance attached to the file rather than to the unit. A
 page number that is the page of the chapter, not of the sentence.
 
+**What a page is, and is not.** The page is where a unit was *read from* and
+nothing else: it is the provenance of the reading, which is what lets the text be
+checked against the printing it came from. The address of a provision is its
+structure - the article, the paragraph, the point, with the `eId` the standard
+gives it - and that is what a citation names. This is why AKN 3.0 has no page
+element (the only name in the vendored schema containing "page" is `coverPage`)
+and why neither committed document carries one. A citation that named a page
+would name the printing rather than the law, and a corpus that could not say
+which provision a unit is would have traded address for provenance - the two are
+not the same thing, and this corpus keeps them apart.
+
 ---
 
 ## F7 · Determinism

@@ -634,10 +634,16 @@ error is findable either way.
 * **Which model conventions are in scope.** Today the corpus holds the UN Model
   (2017 and 2021, Convention text) and the OECD material on the Multilateral
   Instrument. The **OECD Model Tax Convention is not in the register and not in
-  `sources/`**: the old repository's source register had already verified that
-  the OECD terms of 1 July 2024 permit use with citation - the earlier "copyright
-  forbids it" claim was wrong - and excluded it on *scope* grounds only (1,000+
-  pages, a separate extraction cycle), leaving the decision explicitly open. So
+  `sources/`**, and it was excluded on *scope* grounds only (1,000+ pages, a
+  separate extraction cycle), leaving the decision explicitly open. The rights
+  question was left open with it, and is now measured rather than asserted: each
+  printing states its own terms, read on the files - the 1963 draft and the 1977
+  Model carry a permission clause, the printings from 1992 to 2017 read "(c)
+  OECD" with permission or Copyright Clearance Center wording, and only the 2025
+  Update and the 2025 Full Version are openly licensed (CC BY 4.0, published
+  after 1 July 2024). "Use with citation" is not a single OECD rule and this
+  document must not claim one on the publisher's behalf: what each source permits
+  belongs in its register entry. So
   this is a scope decision to record before any code: a source id, its URL, hash
   and rights note; a rule layer of its own, because the OECD volume is laid out
   differently from the UN PDFs (two-column pages, Commentary beside the Model
@@ -735,8 +741,10 @@ error is findable either way.
 * **The OECD Model Tax Convention is still a scope decision, not an oversight.**
   Registered today: the two UN Model editions and the OECD MLI material. The
   OECD Model Tax Convention itself is neither in the register nor in `sources/`,
-  and the reason is size and layout rather than rights - the OECD terms permit
-  use with citation. Integrating it means a source id, URL, hash and rights note;
+  and the reason is size and layout, not rights, which are per document and read
+  on the files (2025: CC BY 4.0; the printings before it: "(c) OECD" with
+  permission wording). Integrating it means a source id, URL, hash and rights
+  note;
   a rule layer of its own, because that volume is two-column with the Commentary
   beside the Model text; and a family of its own. Nothing in the invariants needs
   to change: F1, F2, F4 and F6 iterate every family under `corpora/`, and the

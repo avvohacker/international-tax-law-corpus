@@ -35,15 +35,32 @@ not grant, nor claim to grant, rights over the third-party source texts:
     attribution only; the PDF itself is never redistributed.
 
   * Multilateral Instrument (consolidated text), Signatories and Parties, and
-    the country position documents: OECD material. No per-document copyright
-    notice. Under the OECD Terms & Conditions (updated 1 July 2024) written
-    content may be used, copied, adapted and distributed for commercial and
-    non-commercial purposes with citation [OECD (year), Title, URL] and the
-    adaptation disclaimer when adapting; content published after 1 July 2024 is
-    CC BY 4.0. Structured extraction is provided with full attribution and a link
-    to the original. The source PDFs are fetched locally and not redistributed.
+    the country position documents: OECD material. The documents read here carry
+    no rights notice of their own - verified on the files: the Convention (49
+    pages), the signatories table and the position documents print none. That
+    absence is a fact about the document, not a licence: the publisher's own
+    terms govern reuse, and the CC BY 4.0 default applies to content *published*
+    from 1 July 2024, which these predate. Structured extraction is published
+    with attribution to the publisher and a link to the original; the source PDFs
+    are fetched locally and never committed.
+
+  * OECD Model Tax Convention editions (added for the diachronic corpus): the
+    rights are per document, because each printing states its own. The 1963
+    draft and the 1977 Model carry a permission-and-translation clause; 1992,
+    1998, 2000, 2003, 2005, 2008, 2014 and 2017 read "(c) OECD" with permission,
+    "non-commercial reproduction" or Copyright Clearance Center wording - the
+    2005 printing says no reproduction may be made without written permission.
+    The exception is the current pair: the 2025 Update and the 2025 Full Version
+    are published under **Attribution 4.0 International (CC BY 4.0)** ((c) OECD
+    2025 and 2026), which permits reuse with attribution. Which of the earlier
+    editions this project may publish as text, and which it may use only as a
+    comparative reading, is a decision it has not yet taken: each such source
+    will say so in its own register entry when it enters the corpus.
 
   * Akoma Ntoso 3.0 XSD and related schemas: (c) OASIS Open, TC Open Repository -
     used solely for validation (vendor/akn/).
+
+  Nothing above grants a right the holder has not granted: this appendix records
+  what each document, and the publisher's terms, say about themselves.
 
 THE REPOSITORY IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
