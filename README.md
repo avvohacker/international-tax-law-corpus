@@ -187,6 +187,7 @@ What is here:
 | `docs/guide-maps-and-tables.md` | what this project is, in plain language with maps and tables — the first file to read for a newcomer |
 | `mcp/` | the server, run where it is committed: six tools over corpus plus library, with citations and refusals — [`mcp/README.md`](mcp/README.md), and `mcp/docs/status.md` for its generated board |
 | `mcp/docs/remote-endpoint.md` | what an always-on HTTP endpoint would take, and the file and byte counts it would cost |
+| `mcp/docs/verdict-as-artefact.md` | whether a verdict should be committed and regenerated, so it is readable without installing anything — with the byte counts of both shapes and what freshness would cost |
 | `mcp/tests/test_nothing_is_out_of_reach.py` | the control that keeps every committed file of `mcp/` readable in full by a reader that returns content up to 1 MB |
 
 ## Running it

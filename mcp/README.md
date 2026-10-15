@@ -488,7 +488,14 @@ How a fact is named, and how a report is read, is written down in
    proof, with fetch + rebuild + contract tests in CI.
 3. **MCP walks** (now) — this server: as-modified verdicts, citations to units,
    and silence where the data is silent.
-4. **OECD Model** (later) — a corpus extension once 1–3 walk; excluded today
+4. **The verdict as a committed artefact** (studied, not taken) — one file per
+   treaty, regenerated and compared byte for byte, so the answer is readable by
+   a reader who installs nothing. What it gains, what it costs in freshness and
+   the control it would need are in
+   [`docs/verdict-as-artefact.md`](docs/verdict-as-artefact.md).
+5. **An always-on endpoint** (studied, not taken) — what a remote transport
+   would take, in [`docs/remote-endpoint.md`](docs/remote-endpoint.md).
+6. **OECD Model** (later) — a corpus extension once 1–3 walk; excluded today
    on scope grounds only.
 
 ## Rights
