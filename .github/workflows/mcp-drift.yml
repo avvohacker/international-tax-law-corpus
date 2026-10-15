@@ -175,9 +175,10 @@ jobs:
         run: python -m itl_mcp.skeleton --check
 
       - name: Does the exported folder handshake and offer its tools?
-        # The export is started the way an MCP host starts a server, with the
-        # folder first on the path and no site packages of *this* package to
-        # shadow it: `-S` keeps an installed copy from being loaded instead.
+        # The export is started the way an MCP host starts a server: `-m` from
+        # the exported directory, so the folder answers and nothing is installed
+        # from it. Only the two dependencies above are on the path, because the
+        # export's `requirements.txt` is the only thing that was installed.
         env:
           ITL_CORPUS_ROOT: ${{ github.workspace }}
           ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
@@ -191,14 +192,33 @@ jobs:
                           '{"jsonrpc":"2.0","id":2,"method":"tools/list"}' \
                           '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"as_modified_verdict","arguments":{"treaty_id":"no-uk-2013"}}}'
             sleep 4
-          } | python -S -c 'import runpy,sys; runpy.run_module("itl_mcp.server", run_name="__main__")' > /tmp/export.json
-          for tool in as_modified_verdict compare_model_editions \
-                      mli_status read_treaty_page reservation_scope sources; do
-            grep -q ""name":"$tool"" /tmp/export.json \
-              || { echo "::error::the exported folder does not offer $tool"; exit 1; }
-          done
-          grep -q '"verdict":"modified"' /tmp/export.json \
-            || { echo "::error::the exported folder did not answer the verdict"; exit 1; }
+          } | python -m itl_mcp.server > /tmp/export.json
+          # Read, not grepped: the answers travel as JSON inside the JSON-RPC
+          # envelope, and a pattern that matches the envelope is not a check of
+          # what it carries. The server writes one message per line.
+          python - <<'PY'
+          import json
+
+          expected = {"as_modified_verdict", "compare_model_editions", "mli_status",
+                      "read_treaty_page", "reservation_scope", "sources"}
+          tools: set[str] = set()
+          answer = None
+          with open("/tmp/export.json", encoding="utf-8") as stream:
+              for line in stream:
+                  if not line.strip():
+                      continue
+                  message = json.loads(line)
+                  if message.get("id") == 2:
+                      tools = {tool["name"] for tool in message["result"]["tools"]}
+                  if message.get("id") == 3:
+                      answer = json.loads(message["result"]["content"][0]["text"])
+          if tools != expected:
+              raise SystemExit(f"::error::the exported folder offers {sorted(tools)}")
+          if answer is None or answer.get("verdict") != "modified":
+              raise SystemExit(f"::error::the exported folder answered {answer!r}")
+          print(f"the exported folder handshook, offers {len(tools)} tools, "
+                f"and answered 'modified'")
+          PY
 
   compatibility:
     # The two ends `requires-python = ">=3.11"` claims, beside the pinned 3.13
@@ -269,7 +289,7 @@ jobs:
           } | itl-mcp > /tmp/tools.json
           for tool in as_modified_verdict compare_model_editions \
                       mli_status read_treaty_page reservation_scope sources; do
-            grep -q ""name":"$tool"" /tmp/tools.json \
+            grep -q "\"name\":\"$tool\"" /tmp/tools.json \
               || { echo "::error::the installed command does not offer $tool"; exit 1; }
           done
 
