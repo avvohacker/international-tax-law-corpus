@@ -13,12 +13,17 @@ The server is committed in the corpus repository, under `mcp/`, and it is the
 repository that runs it: `.github/workflows/mcp-drift.yml` stands at that
 repository's root, because GitHub reads the workflows of a repository from its
 root and from nowhere else, and the answers below are checked there on every push
-and every week. This folder is self-contained as an addendum — the package, its
-tests, its fixtures and the copy of the shared discipline it holds - and can be
-taken out as one, which is how it is meant to be read by anyone who wants only
-the server; the standalone
+and every week. This folder is the addendum — the package, its tests, its
+fixtures and the copy of the shared discipline it holds - and how far it travels
+was measured rather than assumed: exported with `git archive` into a temporary
+directory and run there against the two roots, **the server answers** (both
+verdicts below, and its refusals) while **8 of its 156 tests fail**, because
+those tests read this repository's workflows, its board and its machine-trace
+rule, and a folder sitting by itself has no `.github` above it. So the portable
+part is the server; the suite is the part that holds the seat, and it is to be
+run where the server is committed. The standalone
 [international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp)
-repository it was built in is where the whole thing can also be run alone.
+repository it was built in is where the whole thing was also run alone.
 
 Two consequences for a reader, and both are stated rather than discovered:
 
