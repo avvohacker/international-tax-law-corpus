@@ -59,6 +59,17 @@ def as_modified_verdict(treaty_id: str) -> str:
         treaty_id: the treaty's stable slug, e.g. "uk-us-2001"; the library
             holds one directory per treaty, under its own treaties/ folder.
     """
+    # The committed skeleton is a control, not a source: the verdict below is
+    # computed from the data every time. What the skeleton adds is the one thing
+    # a computation cannot notice about itself - that an answer was committed and
+    # has since been overtaken - so a stale one is reported rather than answered
+    # past. A refusal here is a defect in the commit, not a question the data
+    # cannot frame, and it says which input moved and what to run.
+    from .skeleton import refusal as stale_refusal, stale
+
+    out_of_date = stale(ROOTS, treaty_id)
+    if out_of_date is not None:
+        return _pretty(stale_refusal(out_of_date))
     try:
         verdict = as_modified(ROOTS, treaty_id)
     except Undecidable as error:

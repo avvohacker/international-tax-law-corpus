@@ -40,6 +40,8 @@ ROOT = Path(__file__).resolve().parent.parent
 BOARD = Path("docs") / "status.md"
 PACKAGE = Path("itl_mcp")
 FIXTURE = Path("fixtures") / "expected-answers.json"
+VERDICTS = Path("fixtures") / "verdicts"
+EXPERIMENTS = Path("experiments")
 PROJECT_NAME = "international-tax-law-mcp"
 
 # The claim this layer makes about itself: it owns no data, reaches for no
@@ -68,16 +70,38 @@ def project_name(root: Path) -> str:
         return PROJECT_NAME
 
 
-def external_readers(root: Path) -> list[str]:
-    """The modules under the package that import a network client or a PDF reader."""
+def external_readers(root: Path, folder: Path | None = None) -> list[str]:
+    """The modules under ``folder`` that import a network client or a PDF reader."""
     found: list[str] = []
-    for path in sorted((root / PACKAGE).glob("*.py")):
+    for path in sorted((root / (folder or PACKAGE)).glob("*.py")):
         text = path.read_text(encoding="utf-8")
         for match in IMPORT.finditer(text):
             if match.group(1) in EXTERNAL:
                 found.append(path.name)
                 break
     return found
+
+
+def verdicts(root: Path) -> list[dict]:
+    """The committed skeletons, read without the two checkouts.
+
+    A board that needed the corpus and the library could not be printed where a
+    reader looks for it first; what these files are is still readable from them,
+    and the one number that would need the data - whether a skeleton is current -
+    is the check command's job (`itl_mcp.skeleton --check`), which does need it.
+    """
+    out: list[dict] = []
+    for path in sorted((root / VERDICTS).glob("*.json")):
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except ValueError:
+            out.append({"name": path.name, "verdict": "unreadable",
+                        "articles": 0, "inputs": 0})
+            continue
+        out.append({"name": path.name, "verdict": payload.get("verdict"),
+                    "articles": len(payload.get("articles") or []),
+                    "inputs": len(payload.get("inputs") or {})})
+    return out
 
 
 def control(root: Path, package: Path) -> list[str]:
@@ -159,6 +183,9 @@ def render(root: Path | None = None) -> str:
     repositories = ci.checked_out_repositories(workflows)
     modules = len(list((root / PACKAGE).glob("*.py")))
     readers = external_readers(root)
+    committed = verdicts(root)
+    experiment_modules = len(list((root / EXPERIMENTS).glob("*.py")))
+    experiment_readers = external_readers(root, EXPERIMENTS)
 
     lines: list[str] = []
     add = lines.append
@@ -212,6 +239,26 @@ def render(root: Path | None = None) -> str:
         f"{'yes — ' + ', '.join(readers) if readers else 'no'} "
         f"({modules} module(s) under `{PACKAGE.as_posix()}/` scanned for an "
         f"import of one)")
+    # The experiments are the one thing here that talks to something outside the
+    # checkouts, and they are not part of the package the line above is about.
+    # Saying so on the board is cheaper than a reader discovering it in a module
+    # that the sentence above says does not exist.
+    if experiment_modules:
+        add(f"- the experiments under `{EXPERIMENTS.as_posix()}/`: "
+            f"{experiment_modules} module(s), "
+            + (f"{len(experiment_readers)} of them calling a model endpoint by "
+               f"design ({', '.join(experiment_readers)})"
+               if experiment_readers else "none of them reaching the network"))
+    if committed:
+        add(f"- committed verdicts: {len(committed)} "
+            f"(`{VERDICTS.as_posix()}/`, written by "
+            f"`python -m itl_mcp.skeleton --write`, held to the data by "
+            f"`python -m itl_mcp.skeleton --check` and by "
+            f"`tests/test_the_verdict_travels_as_a_file.py`)")
+        for entry in committed:
+            add(f"  - `{entry['name']}`: {entry['verdict']}, "
+                f"{entry['articles']} Article(s) behind it, "
+                f"{entry['inputs']} input(s) hashed")
     add("")
     add("## Answers that are recorded")
     add("")

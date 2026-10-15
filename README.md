@@ -186,6 +186,7 @@ What is here:
 | `docs/harness-status.md` | generated. Do not edit. |
 | `docs/guide-maps-and-tables.md` | what this project is, in plain language with maps and tables — the first file to read for a newcomer |
 | `mcp/` | the server, run where it is committed: six tools over corpus plus library, with citations and refusals — [`mcp/README.md`](mcp/README.md), and `mcp/docs/status.md` for its generated board |
+| `mcp/fixtures/verdicts/` | the citable half of each verdict, committed so it can be read without installing anything, with the digest of every input it was computed from — a tool answers `stale` when the data has moved under it |
 | `mcp/docs/remote-endpoint.md` | what an always-on HTTP endpoint would take, and the file and byte counts it would cost |
 | `mcp/docs/verdict-as-artefact.md` | whether a verdict should be committed and regenerated, so it is readable without installing anything — with the byte counts of both shapes and what freshness would cost |
 | `mcp/experiments/` | the four questions asked of a reader with no server, scored against the key with three counters — [`mcp/docs/score-without-the-server.md`](mcp/docs/score-without-the-server.md) |

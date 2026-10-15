@@ -64,11 +64,17 @@ the two variables — the snippet is in [`mcp/README.md`](mcp/README.md).
 ## House rules
 
 * **Generated files are not edited by hand.** `docs/harness-status.md`,
-  `mcp/docs/status.md` and `mcp/fixtures/expected-answers.json` are written by
-  commands, and a test compares each with what its command writes:
-  `python -m harness --write` (corpus), `python -m itl_mcp.status --write` and
-  `python -m itl_mcp.drift --write` (in `mcp/`, with the two roots exported).
+  `mcp/docs/status.md`, `mcp/fixtures/expected-answers.json` and
+  `mcp/fixtures/verdicts/*.json` are written by commands, and a test compares
+  each with what its command writes: `python -m harness --write` (corpus),
+  `python -m itl_mcp.status --write`, `python -m itl_mcp.drift --write` and
+  `python -m itl_mcp.skeleton --write` (in `mcp/`, with the two roots exported).
   Hand-editing one turns a check into a copy of itself.
+* **A committed verdict is a claim with a date.** `mcp/fixtures/verdicts/` holds
+  the citable half of each verdict, with the digest of every input it was
+  computed from. Edit the corpus or the library and the tool answers `stale`
+  until `python -m itl_mcp.skeleton --write` runs: do not silence it by editing
+  the file, and do not answer past it.
 * **Vendored copies are never edited either.** `harness/discipline/` is the one
   implementation of what may not be committed about a machine, how a workflow is
   read and what a status board owes a reader; it is copied into the library and
@@ -96,6 +102,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 cd mcp && ITL_CORPUS_ROOT=.. ITL_LIBRARY_ROOT=../../international-tax-law-library \
       python -m pytest -q                                     # the server
+# and, after moving any data either checkout holds:
+      python -m itl_mcp.skeleton --check                      # is a verdict stale
 ```
 
 A red check is a finding, not an obstacle: say which fact moved and why, or say

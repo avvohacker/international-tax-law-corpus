@@ -76,7 +76,7 @@ rule its tool applies.
 |---|---|---|---|
 | `read_treaty_page` | one page, with the hash it was built from recomputed and compared | recompute the hash from the bytes and compare it with the one the file declares about itself, instead of trusting the declaration | a page number the treaty does not have |
 | `mli_status` | one jurisdiction's MLI standing: signed, deposited, in force since — with the spelling the table prints and the match method | match a name the table may print with a footnote marker or in a longer official form, and say which match it made | to promote a signatory to a party; to pick between two plausible rows (an ambiguous name is reported as ambiguous, not silently resolved) |
-| `as_modified_verdict` | what the MLI does to one treaty, and the chain of Articles behind that verdict: each Article beside what the corpus says it changes and the words each party's own position files on it, with the page | decide from the parties' MLI standing and the covered-agreement lookups, and report the links it constructed apart from the ones it looked up | a treaty the library does not hold; a verdict the data cannot support |
+| `as_modified_verdict` | what the MLI does to one treaty, and the chain of Articles behind that verdict: each Article beside what the corpus says it changes and the words each party's own position files on it, with the page | decide from the parties' MLI standing and the covered-agreement lookups, and report the links it constructed apart from the ones it looked up | a treaty the library does not hold; a verdict the data cannot support; a committed verdict the data has moved under (`stale`, naming the input that moved and the command to run) |
 | `compare_model_editions` | one UN Model Article in the 2017 and the 2021 editions, with each edition's own units cited and the edition that does not print the Article named as silent | read each edition's own node index, so an Article one edition does not print comes back as that edition's silence rather than as an absence from the Model | to answer from the edition that happens to hold the provision; to summarise the corpus's own edition diff rather than quote it |
 | `reservation_scope` | whether one treaty falls inside the reservation each party filed on one MLI Article, with the row, the page and the provision the statement prints as the evidence, and the list it read for a `false` | keep the kinds a document files under an Article apart — a `Reservation` from a `Notification` that only announces a list — and answer three-valued | to answer "not on the list" from a table the corpus could not read (that answer is `null` with the reader's own reason); to close a treaty's question when a party whose document the corpus holds leaves it open |
 | `sources` | every artefact the server read, and how each was verified | keep three strengths of check apart: a hash recomputed from the bytes, a hash the file declares about its source and found in the register, and a check that could not run | to call a check a pass when it could not run |
@@ -385,6 +385,9 @@ many facts, and what the control reads). Six of them are worth naming:
   holds it, that a modified Article names all four of the diff's buckets so an
   empty `renumbered` cannot read as a bucket never looked at, and that the diff
   really does carry the text of every unit the answer then summarises by count.
+* it holds the committed verdicts to the data — the bytes a computation writes,
+  and a moved digest making the tool refuse, the second by pointing the tool at a
+  tampered copy rather than by trusting the first.
 * it scores a reader with no server against the key, and holds the baseline
   this README publishes: one wrong verdict for the reader that matches names as
   the table prints them, one gap filled in every variant, two for the reader
@@ -494,6 +497,40 @@ decision taken after reading the move, not a way to make a red run green.
 
 How a fact is named, and how a report is read, is written down in
 [`docs/drift.md`](docs/drift.md).
+
+## The verdict, committed, and readable without installing anything
+
+`fixtures/verdicts/<treaty>.json` holds the citable half of a verdict — the
+verdict, the Articles behind it, the lookups, the silences and the **hashes of
+every input it was computed from** — one file per treaty the library holds. It is
+the smaller half of the study in [`docs/verdict-as-artefact.md`](docs/verdict-as-artefact.md),
+built and measured: **4.6 KB** for the US–UK convention and **13.2 KB** for the
+UK–Norway one, both far below the megabyte a reader returns in full, so a reader
+that installs nothing can read what the MLI does to a treaty and which Articles
+do it.
+
+One command writes them and one holds them to the data:
+
+```bash
+export ITL_CORPUS_ROOT=... ITL_LIBRARY_ROOT=...
+python -m itl_mcp.skeleton --write    # write them, from the data, by command
+python -m itl_mcp.skeleton --check    # fail when one is not what a computation writes now
+```
+
+The file is a **control, not a source**. `as_modified_verdict` still computes its
+answer from the artefacts on every call; what the skeleton adds is the one thing a
+computation cannot notice about itself — that an answer was committed and has
+since been overtaken. When one of the recorded digests has moved, the tool answers
+`stale`, names the artefact and the two digests, and says which command to run: it
+does not answer from a file that no longer describes the data, and it does not
+repair the file behind the caller's back. `tests/test_the_verdict_travels_as_a_file.py`
+holds both halves — that the committed bytes are what the command writes, and that
+a moved digest really stops the answer — and the CI job `exported` runs the check
+from a copy of this folder alone.
+
+The price is stated where it is paid: any corpus or library push that moves one of
+those inputs makes every skeleton stale until the command runs again, and the tool
+refuses in the meantime.
 
 ## Roadmap
 

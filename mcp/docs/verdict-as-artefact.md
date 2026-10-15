@@ -1,8 +1,11 @@
-# The verdict, committed: a study
+# The verdict, committed: a study, and the half of it that was built
 
-Written 2026-10-15. A study, not a plan: what it would take for an as-modified
-verdict to exist as a committed, regenerable artefact, measured on this corpus
-and the library as they stand, so the choice can be made with the numbers.
+Written 2026-10-15. What it would take for an as-modified verdict to exist as a
+committed, regenerable artefact, measured on this corpus and the library as they
+stand, so the choice can be made with the numbers — and then the smaller half of
+it, built: `fixtures/verdicts/<treaty>.json`, written by
+`python -m itl_mcp.skeleton --write`. Think of the sections below as the study
+and, after them, what the trial found.
 
 ## The question
 
@@ -121,6 +124,51 @@ rules live and the place that regenerates it; carry both commits and every input
 hash; make the tool verify-and-refuse, never answer from the artefact when a hash
 has moved; and keep the drift control as the maker of the answer.
 
+## What the trial found
+
+The first and last of those were built; the second was not, and the third is
+where the disagreement is.
+
+`fixtures/verdicts/<treaty>.json` holds the skeleton, at **4,595 bytes** for the
+US–UK convention and **13,235 bytes** for the UK–Norway one. Larger than the
+8.4 KB and 2.3 KB the projection above measured, and the difference is worth
+naming: this file keeps the verdict's own reasoning, the lookups' `match_method`
+sentences and the indentation a reader can read, where the projection was a
+compact object. It drops the prose the MLI's mapping carries about each Article
+and every quoted excerpt from a position document, which is 29.6 KB of the
+52.0 KB chain — the half a reader can fetch from the document itself.
+
+The **inputs** are hashed, not declared: five files for these two treaties (the
+treaty, the parties' position documents, the signatories table, the mapping),
+named `corpus:...` and `library:...` and never by machine path. A digest of the
+file on disk, rather than the hash the file declares about its source, is what
+makes staleness detectable when somebody edits an artefact in place.
+
+What the trial settled, and what it did not:
+
+* **the refusal works and is the cheap half.** A moved digest makes
+  `as_modified_verdict` answer `stale` with the artefact and both digests named,
+  and the positive control is a tampered copy rather than an accident. The tool
+  still computes every answer from the data, so the file is never trusted; nothing
+  about an answer depends on it being there.
+* **the cost is the one predicted, and it is real.** Any push that moves one of
+  those five files makes the skeletons stale until `--write` runs again, and the
+  tool refuses in the meantime — a corpus edit lands as a *refusal* in the window
+  between the push and the regeneration, which is loud, correct and inconvenient
+  in exactly that order. That is the trade the next section describes, and the
+  trial is what makes it a measurement rather than a worry.
+* **the home is still the open question.** The files live in `fixtures/` under
+  `mcp/` for the trial, because that is the folder that travels and the folder
+  whose tests can hold them. The study's argument for the library stands: these
+  are claims about the library's treaties. Moving them is a decision about which
+  repository owns a derived file, not about the format, which is settled.
+* **answering *from* the artefact is still not taken.** The tool computes; the
+  file is checked. The step not taken is the one that would make the answer
+  cheaper and the failure mode sharper: reading the file and refusing when a
+  digest moved would make the tool a verifier, and the recomputation would live
+  only in CI. That is a change to what an answer *is*, and the trial's job was to
+  find out whether the smaller half holds first.
+
 The line to hold: the artefact exists for **reach**, not for knowledge. It
 answers no question the server cannot; it makes the answer readable where the
 server cannot run. The moment it becomes the source of truth the tool answers
@@ -129,10 +177,12 @@ derived file — has been given away for a convenience.
 
 ## What is not measured here
 
-* **Who regenerates it, and when.** The corpus's CI cannot see a treaty the
-  library has not contributed yet, so the regeneration either runs in the
-  library's CI (which would need the corpus as a checkout) or waits for a corpus
-  push after a library push. Neither was tried.
+* **Who regenerates it, and when.** In the trial nothing does: the corpus' CI
+  *checks* the skeletons and refuses when one is stale, and a human runs
+  `--write`. A corpus push therefore leaves the tool refusing until somebody
+  acts, which is the honest cost of the design and would be the thing to automate
+  first if it ever becomes a burden - by regenerating in the same job that would
+  otherwise report the staleness.
 * **The artefact's own drift.** How often a corpus push would change a skeleton —
   a mapping edit changes every verdict; a position document changes one
   jurisdiction's. The corpus's commit history would answer it; it was not read.
