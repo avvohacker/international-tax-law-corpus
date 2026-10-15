@@ -169,6 +169,7 @@ What is here:
 
 | path | what it is |
 | --- | --- |
+| [`AGENTS.md`](AGENTS.md) | how an agent should work here: when to ask the server instead of reading a file, and why a gap is not filled |
 | `SPEC.md` | what faithful means, invariant by invariant |
 | `DESIGN.md` | how the pipeline is built, and why it is built that way |
 | `fixtures/invariants.yaml` | the invariants, machine-readable |
