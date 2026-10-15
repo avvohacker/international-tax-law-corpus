@@ -6,11 +6,31 @@ build-backend = "setuptools.build_meta"
 name = "international-tax-law-mcp"
 version = "0.1.0"
 description = "MCP server: the query mind over the international-tax-law corpus and library, answering from the data with citations and silence where the data is silent"
+# Read by whoever installs this package and never opens the repository: the same
+# terms as the corpus it lives in, stated where the metadata goes.
+readme = { file = "README.md", content-type = "text/markdown" }
+license = "LicenseRef-Proprietary"
+authors = [{ name = "Avvohacker", email = "avvohacker@gmail.com" }]
+keywords = ["mcp", "tax", "treaty", "MLI", "legal-data", "akoma-ntoso"]
+classifiers = [
+  "Intended Audience :: Legal Industry",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Text Processing :: Markup :: XML",
+]
 requires-python = ">=3.11"
 dependencies = ["mcp>=2.0,<3", "PyYAML>=6.0"]
 
 [project.optional-dependencies]
 test = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/avvohacker/international-tax-law-corpus/tree/main/mcp"
+Repository = "https://github.com/avvohacker/international-tax-law-corpus"
+Issues = "https://github.com/avvohacker/international-tax-law-corpus/issues"
+Source = "https://github.com/avvohacker/international-tax-law-corpus/blob/main/mcp/README.md"
 
 [project.scripts]
 itl-mcp = "itl_mcp.server:main"

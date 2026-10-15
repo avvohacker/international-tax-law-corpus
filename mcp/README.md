@@ -185,6 +185,62 @@ from where.
 What the tool does not do is decide what a difference means for any treaty. It
 reports what the two editions print, and leaves the reading to the reader.
 
+## What it saves, measured against reading the same files
+
+A server is worth starting only if the answer is not already sitting in the
+files a reader would have opened. That is testable, so it was tested here
+instead of argued.
+
+**The method.** Four questions — `as_modified_verdict("uk-us-2001")`,
+`as_modified_verdict("no-uk-2013")`, `reservation_scope("no-uk-2013",
+"Article 7")` and a refusal, `as_modified_verdict("no-treaty-lives-here")` —
+were put to a running server with every `open()` traced, so the material below
+is the set of files the server really reads rather than an estimate of it. The
+four calls touch **24 files, 441.5 KB**, of which seven are data: one MLI
+position document at 117.9 KB, two treaties at 103.8 KB and 75.4 KB, the
+signatories table, the mapping, and the two provenance files. The expected
+answers are the ones recorded in `fixtures/expected-answers.json` — regenerated
+by `python -m itl_mcp.drift --write`, never written by hand — so the comparison
+is against an answer key that is already a control.
+
+**The material is small enough to read by hand.** Half a megabyte is not a
+reason to start a process. The cost is elsewhere: the rules that decide the
+answer are not in the files. Asking those same questions of those same seven
+artefacts, with no server, splits into cases where a careful reading and the
+committed answer part company — each line below checked against the artefacts
+in this checkout:
+
+| the question | read plainly, from the same files | the server's answer |
+|---|---|---|
+| is the UK an MLI party? | a lookup for `"United Kingdom"` matches **no row** of the 107 in `corpora/mli/signatories-and-parties.json`: the row is printed `United Kingdom*`, marker and all (row 105, page 5) | found, with the spelling the table prints and the match method named, so the marker is visible rather than a silent miss |
+| is the United States? | also **no row** — the same answer as the UK, from the same lookup | the two nothings are different facts, and it says so: the US shares no leading words with any of the 107 jurisdictions, so `uk-us-2001` is `not-modified` because the MLI cannot bear on it at all |
+| is `no-uk-2013` inside Norway's Article 7 reservation? | Norway's document files **2 statements** under Article 7 and neither is a `Reservation`; the second is a Notification that *announces* a list ("the following agreement(s) is(are) not subject to a reservation … identified below") for which the corpus captured no rows | `null`, with `announces_a_list_not_captured: true` and the kinds named: the Article files no scope to be inside, and the announced list is not in the corpus to be quoted |
+| the same for Article 4? | Norway's document files **2 entries** there, one `Reservation` and one Notification — the kind is the whole question, and Article 8 mixes the two as well; the `Reservation` prints its agreements, the UK on row 28 of page 6 | `true`, travelling with that row, that page and the provision printed beside it — an answer a reader can reject at the source |
+| which Articles modified `no-uk-2013`? | the treaty↔covered-agreement link has **no key in either repository**: it is built from the counterparty's name plus the signature date, and a plain reading either reports it as committed data or drops it | the construct is reported as a construct (`constructed_links`) and the separations that follow from it as `assumptions`, so what was read and what was inferred are not the same field |
+| a treaty the library does not hold | a slug that matches no directory returns nothing, and nothing distinguishes "the library does not hold it" from "my lookup missed it" — while the tempting failure is to answer by analogy with a treaty it does hold | `undecidable`, with the reason and the note that this is a real answer |
+
+Read the rows the other way round and the shape is the same: the server's
+contribution is not the bytes, it is the naming of a marker, the separation of
+two absences, a refusal that stays a refusal, and evidence that travels with
+the claim.
+
+**What is not measured, and why.** No model was called. This repository holds
+no model and no credential to one, and the machine that ran the trace above has
+no such key either, so no error rate appears in this section and none is
+claimed: a number invented here would be exactly the failure this server exists
+to prevent. What is measured is where the files can be read to a different
+answer, and that is above. Turning it into a model's error rate is a procedure
+anyone with a key can run: give the model the four questions and those seven
+artefacts alone, with no server and no `expected-answers.json`, and score the
+answers against that key — counting three failures separately, because they are
+not equally bad. A **wrong verdict** (`modified` for `uk-us-2001`). A
+**citation that does not carry the fact** (a page or row quoted as evidence
+where the row is not on that page). A **gap filled where the data is silent**
+(the agreements the Article 7 Notification announces, which the corpus does not
+hold; a UK row reconstructed from the name without the marker). The key is
+regenerated from the artefacts by the control, so two people running that
+procedure score the same answers.
+
 ## Verification: three kinds of check, and they are not equally strong
 
 Every answer is a claim about bytes somebody committed, so the server re-checks
@@ -229,6 +285,16 @@ missing evidence. The whole family of 103 positions is asserted in one test, so
 the next one cannot slip through as a sample.
 
 ## Running it
+
+The shortest way, for someone who wants only the server and no clone — `pip`
+builds the package from `mcp/` alone, takes the two dependencies from PyPI at the
+versions `requirements.txt` pins, and installs the `itl-mcp` command:
+
+```bash
+pip install "git+https://github.com/avvohacker/international-tax-law-corpus.git@main#subdirectory=mcp"
+```
+
+Working inside the folder itself:
 
 ```bash
 python3 -m venv .venv
