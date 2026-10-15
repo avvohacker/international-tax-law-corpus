@@ -9,10 +9,10 @@ the floor and the workflows together, and the status board that prints both -
 so it is read here once, rather than twice with two chances to disagree.
 
 This is the shared reader, vendored verbatim from here into
-`international-tax-law-library` and `international-tax-law-mcp` by
-`scripts/vendor-discipline.py`: the three repositories read their own workflows
-with these same functions, so the floor of one can be compared with the floor of
-another without either writing its own YAML walker. The two copies that used to
+`international-tax-law-library` and into the server folder `mcp/` of the corpus
+by `scripts/vendor-discipline.py`: each layer reads its own workflows with these
+same functions, so the floor of one can be compared with the floor of another
+without either writing its own YAML walker. The two copies that used to
 exist beside this one had already drifted - one of them could read the
 `repository:` keys a checkout names, the others could not - and nothing noticed,
 which is the class `scripts/discipline-drift.py` now refuses.

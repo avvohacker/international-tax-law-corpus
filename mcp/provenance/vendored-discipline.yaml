@@ -13,11 +13,11 @@
 #
 # Do not edit either half by hand: re-vendor.
 files:
-  __init__.py: 71dd9b467871c89d5291a896b40884defb202ee9668776d84b5bc36e72dc5c65
+  __init__.py: 6a7d71dfb959fa07569ef58ca87f9de9a448d711333cb92a42769e857dfc393b
   board.py: f3adcfc743e4878888231b528d535a10876fe4f386bcc7774c2cc8f859ecfe76
-  ci.py: cb657588fc192b2daceefe74e7bcf2fdec0c5dca64a011a7f00146d4a2f4b2bc
-  machine_traces.py: 84e496b25bf8fab4b12ddbcc3f3cead510c0e8feb413e2d224ba66e914f3fcf9
+  ci.py: 596e6ca944a27765ba9575f9a5d600e82a024db52f5d683c994befe791625c27
+  machine_traces.py: c50faf4616d6d855773c510d978fe307725f604f4ad71cfeea1a95cd3a9d2df0
 source: https://github.com/avvohacker/international-tax-law-corpus
-source_commit: 933c73b5278799a3b00f376a9498b9a78fe0211b
+source_commit: 32f8722de5beb83f03d71d5cbfe5e13a9aa46724
 source_path: harness/discipline
-vendored_on: '2026-10-13'
+vendored_on: '2026-10-15'
