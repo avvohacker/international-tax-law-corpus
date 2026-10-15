@@ -7,11 +7,11 @@ and position it came from.
 
 ## Where this fits: corpus, library, mcp
 
-Three layers, three repositories, one contract of fidelity:
+Three layers, one contract of fidelity:
 
-* **corpus (this repository)** — the citable base: UN Model 2017 and 2021 plus the OECD MLI framework (mapping, signatories and parties, country positions). Closed scope, byte-reproducible, every unit traceable to its page. **State**: both editions and every view built, anti-drift control in CI.
+* **corpus (this repository)** — the citable base: UN Model 2017 and 2021 plus the OECD MLI framework (mapping, signatories and parties, country positions). Closed scope, byte-reproducible, every unit traceable to its page. **State**: both editions and every view built, anti-drift control in CI; it also holds the server, under [`mcp/`](mcp).
 * **library** ([international-tax-law-library](https://github.com/avvohacker/international-tax-law-library)) — the bilateral treaties people work on, contributed as they go, under the same fidelity contract (source hash, page-anchored units, declared gaps, no invention). Invitation: as you work a treaty, put it here. **State**: contract walking — two treaties in (`uk-us-2001` US–UK 2001, `no-uk-2013` UK–Norway 2013).
-* **mcp** ([international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp)) — the query mind over corpus plus library: treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. **State**: server — seven tools answering from the two checkouts and refusing when they cannot; tested over the protocol in CI.
+* **mcp** ([`mcp/`](mcp) here, and the standalone [international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp) it was built in) — the query mind over corpus plus library: treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. **State**: server — seven tools answering from the two checkouts and refusing when they cannot; it is run by `.github/workflows/mcp-drift.yml` of this repository, over the protocol, and can be taken out as one folder.
 
 ## Roadmap
 
@@ -20,9 +20,12 @@ Three layers, three repositories, one contract of fidelity:
 2. **Library walks** (now) — bilateral treaties enter one by one under the
    same fidelity contract; the first is in (`uk-us-2001`) as the proof, with
    fetch + rebuild + contract tests in CI.
-3. **MCP walks** (now) — this server is built: seven tools over corpus plus
-   library, as-modified verdicts, citations to units, and silence where the
-   data is silent.
+3. **MCP walks** (now) — this server is built and committed here, under
+   `mcp/`: seven tools over corpus plus library, as-modified verdicts,
+   citations to units, and silence where the data is silent. Its own README
+   says what it answers and where it stands; the rules it shares with the
+   corpus — what may not be committed about a machine, how a workflow is read,
+   what a status board owes a reader — are vendored from here and pinned there.
 4. **OECD Model** (later) — a corpus extension once 1–3 walk; excluded today
    on scope grounds only.
 
@@ -158,12 +161,14 @@ python3 -m venv .venv                  # 3.11 or newer; `pyproject.toml` says so
                                             # with a sealed copy is never cached
 .venv/bin/python scripts/read-audit.py module harness drift   # what a command reads
 
-# the rules the three repositories share: vendored here, pinned there
+# the rules the three layers share: vendored here, pinned there. The server is
+# committed here, under mcp/, so it is vendored into a directory of this
+# checkout; the library is a checkout of its own, beside this one.
 .venv/bin/python scripts/vendor-discipline.py --into ../international-tax-law-library \
-                                             --into ../international-tax-law-mcp
-.venv/bin/python scripts/vendor-discipline.py --check --into ../international-tax-law-mcp
+                                             --into mcp
+.venv/bin/python scripts/vendor-discipline.py --check --into mcp
 .venv/bin/python scripts/discipline-drift.py --corpus . --library ../international-tax-law-library \
-                                            --mcp ../international-tax-law-mcp
+                                            --mcp mcp
 
 .venv/bin/python -m pytest -q          # the invariants and the probes
 .venv/bin/python -m harness status     # one line: is there a corpus, and what does the harness see

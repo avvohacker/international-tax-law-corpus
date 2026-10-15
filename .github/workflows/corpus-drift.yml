@@ -287,29 +287,28 @@ jobs:
     # a paragraph of prose in each repository. All of that was found by reading
     # the three side by side by hand, which is not a control.
     #
-    # `scripts/discipline-drift.py`, owned here, takes all three checkouts: it
-    # compares each `vendor/discipline/` copy byte for byte with this one and with
-    # the pin that copy declares, and then *runs* the rule for each repository
-    # under the identity its own CI gives it - the account `runner`, the checkout
-    # named after the project. Equal bytes are not a rule that passes, which is
-    # what the run is for: the first version of the rule was red on all three
-    # workflows, on lines that name nobody, and no desk could see it.
+    # `scripts/discipline-drift.py`, owned here, reads all three: the corpus, the
+    # library checked out beside it, and the server committed in this repository
+    # under `mcp/`. It compares each `vendor/discipline/` copy byte for byte with
+    # this one and with the pin that copy declares, and then *runs* the rule for
+    # each repository under the identity its own CI gives it - the account
+    # `runner`, the checkout named after the project. Equal bytes are not a rule
+    # that passes, which is what the run is for: the first version of the rule was
+    # red on all three workflows, on lines that name nobody, and no desk could see
+    # it.
     runs-on: ubuntu-latest
     steps:
       - name: Check out this repository, which owns the discipline
         uses: actions/checkout@v4
 
       - name: Check out the library
+        # The server is not checked out beside this one: it is committed here,
+        # under `mcp/`, and the control reads it where it stands. A second
+        # checkout of it would be a second copy of the rules it vendors.
         uses: actions/checkout@v4
         with:
           repository: avvohacker/international-tax-law-library
           path: library
-
-      - name: Check out the server
-        uses: actions/checkout@v4
-        with:
-          repository: avvohacker/international-tax-law-mcp
-          path: mcp
 
       - uses: actions/setup-python@v5
         with:

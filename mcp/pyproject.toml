@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "international-tax-law-mcp"
+version = "0.1.0"
+description = "MCP server: the query mind over the international-tax-law corpus and library, answering from the data with citations and silence where the data is silent"
+requires-python = ">=3.11"
+dependencies = ["mcp>=2.0,<3", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+itl-mcp = "itl_mcp.server:main"
+
+[tool.setuptools]
+# Explicit, not discovered: flat-layout auto-discovery refuses the whole build
+# the moment a second top-level directory could be a package, and `fixtures/`
+# (one JSON file, no Python at all) is enough to do it. `pip install -e .` is
+# the step the README tells a reader to run for the `itl-mcp` command, so it
+# must not depend on which directories happen to exist beside the package.
+packages = ["itl_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"

@@ -1,0 +1,188 @@
+name: mcp-drift
+
+# The server is committed in `mcp/` of this repository, and GitHub reads the
+# workflows of a repository from its root and from nowhere else, so the control
+# that belonged to the server stands here, beside the corpus' own. Everything
+# below runs from `mcp/`; nothing about what the control asks changed.
+#
+# The control this layer can run is the one only a query layer can: it starts the
+# server, asks it the questions the README promises answers to, and fails when an
+# answer moves. The server owns no data, so it cannot rebuild an artefact and
+# compare it with what is committed - what it can do is notice that an answer it
+# gave yesterday is not the answer the artefacts give today.
+#
+# That is the real drift for this layer, and it is invisible from inside any
+# single repository. A treaty added to the library, a position read differently,
+# a signatories table that gains a row, a page whose text shifts by one
+# character - any of them changes what the server says, while not one line under
+# `mcp/` changes. The tests read the live corpus and library and assert the
+# answers, so the day an answer moves, this run goes red naming it.
+#
+# The corpus is this checkout, read where it stands - the same bytes the corpus'
+# own control rebuilds - and the library is checked out beside it. Both are read
+# at their default branches rather than at pinned commits, and a legitimate edit
+# upstream turning this run red is the intended behaviour: the answer changed, so
+# the claim that it is still true has to be re-earned here. The scheduled run is
+# what makes that happen without anybody pushing.
+#
+# One thing the suite cannot do by itself is notice its own absence: the tests
+# skip when the two roots are not named, and a skip is green. So the roots are
+# named below and then checked to be the real repositories before pytest runs,
+# and a checkout that came back empty fails loudly instead of passing quietly.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "29 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mcp-drift-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mcp
+    steps:
+      - name: Check out this repository, which holds both the corpus and the server
+        uses: actions/checkout@v4
+
+      - name: Check out the library the server answers from
+        uses: actions/checkout@v4
+        with:
+          repository: avvohacker/international-tax-law-library
+          path: library
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install the server and its tests
+        # The source PDFs are never committed by the corpus, and this server never
+        # reads them: it answers from the committed JSON and the hashes those
+        # projects declare about it. So this checkout and the library above are
+        # enough, and no fetch step is needed here.
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: The two roots must be the real repositories, not empty directories
+        # A missing or wrong checkout would make the suite skip, and a skip is
+        # green -- the failure mode this step exists to refuse.
+        run: |
+          set -euo pipefail
+          test -d ../corpora
+          test -f ../provenance/sources.yaml
+          test -d ../library/treaties
+          test -f ../library/provenance/treaties.yaml
+          test -f ../library/treaties/uk-us-2001/treaty.json
+          test -f ../library/treaties/no-uk-2013/treaty.json
+
+      - name: Name any answer that moved
+        # The suite below asserts the answers; this names the one that moved.
+        # It runs first so a red run leads with the fact, what it was, what it
+        # is now, and what a move of that fact implies - rather than with an
+        # assertion line that says only that something stopped being true.
+        env:
+          ITL_CORPUS_ROOT: ${{ github.workspace }}
+          ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
+        run: python -m itl_mcp.drift
+
+      - name: Do the answers still come from the data?
+        # The verdicts on both held treaties -- not-modified for US-UK, and
+        # modified with its whole chain of Articles for UK-Norway -- the MLI
+        # lookup, the per-page hash verification, the refusals, and the same
+        # questions asked over stdio by a subprocess, the way an MCP host
+        # asks them.
+        env:
+          ITL_CORPUS_ROOT: ${{ github.workspace }}
+          ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
+        run: python -m pytest -q
+
+  compatibility:
+    # The two ends `requires-python = ">=3.11"` claims, beside the pinned 3.13
+    # the control above runs on. This layer is the most exposed of the family to
+    # the interpreter it runs on - it is the one a user installs, and it is the
+    # one that carries the MCP SDK, whose own floor moves - so the same answers
+    # are asked again on the oldest supported version and on the newest release,
+    # drift control first. The evidence is the corpus and the library, not a
+    # machine: nothing is fetched here, so the checkouts are the whole cost.
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.14"]
+    defaults:
+      run:
+        working-directory: mcp
+    steps:
+      - name: Check out this repository, which holds both the corpus and the server
+        uses: actions/checkout@v4
+
+      - name: Check out the library the server answers from
+        uses: actions/checkout@v4
+        with:
+          repository: avvohacker/international-tax-law-library
+          path: library
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install the server and its tests
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: The two roots must be the real repositories, not empty directories
+        run: |
+          set -euo pipefail
+          test -f ../provenance/sources.yaml
+          test -f ../library/provenance/treaties.yaml
+
+      - name: Name any answer that moved
+        env:
+          ITL_CORPUS_ROOT: ${{ github.workspace }}
+          ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
+        run: python -m itl_mcp.drift
+
+      - name: Does the installed command exist and answer?
+        # The README tells a reader to `pip install -e .` and then run
+        # `itl-mcp`; the suite drives `python -m itl_mcp.server`, which is a
+        # different entry point, so nothing else here builds the package. A
+        # broken console script, or a package layout that refuses to install,
+        # would reach a user before it reached this workflow.
+        env:
+          ITL_CORPUS_ROOT: ${{ github.workspace }}
+          ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
+        run: |
+          set -euo pipefail
+          python -m pip install -e . --no-deps
+          {
+            printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"ci","version":"0"}}}'
+            sleep 1
+            printf '%s\n' '{"jsonrpc":"2.0","method":"notifications/initialized"}' \
+                          '{"jsonrpc":"2.0","id":2,"method":"tools/list"}'
+            sleep 3
+          } | itl-mcp > /tmp/tools.json
+          for tool in as_modified_verdict compare_model_editions list_treaties \
+                      mli_status read_treaty_page reservation_scope sources; do
+            grep -q "\"name\":\"$tool\"" /tmp/tools.json \
+              || { echo "::error::the installed command does not offer $tool"; exit 1; }
+          done
+
+      - name: Do the answers still come from the data, on this interpreter?
+        env:
+          ITL_CORPUS_ROOT: ${{ github.workspace }}
+          ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
+        run: python -m pytest -q

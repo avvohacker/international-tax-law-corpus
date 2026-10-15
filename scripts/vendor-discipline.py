@@ -1,15 +1,18 @@
 """Vendor the shared discipline into the repositories that run it.
 
-`harness/discipline/` is the one implementation of the rules the three
-repositories of this family share - what may not be committed about a machine,
-how a workflow is read, what a status board owes a reader (its own docstring
-states them). It travels: this script copies it *verbatim* into each repository
-that is not the one it lives in, and rewrites the pin that says where the copy
-came from and which bytes it is.
+`harness/discipline/` is the one implementation of the rules this family shares -
+what may not be committed about a machine, how a workflow is read, what a status
+board owes a reader (its own docstring states them). It travels: this script
+copies it *verbatim* into each layer that is not the one it lives in, and
+rewrites the pin that says where the copy came from and which bytes it is.
 
     python scripts/vendor-discipline.py --into ../international-tax-law-library \\
-                                        --into ../international-tax-law-mcp
+                                        --into mcp
     python scripts/vendor-discipline.py --check --into ../international-tax-law-library
+
+The server is the second `--into`, and it is a directory of this checkout rather
+than a sibling: it is committed here, under `mcp/`. The library is a repository
+of its own, and stays a sibling.
 
 `--check` writes nothing and exits non-zero naming the file that differs, so the
 corpus' own control can refuse a copy that has drifted from the source without

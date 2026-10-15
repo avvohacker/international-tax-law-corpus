@@ -1,0 +1,23 @@
+# The shared discipline, vendored from the corpus and pinned by hash.
+#
+# Written by `scripts/vendor-discipline.py` in the corpus, at
+# https://github.com/avvohacker/international-tax-law-corpus.
+#
+# That package is the one implementation of what may not be committed about a
+# machine, how a workflow is read, and what a status board owes a reader. The
+# copy under `vendor/discipline/` must be these bytes: a copy that has drifted
+# from the pin is a red test
+# (`tests/test_the_vendored_discipline_is_pinned.py`) rather than a surprise,
+# and `scripts/discipline-drift.py`, run against the corpus' own checkout, is
+# what refuses a copy that has gone back to inventing its own rule.
+#
+# Do not edit either half by hand: re-vendor.
+files:
+  __init__.py: 71dd9b467871c89d5291a896b40884defb202ee9668776d84b5bc36e72dc5c65
+  board.py: f3adcfc743e4878888231b528d535a10876fe4f386bcc7774c2cc8f859ecfe76
+  ci.py: cb657588fc192b2daceefe74e7bcf2fdec0c5dca64a011a7f00146d4a2f4b2bc
+  machine_traces.py: 84e496b25bf8fab4b12ddbcc3f3cead510c0e8feb413e2d224ba66e914f3fcf9
+source: https://github.com/avvohacker/international-tax-law-corpus
+source_commit: 933c73b5278799a3b00f376a9498b9a78fe0211b
+source_path: harness/discipline
+vendored_on: '2026-10-13'

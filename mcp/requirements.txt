@@ -1,0 +1,18 @@
+# The server and its tests. Pinned: the answers this server prints, and the
+# refusals it makes, were verified against the corpus and library artefacts with
+# exactly these versions.
+#
+# `mcp` is the official Model Context Protocol SDK. It needs Python 3.10+,
+# and this repository's floor is 3.11 - above that requirement, so the floor
+# is the family's own choice and not the SDK's. The server reads the artefacts
+# the other two repositories commit and never touches the PDFs, so PyMuPDF is
+# deliberately NOT a dependency here.
+#
+# PyYAML is here for one reason: the corpus pins the hash of its sources in
+# provenance/sources.yaml, and the MLI chain this server prints rests on the
+# mapping whose source hash is pinned there. Reading that register is what
+# turns the mapping's declared hash into a check that was earned rather than
+# a claim repeated. The same parser version the corpus and library pin.
+mcp==2.3.0
+PyYAML==6.0.3
+pytest==9.1.1

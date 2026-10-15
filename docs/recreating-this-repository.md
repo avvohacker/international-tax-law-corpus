@@ -57,18 +57,23 @@ repository, not in this file, not in the workflow. Keep the only copy of it
 somewhere you will still have it tomorrow — a lost passphrase is recoverable
 only by re-fetching the PDF from the UN in a browser and sealing it again.
 
-## 2. The sibling checkouts need the other repositories readable
+## 2. The sibling checkout needs the library readable
 
-`mcp-drift` checks the corpus and the library out into the mcp's own run. The
+`mcp-drift` checks the library out beside this repository, and the corpus'
+`discipline` job does the same, because neither this repository nor the server
+committed inside it carries the bilateral treaties the server answers from. The
 `GITHUB_TOKEN` is scoped to the repository running the workflow, so it reads a
 **public** sibling and cannot read a private one: the checkout fails with
 `Not Found — https://docs.github.com/rest/repos/repos#get-a-repository`.
 
-So while the three repositories are private, `mcp-drift` is red for a reason
-that has nothing to do with the server, and making the mcp's siblings public is
-part of making that control green — not a separate concern from it. A workflow
-that needs a private sibling needs a token with access to it; the default token
-is not one.
+So while the library is private, both controls are red for a reason that has
+nothing to do with the corpus or the server, and making the library public is
+part of making them green — not a separate concern from it. A workflow that needs
+a private sibling needs a token with access to it; the default token is not one.
+
+The server itself used to be a third checkout here and is not one any more: it is
+committed in this repository, under `mcp/`, so nothing about it depends on
+another repository being readable.
 
 ## 3. What else git does not carry
 
@@ -84,9 +89,9 @@ is not one.
 
 | repository | what the runner must be able to reach | the failure when it cannot |
 | --- | --- | --- |
-| corpus | the secret `UN_MODEL_2021_KEY`; the UN host, for every source but `un-model-2021` | fetch step fails, nothing is read |
+| corpus | the secret `UN_MODEL_2021_KEY`; the UN host, for every source but `un-model-2021`; the library, read-only, for the two controls of item 2 | fetch step fails, or `Not Found` on the library checkout |
 | library | the publisher hosts for its treaties' PDFs | fetch step fails, nothing is read |
-| mcp | the corpus and the library, read-only | `Not Found` on the sibling checkout |
+| mcp (in this repository, under `mcp/`) | the library, read-only — the corpus it reads is the checkout it is committed in | `Not Found` on the library checkout |
 
 ## What this page is not
 

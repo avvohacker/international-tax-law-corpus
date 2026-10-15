@@ -41,6 +41,16 @@ Five things are compared, and each of them can fail on its own:
   * **the reader**: the same workflow reader reads all three, so the floors above
     were compared by one implementation rather than by three that agree today.
 
+The server is no longer a repository of its own. It is committed in this one,
+under `mcp/`, and GitHub reads the workflows of a repository from its root and
+from nowhere else - so the control that runs its tests is
+`.github/workflows/mcp-drift.yml` here, and a `mcp/.github/workflows/` would be a
+file that looks like a control and is never executed. The reading of a
+repository's workflows therefore resolves, for every root, the repository whose
+workflows actually run it: itself for the corpus and the library, the corpus for
+the server it holds. Everything else - the copies, the pins, the scan, the floor
+of a manifest, the board document - is read where it lies, subtree or not.
+
 A desk can run this before pushing; CI runs it in every repository of the three,
 because the drift it refuses is invisible from inside any one of them.
 """
@@ -91,20 +101,73 @@ def shared(root: Path) -> Path:
     return mine if mine.is_dir() else root / "vendor" / "discipline"
 
 
+def workflows_root(root: Path) -> Path:
+    """The repository whose workflows run the tests committed under ``root``.
+
+    A repository of this family used to be a checkout of its own, with its
+    workflows at its own root, and the reader of a repository's workflows was
+    handed that root and nothing else. The server is now committed inside the
+    corpus, and GitHub reads the workflows of a repository from its root and from
+    nowhere else: a control at `mcp/.github/workflows/` would be a file that looks
+    like one and is never executed. So the control stands where it is run, and
+    this walks up to the first checkout that has workflows at all. The corpus, the
+    library, and the server read as a standalone checkout answer with themselves.
+    """
+    for candidate in (root, *root.parents):
+        if (candidate / ".github" / "workflows").is_dir():
+            return candidate
+    return root
+
+
+def board_problems(root: Path, project: str | None, workflows: Path,
+                   discipline) -> list[str]:
+    """Every way this repository's board breaks the rule, named.
+
+    For a repository that stands alone this is the vendored rule itself, asked
+    once. The server does not stand alone any more, and the one clause of the rule
+    that is not about its own document - "CI runs the tests, or the third clause
+    holds nothing" - is a fact about the repository that runs it. The four clauses
+    that *are* about the document are read from the vendored rule's own facts, so
+    that nothing here states a rule of its own; the fifth is read, in one line,
+    where it is true.
+    """
+    if workflows == root:
+        return discipline.board.problems(root, project)
+    found = discipline.board.facts(root, project)
+    clauses = {
+        "exactly one generated document under `docs/`": found["documents"] == 1,
+        "the document says which command writes it": bool(found["command"]),
+        f"the document prints `- project: `{found['project']}`":
+            found["names_the_project"],
+        "a test names the document and the command that writes it":
+            bool(found["current_test"]),
+        f"a run executes that test (the workflows of {workflows})":
+            discipline.ci.runs_pytest(workflows),
+    }
+    return [f"the board of {root}: {clause} does not hold"
+            for clause, holds in clauses.items() if not holds]
+
+
 def facts(root: Path, discipline) -> dict:
     """What the rules amount to in one repository, rules and paths apart."""
     project = discipline.machine_traces.project_name(root)
+    workflows = workflows_root(root)
     board = discipline.board.facts(root, project)
+    # The workflows belong to the repository that runs this one, and the board
+    # rule's fifth clause reads them. Read from the subtree, they would report a
+    # floor nobody runs and a control nobody executes.
+    board["run_in_ci"] = discipline.ci.runs_pytest(workflows)
     return {
         "project": project,
+        "workflows": workflows,
         "floor": discipline.ci.floor(root),
-        "interpreters": sorted(set(discipline.ci.interpreters(root))),
-        "matrix": sorted(set(discipline.ci.matrix_interpreters(root))),
-        "suspect": discipline.ci.suspect(root),
+        "interpreters": sorted(set(discipline.ci.interpreters(workflows))),
+        "matrix": sorted(set(discipline.ci.matrix_interpreters(workflows))),
+        "suspect": discipline.ci.suspect(workflows),
         "board": board,
         "as_ci": discipline.machine_traces.problems(root, user=AS_CI,
                                                     checkout=project),
-        "board_problems": discipline.board.problems(root, project),
+        "board_problems": board_problems(root, project, workflows, discipline),
     }
 
 
@@ -153,15 +216,21 @@ def compare(corpus: Path, library: Path, mcp: Path) -> list[str]:
 def sheet(name: str, root: Path, discipline) -> str:
     found = facts(root, discipline)
     board = found["board"]
-    return "\n".join((
+    lines = [
         f"{name}: {root}",
         f"  project {found['project']}, floor {found['floor']}, "
         f"interpreters {found['interpreters']}, matrix {found['matrix']}",
+    ]
+    if found["workflows"] != root:
+        lines.append(f"  run by the workflows of {found['workflows']}, which "
+                     f"holds it")
+    lines += [
         f"  board {board['board']} by `{board['command']}`, held by "
         f"{board['current_test']}",
         f"  the machine-trace rule under the CI account: "
         f"{'clean' if not found['as_ci'] else str(len(found['as_ci'])) + ' traces'}",
-    ))
+    ]
+    return "\n".join(lines)
 
 
 def main(argv: list[str]) -> int:
