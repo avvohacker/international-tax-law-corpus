@@ -2,11 +2,14 @@
 
 The server is meant to be read where it stands: by a person, by a clone, and by
 GitHub's own MCP server, which is the reader most likely to be pointed at this
-repository *before* anybody installs anything. That reader returns a file's full
-content up to 1 MB; between 1 MB and 100 MB it hands back the bytes only on
-request, as `raw`; above 100 MB it refuses. As of this writing the folder's
-largest committed file is 47 KB - `itl_mcp/verdict.py` - so the whole layer is
-readable in full, and this file is what keeps that true.
+repository *before* anybody installs anything. That reader reads a file through
+the GitHub contents API, and the API is where this boundary is documented:
+content in full up to 1 MB per file, between 1 MB and 100 MB only the `raw`
+media type carries the bytes, and above 100 MB the endpoint is not supported at
+all. What the MCP tool returns at each size is the API's behaviour and is not
+asserted here. As of this writing the folder's largest committed file is 47 KB
+- `itl_mcp/verdict.py` - so the whole layer is readable in full, and this file
+is what keeps that true.
 
 The failure it exists for is quiet. Prose grows, a fixture gains answers, a
 module doubles: no test in this suite would notice, because nothing here cares

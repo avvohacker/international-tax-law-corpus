@@ -5,13 +5,48 @@ of the OECD material on the Multilateral Instrument: text identical to the
 source's, structure identical to the source's, every unit traceable to the page
 and position it came from.
 
-## Where this fits: corpus, library, mcp
+## Where this fits: two repositories, and the folder that answers
 
-Three layers, one contract of fidelity:
+Two repositories under one contract of fidelity, and the server that queries
+both is committed inside this one:
 
 * **corpus (this repository)** — the citable base: UN Model 2017 and 2021 plus the OECD MLI framework (mapping, signatories and parties, country positions). Closed scope, byte-reproducible, every unit traceable to its page. **State**: both editions and every view built, anti-drift control in CI; it also holds the server, under [`mcp/`](mcp).
 * **library** ([international-tax-law-library](https://github.com/avvohacker/international-tax-law-library)) — the bilateral treaties people work on, contributed as they go, under the same fidelity contract (source hash, page-anchored units, declared gaps, no invention). Invitation: as you work a treaty, put it here. **State**: contract walking — two treaties in (`uk-us-2001` US–UK 2001, `no-uk-2013` UK–Norway 2013).
-* **mcp** ([`mcp/`](mcp) here, and the standalone [international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp) it was built in) — the query mind over corpus plus library: treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. **State**: server — seven tools answering from the two checkouts and refusing when they cannot; it is run by `.github/workflows/mcp-drift.yml` of this repository, over the protocol, and the folder travels as one — taken out alone, the server still answers, while its suite is to be run where it is committed — and it installs from the folder alone, with no clone: `pip install "git+https://github.com/avvohacker/international-tax-law-corpus.git@main#subdirectory=mcp"`.
+* **the server, [`mcp/`](mcp)** — not a repository of its own but a folder of this one: the query mind over corpus plus library, treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. It was built in a standalone repository of its own, which is private now and is not where a reader should be pointed — this folder is its home. **State**: seven tools answering from the two checkouts and refusing when they cannot; it is run by the workflows of this repository, over the protocol, and the folder travels as one — taken out alone, the server still answers, while its suite is to be run where it is committed — and it installs from the folder alone, with no clone: `pip install "git+https://github.com/avvohacker/international-tax-law-corpus.git@main#subdirectory=mcp"`.
+
+### What GitHub's own MCP server gives you, and what this folder adds
+
+GitHub ships an MCP server that reads repositories: a file's content (through
+the contents API, which returns content in full up to 1 MB per file), directory
+listings, trees, blame, commits, code search. It reads and writes files; it does
+not execute them. No tool in it runs Python or a shell command, and nothing
+committed in a repository can give it one — so pointed at this corpus it can
+hand a model every byte it needs, and the verdict still has to be reconstructed
+from those bytes by the model itself. That reconstruction is what the folder is
+for, and [`mcp/README.md`](mcp/README.md) measures both halves: the material (a
+verdict is seven artefacts, 441.5 KB) and the cases where those same artefacts,
+read without the server, part company with the committed answer.
+
+The folder is a **second** server, not a plugin for GitHub's and not a set of
+instructions to it. An MCP host can be given both at once, and each answers what
+it is for. Reaching ours takes three things, and only the first is an install:
+
+1. **one command, no clone** — the `pip install` above, which needs Python 3.11
+   or newer on the machine that will run it;
+2. **the two checkouts, named** — `ITL_CORPUS_ROOT` and `ITL_LIBRARY_ROOT`,
+   because the server owns no data and answers only from what it is pointed at;
+3. **a host that starts it** — MCP over stdio means the client launches the
+   process when a question is asked, so it runs on the machine where those two
+   checkouts are, while the client is asking. Nothing is precomputed and nothing
+   is cached, which is why no answer can be stale.
+
+A reader who installs nothing keeps everything GitHub already gives — every
+file, read in full — and with it the cases where the same files read to a
+different answer. What they do not get is a computed verdict, the citation
+chain that travels with it, or a refusal. [`mcp/docs/remote-endpoint.md`](mcp/docs/remote-endpoint.md)
+is the study of what an always-on endpoint would take, with the numbers (the
+full question set reads 134 files, 14.2 MB); it is a study, and nothing is
+deployed.
 
 ## Roadmap
 
@@ -22,10 +57,12 @@ Three layers, one contract of fidelity:
    fetch + rebuild + contract tests in CI.
 3. **MCP walks** (now) — this server is built and committed here, under
    `mcp/`: seven tools over corpus plus library, as-modified verdicts,
-   citations to units, and silence where the data is silent. Its own README
-   says what it answers and where it stands; the rules it shares with the
-   corpus — what may not be committed about a machine, how a workflow is read,
-   what a status board owes a reader — are vendored from here and pinned there.
+   citations to units, and silence where the data is silent. It is a folder of
+   this repository rather than a repository of its own — the standalone one it
+   was built in is private and is not the way in. Its own README says what it
+   answers and where it stands; the rules it shares with the corpus — what may
+   not be committed about a machine, how a workflow is read, what a status
+   board owes a reader — are vendored from here and pinned there.
 4. **OECD Model** (later) — a corpus extension once 1–3 walk; excluded today
    on scope grounds only.
 
@@ -147,6 +184,9 @@ What is here:
 | `scripts/discipline-drift.py` | holds the corpus, the library and the server to one discipline, from their three checkouts, the way CI does |
 | `docs/harness-status.md` | generated. Do not edit. |
 | `docs/guide-maps-and-tables.md` | what this project is, in plain language with maps and tables — the first file to read for a newcomer |
+| `mcp/` | the server, run where it is committed: seven tools over corpus plus library, with citations and refusals — [`mcp/README.md`](mcp/README.md), and `mcp/docs/status.md` for its generated board |
+| `mcp/docs/remote-endpoint.md` | what an always-on HTTP endpoint would take, and the file and byte counts it would cost |
+| `mcp/tests/test_nothing_is_out_of_reach.py` | the control that keeps every committed file of `mcp/` readable in full by a reader that returns content up to 1 MB |
 
 ## Running it
 
