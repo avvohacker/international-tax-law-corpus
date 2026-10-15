@@ -231,22 +231,33 @@ contribution is not the bytes, it is the naming of a marker, the separation of
 two absences, a refusal that stays a refusal, and evidence that travels with
 the claim.
 
+**The baseline, measured.** `experiments/plain_reader.py` is a reader with no
+server at all — it reads the same artefacts and applies the plainest rule each
+question suggests — and `experiments/score_answers.py` scores it against the
+key. Three variants, and the differences between them are the finding:
+
+| reader | wrong verdict | gaps filled | citations that do not carry the fact |
+| --- | --- | --- | --- |
+| a name matched as the table prints it | **1** | **1** | 0 |
+| the marker stripped, a longer official form accepted | 0 | **1** | 0 |
+| the same, plus answering what it cannot find | 0 | **2** | 0 |
+
+So the marker costs a verdict, the announced list costs a gap in every variant
+(the rule that saves it is the server's, and no amount of careful reading
+recovers a list that is not in the file), and answering what one cannot find
+costs the fourth question. Method, key and counters:
+[`docs/score-without-the-server.md`](docs/score-without-the-server.md).
+
 **What is not measured, and why.** No model was called. This repository holds
-no model and no credential to one, and the machine that ran the trace above has
-no such key either, so no error rate appears in this section and none is
-claimed: a number invented here would be exactly the failure this server exists
-to prevent. What is measured is where the files can be read to a different
-answer, and that is above. Turning it into a model's error rate is a procedure
-anyone with a key can run: give the model the four questions and those seven
-artefacts alone, with no server and no `expected-answers.json`, and score the
-answers against that key — counting three failures separately, because they are
-not equally bad. A **wrong verdict** (`modified` for `uk-us-2001`). A
-**citation that does not carry the fact** (a page or row quoted as evidence
-where the row is not on that page). A **gap filled where the data is silent**
-(the agreements the Article 7 Notification announces, which the corpus does not
-hold; a UK row reconstructed from the name without the marker). The key is
-regenerated from the artefacts by the control, so two people running that
-procedure score the same answers.
+no model and no credential to one, and the machine these numbers were taken on
+has no such key either, so no model's error rate appears in this section and
+none is claimed: a number invented here would be exactly the failure this server
+exists to prevent. The protocol is one command away, not one experiment away —
+`experiments/score_answers.py ask` sends the four questions and the eight
+artefacts to an endpoint named by environment variables, and the same scorer
+grades the reply with the same three counters, tested against hand-built
+transcripts. What is counted, and what each counter means, is in
+[`docs/score-without-the-server.md`](docs/score-without-the-server.md).
 
 ## Verification: three kinds of check, and they are not equally strong
 
@@ -374,6 +385,11 @@ many facts, and what the control reads). Six of them are worth naming:
   holds it, that a modified Article names all four of the diff's buckets so an
   empty `renumbered` cannot read as a bucket never looked at, and that the diff
   really does carry the text of every unit the answer then summarises by count.
+* it scores a reader with no server against the key, and holds the baseline
+  this README publishes: one wrong verdict for the reader that matches names as
+  the table prints them, one gap filled in every variant, two for the reader
+  that also answers what it cannot find. A trap that closes in the data is
+  reported here rather than quietly leaving a table.
 * it compares every answer the README promises with the same answer recorded
   earlier, and names the fact that moved, from what to what, and what kind of
   upstream change could have moved it. See below.
