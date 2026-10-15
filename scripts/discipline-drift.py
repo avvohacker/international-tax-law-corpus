@@ -1,4 +1,4 @@
-"""Hold the three repositories to one discipline, as CI sees them.
+"""Hold the corpus, the library and the server to one discipline, as CI sees them.
 
     python scripts/discipline-drift.py --corpus . --library ../library --mcp ../mcp
 
@@ -21,9 +21,9 @@ Five things are compared, and each of them can fail on its own:
     `actions/checkout` makes in that repository's own workflow, which is the
     project's name - and must come back empty. This is the half that equal bytes
     cannot show: the rule walks through prose, and the prose differs. The first
-    version of the rule failed here for all three repositories, on lines that
-    name nobody, because CI's account name is an ordinary English word and all
-    three say it in their own workflow comments.
+    version of the rule failed here for all three layers, on lines that name
+    nobody, because CI's account name is an ordinary English word and all three
+    say it in their own workflow comments.
 
     The identity is the repository's own and not the one this control happens to
     give it: which directory a *sibling's* workflow checks another repository out
@@ -64,7 +64,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 
 # The account CI runs as, and the reason the machine-trace rule was rewritten:
-# the name is an ordinary English word that all three repositories say in their
+# the name is an ordinary English word that all three layers say in their
 # own prose. The run is done under it rather than under the desk's account, so
 # that a repository whose text collides with its CI account is red here, before
 # a runner ever sees it.
@@ -172,7 +172,7 @@ def facts(root: Path, discipline) -> dict:
 
 
 def compare(corpus: Path, library: Path, mcp: Path) -> list[str]:
-    """Every way the three repositories disagree about the shared discipline."""
+    """Every way the three disagree about the shared discipline."""
     source = shared(corpus)
     discipline = load(source)
     vendor = loader_for(HERE / "vendor-discipline.py")
@@ -196,7 +196,7 @@ def compare(corpus: Path, library: Path, mcp: Path) -> list[str]:
 
     floors = {root: sheet["floor"] for root, sheet in sheets.items()}
     if len(set(floors.values())) != 1:
-        failures.append(f"the three repositories declare different floors: "
+        failures.append(f"the three checkouts declare different floors: "
                         f"{ {str(root): floor for root, floor in floors.items()} }")
     for field in ("interpreters", "matrix"):
         values = {root: sheet[field] for root, sheet in sheets.items()}

@@ -140,11 +140,11 @@ What is here:
 | `rules/*.yaml` | the classification rules the extractor will read |
 | `vendor/akn/` | the AKN 3.0 schema, vendored verbatim and validated against, pinned in `provenance/akn-xsd.sha256` |
 | `harness/` | the probe engine and the status report |
-| `harness/discipline/` | the rules the three repositories share — machine traces, the workflow reader, the status board's rule — in one implementation, vendored from here into the library and the server |
+| `harness/discipline/` | the rules the family shares — machine traces, the workflow reader, the status board's rule — in one implementation, vendored from here into the library and into `mcp/` |
 | `tests/` | the invariants, as tests |
 | `scripts/read-audit.py` | what a command really reads here, in files and bytes — the measurement behind what CI fetches |
 | `scripts/vendor-discipline.py` | copies `harness/discipline/` into a repository that runs it, with the pin that says which bytes traveled |
-| `scripts/discipline-drift.py` | holds the three repositories to one discipline, from their three checkouts, the way CI does |
+| `scripts/discipline-drift.py` | holds the corpus, the library and the server to one discipline, from their three checkouts, the way CI does |
 | `docs/harness-status.md` | generated. Do not edit. |
 | `docs/guide-maps-and-tables.md` | what this project is, in plain language with maps and tables — the first file to read for a newcomer |
 

@@ -3,8 +3,8 @@
 The corpus states this as invariant F14, and states why: a committed
 `derived/index.json` once carried an absolute path into the builder's home
 directory. The class is wider than the artefacts a pipeline writes, so the rule
-is applied to every file a repository tracks, in all three repositories of the
-family, whoever wrote them:
+is applied to every file a checkout tracks, in all three layers of the family,
+whoever wrote them:
 
   * an absolute local path - a home directory, a macOS machine root, a Windows
     home, a `file://` URL that names a local path;
@@ -16,8 +16,8 @@ This module is the one implementation of that rule. It used to be three: each
 repository carried its own copy of the detector, the copies had drifted - three
 wordings, three exemption lists, three answers to "is the checkout's own name a
 trace?" - and nothing compared them. It is vendored verbatim from here into
-`international-tax-law-library` and `international-tax-law-mcp` by
-`scripts/vendor-discipline.py`, and pinned there by hash
+`international-tax-law-library` and into the server folder `mcp/` of the corpus
+by `scripts/vendor-discipline.py`, and pinned there by hash
 (`provenance/vendored-discipline.yaml`), so a copy that goes back to inventing
 its own rule is a red test rather than a surprise, and
 `scripts/discipline-drift.py` runs this scan for each of the three as CI sees
@@ -27,7 +27,7 @@ Two things a rule about machines cannot decide by itself, declared here rather
 than discovered at the moment it matters:
 
   * The third rule is about a *person's* account name, and CI runs as an account
-    whose name is an ordinary English word. All three repositories say that word
+    whose name is an ordinary English word. All three layers say that word
     in their own prose - a workflow comment reads "the runner reads what the
     corpus was built from" - so the rule as first written failed on every
     compatibility job the day it was added, on a line that names nobody. A CI
@@ -87,7 +87,7 @@ OWNER_URL = re.compile(r"https?://(?:raw\.)?github\.com/$")
 def scratch(relative: Path) -> bool:
     """Whether a path inside a working copy is scratch rather than published.
 
-    Every entry here is ignored on purpose by all three repositories, so the
+    Every entry here is ignored on purpose by all three layers, so the
     tracked scan never meets one; the working-tree scan does, and a build
     directory that records the absolute path a checkout was installed from
     would otherwise be read as a defect of the committed files.
@@ -183,7 +183,7 @@ def problems(root: Path, *, user: str | None = None,
 
     ``user`` and ``checkout`` default to this machine's account and this
     directory's name. A caller that names them is asking what a *different*
-    machine would see - which is how the three repositories are held to one rule
+    machine would see - which is how the three are held to one rule
     on a desk: `scripts/discipline-drift.py` runs this scan for each of them
     under the identity CI gives it, and a repository whose own prose collides
     with its CI account is caught there rather than on the runner.

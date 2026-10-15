@@ -85,7 +85,7 @@ another repository being readable.
 * **Visibility.** A recreated repository is private until you say otherwise,
   and item 2 above is what that costs.
 
-## The three repositories, and what each needs to be green
+## The layers, and what each needs to be green
 
 | repository | what the runner must be able to reach | the failure when it cannot |
 | --- | --- | --- |

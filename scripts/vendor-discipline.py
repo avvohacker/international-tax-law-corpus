@@ -33,7 +33,7 @@ every other register in this family names the bytes it did not write, and the
 machine-trace rule of this very package recognises an owner only where it is a
 URL or an owner line. A slug is a bare word - the account that owns these
 repositories read as a machine trace on the desk of the person most likely to be
-re-vendoring, red in all three repositories at once, and green on CI, where the
+re-vendoring, red in all three layers at once, and green on CI, where the
 account is `runner`. Which form to write here is not a matter of taste: one of
 them is a name the rule already exempts, and the other is a name it must not.
 """

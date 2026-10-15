@@ -280,8 +280,9 @@ jobs:
 
   discipline:
     # The other half of this family's anti-drift control. The jobs above hold the
-    # corpus against its own sources; this one holds the three repositories
-    # against the rules they share - and the sharing had been a fiction: the
+    # corpus against its own sources; this one holds the corpus, the library
+    # checked out beside it and the server committed here against the rules they
+    # share - and the sharing had been a fiction: the
     # machine-trace rule existed in three wordings with three exemption lists,
     # the workflow readers in two different APIs, and the status board's rule was
     # a paragraph of prose in each repository. All of that was found by reading

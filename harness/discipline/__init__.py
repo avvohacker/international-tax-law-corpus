@@ -1,10 +1,10 @@
-"""The discipline the three repositories share, in one implementation.
+"""The discipline this family shares, in one implementation.
 
-`international-tax-law-corpus`, `international-tax-law-library` and
-`international-tax-law-mcp` are three repositories on purpose: the interface
-between them is data, their life cycles differ, and a contributor to one treaty
-should not have to clone a corpus. What they should *not* have three of is the
-rules they hold themselves to - and until this package existed they did:
+The corpus, the library, and the server committed inside the corpus are three
+layers on purpose: the interface between them is data, their life cycles differ,
+and a contributor to one treaty should not have to clone a corpus. What they
+should *not* have three of is the rules they hold themselves to - and until this
+package existed they did:
 
   * `machine_traces.py`, the rule that nothing committed may describe the machine
     it was built on (invariant F14 here), carried three wordings, three
@@ -16,11 +16,12 @@ rules they hold themselves to - and until this package existed they did:
     repository and a convention in each script, and nothing compared the three.
 
 This package is where those rules live now, once. It is vendored verbatim into
-the other two repositories by `scripts/vendor-discipline.py`, pinned there by
-hash in `provenance/vendored-discipline.yaml` and held by a test, and
+the other two layers by `scripts/vendor-discipline.py` - the library, and the
+server folder `mcp/` here - pinned there by hash in
+`provenance/vendored-discipline.yaml` and held by a test, and
 `scripts/discipline-drift.py` runs the same checks over all three checkouts as
 CI sees them - so a copy that goes back to inventing its own version is a red
-run in the repository that holds it, not a discovery made months later by hand.
+run in whichever layer holds it, not a discovery made months later by hand.
 
 The vendoring is the idiom these repositories already use for the bytes they do
 not own (a source PDF, a published edition, a recorded answer): the copy travels,
