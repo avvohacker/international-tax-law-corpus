@@ -84,9 +84,9 @@ generated the same way.
 ## One reading, taken twice
 
 Every recorded answer is read by the tool and by the control through the **same
-function** — `library.listing`, `library.page`, `verdict.status`,
-`verdict.as_modified`, `editions.compare`, `reservations.scope`,
-`verify.sources` — and so is every **refusal**, which is an answer too:
+function** — `library.page`, `verdict.status`, `verdict.as_modified`,
+`editions.compare`, `reservations.scope`, `verify.sources` — and so is every
+**refusal**, which is an answer too:
 `verdict.refusal`, `editions.uncomparable`, `reservations.refusal` and
 `reservations.unverifiable`. A control that re-derived a payload its own way
 would be checking itself, and the day the tool stopped reading a field the

@@ -28,7 +28,6 @@ REPO = Path(__file__).resolve().parents[1]
 EXPECTED_TOOLS = {
     "as_modified_verdict",
     "compare_model_editions",
-    "list_treaties",
     "read_treaty_page",
     "mli_status",
     "reservation_scope",
@@ -115,7 +114,6 @@ def test_the_reservation_question_travels_with_its_row_and_page(roots):
 
 def test_the_server_handshakes_and_answers_from_the_data(roots):
     info, listed, answers = _run(roots, [
-        ("list_treaties", {}),
         ("mli_status", {"jurisdiction": "Italy"}),
         ("mli_status", {"jurisdiction": "United"}),
         ("read_treaty_page", {"treaty_id": "uk-us-2001", "page": 1}),
@@ -124,8 +122,7 @@ def test_the_server_handshakes_and_answers_from_the_data(roots):
     assert info.name == "international-tax-law", info
     assert {tool.name for tool in listed.tools} == EXPECTED_TOOLS
 
-    held, italy, ambiguous, page = answers
-    assert "uk-us-2001" in [t["id"] for t in held["treaties"]]
+    italy, ambiguous, page = answers
 
     # Italy signed the MLI but has not deposited an instrument, so a real
     # answer names the row and leaves the in-force date empty -- it does not

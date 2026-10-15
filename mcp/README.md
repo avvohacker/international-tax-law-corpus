@@ -41,7 +41,7 @@ Three layers, one contract of fidelity:
 
 * **corpus** ([international-tax-law-corpus](https://github.com/avvohacker/international-tax-law-corpus)) — the citable base: UN Model 2017 and 2021 plus the OECD MLI framework (mapping, signatories and parties, country positions). Closed scope, byte-reproducible, every unit traceable to its page. **State**: both editions and every view built, anti-drift control in CI; it also holds this server, under `mcp/`.
 * **library** ([international-tax-law-library](https://github.com/avvohacker/international-tax-law-library)) — the bilateral treaties people work on, contributed as they go, under the same fidelity contract (source hash, page-anchored units, declared gaps, no invention). Invitation: as you work a treaty, put it here. **State**: contract walking — two treaties in (`uk-us-2001` US–UK 2001, `no-uk-2013` UK–Norway 2013).
-* **mcp** ([this folder](.), in the corpus) — the query mind over corpus plus library: treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. **State**: server — seven tools answering from the two checkouts and refusing when they cannot; tested over the protocol in CI.
+* **mcp** ([this folder](.), in the corpus) — the query mind over corpus plus library: treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. **State**: server — six tools answering from the two checkouts and refusing when they cannot; tested over the protocol in CI.
 
 ## Current state: the server answers, and refuses
 
@@ -62,17 +62,24 @@ sources, so that is what it answers from and what it checks against.
 
 ## The tools
 
-Seven tools, each with a defined answer and a defined refusal.
+Six tools, each with a defined answer and a defined refusal, and each kept for
+one reason: **it applies a rule the files do not state.** Reading a file is what
+GitHub's own MCP server already does, better than this one could, so a tool that
+only lists or hands back what is committed would be a second way to do a thing a
+reader can already do; what is offered instead is what a plain reading of the
+same bytes gets wrong. That is the criterion, and it is why `list_treaties` is
+not here any more: what the library holds is its `treaties/` folder, one
+directory per treaty, and listing it needs no server. Every row below names the
+rule its tool applies.
 
-| Tool | Answers | Refuses |
-|---|---|---|
-| `list_treaties` | the treaties the library holds, with parties, pages and declared gaps | to pretend a treaty is held by article: the library publishes page-anchored units, so no article-level statement is possible from it |
-| `read_treaty_page` | one page, with the hash it was built from recomputed and compared | a page number the treaty does not have |
-| `mli_status` | one jurisdiction's MLI standing: signed, deposited, in force since — with the spelling the table prints and the match method | to promote a signatory to a party; to pick between two plausible rows (an ambiguous name is reported as ambiguous, not silently resolved) |
-| `as_modified_verdict` | what the MLI does to one treaty, and the chain of Articles behind that verdict: each Article beside what the corpus says it changes and the words each party's own position files on it, with the page | a treaty the library does not hold; a verdict the data cannot support |
-| `compare_model_editions` | one UN Model Article in the 2017 and the 2021 editions, with each edition's own units cited and the edition that does not print the Article named as silent | to answer from the edition that happens to hold the provision; to summarise the corpus's own edition diff rather than quote it |
-| `reservation_scope` | whether one treaty falls inside the reservation each party filed on one MLI Article, with the row, the page and the provision the statement prints as the evidence, and the list it read for a `false` | to answer "not on the list" from a table the corpus could not read (that answer is `null` with the reader's own reason); to close a treaty's question when a party whose document the corpus holds leaves it open |
-| `sources` | every artefact the server read, and how each was verified | to call a check a pass when it could not run |
+| Tool | Answers | The rule it applies | Refuses |
+|---|---|---|---|
+| `read_treaty_page` | one page, with the hash it was built from recomputed and compared | recompute the hash from the bytes and compare it with the one the file declares about itself, instead of trusting the declaration | a page number the treaty does not have |
+| `mli_status` | one jurisdiction's MLI standing: signed, deposited, in force since — with the spelling the table prints and the match method | match a name the table may print with a footnote marker or in a longer official form, and say which match it made | to promote a signatory to a party; to pick between two plausible rows (an ambiguous name is reported as ambiguous, not silently resolved) |
+| `as_modified_verdict` | what the MLI does to one treaty, and the chain of Articles behind that verdict: each Article beside what the corpus says it changes and the words each party's own position files on it, with the page | decide from the parties' MLI standing and the covered-agreement lookups, and report the links it constructed apart from the ones it looked up | a treaty the library does not hold; a verdict the data cannot support |
+| `compare_model_editions` | one UN Model Article in the 2017 and the 2021 editions, with each edition's own units cited and the edition that does not print the Article named as silent | read each edition's own node index, so an Article one edition does not print comes back as that edition's silence rather than as an absence from the Model | to answer from the edition that happens to hold the provision; to summarise the corpus's own edition diff rather than quote it |
+| `reservation_scope` | whether one treaty falls inside the reservation each party filed on one MLI Article, with the row, the page and the provision the statement prints as the evidence, and the list it read for a `false` | keep the kinds a document files under an Article apart — a `Reservation` from a `Notification` that only announces a list — and answer three-valued | to answer "not on the list" from a table the corpus could not read (that answer is `null` with the reader's own reason); to close a treaty's question when a party whose document the corpus holds leaves it open |
+| `sources` | every artefact the server read, and how each was verified | keep three strengths of check apart: a hash recomputed from the bytes, a hash the file declares about its source and found in the register, and a check that could not run | to call a check a pass when it could not run |
 
 ### The reservation question, on its own
 
@@ -447,8 +454,8 @@ An assertion that fails says *that* a claim broke. It does not say which answer
 moved, from what, or what kind of upstream change could have moved it — and a
 verdict moving is a different event from a page hash moving, wanting a different
 repair. So the answers the README promises are recorded as named facts in
-`fixtures/expected-answers.json` — all seven tools, from the verdict and the MLI
-standing to the treaty held, the reservation question, the silent edition and the
+`fixtures/expected-answers.json` — every tool above, from the verdict and the MLI
+standing to the reservation question, the page hash, the silent edition and the
 inventory of what was read — and compared field by field:
 
 ```bash

@@ -12,7 +12,7 @@ both is committed inside this one:
 
 * **corpus (this repository)** — the citable base: UN Model 2017 and 2021 plus the OECD MLI framework (mapping, signatories and parties, country positions). Closed scope, byte-reproducible, every unit traceable to its page. **State**: both editions and every view built, anti-drift control in CI; it also holds the server, under [`mcp/`](mcp).
 * **library** ([international-tax-law-library](https://github.com/avvohacker/international-tax-law-library)) — the bilateral treaties people work on, contributed as they go, under the same fidelity contract (source hash, page-anchored units, declared gaps, no invention). Invitation: as you work a treaty, put it here. **State**: contract walking — two treaties in (`uk-us-2001` US–UK 2001, `no-uk-2013` UK–Norway 2013).
-* **the server, [`mcp/`](mcp)** — not a repository of its own but a folder of this one: the query mind over corpus plus library, treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. It was built in a standalone repository of its own, which is private now and is not where a reader should be pointed — this folder is its home. **State**: seven tools answering from the two checkouts and refusing when they cannot; it is run by the workflows of this repository, over the protocol, and the folder travels as one — taken out alone, the server still answers, while its suite is to be run where it is committed — and it installs from the folder alone, with no clone: `pip install "git+https://github.com/avvohacker/international-tax-law-corpus.git@main#subdirectory=mcp"`.
+* **the server, [`mcp/`](mcp)** — not a repository of its own but a folder of this one: the query mind over corpus plus library, treaty questions answered from the data (as-modified verdicts, with the chain of MLI Articles behind each one), never from guesses. It was built in a standalone repository of its own, which is private now and is not where a reader should be pointed — this folder is its home. **State**: six tools answering from the two checkouts and refusing when they cannot; it is run by the workflows of this repository, over the protocol, and the folder travels as one — taken out alone, the server still answers, while its suite is to be run where it is committed — and it installs from the folder alone, with no clone: `pip install "git+https://github.com/avvohacker/international-tax-law-corpus.git@main#subdirectory=mcp"`.
 
 ### What GitHub's own MCP server gives you, and what this folder adds
 
@@ -56,7 +56,7 @@ deployed.
    same fidelity contract; the first is in (`uk-us-2001`) as the proof, with
    fetch + rebuild + contract tests in CI.
 3. **MCP walks** (now) — this server is built and committed here, under
-   `mcp/`: seven tools over corpus plus library, as-modified verdicts,
+   `mcp/`: six tools over corpus plus library, as-modified verdicts,
    citations to units, and silence where the data is silent. It is a folder of
    this repository rather than a repository of its own — the standalone one it
    was built in is private and is not the way in. Its own README says what it
@@ -184,7 +184,7 @@ What is here:
 | `scripts/discipline-drift.py` | holds the corpus, the library and the server to one discipline, from their three checkouts, the way CI does |
 | `docs/harness-status.md` | generated. Do not edit. |
 | `docs/guide-maps-and-tables.md` | what this project is, in plain language with maps and tables — the first file to read for a newcomer |
-| `mcp/` | the server, run where it is committed: seven tools over corpus plus library, with citations and refusals — [`mcp/README.md`](mcp/README.md), and `mcp/docs/status.md` for its generated board |
+| `mcp/` | the server, run where it is committed: six tools over corpus plus library, with citations and refusals — [`mcp/README.md`](mcp/README.md), and `mcp/docs/status.md` for its generated board |
 | `mcp/docs/remote-endpoint.md` | what an always-on HTTP endpoint would take, and the file and byte counts it would cost |
 | `mcp/tests/test_nothing_is_out_of_reach.py` | the control that keeps every committed file of `mcp/` readable in full by a reader that returns content up to 1 MB |
 

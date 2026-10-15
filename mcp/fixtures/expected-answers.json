@@ -139,14 +139,6 @@
     "compare_model_editions(article='5').units[2017].eIds": "art_5,art_5__p1,art_5__p2,art_5__p2__pa,art_5__p2__pb,art_5__p2__pc,art_5__p2__pd,art_5__p2__pe,art_5__p2__pf,art_5__p3,art_5__p3__pa,art_5__p3__pb,art_5__p4,art_5__p4__pa,art_5__p4__pb,art_5__p4__pc,art_5__p4__pd,art_5__p4__pe,art_5__p4__pf,art_5__p41,art_5__p41__pa,art_5__p41__pb,art_5__p5,art_5__p5__pa,art_5__p5__pa__pi,art_5__p5__pa__pii,art_5__p5__pa__piii,art_5__p5__pb,art_5__p6,art_5__p7,art_5__p7__a8,art_5__p8,art_5__p9",
     "compare_model_editions(article='5').units[2021].count": 32,
     "compare_model_editions(article='5').units[2021].eIds": "art_5,art_5__p1,art_5__p2,art_5__p2__pa,art_5__p2__pb,art_5__p2__pc,art_5__p2__pd,art_5__p2__pe,art_5__p2__pf,art_5__p3,art_5__p3__pa,art_5__p3__pb,art_5__p4,art_5__p4__pa,art_5__p4__pb,art_5__p4__pc,art_5__p4__pd,art_5__p4__pe,art_5__p4__pf,art_5__p41,art_5__p41__pa,art_5__p41__pb,art_5__p5,art_5__p5__pa,art_5__p5__pa__pi,art_5__p5__pa__pii,art_5__p5__pa__piii,art_5__p5__pb,art_5__p6,art_5__p7,art_5__p8,art_5__p9",
-    "list_treaties().treaties.count": 2,
-    "list_treaties().treaties.ids": "no-uk-2013, uk-us-2001",
-    "list_treaties().treaties[no-uk-2013].gaps_declared": 0,
-    "list_treaties().treaties[no-uk-2013].pages": 28,
-    "list_treaties().treaties[no-uk-2013].parties": "Norway, United Kingdom of Great Britain and Northern Ireland",
-    "list_treaties().treaties[uk-us-2001].gaps_declared": 0,
-    "list_treaties().treaties[uk-us-2001].pages": 39,
-    "list_treaties().treaties[uk-us-2001].parties": "United Kingdom of Great Britain and Northern Ireland, United States of America",
     "mli_status(jurisdiction='Norway').found": true,
     "mli_status(jurisdiction='Norway').in_force_since": "01-11-2019",
     "mli_status(jurisdiction='Norway').match_method": "exact match after stripping the footnote marker: the table spells it 'Norway'",
@@ -287,10 +279,6 @@
         "article": "5"
       },
       "tool": "compare_model_editions"
-    },
-    {
-      "arguments": {},
-      "tool": "list_treaties"
     },
     {
       "arguments": {

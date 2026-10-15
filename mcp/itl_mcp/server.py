@@ -56,25 +56,14 @@ def as_modified_verdict(treaty_id: str) -> str:
     """What the MLI does to one treaty in the library, with the chain shown.
 
     Args:
-        treaty_id: the treaty's stable slug, e.g. "uk-us-2001". Use
-            list_treaties() to see what the library holds.
+        treaty_id: the treaty's stable slug, e.g. "uk-us-2001"; the library
+            holds one directory per treaty, under its own treaties/ folder.
     """
     try:
         verdict = as_modified(ROOTS, treaty_id)
     except Undecidable as error:
         return _pretty(refusal(error.reason))
     return _pretty(verdict.as_dict())
-
-
-@mcp.tool()
-def list_treaties() -> str:
-    """The treaties the library holds, with their parties and declared gaps."""
-    # The reading is `itl_mcp.library`'s, not this function's: the drift control
-    # records this answer as named facts, and it can only record what the tool
-    # really returns if both call the same reader.
-    from .library import listing
-
-    return _pretty(listing(ROOTS))
 
 
 @mcp.tool()
@@ -150,8 +139,8 @@ def reservation_scope(treaty_id: str, mli_article: str) -> str:
     reported as "not on the list".
 
     Args:
-        treaty_id: the treaty's stable slug, e.g. "no-uk-2013". Use
-            list_treaties() to see what the library holds.
+        treaty_id: the treaty's stable slug, e.g. "no-uk-2013"; the library
+            holds one directory per treaty, under its own treaties/ folder.
         mli_article: the MLI Article, e.g. "4", "7", "17".
     """
     from .reservations import CannotAnswer, refusal, scope, unverifiable

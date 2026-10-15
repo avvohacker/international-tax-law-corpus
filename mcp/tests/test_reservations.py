@@ -280,7 +280,10 @@ def test_an_unknown_treaty_is_refused_rather_than_guessed(roots):
     with pytest.raises(CannotAnswer) as raised:
         scope(roots, "no-such-treaty", "4")
     assert "no-such-treaty" in raised.value.reason
-    assert "list_treaties" in raised.value.reason
+    # The refusal points at where the answer is, not at a tool of this server:
+    # the catalogue of what the library holds is a directory listing, and this
+    # server answers the questions that are not one.
+    assert "treaties/" in raised.value.reason
 
 
 def test_the_payload_carries_the_checks_it_was_verified_against(four):

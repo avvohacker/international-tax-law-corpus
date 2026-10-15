@@ -175,7 +175,7 @@ jobs:
                           '{"jsonrpc":"2.0","id":2,"method":"tools/list"}'
             sleep 3
           } | itl-mcp > /tmp/tools.json
-          for tool in as_modified_verdict compare_model_editions list_treaties \
+          for tool in as_modified_verdict compare_model_editions \
                       mli_status read_treaty_page reservation_scope sources; do
             grep -q "\"name\":\"$tool\"" /tmp/tools.json \
               || { echo "::error::the installed command does not offer $tool"; exit 1; }

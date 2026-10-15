@@ -7,9 +7,9 @@ claim broke; it does not say which answer moved, from what to what, or what
 kind of upstream change could have moved it.
 
 So the answers the README promises are recorded here as named facts -- the
-verdict, the MLI standing, the page hash, the treaty held, the reservation
-question, the edition that is silent, the inventory of what was read -- and
-compared field by field. A run
+verdict, the MLI standing, the page hash, the reservation question, the edition
+that is silent, the inventory of what was read -- and compared field by field. A
+run
 that goes red says which fact moved, what it was, what it is now, and what a
 move of that fact implies. That last part is declared per fact (see `MEANING`),
 because "the verdict changed" and "a page's bytes changed" call for different
@@ -60,11 +60,6 @@ QUESTIONS: tuple[dict, ...] = (
     # And an ordinary Article, printed by both, so the recorded facts also pin
     # the case where neither edition is silent.
     {"tool": "compare_model_editions", "arguments": {"article": "5"}},
-    # Everything the library holds, in one answer. This is the question that
-    # decides which other questions can be asked at all: a treaty appearing or
-    # disappearing is not a drift in this server, it is a change in what there
-    # is to answer about.
-    {"tool": "list_treaties", "arguments": {}},
     # The reservation question on its own, in both directions. Article 4 is
     # inside Norway's list and carries the row and page; Article 8 is the case
     # where one party's list was read and does not name the treaty while the
@@ -175,19 +170,6 @@ MEANING: tuple[tuple[str, str], ...] = (
      "the comparison of the two editions moved for this Article: which "
      "edition prints it, the units it is made of, or how the corpus's own "
      "edition diff classifies it"),
-    (".treaties.count",
-     "the library gained or lost a treaty. This tool answers what can be asked "
-     "at all, so the set of questions this server can be asked changed "
-     "upstream, in the library's own holdings"),
-    (".treaties[",
-     "one treaty's own record moved: the pages the library holds for it, the "
-     "parties it names, or the gaps it declares on itself. The library "
-     "republished or re-read that treaty, and every other answer about it "
-     "rests on these fields"),
-    ("list_treaties()",
-     "what the library holds moved, so an answer about the set of treaties "
-     "changed: a treaty was added, removed or renamed, or one of its own "
-     "fields moved"),
     (".parties[",
      "one party's answer about this MLI Article moved: the position document "
      "the corpus holds for it, the reservation it files, the row and page its "
@@ -264,9 +246,6 @@ def answer(roots, tool: str, arguments: dict) -> dict:
             return compare_editions(roots.corpus, arguments["article"])
         except (FileNotFoundError, ValueError) as error:
             return uncomparable(str(error))
-    if tool == "list_treaties":
-        from .library import listing
-        return listing(roots)
     if tool == "reservation_scope":
         # Both refusals are `itl_mcp.reservations`'s, taken by the tool too;
         # this control had been returning them without the tool's notes.
@@ -323,23 +302,10 @@ def facts(question: dict, payload: dict) -> dict:
     def record(suffix: str, value: object) -> None:
         out[f"{name}{suffix}"] = value
 
-    # The three answers below are selected by the question and not by whichever
+    # The two answers below are selected by the question and not by whichever
     # keys their payload happens to carry: a `reservation_scope` that cannot
     # frame the question also returns `{"verdict": "undecidable"}`, and read by
     # keys it would be recorded as though it were a chain of MLI Articles.
-    if question["tool"] == "list_treaties":
-        entries = payload.get("treaties") or []
-        record(".treaties.count", len(entries))
-        record(".treaties.ids",
-               ", ".join(str(entry.get("id")) for entry in entries))
-        for entry in entries:
-            key = f"[{entry.get('id')}]"
-            record(f".treaties{key}.pages", entry.get("pages"))
-            record(f".treaties{key}.parties",
-                   ", ".join(str(party) for party in entry.get("parties") or []))
-            record(f".treaties{key}.gaps_declared", entry.get("gaps_declared"))
-        return out
-
     if question["tool"] == "reservation_scope":
         record(".mli_article", payload.get("mli_article"))
         record(".answer", payload.get("answer"))

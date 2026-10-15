@@ -836,8 +836,8 @@ def as_modified(roots: Roots, treaty_id: str) -> Verdict:
     treaty_path = roots.library / "treaties" / treaty_id / "treaty.json"
     if not treaty_path.is_file():
         raise Undecidable(
-            f"the library holds no treaty {treaty_id!r}; ask list_treaties() "
-            f"for the ones it does hold"
+            f"the library holds no treaty {treaty_id!r}; the library holds one "
+            f"directory per treaty, under its own treaties/ folder"
         )
 
     checks: list[Check] = []

@@ -148,22 +148,24 @@ def test_a_moved_edition_fact_names_the_edition_it_happened_in():
         "the tool-level fallback must be its own explanation"
 
 
-def test_the_three_answers_recorded_last_are_recorded_whole():
-    """The library's holdings, the reservation question and the inventory.
+def test_the_answers_recorded_last_are_recorded_whole():
+    """The reservation question, the inventory, and the library's own page.
 
-    Each of these three was answerable and tested before it was recorded, which
-    is exactly the state this file exists to end: an answer a test asserts is an
+    Each of these was answerable and tested before it was recorded, which is
+    exactly the state this file exists to end: an answer a test asserts is an
     answer that can move without anyone being told which fact moved. What is
     asserted here is that the recorded facts carry the substance of each answer
-    and not a summary of it -- the parties and pages of a treaty, the row and
-    page a reservation is answered from, and the lists a `false` was read out of.
+    and not a summary of it -- the row and page a reservation is answered from,
+    the lists a `false` was read out of, and the library's own declared hash for
+    a page, which is how a change in the library reaches a recorded answer at
+    all now that listing what it holds is not this server's job.
     """
     facts = drift.load_fixture()["facts"]
 
-    assert facts["list_treaties().treaties.count"] == 2
-    assert facts["list_treaties().treaties.ids"] == "no-uk-2013, uk-us-2001"
-    assert facts["list_treaties().treaties[no-uk-2013].pages"] == 28
-    assert "United Kingdom" in facts["list_treaties().treaties[uk-us-2001].parties"]
+    page = "read_treaty_page(page=1, treaty_id='uk-us-2001')"
+    assert len(facts[f"{page}.declared_sha256"]) == 64
+    assert facts[f"{page}.verified"] is True
+    assert facts[f"{page}.chars"] > 0
 
     # Inside the reservation, with the printed row as the evidence.
     inside = "reservation_scope(mli_article='4', treaty_id='no-uk-2013')"
@@ -193,20 +195,24 @@ def test_the_three_answers_recorded_last_are_recorded_whole():
 
 
 def test_the_new_facts_are_explained_by_their_own_kind_of_change():
-    """A moved treaty, a moved row and a moved check are three different repairs."""
-    moved_treaty = drift.explain("list_treaties().treaties.count")
+    """A moved page, a moved row and a moved check are different repairs."""
+    moved_page = drift.explain(
+        "read_treaty_page(page=1, treaty_id='uk-us-2001').declared_sha256")
     moved_row = drift.explain(
         "reservation_scope(mli_article='4', treaty_id='no-uk-2013')"
         ".parties[Norway].statements[0].evidence[28]")
     moved_check = drift.explain("sources().checks.kind[bytes].match")
     moved_inventory = drift.explain("sources().checks.count")
+    moved_verdict = drift.explain("as_modified_verdict(treaty_id='no-uk-2013').verdict")
 
-    assert "library" in moved_treaty, moved_treaty
+    assert "library" in moved_page, moved_page
     assert "list" in moved_row, moved_row
     assert "verification" in moved_check, moved_check
     assert "inventory" in moved_inventory, moved_inventory
-    assert len({moved_treaty, moved_row, moved_check, moved_inventory}) == 4, \
-        "four different facts must not read the same"
+    assert "verdict" in moved_verdict, moved_verdict
+    assert len({moved_page, moved_row, moved_check, moved_inventory,
+                moved_verdict}) == 5, \
+        "five different facts must not read the same"
 
     # The verdict's own checks count is a fact about that answer's provenance,
     # and it keeps the explanation it had: the new prefixes are written with the
@@ -561,7 +567,7 @@ def test_every_documented_tool_is_recorded_and_nothing_else_is():
     than kept here as a second copy: a hand-written set had already been left
     behind by the README once (`reservation_scope` was documented and not in
     it), and the check that was meant to catch a fixture recording an
-    undocumented answer went on passing while covering six of the seven tools.
+    undocumented answer went on passing while covering all but one of them.
 
     That every one of these names is really exposed over the wire -- and under
     that name -- is `test_protocol.py`'s half of it, read off a real MCP
@@ -584,7 +590,7 @@ def test_every_documented_tool_is_recorded_and_nothing_else_is():
         if not cells or cells[0].startswith("---") or not cells[0]:
             continue
         documented.add(cells[0].strip("`"))
-    assert len(documented) >= 7, (
+    assert len(documented) >= 6, (
         "the README's tool table could not be read, so this check would pass "
         "against nothing: " + repr(sorted(documented)))
 
@@ -600,7 +606,7 @@ def test_every_documented_tool_is_recorded_and_nothing_else_is():
     assert "as_modified_verdict" in tools, \
         "the verdict is the answer this layer exists for"
 
-    # Two tools take no arguments at all -- `list_treaties()` and `sources()` --
+    # A tool may take no arguments at all -- `sources()` is the one that does --
     # so the question that produced a fact is named by an arguments mapping that
     # may be empty, never by arguments that must be there. What has to hold is
     # that every fact can be attributed to one of the questions: an orphan fact

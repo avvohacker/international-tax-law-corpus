@@ -252,8 +252,8 @@ def scope(roots: Roots, treaty_id: str, mli_article: str) -> dict:
     path = roots.library / "treaties" / treaty_id / "treaty.json"
     if not path.is_file():
         raise CannotAnswer(
-            f"the library holds no treaty {treaty_id!r}; ask list_treaties() "
-            f"for the ones it does hold"
+            f"the library holds no treaty {treaty_id!r}; the library holds one "
+            f"directory per treaty, under its own treaties/ folder"
         )
     article = article_key(mli_article)
 
