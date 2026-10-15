@@ -108,6 +108,98 @@ jobs:
           ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
         run: python -m pytest -q
 
+  exported:
+    # The folder, and only what it commits: no checkout of the server beside it,
+    # no editable install of this package, nothing but the files a reader who
+    # copies `mcp/` out of a fresh clone would have. The job exists because
+    # portability is otherwise only visible inside `test_the_folder_travels.py`,
+    # where a green suite says the export worked rather than showing it: here the
+    # export is a step, a directory a reader can look at, and every claim below
+    # is made by the exported copy about itself.
+    #
+    # What it does not do is fetch anything. The export is read against the same
+    # corpus and the same library the control reads, and the questions are the
+    # recorded ones, so an answer that moved on the way out of the checkout is a
+    # red run here and not a note in a comment.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repository, which holds both the corpus and the server
+        uses: actions/checkout@v4
+
+      - name: Check out the library the server answers from
+        uses: actions/checkout@v4
+        with:
+          repository: avvohacker/international-tax-law-library
+          path: library
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Export the files this folder commits, and nothing else
+        # `git ls-files`, not a copy of the working tree: an untracked file a
+        # module needs is exactly what stays behind here, and finding that out in
+        # CI is the point.
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/addendum"
+          git ls-files -z mcp | xargs -0 cp --parents -t "$RUNNER_TEMP/addendum"
+          test -f "$RUNNER_TEMP/addendum/mcp/itl_mcp/server.py"
+          test -f "$RUNNER_TEMP/addendum/mcp/fixtures/expected-answers.json"
+          test -f "$RUNNER_TEMP/addendum/mcp/fixtures/verdicts/no-uk-2013.json"
+          echo "exported $(git ls-files mcp | wc -l) files"
+
+      - name: Install only what the exported folder declares
+        # The dependencies come from the export's own `requirements.txt`, so the
+        # folder is asked whether it can describe what it needs.
+        run: python -m pip install --upgrade pip && python -m pip install -r "$RUNNER_TEMP/addendum/mcp/requirements.txt"
+
+      - name: Do the recorded answers still hold, asked from the export?
+        env:
+          ITL_CORPUS_ROOT: ${{ github.workspace }}
+          ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
+          PYTHONPATH: ${{ runner.temp }}/addendum/mcp
+        working-directory: ${{ runner.temp }}/addendum/mcp
+        run: python -m itl_mcp.drift
+
+      - name: Do the committed verdicts travel, and are they current?
+        # The skeletons are committed in the folder, so a copy of the folder
+        # carries them; this asks the copy whether they are what a computation
+        # writes and whether the data has moved under them.
+        env:
+          ITL_CORPUS_ROOT: ${{ github.workspace }}
+          ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
+          PYTHONPATH: ${{ runner.temp }}/addendum/mcp
+        working-directory: ${{ runner.temp }}/addendum/mcp
+        run: python -m itl_mcp.skeleton --check
+
+      - name: Does the exported folder handshake and offer its tools?
+        # The export is started the way an MCP host starts a server, with the
+        # folder first on the path and no site packages of *this* package to
+        # shadow it: `-S` keeps an installed copy from being loaded instead.
+        env:
+          ITL_CORPUS_ROOT: ${{ github.workspace }}
+          ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
+        working-directory: ${{ runner.temp }}/addendum/mcp
+        run: |
+          set -euo pipefail
+          {
+            printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"ci-export","version":"0"}}}'
+            sleep 1
+            printf '%s\n' '{"jsonrpc":"2.0","method":"notifications/initialized"}' \
+                          '{"jsonrpc":"2.0","id":2,"method":"tools/list"}' \
+                          '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"as_modified_verdict","arguments":{"treaty_id":"no-uk-2013"}}}'
+            sleep 4
+          } | python -S -c 'import runpy,sys; runpy.run_module("itl_mcp.server", run_name="__main__")' > /tmp/export.json
+          for tool in as_modified_verdict compare_model_editions \
+                      mli_status read_treaty_page reservation_scope sources; do
+            grep -q ""name":"$tool"" /tmp/export.json \
+              || { echo "::error::the exported folder does not offer $tool"; exit 1; }
+          done
+          grep -q '"verdict":"modified"' /tmp/export.json \
+            || { echo "::error::the exported folder did not answer the verdict"; exit 1; }
+
   compatibility:
     # The two ends `requires-python = ">=3.11"` claims, beside the pinned 3.13
     # the control above runs on. This layer is the most exposed of the family to
@@ -177,7 +269,7 @@ jobs:
           } | itl-mcp > /tmp/tools.json
           for tool in as_modified_verdict compare_model_editions \
                       mli_status read_treaty_page reservation_scope sources; do
-            grep -q "\"name\":\"$tool\"" /tmp/tools.json \
+            grep -q ""name":"$tool"" /tmp/tools.json \
               || { echo "::error::the installed command does not offer $tool"; exit 1; }
           done
 
