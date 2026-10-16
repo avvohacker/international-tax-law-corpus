@@ -21,9 +21,10 @@ verdicts below, and its refusals) while **8 of its 156 tests fail**, because
 those tests read this repository's workflows, its board and its machine-trace
 rule, and a folder sitting by itself has no `.github` above it. So the portable
 part is the server; the suite is the part that holds the seat, and it is to be
-run where the server is committed. The standalone
-[international-tax-law-mcp](https://github.com/avvohacker/international-tax-law-mcp)
-repository it was built in is where the whole thing was also run alone.
+run where the server is committed. The repository the server was built in stands
+alone and is private now, and it is not a way in: a reader sent there gets
+nothing. This folder is its home, and it is where the first version of the whole
+thing was also run alone.
 
 Two consequences for a reader, and both are stated rather than discovered:
 

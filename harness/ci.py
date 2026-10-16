@@ -1,10 +1,11 @@
 """The workflow reader, re-exported from the shared discipline.
 
 `harness/discipline/ci.py` is the one implementation, vendored verbatim into
-`international-tax-law-library` and `international-tax-law-mcp`; this module
-stays because the floor test and the board read the reader as `harness.ci`, and a
-second import path is much cheaper than a second copy of the rules. A second copy
-is what this used to be, and it had already drifted from the other two.
+`international-tax-law-library` and into the server folder `mcp/` of this
+repository; this module stays because the floor test and the board read the reader
+as `harness.ci`, and a second import path is much cheaper than a second copy of
+the rules. A second copy is what this used to be, and it had already drifted from
+the other two.
 """
 from harness.discipline.ci import (  # noqa: F401 - re-exported on purpose
     EXPRESSION,
