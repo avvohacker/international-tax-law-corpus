@@ -28,6 +28,13 @@ the copy. The vendored files go to `vendor/discipline/`, because a repository
 that carries somebody else's rules should be able to say, from the path alone,
 which of the two things in front of it is the one it did not write.
 
+A pin is read as three claims and all three are checked: the source it names is
+this repository, the path it names is `harness/discipline`, and the commit it
+names is a git object id rather than a branch or a tag - a ref moves under the
+checkout meant to reproduce these bytes, so a pin naming one says which bytes
+travelled only for the moment it was written. Each copy's own test holds the same
+rule for itself; this reader states it once for every copy the control visits.
+
 The source is named by URL, and not by the short `owner/repo` slug: a URL is how
 every other register in this family names the bytes it did not write, and the
 machine-trace rule of this very package recognises an owner only where it is a
@@ -41,6 +48,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import re
 import subprocess
 import sys
 from datetime import date
@@ -49,9 +57,14 @@ from pathlib import Path
 import yaml
 
 SOURCE = Path(__file__).resolve().parent.parent / "harness" / "discipline"
+SOURCE_PATH = f"{SOURCE.parent.name}/{SOURCE.name}"
 REPOSITORY = "https://github.com/avvohacker/international-tax-law-corpus"
 PIN = Path("provenance") / "vendored-discipline.yaml"
 VENDORED = Path("vendor") / "discipline"
+
+# What a pin may name as the commit it came from: a git object id, and nothing
+# else. `main` is not one, and a tag is not one either.
+COMMIT = re.compile(r"^[0-9a-f]{40}([0-9a-f]{24})?$")
 
 HEADER = """\
 # The shared discipline, vendored from the corpus and pinned by hash.
@@ -92,8 +105,7 @@ def pin_text(root: Path) -> str:
     files = {path.name: digest(path) for path in sources()}
     body = yaml.safe_dump({
         "source": REPOSITORY,
-        "source_path": f"{SOURCE.parent.name}/{SOURCE.name}" if SOURCE.parent.name == "harness"
-                       else f"{SOURCE.parent.name}/{SOURCE.name}",
+        "source_path": SOURCE_PATH,
         "source_commit": head(SOURCE.parent.parent),
         "vendored_on": date.today().isoformat(),
         "files": files,
@@ -141,6 +153,16 @@ def drifted(into: Path) -> list[str]:
     if recorded.get("source") != REPOSITORY:
         problems.append(f"{pin}: names the source {recorded.get('source')!r}, "
                         f"and the discipline comes from {REPOSITORY}")
+    if recorded.get("source_path") != SOURCE_PATH:
+        problems.append(f"{pin}: names the source path "
+                        f"{recorded.get('source_path')!r}, and the discipline "
+                        f"lives at {SOURCE_PATH}")
+    commit = str(recorded.get("source_commit") or "")
+    if not COMMIT.match(commit):
+        problems.append(
+            f"{pin}: names {commit or 'no commit'} as the commit it was vendored "
+            f"from, and a pin names a git object id: a branch or a tag moves under "
+            f"the checkout meant to reproduce the copy")
     stated = recorded.get("files") or {}
     current = {path.name: digest(path) for path in sources()}
     if set(stated) != set(current):
