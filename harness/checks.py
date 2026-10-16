@@ -449,9 +449,35 @@ def check_absent_tracked_path(d: Defect, root: Path) -> Result:
     return Result(True, f"{d.pattern} not tracked ({len(tracked)} files tracked)")
 
 
+def check_control_holds_its_own(d: Defect, root: Path) -> Result:
+    """The job that runs the control holds the checkouts this repository holds.
+
+    The rule itself is `harness/discipline/holds.py`, read here rather than
+    restated: which checkouts a run of the shared control is handed is whose red
+    that run reports, and a repository cannot repair a copy that lives in another
+    repository. The probe exists because that is a fact about a workflow - visible
+    only to a reader who opens the job, and invisible to every test in this
+    repository that passes while a sibling sits in the run.
+    """
+    from harness.discipline import holds
+
+    found = holds.problems(root)
+    if found:
+        return Result(False, "a run reads a copy this repository cannot write:"
+                      "\n      " + "\n      ".join(found))
+    out = []
+    for run in holds.runs(root):
+        held = ", ".join(f"`{layer}`" for layer in run["hands_in"]) or "nothing"
+        left = ", ".join(f"`{layer}`" for layer in run["leaves"]) or "nothing"
+        out.append(f"{run['file'].name} `{run['job']}` holds {held} and leaves "
+                   f"{left} to their own runs")
+    return Result(True, "; ".join(out))
+
+
 CHECKS = {
     # assertions: ok=True means "the invariant holds here"
     "forbidden_text": check_forbidden_text,
+    "control_holds_its_own": check_control_holds_its_own,
     "report_matches_corpus": check_report_matches_corpus,
     "count_equals": check_count_equals,
     "field_rule": check_field_rule,

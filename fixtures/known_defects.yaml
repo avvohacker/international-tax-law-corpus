@@ -14,6 +14,9 @@
 #   field_rule            a named predicate over a JSON file must hold
 #   no_local_paths        no absolute environment path may appear in the targets
 #   absent_tracked_path   no path matching the glob may be tracked by git
+#   control_holds_its_own the job that runs the shared control holds only the
+#                         checkouts this repository can repair (rule in
+#                         harness/discipline/holds.py)
 #
 # `status` is one of:
 #   defect      found in the audit, must be absent here
@@ -455,3 +458,29 @@
     (Zimbabwe) was published with an empty provision because the section's band
     ended at the document's last span, and a section that runs to the end of the
     document now runs to the end of the stream.
+
+- id: d28-a-control-reporting-on-a-copy-it-cannot-write
+  invariant: F15
+  status: defect
+  title: A control that reports on a copy its repository cannot repair
+  source: .github/workflows/corpus-drift.yml
+  location: the job that runs scripts/discipline-drift.py
+  evidence: >
+    The job checked the library out beside the corpus and handed the control that
+    checkout, so what it reported was whatever pin the library happened to carry -
+    `pins ['__init__.py', 'board.py', 'ci.py', 'machine_traces.py'] while the source
+    has [...six files...]`. The one repair for that red is a push into another
+    repository, which no reader of this run can make, and the job stood red for
+    hours over a copy nobody here could write.
+  check: control_holds_its_own
+  why: >
+    Which checkouts a run is handed is whose red it reports. A repository holds its
+    own copy and the copies committed inside it; a layer it does not hold is read
+    by that layer's own run of the same control - the library's, over this corpus,
+    where the repair is a re-vendor from here - and the run names that layer and
+    where its half is read instead of stopping at the checkouts it was given.
+    The probe fires on either way a sibling comes back in: a `repository:` checkout
+    in the job, or a switch naming a path that is neither under this repository nor
+    inside the `--corpus` checkout. Measured from the other side the answer was
+    already there: the library runs this same control over the corpus and itself,
+    and it went red on the re-vendor that the corpus could not make for it.

@@ -89,17 +89,6 @@ HERE = Path(__file__).resolve().parent
 # a runner ever sees it.
 AS_CI = "runner"
 
-# The two layers besides the corpus, and why a run that is not handed one says so
-# rather than stopping at the checkouts it has. Named here because the summary has
-# to tell a layer that was not read from one that was: a silence reads as a pass.
-LAYERS = {
-    "library": "it is a checkout of its own, and this half is read by this same "
-               "script in the library's own run, over the corpus - the run whose "
-               "repair is a re-vendor",
-    "mcp": "the server is committed inside the corpus, under `mcp/`, and the "
-           "corpus' own job hands it in",
-}
-
 
 def load(source: Path):
     """The discipline, loaded from a given copy of it.
@@ -282,24 +271,32 @@ def main(argv: list[str]) -> int:
                         help="the server, when this run holds a checkout of it")
     arguments = parser.parse_args(argv)
 
-    handed = [("corpus", arguments.corpus), ("library", arguments.library),
-              ("mcp", arguments.mcp)]
-    read = [(name, Path(value).resolve()) for name, value in handed if value]
-    if not shared(read[0][1]).is_dir():
-        print(f"{read[0][1]} is not the corpus: {shared(read[0][1])} does not "
-              f"exist", file=sys.stderr)
+    given = {"corpus": arguments.corpus, "library": arguments.library,
+             "mcp": arguments.mcp}
+    corpus = Path(given["corpus"]).resolve()
+    if not shared(corpus).is_dir():
+        print(f"{corpus} is not the corpus: {shared(corpus)} does not exist",
+              file=sys.stderr)
         return 2
 
-    discipline = load(shared(read[0][1]))
+    discipline = load(shared(corpus))
+    # The layers are the discipline's list, in its order, and the corpus is first:
+    # it is the one checkout a run must be handed.
+    layers = discipline.holds.LAYERS
+    read = [(layer, Path(given[layer]).resolve()) for layer in layers
+            if given[layer]]
     names = [name for name, _ in read]
     print(f"the shared discipline, as each checkout this run was handed holds it "
           f"({', '.join(names)}):\n")
     for name, root in read:
         if root.is_dir():
             print(sheet(name, root, discipline))
-    for name, reason in LAYERS.items():
-        if name not in names:
-            print(f"\nnot read here: {name} - {reason}")
+    # The reasons are the discipline's, not this script's: the layers a run may be
+    # without are the same three wherever the control runs, and a run that stopped
+    # at the checkouts it was handed would read as a run over the whole family.
+    for name in layers:
+        if name not in names and name in discipline.holds.NOT_READ:
+            print(f"\nnot read here: {name} - {discipline.holds.NOT_READ[name]}")
 
     failures = compare(read)
     if failures:

@@ -1,118 +1,154 @@
-"""The corpus' control holds the half a reader of its own run can repair.
+"""The control holds the half a reader of its own run can repair.
 
-The `discipline` job of `.github/workflows/corpus-drift.yml` runs
-`scripts/discipline-drift.py` over the two checkouts this repository holds: itself,
-and the server committed inside it under `mcp/`. It used to check the library out as
-well, and reported whatever pin the library happened to carry - a red whose only
-repair is a push into another repository, which is not a thing a reader of this run
-can make. The library's half is read by the same script in the library's own
-`discipline-drift` run, over this corpus, where `revendor-discipline` opens the
-repair.
+The job that runs `scripts/discipline-drift.py` holds the two checkouts this
+repository holds - itself, and the server committed inside it under `mcp/` - and the
+library's half is read by the same control in the library's own run, over this
+corpus. That job used to check the library out as well, and reported whatever pin
+that checkout happened to carry: a red whose only repair is a push into another
+repository, which is not a thing a reader of this run can make.
 
-Three claims are held here, and each of them can fail on its own:
+The rule is one module, `harness/discipline/holds.py`, and it is read here and by
+the probe `d28` rather than restated - two readings of one rule are two rules. This
+file holds the rule to the shapes it has to refuse, holds this repository's own job
+to it, and then runs the command that job declares, because the run is what the last
+claim is about.
 
-  * a job called `discipline` runs the control, or the others hold nothing;
-  * that job checks out no other repository, and hands the control no `--library`
-    checkout: either one would put a copy back into the run that no reader of it can
-    write;
-  * the command the job runs is run here, and it *says* which layer it was not
-    handed and where that half is read - a layer a run passes over in silence reads
-    as a layer that passed.
+Three claims, and each of them can fail on its own:
 
-The command is taken from the workflow rather than typed again, and its interpreter
-is the one running the tests: a test that ran its own copy of that command would go
-on passing after the job had been pointed at a different pair of checkouts, which is
-the drift this whole control exists to refuse.
+  * the rule refuses a sibling checkout, a switch naming one, a checkout the control
+    is not handed, a run with no source, and a repository whose job runs nothing -
+    and accepts the two shapes the family has;
+  * this repository's job holds exactly the two checkouts this repository holds, and
+    leaves the library out;
+  * the run names every layer it was not handed, with the reason the rule states for
+    it, so that a run which stopped at the checkouts it was given fails here.
 """
 import shlex
 import subprocess
 import sys
+from pathlib import Path
 
-from harness import ci
+from harness.discipline import holds
 from support import ROOT
 
-# The job, the control it runs, the layer it does not hold and the switch that
-# would name a checkout of it. Named once: every claim below is about these.
-JOB = "discipline"
-CONTROL = "scripts/discipline-drift.py"
-LAYER = "library"
-SWITCH = "--library"
-HANDED_IN = ("--corpus", "--mcp")
-STEPS = ci.steps(ROOT, JOB)
+# The command a scratch job runs, in each shape the rule has to decide.
+GOOD = "--corpus . --mcp mcp"
+SIBLING_BY_SWITCH = "--corpus . --mcp mcp --library ../library"
+SIBLING_BY_EQUALS = "--corpus . --mcp mcp --library=../library"
+SIBLING_BY_MCP = "--corpus . --mcp ../some-other-checkout"
+NO_SOURCE = "--mcp mcp"
+# The library's own job, which the rule has to accept as much as this repository's:
+# it reads this corpus as its source and holds itself, which is the copy it repairs.
+LIBRARY_SHAPE = "--corpus corpus --library . --mcp corpus/mcp"
 
 
-def _commands() -> list[str]:
-    """Every `run:` line of the job, in the order the file declares them."""
-    return [value for _, step in STEPS for value in ci.values_for(step, "run")
-            if isinstance(value, str)]
+def _checkout(tmp_path: Path, command: str | None, checkout: str | None = None,
+              at: str = "library") -> Path:
+    """A checkout whose workflow runs the control the way one case describes.
+
+    ``command`` is what the job runs - `None` for a job that runs something else -
+    and ``checkout`` is a repository the job checks out besides its own, at ``at``.
+    """
+    root = tmp_path / "checkout"
+    (root / ".github" / "workflows").mkdir(parents=True)
+    steps = ["      - uses: actions/checkout@v4"]
+    if checkout:
+        steps += ["      - uses: actions/checkout@v4", "        with:",
+                  f"          repository: {checkout}", f"          path: {at}"]
+    if command:
+        steps += [f"      - run: python {holds.CONTROL} {command}"]
+    root.joinpath(".github", "workflows", "sample.yml").write_text(
+        "\n".join(["name: sample", "on: [push]", "jobs:", f"  {holds.JOB}:",
+                   "    runs-on: ubuntu-latest", "    steps:"] + steps + [""]),
+        encoding="utf-8")
+    return root
 
 
-def _control() -> list[str]:
-    """The job's command that runs the control, as the runner's shell splits it."""
-    found = [command for command in _commands() if CONTROL in command]
+def _refused(root: Path) -> str:
+    return "\n  ".join(holds.problems(root))
+
+
+def test_the_rule_refuses_each_clause(tmp_path):
+    """A rule that accepts everything is not a rule: every clause fires here.
+
+    The two shapes the family actually has are the positive control - the corpus'
+    job, which holds its own two checkouts, and the library's, which reads this
+    corpus and holds itself.
+    """
+    assert _refused(_checkout(tmp_path / "good", GOOD)) == "", (
+        "the rule refuses the shape this repository's job has")
+    assert _refused(_checkout(tmp_path / "library", LIBRARY_SHAPE,
+                              checkout="somebody/corpus", at="corpus")) == "", (
+        "the rule refuses the shape the library's own job has, and a rule only this "
+        "repository satisfies would be a rule about this repository")
+
+    by_switch = _refused(_checkout(tmp_path / "switch", SIBLING_BY_SWITCH))
+    assert "not this repository's to write" in by_switch, (
+        f"a `--library` checkout beside the root was accepted: {by_switch!r}")
+    by_equals = _refused(_checkout(tmp_path / "equals", SIBLING_BY_EQUALS))
+    assert "not this repository's to write" in by_equals, (
+        f"a `--library=<path>` switch was read as if it were not there: "
+        f"{by_equals!r}")
+    by_mcp = _refused(_checkout(tmp_path / "mcp", SIBLING_BY_MCP))
+    assert "not this repository's to write" in by_mcp, (
+        f"a sibling handed in under another switch was accepted: {by_mcp!r}")
+    checked_out = _refused(_checkout(tmp_path / "checked-out", GOOD,
+                                     checkout="somebody/library"))
+    assert "a checkout nothing reads" in checked_out, (
+        f"a checkout of somebody else's repository was accepted: {checked_out!r}")
+    no_source = _refused(_checkout(tmp_path / "no-source", NO_SOURCE))
+    assert "without `--corpus`" in no_source, (
+        f"a run with no source to compare against was accepted: {no_source!r}")
+    nothing = _refused(_checkout(tmp_path / "nothing", None))
+    assert "no job runs" in nothing, (
+        f"a repository whose workflows run no control was accepted: {nothing!r}")
+
+
+def test_the_job_holds_only_the_checkouts_this_repository_holds():
+    """This repository's own job, against the rule and against its own facts."""
+    found = holds.runs(ROOT)
     assert len(found) == 1, (
-        f"the `{JOB}` job must run {CONTROL} exactly once - a job that runs the "
-        f"control twice, or not at all, is a control nobody can point at. Found "
-        f"{len(found)}: {found}")
-    return shlex.split(found[0])
-
-
-def test_the_job_that_holds_the_discipline_is_there():
-    """The other claims are about a job; this is what keeps them from being vacuous."""
-    assert STEPS, (
-        f"no workflow declares a `{JOB}` job, so nothing holds the copies of the "
-        f"shared rules against their source and the rest of this file is about "
-        f"nothing")
-    assert _control()
-
-
-def test_the_job_checks_out_no_repository_it_cannot_repair():
-    """A checkout here is a red in this repository about somebody else's bytes."""
-    repositories = [value for _, step in STEPS
-                    for value in ci.values_for(step, "repository")]
-    assert not repositories, (
-        f"the `{JOB}` job checks out another repository: {repositories}. Its run "
-        f"would then report a copy no reader of it can write - the library's half is "
-        f"read by this same control in the library's own run, over this corpus, "
-        f"where the repair is a re-vendor")
-
-
-def test_the_job_hands_the_control_no_library_checkout():
-    """The switch is the other way in: a checkout made outside these steps."""
-    switches = _control()
-    handed = [token for token in switches
-              if token == SWITCH or token.startswith(f"{SWITCH}=")]
-    assert not handed, (
-        f"the `{JOB}` job hands the control {handed}: whatever checkout that names "
-        f"is one this repository does not hold, and a red about it is repaired "
-        f"somewhere else")
-    missing = [switch for switch in HANDED_IN if switch not in switches]
-    assert not missing, (
-        f"the `{JOB}` job no longer hands the control {missing}: the two checkouts "
-        f"this repository holds are what this run is for. It runs {switches}")
+        f"exactly one job runs the control, and {len(found)} do: "
+        f"{[(r['file'].name, r['job']) for r in found]}")
+    problems = holds.problems(ROOT)
+    assert not problems, "\n  ".join(problems)
+    job = found[0]
+    assert job["source"] == ".", (
+        f"the run is handed {job['source']!r} as the source of the rules, and the "
+        f"checkout it stands in is what owns them")
+    assert job["hands_in"] == ["corpus", "mcp"], (
+        f"the run holds {job['hands_in']}: the two checkouts this repository holds "
+        f"are itself and the server committed in it")
+    assert job["leaves"] == ["library"], (
+        f"the run leaves {job['leaves']} out, and the library is the layer this "
+        f"repository does not hold: its copy is repaired by a re-vendor there")
+    assert not job["checkouts"], (
+        f"the job checks out {job['checkouts']}: the source is the only repository "
+        f"a run of this control may read without holding it")
 
 
 def test_the_run_names_the_layer_it_was_not_handed():
     """The job's own command, run here, has to say where the other half is read.
 
-    A summary that stopped at the checkouts it was handed would make every run of
-    this control read as a run over the whole family, and the layer it left out would
-    be the one nobody notices leaving.
+    The reason is compared against the rule's own text, so a run that printed a
+    sentence of its own - or that stopped at the checkouts it was handed, which is
+    the silence that reads as a run over the whole family - fails here.
     """
-    switches = _control()
-    assert switches[:2] == ["python", CONTROL], (
-        f"the `{JOB}` job runs the control as {switches[:2]}: this test runs the "
-        f"command the job declares, from this checkout's root, and a prefix it does "
-        f"not expect is a command it would run differently from the runner")
-    result = subprocess.run([sys.executable, *switches[1:]], cwd=ROOT,
+    run = holds.runs(ROOT)[0]
+    command = shlex.split(run["commands"][0])
+    assert command[:2] == ["python", holds.CONTROL], (
+        f"the job runs the control as {command[:2]}: this test runs the command the "
+        f"job declares, from this checkout's root, and a prefix it does not expect "
+        f"is a command it would run differently from the runner")
+    result = subprocess.run([sys.executable, *command[1:]], cwd=ROOT,
                             capture_output=True, text=True)
     assert result.returncode == 0, (
-        f"the command the `{JOB}` job runs is red on this checkout:\n"
+        f"the command the job runs is red on this checkout:\n"
         f"{result.stdout}\n{result.stderr}")
-    assert f"not read here: {LAYER}" in result.stdout, (
-        f"the run does not say that the {LAYER}'s half was not read, so it reads as "
-        f"a run over the whole family. It printed:\n{result.stdout}")
-    assert f"{LAYER}'s own run" in result.stdout, (
-        f"the run names the layer it left out and not where that half is read, which "
-        f"leaves this repository's reader nowhere to look. It printed:\n"
-        f"{result.stdout}")
+    assert run["leaves"], (
+        "this run holds every layer, and the split this file is about is not in it")
+    for layer in run["leaves"]:
+        line = f"not read here: {layer} - {holds.NOT_READ[layer]}"
+        assert line in result.stdout, (
+            f"the run does not say, in the rule's own words, that the {layer}'s half "
+            f"was not read and where it is read. It printed:\n{result.stdout}")

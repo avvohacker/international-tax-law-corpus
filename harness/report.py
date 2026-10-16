@@ -23,6 +23,7 @@ from pathlib import Path
 from harness import corpus, oasis
 from harness.checks import Result, evaluate
 from harness.defects import load_defects, load_invariants
+from harness.discipline import holds
 
 ABSENT = "ABSENT"
 PRESENT = "PRESENT"
@@ -285,6 +286,33 @@ def render(root: Path | None = None) -> str:
     for inv in invariants:
         add(f"| {inv.id} | {inv.name} | {inv.scope} | "
             f"`{', '.join(inv.enforced_by)}` |")
+    add("")
+
+    add("## What the control reads, and what it leaves to another run")
+    add("")
+    add("The job that runs the shared rules holds the checkouts this repository "
+        "holds - its own, and the copies committed inside it - and every other "
+        "layer is read, and repaired, in that layer's own run of the same "
+        "control. F15 refuses a run that reports a copy its reader cannot write, "
+        "and the reasons in the last column are the discipline's own: the control "
+        "prints them for each layer it was not handed.")
+    add("")
+    add("| job | holds | leaves out | where that half is read |")
+    add("| --- | --- | --- | --- |")
+    found = holds.runs(root)
+    if not found:
+        add("| - | nothing | nothing | no job in this repository runs "
+            f"`{holds.CONTROL}` |")
+    for run in found:
+        held = ", ".join(f"`{layer}`" for layer in run["hands_in"]) or "nothing"
+        where = f"`{run['file'].name}` `{run['job']}`"
+        if not run["leaves"]:
+            add(f"| {where} | {held} | nothing | - |")
+            continue
+        for position, layer in enumerate(run["leaves"]):
+            add(f"| {where if position == 0 else ''} | "
+                f"{held if position == 0 else ''} | `{layer}` | "
+                f"{holds.NOT_READ.get(layer, 'nowhere in this repository')} |")
     add("")
 
     add("## Probes against this repository")

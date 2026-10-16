@@ -389,6 +389,43 @@ happened to need it next.
 
 ---
 
+## F15 · A run holds what its reader can repair
+
+**Statement.** A run of the shared rules reads the checkouts the repository holding
+it owns - its own, and the copies committed inside it - and leaves every other layer
+to that layer's own run of the same control. A red a repository cannot repair is not
+reported by it, and a layer a run is not handed is named rather than passed over in
+silence.
+
+**Scope.** project. **Proof.** `test_the_rule_refuses_each_clause`,
+`test_the_job_holds_only_the_checkouts_this_repository_holds`,
+`test_the_run_names_the_layer_it_was_not_handed`, `known_defects`. The rule is one
+module, `harness/discipline/holds.py`, read by the probe and by the test - two
+readings of it would be two rules, which is what this package exists to stop.
+
+**Why it exists.** The corpus' `discipline` job checked the library out beside it and
+handed the control that checkout, so the red it printed was about a copy no commit
+in this repository could ever fix: the repair is a push into another repository. The
+job was red for hours over a fact that was true and unanswerable from here, which is
+the state that teaches a reader to scroll past a red. Split the other way, the
+finding does not disappear: the library reads its own half in its own run of the same
+control, over this corpus, where the repair is a re-vendor from here - and it is that
+run which goes red when these rules move and its copy does not.
+
+What the split must not become is silence. A run that stopped at the checkouts it
+was handed would read as a run over the whole family, and the layer it left out
+would be the one nobody notices leaving: so the reasons a layer is not read are
+stated once, in the same module as the rule, and each run prints them.
+
+**Anti-pattern.** A job that checks out a sibling because the comparison "needs" it
+- the comparison needs the *source*, and the source is the one checkout a run may
+read without holding. A copy reported where it cannot be written. A run that says
+nothing about the layers it was not handed. Reporting a drift as somebody else's
+problem and then not telling them: the library's own workflow is what notices, and
+it has to be named here, because nothing in this repository reads that file any more.
+
+---
+
 ## U1 · UN Model article set
 
 **Statement.** The set and order of articles is exactly the source's (2017 and

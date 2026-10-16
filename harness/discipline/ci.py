@@ -118,27 +118,35 @@ def _documents(root: Path):
         yield path, yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
-def steps(root: Path, job: str) -> list[tuple[Path, dict]]:
-    """The steps of every job called ``job``, with the file that declares it.
+def jobs(root: Path) -> list[tuple[Path, str, dict]]:
+    """Every job the workflows declare: the file, its name, and its body.
 
     A job is the unit a control is declared in: which repositories it checks out,
-    what it installs and the command it runs are read off its own steps and
-    nowhere else. The readers around this one answer for the whole checkout, which
-    is right for a floor and wrong for a control - this corpus checks the library
-    out in the jobs that answer from it, and the `discipline` job does not, so a
-    reading that took the file for the job would report that checkout as the
-    control's own evidence, and would go on reporting it after the control had
-    been handed a different pair.
+    what it installs and the command it runs are read off its own steps and nowhere
+    else. The readers around this one answer for the whole checkout, which is right
+    for a floor and wrong for a control - this corpus checks the library out in the
+    jobs that answer from it, and the job that runs the drift control does not, so
+    a reading that took the file for the job would report that checkout as the
+    control's own evidence, and would go on reporting it after the control had been
+    handed a different pair.
     """
-    found: list[tuple[Path, dict]] = []
+    found: list[tuple[Path, str, dict]] = []
     for path, document in _documents(root):
-        jobs = (document or {}).get("jobs") or {}
-        for name, body in jobs.items():
-            if name != job or not isinstance(body, dict):
-                continue
-            for step in body.get("steps") or []:
-                if isinstance(step, dict):
-                    found.append((path, step))
+        for name, body in ((document or {}).get("jobs") or {}).items():
+            if isinstance(body, dict):
+                found.append((path, str(name), body))
+    return found
+
+
+def steps(root: Path, job: str) -> list[tuple[Path, dict]]:
+    """The steps of every job called ``job``, with the file that declares it."""
+    found: list[tuple[Path, dict]] = []
+    for path, name, body in jobs(root):
+        if name != job:
+            continue
+        for step in body.get("steps") or []:
+            if isinstance(step, dict):
+                found.append((path, step))
     return found
 
 

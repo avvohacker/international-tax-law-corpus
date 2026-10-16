@@ -144,6 +144,19 @@
                 test_no_committed_file_carries_a_machine_trace,
                 known_defects]
 
+- id: F15
+  name: A run holds what its reader can repair
+  statement: >
+    A run of the shared rules reads the checkouts the repository holding it owns -
+    its own, and the copies committed inside it - and leaves every other layer to
+    that layer's own run of the same control. A red a repository cannot repair is
+    not reported by it, and a layer a run is not handed is named rather than
+    passed over in silence.
+  scope: project
+  enforced_by: [known_defects, test_the_rule_refuses_each_clause,
+                test_the_job_holds_only_the_checkouts_this_repository_holds,
+                test_the_run_names_the_layer_it_was_not_handed]
+
 - id: U1
   name: UN Model article set
   statement: >
