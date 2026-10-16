@@ -3,21 +3,24 @@
 # Written by `scripts/vendor-discipline.py` in the corpus, at
 # https://github.com/avvohacker/international-tax-law-corpus.
 #
-# That package is the one implementation of what may not be committed about a
-# machine, how a workflow is read, and what a status board owes a reader. The
-# copy under `vendor/discipline/` must be these bytes: a copy that has drifted
-# from the pin is a red test
+# That package is the one implementation of the rules this family shares: what
+# may not be committed about a machine, how a workflow is read, what a status
+# board owes a reader, what a pin says about the copy it holds, and where a
+# document sends a reader who wants the server. The copy under `vendor/discipline/`
+# must be these bytes: a copy that has drifted from the pin is a red test
 # (`tests/test_the_vendored_discipline_is_pinned.py`) rather than a surprise,
 # and `scripts/discipline-drift.py`, run against the corpus' own checkout, is
 # what refuses a copy that has gone back to inventing its own rule.
 #
 # Do not edit either half by hand: re-vendor.
 files:
-  __init__.py: 6a7d71dfb959fa07569ef58ca87f9de9a448d711333cb92a42769e857dfc393b
+  __init__.py: c100a852691ebdce7dd5753829d9321d7a126c63f7ba4b5c0120a54935011667
   board.py: f3adcfc743e4878888231b528d535a10876fe4f386bcc7774c2cc8f859ecfe76
   ci.py: 596e6ca944a27765ba9575f9a5d600e82a024db52f5d683c994befe791625c27
+  documents.py: 3f76c887a58c714c6bc240a21e3b4226d15cb5cd8fc3b644f0efb3ed2cc0b817
   machine_traces.py: c50faf4616d6d855773c510d978fe307725f604f4ad71cfeea1a95cd3a9d2df0
+  pin.py: bc287b72d21b076eed9311e1f30e58ef35b92dde41a124bfaadf222561af51e5
 source: https://github.com/avvohacker/international-tax-law-corpus
-source_commit: 32f8722de5beb83f03d71d5cbfe5e13a9aa46724
+source_commit: 6bf5995c30a163f60f415518f5cb0d2a8018649b
 source_path: harness/discipline
-vendored_on: '2026-10-15'
+vendored_on: '2026-10-16'

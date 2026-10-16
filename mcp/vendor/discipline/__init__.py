@@ -13,7 +13,14 @@ package existed they did:
   * `ci.py`, the reader that holds a declared floor against the workflow that
     runs, carried one function in the server that the other two could not call;
   * the rule of the generated status board was a paragraph of prose in each
-    repository and a convention in each script, and nothing compared the three.
+    repository and a convention in each script, and nothing compared the three;
+  * the rule about `provenance/vendored-discipline.yaml` - what the pin of a
+    copy has to say, and what it may not say - was in each copy's own test and
+    in the reader the control runs, and the three had drifted: one refused a pin
+    whose `source_commit` named a branch or a tag, the others accepted it;
+  * the rule about where the documents of a repository send a reader who wants
+    the server was a test in each repository, and the two were two readings of
+    one rule - one of them had found its own failure and the other had not.
 
 This package is where those rules live now, once. It is vendored verbatim into
 the other two layers by `scripts/vendor-discipline.py` - the library, and the
@@ -27,6 +34,6 @@ The vendoring is the idiom these repositories already use for the bytes they do
 not own (a source PDF, a published edition, a recorded answer): the copy travels,
 the hash of the copy is the contract, and the register says where it came from.
 """
-from . import board, ci, machine_traces
+from . import board, ci, documents, machine_traces, pin
 
-__all__ = ["board", "ci", "machine_traces"]
+__all__ = ["board", "ci", "documents", "machine_traces", "pin"]
