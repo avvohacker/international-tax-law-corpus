@@ -20,7 +20,11 @@ package existed they did:
     whose `source_commit` named a branch or a tag, the others accepted it;
   * the rule about where the documents of a repository send a reader who wants
     the server was a test in each repository, and the two were two readings of
-    one rule - one of them had found its own failure and the other had not.
+    one rule - one of them had found its own failure and the other had not;
+  * the rule about what a run of the control holds, and what it leaves to another
+    repository's run, was the comment on one job and a paragraph in one document,
+    and nothing read either - so the corpus' job went on reporting a copy nobody
+    in the corpus could write.
 
 This package is where those rules live now, once. It is vendored verbatim into
 the other two layers by `scripts/vendor-discipline.py` - the library, and the
@@ -38,6 +42,6 @@ The vendoring is the idiom these repositories already use for the bytes they do
 not own (a source PDF, a published edition, a recorded answer): the copy travels,
 the hash of the copy is the contract, and the register says where it came from.
 """
-from . import board, ci, documents, machine_traces, pin
+from . import board, ci, documents, holds, machine_traces, pin
 
-__all__ = ["board", "ci", "documents", "machine_traces", "pin"]
+__all__ = ["board", "ci", "documents", "holds", "machine_traces", "pin"]
