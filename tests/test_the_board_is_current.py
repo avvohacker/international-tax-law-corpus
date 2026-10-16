@@ -21,6 +21,7 @@ from harness import report
 from support import ROOT
 
 SOURCES_SUMMARY = re.compile(r"^- sources: (\d+) — (\d+) built", re.M)
+SOURCES_HEADING = "## Sources, and what is built from each"
 
 # Rendering the board runs every probe, so it is done once for the whole file
 # rather than once per test.
@@ -28,9 +29,22 @@ BOARD = report.render(ROOT)
 
 
 def _table_rows(text):
-    """The source table, as (id, state) pairs, read from the rendered board."""
+    """The source table, as (id, state) pairs, read from the rendered board.
+
+    Read from under its own heading rather than by the shape of a line. A row of a
+    four-column table is six pipe-separated cells like a source row, so a reader
+    that took any such line would count another section's rows as sources - which
+    is what the table of what the control holds and leaves, whose first cell is a
+    backticked job name, did the moment it was added.
+    """
     rows = []
+    inside = False
     for line in text.splitlines():
+        if line.startswith("## "):
+            inside = line.strip() == SOURCES_HEADING
+            continue
+        if not inside:
+            continue
         cells = [c.strip() for c in line.split("|")]
         if len(cells) == 6 and cells[1].startswith("`") and cells[1].endswith("`"):
             rows.append((cells[1].strip("`"), cells[4]))
