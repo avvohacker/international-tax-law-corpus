@@ -76,9 +76,12 @@ the library's own `discipline-drift` workflow, over this corpus, where
 `revendor-discipline` opens the repair. A job that reports a copy no reader of the
 run can write is a red with no action behind it; the halves still cannot part
 company quietly, because they are compared in the repository that can act on the
-answer. Those two workflow names are the library's to change, and this paragraph
-and the comment on the `discipline` job of `corpus-drift.yml` are what move with
-them.
+answer. `tests/test_the_control_holds_what_it_can_repair.py` holds this side of the
+split: the job checks out no other repository, hands the control no `--library`,
+and the command it declares — run by the test — names the layer it was not handed
+and where that half is read. Those two workflow names are the library's to change,
+and this paragraph and the comment on the `discipline` job of `corpus-drift.yml`
+are what move with them.
 
 The server itself used to be a third checkout here and is not one any more: it is
 committed in this repository, under `mcp/`, so nothing about it depends on
