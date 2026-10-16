@@ -280,36 +280,32 @@ jobs:
 
   discipline:
     # The other half of this family's anti-drift control. The jobs above hold the
-    # corpus against its own sources; this one holds the corpus, the library
-    # checked out beside it and the server committed here against the rules they
-    # share - and the sharing had been a fiction: the
-    # machine-trace rule existed in three wordings with three exemption lists,
-    # the workflow readers in two different APIs, and the status board's rule was
-    # a paragraph of prose in each repository. All of that was found by reading
-    # the three side by side by hand, which is not a control.
+    # corpus against its own sources; this one holds the corpus and the server
+    # committed inside it against the rules the family shares - and the sharing
+    # had been a fiction: the machine-trace rule existed in three wordings with
+    # three exemption lists, the workflow readers in two different APIs, and the
+    # status board's rule was a paragraph of prose in each repository. All of that
+    # was found by reading the three side by side by hand, which is not a control.
     #
-    # `scripts/discipline-drift.py`, owned here, reads all three: the corpus, the
-    # library checked out beside it, and the server committed in this repository
-    # under `mcp/`. It compares each `vendor/discipline/` copy byte for byte with
-    # this one and with the pin that copy declares, and then *runs* the rule for
-    # each repository under the identity its own CI gives it - the account
-    # `runner`, the checkout named after the project. Equal bytes are not a rule
-    # that passes, which is what the run is for: the first version of the rule was
-    # red on all three workflows, on lines that name nobody, and no desk could see
-    # it.
+    # `scripts/discipline-drift.py`, owned here, is handed the two checkouts this
+    # repository holds: itself, and `mcp/`, the server committed inside it. It
+    # compares each `vendor/discipline/` copy byte for byte with this one and with
+    # the pin that copy declares, and then *runs* the rule for each checkout under
+    # the identity its own CI gives it - the account `runner`, the checkout named
+    # after the project. Equal bytes are not a rule that passes, which is what the
+    # run is for: the first version of the rule was red on all three workflows, on
+    # lines that name nobody, and no desk could see it.
+    #
+    # The library is not checked out here, and that is the split this job is built
+    # on: the half a repository can be held to is the half its own run can repair.
+    # The library runs this same script over the corpus and itself in its own
+    # `discipline-drift` workflow, where `revendor-discipline` opens the repair -
+    # so a corpus that moves under that checkout is a red run somebody can act on,
+    # and not a red here naming a copy no one in this repository can write.
     runs-on: ubuntu-latest
     steps:
-      - name: Check out this repository, which owns the discipline
+      - name: Check out this repository, which owns the discipline and holds the server
         uses: actions/checkout@v4
-
-      - name: Check out the library
-        # The server is not checked out beside this one: it is committed here,
-        # under `mcp/`, and the control reads it where it stands. A second
-        # checkout of it would be a second copy of the rules it vendors.
-        uses: actions/checkout@v4
-        with:
-          repository: avvohacker/international-tax-law-library
-          path: library
 
       - uses: actions/setup-python@v5
         with:
@@ -321,5 +317,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install "PyYAML>=6.0"
 
-      - name: Do the three still hold one discipline?
-        run: python scripts/discipline-drift.py --corpus . --library library --mcp mcp
+      - name: Do the checkouts this repository holds still hold one discipline?
+        run: python scripts/discipline-drift.py --corpus . --mcp mcp

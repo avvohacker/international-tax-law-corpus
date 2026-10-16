@@ -26,8 +26,8 @@ Five claims are read, and each is refused on its own:
 
 Nothing here reads a repository: the pin and the copies arrive as data, because
 the callers differ in where they get them - a test reads the copy beside it, the
-control reads the library's and the server's, and one of them hands this function
-a pin it has just edited to prove the rule can fail.
+control reads the copies of the checkouts it was handed, and one of them hands
+this function a pin it has just edited to prove the rule can fail.
 """
 from __future__ import annotations
 

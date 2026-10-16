@@ -179,11 +179,11 @@ What is here:
 | `rules/*.yaml` | the classification rules the extractor will read |
 | `vendor/akn/` | the AKN 3.0 schema, vendored verbatim and validated against, pinned in `provenance/akn-xsd.sha256` |
 | `harness/` | the probe engine and the status report |
-| `harness/discipline/` | the rules the family shares — machine traces, the workflow reader, the status board's rule — in one implementation, vendored from here into the library and into `mcp/` |
+| `harness/discipline/` | the rules the family shares — machine traces, the workflow reader, the status board's rule, the pin's rule and the documents' — in one implementation, vendored from here into the library and into `mcp/` |
 | `tests/` | the invariants, as tests |
 | `scripts/read-audit.py` | what a command really reads here, in files and bytes — the measurement behind what CI fetches |
 | `scripts/vendor-discipline.py` | copies `harness/discipline/` into a repository that runs it, with the pin that says which bytes traveled |
-| `scripts/discipline-drift.py` | holds the corpus, the library and the server to one discipline, from their three checkouts, the way CI does |
+| `scripts/discipline-drift.py` | holds the checkouts it is handed to one discipline, the way CI does — here the corpus and the server committed in it, in the library's own run the corpus and the library |
 | `docs/harness-status.md` | generated. Do not edit. |
 | `docs/guide-maps-and-tables.md` | what this project is, in plain language with maps and tables — the first file to read for a newcomer |
 | `mcp/` | the server, run where it is committed: six tools over corpus plus library, with citations and refusals — [`mcp/README.md`](mcp/README.md), and `mcp/docs/status.md` for its generated board |
@@ -208,12 +208,15 @@ python3 -m venv .venv                  # 3.11 or newer; `pyproject.toml` says so
 
 # the rules the three layers share: vendored here, pinned there. The server is
 # committed here, under mcp/, so it is vendored into a directory of this
-# checkout; the library is a checkout of its own, beside this one.
+# checkout; the library is a checkout of its own, beside this one, and reads its
+# half of the control in its own CI.
 .venv/bin/python scripts/vendor-discipline.py --into ../international-tax-law-library \
                                              --into mcp
 .venv/bin/python scripts/vendor-discipline.py --check --into mcp
-.venv/bin/python scripts/discipline-drift.py --corpus . --library ../international-tax-law-library \
-                                            --mcp mcp
+.venv/bin/python scripts/discipline-drift.py --corpus . --mcp mcp
+                                            # the two checkouts this one holds;
+                                            # --library ../international-tax-law-library
+                                            # compares that copy here as well
 
 .venv/bin/python -m pytest -q          # the invariants and the probes
 .venv/bin/python -m harness status     # one line: is there a corpus, and what does the harness see

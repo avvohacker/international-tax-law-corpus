@@ -1,13 +1,24 @@
-"""Hold the corpus, the library and the server to one discipline, as CI sees them.
+"""Hold the checkouts a run is handed to one discipline, as CI sees them.
 
+    python scripts/discipline-drift.py --corpus . --mcp mcp
     python scripts/discipline-drift.py --corpus . --library ../library --mcp ../mcp
 
-Three repositories, one set of rules, and until this control existed nothing
-compared them: the copy of the machine-trace rule had drifted into three
-wordings with three exemption lists, the workflow readers had drifted into two
-different APIs, and the status board rule was a paragraph of prose each. The
-drift was found by reading the three side by side by hand, which is not a
+The layers of this family, one set of rules, and until this control existed
+nothing compared the copies of it: the copy of the machine-trace rule had drifted
+into three wordings with three exemption lists, the workflow readers had drifted
+into two different APIs, and the status board rule was a paragraph of prose each.
+The drift was found by reading the three side by side by hand, which is not a
 control. This is.
+
+Which half each run holds is the decision this control is built on. A repository
+is held to the rules by *its own* run of this script, and by no run it cannot act
+on: the corpus' `discipline` job hands in the corpus and the server committed
+inside it, the library's own workflow hands in this corpus and the library, and a
+desk hands in whatever checkouts it has. `--corpus` names the one that owns the
+rules and is the only required switch; a layer that is not handed in is *named* in
+the summary as not read rather than quietly left out, because a run that reports
+another repository's copy is a run whose red somebody else has to repair - and a
+red nobody can act on is a red people learn to read past.
 
 Six things are compared, and each of them can fail on its own:
 
@@ -57,8 +68,10 @@ workflows actually run it: itself for the corpus and the library, the corpus for
 the server it holds. Everything else - the copies, the pins, the scan, the floor
 of a manifest, the board document - is read where it lies, subtree or not.
 
-A desk can run this before pushing; CI runs it in every repository of the three,
-because the drift it refuses is invisible from inside any one of them.
+A desk can run this before pushing; CI runs it in every repository of the family,
+each over the checkouts that repository holds, because what this refuses is a copy
+that went on saying its own thing - and a copy is only compared by a run that has
+both the copy and the source.
 """
 from __future__ import annotations
 
@@ -75,6 +88,17 @@ HERE = Path(__file__).resolve().parent
 # that a repository whose text collides with its CI account is red here, before
 # a runner ever sees it.
 AS_CI = "runner"
+
+# The two layers besides the corpus, and why a run that is not handed one says so
+# rather than stopping at the checkouts it has. Named here because the summary has
+# to tell a layer that was not read from one that was: a silence reads as a pass.
+LAYERS = {
+    "library": "it is a checkout of its own, and this half is read by this same "
+               "script in the library's own run, over the corpus - the run whose "
+               "repair is a re-vendor",
+    "mcp": "the server is committed inside the corpus, under `mcp/`, and the "
+           "corpus' own job hands it in",
+}
 
 
 def load(source: Path):
@@ -178,38 +202,43 @@ def facts(root: Path, discipline) -> dict:
     }
 
 
-def compare(corpus: Path, library: Path, mcp: Path) -> list[str]:
-    """Every way the three disagree about the shared discipline."""
-    source = shared(corpus)
-    discipline = load(source)
+def compare(read: list[tuple[str, Path]]) -> list[str]:
+    """Every way the checkouts this run was handed disagree about the rules.
+
+    `read` is the corpus first - the checkout that owns the rules - and then
+    whichever layers this run holds. A copy is compared with the source for every
+    layer but the first, which is the source.
+    """
+    owner = read[0][1]
+    discipline = load(shared(owner))
     vendor = loader_for(HERE / "vendor-discipline.py")
 
     failures: list[str] = []
     sheets: dict[Path, dict] = {}
-    for root in (corpus, library, mcp):
+    for name, root in read:
         if not root.is_dir():
-            failures.append(f"{root}: not a checkout, and the control reads three")
+            failures.append(f"{root}: not a checkout, and this run was handed it")
             continue
         sheets[root] = facts(root, discipline)
 
-        if root != corpus:
+        if name != read[0][0]:
             for problem in vendor.drifted(root):
                 failures.append(f"{root}: {problem}")
         for problem in (sheets[root]["as_ci"] + sheets[root]["board_problems"]
                         + sheets[root]["documents"]):
             failures.append(f"{root}: {problem}")
 
-    if len(sheets) != 3:
+    if not sheets:
         return failures
 
     floors = {root: sheet["floor"] for root, sheet in sheets.items()}
     if len(set(floors.values())) != 1:
-        failures.append(f"the three checkouts declare different floors: "
+        failures.append(f"the checkouts read here declare different floors: "
                         f"{ {str(root): floor for root, floor in floors.items()} }")
     for field in ("interpreters", "matrix"):
         values = {root: sheet[field] for root, sheet in sheets.items()}
         if len({tuple(value) for value in values.values()}) != 1:
-            failures.append(f"the three workflows do not run the same {field}: "
+            failures.append(f"the checkouts read here do not run the same {field}: "
                             f"{ {str(root): value for root, value in values.items()} }")
     for root, sheet in sheets.items():
         if sheet["suspect"]:
@@ -245,34 +274,43 @@ def sheet(name: str, root: Path, discipline) -> str:
 
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(prog="python scripts/discipline-drift.py")
-    parser.add_argument("--corpus", required=True, metavar="REPO")
-    parser.add_argument("--library", required=True, metavar="REPO")
-    parser.add_argument("--mcp", required=True, metavar="REPO")
+    parser.add_argument("--corpus", required=True, metavar="REPO",
+                        help="the checkout that owns the shared rules")
+    parser.add_argument("--library", metavar="REPO",
+                        help="the library, when this run holds a checkout of it")
+    parser.add_argument("--mcp", metavar="REPO",
+                        help="the server, when this run holds a checkout of it")
     arguments = parser.parse_args(argv)
 
-    roots = [Path(name).resolve() for name in
-             (arguments.corpus, arguments.library, arguments.mcp)]
-    names = ["corpus", "library", "mcp"]
-    if not shared(roots[0]).is_dir():
-        print(f"{roots[0]} is not the corpus: {shared(roots[0])} does not exist",
-              file=sys.stderr)
+    handed = [("corpus", arguments.corpus), ("library", arguments.library),
+              ("mcp", arguments.mcp)]
+    read = [(name, Path(value).resolve()) for name, value in handed if value]
+    if not shared(read[0][1]).is_dir():
+        print(f"{read[0][1]} is not the corpus: {shared(read[0][1])} does not "
+              f"exist", file=sys.stderr)
         return 2
 
-    discipline = load(shared(roots[0]))
-    print("the shared discipline, as each repository holds it:\n")
-    for name, root in zip(names, roots):
+    discipline = load(shared(read[0][1]))
+    names = [name for name, _ in read]
+    print(f"the shared discipline, as each checkout this run was handed holds it "
+          f"({', '.join(names)}):\n")
+    for name, root in read:
         if root.is_dir():
             print(sheet(name, root, discipline))
+    for name, reason in LAYERS.items():
+        if name not in names:
+            print(f"\nnot read here: {name} - {reason}")
 
-    failures = compare(*roots)
+    failures = compare(read)
     if failures:
-        print("\nthe three are not holding one discipline:", file=sys.stderr)
+        print(f"\nthe checkouts read here ({', '.join(names)}) are not holding "
+              f"one discipline:", file=sys.stderr)
         for failure in failures:
             print(f"  {failure}", file=sys.stderr)
         return 1
     print("\none discipline: the copies match, the rule is clean under the CI "
-          "account, the floor is one number the three workflows run, and each "
-          "repository prints a board it can prove")
+          "account, the floor is one number every workflow read here runs, and "
+          "each checkout prints a board it can prove")
     return 0
 
 

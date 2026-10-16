@@ -26,9 +26,13 @@ This package is where those rules live now, once. It is vendored verbatim into
 the other two layers by `scripts/vendor-discipline.py` - the library, and the
 server folder `mcp/` here - pinned there by hash in
 `provenance/vendored-discipline.yaml` and held by a test, and
-`scripts/discipline-drift.py` runs the same checks over all three checkouts as
-CI sees them - so a copy that goes back to inventing its own version is a red
-run in whichever layer holds it, not a discovery made months later by hand.
+`scripts/discipline-drift.py` runs the same checks over the checkouts each run of
+it is handed, as CI sees them - so a copy that goes back to inventing its own
+version is a red run in whichever layer holds it, not a discovery made months
+later by hand. Which checkouts a run is handed is the run's own business, and it
+is built on the half a repository can repair: this repository's job reads the
+corpus and the server committed inside it, and the library reads its own copy
+against this corpus.
 
 The vendoring is the idiom these repositories already use for the bytes they do
 not own (a source PDF, a published edition, a recorded answer): the copy travels,

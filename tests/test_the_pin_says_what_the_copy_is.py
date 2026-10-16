@@ -2,11 +2,11 @@
 
 `provenance/vendored-discipline.yaml` says which bytes travelled and where from,
 and the rule about that register now has one implementation,
-`harness/discipline/pin.py`, read by all three of its readers: each vendored
-copy's own test, and the control that visits the corpus, the library and the
-server in one run. It used to be three statements of one rule, and the three had
-drifted - one of them refused a pin whose `source_commit` named a branch or a
-tag, the others accepted it, and the control accepted it in both copies.
+`harness/discipline/pin.py`, read by each vendored copy's own test and by the
+control, in whichever run holds the copy. It used to be three statements of one
+rule, and the three had drifted - one of them refused a pin whose `source_commit`
+named a branch or a tag, the others accepted it, and the control accepted it in
+both copies.
 
 This file holds the rule for the corpus. It asks it about a commit, a branch, a
 tag, no commit at all, another source, another source path, a copy edited by
@@ -14,7 +14,9 @@ hand, a file the copy has that the pin does not name and a file the pin names
 that the copy does not have; it reads the copy that is in this repository, `mcp/`,
 as the control reads it; and it breaks a copy of that copy to show that the reader
 applies this rule rather than a second one of its own. The library's copy is the
-third repository's, and it is read by the control where all three checkouts are.
+third repository's, and the rule reaches it in the library's own run of the
+control, over this corpus - this repository's job holds the two checkouts this
+repository holds.
 """
 import hashlib
 import importlib.util

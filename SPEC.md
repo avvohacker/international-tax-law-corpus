@@ -361,10 +361,13 @@ is `harness/discipline/machine_traces.py`, because the library and the server ow
 it the same rule and the three copies had already drifted - three wordings, three
 exemption lists, three answers to whether a checkout's own directory name is a
 trace. It is vendored verbatim into those two repositories by
-`scripts/vendor-discipline.py`, pinned there by hash, and
-`scripts/discipline-drift.py` holds the three to it in CI: the copies byte for
-byte, and then the rule *run* for each repository under the identity its own CI
-gives it.
+`scripts/vendor-discipline.py`, pinned there by hash, and read by
+`scripts/discipline-drift.py` in CI: the copies byte for byte, and then the rule
+*run* for each checkout under the identity its own CI gives it. Each half is read
+by a run that can repair it - this repository's job holds this repository and the
+server committed inside it, the library's own run holds the library and this
+corpus - because a red run naming a copy its reader cannot write is a red people
+learn to read past.
 
 Two things the rule cannot decide by itself are declared rather than discovered.
 A path written with a placeholder (`<user>`, the way `fixtures/known_defects.yaml`

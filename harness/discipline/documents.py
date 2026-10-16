@@ -12,9 +12,12 @@ cannot afford.
 
 Both were then held by a test in each repository, and a rule about prose written
 twice is two rules - the drift this package exists for. It is stated once here
-now, and read by three readers: each repository's test, and
-`scripts/discipline-drift.py`, which reads the corpus' documents and the
-library's in the same run so that the halves cannot part company quietly.
+now, and read by each repository's own test and by
+`scripts/discipline-drift.py`, which reads the documents of every checkout it is
+handed in one run. Which checkouts those are is the run's business, not the
+rule's: the library's own run reads the corpus' documents and the library's
+together, so that half cannot part company quietly, and the corpus' own run reads
+what this repository holds.
 
 The rule, in full:
 

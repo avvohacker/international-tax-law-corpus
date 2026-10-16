@@ -145,7 +145,8 @@ def test_the_rule_holds_here_as_ci_sees_it():
 
 
 def test_the_workflows_that_run_this_package_run_the_discipline_control():
-    """The check that needs three checkouts cannot be a test; it must be a run.
+    """The check that needs the corpus' current rules cannot be a test; it must be
+    a run.
 
     Read from the repository that runs this package: `mcp/` when it is a checkout
     of its own, the corpus when the package is committed inside it. In both

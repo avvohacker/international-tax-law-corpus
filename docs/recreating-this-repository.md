@@ -59,17 +59,26 @@ only by re-fetching the PDF from the UN in a browser and sealing it again.
 
 ## 2. The sibling checkout needs the library readable
 
-`mcp-drift` checks the library out beside this repository, and the corpus'
-`discipline` job does the same, because neither this repository nor the server
-committed inside it carries the bilateral treaties the server answers from. The
-`GITHUB_TOKEN` is scoped to the repository running the workflow, so it reads a
-**public** sibling and cannot read a private one: the checkout fails with
-`Not Found — https://docs.github.com/rest/repos/repos#get-a-repository`.
+`mcp-drift` checks the library out beside this repository, because neither this
+repository nor the server committed inside it carries the bilateral treaties the
+server answers from. The `GITHUB_TOKEN` is scoped to the repository running the
+workflow, so it reads a **public** sibling and cannot read a private one: the
+checkout fails with
+`Not Found — https://docs.github.com/rest/repos/repos#get-a-repository`. The
+library is public, so that checkout succeeds; a private one would make the
+server's runs red for a reason no artefact explains, and a workflow that needs a
+private sibling needs a token with access to it, which the default token is not.
 
-So while the library is private, both controls are red for a reason that has
-nothing to do with the corpus or the server, and making the library public is
-part of making them green — not a separate concern from it. A workflow that needs
-a private sibling needs a token with access to it; the default token is not one.
+The corpus' `discipline` job used to check the library out as well, and does not
+any more: that job holds the two checkouts this repository holds — itself and
+`mcp/` — and the library's half of the shared rules is read by the same script in
+the library's own `discipline-drift` workflow, over this corpus, where
+`revendor-discipline` opens the repair. A job that reports a copy no reader of the
+run can write is a red with no action behind it; the halves still cannot part
+company quietly, because they are compared in the repository that can act on the
+answer. Those two workflow names are the library's to change, and this paragraph
+and the comment on the `discipline` job of `corpus-drift.yml` are what move with
+them.
 
 The server itself used to be a third checkout here and is not one any more: it is
 committed in this repository, under `mcp/`, so nothing about it depends on

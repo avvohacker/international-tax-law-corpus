@@ -99,8 +99,10 @@ the two variables — the snippet is in [`mcp/README.md`](mcp/README.md).
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m pytest -q                                # the invariants
-.venv/bin/python scripts/discipline-drift.py --corpus . \
-      --library ../international-tax-law-library --mcp mcp    # one discipline
+.venv/bin/python scripts/discipline-drift.py --corpus . --mcp mcp   # one discipline
+      # this repository's half: itself and the server it holds. The library reads
+      # its own half over this corpus; add --library ../international-tax-law-library
+      # here to compare that copy as well.
 
 cd mcp && ITL_CORPUS_ROOT=.. ITL_LIBRARY_ROOT=../../international-tax-law-library \
       python -m pytest -q                                     # the server
