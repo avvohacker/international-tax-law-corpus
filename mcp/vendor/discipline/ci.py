@@ -148,11 +148,11 @@ def checked_out_repositories(root: Path) -> list[str]:
     """The other repositories a workflow asks to check out, in order.
 
     A `repository:` key is an `actions/checkout` of somebody else's repository:
-    the corpus and the library for the server, the two siblings for the drift
-    control of either. Reading them out of the workflow is what stops a document
-    from telling a reader which repositories are its evidence from a list
-    somebody typed - the workflow is the place that knows, and it changes
-    whenever the evidence does.
+    both the corpus and the library for the server, which holds neither, and this
+    corpus for the library's own run of the drift control. Reading them out of the
+    workflow is what stops a document from telling a reader which repositories are
+    its evidence from a list somebody typed - the workflow is the place that
+    knows, and it changes whenever the evidence does.
     """
     found: list[str] = []
     for _, document in _documents(root):

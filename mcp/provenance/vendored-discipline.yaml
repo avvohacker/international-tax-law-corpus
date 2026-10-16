@@ -14,13 +14,13 @@
 #
 # Do not edit either half by hand: re-vendor.
 files:
-  __init__.py: c100a852691ebdce7dd5753829d9321d7a126c63f7ba4b5c0120a54935011667
+  __init__.py: 60b65f0e6a4ba674c7dac18b9128e375a33625c1fa9a2b2f0f719873b5c1264c
   board.py: f3adcfc743e4878888231b528d535a10876fe4f386bcc7774c2cc8f859ecfe76
-  ci.py: 596e6ca944a27765ba9575f9a5d600e82a024db52f5d683c994befe791625c27
-  documents.py: 3f76c887a58c714c6bc240a21e3b4226d15cb5cd8fc3b644f0efb3ed2cc0b817
+  ci.py: 92462f23836b2eb3db7fa9b71b644474c3a6191f0fff92df973b76acb04f4f67
+  documents.py: defc18a806f7d5a2b9698d9b5b57131c9f028d881127981af839c9b8f073bc29
   machine_traces.py: c50faf4616d6d855773c510d978fe307725f604f4ad71cfeea1a95cd3a9d2df0
-  pin.py: bc287b72d21b076eed9311e1f30e58ef35b92dde41a124bfaadf222561af51e5
+  pin.py: 101d57dcefeffffbf944c863c939c4a5a60b5c2b9b84dce7b9589551cb5746a5
 source: https://github.com/avvohacker/international-tax-law-corpus
-source_commit: 6bf5995c30a163f60f415518f5cb0d2a8018649b
+source_commit: dca9d562ff6e06191a516c2dd661dbaee217da63
 source_path: harness/discipline
 vendored_on: '2026-10-16'
