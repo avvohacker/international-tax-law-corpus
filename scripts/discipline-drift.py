@@ -9,7 +9,7 @@ different APIs, and the status board rule was a paragraph of prose each. The
 drift was found by reading the three side by side by hand, which is not a
 control. This is.
 
-Five things are compared, and each of them can fail on its own:
+Six things are compared, and each of them can fail on its own:
 
   * **the copies**: `harness/discipline/` in the corpus against
     `vendor/discipline/` in the other two, byte for byte, and each copy against
@@ -39,7 +39,13 @@ Five things are compared, and each of them can fail on its own:
     rather than the checkout, held by a test that names both the document and the
     command that writes it, in a run that executes the tests;
   * **the reader**: the same workflow reader reads all three, so the floors above
-    were compared by one implementation rather than by three that agree today.
+    were compared by one implementation rather than by three that agree today;
+  * **the documents**: every checkout's documents are read by the one rule the
+    repositories share - the command that installs the server from the corpus'
+    subfolder, the private repository no document may link, and the two documents
+    a reader meets first. That rule was a test in each repository, and two
+    readings of one rule are two rules: the library's had found its own failure
+    and the corpus' had not been written yet.
 
 The server is no longer a repository of its own. It is committed in this one,
 under `mcp/`, and GitHub reads the workflows of a repository from its root and
@@ -168,6 +174,7 @@ def facts(root: Path, discipline) -> dict:
         "as_ci": discipline.machine_traces.problems(root, user=AS_CI,
                                                     checkout=project),
         "board_problems": board_problems(root, project, workflows, discipline),
+        "documents": discipline.documents.check(root),
     }
 
 
@@ -188,7 +195,8 @@ def compare(corpus: Path, library: Path, mcp: Path) -> list[str]:
         if root != corpus:
             for problem in vendor.drifted(root):
                 failures.append(f"{root}: {problem}")
-        for problem in sheets[root]["as_ci"] + sheets[root]["board_problems"]:
+        for problem in (sheets[root]["as_ci"] + sheets[root]["board_problems"]
+                        + sheets[root]["documents"]):
             failures.append(f"{root}: {problem}")
 
     if len(sheets) != 3:
@@ -229,6 +237,8 @@ def sheet(name: str, root: Path, discipline) -> str:
         f"{board['current_test']}",
         f"  the machine-trace rule under the CI account: "
         f"{'clean' if not found['as_ci'] else str(len(found['as_ci'])) + ' traces'}",
+        f"  the documents that point a reader at the server: "
+        f"{'clean' if not found['documents'] else str(len(found['documents'])) + ' problem(s)'}",
     ]
     return "\n".join(lines)
 

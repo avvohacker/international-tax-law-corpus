@@ -77,8 +77,10 @@ the two variables — the snippet is in [`mcp/README.md`](mcp/README.md).
   the file, and do not answer past it.
 * **Vendored copies are never edited either.** `harness/discipline/` is the one
   implementation of what may not be committed about a machine, how a workflow is
-  read and what a status board owes a reader; it is copied into the library and
-  into `mcp/vendor/discipline/` by `python scripts/vendor-discipline.py`, and
+  read, what a status board owes a reader, what a pin says about the copy it
+  holds and where a document sends a reader who wants the server; it is copied
+  into the library and into `mcp/vendor/discipline/` by
+  `python scripts/vendor-discipline.py`, and
   each copy carries the pin that says which bytes travelled. Re-vendor, never
   patch a copy — and when the corpus changes, the copies need a release:
   `python scripts/vendor-discipline.py --into ../international-tax-law-library`

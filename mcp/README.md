@@ -453,8 +453,10 @@ ITL_CORPUS_ROOT=.. READ_AUDIT_ROOT=$PWD/.. \
 ```
 
 The rules this layer holds about itself are not its own either. What may not be
-committed about a machine, how a workflow is read, and what the status board owes
-a reader are vendored from the corpus in `vendor/discipline/` and pinned in
+committed about a machine, how a workflow is read, what the status board owes a
+reader, what a pin says about the copy it holds, and where a document sends a
+reader who wants the server are vendored from the corpus in `vendor/discipline/`
+and pinned in
 `provenance/vendored-discipline.yaml`; the `discipline` job of the corpus'
 workflow refuses a copy that has drifted from that pin or from the corpus' own
 current rules, because the three layers once had three copies of them and nothing

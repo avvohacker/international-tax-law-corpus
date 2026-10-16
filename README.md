@@ -61,8 +61,9 @@ deployed.
    this repository rather than a repository of its own — the standalone one it
    was built in is private and is not the way in. Its own README says what it
    answers and where it stands; the rules it shares with the corpus — what may
-   not be committed about a machine, how a workflow is read, what a status
-   board owes a reader — are vendored from here and pinned there.
+   not be committed about a machine, how a workflow is read, what a status board
+   owes a reader, what a pin says about the copy it holds, and where a document
+   sends a reader who wants the server — are vendored from here and pinned there.
 4. **OECD Model** (later) — a corpus extension once 1–3 walk; excluded today
    on scope grounds only.
 

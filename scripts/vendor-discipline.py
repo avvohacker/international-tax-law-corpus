@@ -2,9 +2,10 @@
 
 `harness/discipline/` is the one implementation of the rules this family shares -
 what may not be committed about a machine, how a workflow is read, what a status
-board owes a reader (its own docstring states them). It travels: this script
-copies it *verbatim* into each layer that is not the one it lives in, and
-rewrites the pin that says where the copy came from and which bytes it is.
+board owes a reader, what a pin says about the copy it holds, and where a document
+sends a reader who wants the server (its own docstring states them). It travels:
+this script copies it *verbatim* into each layer that is not the one it lives in,
+and rewrites the pin that says where the copy came from and which bytes it is.
 
     python scripts/vendor-discipline.py --into ../international-tax-law-library \\
                                         --into mcp
@@ -28,12 +29,11 @@ the copy. The vendored files go to `vendor/discipline/`, because a repository
 that carries somebody else's rules should be able to say, from the path alone,
 which of the two things in front of it is the one it did not write.
 
-A pin is read as three claims and all three are checked: the source it names is
-this repository, the path it names is `harness/discipline`, and the commit it
-names is a git object id rather than a branch or a tag - a ref moves under the
-checkout meant to reproduce these bytes, so a pin naming one says which bytes
-travelled only for the moment it was written. Each copy's own test holds the same
-rule for itself; this reader states it once for every copy the control visits.
+The pin is read by `harness/discipline/pin.py`, from here rather than restated:
+that rule used to sit in each copy's own test and in this script, and the three
+had drifted - one of them refused a pin whose `source_commit` named a branch or a
+tag, the others accepted it. What this script adds to that rule is the half only
+it can see: which files the *source* has, against which files the pin names.
 
 The source is named by URL, and not by the short `owner/repo` slug: a URL is how
 every other register in this family names the bytes it did not write, and the
@@ -47,24 +47,36 @@ them is a name the rule already exempts, and the other is a name it must not.
 from __future__ import annotations
 
 import argparse
-import hashlib
-import re
+import importlib.util
 import subprocess
 import sys
 from datetime import date
+from functools import lru_cache
 from pathlib import Path
 
 import yaml
 
 SOURCE = Path(__file__).resolve().parent.parent / "harness" / "discipline"
-SOURCE_PATH = f"{SOURCE.parent.name}/{SOURCE.name}"
-REPOSITORY = "https://github.com/avvohacker/international-tax-law-corpus"
 PIN = Path("provenance") / "vendored-discipline.yaml"
 VENDORED = Path("vendor") / "discipline"
 
-# What a pin may name as the commit it came from: a git object id, and nothing
-# else. `main` is not one, and a tag is not one either.
-COMMIT = re.compile(r"^[0-9a-f]{40}([0-9a-f]{24})?$")
+
+@lru_cache(maxsize=1)
+def rule():
+    """The rule about a pin, loaded from the package it belongs to.
+
+    Loaded by path for the same reason `scripts/discipline-drift.py` loads the
+    discipline that way: this script is run from the corpus and from a desk that
+    keeps its checkouts wherever it likes, and the rule it must apply is the
+    corpus' own rather than whichever one happens to be installed. `pin.py`
+    imports nothing from its package, so one file is enough to load.
+    """
+    spec = importlib.util.spec_from_file_location("discipline_pin",
+                                                  SOURCE / "pin.py")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules["discipline_pin"] = module
+    spec.loader.exec_module(module)
+    return module
 
 HEADER = """\
 # The shared discipline, vendored from the corpus and pinned by hash.
@@ -72,10 +84,11 @@ HEADER = """\
 # Written by `scripts/vendor-discipline.py` in the corpus, at
 # {repository}.
 #
-# That package is the one implementation of what may not be committed about a
-# machine, how a workflow is read, and what a status board owes a reader. The
-# copy under `vendor/discipline/` must be these bytes: a copy that has drifted
-# from the pin is a red test
+# That package is the one implementation of the rules this family shares: what
+# may not be committed about a machine, how a workflow is read, what a status
+# board owes a reader, what a pin says about the copy it holds, and where a
+# document sends a reader who wants the server. The copy under `vendor/discipline/`
+# must be these bytes: a copy that has drifted from the pin is a red test
 # (`tests/test_the_vendored_discipline_is_pinned.py`) rather than a surprise,
 # and `scripts/discipline-drift.py`, run against the corpus' own checkout, is
 # what refuses a copy that has gone back to inventing its own rule.
@@ -85,7 +98,7 @@ HEADER = """\
 
 
 def digest(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return rule().digest(path.read_bytes())
 
 
 def sources() -> list[Path]:
@@ -104,13 +117,13 @@ def head(root: Path) -> str:
 def pin_text(root: Path) -> str:
     files = {path.name: digest(path) for path in sources()}
     body = yaml.safe_dump({
-        "source": REPOSITORY,
-        "source_path": SOURCE_PATH,
+        "source": rule().REPOSITORY,
+        "source_path": rule().SOURCE_PATH,
         "source_commit": head(SOURCE.parent.parent),
         "vendored_on": date.today().isoformat(),
         "files": files,
     }, sort_keys=True)
-    return HEADER.format(repository=REPOSITORY) + body
+    return HEADER.format(repository=rule().REPOSITORY) + body
 
 
 def vendor(into: Path) -> list[str]:
@@ -132,46 +145,28 @@ def vendor(into: Path) -> list[str]:
 
 
 def drifted(into: Path) -> list[str]:
-    """Every way the copy in ``into`` is not this source, named."""
-    problems: list[str] = []
+    """Every way the copy in ``into`` is not this source, named.
+
+    The rule about the pin is read from `harness/discipline/pin.py`; what is
+    added here is the half only this side can see - the source's own file list,
+    which the pin is a copy of and the copy has to be too.
+    """
     target = into / VENDORED
-    for path in sources():
-        destination = target / path.name
-        if not destination.exists():
-            problems.append(f"{destination}: absent, and the source has it")
-        elif destination.read_bytes() != path.read_bytes():
-            problems.append(f"{destination}: differs from {path}")
-    extra = sorted(candidate.name for candidate in target.glob("*.py")
-                   if candidate.name not in {path.name for path in sources()})
-    if extra:
-        problems.append(f"{target}: names a file the source does not: {extra}")
+    problems: list[str] = []
+    if not target.is_dir():
+        problems.append(f"{target}: absent, and the discipline is vendored there")
     pin = into / PIN
     if not pin.exists():
-        problems.append(f"{pin}: absent, so the copy says nothing about where it came from")
+        problems.append(f"{pin}: absent, so the copy says nothing about where it "
+                        f"came from")
         return problems
     recorded = yaml.safe_load(pin.read_text(encoding="utf-8")) or {}
-    if recorded.get("source") != REPOSITORY:
-        problems.append(f"{pin}: names the source {recorded.get('source')!r}, "
-                        f"and the discipline comes from {REPOSITORY}")
-    if recorded.get("source_path") != SOURCE_PATH:
-        problems.append(f"{pin}: names the source path "
-                        f"{recorded.get('source_path')!r}, and the discipline "
-                        f"lives at {SOURCE_PATH}")
-    commit = str(recorded.get("source_commit") or "")
-    if not COMMIT.match(commit):
-        problems.append(
-            f"{pin}: names {commit or 'no commit'} as the commit it was vendored "
-            f"from, and a pin names a git object id: a branch or a tag moves under "
-            f"the checkout meant to reproduce the copy")
-    stated = recorded.get("files") or {}
+    copies = {path.name: path.read_bytes() for path in sorted(target.glob("*.py"))}
+    problems += [f"{pin}: {problem}" for problem in rule().problems(recorded, copies)]
     current = {path.name: digest(path) for path in sources()}
-    if set(stated) != set(current):
-        problems.append(f"{pin}: pins {sorted(stated)} while the source has "
-                        f"{sorted(current)}")
-    for name in sorted(set(stated) & set(current)):
-        if stated[name] != current[name]:
-            problems.append(f"{pin}: the pin for {name} is {stated[name][:12]}, "
-                            f"and the source is {current[name][:12]}")
+    if set(recorded.get("files") or {}) != set(current):
+        problems.append(f"{pin}: pins {sorted(recorded.get('files') or {})} while "
+                        f"the source has {sorted(current)}")
     return problems
 
 
