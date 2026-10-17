@@ -62,8 +62,13 @@ def test_the_rule_refuses_a_document_that_sends_a_reader_to_the_private_reposito
         "a document that installs the server from the corpus' own root, and not "
         "from its subfolder, was accepted")
 
-    named = good + (f"* **mcp** ([{documents.STANDALONE}](https://github.com/"
-                    f"avvohacker/{documents.STANDALONE})) — the server\n")
+    # The owner is not spelled here, and that is the point of the sample: the
+    # private repository's link is built from the rule's own constant, so this
+    # fixture tests the rule rather than carrying the name of the account that
+    # owns it. Written out, that name is also the account on this desk, and the
+    # machine-trace rule reads it - correctly - as one.
+    repository = "https://" + documents.LINK
+    named = good + (f"* **mcp** ([{documents.STANDALONE}]({repository})) — the server\n")
     assert any(documents.STANDALONE in problem
                for problem in documents.problems(named, package=False)), (
         f"a document that sends a reader to the private repository was accepted: "

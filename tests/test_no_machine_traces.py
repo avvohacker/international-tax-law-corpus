@@ -112,6 +112,28 @@ def test_the_detector_leaves_the_declarations_alone():
                                         project="international-tax-law-corpus")
 
 
+def test_a_github_owner_path_without_a_scheme_is_not_a_trace():
+    """A link a constant builds does not spell the scheme out, and is still a link.
+
+    `documents.LINK` is `github.com/owner/{name}` - a host and a path, not a bare
+    word. The rule used to recognise an owner only behind `https://`, so on a
+    desk whose account name is also the owner's this constant read as a trace of
+    the machine: three failures across the two layers, and green on CI, where the
+    account is `runner`. The positive half matters as much as this one - the bare
+    account name is what the rule exists to catch - so both are stated here.
+    """
+    built = 'LINK = f"github.com/somebody/some-repository"\n'
+    assert not machine_traces.traces_in(built, checkout=None, user="somebody")
+    wrapped = ("[a link](https://github.com/"
+               "somebody/some-repository)\n")
+    assert not machine_traces.traces_in(wrapped, checkout=None, user="somebody"), (
+        "a link wrapped after `github.com/` was read as a bare account name")
+    bare = "somebody built this at their desk\n"
+    assert machine_traces.traces_in(bare, checkout=None, user="somebody"), (
+        "the account-name rule stopped catching a bare name while the owner path "
+        "was being exempted")
+
+
 def test_a_checkout_named_after_the_project_is_not_a_trace():
     """CI clones into the project's own name, and that name is not a machine."""
     text = "the corpus repository international-tax-law-corpus"

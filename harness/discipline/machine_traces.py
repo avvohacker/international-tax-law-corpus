@@ -79,9 +79,21 @@ TRACES = (
 
 # The lines on which naming an owner is the point: the rights declaration, and
 # the GitHub owner a workflow asks to check out. Everything else that carries a
-# GitHub owner is a URL, and is recognised as one.
+# GitHub owner is a URL, and is recognised as one - with or without the scheme,
+# because a constant that builds a link does not spell `https://` out: `LINK =
+# f"github.com/owner/{NAME}"` is a GitHub owner path, and on the desk of the
+# person whose account name *is* that owner it would otherwise read as a trace
+# of the machine, red in all three layers and green on CI where the account is
+# `runner`. A scheme-less path is still an owner path, and the bare word is
+# still what this rule is for.
 OWNER_LINE = re.compile(r"Copyright \(c\) \d{4}|^\s*repository:")
-OWNER_URL = re.compile(r"https?://(?:raw\.)?github\.com/$")
+OWNER_URL = re.compile(r"(?:https?://)?(?:raw\.)?github\.com/\s*$")
+
+# How far back from the owner a link may begin. Source is wrapped to a column,
+# so a URL is allowed to be broken after `github.com/`; reading only the owner's
+# own line would call that break a bare name, on the desk of the one person
+# whose account name is also the owner's.
+OWNER_LOOKBEHIND = 80
 
 
 def scratch(relative: Path) -> bool:
@@ -143,7 +155,8 @@ def declares_the_owner(text: str, match: re.Match) -> bool:
     line = text[line_start:line_end if line_end != -1 else len(text)]
     if OWNER_LINE.search(line):
         return True                                  # a rights or owner line
-    return bool(OWNER_URL.search(text[line_start:start]))   # a GitHub owner path
+    window = text[max(0, start - OWNER_LOOKBEHIND):start]
+    return bool(OWNER_URL.search(window))   # a GitHub owner path, wrapped or not
 
 
 def traces_in(text: str, *, checkout: str | None, user: str | None,

@@ -354,7 +354,13 @@ by printing the project's name from `pyproject.toml`, and what
 `test_no_committed_file_carries_a_machine_trace` answers for every file git
 tracks - the names that are supposed to be there (a copyright line, an email
 address, a GitHub owner) excepted, because a repository that could not name its
-own author would be a worse repository, not a cleaner one.
+own author would be a worse repository, not a cleaner one. An owner counts as a
+declaration wherever the text in front of it is a GitHub path: with or without
+`https://`, and across a line break, because a constant that builds a link
+writes `github.com/<owner>/...` and source is wrapped to a column. The bare name
+is what the rule is for, and a path is not a bare name - the distinction the
+rule missed, red in three files on the desk whose account owns the repositories
+and green on CI, where the account is `runner`.
 
 The rule is no longer written in a test file, and no longer in three of them. It
 is `harness/discipline/machine_traces.py`, because the library and the server owe
