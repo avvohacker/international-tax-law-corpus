@@ -22,6 +22,6 @@ files:
   machine_traces.py: fb51c0b6265c4c420676e30d9128e8b780f59029fcb82de54e0314685e8334e1
   pin.py: 101d57dcefeffffbf944c863c939c4a5a60b5c2b9b84dce7b9589551cb5746a5
 source: https://github.com/avvohacker/international-tax-law-corpus
-source_commit: 19f670e49d8f6f543e0f6386c03b2c92a880afa6
+source_commit: 2c580fcddb85d9be3ea9db95b2550b523d00d06c
 source_path: harness/discipline
 vendored_on: '2026-10-17'
