@@ -19,9 +19,9 @@ files:
   ci.py: b08c758bdb316ef287178d8cbf7ea7acfdc0e2f0e7116a55a7d3e363009a7543
   documents.py: defc18a806f7d5a2b9698d9b5b57131c9f028d881127981af839c9b8f073bc29
   holds.py: 183841decd2cfd261fd8dd1d8a6e087b2026fbf65681e661c5a5cd2bd2e1f6b0
-  machine_traces.py: c50faf4616d6d855773c510d978fe307725f604f4ad71cfeea1a95cd3a9d2df0
+  machine_traces.py: fb51c0b6265c4c420676e30d9128e8b780f59029fcb82de54e0314685e8334e1
   pin.py: 101d57dcefeffffbf944c863c939c4a5a60b5c2b9b84dce7b9589551cb5746a5
 source: https://github.com/avvohacker/international-tax-law-corpus
-source_commit: 1b31a511a034618cdd862a7c3a287febe3655899
+source_commit: 19f670e49d8f6f543e0f6386c03b2c92a880afa6
 source_path: harness/discipline
-vendored_on: '2026-10-16'
+vendored_on: '2026-10-17'
