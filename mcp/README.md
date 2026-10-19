@@ -399,11 +399,16 @@ many facts, and what the control reads). Six of them are worth naming:
   upstream change could have moved it. See below.
 
 The CI control (`mcp-drift`) reads the corpus where it stands and checks out the
-library at its default branch, refuses to let a missing checkout turn into a
-skip, and runs this suite against them. This layer owns no data to rebuild, so
-the drift it can see is the one only it can see: an answer moving because the
-corpus or the library moved underneath it. A legitimate upstream edit turning
-the run red is the intended behaviour — the claim has to be re-earned here.
+library at the commit `provenance/library.yaml` names — never at its default
+branch, because these answers are a claim about specific bytes and a branch moves
+under the checkout meant to reproduce them. So a push into the library cannot
+turn this run red without a line here changing, and the day the library gains a
+treaty the server should answer from, moving that pin is the edit that says so:
+the run then fails where the new answers differ, and the claim is re-earned in the
+same commit as the pin. The control also refuses to let a missing checkout turn
+into a skip, and runs this suite against both checkouts. This layer owns no data
+to rebuild, so the drift it can see is the one only it can see: an answer moving
+because the bytes it was earned on moved.
 
 What that control costs is measured rather than assumed, with the corpus'
 `scripts/read-audit.py` — the tool that records every file a command really

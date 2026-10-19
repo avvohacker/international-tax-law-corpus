@@ -1,0 +1,21 @@
+# The library the server answers from, pinned by commit.
+#
+# The server owns no data: every treaty answer it prints is a claim about bytes
+# held by another repository, so the claim is only reproducible if those bytes are
+# named. `mcp-drift` reads the `commit` below and checks the library out at it;
+# nothing in this repository reads that repository's default branch, and a push
+# into the library therefore cannot turn this repository red without a line here
+# changing.
+#
+# A branch would not do, for the same reason a pin may not name one: `main` moves
+# under the checkout meant to reproduce the answers, so the run would describe that
+# branch on the day it was read rather than the bytes the answers were earned on.
+#
+# Moving the pin is a decision, not a maintenance: it is taken when the server
+# should answer from a treaty the library has just gained. Edit `commit` to the
+# library commit that holds it, run `python -m itl_mcp.drift` and `pytest` from
+# `mcp/`, and commit the two together - the pin and the answers it was re-earned
+# on. Until then the server keeps answering from the bytes it declares.
+repository: https://github.com/avvohacker/international-tax-law-library
+commit: 1fc9176de80f14cb7c4ef2192347b9171248b1bb
+pinned_on: '2026-10-19'

@@ -28,6 +28,11 @@ against. A citation to a page that does not carry the fact is worse than no
 citation: it is the failure mode this repository exists to make impossible.
 Where the corpus and the library disagree, report both.
 
+The library is read at the commit `mcp/provenance/library.yaml` names, not at its
+default branch: the server's answers are a claim about those bytes. Move that pin
+only when the server should answer from a treaty the library has just gained, and
+move it in the same commit as the answers it re-earns.
+
 ## Ask the server, or read the file
 
 Both are correct, for different questions, and the line between them is worth

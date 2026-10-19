@@ -19,11 +19,15 @@ name: mcp-drift
 # answers, so the day an answer moves, this run goes red naming it.
 #
 # The corpus is this checkout, read where it stands - the same bytes the corpus'
-# own control rebuilds - and the library is checked out beside it. Both are read
-# at their default branches rather than at pinned commits, and a legitimate edit
-# upstream turning this run red is the intended behaviour: the answer changed, so
-# the claim that it is still true has to be re-earned here. The scheduled run is
-# what makes that happen without anybody pushing.
+# own control rebuilds - and the library is checked out beside it at the commit
+# `mcp/provenance/library.yaml` names, never at its default branch. Those answers
+# are a claim about specific bytes, so the pin is what makes the claim
+# reproducible: a push into the library cannot turn this run red without a line
+# here changing, and when the server should answer from a treaty the library has
+# just gained, moving the pin is the edit that says so. The scheduled run then
+# asks the same questions of the same bytes - a control, not a search for
+# novelty - and the day the pin moves, this run is where the new answers are
+# re-earned.
 #
 # One thing the suite cannot do by itself is notice its own absence: the tests
 # skip when the two roots are not named, and a skip is green. So the roots are
@@ -55,11 +59,27 @@ jobs:
       - name: Check out this repository, which holds both the corpus and the server
         uses: actions/checkout@v4
 
-      - name: Check out the library the server answers from
+      - name: Read the library commit this repository answers from
+        # `mcp/provenance/library.yaml`, not a branch: a branch moves under the
+        # checkout meant to reproduce the answers. One reader for every job here,
+        # so none of them can be pointed at a different library than the pin names.
+        id: library
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          commit=$(sed -n 's/^commit:[[:space:]]*//p' mcp/provenance/library.yaml)
+          if [ -z "$commit" ]; then
+            echo "::error::mcp/provenance/library.yaml names no commit"
+            exit 1
+          fi
+          echo "commit=$commit" >> "$GITHUB_OUTPUT"
+
+      - name: Check out the library the server answers from, at the commit the pin names
         uses: actions/checkout@v4
         with:
           repository: avvohacker/international-tax-law-library
           path: library
+          ref: ${{ steps.library.outputs.commit }}
 
       - uses: actions/setup-python@v5
         with:
@@ -126,11 +146,27 @@ jobs:
       - name: Check out this repository, which holds both the corpus and the server
         uses: actions/checkout@v4
 
-      - name: Check out the library the server answers from
+      - name: Read the library commit this repository answers from
+        # `mcp/provenance/library.yaml`, not a branch: a branch moves under the
+        # checkout meant to reproduce the answers. One reader for every job here,
+        # so none of them can be pointed at a different library than the pin names.
+        id: library
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          commit=$(sed -n 's/^commit:[[:space:]]*//p' mcp/provenance/library.yaml)
+          if [ -z "$commit" ]; then
+            echo "::error::mcp/provenance/library.yaml names no commit"
+            exit 1
+          fi
+          echo "commit=$commit" >> "$GITHUB_OUTPUT"
+
+      - name: Check out the library the server answers from, at the commit the pin names
         uses: actions/checkout@v4
         with:
           repository: avvohacker/international-tax-law-library
           path: library
+          ref: ${{ steps.library.outputs.commit }}
 
       - uses: actions/setup-python@v5
         with:
@@ -240,11 +276,27 @@ jobs:
       - name: Check out this repository, which holds both the corpus and the server
         uses: actions/checkout@v4
 
-      - name: Check out the library the server answers from
+      - name: Read the library commit this repository answers from
+        # `mcp/provenance/library.yaml`, not a branch: a branch moves under the
+        # checkout meant to reproduce the answers. One reader for every job here,
+        # so none of them can be pointed at a different library than the pin names.
+        id: library
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          commit=$(sed -n 's/^commit:[[:space:]]*//p' mcp/provenance/library.yaml)
+          if [ -z "$commit" ]; then
+            echo "::error::mcp/provenance/library.yaml names no commit"
+            exit 1
+          fi
+          echo "commit=$commit" >> "$GITHUB_OUTPUT"
+
+      - name: Check out the library the server answers from, at the commit the pin names
         uses: actions/checkout@v4
         with:
           repository: avvohacker/international-tax-law-library
           path: library
+          ref: ${{ steps.library.outputs.commit }}
 
       - uses: actions/setup-python@v5
         with:
