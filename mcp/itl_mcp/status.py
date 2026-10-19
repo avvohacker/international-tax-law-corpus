@@ -53,6 +53,13 @@ PROJECT_NAME = "international-tax-law-mcp"
 IMPORT = re.compile(r"^\s*(?:from|import)\s+([A-Za-z_]\w*)", re.M)
 EXTERNAL = frozenset(("urllib", "requests", "httpx", "aiohttp", "socket",
                       "fitz", "pymupdf", "pdfminer", "ssl"))
+# The other way out of a process, and the one no import of a network client
+# names: a module that runs `git` reaches the remote without importing anything
+# on the list above. It is counted separately rather than folded in, because the
+# claim and the exceptions are different facts - the package answers from
+# committed bytes, and one maintenance command asks a remote a question that no
+# answer depends on.
+SPAWNS = re.compile(r"^\s*(?:from|import)\s+subprocess\b", re.M)
 
 
 def project_name(root: Path) -> str:
@@ -80,6 +87,18 @@ def external_readers(root: Path, folder: Path | None = None) -> list[str]:
                 found.append(path.name)
                 break
     return found
+
+
+def subprocess_users(root: Path, folder: Path | None = None) -> list[str]:
+    """The modules that run another program, named.
+
+    `library_pin` asks `git` for the library's head: it reaches a remote without
+    importing a network client, so a scan of imports alone would print `no` over
+    a module that does. Named rather than counted, so the board says which file a
+    reader has to read to judge it.
+    """
+    return [path.name for path in sorted((root / (folder or PACKAGE)).glob("*.py"))
+            if SPAWNS.search(path.read_text(encoding="utf-8"))]
 
 
 def verdicts(root: Path) -> list[dict]:
@@ -235,10 +254,16 @@ def render(root: Path | None = None) -> str:
             + " checks out another repository")
     add(f"- interpreters CI runs: "
         f"{', '.join(versions) if versions else 'none named'} ({floor_line})")
-    add(f"- this package reaches the network or reads a PDF: "
+    add(f"- this package reaches the network or reads a PDF by itself: "
         f"{'yes — ' + ', '.join(readers) if readers else 'no'} "
         f"({modules} module(s) under `{PACKAGE.as_posix()}/` scanned for an "
         f"import of one)")
+    spawned = subprocess_users(root)
+    if spawned:
+        add(f"- a command, not a tool, asks a remote through another program: "
+            f"{', '.join(spawned)} runs the `git` on the machine to learn whether "
+            f"the library has moved past the pin; no module the server answers "
+            f"with imports it")
     # The experiments are the one thing here that talks to something outside the
     # checkouts, and they are not part of the package the line above is about.
     # Saying so on the board is cheaper than a reader discovering it in a module

@@ -410,6 +410,14 @@ into a skip, and runs this suite against both checkouts. This layer owns no data
 to rebuild, so the drift it can see is the one only it can see: an answer moving
 because the bytes it was earned on moved.
 
+To ask whether the library has moved since, without opening the register:
+`python -m itl_mcp.library_pin`. It reads the pin, asks the remote for its
+`main`, and answers with an exit code as well as a sentence — `0` the pin is the
+head, `1` the library has moved and this server still answers from the pinned
+bytes, `2` the remote could not be asked, named with the reason, because an
+unknown is not a `no`. It clones nothing and writes nothing, so it can be run
+while a suite is running.
+
 What that control costs is measured rather than assumed, with the corpus'
 `scripts/read-audit.py` — the tool that records every file a command really
 opens, however many times it opens it:

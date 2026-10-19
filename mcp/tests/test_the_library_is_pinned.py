@@ -110,7 +110,7 @@ def test_the_reader_refuses_a_library_checkout_that_names_no_commit():
         "    steps:",
         "      - uses: actions/checkout@v4",
         "        with:",
-        "          repository: avvohacker/international-tax-law-library",
+        "          repository: somebody/international-tax-law-library",
         "          path: library",
         "",
     ))
