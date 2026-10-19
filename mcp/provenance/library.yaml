@@ -17,5 +17,5 @@
 # `mcp/`, and commit the two together - the pin and the answers it was re-earned
 # on. Until then the server keeps answering from the bytes it declares.
 repository: https://github.com/avvohacker/international-tax-law-library
-commit: 1fc9176de80f14cb7c4ef2192347b9171248b1bb
+commit: e4a4596c110af4efe1fed5895373318def61e76d
 pinned_on: '2026-10-19'
