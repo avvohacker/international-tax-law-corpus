@@ -16,8 +16,9 @@ import re
 from pathlib import Path
 
 import pytest
+import yaml
 
-from itl_mcp import library_pin
+from itl_mcp import ci, library_pin
 
 ROOT = Path(__file__).resolve().parent.parent
 PIN = ROOT / "provenance" / "library.yaml"
@@ -26,6 +27,36 @@ PIN = ROOT / "provenance" / "library.yaml"
 PINNED = "1fc9176de80f14cb7c4ef2192347b9171248b1bb"
 LATER = "dd505f4969b4c475b0b7399f52e3991804c983b5"
 REPOSITORY = "https://github.com/avvohacker/international-tax-law-library"
+
+
+def test_the_clock_asks_the_question_and_cannot_fail():
+    """A job that reports a decision, not one that demands a repair.
+
+    The corpus' control runs on every push and is allowed to go red; this job is
+    the one that must not, or the coupling comes back through the clock: the
+    library moving is news about a decision, and the run that asks is not the run
+    that should take it.
+    """
+    workflow = ci.repository(ROOT) / ".github" / "workflows" / "mcp-drift.yml"
+    jobs = (yaml.safe_load(workflow.read_text(encoding="utf-8")) or {}).get("jobs") or {}
+    asking = [name for name, job in jobs.items()
+              if any("itl_mcp.library_pin" in str(step.get("run") or "")
+                     for step in job.get("steps") or [])]
+    assert asking, (
+        "no workflow runs the library pin command: the question the pin cannot "
+        "answer alone is asked by nobody, and the library could move unremarked")
+
+    for name in asking:
+        job = jobs[name]
+        gate = str(job.get("if") or "")
+        assert "schedule" in gate, (
+            f"{name} runs the pin command without being gated to the clock: on a "
+            f"push it would report a move nobody caused")
+        step = next(step for step in job["steps"]
+                    if "itl_mcp.library_pin" in str(step.get("run") or ""))
+        assert re.search(r"^\s*exit 0\s*$", str(step["run"]), re.M), (
+            f"{name} returns the command's status: exit 1 means the library moved "
+            f"past the pin, which is a decision to take and not a run to fail")
 
 
 def test_no_module_the_server_answers_with_imports_the_command():

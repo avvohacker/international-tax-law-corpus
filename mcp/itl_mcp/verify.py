@@ -34,7 +34,7 @@ from typing import Iterable
 
 import yaml
 
-from . import artefacts
+from . import artefacts, revision
 from .roots import Roots
 
 # The kinds a check can report, weakest last.
@@ -365,9 +365,17 @@ def sources(roots: Roots) -> dict:
     check. The two checkouts' paths are the tool's own to add -- they are where
     this process read from, which is never what a committed fixture holds -- so
     they are not part of this reading and the control never sees them.
+
+    The library's commit is part of this reading and not of the tool's own half,
+    even though it is where the bytes came from: a commit is not a path. It is
+    the name a reader fetches to see the same page, and a payload that said which
+    treaty held a fact without saying which bytes held it would leave the reader
+    with a page and no revision to open. The register's pin is the same fact on
+    the other side, so the two can be held against each other.
     """
     return {
         "checks": [check.as_dict() for check in inventory(roots)],
+        "library_revision": revision.described(roots.library),
         "reading_the_checks": {
             "bytes": "recomputed from the committed file; the strongest check",
             "register": "the declared source hash was found in the corpus "

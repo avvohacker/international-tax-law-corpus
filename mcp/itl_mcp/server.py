@@ -168,7 +168,13 @@ def reservation_scope(treaty_id: str, mli_article: str) -> str:
 
 @mcp.tool()
 def sources() -> str:
-    """What this server reads, from where, and how each artefact was verified."""
+    """What this server reads, from where, and how each artefact was verified.
+
+    The answer carries the commit the library is on, so a reader can fetch the
+    same page rather than take this process's word for which bytes it read. A
+    checkout that is not a git repository says so, with the reason, instead of
+    naming a revision it does not have.
+    """
     # One reading, in `itl_mcp.verify`, taken by this tool and by the drift
     # control that records its answer. The two roots are added here alone: they
     # are where this process read from, and the control never records a path.

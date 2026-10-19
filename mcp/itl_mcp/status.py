@@ -260,10 +260,10 @@ def render(root: Path | None = None) -> str:
         f"import of one)")
     spawned = subprocess_users(root)
     if spawned:
-        add(f"- a command, not a tool, asks a remote through another program: "
-            f"{', '.join(spawned)} runs the `git` on the machine to learn whether "
-            f"the library has moved past the pin; no module the server answers "
-            f"with imports it")
+        add(f"- this package runs another program: {', '.join(spawned)} — the "
+            f"`git` on the machine, asked for the head a remote holds and for the "
+            f"commit a checkout is on; a checkout without git reports no commit "
+            f"rather than a guess, and the answers still come from committed bytes")
     # The experiments are the one thing here that talks to something outside the
     # checkouts, and they are not part of the package the line above is about.
     # Saying so on the board is cheaper than a reader discovering it in a module

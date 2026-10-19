@@ -350,3 +350,48 @@ jobs:
           ITL_CORPUS_ROOT: ${{ github.workspace }}
           ITL_LIBRARY_ROOT: ${{ github.workspace }}/library
         run: python -m pytest -q
+
+  library-ahead:
+    # The one job here that cannot fail, and the shape is the message: the pin is
+    # a decision, so the library moving past it is news rather than an error in
+    # this repository. Runs on the clock and by hand, never on a push - a push is
+    # somebody already working, and a red badge over a fact they did not break is
+    # the coupling this whole arrangement was built to remove. It reads the pin
+    # and the remote, and reports with annotations instead of an exit status.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mcp
+    steps:
+      - name: Check out this repository, which holds both the corpus and the pin
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install what the command reads the register with, and nothing else
+        # The command imports PyYAML and the standard library: it asks `git`
+        # through the subprocess module, not the SDK, and it never starts the
+        # server.
+        run: |
+          python -m pip install --upgrade pip
+          pip install "PyYAML>=6.0"
+
+      - name: Whether the library has moved past the pin
+        # `exit 0` is the whole of this job's contract. The three answers are
+        # annotations: current, moved, and unknown - and the unknown is a warning
+        # with the reason already printed above it, never a silent pass.
+        run: |
+          set +e
+          python -m itl_mcp.library_pin
+          status=$?
+          set -e
+          case "$status" in
+            0) echo "::notice::the pin is the library's head: the server answers from the newest bytes" ;;
+            1) echo "::notice::the library has moved past the pin; the server keeps answering from the pinned bytes, and moving the pin is the edit that says it should answer from the new ones" ;;
+            *) echo "::warning::the pin could not be checked against the remote (exit $status); the reason is printed above" ;;
+          esac
+          exit 0
